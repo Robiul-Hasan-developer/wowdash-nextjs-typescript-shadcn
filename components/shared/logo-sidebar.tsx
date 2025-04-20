@@ -5,7 +5,7 @@ import Logo from "../../public/assets/images/logo.png"
 
 function LogoSidebar() {
     return (
-        <Link href="index.html" className="sidebar-logo h-[72px] px-4 py-3.5 flex items-center border-b border-neutral-100">
+        <Link href="/dashboard" className="sidebar-logo h-[72px] px-4 py-3.5 flex items-center border-b border-neutral-100">
             <Image
                 src={Logo}
                 width={168}

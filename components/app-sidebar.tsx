@@ -2,23 +2,18 @@
 
 import * as React from "react"
 import {
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  GalleryVerticalEnd,
+  House,
+  Mail,
+  MessageCircleMore,
+  CalendarDays,
   Map,
-  PieChart,
-  Settings2,
-  SquareTerminal,
+  FileText,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
@@ -28,116 +23,126 @@ import LogoSidebar from "./shared/logo-sidebar"
 const data = {
   navMain: [
     {
-      title: "Playground",
+      title: "Dashboard",
       url: "#",
-      icon: SquareTerminal,
+      icon: House,
       isActive: true,
       items: [
         {
-          title: "Login",
-          url: "/login",
+          title: "AI",
+          url: "/dashboard",
           circleColor: 'bg-primary'
         },
         {
-          title: "Register",
-          url: "/register",
+          title: "CRM",
+          url: "/crm",
           circleColor: 'bg-yellow-500'
         },
         {
-          title: "Settings",
-          url: "#",
+          title: "eCommerce",
+          url: "/ecommerce",
           circleColor: 'bg-cyan-500'
         },
         {
-          title: "Settings",
-          url: "#",
+          title: "Cryptocurrency",
+          url: "/cryptocurrency",
           circleColor: 'bg-red-500'
         },
         {
-          title: "Settings",
-          url: "#",
+          title: "Investment",
+          url: "/investment",
           circleColor: 'bg-green-600'
         },
         {
-          title: "Settings",
-          url: "#",
+          title: "LMS / Learning System",
+          url: "/lms",
           circleColor: 'bg-purple-600'
         },
-      ],
-    },
-    {
-      title: "Models",
-      url: "#",
-      icon: Bot,
-      items: [
         {
-          title: "Genesis",
-          url: "#",
-          circleColor: 'bg-primary-600'
+          title: "NFT & Gaming",
+          url: "/nft",
+          circleColor: 'bg-primary'
         },
         {
-          title: "Explorer",
-          url: "#",
-          circleColor: 'bg-primary-600'
+          title: "Medical",
+          url: "/medical",
+          circleColor: 'bg-yellow-500'
         },
         {
-          title: "Quantum",
-          url: "#",
-          circleColor: 'bg-primary-600'
-        },
-      ],
-    },
-    {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-          circleColor: 'bg-primary-600'
+          title: "Analytics",
+          url: "/analytics",
+          circleColor: 'bg-cyan-500'
         },
         {
-          title: "Get Started",
-          url: "#",
-          circleColor: 'bg-primary-600'
+          title: "POS & Inventory",
+          url: "/inventory",
+          circleColor: 'bg-red-500'
         },
         {
-          title: "Tutorials",
-          url: "#",
-          circleColor: 'bg-primary-600'
+          title: "Finance & Banking",
+          url: "/finance",
+          circleColor: 'bg-green-600'
         },
         {
-          title: "Changelog",
-          url: "#",
-          circleColor: 'bg-primary-600'
+          title: "Booking System",
+          url: "/booking",
+          circleColor: 'bg-purple-600'
+        },
+        {
+          title: "Help Desk",
+          url: "/help",
+          circleColor: 'bg-primary'
         },
       ],
     },
     {
-      title: "Settings",
+      label: 'Application'
+    },
+    {
+      title: "Email",
+      url: "/email",
+      icon: Mail,
+    },
+    {
+      title: "Chat",
+      url: "/chat",
+      icon: MessageCircleMore,
+    },
+    {
+      title: "Calendar",
+      url: "/calendar",
+      icon: CalendarDays,
+    },
+    {
+      title: "Kanban",
+      url: "/kanban",
+      icon: Map,
+    },
+    {
+      title: "Invoice",
       url: "#",
-      icon: Settings2,
+      icon: FileText ,
+      isActive: true,
       items: [
         {
-          title: "General",
-          url: "#",
-          circleColor: 'bg-primary-600'
+          title: "List",
+          url: "/invoice/list",
+          circleColor: 'bg-primary'
         },
         {
-          title: "Team",
-          url: "#",
-          circleColor: 'bg-primary-600'
+          title: "Preview",
+          url: "/invoice/preview",
+          circleColor: 'bg-yellow-500'
         },
         {
-          title: "Billing",
-          url: "#",
-          circleColor: 'bg-primary-600'
+          title: "Add New",
+          url: "/invoice/add",
+          circleColor: 'bg-cyan-500'
         },
         {
-          title: "Limits",
-          url: "#",
-          circleColor: 'bg-primary-600'
+          title: "Edit",
+          url: "/invoice/edit",
+          circleColor: 'bg-red-500'
         },
       ],
     },
