@@ -63,7 +63,7 @@ export function NavMain({ items } : {items:SidebarItem[]}) {
                       <SidebarMenuButton 
                         tooltip={item.title}   
                         className={cn(
-                          "cursor-pointer py-5.5 px-3 text-base hover:data-[state=open]:bg-primary hover:data-[state=open]:text-white",
+                          "cursor-pointer py-5.5 px-3 text-base data-[state=open]:bg-primary data-[state=open]:text-white hover:data-[state=open]:bg-primary hover:data-[state=open]:text-white hover:bg-[#e4f1ff] active:bg-[#e4f1ff]",
                           isGroupActive ? 'bg-primary text-white hover:bg-primary hover:text-white' : ''
                         )}>
                         {item.icon && <item.icon />}
@@ -81,7 +81,7 @@ export function NavMain({ items } : {items:SidebarItem[]}) {
                                 <SidebarMenuSubButton
                                   asChild
                                   className={cn(
-                                    "py-5.5 px-3 text-base hover:bg-[#e4f1ff]",
+                                    "py-5.5 px-3 text-base hover:bg-[#e4f1ff] active:bg-[#e4f1ff]",
                                     isSubActive
                                       ? "bg-[#e4f1ff] font-bold"
                                       : ""
@@ -109,9 +109,14 @@ export function NavMain({ items } : {items:SidebarItem[]}) {
               )
             }
             if(item.url && item.title) {
+              const isMenuActive = pathname === item.url || pathname.startsWith(item.url);
               return (
-                <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild tooltip={item.title} className="cursor-pointer py-5.5 px-3 text-base hover:bg-muted">
+                <SidebarMenuItem key={item.title} className="">
+                    <SidebarMenuButton asChild 
+                      tooltip={item.title} 
+                      className={cn("cursor-pointer py-5.5 px-3 text-base hover:bg-[#e4f1ff] active:bg-[#e4f1ff]", isMenuActive
+                      ? "bg-primary text-white hover:bg-primary hover:text-white"
+                      : "")}>
                       <Link href={item.url} className="flex items-center gap-2">
                         {item.icon && <item.icon />}
                         <span>{item.title}</span>
