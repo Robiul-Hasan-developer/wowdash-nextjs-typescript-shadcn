@@ -1,6 +1,6 @@
 "use client"
 
-import { ChevronRight, Circle, type LucideIcon } from "lucide-react"
+import { ChevronRight, type LucideIcon } from "lucide-react"
 
 import {
   Collapsible,
@@ -18,6 +18,7 @@ import {
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 type SidebarItem = {
   title?: string
@@ -33,43 +34,53 @@ type SidebarItem = {
 }
 
 export function NavMain({ items } : {items:SidebarItem[]}) {
+
+  const pathname = usePathname();
+  console.log(pathname);
+  
+  
   return (
     <SidebarGroup>
       <SidebarMenu>
         {
           items.map((item) => {
+          // Check if this group should be expanded based on current path
+          const isGroupActive = item.items?.some((subItem) => pathname === subItem.url || pathname.startsWith(subItem.url))
+          console.log(`Pathname is: ${isGroupActive}`);
+          
+
             if(item.items && item.items.length > 0) {
               return (
                 <Collapsible
-                key={item.title}
-                asChild
-                defaultOpen={item.isActive}
-                className="group/collapsible"
-              >
-                <SidebarMenuItem className="">
-                  <CollapsibleTrigger asChild>
-                    <SidebarMenuButton tooltip={item.title} className={`cursor-pointer py-5.5 px-3 text-base data-[state=open]:bg-primary hover:data-[state=open]:bg-primary data-[state=open]:text-white hover:data-[state=open]:text-white`}>
-                      {item.icon && <item.icon />}
-                      <span>{item.title}</span>
-                      <ChevronRight className="ms-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
-                    </SidebarMenuButton>
-                  </CollapsibleTrigger>
-                  <CollapsibleContent>
-                    <SidebarMenuSub className="gap-0">
-                      {item.items?.map((subItem) => (
-                        <SidebarMenuSubItem key={subItem.title}>
-                          <SidebarMenuSubButton asChild className={`py-5.5 px-3 text-base`}>
-                            <Link href={subItem.url} className="flex items-center gap-3.5">
-                              <span className={`w-2 h-2 rounded-[50%] ${subItem.circleColor}`}></span>
-                              <span>{subItem.title}</span>
-                            </Link>
-                          </SidebarMenuSubButton>
-                        </SidebarMenuSubItem>
-                      ))}
-                    </SidebarMenuSub>
-                  </CollapsibleContent>
-                </SidebarMenuItem>
-              </Collapsible>
+                    key={item.title}
+                    asChild
+                    defaultOpen={isGroupActive}
+                    className="group/collapsible"
+                  >
+                  <SidebarMenuItem className="">
+                    <CollapsibleTrigger asChild>
+                      <SidebarMenuButton tooltip={item.title} className={`cursor-pointer py-5.5 px-3 text-base data-[state=open]:bg-primary hover:data-[state=open]:bg-primary data-[state=open]:text-white hover:data-[state=open]:text-white ${isGroupActive ? 'bg-red-600' : ''}`}>
+                        {item.icon && <item.icon />}
+                        <span>{item.title}</span>
+                        <ChevronRight className="ms-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+                      </SidebarMenuButton>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent>
+                      <SidebarMenuSub className="gap-0">
+                        {item.items?.map((subItem) => (
+                          <SidebarMenuSubItem key={subItem.title}>
+                            <SidebarMenuSubButton asChild className={`py-5.5 px-3 text-base`}>
+                              <Link href={subItem.url} className={`flex items-center gap-3.5 `}>
+                                <span className={`w-2 h-2 rounded-[50%] ${subItem.circleColor}`}></span>
+                                <span>{subItem.title}</span>
+                              </Link>
+                            </SidebarMenuSubButton>
+                          </SidebarMenuSubItem>
+                        ))}
+                      </SidebarMenuSub>
+                    </CollapsibleContent>
+                  </SidebarMenuItem>
+                </Collapsible>
               )
             }
             if(item.label) {

@@ -1,30 +1,18 @@
 import type { Metadata } from "next";
-// import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-// import { AppSidebar } from "@/components/app-sidebar"
-
-
-
 import { AppSidebar } from "@/components/app-sidebar"
-
 import {
   SidebarInset,
   SidebarProvider,
 } from "@/components/ui/sidebar"
 
-
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from 'next/font/google'
 import "./globals.css";
 import Header from "@/components/layout/header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "Wowdash - Tailwind CSS Admin Dashboard HTML Template",
@@ -42,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.className} antialiased`}
       >
           <SidebarProvider>
             <AppSidebar />
