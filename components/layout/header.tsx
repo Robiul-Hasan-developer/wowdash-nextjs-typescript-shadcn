@@ -8,9 +8,8 @@ import {
     BreadcrumbSeparator,
   } from "@/components/ui/breadcrumb"
 import { SidebarTrigger } from '../ui/sidebar';
-import { Input } from '../ui/input';
-import { Search } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import SearchBox from './search-box';
+
 
 const Header = () => {
     return (
@@ -18,15 +17,7 @@ const Header = () => {
             <div className="flex items-center gap-2 px-4">
                 <div className="flex items-center gap-4 px-4">
                     <SidebarTrigger className="-ms-1 p-0 size-[unset] cursor-pointer" />
-                    <div className="relative max-w-[388px] w-full">
-                        <Input 
-                            className={cn("bg-neutral-100 shadow-none focus-visible:ring-0 focus-visible:border-primary border border-slate-300 h-10 pe-6 ps-11 w-full")} 
-                            placeholder="Search..." 
-                        />
-                        <span className="absolute top-[50%] start-0 ms-4 -translate-y-[50%]">
-                            <Search className='text-neutral-500' width={18} height={18} />
-                        </span>
-                    </div>
+                    <SearchBox />
                 </div>
                 
                 <Breadcrumb>
