@@ -8,6 +8,7 @@ import {
 import { Inter } from 'next/font/google'
 import "./globals.css";
 import Header from "@/components/layout/header";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -32,17 +33,24 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased`}
       >
-          <SidebarProvider>
-            <AppSidebar />
-            <main className="grow-[1]">
-              <SidebarInset>
-                <Header/>
-              </SidebarInset>
-              <div className=" bg-neutral-50 p-0 lg:p-6 h-full">
-                {children}
-              </div>
-            </main>
-          </SidebarProvider>
+          <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+             <SidebarProvider>
+              <AppSidebar />
+              <main className="grow-[1]">
+                <SidebarInset>
+                  <Header/>
+                </SidebarInset>
+                <div className=" bg-neutral-50 p-0 lg:p-6 h-full">
+                  {children}
+                </div>
+              </main>
+            </SidebarProvider>
+          </ThemeProvider>
       </body>
     </html>
   );
