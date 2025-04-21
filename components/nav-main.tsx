@@ -35,10 +35,8 @@ type SidebarItem = {
 }
 
 export function NavMain({ items } : {items:SidebarItem[]}) {
-
-  const pathname = usePathname();
-  console.log(pathname);
   
+  const pathname = usePathname();
   
   return (
     <SidebarGroup>
@@ -110,6 +108,7 @@ export function NavMain({ items } : {items:SidebarItem[]}) {
             }
             if(item.url && item.title) {
               const isMenuActive = pathname === item.url || pathname.startsWith(item.url);
+
               return (
                 <SidebarMenuItem key={item.title} className="">
                     <SidebarMenuButton asChild 

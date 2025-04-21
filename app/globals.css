@@ -119,4 +119,43 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Thin scrollbar css start */
+  .scrollbar-thin::-webkit-scrollbar {
+    @apply w-1.5;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded-[50rem] hover:bg-slate-400;
+  }
+
+  .scrollbar-thin:active::-webkit-scrollbar-thumb {
+    @apply bg-slate-500;
+  }
+  /* Thin scrollbar css start */
+
+
+  /* Invisible scrollbar css start */
+  .scrollbar-invisible::-webkit-scrollbar-thumb {
+    @apply bg-transparent;
+  }
+
+  .hover\:scrollbar-visible:hover::-webkit-scrollbar-thumb {
+    @apply bg-slate-300;
+  }
+
+  .hover\:scrollbar-visible:hover::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400;
+  }
+  
+  .hover\:scrollbar-visible:hover::-webkit-scrollbar-thumb:active {
+    @apply bg-slate-500;
+  }
+  /* Invisible scrollbar css end */
+
+  
 }
