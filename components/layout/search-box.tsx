@@ -37,7 +37,7 @@ const SearchBox = () => {
             </DialogTrigger>
 
             <DialogContent className={cn('p-0 !max-w-[620px] overflow-hidden')}>
-                <DialogTitle className='hidden'>Are you absolutely sure?</DialogTitle>
+                <DialogTitle className='hidden'>Search...</DialogTitle>
                 <Command>
                     <CommandInput placeholder="Type a command or search..." />
                     <CommandList className='scrollbar-thin scrollbar-invisible hover:scrollbar-visible max-h-[400px]'>
