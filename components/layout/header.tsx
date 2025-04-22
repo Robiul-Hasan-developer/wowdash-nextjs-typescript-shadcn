@@ -2,6 +2,7 @@ import React from 'react';
 import { SidebarTrigger } from '../ui/sidebar';
 import SearchBox from '../shared/search-box';
 import { ModeToggle } from '../shared/mode-toggle';
+import LanguageSelect from '../shared/language-select';
 
 
 const Header = () => {
@@ -11,8 +12,9 @@ const Header = () => {
                 <SidebarTrigger className="-ms-1 p-0 size-[unset] cursor-pointer" />
                 <SearchBox />
             </div>
-            <div className="">
+            <div className="flex items-center gap-3">
                 <ModeToggle/>
+                <LanguageSelect/>
             </div>
         </header>
     );
