@@ -18,7 +18,6 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 import LogoSidebar from "./shared/logo-sidebar"
-import { cn } from "@/lib/utils"
 
 // This is sample data.
 const data = {
