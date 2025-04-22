@@ -61,8 +61,8 @@ export function NavMain({ items } : {items:SidebarItem[]}) {
                       <SidebarMenuButton 
                         tooltip={item.title}   
                         className={cn(
-                          "cursor-pointer py-5.5 px-3 text-base data-[state=open]:bg-primary data-[state=open]:text-white hover:data-[state=open]:bg-primary hover:data-[state=open]:text-white hover:bg-[#e4f1ff] active:bg-[#e4f1ff]",
-                          isGroupActive ? 'bg-primary text-white hover:bg-primary hover:text-white' : ''
+                          "cursor-pointer py-5.5 px-3 text-base data-[state=open]:bg-primary data-[state=open]:text-white hover:data-[state=open]:bg-primary dark:hover:data-[state=open]:bg-primary hover:data-[state=open]:text-white hover:bg-[#e4f1ff] active:bg-[#e4f1ff] dark:hover:bg-slate-700",
+                          isGroupActive ? 'bg-primary text-white hover:bg-primary hover:text-white dark:bg-primary dark:hover:bg-primary' : ''
                         )}>
                         {item.icon && <item.icon />}
                         <span>{item.title}</span>
@@ -79,9 +79,9 @@ export function NavMain({ items } : {items:SidebarItem[]}) {
                                 <SidebarMenuSubButton
                                   asChild
                                   className={cn(
-                                    "py-5.5 px-3 text-base hover:bg-[#e4f1ff] active:bg-[#e4f1ff]",
+                                    "py-5.5 px-3 text-base hover:bg-[#e4f1ff] active:bg-[#e4f1ff] dark:hover:bg-slate-700",
                                     isSubActive
-                                      ? "bg-[#e4f1ff] font-bold"
+                                      ? "bg-[#e4f1ff] font-bold dark:bg-slate-600"
                                       : ""
                                   )}
                                 >
@@ -113,7 +113,7 @@ export function NavMain({ items } : {items:SidebarItem[]}) {
                 <SidebarMenuItem key={item.title} className="">
                     <SidebarMenuButton asChild 
                       tooltip={item.title} 
-                      className={cn("cursor-pointer py-5.5 px-3 text-base hover:bg-[#e4f1ff] active:bg-[#e4f1ff]", isMenuActive
+                      className={cn("cursor-pointer py-5.5 px-3 text-base hover:bg-[#e4f1ff] active:bg-[#e4f1ff] dark:hover:bg-slate-700", isMenuActive
                       ? "bg-primary text-white hover:bg-primary hover:text-white"
                       : "")}>
                       <Link href={item.url} className="flex items-center gap-2">

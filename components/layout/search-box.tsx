@@ -27,8 +27,9 @@ const SearchBox = () => {
             <DialogTrigger>
                 <div className="relative max-w-[388px] w-full cursor-pointer">
                     <Input 
-                        className={cn("bg-neutral-100 shadow-none focus-visible:ring-0 focus-visible:border-primary border border-slate-300 h-10 pe-6 ps-11 w-full cursor-pointer")} 
+                        className={cn("bg-neutral-100 shadow-none focus-visible:ring-0 focus-visible:border-primary border border-slate-300 h-10 pe-6 ps-11 w-full cursor-pointer disabled:opacity-[1]")} 
                         placeholder="Search..." 
+                        disabled
                     />
                     <span className="absolute top-[50%] start-0 ms-4 -translate-y-[50%]">
                         <Search className='text-neutral-500' width={18} height={18} />
