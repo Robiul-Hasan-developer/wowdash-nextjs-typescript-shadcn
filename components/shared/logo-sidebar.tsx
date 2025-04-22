@@ -10,29 +10,16 @@ import LogoDark from '@/public/assets/images/logo.png'
 import LogoWhite from '@/public/assets/images/logo-light.png'
 import LogoIcon from '@/public/assets/images/logo-icon.png'
 import { cn } from '@/lib/utils'
+import { useSidebarCollapsed } from '@/hooks/useSidebarCollapsed'
 
 function LogoSidebar() {
   const { theme } = useTheme()
   const [isMounted, setIsMounted] = useState(false)
-  const [isCollapsed, setIsCollapsed] = useState(false)
+
+  const isCollapsed = useSidebarCollapsed(); 
 
   useEffect(() => {
     setIsMounted(true)
-
-    const sidebar = document.querySelector('[data-state]')
-    const updateState = () => {
-      const isCollapsedState = sidebar?.getAttribute('data-state') === 'collapsed'
-      setIsCollapsed(isCollapsedState)
-    }
-
-    updateState()
-
-    const observer = new MutationObserver(updateState)
-    if (sidebar) {
-      observer.observe(sidebar, { attributes: true, attributeFilter: ['data-state'] })
-    }
-
-    return () => observer.disconnect()
   }, [])
 
   // Don't render until mounted to avoid hydration mismatch or wrong theme

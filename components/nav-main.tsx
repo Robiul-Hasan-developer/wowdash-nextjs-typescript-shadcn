@@ -21,6 +21,9 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 
+import React from 'react'
+import { useSidebarCollapsed } from "@/hooks/useSidebarCollapsed"
+
 type SidebarItem = {
   title?: string
   url?: string
@@ -37,9 +40,10 @@ type SidebarItem = {
 export function NavMain({ items } : {items:SidebarItem[]}) {
   
   const pathname = usePathname();
+  const isCollapsed = useSidebarCollapsed();
   
   return (
-    <SidebarGroup>
+    <SidebarGroup className={` ${isCollapsed ? 'px-1.5' : ''}`}>
       <SidebarMenu>
         {
           items.map((item) => {
@@ -114,7 +118,7 @@ export function NavMain({ items } : {items:SidebarItem[]}) {
                     <SidebarMenuButton asChild 
                       tooltip={item.title} 
                       className={cn("cursor-pointer py-5.5 px-3 text-base hover:bg-[#e4f1ff] active:bg-[#e4f1ff] dark:hover:bg-slate-700", isMenuActive
-                      ? "bg-primary text-white hover:bg-primary hover:text-white"
+                      ? "bg-primary hover:bg-primary text-white dark:hover:bg-primary hover:text-white"
                       : "")}>
                       <Link href={item.url} className="flex items-center gap-2">
                         {item.icon && <item.icon />}
