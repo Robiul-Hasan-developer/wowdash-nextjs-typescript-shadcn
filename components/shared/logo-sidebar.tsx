@@ -1,3 +1,4 @@
+
 'use client'
 
 import React, { useEffect, useState } from 'react'
@@ -11,11 +12,13 @@ import LogoIcon from '@/public/assets/images/logo-icon.png'
 import { cn } from '@/lib/utils'
 
 function LogoSidebar() {
-
   const { theme } = useTheme()
+  const [isMounted, setIsMounted] = useState(false)
   const [isCollapsed, setIsCollapsed] = useState(false)
 
   useEffect(() => {
+    setIsMounted(true)
+
     const sidebar = document.querySelector('[data-state]')
     const updateState = () => {
       const isCollapsedState = sidebar?.getAttribute('data-state') === 'collapsed'
@@ -32,20 +35,25 @@ function LogoSidebar() {
     return () => observer.disconnect()
   }, [])
 
+  // Don't render until mounted to avoid hydration mismatch or wrong theme
+  if (!isMounted) return null
+
   return (
     <Link
-        href="/dashboard"
-        className={cn(
-            'sidebar-logo h-[72px] px-4 py-3.5 flex items-center justify-center border-b border-neutral-100 dark:border-neutral-600', 
-            isCollapsed ? 'px-1' : ''
-        )}
+      href="/dashboard"
+      className={cn(
+        'sidebar-logo h-[72px] py-3.5 flex items-center justify-center border-b border-neutral-100 dark:border-neutral-600',
+        isCollapsed ? 'px-1' : 'px-4'
+      )}
     >
       <Image
-        src={isCollapsed
+        src={
+          isCollapsed
             ? LogoIcon
             : theme === 'dark'
             ? LogoWhite
-            : LogoDark}
+            : LogoDark
+        }
         alt="Logo"
         width={isCollapsed ? 44 : 168}
         height={40}
