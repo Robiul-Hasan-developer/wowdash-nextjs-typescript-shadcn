@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers"
 import { AppSidebar } from "@/components/app-sidebar"
 import {
   SidebarInset,
@@ -23,11 +24,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const cookieStore = await cookies()
+  const defaultOpen = cookieStore.get("sidebar_state")?.value === "true"
+  
   return (
     <html lang="en">
       <body
@@ -39,7 +44,7 @@ export default function RootLayout({
               enableSystem
               disableTransitionOnChange
             >
-             <SidebarProvider>
+             <SidebarProvider defaultOpen={defaultOpen}>
               <AppSidebar />
               <main className="grow-[1]">
                 <SidebarInset>
