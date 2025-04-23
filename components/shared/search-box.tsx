@@ -25,14 +25,14 @@ const SearchBox = () => {
     return (
         <Dialog>
             <DialogTrigger>
-                <div className="relative max-w-[388px] w-full cursor-pointer">
+                <div className="relative sm:max-w-[388px] w-full cursor-pointer">
                     <Input 
-                        className={cn("bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 shadow-none focus-visible:ring-0 focus-visible:border-primary border border-slate-300 h-10 pe-6 ps-11 w-full cursor-pointer disabled:opacity-[1] dark:border-slate-600")} 
+                        className={cn("bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 shadow-none focus-visible:ring-0 focus-visible:border-primary border border-slate-300 h-10 pe-6 ps-11 w-full cursor-pointer disabled:opacity-[1] dark:border-slate-600 sm:block hidden")} 
                         placeholder="Search..." 
                         disabled
                     />
-                    <span className="absolute top-[50%] start-0 ms-4 -translate-y-[50%]">
-                        <Search className='text-neutral-500' width={18} height={18} />
+                    <span className="sm:absolute sm:top-[50%] sm:start-0 sm:ms-4 sm:-translate-y-[50%]">
+                        <Search className='text-neutral-500 dark:text-white' width={18} height={18} />
                     </span>
                 </div>
             </DialogTrigger>

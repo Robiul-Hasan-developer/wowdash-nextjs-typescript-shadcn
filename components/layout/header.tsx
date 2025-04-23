@@ -3,6 +3,7 @@ import { SidebarTrigger } from '../ui/sidebar';
 import SearchBox from '../shared/search-box';
 import { ModeToggle } from '../shared/mode-toggle';
 import LanguageSelect from '../shared/language-select';
+import MessageDropdown from '../shared/message-dropdown';
 
 
 const Header = () => {
@@ -15,6 +16,7 @@ const Header = () => {
             <div className="flex items-center gap-3">
                 <ModeToggle/>
                 <LanguageSelect/>
+                <MessageDropdown/>
             </div>
         </header>
     );
