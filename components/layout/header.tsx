@@ -6,7 +6,6 @@ import LanguageSelect from '../shared/language-select';
 import MessageDropdown from '../shared/message-dropdown';
 import NotificationDropdown from './../shared/notification-dropdown';
 
-
 const Header = () => {
     return (
         <header className="flex items-center justify-between h-18 shrink-0 gap-2 px-6 py-4 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 dark:bg-[#273142]">

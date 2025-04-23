@@ -2,7 +2,6 @@
 'use client'
 import { useEffect, useState } from 'react'
 
-
 export function useSidebarCollapsed(): boolean {
     const [isCollapsed, setIsCollapsed] = useState(false)
 
