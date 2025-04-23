@@ -5,6 +5,7 @@ import { ModeToggle } from '../shared/mode-toggle';
 import LanguageSelect from '../shared/language-select';
 import MessageDropdown from '../shared/message-dropdown';
 import NotificationDropdown from './../shared/notification-dropdown';
+import ProfileDropdown from '../shared/profile-dropdown';
 
 const Header = () => {
     return (
@@ -18,6 +19,7 @@ const Header = () => {
                 <LanguageSelect/>
                 <MessageDropdown/>
                 <NotificationDropdown/>
+                <ProfileDropdown/>
             </div>
         </header>
     );
