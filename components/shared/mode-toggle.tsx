@@ -23,7 +23,7 @@ export function ModeToggle() {
           variant="outline" 
           size="icon" 
           className={cn(
-            'rounded-[50%] w-10 h-10 bg-neutral-200 hover:bg-neutral-300 focus-visible:ring-0 dark:bg-slate-700 dark:hover:bg-slate-600 border-0 cursor-pointer'
+            'rounded-[50%] w-10 h-10 bg-gray-200/75 hover:bg-gray-200 focus-visible:ring-0 dark:bg-slate-700 dark:hover:bg-slate-600 border-0 cursor-pointer data-[state=open]:bg-gray-300 dark:data-[state=open]:bg-slate-600'
           )}
         >
           <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
