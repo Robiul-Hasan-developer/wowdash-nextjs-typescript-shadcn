@@ -22,7 +22,7 @@ const LanguageSelect = () => {
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
-            <SelectItem value="en">
+            <SelectItem value="en" className="cursor-pointer">
               <span className="">
                 <Image
                   src={LanguageImg1}
@@ -34,7 +34,7 @@ const LanguageSelect = () => {
               </span>
               En
             </SelectItem>
-            <SelectItem value="bn">
+            <SelectItem value="bn" className="cursor-pointer">
               <span className="">
                 <Image
                   src={LanguageImg2}
@@ -46,7 +46,7 @@ const LanguageSelect = () => {
               </span>
               Bn
             </SelectItem>
-            <SelectItem value="ar">
+            <SelectItem value="ar" className="cursor-pointer">
               <span className="">
                 <Image
                   src={LanguageImg3}
