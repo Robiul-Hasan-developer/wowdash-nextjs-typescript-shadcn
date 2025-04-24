@@ -20,8 +20,8 @@ const DashboardBreadcrumb = ({title, text} : BreadcrumbData) => {
             <h6 className="text-2xl font-semibold">{title}</h6>
             <Breadcrumb>
                 <BreadcrumbList>
-                    <BreadcrumbItem className="hover:text-primary text-base">
-                        <BreadcrumbLink href='/' className='flex items-center gap-2 font-medium'>
+                    <BreadcrumbItem className="">
+                        <BreadcrumbLink href='/' className='flex items-center gap-2 font-medium text-base text-neutral-600 hover:text-primary dark:text-white dark:hover:text-primary'>
                             <House size={16} />
                             Dashboard
                         </BreadcrumbLink>
