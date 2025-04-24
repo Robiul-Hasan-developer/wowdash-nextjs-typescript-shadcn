@@ -7,22 +7,29 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
   } from "@/components/ui/breadcrumb"
+import { House } from 'lucide-react';
 
-const DashboardBreadcrumb = () => {
+  type BreadcrumbData = {
+    title: string,
+    text: string,
+  }
+  
+const DashboardBreadcrumb = ({title, text} : BreadcrumbData) => {
     return (
-        <div>
-            <h6 className="text-2xl font-bold">This is Dashboard Page</h6>
+        <div className='flex flex-wrap items-center justify-between gap-2 mb-6'>
+            <h6 className="text-2xl font-semibold">{title}</h6>
             <Breadcrumb>
                 <BreadcrumbList>
-                <BreadcrumbItem className="hidden md:block">
-                    <BreadcrumbLink href="#">
-                    Building Your Application
-                    </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="hidden md:block" />
-                <BreadcrumbItem>
-                    <BreadcrumbPage>Data Fetching</BreadcrumbPage>
-                </BreadcrumbItem>
+                    <BreadcrumbItem className="hover:text-primary text-base">
+                        <BreadcrumbLink href='/' className='flex items-center gap-2 font-medium'>
+                            <House size={16} />
+                            Dashboard
+                        </BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator/>
+                    <BreadcrumbItem className="text-base">
+                        <BreadcrumbPage>{text}</BreadcrumbPage>
+                    </BreadcrumbItem>
                 </BreadcrumbList>
             </Breadcrumb>
         </div>
