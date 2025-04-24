@@ -11,7 +11,7 @@ import {
 const DashboardBreadcrumb = () => {
     return (
         <div>
-            
+            <h6 className="text-2xl font-bold">This is Dashboard Page</h6>
             <Breadcrumb>
                 <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">

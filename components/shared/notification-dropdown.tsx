@@ -24,7 +24,7 @@ const NotificationDropdown = () => {
             'rounded-[50%] w-10 h-10 bg-gray-200/75 hover:bg-slate-200 focus-visible:ring-0 dark:bg-slate-700 dark:hover:bg-slate-600 border-0 cursor-pointer data-[state=open]:bg-gray-300 dark:data-[state=open]:bg-slate-600'
           )}
         >
-          <Bell />
+          <Bell className="h-[5.2rem] w-[5.2rem]" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="sm:w-[400px] max-h-[unset] me-6 p-0 rounded-2xl overflow-hidden shadow-lg block">
@@ -46,7 +46,7 @@ const NotificationDropdown = () => {
                   </div>
                 </div>
                 <div className="shrink-0">
-                  <span className="text-sm text-neutral-500">23 Mins ago</span>
+                  <span className="text-sm text-neutral-500 dark:text-neutral-300">23 Mins ago</span>
                 </div>
               </Link>
               <Link href="javascript:void(0)" className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 justify-between gap-1">
@@ -66,7 +66,7 @@ const NotificationDropdown = () => {
                   </div>
                 </div>
                 <div className="shrink-0">
-                  <span className="text-sm text-neutral-500">23 Mins ago</span>
+                  <span className="text-sm text-neutral-500 dark:text-neutral-300">23 Mins ago</span>
                 </div>
               </Link>
               <Link href="javascript:void(0)" className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 justify-between gap-1">
@@ -80,7 +80,7 @@ const NotificationDropdown = () => {
                   </div>
                 </div>
                 <div className="shrink-0">
-                  <span className="text-sm text-neutral-500">23 Mins ago</span>
+                  <span className="text-sm text-neutral-500 dark:text-neutral-300">23 Mins ago</span>
                 </div>
               </Link>
               <Link href="javascript:void(0)" className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 justify-between gap-1">
@@ -100,7 +100,7 @@ const NotificationDropdown = () => {
                   </div>
                 </div>
                 <div className="shrink-0">
-                  <span className="text-sm text-neutral-500">23 Mins ago</span>
+                  <span className="text-sm text-neutral-500 dark:text-neutral-300">23 Mins ago</span>
                 </div>
               </Link>
               <Link href="javascript:void(0)" className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 justify-between gap-1">
@@ -114,7 +114,7 @@ const NotificationDropdown = () => {
                   </div>
                 </div>
                 <div className="shrink-0">
-                  <span className="text-sm text-neutral-500">23 Mins ago</span>
+                  <span className="text-sm text-neutral-500 dark:text-neutral-300">23 Mins ago</span>
                 </div>
               </Link>
             </div>
