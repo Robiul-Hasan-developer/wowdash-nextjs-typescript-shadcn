@@ -9,10 +9,11 @@ import {
   } from "@/components/ui/breadcrumb"
 import { House } from 'lucide-react';
 
-  type BreadcrumbData = {
+
+type BreadcrumbData = {
     title: string,
     text: string,
-  }
+}
   
 const DashboardBreadcrumb = ({title, text} : BreadcrumbData) => {
     return (
