@@ -1,6 +1,7 @@
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import StatCard from "./components/stat-card";
 import SalesStaticChart from './components/sales-static-chart';
+import DemoSelect from "./components/demo-select";
 
 export default function Page() {
   return (
@@ -13,6 +14,7 @@ export default function Page() {
       
       <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 mt-6">
         <SalesStaticChart />
+        <DemoSelect />
       </div>
     </>
   )

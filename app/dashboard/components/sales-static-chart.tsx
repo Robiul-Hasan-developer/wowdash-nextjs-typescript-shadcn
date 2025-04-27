@@ -1,4 +1,14 @@
 import React from "react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+import { Card, CardContent } from "@/components/ui/card";
+import { ArrowUp } from "lucide-react";
+
 
 // var options = {
 //   series: [{
@@ -112,28 +122,33 @@ import React from "react";
 const SalesStaticChart = () => {
   return (
     <div className="xl:col-span-12 2xl:col-span-6">
-      <div className="card h-full rounded-lg border-0">
-        <div className="card-body">
+      <Card className="bg-white dark:bg-slate-800 h-full rounded-lg border-0">
+        <CardContent className="">
           <div className="flex flex-wrap items-center justify-between">
             <h6 className="text-lg mb-0">Sales Statistic</h6>
-            <select className="form-select bg-white dark:bg-neutral-700 form-select-sm w-auto">
-              <option>Yearly</option>
-              <option>Monthly</option>
-              <option>Weekly</option>
-              <option>Today</option>
-            </select>
+            <Select>
+              <SelectTrigger className="min-w-[88px] focus-visible:shadow-none focus-visible:ring-0 font-medium dark:bg-slate-700 text-neutral-900 dark:text-white border border-neutral-300 data-[placeholder]:text-neutral-900">
+                <SelectValue placeholder="Yearly" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="Yearly">Yearly</SelectItem>
+                <SelectItem value="Monthly">Monthly</SelectItem>
+                <SelectItem value="Weekly">Weekly</SelectItem>
+                <SelectItem value="Today">Today</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
           <div className="flex flex-wrap items-center gap-2 mt-2">
             <h6 className="mb-0">$27,200</h6>
-            <span className="text-sm font-semibold rounded-full bg-success-100 dark:bg-success-600/25 text-success-600 dark:text-success-400 border border-success-200 dark:border-success-600/50 px-2 py-1.5 line-height-1 flex items-center gap-1">
+            <span className="text-sm font-semibold rounded-full bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400 border border-green-200 dark:border-green-600/50 px-2 py-1.5 line-height-1 flex items-center gap-1">
               10%{" "}
-              {/* <iconify-icon icon="bxs:up-arrow" className="text-xs"></iconify-icon> */}
+              <ArrowUp width={14} height={14} />
             </span>
             <span className="text-xs font-medium">+ $1400 Per Day</span>
           </div>
           <div id="chart" className="pt-[28px] apexcharts-tooltip-style-1"></div>
-        </div>
-      </div>
+        </CardContent>
+      </Card>
     </div>
   );
 };
