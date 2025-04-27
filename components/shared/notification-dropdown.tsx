@@ -21,7 +21,7 @@ const NotificationDropdown = () => {
           variant="outline" 
           size="icon" 
           className={cn(
-            'rounded-[50%] w-10 h-10 bg-gray-200/75 hover:bg-slate-200 focus-visible:ring-0 dark:bg-slate-700 dark:hover:bg-slate-600 border-0 cursor-pointer data-[state=open]:bg-gray-300 dark:data-[state=open]:bg-slate-600'
+            'rounded-[50%] sm:w-10 sm:h-10 w-8 h-8 bg-gray-200/75 hover:bg-slate-200 focus-visible:ring-0 dark:bg-slate-700 dark:hover:bg-slate-600 border-0 cursor-pointer data-[state=open]:bg-gray-300 dark:data-[state=open]:bg-slate-600'
           )}
         >
           <Bell className="h-[5.2rem] w-[5.2rem]" />
@@ -31,7 +31,7 @@ const NotificationDropdown = () => {
         <div className="">
           <div className="py-3 px-4 rounded-lg bg-primary/10 dark:bg-primary-600/25 m-4 flex items-center justify-between gap-2">
             <h6 className="text-lg text-neutral-900 dark:text-white font-semibold mb-0">Notification</h6>
-            <span className="w-10 h-10 bg-white dark:bg-slate-800 text-primary dark:text-primary font-bold flex justify-center items-center rounded-full">05</span>
+            <span className="sm:w-10 sm:h-10 w-8 h-8 bg-white dark:bg-slate-800 text-primary dark:text-primary font-bold flex justify-center items-center rounded-full">05</span>
           </div>
           <div className="scroll-sm !border-t-0">
             <div className="max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-invisible hover:scrollbar-visible">

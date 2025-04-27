@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils";
 const LanguageSelect = () => {
   return (
       <Select>
-        <SelectTrigger className={cn('focus-visible:ring-0 border-0 bg-gray-200/75 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 !h-10 dark:text-white cursor-pointer data-[state=open]:bg-gray-300 dark:data-[state=open]:bg-slate-600')}>
+        <SelectTrigger className={cn('focus-visible:ring-0 border-0 bg-gray-200/75 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 !sm:h-10 !h-8 dark:text-white cursor-pointer data-[state=open]:bg-gray-300 dark:data-[state=open]:bg-slate-600 sm:max-w-[unset] max-w-[80px]')}>
           <SelectValue placeholder="Language" />
         </SelectTrigger>
         <SelectContent>
@@ -26,7 +26,7 @@ const LanguageSelect = () => {
               <span className="">
                 <Image
                   src={LanguageImg1}
-                  className="rounded-[50%]"
+                  className="rounded-[50%] sm:flex hidden"
                   width={24}
                   height={24}
                   alt="Flag"
@@ -38,7 +38,7 @@ const LanguageSelect = () => {
               <span className="">
                 <Image
                   src={LanguageImg2}
-                  className="rounded-[50%]"
+                  className="rounded-[50%] sm:flex hidden"
                   width={24}
                   height={24}
                   alt="Flag"
@@ -50,7 +50,7 @@ const LanguageSelect = () => {
               <span className="">
                 <Image
                   src={LanguageImg3}
-                  className="rounded-[50%]"
+                  className="rounded-[50%] sm:flex hidden"
                   width={24}
                   height={24}
                   alt="Flag"

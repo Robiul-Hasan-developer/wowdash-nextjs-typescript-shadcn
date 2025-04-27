@@ -20,7 +20,7 @@ const ProfileDropdown = () => {
           variant="outline"
           size="icon"
           className={cn(
-            'rounded-full w-10 h-10 bg-gray-200/75 hover:bg-slate-200 focus-visible:ring-0 dark:bg-slate-700 dark:hover:bg-slate-600 border-0 cursor-pointer data-[state=open]:bg-gray-300 data-[state=open]:ring-3 data-[state=open]:ring-slate-300 dark:data-[state=open]:ring-slate-500 dark:data-[state=open]:bg-slate-600'
+            'rounded-full sm:w-10 sm:h-10 w-8 h-8 bg-gray-200/75 hover:bg-slate-200 focus-visible:ring-0 dark:bg-slate-700 dark:hover:bg-slate-600 border-0 cursor-pointer data-[state=open]:bg-gray-300 data-[state=open]:ring-3 data-[state=open]:ring-slate-300 dark:data-[state=open]:ring-slate-500 dark:data-[state=open]:bg-slate-600'
           )}
         >
           <Image
@@ -34,7 +34,7 @@ const ProfileDropdown = () => {
       </DropdownMenuTrigger>
 
       <DropdownMenuContent
-        className="sm:w-[300px] right-[40px] absolute p-4 rounded-2xl overflow-hidden shadow-lg"
+        className="sm:w-[300px] min-w-[250px] right-[40px] absolute p-4 rounded-2xl overflow-hidden shadow-lg"
         side="bottom"
         align="end"
       >
