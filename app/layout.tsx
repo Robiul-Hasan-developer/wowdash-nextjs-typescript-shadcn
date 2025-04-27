@@ -50,7 +50,7 @@ export default async function RootLayout({
                 <SidebarInset>
                   <Header/>
                 </SidebarInset>
-                <div className="bg-neutral-100 dark:bg-[#1f2937] p-0 lg:p-6 h-full">
+                <div className="bg-neutral-100 dark:bg-[#1f2937] p-6 h-full">
                   {children}
                 </div>
               </main>
