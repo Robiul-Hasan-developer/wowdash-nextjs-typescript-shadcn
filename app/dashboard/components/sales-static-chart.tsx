@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/select"
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowUp } from "lucide-react";
+import CustomSelect from "@/components/shared/custom-select";
 
 
 // var options = {
@@ -122,21 +123,14 @@ import { ArrowUp } from "lucide-react";
 const SalesStaticChart = () => {
   return (
     <div className="xl:col-span-12 2xl:col-span-6">
-      <Card className="bg-white dark:bg-slate-800 h-full rounded-lg border-0">
+      <Card className="bg-white dark:bg-[#273142] h-full rounded-lg border-0">
         <CardContent className="">
           <div className="flex flex-wrap items-center justify-between">
             <h6 className="text-lg mb-0">Sales Statistic</h6>
-            <Select>
-              <SelectTrigger className="min-w-[88px] focus-visible:shadow-none focus-visible:ring-0 font-medium dark:bg-slate-700 text-neutral-900 dark:text-white border border-neutral-300 data-[placeholder]:text-neutral-900">
-                <SelectValue placeholder="Yearly" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="Yearly">Yearly</SelectItem>
-                <SelectItem value="Monthly">Monthly</SelectItem>
-                <SelectItem value="Weekly">Weekly</SelectItem>
-                <SelectItem value="Today">Today</SelectItem>
-              </SelectContent>
-            </Select>
+            <CustomSelect 
+              placeholder="Yearly"
+              options={["Yearly", "Monthly", "Weekly", "Today"]}
+            />
           </div>
           <div className="flex flex-wrap items-center gap-2 mt-2">
             <h6 className="mb-0">$27,200</h6>
