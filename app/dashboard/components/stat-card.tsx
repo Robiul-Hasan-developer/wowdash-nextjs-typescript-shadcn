@@ -79,7 +79,7 @@ const StatCard = () => {
       cardsDatas.map((card, index) => (
       <Card
         key={index}
-        className={`bg-gradient-to-r ${card.gradientFrom} to-white dark:to-neutral-800 p-0 border border-gray-200 dark:border-neutral-700 rounded-md shadow-none`}
+        className={`bg-gradient-to-r ${card.gradientFrom} to-white dark:to-slate-700 p-0 border border-gray-200 dark:border-neutral-700 rounded-md shadow-none`}
       >
         <CardContent className="p-6">
           <div className="flex items-center justify-between">

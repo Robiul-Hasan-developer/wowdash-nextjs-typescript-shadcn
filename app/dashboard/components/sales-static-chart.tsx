@@ -1,11 +1,4 @@
 import React from "react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowUp } from "lucide-react";
 import CustomSelect from "@/components/shared/custom-select";
