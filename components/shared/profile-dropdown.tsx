@@ -41,7 +41,7 @@ const ProfileDropdown = () => {
         <div className="py-3 px-4 rounded-lg bg-primary/10 dark:bg-primar flex items-center justify-between">
           <div>
             <h6 className="text-lg text-neutral-900 dark:text-white font-semibold mb-0">
-              Shahidul Islam
+              Robiul Hasan
             </h6>
             <span className="text-sm text-neutral-500 dark:text-neutral-300">Admin</span>
           </div>
@@ -75,7 +75,7 @@ const ProfileDropdown = () => {
             </li>
             <li>
               <Link
-                href="#"
+                href="/login"
                 className="hover:text-red-600 flex items-center gap-3"
               >
                 <LogOut className="w-5 h-5" /> Log Out
