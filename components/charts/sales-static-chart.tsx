@@ -1,4 +1,3 @@
-
 "use client";
 
 import dynamic from 'next/dynamic'
@@ -72,14 +71,12 @@ const SalesStaticChart = () => {
   ];
 
   return (
-    <div className="pt-[28px] apexcharts-tooltip-style-1">
-      <Chart
-        options={chartOptions}
-        series={chartSeries}
-        type="line"
-        height={264}
-      />
-    </div>
+    <Chart
+      options={chartOptions}
+      series={chartSeries}
+      type="line"
+      height={264}
+    />
   );
 };
 
