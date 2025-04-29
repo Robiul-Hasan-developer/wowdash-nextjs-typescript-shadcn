@@ -4,7 +4,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowUp } from "lucide-react";
 import CustomSelect from "@/components/shared/custom-select";
-import SalesStaticChart from "./sales-static-chart";
+import SalesStaticChart from "../../../components/charts/sales-static-chart";
 
 
 const SalesStaticCard = () => {
@@ -28,7 +28,7 @@ const SalesStaticCard = () => {
             <span className="text-xs font-medium">+ $1400 Per Day</span>
           </div>
 
-          <div className="pt-[28px] apexcharts-tooltip-style-1">
+          <div className="apexcharts-tooltip-style-1">
             <SalesStaticChart/>
           </div>
         </CardContent>

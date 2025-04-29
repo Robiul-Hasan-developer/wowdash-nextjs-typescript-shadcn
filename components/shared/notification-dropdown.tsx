@@ -35,7 +35,7 @@ const NotificationDropdown = () => {
           </div>
           <div className="scroll-sm !border-t-0">
             <div className="max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-invisible hover:scrollbar-visible">
-              <Link href="javascript:void(0)" className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 justify-between gap-1">
+              <Link href="#" className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 justify-between gap-1">
                 <div className="flex items-center gap-3">
                   <div className="flex-shrink-0 relative w-11 h-11 bg-green-200 dark:bg-green-600 text-green flex justify-center items-center rounded-full">
                     <CircleCheck />
@@ -49,7 +49,7 @@ const NotificationDropdown = () => {
                   <span className="text-sm text-neutral-500 dark:text-neutral-300">23 Mins ago</span>
                 </div>
               </Link>
-              <Link href="javascript:void(0)" className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 justify-between gap-1">
+              <Link href="#" className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 justify-between gap-1">
                 <div className="flex items-center gap-3">
                   <div className="flex-shrink-0 relative">
                     <Image
@@ -69,7 +69,7 @@ const NotificationDropdown = () => {
                   <span className="text-sm text-neutral-500 dark:text-neutral-300">23 Mins ago</span>
                 </div>
               </Link>
-              <Link href="javascript:void(0)" className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 justify-between gap-1">
+              <Link href="#" className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 justify-between gap-1">
                 <div className="flex items-center gap-3">
                   <div className="flex-shrink-0 relative w-11 h-11 bg-blue-100 dark:bg-blue-600/25 text-blue-600 flex justify-center items-center rounded-full">
                     AM
@@ -83,7 +83,7 @@ const NotificationDropdown = () => {
                   <span className="text-sm text-neutral-500 dark:text-neutral-300">23 Mins ago</span>
                 </div>
               </Link>
-              <Link href="javascript:void(0)" className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 justify-between gap-1">
+              <Link href="#" className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 justify-between gap-1">
                 <div className="flex items-center gap-3">
                   <div className="flex-shrink-0 relative">
                     <Image
@@ -103,7 +103,7 @@ const NotificationDropdown = () => {
                   <span className="text-sm text-neutral-500 dark:text-neutral-300">23 Mins ago</span>
                 </div>
               </Link>
-              <Link href="javascript:void(0)" className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 justify-between gap-1">
+              <Link href="#" className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 justify-between gap-1">
                 <div className="flex items-center gap-3">
                   <div className="flex-shrink-0 relative w-11 h-11 bg-blue-100 dark:bg-blue-600/25 text-blue-600 flex justify-center items-center rounded-full">
                     DR
@@ -120,7 +120,7 @@ const NotificationDropdown = () => {
             </div>
 
             <div className="text-center py-3 px-4">
-              <Link href="javascript:void(0)" className="text-primary dark:text-primary font-semibold hover:underline text-center">See All Message </Link>
+              <Link href="#" className="text-primary dark:text-primary font-semibold hover:underline text-center">See All Message </Link>
             </div>
           </div>
         </div>

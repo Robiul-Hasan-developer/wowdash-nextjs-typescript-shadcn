@@ -38,7 +38,7 @@ const MessageDropdown = () => {
           </div>
           <div className="scroll-sm !border-t-0">
             <div className="max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-invisible hover:scrollbar-visible">
-              <Link href="javascript:void(0)" className="flex px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-600 justify-between gap-1">
+              <Link href="#" className="flex px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-600 justify-between gap-1">
                 <div className="flex items-center gap-3">
                   <div className="flex-shrink-0 relative">
                     <Image
@@ -60,7 +60,7 @@ const MessageDropdown = () => {
                   <span className="w-4 h-4 text-xs bg-yellow-600 dark:bg-yellow-600 text-white rounded-full flex justify-center items-center">8</span>
                 </div>
               </Link>
-              <Link href="javascript:void(0)" className="flex px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-600 justify-between gap-1">
+              <Link href="#" className="flex px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-600 justify-between gap-1">
                 <div className="flex items-center gap-3">
                   <div className="flex-shrink-0 relative">
                     <Image
@@ -82,7 +82,7 @@ const MessageDropdown = () => {
                   <span className="w-4 h-4 text-xs bg-yellow-600 dark:bg-yellow-600 text-white rounded-full flex justify-center items-center">8</span>
                 </div>
               </Link>
-              <Link href="javascript:void(0)" className="flex px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-600 justify-between gap-1">
+              <Link href="#" className="flex px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-600 justify-between gap-1">
                 <div className="flex items-center gap-3">
                   <div className="flex-shrink-0 relative">
                     <Image
@@ -104,7 +104,7 @@ const MessageDropdown = () => {
                   <span className="w-4 h-4 text-xs bg-yellow-600 dark:bg-yellow-600 text-white rounded-full flex justify-center items-center">8</span>
                 </div>
               </Link>
-              <Link href="javascript:void(0)" className="flex px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-600 justify-between gap-1">
+              <Link href="#" className="flex px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-600 justify-between gap-1">
                 <div className="flex items-center gap-3">
                   <div className="flex-shrink-0 relative">
                     <Image
@@ -126,7 +126,7 @@ const MessageDropdown = () => {
                   <span className="w-4 h-4 text-xs bg-yellow-600 dark:bg-yellow-600 text-white rounded-full flex justify-center items-center">8</span>
                 </div>
               </Link>
-              <Link href="javascript:void(0)" className="flex px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-600 justify-between gap-1">
+              <Link href="#" className="flex px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-600 justify-between gap-1">
                 <div className="flex items-center gap-3">
                   <div className="flex-shrink-0 relative">
                     <Image
@@ -151,7 +151,7 @@ const MessageDropdown = () => {
             </div>
 
             <div className="text-center py-3 px-4">
-              <Link href="javascript:void(0)" className="text-primary dark:text-primary font-semibold hover:underline text-center">See All Message </Link>
+              <Link href="#" className="text-primary dark:text-primary font-semibold hover:underline text-center">See All Message </Link>
             </div>
           </div>
         </div>
