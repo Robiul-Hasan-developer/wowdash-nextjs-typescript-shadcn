@@ -319,7 +319,7 @@
   }
 
   .active-gradient [data-state="active"] {
-    background: linear-gradient(180deg, rgba(72, 127, 255, 0.12) 0%, rgba(72, 127, 255, 0.03) 100%);
+    background: linear-gradient(#487fff30 0%, #487fff11 100%);
   }
 }
 /* ======================================== Custom Classes css End ======================================== */
