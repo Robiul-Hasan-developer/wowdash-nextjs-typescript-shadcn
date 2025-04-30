@@ -6,8 +6,8 @@ import TotalSubscriberChart from '@/components/charts/total-subscriber-chart';
 const TotalSubscriberCard = () => {
     return (
         <div className="xl:col-span-6 2xl:col-span-3">
-            <Card className="h-full rounded-lg border-0">
-                <CardContent className="card-body p-6">
+            <Card className="h-full rounded-lg border-0 p-4">
+                <CardContent className="card-body p-0">
                     <h6 className="mb-3 font-semibold text-lg">Total Subscriber</h6>
                     <div className="flex items-center gap-2 mb-5">
                         <h6 className="font-semibold mb-0">5,000</h6>

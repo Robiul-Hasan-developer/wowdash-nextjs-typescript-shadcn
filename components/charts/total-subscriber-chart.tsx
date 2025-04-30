@@ -92,7 +92,7 @@ const TotalSubscriberChart = () => {
             options={chartOptions}
             series={chartSeries}
             type="bar" 
-            height={264}
+            height={235}
         />
     );
 };
