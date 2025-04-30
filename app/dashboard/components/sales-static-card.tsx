@@ -10,7 +10,7 @@ import SalesStaticChart from "../../../components/charts/sales-static-chart";
 const SalesStaticCard = () => {
   return (
     <div className="xl:col-span-12 2xl:col-span-6">
-      <Card className="bg-white dark:bg-[#273142] h-full rounded-lg border-0 p-4">
+      <Card className="card h-full rounded-lg border-0">
         <CardContent className="px-0">
           <div className="flex flex-wrap items-center justify-between">
             <h6 className="text-lg mb-0">Sales Statistic</h6>

@@ -8,7 +8,6 @@ const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
 const SalesStaticChart = () => {
   const chartOptions: ApexOptions = {
     chart: {
-      height: 264,
       type: "line",
       toolbar: { show: false },
       zoom: { enabled: false },
@@ -75,7 +74,7 @@ const SalesStaticChart = () => {
       options={chartOptions}
       series={chartSeries}
       type="line"
-      height={264}
+      height={254}
     />
   );
 };

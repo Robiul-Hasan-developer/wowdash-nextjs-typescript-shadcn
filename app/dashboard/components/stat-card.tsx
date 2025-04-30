@@ -81,7 +81,7 @@ const StatCard = () => {
         key={index}
         className={`bg-gradient-to-r ${card.gradientFrom} to-white dark:to-slate-700 p-0 border border-gray-200 dark:border-neutral-700 rounded-md shadow-none`}
       >
-        <CardContent className="p-6">
+        <CardContent className="p-4">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-neutral-600 dark:text-neutral-300">{card.title}</p>
@@ -94,7 +94,7 @@ const StatCard = () => {
 
           <div className="flex items-center gap-2 text-sm mt-4">
             <span className={`flex items-center gap-1 ${card.growthColor}`}>
-              <card.growthIcon width={14} height={14} />
+              <card.growthIcon fill="currentColor" stroke="none" width={14} height={14} />
               {card.growth}
             </span>
             <span className="text-neutral-500 dark:text-neutral-400">{card.description}</span>
