@@ -5,7 +5,7 @@ import UserOverviewChart from '@/components/charts/user-overview-chart';
 
 const UserOverviewCard = () => {
     return (
-        <Card className="card h-full rounded-lg border-0">
+        <Card className="card">
             <CardContent className="card-body p-0">
                 <div className="flex items-center justify-between">
                     <h6 className="mb-3 font-semibold text-lg">Users Overview</h6>
