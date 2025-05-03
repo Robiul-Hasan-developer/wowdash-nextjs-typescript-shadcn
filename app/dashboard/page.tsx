@@ -36,15 +36,15 @@ export default function Page() {
           <TabsWithTableCard />
         </div>
         
-        <div className="xl:col-span-6 2xl:col-span-3">
+        <div className="xl:col-span-12 2xl:col-span-3">
           <TopPerformerCard />
         </div>
         
-        <div className="xl:col-span-6 2xl:col-span-6">
+        <div className="xl:col-span-12 2xl:col-span-6">
           <TopCountriesCard />
         </div>
         
-        <div className="xl:col-span-6 2xl:col-span-6">
+        <div className="xl:col-span-12 2xl:col-span-6">
           <GenerateContentCard />
         </div>
 

@@ -10,6 +10,7 @@ import { Inter } from 'next/font/google'
 import "./globals.css";
 import Header from "@/components/layout/header";
 import { ThemeProvider } from "@/components/theme-provider";
+import Footer from "@/components/layout/footer";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -50,9 +51,10 @@ export default async function RootLayout({
                 <SidebarInset>
                   <Header/>
                 </SidebarInset>
-                <div className="bg-neutral-100 dark:bg-[#1f2937] md:p-6 p-4 h-full">
+                <div className="bg-neutral-100 dark:bg-[#1f2937] md:p-6 p-4 min-h-[calc(100% - 300px)]">
                   {children}
                 </div>
+                <Footer/>
               </main>
             </SidebarProvider>
           </ThemeProvider>

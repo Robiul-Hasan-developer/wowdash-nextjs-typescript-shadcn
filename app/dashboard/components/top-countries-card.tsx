@@ -1,9 +1,8 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import CustomSelect from "@/components/shared/custom-select";
-import WorldMap from '@/components/map/world-map';
 import CountryList from '@/components/shared/country-list';
-
+import WorldMapChart from './../../../components/charts/world-map-chart';
 
 const TopCountriesCard = () => {
     return (
@@ -18,7 +17,9 @@ const TopCountriesCard = () => {
                 </div>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-5">
-                    <WorldMap/>
+                    <div className="h-full border border-neutral-200 dark:border-neutral-600 rounded-lg">
+                        <WorldMapChart/>
+                    </div>
 
                     <div className="h-full border border-neutral-200 dark:border-neutral-600 p-4 pe-0 rounded-lg">
                         <div className="max-h-[266px] overflow-y-auto pe-2 scrollbar-thin scrollbar-invisible hover:scrollbar-visible">
