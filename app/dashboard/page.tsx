@@ -5,6 +5,7 @@ import TotalSubscriberCard from "./components/total-subscriber-card";
 import UserOverviewCard from "./components/user-overview-card";
 import TabsWithTableCard from "./components/tabs-with-table-card";
 import TopPerformerCard from "./components/top-performer-card";
+import GenerateContentCard from "./components/generate-content-card";
 
 export default function Page() {
   return (
@@ -36,6 +37,10 @@ export default function Page() {
         
         <div className="xl:col-span-6 2xl:col-span-3">
           <TopPerformerCard />
+        </div>
+        
+        <div className="xl:col-span-6 2xl:col-span-6">
+          <GenerateContentCard />
         </div>
 
       </div>
