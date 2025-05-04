@@ -211,6 +211,10 @@
     .apexcharts-tooltip-title {
         @apply hidden;
     }
+   
+  }
+  .remove-tooltip-marker .apexcharts-tooltip-marker {
+      display: none !important;
   }
   .rounded-tooltip-value {
     .apexcharts-tooltip.apexcharts-theme-light {
