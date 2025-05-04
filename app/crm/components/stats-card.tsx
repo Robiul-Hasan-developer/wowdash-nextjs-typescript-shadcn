@@ -1,14 +1,6 @@
 "use client";
 import React from "react";
-import {
-    Users,
-    UserCheck,
-    DollarSign,
-    BarChart3,
-    LineChart,
-    TrendingUp,
-    LucideIcon,
-  } from "lucide-react";
+import { Users, UserCheck, DollarSign, BarChart3, LineChart, TrendingUp, LucideIcon} from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 import CardSmallChart from "@/components/charts/card-small-chart";
   
@@ -112,11 +104,12 @@ const StatsCard = () => {
                     <CardContent className="p-0">
                         <div className="flex flex-wrap items-center justify-between gap-1 mb-2">
                             <div className="flex items-center gap-2">
-                                <span
-                                    className={`w-[44px] h-[44px] ${item.bgCircle} text-white flex justify-center items-center rounded-full`}
-                                >
+                                  <span
+                                    style={{ backgroundColor: item.bgCircle }}
+                                    className={`w-[44px] h-[44px] text-white flex justify-center items-center rounded-full ${item.bgCircle}`}
+                                  >
                                     <Icon className="w-6 h-6" />
-                                </span>
+                                  </span>
                                 <div>
                                     <span className="text-sm font-medium text-neutral-600 dark:text-neutral-100">
                                         {item.title}
