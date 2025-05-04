@@ -89,7 +89,7 @@ const TopPerformerCard = () => {
                                             <span className="text-sm text-secondary-light font-medium">Agent ID: {topPerformer.agentId}</span>
                                         </div>
                                     </div>
-                                    <span className="text-neutral-600 dark:text-neutral-200 text-base font-medium">${topPerformer.earnings}</span>
+                                    <span className="text-neutral-600 dark:text-neutral-100 text-base font-medium">${topPerformer.earnings}</span>
                                 </div>
                             )
                         })

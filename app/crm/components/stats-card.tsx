@@ -118,7 +118,7 @@ const StatsCard = () => {
                                     <Icon className="w-6 h-6" />
                                 </span>
                                 <div>
-                                    <span className="text-sm font-medium text-neutral-600 dark:text-neutral-200">
+                                    <span className="text-sm font-medium text-neutral-600 dark:text-neutral-100">
                                         {item.title}
                                     </span>
                                     <h6 className="font-semibold">{item.value}</h6>
@@ -128,10 +128,12 @@ const StatsCard = () => {
                                 <CardSmallChart chartColor={item.bgCircle} />
                             </div>
                         </div>
-                        <p className="text-sm mb-0 text-neutral-600 dark:text-neutral-200">
-                            Increase by 
-                            <span className={`px-1 py-px rounded font-medium text-sm ${colorClass}`}> {item.change} </span>
-                             this week 
+                        <p className="text-sm mb-0 text-neutral-600 dark:text-neutral-100">
+                            Increase by{" "}
+                            <span className={`px-1 py-px rounded font-medium text-sm ${colorClass}`}>
+                                {item.change}
+                            </span>{" "}
+                            this week
                         </p>
                     </CardContent>
                 </Card>

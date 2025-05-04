@@ -1,6 +1,7 @@
 import DashboardBreadcrumb from '@/components/layout/dashboard-breadcrumb';
 import React from 'react';
 import StatsCard from './components/stats-card';
+import RevenueGrowthCard from './components/revenue-growth-card';
 
 const crmPage = () => {
     return (
@@ -16,25 +17,9 @@ const crmPage = () => {
         </div>
       </div>
       
-       {/* Revenue Growth start  */}
       <div className="lg:col-span-12 2xl:col-span-4">
-        <div className="card h-full rounded-lg border-0">
-          <div className="card-body p-6">
-            <div className="flex items-center flex-wrap gap-2 justify-between">
-              <div>
-                <h6 className="mb-2 font-bold text-lg">Revenue Growth</h6>
-                <span className="text-sm font-medium text-neutral-600">Weekly Report</span>
-              </div>
-              <div className="text-end">
-                <h6 className="mb-2 font-bold text-lg">$50,000.00</h6>
-                <span className="bg-success-100 dark:bg-success-600/25 px-3 py-1 rounded font-medium text-success-600 dark:text-success-400 text-sm">$10k</span>
-              </div>
-            </div>
-            <div id="revenue-chart" className="mt-0"></div>
-          </div>
-        </div>
+        <RevenueGrowthCard/>
       </div>
-       {/* Revenue Growth End  */}
 
        {/* Earning Static start  */}
       <div className="lg:col-span-12 2xl:col-span-8">
@@ -118,7 +103,7 @@ const crmPage = () => {
                       <span className="text-2xl line-height-1 flex align-content-center shrink-0 text-orange-500 dark:text-orange-500">
                         {/* <iconify-icon icon="majesticons:mail" className="icon"></iconify-icon> */}
                       </span>
-                      <span className="text-neutral-600 dark:text-neutral-200 font-medium text-sm ps-4">Email</span>
+                      <span className="text-neutral-600 dark:text-neutral-100 font-medium text-sm ps-4">Email</span>
                     </div>
                     <div className="flex items-center gap-2 w-full">
                       <div className="ms-auto">
@@ -135,7 +120,7 @@ const crmPage = () => {
                       <span className="text-2xl line-height-1 flex align-content-center shrink-0 text-success-500 dark:text-success-500">
                         {/* <iconify-icon icon="eva:globe-2-fill" className="icon"></iconify-icon> */}
                       </span>
-                      <span className="text-neutral-600 dark:text-neutral-200 font-medium text-sm ps-4">Website</span>
+                      <span className="text-neutral-600 dark:text-neutral-100 font-medium text-sm ps-4">Website</span>
                     </div>
                     <div className="flex items-center gap-2 w-full">
                       <div className="ms-auto">
@@ -152,7 +137,7 @@ const crmPage = () => {
                       <span className="text-2xl line-height-1 flex align-content-center shrink-0 text-blue-600 dark:text-blue-500">
                         {/* <iconify-icon icon="fa6-brands:square-facebook" className="icon"></iconify-icon> */}
                       </span>
-                      <span className="text-neutral-600 dark:text-neutral-200 font-medium text-sm ps-4">Facebook</span>
+                      <span className="text-neutral-600 dark:text-neutral-100 font-medium text-sm ps-4">Facebook</span>
                     </div>
                     <div className="flex items-center gap-2 w-full">
                       <div className="ms-auto">
@@ -169,7 +154,7 @@ const crmPage = () => {
                       <span className="text-2xl line-height-1 flex align-content-center shrink-0 text-purple-600 dark:text-purple-500">
                         {/* <iconify-icon icon="fluent:location-off-20-filled" className="icon"></iconify-icon> */}
                       </span>
-                      <span className="text-neutral-600 dark:text-neutral-200 font-medium text-sm ps-4">Email</span>
+                      <span className="text-neutral-600 dark:text-neutral-100 font-medium text-sm ps-4">Email</span>
                     </div>
                     <div className="flex items-center gap-2 w-full">
                       <div className="ms-auto">
@@ -372,7 +357,7 @@ const crmPage = () => {
                     <span className="text-sm text-neutral-600 font-medium">Agent ID: 36254</span>
                   </div>
                 </div>
-                <span className="text-neutral-600 dark:text-neutral-200 text-base font-medium">60/80</span>
+                <span className="text-neutral-600 dark:text-neutral-100 text-base font-medium">60/80</span>
               </div>
 
               <div className="flex items-center justify-between gap-3 mb-8">
@@ -383,7 +368,7 @@ const crmPage = () => {
                     <span className="text-sm text-neutral-600 font-medium">Agent ID: 36254</span>
                   </div>
                 </div>
-                <span className="text-neutral-600 dark:text-neutral-200 text-base font-medium">50/70</span>
+                <span className="text-neutral-600 dark:text-neutral-100 text-base font-medium">50/70</span>
               </div>
 
               <div className="flex items-center justify-between gap-3 mb-8">
@@ -394,7 +379,7 @@ const crmPage = () => {
                     <span className="text-sm text-neutral-600 font-medium">Agent ID: 36254</span>
                   </div>
                 </div>
-                <span className="text-neutral-600 dark:text-neutral-200 text-base font-medium">55/75</span>
+                <span className="text-neutral-600 dark:text-neutral-100 text-base font-medium">55/75</span>
               </div>
 
               <div className="flex items-center justify-between gap-3 mb-8">
@@ -405,7 +390,7 @@ const crmPage = () => {
                     <span className="text-sm text-neutral-600 font-medium">Agent ID: 36254</span>
                   </div>
                 </div>
-                <span className="text-neutral-600 dark:text-neutral-200 text-base font-medium">60/80</span>
+                <span className="text-neutral-600 dark:text-neutral-100 text-base font-medium">60/80</span>
               </div>
 
               <div className="flex items-center justify-between gap-3 mb-8">
@@ -416,7 +401,7 @@ const crmPage = () => {
                     <span className="text-sm text-neutral-600 font-medium">Agent ID: 36254</span>
                   </div>
                 </div>
-                <span className="text-neutral-600 dark:text-neutral-200 text-base font-medium">55/75</span>
+                <span className="text-neutral-600 dark:text-neutral-100 text-base font-medium">55/75</span>
               </div>
 
               <div className="flex items-center justify-between gap-3">
@@ -427,7 +412,7 @@ const crmPage = () => {
                     <span className="text-sm text-neutral-600 font-medium">Agent ID: 36254</span>
                   </div>
                 </div>
-                <span className="text-neutral-600 dark:text-neutral-200 text-base font-medium">50/70</span>
+                <span className="text-neutral-600 dark:text-neutral-100 text-base font-medium">50/70</span>
               </div>
 
             </div>
@@ -475,7 +460,7 @@ const crmPage = () => {
                         <tr>
                           <td>
                             <div>
-                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-200 text-w-200-px">Hotel Management System</span>
+                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-100 text-w-200-px">Hotel Management System</span>
                               <span className="text-sm block font-normal text-neutral-600">#5632</span>
                             </div>
                           </td>
@@ -507,7 +492,7 @@ const crmPage = () => {
                         <tr>
                           <td>
                             <div>
-                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-200 text-w-200-px">Hotel Management System</span>
+                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-100 text-w-200-px">Hotel Management System</span>
                               <span className="text-sm block font-normal text-neutral-600">#5632</span>
                             </div>
                           </td>
@@ -538,7 +523,7 @@ const crmPage = () => {
                         <tr>
                           <td>
                             <div>
-                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-200 text-w-200-px">Hotel Management System</span>
+                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-100 text-w-200-px">Hotel Management System</span>
                               <span className="text-sm block font-normal text-neutral-600">#5632</span>
                             </div>
                           </td>
@@ -569,7 +554,7 @@ const crmPage = () => {
                         <tr>
                           <td>
                             <div>
-                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-200 text-w-200-px">Hotel Management System</span>
+                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-100 text-w-200-px">Hotel Management System</span>
                               <span className="text-sm block font-normal text-neutral-600">#5632</span>
                             </div>
                           </td>
@@ -600,7 +585,7 @@ const crmPage = () => {
                         <tr>
                           <td>
                             <div>
-                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-200 text-w-200-px">Hotel Management System</span>
+                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-100 text-w-200-px">Hotel Management System</span>
                               <span className="text-sm block font-normal text-neutral-600">#5632</span>
                             </div>
                           </td>
@@ -648,7 +633,7 @@ const crmPage = () => {
                         <tr>
                           <td>
                             <div>
-                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-200 text-w-200-px">Hotel Management System</span>
+                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-100 text-w-200-px">Hotel Management System</span>
                               <span className="text-sm block font-normal text-neutral-600">#5632</span>
                             </div>
                           </td>
@@ -680,7 +665,7 @@ const crmPage = () => {
                         <tr>
                           <td>
                             <div>
-                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-200 text-w-200-px">Hotel Management System</span>
+                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-100 text-w-200-px">Hotel Management System</span>
                               <span className="text-sm block font-normal text-neutral-600">#5632</span>
                             </div>
                           </td>
@@ -711,7 +696,7 @@ const crmPage = () => {
                         <tr>
                           <td>
                             <div>
-                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-200 text-w-200-px">Hotel Management System</span>
+                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-100 text-w-200-px">Hotel Management System</span>
                               <span className="text-sm block font-normal text-neutral-600">#5632</span>
                             </div>
                           </td>
@@ -742,7 +727,7 @@ const crmPage = () => {
                         <tr>
                           <td>
                             <div>
-                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-200 text-w-200-px">Hotel Management System</span>
+                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-100 text-w-200-px">Hotel Management System</span>
                               <span className="text-sm block font-normal text-neutral-600">#5632</span>
                             </div>
                           </td>
@@ -773,7 +758,7 @@ const crmPage = () => {
                         <tr>
                           <td>
                             <div>
-                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-200 text-w-200-px">Hotel Management System</span>
+                              <span className="text-base block line-height-1 font-medium text-neutral-600 dark:text-neutral-100 text-w-200-px">Hotel Management System</span>
                               <span className="text-sm block font-normal text-neutral-600">#5632</span>
                             </div>
                           </td>

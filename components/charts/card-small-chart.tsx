@@ -7,9 +7,9 @@ const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
 
 interface ChartColorType {
     chartColor: string;
-  }
+}
 
-const CardSmallChart = ({chartColor}: ChartColorType) => {
+const CardSmallChart = ( {chartColor}: ChartColorType ) => {
 
     let currentYear = new Date().getFullYear();
 
