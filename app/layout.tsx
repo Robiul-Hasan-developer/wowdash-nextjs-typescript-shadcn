@@ -47,11 +47,11 @@ export default async function RootLayout({
             >
              <SidebarProvider defaultOpen={defaultOpen}>
               <AppSidebar />
-              <main className="grow-[1]">
+              <main className="grow-[1] flex flex-col">
                 <SidebarInset>
                   <Header/>
                 </SidebarInset>
-                <div className="bg-neutral-100 dark:bg-[#1f2937] md:p-6 p-4 min-h-[calc(100% - 300px)]">
+                <div className="bg-neutral-100 dark:bg-[#1e2734] md:p-6 p-4 flex-1">
                   {children}
                 </div>
                 <Footer/>
