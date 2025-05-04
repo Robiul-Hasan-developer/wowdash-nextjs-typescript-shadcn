@@ -99,7 +99,7 @@ const StatsCard = () => {
                 return (
                 <Card
                     key={item.id}
-                    className={`card px-4 py-5 shadow-none rounded-lg !border border-gray-200 dark:border-neutral-600 h-full bg-gradient-to-l ${item.gradientFrom} to-bg-white`}
+                    className={`card !px-4 !py-5 shadow-none rounded-lg !border border-gray-200 dark:border-neutral-600 h-full bg-gradient-to-l ${item.gradientFrom} to-bg-white`}
                 >
                     <CardContent className="p-0">
                         <div className="flex flex-wrap items-center justify-between gap-1 mb-2">

@@ -18,7 +18,6 @@ var chartOptions:ApexOptions = {
             borderRadius: 4,
             horizontal: false,
             columnWidth: '23%',
-            // endingShape: 'rounded',
         }
     },
     dataLabels: {

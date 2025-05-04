@@ -93,17 +93,6 @@ const RevenueGrowthChart = ( {chartColor}: ChartColorType ) => {
             tooltip: {
                 enabled: false,
             },
-            // tooltip: {
-            //   enabled: false
-            // },
-            // labels: {
-            //   formatter: function (value) {
-            //     return value;
-            //   },
-            //   style: {
-            //     fontSize: "14px"
-            //   }
-            // },
         },
         yaxis: {
             labels: {

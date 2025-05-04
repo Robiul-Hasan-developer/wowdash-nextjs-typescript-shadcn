@@ -262,10 +262,10 @@
     }
   }
 
-  #donutChart {
+  .donutChart {
     @apply h-0 min-h-[163px] -mt-[32px];
   }
-  #donutChart {
+  .donutChart {
     min-height: 163px !important;
   }
 
@@ -319,7 +319,7 @@
 /* ======================================== Custom Classes css Start ======================================== */
 @layer utilities {
   .card {
-    @apply bg-white dark:bg-[#273142] p-4 h-full rounded-lg border-0;
+    @apply bg-white dark:bg-[#273142] p-6 h-full rounded-lg border-0;
   }
 
   .active-gradient [data-state="active"] {
