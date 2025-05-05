@@ -7,6 +7,7 @@ import CampaignCard from './components/campaign-card';
 import CustomerOverviewCard from './components/customer-overview-card';
 import ClientPaymentStatusCard from './components/client-payment-status-card';
 import CountriesStatusCard from './components/countries-status-card';
+import TopPerformerCard from './components/top-performer-card';
 
 const crmPage = () => {
     return (
@@ -48,6 +49,7 @@ const crmPage = () => {
           </div>
 
           <div className="lg:col-span-6 2xl:col-span-4">
+            <TopPerformerCard/>
           </div>
 
 
