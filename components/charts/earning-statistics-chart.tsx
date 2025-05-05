@@ -105,12 +105,14 @@ const chartSeries = [{
 
 const EarningStatisticsChart = () => {
     return (
-        <Chart
-            options={chartOptions}
-            series={chartSeries}
-            type="bar" 
-            height={310}
-        />
+        <div className="-m-4">
+            <Chart
+                options={chartOptions}
+                series={chartSeries}
+                type="bar" 
+                height={310}
+            />
+        </div>
     );
 };
 

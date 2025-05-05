@@ -70,12 +70,14 @@ const SalesStaticChart = () => {
   ];
 
   return (
-    <Chart
-      options={chartOptions}
-      series={chartSeries}
-      type="line"
-      height={254}
-    />
+    <div className="-m-4">
+      <Chart
+        options={chartOptions}
+        series={chartSeries}
+        type="line"
+        height={254}
+      />
+    </div>
   );
 };
 

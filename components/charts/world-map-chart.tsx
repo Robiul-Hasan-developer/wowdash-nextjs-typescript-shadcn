@@ -5,12 +5,21 @@ import {
   ComposableMap,
   Geographies,
   Geography,
-  GeographyProps,
 } from "react-simple-maps";
 
-// Use a public GeoJSON source
+// GeoJSON source
 const geoUrl =
   "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+
+// Define a minimal type for a single geo object
+type GeoFeature = {
+  rsmKey: string;
+  properties: Record<string, any>;
+  geometry: {
+    type: string;
+    coordinates: any;
+  };
+};
 
 const WorldMapChart: React.FC = () => {
   return (
@@ -22,7 +31,7 @@ const WorldMapChart: React.FC = () => {
         className="w-full h-auto"
       >
         <Geographies geography={geoUrl}>
-          {({ geographies }: { geographies: GeographyProps["geography"][] }) =>
+          {({ geographies }: { geographies: GeoFeature[] }) =>
             geographies.map((geo) => (
               <Geography
                 key={geo.rsmKey}

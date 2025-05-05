@@ -5,6 +5,8 @@ import RevenueGrowthCard from './components/revenue-growth-card';
 import EarningStatisticsCard from './components/earning-statistics-card';
 import CampaignCard from './components/campaign-card';
 import CustomerOverviewCard from './components/customer-overview-card';
+import ClientPaymentStatusCard from './components/client-payment-status-card';
+import WorldMapSvg from '@/components/charts/world-map-svg';
 
 const crmPage = () => {
     return (
@@ -35,6 +37,14 @@ const crmPage = () => {
                 <CustomerOverviewCard/>
               </div>
             </div>
+          </div>
+
+          <div className="lg:col-span-6 2xl:col-span-4">
+            <ClientPaymentStatusCard/>
+          </div>
+
+          <div className="lg:col-span-6 2xl:col-span-4">
+            <WorldMapSvg/>
           </div>
 
         </div>

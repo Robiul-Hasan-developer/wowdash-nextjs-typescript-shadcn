@@ -1,7 +1,8 @@
+import ClientPaymentStatusChart from '@/components/charts/client-payment-status-chart';
 import { Card, CardContent } from '@/components/ui/card';
 import React from 'react';
 
-const ClientPaymentStatus = () => {
+const ClientPaymentStatusCard = () => {
     return (
         <Card className="card h-full rounded-lg border-0">
           <CardContent className="card-body p-0">
@@ -10,24 +11,24 @@ const ClientPaymentStatus = () => {
 
               <ul className="flex flex-wrap items-center justify-center mt-8">
                 <li className="flex items-center gap-2 me-7">
-                  <span className="w-3 h-3 rounded-full bg-success-600"></span>
+                  <span className="w-3 h-3 rounded-full bg-green-600"></span>
                   <span className="text-secondary-light text-sm font-medium">Paid: 400</span>
                 </li>
                 <li className="flex items-center gap-2 me-7">
-                  <span className="w-3 h-3 rounded-full bg-info-600"></span>
+                  <span className="w-3 h-3 rounded-full bg-blue-600"></span>
                   <span className="text-secondary-light text-sm font-medium">Pending: 400</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-warning-600"></span>
+                  <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
                   <span className="text-secondary-light text-sm font-medium">Overdue: 1400</span>
                 </li>
               </ul>
-              <div className="mt-[60px]">
-                <div id="paymentStatusChart" className="margin-16-minus"></div>
+              <div className="mt-8">
+                  <ClientPaymentStatusChart/>
               </div>
           </CardContent>
         </Card>
     );
 };
 
-export default ClientPaymentStatus;
+export default ClientPaymentStatusCard;

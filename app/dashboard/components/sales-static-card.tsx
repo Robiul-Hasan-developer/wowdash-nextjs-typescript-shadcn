@@ -27,7 +27,7 @@ const SalesStaticCard = () => {
           <span className="text-xs font-medium">+ $1400 Per Day</span>
         </div>
 
-        <div className="apexcharts-tooltip-style-1">
+        <div className="apexcharts-tooltip-style-1 mt-7">
           <SalesStaticChart/>
         </div>
       </CardContent>
