@@ -10,6 +10,7 @@ import CountriesStatusCard from './components/countries-status-card';
 import TopPerformerCard from './components/top-performer-card';
 import LastTransactionTable from '@/components/table/last-transaction-table';
 import LastTransactionCard from './components/last-transaction-card';
+import TodoListRecentCard from './components/todo-list-recent-card';
 
 const crmPage = () => {
     return (
@@ -57,10 +58,12 @@ const crmPage = () => {
           </div>
 
           <div className="lg:col-span-12 2xl:col-span-6">
-            <LastTransactionCard/>
+            <TodoListRecentCard/>
           </div>
 
-
+          <div className="lg:col-span-12 2xl:col-span-6">
+            <LastTransactionCard/>
+          </div>
 
         </div>
       </>

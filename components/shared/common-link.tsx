@@ -9,7 +9,7 @@ interface LinkData {
 
 const CommonLink = ({ href = '#', text = "View All"  } : LinkData) => {
     return (
-        <Link href={href} className="flex items-center gap-1 text-blue-600 dark:text-blue-600 hover-text-blue-500 text-sm">
+        <Link href={href} className="flex items-center gap-1 text-blue-600 dark:text-blue-600 hover:text-blue-400 text-sm">
             {text}
             <ChevronRight width={16} height={16} />
         </Link>
