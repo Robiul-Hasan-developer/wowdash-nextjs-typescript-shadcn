@@ -16,7 +16,7 @@ const CountriesStatusCard = () => {
                     />
                 </div>
 
-                <div className="bg-neutral-100 h-[200px] overflow-hidden">
+                <div className="bg-neutral-100 dark:bg-slate-700/50 h-[200px] overflow-hidden">
                   <WorldMapChart/>
                 </div> 
 

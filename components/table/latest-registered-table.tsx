@@ -13,6 +13,8 @@ import {
 import { users } from "./data";
 
 const LatestRegisteredTable = () => {
+    const slicedUsers = users.slice(0, 5);
+
   return (
     <Table className="table-auto border-spacing-0 border-separate">
         <TableHeader>
@@ -26,8 +28,8 @@ const LatestRegisteredTable = () => {
 
         <TableBody>
             {
-                users.slice(0, 5).map((user, index) => {
-                    const isLastRow = index === users.length - 1;
+                slicedUsers.map((user, index) => {
+                    const isLastRow = index === slicedUsers.length - 1;
                     return (
                         <TableRow key={index}>
                             <TableCell className={`py-3 px-4 border-b border-neutral-200 dark:border-slate-600 first:border-s last:border-e ${isLastRow ? 'rounded-bl-lg' : ''}`}>

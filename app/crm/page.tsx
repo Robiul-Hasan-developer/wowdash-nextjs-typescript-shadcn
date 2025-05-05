@@ -8,11 +8,15 @@ import CustomerOverviewCard from './components/customer-overview-card';
 import ClientPaymentStatusCard from './components/client-payment-status-card';
 import CountriesStatusCard from './components/countries-status-card';
 import TopPerformerCard from './components/top-performer-card';
+import LastTransactionTable from '@/components/table/last-transaction-table';
+import LastTransactionCard from './components/last-transaction-card';
 
 const crmPage = () => {
     return (
         <>
         <DashboardBreadcrumb title="Dashboard" text="CRM"/>
+
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6">
 
           <div className="lg:col-span-12 2xl:col-span-8">
@@ -50,6 +54,10 @@ const crmPage = () => {
 
           <div className="lg:col-span-6 2xl:col-span-4">
             <TopPerformerCard/>
+          </div>
+
+          <div className="lg:col-span-12 2xl:col-span-6">
+            <LastTransactionCard/>
           </div>
 
 
