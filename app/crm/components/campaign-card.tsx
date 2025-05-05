@@ -9,7 +9,7 @@ const CampaignCard = () => {
         <Card className="card h-full rounded-lg border-0">
             <CardContent className="card-body p-0">
                 <div className="flex items-center flex-wrap gap-2 justify-between">
-                    <h6 className="mb-2 font-bold text-lg">Campaigns</h6>
+                    <h6 className="mb-0 font-bold text-lg">Campaigns</h6>
                     <CustomSelect
                         placeholder="Yearly"
                         options={["Yearly", "Monthly", "Weekly", "Today"]}

@@ -73,7 +73,7 @@ const ClientPaymentStatusChart = () => {
                 options={chartOptions}
                 series={chartSeries}
                 type="bar" 
-                height={350}
+                height={370}
             />
         </div>
     );

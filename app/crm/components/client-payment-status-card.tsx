@@ -6,7 +6,7 @@ const ClientPaymentStatusCard = () => {
     return (
         <Card className="card h-full rounded-lg border-0">
           <CardContent className="card-body p-0">
-              <h6 className="mb-2 font-bold text-lg">Client Payment Status</h6>
+              <h6 className="mb-0 font-bold text-lg">Client Payment Status</h6>
               <span className="text-sm font-medium text-secondary-light">Weekly Report</span>
 
               <ul className="flex flex-wrap items-center justify-center mt-8">

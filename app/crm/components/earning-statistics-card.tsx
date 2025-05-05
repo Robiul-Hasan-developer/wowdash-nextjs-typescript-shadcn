@@ -10,7 +10,7 @@ const EarningStatisticsCard = () => {
             <CardContent className="card-body p-0">
                 <div className="flex items-center flex-wrap gap-2 justify-between">
                     <div>
-                        <h6 className="mb-2 font-bold text-lg">Earning Statistic</h6>
+                        <h6 className="mb-0 font-bold text-lg">Earning Statistic</h6>
                         <span className="text-sm font-medium text-neutral-600">Yearly earning overview</span>
                     </div>
                     <div className="">

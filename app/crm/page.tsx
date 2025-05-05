@@ -6,7 +6,7 @@ import EarningStatisticsCard from './components/earning-statistics-card';
 import CampaignCard from './components/campaign-card';
 import CustomerOverviewCard from './components/customer-overview-card';
 import ClientPaymentStatusCard from './components/client-payment-status-card';
-import WorldMapSvg from '@/components/charts/world-map-svg';
+import CountriesStatusCard from './components/countries-status-card';
 
 const crmPage = () => {
     return (
@@ -44,8 +44,13 @@ const crmPage = () => {
           </div>
 
           <div className="lg:col-span-6 2xl:col-span-4">
-            <WorldMapSvg/>
+            <CountriesStatusCard/>
           </div>
+
+          <div className="lg:col-span-6 2xl:col-span-4">
+          </div>
+
+
 
         </div>
       </>
