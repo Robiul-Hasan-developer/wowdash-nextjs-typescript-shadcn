@@ -108,7 +108,7 @@ const RecentOrdersTable = () => {
               return (
                 <TableRow key={index}>
                      <TableCell
-                        className={`py-3 px-4 border-b border-neutral-200 dark:border-slate-600 text-base first:border-s last:border-e ${
+                        className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base first:border-s last:border-e ${
                             isLastRow ? "rounded-bl-lg" : ""
                         }`}
                         >
@@ -125,7 +125,7 @@ const RecentOrdersTable = () => {
                     </TableCell>
     
                   <TableCell
-                    className={`py-3 px-4 border-b border-neutral-200 dark:border-slate-600 text-base first:border-s last:border-e ${
+                    className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base first:border-s last:border-e ${
                       isLastRow ? "rounded-bl-lg" : ""
                     }`}
                   >
@@ -133,7 +133,7 @@ const RecentOrdersTable = () => {
                   </TableCell>
     
                   <TableCell
-                    className={`py-3 px-4 border-b border-neutral-200 dark:border-slate-600 text-base text-center first:border-s last:border-e ${
+                    className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base text-center first:border-s last:border-e ${
                       isLastRow ? "rounded-bl-lg" : ""
                     }`}
                   >
@@ -141,7 +141,7 @@ const RecentOrdersTable = () => {
                   </TableCell>
 
                   <TableCell
-                    className={`py-3 px-4 border-b border-neutral-200 dark:border-slate-600 text-base text-center first:border-s last:border-e ${
+                    className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base text-center first:border-s last:border-e ${
                       isLastRow ? "rounded-bl-lg" : ""
                     }`}
                   >
@@ -149,7 +149,7 @@ const RecentOrdersTable = () => {
                   </TableCell>
 
                   <TableCell
-                    className={`py-3 px-4 border-b border-neutral-200 dark:border-slate-600 text-base text-center first:border-s last:border-e ${
+                    className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base text-center first:border-s last:border-e ${
                       isLastRow ? "rounded-bl-lg" : ""
                     }`}
                   >
@@ -157,7 +157,7 @@ const RecentOrdersTable = () => {
                   </TableCell>
     
                   <TableCell
-                    className={`py-3 px-4 border-b border-neutral-200 dark:border-slate-600 text-base first:border-s last:border-e ${
+                    className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base first:border-s last:border-e ${
                       isLastRow ? "rounded-br-lg" : ""
                     } text-center`}
                   >
