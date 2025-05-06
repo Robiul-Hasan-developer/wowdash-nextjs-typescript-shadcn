@@ -13,9 +13,9 @@ import {
 import { users } from "./data";
 
 const LatestSubscribeTable = () => {
-      const slicedUsers = users.slice(5, 10);
+    const slicedUsers = users.slice(5, 10);
   return (
-  <Table className="table-auto border-spacing-0 border-separate">
+    <Table className="table-auto border-spacing-0 border-separate">
          <TableHeader>
              <TableRow className="border-0">
                  <TableHead className="bg-neutral-100 dark:bg-slate-700 border-t border-neutral-200 dark:border-slate-600 overflow-hidden px-4 h-12 border-s rounded-tl-lg">Users</TableHead>
@@ -56,7 +56,7 @@ const LatestSubscribeTable = () => {
                  })
              }
          </TableBody>
-     </Table>
+    </Table>
   );
 };
 
