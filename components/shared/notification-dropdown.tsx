@@ -61,7 +61,7 @@ const NotificationDropdown = () => {
                     />
                   </div>
                   <div>
-                    <h6 className="text-sm fw-semibold mb-1">Ronald Richards</h6>
+                    <h6 className="text-sm fw-semibold mb-1">Robiul Hasan</h6>
                     <p className="mb-0 text-sm line-clamp-1">You can stitch between art boards</p>
                   </div>
                 </div>

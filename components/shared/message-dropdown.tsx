@@ -73,7 +73,7 @@ const MessageDropdown = () => {
                     <span className="absolute end-[2px] -bottom-[1px] w-2.5 h-2.5 bg-green-500 border border-white rounded-full dark:border-gray-600"></span>
                   </div>
                   <div>
-                    <h6 className="text-sm fw-semibold mb-1">Kathryn Murphy</h6>
+                    <h6 className="text-sm fw-semibold mb-1">Robiul Hasan</h6>
                     <p className="mb-0 text-sm line-clamp-1">hey! there i'm...</p>
                   </div>
                 </div>
