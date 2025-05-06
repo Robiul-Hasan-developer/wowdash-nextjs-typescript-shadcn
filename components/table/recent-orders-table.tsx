@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
+import Image, {StaticImageData} from 'next/image';
 import {
   Table,
   TableBody,
@@ -11,8 +11,15 @@ import {
   TableRow,
 } from '@/components/ui/table';
 
+import UserImage1 from '../../public/assets/images/users/user1.png';
+import UserImage2 from '../../public/assets/images/users/user2.png';
+import UserImage3 from '../../public/assets/images/users/user3.png';
+import UserImage4 from '../../public/assets/images/users/user4.png';
+import UserImage5 from '../../public/assets/images/users/user5.png';
+
+
 interface Order {
-  userImage: string;
+  userImage: StaticImageData;
   userName: string;
   invoice: string;
   item: string;
@@ -24,7 +31,7 @@ interface Order {
 
 const orders: Order[] = [
   {
-    userImage: '/assets/images/users/user1.png',
+    userImage: UserImage1,
     userName: 'Dianne Russell',
     invoice: '#6352148',
     item: 'iPhone 14 max',
@@ -34,7 +41,7 @@ const orders: Order[] = [
     statusBg: 'bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400',
   },
   {
-    userImage: '/assets/images/users/user2.png',
+    userImage: UserImage2,
     userName: 'Wade Warren',
     invoice: '#6352149',
     item: 'Laptop HPH',
@@ -44,7 +51,7 @@ const orders: Order[] = [
     statusBg: 'bg-yellow-100 dark:bg-yellow-500/25 text-yellow-500 dark:text-yellow-400',
   },
   {
-    userImage: '/assets/images/users/user3.png',
+    userImage: UserImage3,
     userName: 'Albert Flores',
     invoice: '#6352150',
     item: 'Smart Watch',
@@ -54,7 +61,7 @@ const orders: Order[] = [
     statusBg: 'bg-blue-100 dark:bg-blue-600/25 text-blue-600 dark:text-blue-400',
   },
   {
-    userImage: '/assets/images/users/user4.png',
+    userImage: UserImage4,
     userName: 'Bessie Cooper',
     invoice: '#6352151',
     item: 'Nike Air Shoe',
@@ -64,7 +71,7 @@ const orders: Order[] = [
     statusBg: 'bg-red-100 dark:bg-red-600/25 text-red-600 dark:text-red-400',
   },
   {
-    userImage: '/assets/images/users/user5.png',
+    userImage: UserImage5,
     userName: 'Arlene McCoy',
     invoice: '#6352152',
     item: 'New Headphone',
