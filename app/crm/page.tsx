@@ -8,7 +8,6 @@ import CustomerOverviewCard from './components/customer-overview-card';
 import ClientPaymentStatusCard from './components/client-payment-status-card';
 import CountriesStatusCard from './components/countries-status-card';
 import TopPerformerCard from './components/top-performer-card';
-import LastTransactionTable from '@/components/table/last-transaction-table';
 import LastTransactionCard from './components/last-transaction-card';
 import TodoListRecentCard from './components/todo-list-recent-card';
 
@@ -21,7 +20,7 @@ const crmPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6">
 
           <div className="lg:col-span-12 2xl:col-span-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 <StatsCard/> 
             </div>
           </div>
@@ -53,7 +52,7 @@ const crmPage = () => {
             <CountriesStatusCard/>
           </div>
 
-          <div className="lg:col-span-6 2xl:col-span-4">
+          <div className="lg:col-span-12 2xl:col-span-4">
             <TopPerformerCard/>
           </div>
 

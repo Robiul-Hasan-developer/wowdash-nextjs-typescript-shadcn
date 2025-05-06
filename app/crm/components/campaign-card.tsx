@@ -1,7 +1,6 @@
-import EarningStatisticsChart from '@/components/charts/earning-statistics-chart';
 import CustomSelect from '@/components/shared/custom-select';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowBigUp, Earth, Facebook, Mail, MapPinOff, ShoppingCart, SquareKanban } from 'lucide-react';
+import { Earth, Facebook, Mail, MapPinOff } from 'lucide-react';
 import React from 'react';
 
 const CampaignCard = () => {

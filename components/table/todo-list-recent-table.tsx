@@ -126,8 +126,7 @@ const TodoListRecentTable = () => {
                 }`}
               >
                 <DropdownMenu>
-                  <DropdownMenuTrigger className="text-2xl px-4 py-2.5 rounded-lg text-neutral-700 dark:text-white hover:bg-neutral-200 dark:hover:bg-slate-700 data-[state=open]:bg-gray-300 dark:data-[state=open]:bg-slate-600 cursor-pointer">
-                    {/* <MoreHorizontal className="w-5 h-5" /> */}
+                  <DropdownMenuTrigger className="text-2xl px-2.5 py-2.5 rounded-lg text-neutral-700 dark:text-white hover:bg-neutral-200 dark:hover:bg-slate-700 data-[state=open]:bg-gray-300 dark:data-[state=open]:bg-slate-600 cursor-pointer">
                     <EllipsisVertical className="w-5 h-5" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
