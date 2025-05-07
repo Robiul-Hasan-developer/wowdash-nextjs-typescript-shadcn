@@ -8,6 +8,7 @@ import DailySalesCard from './component/daily-sales-card';
 import DistributionMapsCard from './component/distribution-maps-card';
 import TopCustomersCard from './component/top-customers-card';
 import TopSellingProductCard from './component/top-selling-product-card';
+import StockReportCard from './component/stock-report-card';
 
 const EcommercePage = () => {
   return (
@@ -47,8 +48,10 @@ const EcommercePage = () => {
           <div className="md:col-span-12 2xl:col-span-6">
             <TopSellingProductCard/>
           </div>
-          
-          
+
+          <div className="md:col-span-12 2xl:col-span-6">
+            <StockReportCard/>
+          </div>
           
         </div>
     </>
