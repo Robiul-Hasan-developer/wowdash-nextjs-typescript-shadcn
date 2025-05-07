@@ -25,7 +25,7 @@ export const countries:Country[] = [
     color: "bg-blue-600",
   },
   {
-    name: "Japan",
+    name: "Bangladesh",
     users: "1,240 Users",
     percent: 60,
     flag: FlagImg2,

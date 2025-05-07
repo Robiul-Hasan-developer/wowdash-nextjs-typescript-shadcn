@@ -119,7 +119,7 @@ const DailySalesChart = ({chartColor} : LabeledValue) => {
             options={chartOptions}
             series={chartSeries}
             type="area" 
-            height={360}
+            height={370}
         />
     );
 };
