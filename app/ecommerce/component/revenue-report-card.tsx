@@ -12,7 +12,7 @@ const RevenueReportCard = () => {
                     <div className="xl:col-span-12 2xl:col-span-6">
                         <div className="card-body p-6">
                             <div className="flex items-center flex-wrap gap-2 justify-between">
-                                <h6 className="mb-2 font-bold text-lg">Revenue Report</h6>
+                                <h6 className="mb-0 font-bold text-lg">Revenue Report</h6>
                                 <CustomSelect
                                     placeholder="Yearly"
                                     options={["Yearly", "Monthly", "Weekly", "Today"]}
