@@ -6,6 +6,8 @@ import RecentOrdersCard from './component/recent-orders-card';
 import TransactionsCard from './component/transactions-card';
 import DailySalesCard from './component/daily-sales-card';
 import DistributionMapsCard from './component/distribution-maps-card';
+import TopCustomersCard from './component/top-customers-card';
+import TopSellingProductCard from './component/top-selling-product-card';
 
 const EcommercePage = () => {
   return (
@@ -33,10 +35,17 @@ const EcommercePage = () => {
           <div className="md:col-span-12 lg:col-span-6 2xl:col-span-4">
             <DailySalesCard/>
           </div>
-          
 
           <div className="md:col-span-12 lg:col-span-6 2xl:col-span-4">
             <DistributionMapsCard/>
+          </div>
+
+          <div className="md:col-span-12 lg:col-span-6 2xl:col-span-4">
+            <TopCustomersCard/>
+          </div>          
+
+          <div className="md:col-span-12 2xl:col-span-6">
+            <TopSellingProductCard/>
           </div>
           
           
