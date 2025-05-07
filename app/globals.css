@@ -306,7 +306,10 @@
     @apply dark:bg-slate-600 dark:border-slate-500;
   }
   /* ======================================== Apexchart css End ======================================== */
+}
 
+.dark .apexcharts-tooltip.apexcharts-theme-light, .dark .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+  @apply bg-slate-900 border-slate-600;
 }
 
 

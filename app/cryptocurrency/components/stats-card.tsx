@@ -88,7 +88,7 @@ const StatsCard = () => {
                     <Card
                         key={crypto.id}
                         className={cn(
-                            "card shadow-none border border-gray-400 dark:border-neutral-600 bg-gradient-to-l to-bg-white",
+                            "card shadow-none !border border-neutral-200 dark:border-slate-600 bg-gradient-to-l to-bg-white",
                             crypto.gradient
                         )}
                     >
