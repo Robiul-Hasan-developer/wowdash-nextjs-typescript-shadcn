@@ -207,19 +207,14 @@
   }
 
   
-  .remove-tooltip-title {
-    .apexcharts-tooltip-title {
-        @apply hidden;
-    }
-   
+  .remove-tooltip-title .apexcharts-tooltip-title {
+    @apply hidden;
   }
   .remove-tooltip-marker .apexcharts-tooltip-marker {
       display: none !important;
   }
-  .rounded-tooltip-value {
-    .apexcharts-tooltip.apexcharts-theme-light {
-        @apply w-11 h-11 flex items-center justify-center flex-col;
-    }
+  .rounded-tooltip-value .apexcharts-tooltip.apexcharts-theme-light {
+      @apply w-11 h-11 flex items-center justify-center flex-col;
     .apexcharts-tooltip-text-y-label {
         @apply hidden;
     }
