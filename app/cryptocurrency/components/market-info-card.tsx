@@ -91,54 +91,55 @@ const MarketInfoCard = () => {
                         Currency: 
                         <Select>
                             <SelectTrigger className="w-[80px] !h-[32px] focus-visible:shadow-none focus-visible:ring-0 font-medium bg-transparent dark:bg-transparent text-neutral-900 dark:text-white border-0  data-[placeholder]:text-neutral-900">
-                                <SelectValue placeholder="Select a fruit" />
+                                <SelectValue placeholder="USD" />
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectGroup>
-                                <SelectLabel>Fruits</SelectLabel>
-                                <SelectItem value="USD">USD</SelectItem>
-                                <SelectItem value="BDT">BDT</SelectItem>
-                                <SelectItem value="RUP">RUP</SelectItem>
+                                    <SelectItem value="USD">USD</SelectItem>
+                                    <SelectItem value="BDT">BDT</SelectItem>
+                                    <SelectItem value="RUP">RUP</SelectItem>
                                 </SelectGroup>
                             </SelectContent>
                         </Select>
                     </div>
                 </div>
 
-                {
-                    marketData.map((item) => (
-                        <div
-                            key={item.id}
-                            className="flex flex-wrap items-center justify-between gap-2 bg-neutral-200/75 dark:bg-slate-700 px-3 py-2 rounded mb-4"
-                        >
-                            <div className="flex flex-wrap items-center gap-2">
-                                <Image
-                                    src={item.image}
-                                    alt={item.name}
-                                    width={36}
-                                    height={36}
-                                    className="rounded-full shrink-0"
-                                />
-                                <div className="grow">
-                                    <h6 className="text-base mb-0">{item.name}</h6>
+                <div className="space-y-4">
+                    {
+                        marketData.map((item) => (
+                            <div
+                                key={item.id}
+                                className="flex flex-wrap items-center justify-between gap-2 bg-neutral-200/75 dark:bg-slate-700 px-3 py-2 rounded"
+                            >
+                                <div className="flex flex-wrap items-center gap-2">
+                                    <Image
+                                        src={item.image}
+                                        alt={item.name}
+                                        width={36}
+                                        height={36}
+                                        className="rounded-full shrink-0"
+                                    />
+                                    <div className="grow">
+                                        <h6 className="text-base mb-0">{item.name}</h6>
+                                    </div>
+                                </div>
+                                <h6 className="text-base font-medium mb-0">{item.price}</h6>
+                                <span
+                                    className={`text-base font-medium ${
+                                        item.changeType === 'positive'
+                                        ? 'text-green-600'
+                                        : 'text-danger-600'
+                                    }`}
+                                >
+                                {item.change}
+                                </span>
+                                <div className="remove-tooltip-title rounded-tooltip-value remove-tooltip-marker">
+                                    <CardSmallChart chartColor={item.chartBg}  />
                                 </div>
                             </div>
-                            <h6 className="text-base font-medium mb-0">{item.price}</h6>
-                            <span
-                                className={`text-base font-medium ${
-                                    item.changeType === 'positive'
-                                    ? 'text-green-600'
-                                    : 'text-danger-600'
-                                }`}
-                            >
-                            {item.change}
-                            </span>
-                            <div className="remove-tooltip-title rounded-tooltip-value remove-tooltip-marker">
-                                <CardSmallChart chartColor={item.chartBg}  />
-                            </div>
-                        </div>
-                    ))
-                }
+                        ))
+                    }
+                </div>
             </CardContent>
         </Card>
     );

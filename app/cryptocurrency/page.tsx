@@ -3,6 +3,7 @@ import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import StatsCard from './components/stats-card';
 import CoinAnalyticsCard from './components/coin-analytics-card';
 import MarketInfoCard from './components/market-info-card';
+import MyOrderCard from './components/my-order-card';
 
 const Cryptocurrency = () => {
     return (
@@ -24,6 +25,10 @@ const Cryptocurrency = () => {
 
                         <div className="col-span-12 2xl:col-span-6">
                             <MarketInfoCard/>
+                        </div>
+
+                        <div className="col-span-12 2xl:col-span-6">
+                            <MyOrderCard/>
                         </div>
 
                     </div>  
