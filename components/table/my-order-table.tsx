@@ -70,6 +70,10 @@ const MyOrderTable = () => {
 
     const [orders, setOrders] = useState<MyOrdersType[]>(initialOrdersData);
     
+    const removeOrderItem = (id:number) => {
+        const filteredData = orders.filter(order => order.id !== id);
+        setOrders(filteredData);
+    }
     
   return (
     <Table className="table-auto border-spacing-0 border-separate">
@@ -145,10 +149,10 @@ const MyOrderTable = () => {
                                     <Button 
                                         variant="link" 
                                         className={cn(`text-lg text-red-600 cursor-pointer hover:scale-150`)} 
+                                        onClick={() => removeOrderItem(order.id)}
                                     >
                                         <X className="w-4 h-4" />
                                     </Button>
-
                                 </TableCell>
                             </TableRow>
                         );
