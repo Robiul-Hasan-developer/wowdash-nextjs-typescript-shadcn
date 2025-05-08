@@ -12,6 +12,7 @@ import {
 import { X } from 'lucide-react';
 import { Button } from '../ui/button';
 import { cn } from '@/lib/utils';
+import { toast } from "sonner"
 
 interface MyOrdersType {
     id: number;
@@ -102,7 +103,7 @@ const MyOrderTable = () => {
                         colSpan={4}
                         className={`py-3.5 px-4 border border-neutral-200 dark:border-slate-600 text-base  rounded-bl-lg rounded-br-lg text-center`}
                     >
-                        <span className="text-sm text-neutral-900 font-semibold">
+                        <span className="text-sm text-neutral-900 dark:text-white font-semibold">
                             No Data Available
                         </span>
                     </TableCell>
@@ -148,8 +149,15 @@ const MyOrderTable = () => {
                                 >
                                     <Button 
                                         variant="link" 
-                                        className={cn(`text-lg text-red-600 cursor-pointer hover:scale-150`)} 
-                                        onClick={() => removeOrderItem(order.id)}
+                                        className={cn(`text-lg text-red-600 dark:text-red-500 cursor-pointer hover:scale-150`)} 
+                                        onClick={() => {
+                                            removeOrderItem(order.id);
+                                            toast.success("Table Row has been deleted!", {
+                                                description: "You have deleted successfully!",
+                                                className: "!text-green-600 font-medium !bg-white !border-s !border-green-400",
+                                              })
+                                            }
+                                        }
                                     >
                                         <X className="w-4 h-4" />
                                     </Button>
