@@ -5,6 +5,8 @@ import CoinAnalyticsCard from './components/coin-analytics-card';
 import MarketInfoCard from './components/market-info-card';
 import MyOrderCard from './components/my-order-card';
 import RecentTransactionCard from './components/recent-transaction-card';
+import UsersActivateCard from './components/users-activate-card';
+import TotalBalanceCard from './components/total-balance-card';
 
 const Cryptocurrency = () => {
     return (
@@ -40,9 +42,11 @@ const Cryptocurrency = () => {
                 </div>  
 
 
-
                 <div className="xl:col-span-12 2xl:col-span-4">
-                    <div> Hello From sidbear </div>
+                    <div className="space-y-6">
+                        <TotalBalanceCard/>
+                        <UsersActivateCard/>
+                    </div>
                 </div>
 
             </div>  

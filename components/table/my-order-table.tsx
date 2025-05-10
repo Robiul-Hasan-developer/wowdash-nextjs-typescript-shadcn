@@ -154,7 +154,8 @@ const MyOrderTable = () => {
                                             removeOrderItem(order.id);
                                             toast.success("Table Row has been deleted!", {
                                                 description: "You have deleted successfully!",
-                                                className: "!text-green-600 font-medium !bg-white !border-s !border-green-400",
+                                                className: "!text-green-600 font-medium bg-white dark:bg-slate-700 !border-s !border-green-400",
+                                                descriptionClassName: "text-green-600 dark:text-white font-medium",
                                               })
                                             }
                                         }

@@ -291,7 +291,7 @@ const RecentTransactionTable = () => {
             <TableRow key={txn.id}>
             {/* Asset */}
             <TableCell
-                className={`py-6 px-4 text-base border-b first:border-s last:border-e border-neutral-200 dark:border-slate-600 ${
+                className={`py-3 px-4 text-base border-b first:border-s last:border-e border-neutral-200 dark:border-slate-600 ${
                 isLast ? 'rounded-bl-lg' : ''
                 }`}
             >
@@ -306,7 +306,7 @@ const RecentTransactionTable = () => {
             </TableCell>
 
             {/* Date & Time */}
-            <TableCell className="py-6 px-4 text-base border-b first:border-s last:border-e border-neutral-200 dark:border-slate-600">
+            <TableCell className="py-3 px-4 text-base border-b first:border-s last:border-e border-neutral-200 dark:border-slate-600">
                 <div>
                 <div className="text-neutral-600 dark:text-neutral-200 font-medium">{txn.time}</div>
                 <div className="text-secondary-light text-sm">{txn.date}</div>
@@ -314,19 +314,19 @@ const RecentTransactionTable = () => {
             </TableCell>
 
             {/* Amount */}
-            <TableCell className="py-6 px-4 text-base border-b first:border-s last:border-e border-neutral-200 dark:border-slate-600 text-center">
+            <TableCell className="py-3 px-4 text-base border-b first:border-s last:border-e border-neutral-200 dark:border-slate-600 text-center">
                 <div className="text-neutral-600 dark:text-neutral-200 font-medium">{txn.amount}</div>
                 <div className="text-secondary-light text-sm">{txn.usdValue}</div>
             </TableCell>
 
             {/* Address */}
-            <TableCell className="py-6 px-4 text-base border-b first:border-s last:border-e border-neutral-200 dark:border-slate-600 text-center">
+            <TableCell className="py-3 px-4 text-base border-b first:border-s last:border-e border-neutral-200 dark:border-slate-600 text-center">
                 {txn.address}
             </TableCell>
 
             {/* Status */}
             <TableCell
-                className={`py-6 px-4 text-base border-b first:border-s last:border-e border-neutral-200 dark:border-slate-600 text-center ${
+                className={`py-3 px-4 text-base border-b first:border-s last:border-e border-neutral-200 dark:border-slate-600 text-center ${
                 isLast ? 'rounded-br-lg' : ''
                 }`}
             >
