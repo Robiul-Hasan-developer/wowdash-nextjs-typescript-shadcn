@@ -1,16 +1,16 @@
-import React from 'react'
-import { Button } from "@/components/ui/button"
+import React from "react";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { cn } from '@/lib/utils'
-import { User, Mail, Settings, LogOut } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
+} from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
+import { User, Mail, Settings, LogOut } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
-import userImg from '../../public/assets/images/user.png'
+import userImg from "../../public/assets/images/user.png";
 
 const ProfileDropdown = () => {
   return (
@@ -20,7 +20,7 @@ const ProfileDropdown = () => {
           variant="outline"
           size="icon"
           className={cn(
-            'rounded-full sm:w-10 sm:h-10 w-8 h-8 bg-gray-200/75 hover:bg-slate-200 focus-visible:ring-0 dark:bg-slate-700 dark:hover:bg-slate-600 border-0 cursor-pointer data-[state=open]:bg-gray-300 data-[state=open]:ring-5 data-[state=open]:ring-slate-300 dark:data-[state=open]:ring-slate-500 dark:data-[state=open]:bg-slate-600'
+            "rounded-full sm:w-10 sm:h-10 w-8 h-8 bg-gray-200/75 hover:bg-slate-200 focus-visible:ring-0 dark:bg-slate-700 dark:hover:bg-slate-600 border-0 cursor-pointer data-[state=open]:bg-gray-300 data-[state=open]:ring-4 data-[state=open]:ring-slate-300 dark:data-[state=open]:ring-slate-500 dark:data-[state=open]:bg-slate-600"
           )}
         >
           <Image
@@ -43,7 +43,9 @@ const ProfileDropdown = () => {
             <h6 className="text-lg text-neutral-900 dark:text-white font-semibold mb-0">
               Robiul Hasan
             </h6>
-            <span className="text-sm text-neutral-500 dark:text-neutral-300">Front End Developer</span>
+            <span className="text-sm text-neutral-500 dark:text-neutral-300">
+              Front End Developer
+            </span>
           </div>
         </div>
 
@@ -85,7 +87,7 @@ const ProfileDropdown = () => {
         </div>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
-}
+  );
+};
 
-export default ProfileDropdown
+export default ProfileDropdown;
