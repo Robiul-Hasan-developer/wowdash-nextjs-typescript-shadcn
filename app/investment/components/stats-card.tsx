@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { cn } from "@/lib/utils"; // utility to merge classNames
+import { cn } from "@/lib/utils";
 import {
   Users,
   Wallet,
@@ -11,7 +11,6 @@ import {
   LucideIcon,
 } from "lucide-react";
 
-// types/stats.ts
 export type StatCardData = {
   id: number;
   title: string;
