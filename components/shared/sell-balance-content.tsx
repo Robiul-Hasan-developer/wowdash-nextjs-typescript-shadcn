@@ -19,7 +19,7 @@ const SellBalanceContent = () => {
         <Input
           id="sellAmount"
           placeholder="Enter amount to sell"
-          className="border border-neutral-200 dark:border-slate-700 focus:border-red-600 dark:focus:border-red-600 focus-visible:border-red-600 h-11 rounded-lg !shadow-none !ring-0"
+          className="border border-neutral-200 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-11 rounded-lg !shadow-none !ring-0"
         />
       </div>
 
@@ -33,7 +33,7 @@ const SellBalanceContent = () => {
         <Textarea
           id="reason"
           placeholder="Enter your reason"
-          className="border border-neutral-200 dark:border-slate-700 focus:border-red-600 dark:focus:border-red-600 focus-visible:border-red-600 rounded-lg !shadow-none !ring-0 h-[100px]"
+          className="border border-neutral-200 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 rounded-lg !shadow-none !ring-0 h-[100px]"
         />
       </div>
 
@@ -46,7 +46,7 @@ const SellBalanceContent = () => {
         </h6>
       </div>
 
-      <Button variant="destructive" className="w-full h-11">
+      <Button variant="default" className="w-full h-11">
         Sell Now
       </Button>
     </div>
