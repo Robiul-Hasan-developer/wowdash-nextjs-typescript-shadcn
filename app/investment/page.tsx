@@ -2,6 +2,7 @@ import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import StatsCard from "./components/stats-card";
 import RevenueStatisticsCard from "./revenue-statistics-card";
+import StaticCard from "./components/static-card";
 
 const InvestmentPage = () => {
   return (
@@ -17,7 +18,7 @@ const InvestmentPage = () => {
           <RevenueStatisticsCard />
         </div>
         <div className="col-span-12 lg:col-span-6 2xl:col-span-4">
-          {/* <RevenueStatisticsCard /> */}
+          <StaticCard />
         </div>
         <div className="col-span-12 lg:col-span-6 2xl:col-span-3">
           {/* <RevenueStatisticsCard /> */}

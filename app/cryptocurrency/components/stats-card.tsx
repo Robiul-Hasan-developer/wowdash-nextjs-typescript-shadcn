@@ -36,7 +36,7 @@ const cryptoItems: CryptoItem[] = [
     symbol: "ETH",
     price: "$45,138",
     change: "- 27%",
-    changeType: "danger",
+    changeType: "danger",   
     image: "/assets/images/currency/crypto-img2.png",
     chartId: "ethereumAreaChart",
     gradient: "from-blue-600/10",

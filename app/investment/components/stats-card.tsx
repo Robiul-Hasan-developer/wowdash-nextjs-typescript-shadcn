@@ -99,7 +99,9 @@ const StatsCard = () => {
                 </span>
               </div>
               <div>
-                <p className="text-muted-foreground text-sm">{title}</p>
+                <p className="text-muted-foreground text-sm text-neutral-700 dark:text-neutral-300">
+                  {title}
+                </p>
                 <h4 className="font-semibold text-lg mb-1 mt-4">{value}</h4>
                 <p className="text-sm">
                   Increase by{" "}

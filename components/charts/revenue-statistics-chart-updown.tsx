@@ -19,6 +19,7 @@ var chartOptions: ApexOptions = {
   plotOptions: {
     bar: {
       columnWidth: "8",
+      borderRadius: 2,
       borderRadiusWhenStacked: "all",
     },
   },
@@ -101,7 +102,7 @@ const RevenueStatisticsChartUpdown: React.FC = () => {
         options={chartOptions}
         series={chartSeries}
         type="bar"
-        height={263}
+        height={310}
       />
     </>
   );

@@ -21,7 +21,7 @@ const RevenueStatisticsCard = () => {
           />
         </div>
 
-        <div className="mt-6 mb-6 flex flex-wrap">
+        <div className="mt-6 mb-1 flex flex-wrap">
           <div className="me-10">
             <span className="text-secondary-light text-sm mb-1">Income</span>
             <div className="flex items-center gap-1">
