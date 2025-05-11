@@ -55,10 +55,10 @@ const NoticeBoardList = () => {
           />
           <div className="grow">
             <h6 className="text-base mb-1 font-semibold">{item.name}</h6>
-            <p className="text-sm text-neutral-700 font-medium mb-1">
+            <p className="text-sm text-neutral-700 dark:text-neutral-200 font-medium mb-1">
               {item.message}
             </p>
-            <span className="text-sm text-neutral-700 font-normal">
+            <span className="text-sm text-neutral-700 dark:text-neutral-200 font-normal">
               {item.date}
             </span>
           </div>
