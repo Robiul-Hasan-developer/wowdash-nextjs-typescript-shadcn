@@ -5,6 +5,7 @@ import RevenueStatisticsCard from "./revenue-statistics-card";
 import StaticCard from "./components/static-card";
 import MostLocationCard from "./components/most-location-card";
 import MyPortfolioCard from "./components/my-portfolio-card";
+import LatestInvestmentsCard from "./components/latest-investments-card";
 
 const InvestmentPage = () => {
   return (
@@ -29,7 +30,7 @@ const InvestmentPage = () => {
           <MyPortfolioCard />
         </div>
         <div className="col-span-12 lg:col-span-6 2xl:col-span-6">
-          {/* <RevenueStatisticsCard /> */}
+          <LatestInvestmentsCard />
         </div>
         <div className="col-span-12 lg:col-span-6 2xl:col-span-4">
           {/* <RevenueStatisticsCard /> */}
