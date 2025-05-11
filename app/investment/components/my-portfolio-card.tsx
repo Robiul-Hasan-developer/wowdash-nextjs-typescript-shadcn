@@ -22,6 +22,7 @@ const MyPortfolioCard = () => {
             50k
           </span>
         </div>
+
         <ul className="flex flex-wrap flex-col mt-[84px] gap-3">
           <li className="flex items-center gap-2">
             <span className="w-4 h-4 rounded-xs bg-blue-600"></span>
