@@ -1,18 +1,38 @@
 // data/users.ts
+import { StaticImageData } from 'next/image';
 import UserImg1 from '../../public/assets/images/users/user1.png';
 import UserImg2 from '../../public/assets/images/users/user2.png';
 import UserImg3 from '../../public/assets/images/users/user3.png';
 import UserImg4 from '../../public/assets/images/users/user4.png';
 import UserImg5 from '../../public/assets/images/users/user5.png';
 
-export const users = [
+interface TransactionsDataType {
+  name: string,
+  email: string,
+  image: StaticImageData,
+  registered: string,
+  plan: string,
+  status: "Active" | "Inactive";
+  statusVariant:
+    | "default"
+    | "secondary"
+    | "destructive"
+    | "outline"
+    | "success"
+    | "warning"
+    | "info"
+    | "danger";
+}
+
+
+export const users:TransactionsDataType[] = [
     {
       name: "Dianne Russell",
       email: "redaniel@gmail.com",
       image: UserImg1,
       registered: "27 Mar 2024",
       plan: "Free",
-      statusBgWithColor: 'bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400',
+      statusVariant: 'success',
       status: "Active",
     },
     {
@@ -21,7 +41,7 @@ export const users = [
       image: UserImg2,
       registered: "27 Mar 2024",
       plan: "Basic",
-      statusBgWithColor: 'bg-red-100 dark:bg-red-600/25 text-red-600 dark:text-red-400',
+      statusVariant: 'danger',
       status: "Inactive",
     },
     {
@@ -30,7 +50,7 @@ export const users = [
       image: UserImg3,
       registered: "27 Mar 2024",
       plan: "Standard",
-      statusBgWithColor: 'bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400',
+      statusVariant: 'success',
       status: "Active",
     },
     {
@@ -39,8 +59,8 @@ export const users = [
       image: UserImg4,
       registered: "27 Mar 2024",
       plan: "Business",
-      statusBgWithColor: 'bg-red-100 dark:bg-red-600/25 text-red-600 dark:text-red-400',
-      status: "Active",
+      statusVariant: 'danger',
+      status: "Inactive",
     },
     {
       name: "Arlene McCoy",
@@ -48,7 +68,7 @@ export const users = [
       image: UserImg5,
       registered: "27 Mar 2024",
       plan: "Enterprise",
-      statusBgWithColor: 'bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400',
+      statusVariant: 'success',
       status: "Active",
     },
     {
@@ -57,8 +77,8 @@ export const users = [
         image: UserImg4,
         registered: "27 Mar 2024",
         plan: "Business",
-        statusBgWithColor: 'bg-red-100 dark:bg-red-600/25 text-red-600 dark:text-red-400',
-        status: "Active",
+        statusVariant: 'danger',
+        status: "Inactive",
       },
       {
         name: "Arlene McCoy",
@@ -66,7 +86,7 @@ export const users = [
         image: UserImg5,
         registered: "27 Mar 2024",
         plan: "Enterprise",
-        statusBgWithColor: 'bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400',
+        statusVariant: 'success',
         status: "Active",
       },
       {
@@ -75,7 +95,7 @@ export const users = [
         image: UserImg3,
         registered: "27 Mar 2024",
         plan: "Standard",
-        statusBgWithColor: 'bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400',
+        statusVariant: 'success',
         status: "Active",
       },
       {
@@ -84,8 +104,8 @@ export const users = [
         image: UserImg4,
         registered: "27 Mar 2024",
         plan: "Business",
-        statusBgWithColor: 'bg-red-100 dark:bg-red-600/25 text-red-600 dark:text-red-400',
-        status: "Active",
+        statusVariant: 'danger',
+        status: "Inactive",
       },
       {
         name: "Dianne Russell",
@@ -93,7 +113,7 @@ export const users = [
         image: UserImg1,
         registered: "27 Mar 2024",
         plan: "Free",
-        statusBgWithColor: 'bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400',
+        statusVariant: 'success',
         status: "Active",
       },
   ];

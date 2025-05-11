@@ -15,17 +15,34 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
+import { Badge } from "../ui/badge";
 
-const transactions = [
+interface TransactionsDataType {
+  name: string;
+  id: string;
+  assignedTo: string;
+  dueDate: string;
+  status: "Active" | "Rejected" | "Pending";
+  statusVariant:
+    | "default"
+    | "secondary"
+    | "destructive"
+    | "outline"
+    | "success"
+    | "warning"
+    | "info"
+    | "danger";
+}
+
+const transactions: TransactionsDataType[] = [
   {
     name: "Hotel Management System",
     id: "#5632",
     assignedTo: "Kathryn Murphy",
     dueDate: "27 Mar 2024",
     status: "Active",
-    statusStyle:
-      "bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400",
+    statusVariant: "success",
   },
   {
     name: "Hotel Management System",
@@ -33,8 +50,7 @@ const transactions = [
     assignedTo: "Darlene Robertson",
     dueDate: "27 Mar 2024",
     status: "Rejected",
-    statusStyle:
-      "bg-red-100 dark:bg-red-600/25 text-red-600 dark:text-red-400",
+    statusVariant: "danger",
   },
   {
     name: "Hotel Management System",
@@ -42,8 +58,7 @@ const transactions = [
     assignedTo: "Courtney Henry",
     dueDate: "27 Mar 2024",
     status: "Pending",
-    statusStyle:
-      "bg-yellow-100 dark:bg-yellow-600/25 text-yellow-600 dark:text-yellow-400",
+    statusVariant: "warning",
   },
   {
     name: "Hotel Management System",
@@ -51,8 +66,7 @@ const transactions = [
     assignedTo: "Jenny Wilson",
     dueDate: "27 Mar 2024",
     status: "Active",
-    statusStyle:
-      "bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400",
+    statusVariant: "success",
   },
 ];
 
@@ -112,11 +126,9 @@ const TodoListRecentTable = () => {
 
               {/* Status */}
               <TableCell className="py-6 px-4 border-b first:border-s last:border-e border-neutral-200 dark:border-slate-600 text-center">
-                <span
-                  className={`px-6 py-1.5 rounded-full font-medium text-sm ${txn.statusStyle}`}
-                >
+                <Badge variant={txn.statusVariant} className="rounded-[50rem]">
                   {txn.status}
-                </span>
+                </Badge>
               </TableCell>
 
               {/* Action */}
@@ -136,7 +148,6 @@ const TodoListRecentTable = () => {
                     <DropdownMenuItem>Subscription</DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
-
               </TableCell>
             </TableRow>
           );

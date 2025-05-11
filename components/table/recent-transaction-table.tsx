@@ -10,6 +10,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Badge } from "../ui/badge";
 
 export interface Transaction {
   id: string;
@@ -22,6 +23,15 @@ export interface Transaction {
   status: "Completed" | "Terminated";
   direction: "in" | "out";
   icon: LucideIcon;
+  statusVariant:
+    | "default"
+    | "secondary"
+    | "destructive"
+    | "outline"
+    | "success"
+    | "warning"
+    | "info"
+    | "danger";
 }
 
 export const transactions: Transaction[] = [
@@ -34,6 +44,7 @@ export const transactions: Transaction[] = [
     usdValue: "$3,480.90",
     address: "Abc.........np562",
     status: "Completed",
+    statusVariant: "success",
     direction: "in",
     icon: ArrowUpRight,
   },
@@ -46,6 +57,7 @@ export const transactions: Transaction[] = [
     usdValue: "$3,480.90",
     address: "Abc.........np562",
     status: "Terminated",
+    statusVariant: "danger",
     direction: "out",
     icon: ArrowDownLeft,
   },
@@ -58,6 +70,7 @@ export const transactions: Transaction[] = [
     usdValue: "$3,480.90",
     address: "Abc.........np562",
     status: "Completed",
+    statusVariant: "success",
     direction: "in",
     icon: ArrowUpRight,
   },
@@ -70,6 +83,7 @@ export const transactions: Transaction[] = [
     usdValue: "$3,480.90",
     address: "Abc.........np562",
     status: "Terminated",
+    statusVariant: "danger",
     direction: "out",
     icon: ArrowDownLeft,
   },
@@ -82,6 +96,7 @@ export const transactions: Transaction[] = [
     usdValue: "$3,480.90",
     address: "Abc.........np562",
     status: "Completed",
+    statusVariant: "success",
     direction: "in",
     icon: ArrowUpRight,
   },
@@ -119,11 +134,6 @@ const RecentTransactionTable = () => {
             txn.direction === "in"
               ? "text-green-600 bg-green-100 dark:bg-green-600/25 dark:text-green-400"
               : "text-red-600 bg-red-100 dark:bg-red-600/25 dark:text-red-400";
-
-          const statusClass =
-            txn.status === "Completed"
-              ? "bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400"
-              : "bg-red-100 dark:bg-red-600/25 text-red-600 dark:text-red-400";
 
           return (
             <TableRow key={txn.id}>
@@ -176,11 +186,7 @@ const RecentTransactionTable = () => {
                   isLast ? "rounded-br-lg" : ""
                 }`}
               >
-                <span
-                  className={`px-4 py-1.5 rounded font-medium text-sm ${statusClass}`}
-                >
-                  {txn.status}
-                </span>
+                <Badge variant={txn.statusVariant}>{txn.status}</Badge>
               </TableCell>
             </TableRow>
           );

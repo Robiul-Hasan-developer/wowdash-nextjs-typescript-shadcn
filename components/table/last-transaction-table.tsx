@@ -9,47 +9,61 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Badge } from "../ui/badge";
 
+interface TransactionsDataType {
+  id: string;
+  date: string;
+  amount: string;
+  status: "Pending" | "Rejected" | "Completed";
+  statusVariant:
+    | "default"
+    | "secondary"
+    | "destructive"
+    | "outline"
+    | "success"
+    | "warning"
+    | "info"
+    | "danger";
+}
 
-const transactions = [
-    {
-      id: "5986124445445",
-      date: "27 Mar 2024",
-      status: "Pending",
-      statusStyle: "bg-yellow-100 dark:bg-yellow-600/25 text-yellow-600 dark:text-yellow-400",
-      amount: "$20,000.00",
-    },
-    {
-      id: "5986124445445",
-      date: "27 Mar 2024",
-      status: "Rejected",
-      statusStyle: "bg-red-100 dark:bg-red-600/25 text-red-600 dark:text-red-400",
-      amount: "$20,000.00",
-    },
-    {
-      id: "5986124445445",
-      date: "27 Mar 2024",
-      status: "Completed",
-      statusStyle: "bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400",
-      amount: "$20,000.00",
-    },
-    {
-      id: "5986124445445",
-      date: "27 Mar 2024",
-      status: "Completed",
-      statusStyle: "bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400",
-      amount: "$20,000.00",
-    },
-    {
-      id: "5986124445445",
-      date: "27 Mar 2024",
-      status: "Completed",
-      statusStyle: "bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400",
-      amount: "$20,000.00",
-    },
+const transactions: TransactionsDataType[] = [
+  {
+    id: "5986124445445",
+    date: "27 Mar 2024",
+    status: "Pending",
+    statusVariant: "warning",
+    amount: "$20,000.00",
+  },
+  {
+    id: "5986124445445",
+    date: "27 Mar 2024",
+    status: "Rejected",
+    statusVariant: "danger",
+    amount: "$20,000.00",
+  },
+  {
+    id: "5986124445445",
+    date: "27 Mar 2024",
+    status: "Completed",
+    statusVariant: "success",
+    amount: "$20,000.00",
+  },
+  {
+    id: "5986124445445",
+    date: "27 Mar 2024",
+    status: "Completed",
+    statusVariant: "success",
+    amount: "$20,000.00",
+  },
+  {
+    id: "5986124445445",
+    date: "27 Mar 2024",
+    status: "Completed",
+    statusVariant: "success",
+    amount: "$20,000.00",
+  },
 ];
-  
-
 
 const LastTransactionTable = () => {
   return (
@@ -98,11 +112,9 @@ const LastTransactionTable = () => {
                   isLastRow ? "rounded-bl-lg" : ""
                 }`}
               >
-                <span
-                  className={`px-6 py-1.5 rounded-full font-medium text-sm ${txn.statusStyle}`}
-                >
+                <Badge variant={txn.statusVariant} className="rounded-[50rem]">
                   {txn.status}
-                </span>
+                </Badge>
               </TableCell>
 
               <TableCell

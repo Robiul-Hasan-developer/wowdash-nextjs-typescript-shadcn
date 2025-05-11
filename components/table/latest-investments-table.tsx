@@ -15,6 +15,7 @@ import AssetImage2 from "../../public/assets/images/asset/asset-img2.png";
 import AssetImage3 from "../../public/assets/images/asset/asset-img3.png";
 import AssetImage4 from "../../public/assets/images/asset/asset-img4.png";
 import AssetImage5 from "../../public/assets/images/asset/asset-img5.png";
+import { Badge } from "../ui/badge";
 
 type AssetOrder = {
   image: StaticImageData;
@@ -25,7 +26,15 @@ type AssetOrder = {
   price: string;
   date: string;
   status: "Completed" | "In Progress";
-  statusBg: string;
+  statusVariant:
+    | "default"
+    | "secondary"
+    | "destructive"
+    | "outline"
+    | "success"
+    | "warning"
+    | "info"
+    | "danger";
 };
 
 const orders: AssetOrder[] = [
@@ -38,8 +47,7 @@ const orders: AssetOrder[] = [
     price: "$7,400.00",
     date: "25 May 2024",
     status: "Completed",
-    statusBg:
-      "bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400",
+    statusVariant: "success",
   },
   {
     image: AssetImage2,
@@ -50,8 +58,7 @@ const orders: AssetOrder[] = [
     price: "$5,40,000.00",
     date: "25 May 2024",
     status: "In Progress",
-    statusBg:
-      "bg-yellow-100 dark:bg-yellow-500/25 text-yellow-500 dark:text-yellow-400",
+    statusVariant: "warning",
   },
   {
     image: AssetImage3,
@@ -62,20 +69,18 @@ const orders: AssetOrder[] = [
     price: "$50,000.00",
     date: "25 May 2024",
     status: "Completed",
-    statusBg:
-      "bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400",
+    statusVariant: "success",
   },
   {
     image: AssetImage4,
-    name: "Dimond",
+    name: "Diamond",
     subText: "Asset",
     quantity: "350",
     unit: "Ounces",
     price: "$30,000.00",
     date: "25 May 2024",
     status: "In Progress",
-    statusBg:
-      "bg-yellow-100 dark:bg-yellow-500/25 text-yellow-500 dark:text-yellow-400",
+    statusVariant: "warning",
   },
   {
     image: AssetImage5,
@@ -86,8 +91,7 @@ const orders: AssetOrder[] = [
     price: "$63,000.00",
     date: "25 May 2024",
     status: "Completed",
-    statusBg:
-      "bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400",
+    statusVariant: "success",
   },
 ];
 
@@ -160,11 +164,7 @@ const LatestInvestmentsTable = () => {
                   isLast ? "rounded-br-lg" : ""
                 }`}
               >
-                <span
-                  className={`px-4 py-1.5 rounded-lg font-medium text-sm ${order.statusBg}`}
-                >
-                  {order.status}
-                </span>
+                <Badge variant={order.statusVariant}>{order.status}</Badge>
               </TableCell>
             </TableRow>
           );
