@@ -7,6 +7,7 @@ import MostLocationCard from "./components/most-location-card";
 import MyPortfolioCard from "./components/my-portfolio-card";
 import LatestInvestmentsCard from "./components/latest-investments-card";
 import NoticeBoardCard from "./components/notice-board-card";
+import TotalTransactionsCard from "./components/total-transactions-card";
 
 const InvestmentPage = () => {
   return (
@@ -37,7 +38,7 @@ const InvestmentPage = () => {
           <NoticeBoardCard />
         </div>
         <div className="col-span-12 lg:col-span-6 2xl:col-span-4">
-          {/* <RevenueStatisticsCard /> */}
+          <TotalTransactionsCard />
         </div>
         <div className="col-span-12 2xl:col-span-4">
           {/* <RevenueStatisticsCard /> */}
