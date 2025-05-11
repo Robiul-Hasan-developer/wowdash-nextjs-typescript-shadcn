@@ -19,11 +19,11 @@ const StaticCard = () => {
               </span>
               <h5 className="font-semibold mb-0">%60</h5>
             </div>
-            <div className="relative h-[80px] w-[80px] flex items-center justify-center">
+            <div className="relative h-[100px] w-[80px] flex items-center justify-center">
               <DailyConversionsChart />
 
-              <span className="w-9 h-9 text-blue-600 text-lg mb-0 rounded-full bg-blue-100 flex justify-center items-center absolute start-[12%] bottom-0">
-                <Smile className="w-3 h-3" />
+              <span className="w-9 h-9 text-blue-600 mb-0 rounded-full bg-blue-600/20 flex justify-center items-center absolute start-[12%] bottom-0">
+                <Smile className="w-4 h-4" />
               </span>
             </div>
           </div>
