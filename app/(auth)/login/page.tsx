@@ -108,7 +108,7 @@ const Login = () => {
             <div className="mt-8 flex items-center gap-3">
               <Link
                 href="#"
-                className="font-semibold text-neutral-600 dark:text-neutral-200 py-4 px-6 w-1/2 border rounded-xl text-base flex items-center justify-center gap-3 line-height-1 hover:border-blue-300 hover:bg-blue-600/10"
+                className="font-semibold text-neutral-600 dark:text-neutral-200 py-4 px-6 w-1/2 border border-neutral-600/30 rounded-xl text-base flex items-center justify-center gap-3 line-height-1 hover:border-blue-300 hover:bg-blue-600/10"
               >
                 <Image
                   src={FacebookIcon}
@@ -120,7 +120,7 @@ const Login = () => {
               </Link>
               <Link
                 href="#"
-                className="font-semibold text-neutral-600 dark:text-neutral-200 py-4 px-6 w-1/2 border rounded-xl text-base flex items-center justify-center gap-3 line-height-1 hover:border-blue-300 hover:bg-blue-600/10"
+                className="font-semibold text-neutral-600 dark:text-neutral-200 py-4 px-6 w-1/2 border border-neutral-600/30 rounded-xl text-base flex items-center justify-center gap-3 line-height-1 hover:border-blue-300 hover:bg-blue-600/10"
               >
                 <Image src={GoogleIcon} alt="Facebook" width={20} height={20} />
                 Google
