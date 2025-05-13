@@ -1,18 +1,3 @@
-// import { ReactNode } from "react";
-// import "../globals.css";
-
-// export default function AuthLayout({ children }: { children: ReactNode }) {
-//   return (
-//     <html lang="en">
-//       <body className="min-h-screen flex items-center justify-center bg-gray-100 text-gray-900">
-//         <main className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
-//           {children}
-//         </main>
-//       </body>
-//     </html>
-//   );
-// }
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
@@ -36,7 +21,7 @@ export default function AuthLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider
           attribute="class"
@@ -51,5 +36,3 @@ export default function AuthLayout({
     </html>
   );
 }
-
-// suppressHydrationWarning
