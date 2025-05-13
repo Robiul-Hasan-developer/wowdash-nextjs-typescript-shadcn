@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image';
 
-export interface Img {
+export interface StaticImg {
     image: StaticImageData;
-  }
+}

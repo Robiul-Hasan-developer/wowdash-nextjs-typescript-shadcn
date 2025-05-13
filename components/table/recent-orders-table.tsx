@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import {
   Table,
   TableBody,
@@ -17,9 +17,10 @@ import UserImage3 from "@/public/assets/images/users/user3.png";
 import UserImage4 from "@/public/assets/images/users/user4.png";
 import UserImage5 from "@/public/assets/images/users/user5.png";
 import { Badge } from "../ui/badge";
+import { StaticImg } from "@/types/static-image";
 
 interface Order {
-  userImage: StaticImageData;
+  userImage: StaticImg;
   userName: string;
   invoice: string;
   item: string;

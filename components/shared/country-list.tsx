@@ -1,17 +1,18 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 import FlagImg1 from "@/public/assets/images/flags/flag1.png";
 import FlagImg2 from "@/public/assets/images/flags/flag2.png";
 import FlagImg3 from "@/public/assets/images/flags/flag3.png";
 import FlagImg4 from "@/public/assets/images/flags/flag4.png";
 import FlagImg5 from "@/public/assets/images/flags/flag5.png";
+import { StaticImg } from "@/types/static-image";
 
 export interface Country {
   name: string;
   users: string;
   percent: number;
-  flag: StaticImageData;
+  flag: StaticImg;
   color: string;
 }
 

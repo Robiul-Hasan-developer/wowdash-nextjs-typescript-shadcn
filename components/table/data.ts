@@ -1,10 +1,10 @@
 // data/users.ts
 import { StaticImageData } from 'next/image';
-import UserImg1 from '../../public/assets/images/users/user1.png';
-import UserImg2 from '../../public/assets/images/users/user2.png';
-import UserImg3 from '../../public/assets/images/users/user3.png';
-import UserImg4 from '../../public/assets/images/users/user4.png';
-import UserImg5 from '../../public/assets/images/users/user5.png';
+import UserImg1 from '@/public/assets/images/users/user1.png';
+import UserImg2 from '@/public/assets/images/users/user2.png';
+import UserImg3 from '@/public/assets/images/users/user3.png';
+import UserImg4 from '@/public/assets/images/users/user4.png';
+import UserImg5 from '@/public/assets/images/users/user5.png';
 
 interface TransactionsDataType {
   name: string,

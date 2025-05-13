@@ -1,21 +1,22 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image, { StaticImageData } from 'next/image';
+import React from "react";
+import Image from "next/image";
 
-import TransactionImg1 from '../../public/assets/images/payment/payment1.png';
-import TransactionImg2 from '../../public/assets/images/payment/payment2.png';
-import TransactionImg3 from '../../public/assets/images/payment/payment3.png';
-import TransactionImg4 from '../../public/assets/images/payment/payment4.png';
+import TransactionImg1 from "@/public/assets/images/payment/payment1.png";
+import TransactionImg2 from "@/public/assets/images/payment/payment2.png";
+import TransactionImg3 from "@/public/assets/images/payment/payment3.png";
+import TransactionImg4 from "@/public/assets/images/payment/payment4.png";
+import { StaticImg } from "@/types/static-image";
 
 interface Transaction {
-    id: number;
-    paymentMethod: string;
-    description: string;
-    amount: string;
-    amountType: 'credit' | 'debit';
-    image: StaticImageData;
-  }
+  id: number;
+  paymentMethod: string;
+  description: string;
+  amount: string;
+  amountType: "credit" | "debit";
+  image: StaticImg;
+}
 
 const transactions: Transaction[] = [
   {
@@ -68,36 +69,44 @@ const transactions: Transaction[] = [
   },
 ];
 
-
 const TransactionList = () => {
-    return (
-        <>
-         {transactions.map((transactionItem) => (
-            <div key={transactionItem.id} className="flex items-center justify-between gap-3 mb-5 last:mb-0">
-                <div className="flex items-center gap-4">
-                    <Image
-                        src={transactionItem.image}
-                        alt={transactionItem.paymentMethod}
-                        width={40}
-                        height={40}
-                        className="w-10 h-10 rounded-lg shrink-0"
-                    />
-                    <div className="grow">
-                        <h6 className="text-base mb-0 font-normal">{transactionItem.paymentMethod}</h6>
-                        <span className="text-sm text-secondary-light font-normal">{transactionItem.description}</span>
-                    </div>
-                </div>
-                <span
-                    className={`text-base font-medium ${
-                    transactionItem.amountType === 'credit' ? 'text-success-600' : 'text-danger-600'
-                    }`}
-                >
-                    {transactionItem.amount}
-                </span>
+  return (
+    <>
+      {transactions.map((transactionItem) => (
+        <div
+          key={transactionItem.id}
+          className="flex items-center justify-between gap-3 mb-5 last:mb-0"
+        >
+          <div className="flex items-center gap-4">
+            <Image
+              src={transactionItem.image}
+              alt={transactionItem.paymentMethod}
+              width={40}
+              height={40}
+              className="w-10 h-10 rounded-lg shrink-0"
+            />
+            <div className="grow">
+              <h6 className="text-base mb-0 font-normal">
+                {transactionItem.paymentMethod}
+              </h6>
+              <span className="text-sm text-secondary-light font-normal">
+                {transactionItem.description}
+              </span>
             </div>
-        ))}
-        </>
-    );
+          </div>
+          <span
+            className={`text-base font-medium ${
+              transactionItem.amountType === "credit"
+                ? "text-success-600"
+                : "text-danger-600"
+            }`}
+          >
+            {transactionItem.amount}
+          </span>
+        </div>
+      ))}
+    </>
+  );
 };
 
 export default TransactionList;

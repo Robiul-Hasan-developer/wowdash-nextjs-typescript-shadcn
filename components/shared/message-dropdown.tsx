@@ -8,11 +8,11 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { cn } from '@/lib/utils';
 import { Mail } from 'lucide-react';
-import NotificationImg1 from '../../public/assets/images/notification/profile-3.png';
-import NotificationImg2 from '../../public/assets/images/notification/profile-4.png';
-import NotificationImg3 from '../../public/assets/images/notification/profile-5.png';
-import NotificationImg4 from '../../public/assets/images/notification/profile-6.png';
-import NotificationImg5 from '../../public/assets/images/notification/profile-7.png';
+import NotificationImg1 from '@/public/assets/images/notification/profile-3.png';
+import NotificationImg2 from '@/public/assets/images/notification/profile-4.png';
+import NotificationImg3 from '@/public/assets/images/notification/profile-5.png';
+import NotificationImg4 from '@/public/assets/images/notification/profile-6.png';
+import NotificationImg5 from '@/public/assets/images/notification/profile-7.png';
 import Image from 'next/image';
 import Link from 'next/link';
 

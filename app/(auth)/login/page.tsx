@@ -12,6 +12,12 @@ import FacebookIcon from "@/public/assets/images/icons/facebook-icon.png";
 import GoogleIcon from "@/public/assets/images/icons/google-icon.png";
 import ThemeLogo from "@/components/shared/theme-logo";
 
+import { StaticImg } from "@/types/static-image";
+
+const forgotPassImage: StaticImg = {
+  image: AuthImage,
+};
+
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -21,7 +27,7 @@ const Login = () => {
       <div className="lg:w-1/2 hidden lg:block">
         <div className="flex items-center justify-center h-screen flex-col">
           <Image
-            src={AuthImage}
+            src={forgotPassImage.image}
             alt="Auth Illustration"
             className="object-cover w-full h-full"
           />
