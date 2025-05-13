@@ -12,6 +12,8 @@ import FacebookIcon from "@/public/assets/images/icons/facebook-icon.png";
 import GoogleIcon from "@/public/assets/images/icons/google-icon.png";
 import ThemeLogo from "@/components/shared/theme-logo";
 
+
+
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
 
