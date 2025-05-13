@@ -11,11 +11,11 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-import UserImage1 from "../../public/assets/images/users/user1.png";
-import UserImage2 from "../../public/assets/images/users/user2.png";
-import UserImage3 from "../../public/assets/images/users/user3.png";
-import UserImage4 from "../../public/assets/images/users/user4.png";
-import UserImage5 from "../../public/assets/images/users/user5.png";
+import UserImage1 from "@/public/assets/images/users/user1.png";
+import UserImage2 from "@/public/assets/images/users/user2.png";
+import UserImage3 from "@/public/assets/images/users/user3.png";
+import UserImage4 from "@/public/assets/images/users/user4.png";
+import UserImage5 from "@/public/assets/images/users/user5.png";
 import { Badge } from "../ui/badge";
 
 interface Order {

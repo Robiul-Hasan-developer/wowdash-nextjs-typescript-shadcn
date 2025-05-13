@@ -1,11 +1,11 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 
-import FlagImg1 from "../../public/assets/images/flags/flag1.png";
-import FlagImg2 from "../../public/assets/images/flags/flag2.png";
-import FlagImg3 from "../../public/assets/images/flags/flag3.png";
-import FlagImg4 from "../../public/assets/images/flags/flag4.png";
-import FlagImg5 from "../../public/assets/images/flags/flag5.png";
+import FlagImg1 from "@/public/assets/images/flags/flag1.png";
+import FlagImg2 from "@/public/assets/images/flags/flag2.png";
+import FlagImg3 from "@/public/assets/images/flags/flag3.png";
+import FlagImg4 from "@/public/assets/images/flags/flag4.png";
+import FlagImg5 from "@/public/assets/images/flags/flag5.png";
 
 export interface Country {
   name: string;
@@ -15,8 +15,7 @@ export interface Country {
   color: string;
 }
 
-
-export const countries:Country[] = [
+export const countries: Country[] = [
   {
     name: "USA",
     users: "1,240 Users",
@@ -57,17 +56,16 @@ export const countries:Country[] = [
 const CountryList = () => {
   return (
     <>
-      {
-        countries.map((country, index) => (
-          <div
+      {countries.map((country, index) => (
+        <div
           key={index}
           className="flex items-center justify-between gap-3 mb-3 pb-2 last:mb-0 last:pb-0"
         >
           <div className="flex items-center">
             <Image
-                src={country.flag}
-                alt={country.name}
-                className="w-10 h-10 rounded-full shrink-0 me-4"
+              src={country.flag}
+              alt={country.name}
+              className="w-10 h-10 rounded-full shrink-0 me-4"
             />
             <div className="grow">
               <h6 className="text-sm mb-0">{country.name}</h6>
@@ -89,9 +87,8 @@ const CountryList = () => {
               {country.percent}%
             </span>
           </div>
-        </div>    
-        ))
-      }
+        </div>
+      ))}
     </>
   );
 };

@@ -6,7 +6,7 @@ import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
 
-import ErrorThumbnail from "../public/assets/images/error-img.png";
+import ErrorThumbnail from "@/public/assets/images/error-img.png";
 
 export default function NotFound() {
     return (

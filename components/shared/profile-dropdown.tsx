@@ -10,7 +10,7 @@ import { User, Mail, Settings, LogOut } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import userImg from "../../public/assets/images/user.png";
+import userImg from "@/public/assets/images/user.png";
 
 const ProfileDropdown = () => {
   return (

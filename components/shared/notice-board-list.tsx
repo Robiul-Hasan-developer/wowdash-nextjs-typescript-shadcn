@@ -2,9 +2,9 @@
 
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-import BoardImage1 from "../../public/assets/images/notice/board-img1.png";
-import BoardImage2 from "../../public/assets/images/notice/board-img2.png";
-import BoardImage3 from "../../public/assets/images/notice/board-img3.png";
+import BoardImage1 from "@/public/assets/images/notice/board-img1.png";
+import BoardImage2 from "@/public/assets/images/notice/board-img2.png";
+import BoardImage3 from "@/public/assets/images/notice/board-img3.png";
 
 type NoticeItem = {
   id: number;

@@ -7,8 +7,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image, { StaticImageData } from "next/image";
-import CardBG from "../../public/assets/images/card/card-bg.png";
-import Logo from "../../public/assets/images/card/card-logo.png";
+import CardBG from "@/public/assets/images/card/card-bg.png";
+import Logo from "@/public/assets/images/card/card-logo.png";
 import { cn } from "@/lib/utils";
 
 interface CreditCardType {

@@ -10,11 +10,11 @@ import {
 } from "@/components/ui/table";
 
 import Image, { StaticImageData } from "next/image";
-import AssetImage1 from "../../public/assets/images/asset/asset-img1.png";
-import AssetImage2 from "../../public/assets/images/asset/asset-img2.png";
-import AssetImage3 from "../../public/assets/images/asset/asset-img3.png";
-import AssetImage4 from "../../public/assets/images/asset/asset-img4.png";
-import AssetImage5 from "../../public/assets/images/asset/asset-img5.png";
+import AssetImage1 from "@/public/assets/images/asset/asset-img1.png";
+import AssetImage2 from "@/public/assets/images/asset/asset-img2.png";
+import AssetImage3 from "@/public/assets/images/asset/asset-img3.png";
+import AssetImage4 from "@/public/assets/images/asset/asset-img4.png";
+import AssetImage5 from "@/public/assets/images/asset/asset-img5.png";
 import { Badge } from "../ui/badge";
 
 type AssetOrder = {
