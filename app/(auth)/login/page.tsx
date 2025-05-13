@@ -47,22 +47,22 @@ const Login = () => {
           <form>
             {/* Email */}
             <div className="relative mb-4">
-              <Mail className="absolute start-5 top-1/2 transform -translate-y-1/2 text-xl text-neutral-700 w-5 h-5" />
+              <Mail className="absolute start-5 top-1/2 transform -translate-y-1/2 text-xl text-neutral-700 dark:text-neutral-200 w-5 h-5" />
               <Input
                 type="email"
                 placeholder="Email"
-                className="ps-13 h-14 rounded-xl bg-neutral-100 dark:bg-dark-2 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[56px] !shadow-none !ring-0"
+                className="ps-13 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[56px] !shadow-none !ring-0"
               />
             </div>
 
             {/* Password */}
             <div className="relative mb-5">
-              <Lock className="absolute start-5 top-1/2 transform -translate-y-1/2 text-xl text-neutral-700 w-5 h-5" />
+              <Lock className="absolute start-5 top-1/2 transform -translate-y-1/2 text-xl text-neutral-700 dark:text-neutral-200 w-5 h-5" />
               <Input
                 type={showPassword === true ? "text" : "password"}
                 id="your-password"
                 placeholder="Password"
-                className="ps-13 h-14 rounded-xl bg-neutral-100 dark:bg-dark-2 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[56px] !shadow-none !ring-0 pe-12"
+                className="ps-13 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[56px] !shadow-none !ring-0 pe-12"
               />
               <Eye
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 text-muted-foreground cursor-pointer"
@@ -98,8 +98,8 @@ const Login = () => {
             </Button>
 
             {/* Or Divider */}
-            <div className="mt-8 relative text-center before:absolute before:w-full before:h-px before:bg-neutral-300 before:top-1/2 before:left-0">
-              <span className="relative z-10 px-4 bg-white dark:bg-dark-2 text-base">
+            <div className="mt-8 relative text-center before:absolute before:w-full before:h-px before:bg-neutral-300 dark:before:bg-slate-600 before:top-1/2 before:left-0">
+              <span className="relative z-10 px-4 bg-white dark:bg-slate-900 text-base">
                 Or sign in with
               </span>
             </div>
@@ -108,7 +108,7 @@ const Login = () => {
             <div className="mt-8 flex items-center gap-3">
               <Link
                 href="#"
-                className="font-semibold text-neutral-600 dark:text-neutral-200 py-4 px-6 w-1/2 border rounded-xl text-base flex items-center justify-center gap-3 line-height-1 hover:border-blue-300 hover:bg-blue-50"
+                className="font-semibold text-neutral-600 dark:text-neutral-200 py-4 px-6 w-1/2 border rounded-xl text-base flex items-center justify-center gap-3 line-height-1 hover:border-blue-300 hover:bg-blue-600/10"
               >
                 <Image
                   src={FacebookIcon}
@@ -120,7 +120,7 @@ const Login = () => {
               </Link>
               <Link
                 href="#"
-                className="font-semibold text-neutral-600 dark:text-neutral-200 py-4 px-6 w-1/2 border rounded-xl text-base flex items-center justify-center gap-3 line-height-1 hover:border-blue-300 hover:bg-blue-50"
+                className="font-semibold text-neutral-600 dark:text-neutral-200 py-4 px-6 w-1/2 border rounded-xl text-base flex items-center justify-center gap-3 line-height-1 hover:border-blue-300 hover:bg-blue-600/10"
               >
                 <Image src={GoogleIcon} alt="Facebook" width={20} height={20} />
                 Google
