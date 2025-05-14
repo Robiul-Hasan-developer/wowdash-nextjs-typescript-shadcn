@@ -1,26 +1,18 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
+import React from "react";
 import Image from "next/image";
-import { Mail, Lock, Eye } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
 import AuthImage from "@/public/assets/images/auth/auth-img.png";
-import FacebookIcon from "@/public/assets/images/icons/facebook-icon.png";
-import GoogleIcon from "@/public/assets/images/icons/google-icon.png";
 import ThemeLogo from "@/components/shared/theme-logo";
 
 import { StaticImg } from "@/types/static-image";
+import LoginForm from "@/components/auth/login-form";
 
 const forgotPassImage: StaticImg = {
   image: AuthImage,
 };
 
 const Login = () => {
-  const [showPassword, setShowPassword] = useState(false);
-
   return (
     <section className="bg-white dark:bg-slate-900 flex flex-wrap min-h-screen">
       {/* Left Image */}
@@ -50,102 +42,7 @@ const Login = () => {
           </div>
 
           {/* Login Form */}
-          <form>
-            {/* Email */}
-            <div className="relative mb-4">
-              <Mail className="absolute start-5 top-1/2 transform -translate-y-1/2 text-xl text-neutral-700 dark:text-neutral-200 w-5 h-5" />
-              <Input
-                type="email"
-                placeholder="Email"
-                className="ps-13 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[56px] !shadow-none !ring-0"
-              />
-            </div>
-
-            {/* Password */}
-            <div className="relative mb-5">
-              <Lock className="absolute start-5 top-1/2 transform -translate-y-1/2 text-xl text-neutral-700 dark:text-neutral-200 w-5 h-5" />
-              <Input
-                type={showPassword === true ? "text" : "password"}
-                id="your-password"
-                placeholder="Password"
-                className="ps-13 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[56px] !shadow-none !ring-0 pe-12"
-              />
-              <Eye
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-muted-foreground cursor-pointer"
-                onClick={() => setShowPassword(!showPassword)}
-              />
-            </div>
-
-            {/* Remember & Forgot */}
-            <div className="mt-7 flex justify-between items-center">
-              <div className="flex items-center gap-2">
-                <Checkbox
-                  id="remember"
-                  className="border border-neutral-500 w-4.5 h-4.5"
-                />
-                <label htmlFor="remember" className="text-sm">
-                  Remember me
-                </label>
-              </div>
-              <Link
-                href="/auth/forgot-password"
-                className="text-primary font-medium hover:underline text-sm"
-              >
-                Forgot Password?
-              </Link>
-            </div>
-
-            {/* Submit */}
-            <Button
-              type="submit"
-              className="w-full rounded-lg mt-8 h-12 text-sm h-[52px]"
-            >
-              Sign In
-            </Button>
-
-            {/* Or Divider */}
-            <div className="mt-8 relative text-center before:absolute before:w-full before:h-px before:bg-neutral-300 dark:before:bg-slate-600 before:top-1/2 before:left-0">
-              <span className="relative z-10 px-4 bg-white dark:bg-slate-900 text-base">
-                Or sign in with
-              </span>
-            </div>
-
-            {/* Social Buttons */}
-            <div className="mt-8 flex items-center gap-3">
-              <Link
-                href="#"
-                className="font-semibold text-neutral-600 dark:text-neutral-200 py-4 px-6 w-1/2 border border-neutral-600/30 rounded-xl text-base flex items-center justify-center gap-3 line-height-1 hover:border-blue-300 hover:bg-blue-600/10"
-              >
-                <Image
-                  src={FacebookIcon}
-                  alt="Facebook"
-                  width={18}
-                  height={18}
-                />
-                Facebook
-              </Link>
-              <Link
-                href="#"
-                className="font-semibold text-neutral-600 dark:text-neutral-200 py-4 px-6 w-1/2 border border-neutral-600/30 rounded-xl text-base flex items-center justify-center gap-3 line-height-1 hover:border-blue-300 hover:bg-blue-600/10"
-              >
-                <Image src={GoogleIcon} alt="Facebook" width={20} height={20} />
-                Google
-              </Link>
-            </div>
-
-            {/* Sign Up Prompt */}
-            <div className="mt-8 text-center text-sm">
-              <p>
-                Don&apos;t have an account?{" "}
-                <Link
-                  href="/auth/register"
-                  className="text-primary font-semibold hover:underline"
-                >
-                  Sign Up
-                </Link>
-              </p>
-            </div>
-          </form>
+          <LoginForm />
         </div>
       </div>
     </section>
