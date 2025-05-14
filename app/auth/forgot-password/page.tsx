@@ -72,7 +72,7 @@ const ForgotPassword = () => {
             {/* Back to sign in */}
             <div className="text-center">
               <Link
-                href="/login"
+                href="/auth/login"
                 className="text-blue-600 font-bold mt-6 hover:underline inline-block"
               >
                 Back to Sign In
@@ -84,7 +84,7 @@ const ForgotPassword = () => {
               <p>
                 Don&apos;t have an account?{" "}
                 <Link
-                  href="/register"
+                  href="/auth/register"
                   className="text-primary font-semibold hover:underline"
                 >
                   Sign Up

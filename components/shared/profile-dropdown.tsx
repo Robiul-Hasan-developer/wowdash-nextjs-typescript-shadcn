@@ -77,7 +77,7 @@ const ProfileDropdown = () => {
             </li>
             <li>
               <Link
-                href="/login"
+                href="/auth/login"
                 className="hover:text-red-600 flex items-center gap-3"
               >
                 <LogOut className="w-5 h-5" /> Log Out

@@ -178,7 +178,7 @@ const Register = () => {
               <p>
                 Already have an account?{" "}
                 <Link
-                  href="/login"
+                  href="/auth/login"
                   className="text-primary font-semibold hover:underline"
                 >
                   Sign In
@@ -354,7 +354,7 @@ export default Register;
 //               <p>
 //                 Already have an account?{" "}
 //                 <Link
-//                   href="/login"
+//                   href="/auth/login"
 //                   className="text-primary font-semibold hover:underline"
 //                 >
 //                   Sign In

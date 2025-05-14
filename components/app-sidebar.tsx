@@ -159,17 +159,17 @@ const data = {
       items: [
         {
           title: "Sign In",
-          url: "/login",
+          url: "/auth/login",
           circleColor: "bg-primary",
         },
         {
           title: "Sign Up",
-          url: "/register",
+          url: "/auth/register",
           circleColor: "bg-yellow-500",
         },
         {
           title: "Forgot Password",
-          url: "/forgot-password",
+          url: "/auth/forgot-password",
           circleColor: "bg-cyan-500",
         },
       ],
