@@ -11,7 +11,7 @@ const LoginForm = () => {
 
   return (
     <>
-      <form>
+      <form action="#">
         {/* Email */}
         <div className="relative mb-4">
           <Mail className="absolute start-5 top-1/2 transform -translate-y-1/2 text-xl text-neutral-700 dark:text-neutral-200 w-5 h-5" />
