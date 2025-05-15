@@ -4,6 +4,7 @@ import { useState } from "react";
 import { doLogout } from "@/app/actions";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
+import { LogOutIcon } from "lucide-react";
 
 const Logout = () => {
   const router = useRouter();
@@ -19,8 +20,10 @@ const Logout = () => {
     <Button
       onClick={handleLogout}
       type="button"
-      className="rounded-lg mt-8 h-12 text-sm h-[52px]"
+      className="hover:text-red-600 flex items-center gap-3"
+      variant="link"
     >
+      <LogOutIcon className="w-5 h-5" />
       {loading ? "Logging out..." : "Logout"}
     </Button>
   );

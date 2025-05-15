@@ -6,13 +6,25 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
-import { User, Mail, Settings, LogOut } from "lucide-react";
+import { User, Mail, Settings } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { auth } from "@/auth";
+import { redirect } from "next/navigation";
+import Logout from "@/components/auth/logout";
+
 import userImg from "@/public/assets/images/user.png";
 
-const ProfileDropdown = () => {
+const ProfileDropdown = async () => {
+  const session = await auth();
+
+  if (!session?.user) redirect("/auth/login");
+
+  if (!session || !session.user) {
+    return <p className="text-lg">You are not signed in.</p>;
+  }
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -23,13 +35,15 @@ const ProfileDropdown = () => {
             "rounded-full sm:w-10 sm:h-10 w-8 h-8 bg-gray-200/75 hover:bg-slate-200 focus-visible:ring-0 dark:bg-slate-700 dark:hover:bg-slate-600 border-0 cursor-pointer data-[state=open]:bg-gray-300 data-[state=open]:ring-4 data-[state=open]:ring-slate-300 dark:data-[state=open]:ring-slate-500 dark:data-[state=open]:bg-slate-600"
           )}
         >
-          <Image
-            src={userImg}
-            className="rounded-full"
-            width={40}
-            height={40}
-            alt="User Image"
-          />
+          {session.user.image && (
+            <Image
+              src={session.user.image ?? userImg}
+              className="rounded-full"
+              width={40}
+              height={40}
+              alt={session.user.name ?? "User profile"}
+            />
+          )}
         </Button>
       </DropdownMenuTrigger>
 
@@ -41,7 +55,7 @@ const ProfileDropdown = () => {
         <div className="py-3 px-4 rounded-lg bg-primary/10 dark:bg-primar flex items-center justify-between">
           <div>
             <h6 className="text-lg text-neutral-900 dark:text-white font-semibold mb-0">
-              Robiul Hasan
+              { session.user.name ?? "Robiul Hasan" } 
             </h6>
             <span className="text-sm text-neutral-500 dark:text-neutral-300">
               Front End Developer
@@ -76,12 +90,7 @@ const ProfileDropdown = () => {
               </Link>
             </li>
             <li>
-              <Link
-                href="/auth/login"
-                className="hover:text-red-600 flex items-center gap-3"
-              >
-                <LogOut className="w-5 h-5" /> Log Out
-              </Link>
+              <Logout />
             </li>
           </ul>
         </div>
