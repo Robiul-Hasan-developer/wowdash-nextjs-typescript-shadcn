@@ -1,14 +1,25 @@
+"use client";
+
 import { doLogout } from "@/app/actions";
-import React from "react";
 import { Button } from "../ui/button";
+import { useRouter } from "next/navigation";
 
 const Logout = () => {
+  const router = useRouter();
+
+  const handleLogout = async () => {
+    await doLogout();
+    router.push("/auth/login");
+  };
+
   return (
-    <form action={doLogout}>
-      <Button type="submit" className="rounded-lg mt-8 h-12 text-sm h-[52px]">
-        Logout
-      </Button>
-    </form>
+    <Button
+      onClick={handleLogout}
+      type="button"
+      className="rounded-lg mt-8 h-12 text-sm h-[52px]"
+    >
+      Logout
+    </Button>
   );
 };
 
