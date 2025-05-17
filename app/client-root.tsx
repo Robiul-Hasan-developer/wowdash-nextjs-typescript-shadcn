@@ -6,7 +6,7 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster } from "react-hot-toast";
 import { SidebarInset } from "@/components/ui/sidebar";
 
 export function ClientRoot({
@@ -34,7 +34,7 @@ export function ClientRoot({
           </div>
           <Footer />
         </main>
-        <Toaster />
+        <Toaster position="top-center" reverseOrder={false} />
       </SidebarProvider>
     </ThemeProvider>
   );

@@ -104,7 +104,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import SocialLogin from "./social-login";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { toast } from "sonner";
+import toast from "react-hot-toast";
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -127,37 +127,15 @@ const LoginForm = () => {
     setLoading(false);
 
     if (res?.ok) {
-      toast.success("Login successful! 🎉", {
-        className:
-          "!text-green-600 font-medium bg-white dark:bg-slate-700 !border-s !border-green-400",
-        descriptionClassName: "text-green-600 dark:text-white font-medium",
-      }),
-        router.push("/dashboard");
+      toast.success("Login successful! Please wait...");
+      router.push("/dashboard");
     } else {
-      toast.error("Invalid email or password!", {
-        className:
-          "!text-green-600 font-medium bg-white dark:bg-slate-700 !border-s !border-green-400",
-        descriptionClassName: "text-green-600 dark:text-white font-medium",
-      });
+      toast.error("Invalid email or password!");
     }
   };
 
   return (
     <>
-      <Button
-        variant="outline"
-        onClick={() =>
-          toast.success("Table Row has been deleted!", {
-            description: "You have deleted successfully!",
-            className:
-              "!text-green-600 font-medium bg-white dark:bg-slate-700 !border-s !border-green-400",
-            descriptionClassName: "text-green-600 dark:text-white font-medium",
-          })
-        }
-      >
-        Show Toast
-      </Button>
-
       <form onSubmit={handleSubmit}>
         <div className="relative mb-4">
           <Mail className="absolute start-5 top-1/2 transform -translate-y-1/2 text-xl text-neutral-700 dark:text-neutral-200 w-5 h-5" />
@@ -228,7 +206,7 @@ const LoginForm = () => {
         </span>
       </div>
 
-      <SocialLogin />
+      <SocialLogin loading={loading} />
 
       <div className="mt-8 text-center text-sm">
         <p>

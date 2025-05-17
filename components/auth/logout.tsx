@@ -5,6 +5,7 @@ import { doLogout } from "@/app/actions";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 import { LogOutIcon } from "lucide-react";
+import toast from "react-hot-toast";
 
 const Logout = () => {
   const router = useRouter();
@@ -12,7 +13,13 @@ const Logout = () => {
 
   const handleLogout = async () => {
     setLoading(true);
+
     await doLogout();
+
+    await toast.promise(doLogout(), {
+      loading: "Logging out...",
+      success: <b>Logout successful!</b>,
+    });
     router.push("/auth/login");
   };
 

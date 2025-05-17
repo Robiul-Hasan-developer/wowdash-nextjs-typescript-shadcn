@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 import { doSocialLogin } from "@/app/actions";
 import { Loader2 } from "lucide-react";
 
-const SocialLogin = () => {
+const SocialLogin = ({ loading }: any) => {
   const [loadingProvider, setLoadingProvider] = useState<
     null | "google" | "github"
   >(null);
@@ -35,7 +35,7 @@ const SocialLogin = () => {
         type="submit"
         name="action"
         value="google"
-        disabled={loadingProvider === "google"}
+        disabled={loadingProvider === "google" || loading}
       >
         {loadingProvider === "google" ? (
           <>
@@ -57,7 +57,7 @@ const SocialLogin = () => {
         type="submit"
         name="action"
         value="github"
-        disabled={loadingProvider === "github"}
+        disabled={loadingProvider === "github" || loading}
       >
         {loadingProvider === "github" ? (
           <>
