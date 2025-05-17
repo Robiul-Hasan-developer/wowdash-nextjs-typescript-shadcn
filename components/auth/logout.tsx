@@ -21,7 +21,6 @@ const Logout = () => {
     setLoading(false);
   };
 
-
   return (
     <Button
       onClick={handleLogout}
