@@ -17,7 +17,7 @@ const LoginForm = () => {
   const router = useRouter();
 
   const [email, setEmail] = useState("wowdash@gmail.com");
-  const [password, setPassword] = useState("1122");
+  const [password, setPassword] = useState("password");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

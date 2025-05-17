@@ -11,8 +11,7 @@ const users: User[] = [
     id: "1",
     email: "wowdash@gmail.com",
     name: "Wowdash",
-    // password: "$2a$10$eN0VvTPF3e0..."
-    password: "1122"
+    password: "password"
   }
 ]
 
