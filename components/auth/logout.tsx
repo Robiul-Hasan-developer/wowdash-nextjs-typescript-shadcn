@@ -13,15 +13,14 @@ const Logout = () => {
 
   const handleLogout = async () => {
     setLoading(true);
-
+    
     await doLogout();
-
-    await toast.promise(doLogout(), {
-      loading: "Logging out...",
-      success: <b>Logout successful!</b>,
-    });
+    toast.success("You Logout Successfully");
     router.push("/auth/login");
+
+    setLoading(false);
   };
+
 
   return (
     <Button

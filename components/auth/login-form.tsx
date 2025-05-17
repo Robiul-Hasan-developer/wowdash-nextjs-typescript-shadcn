@@ -127,7 +127,9 @@ const LoginForm = () => {
     setLoading(false);
 
     if (res?.ok) {
-      toast.success("Login successful! Please wait...");
+      toast.success("Login successful! Please wait...", {
+        duration: 2500,
+      });
       router.push("/dashboard");
     } else {
       toast.error("Invalid email or password!");
