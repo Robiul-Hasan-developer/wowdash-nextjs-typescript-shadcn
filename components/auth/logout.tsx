@@ -20,10 +20,10 @@ const Logout = () => {
     <Button
       onClick={handleLogout}
       type="button"
-      className="hover:text-red-600 flex items-center gap-3"
+      className="hover:text-red-600 flex items-center gap-3 p-0 text-neutral-900 text-base !px-0 cursor-pointer leading-[0] w-full justify-start hover:no-underline h-[none]"
       variant="link"
     >
-      <LogOutIcon className="w-5 h-5" />
+      <LogOutIcon width={24} height={24} className="!w-4.5 !h-4.5" />
       {loading ? "Logging out..." : "Logout"}
     </Button>
   );
