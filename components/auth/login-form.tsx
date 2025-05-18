@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Mail, Lock, Eye, Loader2 } from "lucide-react";
+import { Mail, Lock, Eye, Loader2, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -65,10 +65,14 @@ const LoginForm = () => {
             className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700"
             disabled={loading ? true : false}
           />
-          <Eye
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-muted-foreground cursor-pointer"
+          <Button
+            type="button"
+            aria-label={showPassword ? "Hide password" : "Show password"}
             onClick={() => setShowPassword(!showPassword)}
-          />
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-muted-foreground cursor-pointer !p-0 bg-transparent hover:bg-transparent"
+          >
+            {showPassword ? <EyeOff /> : <Eye />}
+          </Button>
         </div>
 
         <div className="mt-7 flex justify-between items-center">
