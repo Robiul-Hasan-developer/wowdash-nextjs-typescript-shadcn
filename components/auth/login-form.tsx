@@ -69,9 +69,13 @@ const LoginForm = () => {
             type="button"
             aria-label={showPassword ? "Hide password" : "Show password"}
             onClick={() => setShowPassword(!showPassword)}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-muted-foreground cursor-pointer !p-0 bg-transparent hover:bg-transparent"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-muted-foreground cursor-pointer !p-0 bg-transparent hover:bg-transparent h-[unset]"
           >
-            {showPassword ? <EyeOff /> : <Eye />}
+            {showPassword ? (
+              <EyeOff className="!w-5 !h-5" />
+            ) : (
+              <Eye className="!w-5 !h-5" />
+            )}
           </Button>
         </div>
 
