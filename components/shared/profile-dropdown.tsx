@@ -56,7 +56,7 @@ const ProfileDropdown = () => {
             <h6 className="text-lg text-neutral-900 dark:text-white font-semibold mb-0">
               {session?.user?.image && session?.user?.name
                 ? session?.user?.name
-                : "John Doe"}
+                : "Robiul Hasan"}
             </h6>
             <span className="text-sm text-neutral-500 dark:text-neutral-300">
               Admin
