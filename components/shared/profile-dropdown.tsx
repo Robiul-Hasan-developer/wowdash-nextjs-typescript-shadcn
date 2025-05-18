@@ -11,7 +11,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Logout from "@/components/auth/logout";
 import userImg from "@/public/assets/images/user.png";
-
 import { useSession } from "next-auth/react";
 
 const ProfileDropdown = () => {

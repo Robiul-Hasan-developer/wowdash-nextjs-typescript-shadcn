@@ -8,33 +8,9 @@ import TopPerformerCard from "./components/top-performer-card";
 import GenerateContentCard from "./components/generate-content-card";
 import TopCountriesCard from "./components/top-countries-card";
 
-import Image from "next/image";
-import { auth } from "@/auth";
-
-
 export default async function DashboardPage() {
-  const session = await auth();
-
-  if (!session || !session.user) {
-    return <p className="text-lg">You are not signed in.</p>;
-  }
-  
   return (
     <>
-     {session?.user.image && (
-        <Image
-          src={session.user.image}
-          className="rounded-full"
-          width={40}
-          height={40}
-          alt={session.user.name ?? "User profile"}
-        />
-      )}
-
-      <h4 className="text-2xl font-semibold">{session?.user.name}</h4>
-
-
-          
       <DashboardBreadcrumb title="Dashboard" text="AI" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-6">
