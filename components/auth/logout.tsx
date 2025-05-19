@@ -13,7 +13,7 @@ const Logout = () => {
 
   const handleLogout = async () => {
     setLoading(true);
-    
+
     await doLogout();
     toast.success("You Logout Successfully");
     router.push("/auth/login");

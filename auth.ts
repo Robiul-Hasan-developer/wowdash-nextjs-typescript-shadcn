@@ -9,26 +9,9 @@ import { ZodError } from "zod"
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
-    // Credentials({
-    //   credentials: {
-    //     email: {},
-    //     password: {},
-    //   },
-
-    //   authorize: async (credentials) => {
-    //     const { email, password } = credentials as { email: string; password: string }
-
-    //     const pwHash = password
-    //     const user = await getUserFromDb(email, pwHash)
-    //     if (!user) return null
-
-    //     return user
-    //   }
-    // }),
-
     Credentials({
       credentials: {
-         email: {},
+        email: {},
         password: {},
       },
       authorize: async (credentials) => {
@@ -38,10 +21,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           const user = await getUserFromDb(email, password) // assuming pwHash = password is handled inside getUserFromDb
 
           if (!user) {
-            return null // 👈 explicitly return null if not found
+            return null
           }
-
-          return user // 👈 must return user object
+          return user
         } 
         catch (error) {
           if (error instanceof ZodError) {
@@ -52,35 +34,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       }
     }),
     
-    
-    //  Credentials({
-    //   credentials: {
-        // email: {},
-        // password: {},
-    //   },
-    //   authorize: async (credentials) => { 
-    //     try {
-    //       let user = null
- 
-    //       const { email, password } = await signInSchema.parseAsync(credentials)
- 
-    //       const pwHash = password
- 
-    //       user = await getUserFromDb(email, pwHash)
- 
-    //       if (!user) {
-    //         throw new Error("Invalid credentials.")
-    //       }
- 
-    //       return user
-    //     } catch (error) {
-    //       if (error instanceof ZodError) {
-    //         return null
-    //       }
-    //     }
-    //   },
-    // }),
-
     Google({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
