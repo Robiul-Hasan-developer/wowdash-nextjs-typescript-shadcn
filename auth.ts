@@ -2,7 +2,6 @@ import NextAuth from "next-auth"
 import Credentials from "next-auth/providers/credentials"
 import Google from "next-auth/providers/google"
 import GitHub from "next-auth/providers/github"
-// import { saltAndHashPassword } from "@/utils/password"
 import { getUserFromDb } from "./utils/db"
 import { signInSchema } from "./lib/zod"
 import { ZodError } from "zod"
@@ -18,7 +17,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         try {
           const { email, password } = await signInSchema.parseAsync(credentials)
 
-          const user = await getUserFromDb(email, password) // assuming pwHash = password is handled inside getUserFromDb
+          const user = await getUserFromDb(email, password)
 
           if (!user) {
             return null

@@ -6,16 +6,21 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { doSocialLogin } from "@/app/actions";
 import { Loader2 } from "lucide-react";
+import { useLoading } from "@/contexts/LoadingContext";
 
-const SocialLogin = ({ loading }: any) => {
-  const [loadingProvider, setLoadingProvider] = useState<
+const SocialLogin = () => {
+  const { loading, setLoading } = useLoading();
+
+  const [loadingButtonProvider, setLoadingButtonProvider] = useState<
     null | "google" | "github"
   >(null);
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    setLoading(true);
+    
     const form = e.currentTarget;
     const clickedButton = (document.activeElement as HTMLButtonElement)?.value;
-    setLoadingProvider(
+    setLoadingButtonProvider(
       clickedButton === "google" || clickedButton === "github"
         ? clickedButton
         : null
@@ -35,9 +40,9 @@ const SocialLogin = ({ loading }: any) => {
         type="submit"
         name="action"
         value="google"
-        disabled={loadingProvider === "google" || loading}
+        disabled={loadingButtonProvider === "google" || loading}
       >
-        {loadingProvider === "google" ? (
+        {loadingButtonProvider === "google" ? (
           <>
             <Loader2 className="animate-spin h-4.5 w-4.5" />
             Loading...
@@ -57,9 +62,9 @@ const SocialLogin = ({ loading }: any) => {
         type="submit"
         name="action"
         value="github"
-        disabled={loadingProvider === "github" || loading}
+        disabled={loadingButtonProvider === "github" || loading}
       >
-        {loadingProvider === "github" ? (
+        {loadingButtonProvider === "github" ? (
           <>
             <Loader2 className="animate-spin h-4.5 w-4.5" />
             Loading...

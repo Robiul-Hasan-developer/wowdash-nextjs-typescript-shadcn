@@ -21,6 +21,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Mail, Lock, Eye, EyeOff, Loader2 } from "lucide-react";
 import SocialLogin from "./social-login";
 import { signInSchema } from "@/lib/zod";
+import { useLoading } from "@/contexts/LoadingContext";
 
 // validation schema
 const formSchema = signInSchema;
@@ -28,7 +29,8 @@ const formSchema = signInSchema;
 const LoginForm = () => {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { loading, setLoading } = useLoading();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -40,6 +42,7 @@ const LoginForm = () => {
 
   const handleLoginFormSubmit = async (values: z.infer<typeof formSchema>) => {
     setLoading(true);
+    setIsSubmitting(true);
 
     const res = await signIn("credentials", {
       redirect: false,
@@ -47,14 +50,14 @@ const LoginForm = () => {
       password: values.password,
     });
 
-    setLoading(false);
-
     if (res?.ok && !res.error) {
       toast.success("Login successful! Please wait...");
       router.push("/dashboard");
     } else {
       toast.error("Invalid email or password!");
     }
+
+    setLoading(false);
   };
 
   return (
@@ -146,7 +149,7 @@ const LoginForm = () => {
             className="w-full rounded-lg mt-1 h-[52px] text-sm"
             disabled={loading}
           >
-            {loading ? (
+            {isSubmitting ? (
               <>
                 <Loader2 className="animate-spin h-4.5 w-4.5 mr-2" />
                 Loading...
@@ -166,7 +169,7 @@ const LoginForm = () => {
       </div>
 
       {/* Social Login */}
-      <SocialLogin loading={loading} />
+      <SocialLogin />
 
       {/* Signup Prompt */}
       <div className="mt-8 text-center text-sm">
