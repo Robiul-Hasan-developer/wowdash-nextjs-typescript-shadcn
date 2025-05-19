@@ -1,110 +1,209 @@
+"use client";
+
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 import Link from "next/link";
-import { Mail, Lock, Eye, UserRound } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Mail, Lock, Eye, EyeOff, Loader2, UserRound } from "lucide-react";
 import SocialLogin from "./social-login";
+import { signInSchema } from "@/lib/zod";
+import { useLoading } from "@/contexts/LoadingContext";
+
+// validation schema
+const formSchema = signInSchema;
 
 const RegisterForm = () => {
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { loading, setLoading } = useLoading();
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      username: "",
+      email: "",
+      password: "",
+    },
+  });
+
+  const handleRegisterFormSubmit = async (
+    values: z.infer<typeof formSchema>
+  ) => {
+    console.log(values);
+
+    setLoading(true);
+    setIsSubmitting(true);
+
+    toast.success("User created successfully! Please wait...");
+    router.push("/dashboard");
+
+    setLoading(false);
+  };
 
   return (
     <>
-      <form>
-        {/* Username */}
-        <div className="relative mb-4">
-          <UserRound className="absolute start-5 top-1/2 transform -translate-y-1/2 text-xl text-neutral-700 dark:text-neutral-200 w-5 h-5" />
-          <Input
-            type="text"
-            placeholder="Username"
-            className="ps-13 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[56px] !shadow-none !ring-0"
-          />
-        </div>
-
-        {/* Email */}
-        <div className="relative mb-4">
-          <Mail className="absolute start-5 top-1/2 transform -translate-y-1/2 text-xl text-neutral-700 dark:text-neutral-200 w-5 h-5" />
-          <Input
-            type="email"
-            placeholder="Email"
-            className="ps-13 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[56px] !shadow-none !ring-0"
-          />
-        </div>
-
-        {/* Password */}
-        <div className="mb-5">
-          <div className="relative">
-            <Lock className="absolute start-5 top-1/2 transform -translate-y-1/2 text-xl text-neutral-700 dark:text-neutral-200 w-5 h-5" />
-            <Input
-              type={showPassword === true ? "text" : "password"}
-              id="your-password"
-              placeholder="Password"
-              className="ps-13 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[56px] !shadow-none !ring-0 pe-12"
-            />
-            <Eye
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-muted-foreground cursor-pointer"
-              onClick={() => setShowPassword(!showPassword)}
-            />
-          </div>
-          <span className="mt-3 text-sm text-neutral-700 dark:text-neutral-300 block">
-            Your password must have at least 8 characters
-          </span>
-        </div>
-
-        <div className="mt-7 flex justify-between items-center">
-          <div className="flex items-start gap-2">
-            <Checkbox
-              id="createAccount"
-              className="border border-neutral-500 w-4.5 h-4.5 mt-1"
-            />
-            <label htmlFor="createAccount" className="text-sm">
-              By creating an account means you agree to the{" "}
-              <Link
-                href="#"
-                className="text-blue-600 font-semibold hover:underline"
-              >
-                Terms & Conditions
-              </Link>{" "}
-              and our{" "}
-              <Link
-                href="#"
-                className="text-blue-600 font-semibold hover:underline"
-              >
-                Privacy Policy
-              </Link>
-            </label>
-          </div>
-        </div>
-
-        {/* Submit */}
-        <Button
-          type="submit"
-          className="w-full rounded-lg mt-8 h-12 text-sm h-[52px]"
+      <Form {...form}>
+        <form
+          onSubmit={form.handleSubmit(handleRegisterFormSubmit)}
+          className="space-y-6"
         >
-          Sign Up
-        </Button>
-      </form>
+          {/* Username Field */}
+          <FormField
+            control={form.control}
+            name="username"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <div className="relative">
+                    <UserRound className="absolute start-5 top-1/2 transform -translate-y-1/2 text-xl text-neutral-700 dark:text-neutral-200 w-5 h-5" />
+                    <Input
+                      {...field}
+                      type="text"
+                      placeholder="Username"
+                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 !shadow-none !ring-0"
+                      disabled={loading}
+                    />
+                  </div>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-      {/* Or Divider */}
+          {/* Email Field */}
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <div className="relative">
+                    <Mail className="absolute start-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-700 dark:text-neutral-200" />
+                    <Input
+                      {...field}
+                      type="email"
+                      placeholder="Email"
+                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 !shadow-none !ring-0"
+                      disabled={loading}
+                    />
+                  </div>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          {/* Password Field */}
+          <FormField
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <div className="relative">
+                    <Lock className="absolute start-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-700 dark:text-neutral-200" />
+                    <Input
+                      {...field}
+                      type={showPassword ? "text" : "password"}
+                      placeholder="Password"
+                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 !shadow-none !ring-0"
+                      disabled={loading}
+                    />
+                    <Button
+                      type="button"
+                      onClick={() => setShowPassword(!showPassword)}
+                      className="absolute right-4 top-1/2 transform -translate-y-1/2 !p-0 bg-transparent hover:bg-transparent text-muted-foreground h-[unset]"
+                    >
+                      {showPassword ? (
+                        <EyeOff className="w-5 h-5" />
+                      ) : (
+                        <Eye className="w-5 h-5" />
+                      )}
+                    </Button>
+                  </div>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          {/* Remember Me and Forgot Password */}
+          <div className="mt-7 flex justify-between items-center">
+            <div className="flex items-start gap-2">
+              <Checkbox
+                id="createAccount"
+                className="border border-neutral-500 w-4.5 h-4.5 mt-1"
+              />
+              <label htmlFor="createAccount" className="text-sm">
+                By creating an account means you agree to the{" "}
+                <Link
+                  href="#"
+                  className="text-blue-600 font-semibold hover:underline"
+                >
+                  Terms & Conditions
+                </Link>{" "}
+                and our{" "}
+                <Link
+                  href="#"
+                  className="text-blue-600 font-semibold hover:underline"
+                >
+                  Privacy Policy
+                </Link>
+              </label>
+            </div>
+          </div>
+
+          {/* Submit Button */}
+          <Button
+            type="submit"
+            className="w-full rounded-lg mt-1 h-[52px] text-sm"
+            disabled={loading}
+          >
+            {isSubmitting ? (
+              <>
+                <Loader2 className="animate-spin h-4.5 w-4.5 mr-2" />
+                Loading...
+              </>
+            ) : (
+              "Sign Up"
+            )}
+          </Button>
+        </form>
+      </Form>
+
+      {/* Divider */}
       <div className="mt-8 relative text-center before:absolute before:w-full before:h-px before:bg-neutral-300 dark:before:bg-slate-600 before:top-1/2 before:left-0">
         <span className="relative z-10 px-4 bg-white dark:bg-slate-900 text-base">
-          Or sign up with
+          Or sign in with
         </span>
       </div>
 
       {/* Social Login */}
       <SocialLogin />
 
-      {/* Sign In Prompt */}
+      {/* Signup Prompt */}
       <div className="mt-8 text-center text-sm">
         <p>
-          Already have an account?{" "}
+          Don&apos;t have an account?{" "}
           <Link
-            href="/auth/login"
+            href="/auth/register"
             className="text-primary font-semibold hover:underline"
           >
-            Sign In
+            Sign Up
           </Link>
         </p>
       </div>

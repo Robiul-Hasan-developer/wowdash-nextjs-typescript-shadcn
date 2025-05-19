@@ -1,13 +1,16 @@
 import { z } from "zod";
 
 export const signInSchema = z.object({
+  username: z.string().min(2, {
+    message: "Username must be at least 2 characters.",
+  }),
   email: z
     .string({ required_error: "Email is required" })
     .min(1, "Email is required")
     .email("Invalid email!"),
   password: z
     .string({ required_error: "Password is required" })
-    .min(5, { message: "Password must be more than 5 characters" })
+    .min(8, { message: "Password must be more than 8 characters" })
     .max(10, "Password must be less than 15 characters")
     .regex(/[a-zA-Z]/, { message: "Contain at least one letter." })
     .regex(/[0-9]/, { message: "Contain at least one number." })

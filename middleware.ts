@@ -2,7 +2,7 @@ import { auth } from "./auth";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const publicRoutes = ["/auth/login", "/auth/register"];
+const publicRoutes = ["/auth/login", "/auth/register", "/auth/forgot-password"];
 
 export async function middleware(req: NextRequest) {
   const session = await auth();
