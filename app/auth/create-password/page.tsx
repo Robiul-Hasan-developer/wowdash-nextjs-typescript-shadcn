@@ -36,8 +36,7 @@ const CreatePassword = () => {
 
             <h4 className="font-semibold mb-3">Create New Password</h4>
             <p className="mb-8 text-secondary-light text-lg">
-              Enter the email address associated with your account and we will
-              send you a link to reset your password.
+              Enter your password to unlock the screen!
             </p>
           </div>
 
