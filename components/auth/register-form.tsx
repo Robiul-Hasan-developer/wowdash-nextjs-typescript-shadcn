@@ -19,11 +19,8 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Mail, Lock, Eye, EyeOff, Loader2, UserRound } from "lucide-react";
 import SocialLogin from "./social-login";
-import { signInSchema } from "@/lib/zod";
+import { registerSchema } from "@/lib/zod";
 import { useLoading } from "@/contexts/LoadingContext";
-
-// validation schema
-const formSchema = signInSchema;
 
 const RegisterForm = () => {
   const router = useRouter();
@@ -31,8 +28,8 @@ const RegisterForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { loading, setLoading } = useLoading();
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof registerSchema>>({
+    resolver: zodResolver(registerSchema),
     defaultValues: {
       username: "",
       email: "",
@@ -41,7 +38,7 @@ const RegisterForm = () => {
   });
 
   const handleRegisterFormSubmit = async (
-    values: z.infer<typeof formSchema>
+    values: z.infer<typeof registerSchema>
   ) => {
     console.log(values);
 
@@ -142,7 +139,42 @@ const RegisterForm = () => {
           />
 
           {/* Remember Me and Forgot Password */}
-          <div className="mt-7 flex justify-between items-center">
+          <FormField
+            control={form.control}
+            name="acceptTerms"
+            render={({ field }) => (
+              <FormItem>
+                <div className="flex items-start gap-2 mt-7 flex justify-between items-center">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                      id="createAccount"
+                    />
+                  </FormControl>
+                  <label htmlFor="createAccount" className="text-sm">
+                    By creating an account means you agree to the{" "}
+                    <Link
+                      href="#"
+                      className="text-blue-600 font-semibold hover:underline"
+                    >
+                      Terms & Conditions
+                    </Link>{" "}
+                    and our{" "}
+                    <Link
+                      href="#"
+                      className="text-blue-600 font-semibold hover:underline"
+                    >
+                      Privacy Policy
+                    </Link>
+                  </label>
+                </div>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          {/* <div className="mt-7 flex justify-between items-center">
             <div className="flex items-start gap-2">
               <Checkbox
                 id="createAccount"
@@ -165,7 +197,7 @@ const RegisterForm = () => {
                 </Link>
               </label>
             </div>
-          </div>
+          </div> */}
 
           {/* Submit Button */}
           <Button
@@ -200,10 +232,10 @@ const RegisterForm = () => {
         <p>
           Don&apos;t have an account?{" "}
           <Link
-            href="/auth/register"
+            href="/auth/login"
             className="text-primary font-semibold hover:underline"
           >
-            Sign Up
+            Sign In
           </Link>
         </p>
       </div>

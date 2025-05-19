@@ -3,7 +3,7 @@ import Credentials from "next-auth/providers/credentials"
 import Google from "next-auth/providers/google"
 import GitHub from "next-auth/providers/github"
 import { getUserFromDb } from "./utils/db"
-import { signInSchema } from "./lib/zod"
+import { loginSchema } from "./lib/zod"
 import { ZodError } from "zod"
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
@@ -15,7 +15,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       },
       authorize: async (credentials) => {
         try {
-          const { email, password } = await signInSchema.parseAsync(credentials)
+          const { email, password } = await loginSchema.parseAsync(credentials)
 
           const user = await getUserFromDb(email, password)
 

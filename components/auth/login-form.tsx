@@ -20,11 +20,9 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Mail, Lock, Eye, EyeOff, Loader2 } from "lucide-react";
 import SocialLogin from "./social-login";
-import { signInSchema } from "@/lib/zod";
+import { loginSchema } from "@/lib/zod";
 import { useLoading } from "@/contexts/LoadingContext";
 
-// validation schema
-const formSchema = signInSchema;
 
 const LoginForm = () => {
   const router = useRouter();
@@ -32,15 +30,17 @@ const LoginForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { loading, setLoading } = useLoading();
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof loginSchema>>({
+    resolver: zodResolver(loginSchema),
     defaultValues: {
       email: "wowdash@gmail.com",
       password: "Pa$$w0rd!",
     },
   });
 
-  const handleLoginFormSubmit = async (values: z.infer<typeof formSchema>) => {
+  const handleLoginFormSubmit = async (
+    values: z.infer<typeof loginSchema>
+  ) => {
     setLoading(true);
     setIsSubmitting(true);
 
