@@ -5,14 +5,13 @@ import Image from "next/image";
 import AuthImage from "@/public/assets/images/auth/forgot-pass-img.png";
 import ThemeLogo from "@/components/shared/theme-logo";
 import { StaticImg } from "@/types/static-image";
-import CreatePasswordComponent from "@/components/auth/forgot-password";
+import CreatePasswordComponent from "@/components/auth/create-password-component";
 
 const forgotPassImage: StaticImg = {
   image: AuthImage,
 };
 
-const ForgotPassword = () => {
-
+const CreatePassword = () => {
   return (
     <section className="bg-white dark:bg-slate-900 flex flex-wrap min-h-screen">
       {/* Left Image */}
@@ -35,14 +34,14 @@ const ForgotPassword = () => {
               <ThemeLogo />
             </div>
 
-            <h4 className="font-semibold mb-3">Forgot Password</h4>
+            <h4 className="font-semibold mb-3">Create New Password</h4>
             <p className="mb-8 text-secondary-light text-lg">
               Enter the email address associated with your account and we will
               send you a link to reset your password.
             </p>
           </div>
 
-          {/* Login Form */}
+          {/* Form */}
           <CreatePasswordComponent />
         </div>
       </div>
@@ -50,4 +49,4 @@ const ForgotPassword = () => {
   );
 };
 
-export default ForgotPassword;
+export default CreatePassword;

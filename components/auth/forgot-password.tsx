@@ -16,15 +16,12 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Mail, Lock, Eye, EyeOff, Loader2, UserRound } from "lucide-react";
-import SocialLogin from "./social-login";
+import { Mail, Loader2 } from "lucide-react";
 import { forgotPasswordSchema } from "@/lib/zod";
 import { useLoading } from "@/contexts/LoadingContext";
 
 const ForgotPasswordComponent = () => {
   const router = useRouter();
-  const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { loading, setLoading } = useLoading();
 
@@ -35,14 +32,14 @@ const ForgotPasswordComponent = () => {
     },
   });
 
-  const handleRegisterFormSubmit = async (
+  const handleForgotPasswordFormSubmit = async (
     values: z.infer<typeof forgotPasswordSchema>
   ) => {
     setLoading(true);
     setIsSubmitting(true);
 
     toast.success("Password Reset code has been sent to your email");
-    router.push("/create-password");
+    router.push("/auth/create-password");
 
     setLoading(false);
   };
@@ -51,7 +48,7 @@ const ForgotPasswordComponent = () => {
     <>
       <Form {...form}>
         <form
-          onSubmit={form.handleSubmit(handleRegisterFormSubmit)}
+          onSubmit={form.handleSubmit(handleForgotPasswordFormSubmit)}
           className="space-y-6"
         >
           {/* Email Field */}
@@ -94,6 +91,18 @@ const ForgotPasswordComponent = () => {
           </Button>
         </form>
       </Form>
+
+      <div className="mt-8 text-center text-sm">
+        <p>
+          Forget it. Send me back to{" "}
+          <Link
+            href="/auth/login"
+            className="text-primary font-semibold hover:underline"
+          >
+            Sign In
+          </Link>
+        </p>
+      </div>
     </>
   );
 };
