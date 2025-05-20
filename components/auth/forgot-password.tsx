@@ -52,7 +52,7 @@ const ForgotPasswordComponent = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleForgotPasswordFormSubmit)}
-          className="space-y-6"
+          className="space-y-4"
         >
           {/* Email Field */}
           <FormField
@@ -80,7 +80,7 @@ const ForgotPasswordComponent = () => {
           {/* Submit Button */}
           <Button
             type="submit"
-            className="w-full rounded-lg mt-1 h-[52px] text-sm"
+            className="w-full rounded-lg mt-1 h-[52px] text-sm mt-2"
             disabled={loading}
           >
             {isSubmitting ? (

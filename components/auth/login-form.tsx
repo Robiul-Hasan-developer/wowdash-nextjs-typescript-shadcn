@@ -23,7 +23,6 @@ import SocialLogin from "./social-login";
 import { loginSchema } from "@/lib/zod";
 import { useLoading } from "@/contexts/LoadingContext";
 
-
 const LoginForm = () => {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
@@ -38,9 +37,7 @@ const LoginForm = () => {
     },
   });
 
-  const handleLoginFormSubmit = async (
-    values: z.infer<typeof loginSchema>
-  ) => {
+  const handleLoginFormSubmit = async (values: z.infer<typeof loginSchema>) => {
     setLoading(true);
     setIsSubmitting(true);
 
@@ -66,7 +63,7 @@ const LoginForm = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleLoginFormSubmit)}
-          className="space-y-6"
+          className="space-y-4"
         >
           {/* Email Field */}
           <FormField
@@ -147,7 +144,7 @@ const LoginForm = () => {
           {/* Submit Button */}
           <Button
             type="submit"
-            className="w-full rounded-lg mt-1 h-[52px] text-sm"
+            className="w-full rounded-lg mt-1 h-[52px] text-sm mt-2"
             disabled={loading}
           >
             {isSubmitting ? (

@@ -57,7 +57,7 @@ const CreatePasswordComponent = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleCreatePasswordFormSubmit)}
-          className="space-y-6"
+          className="space-y-4"
         >
           {/* Password Field */}
           <FormField
@@ -152,7 +152,7 @@ const CreatePasswordComponent = () => {
 
           <Button
             type="submit"
-            className="w-full rounded-lg h-[52px] text-sm"
+            className="w-full rounded-lg h-[52px] text-sm mt-2"
             disabled={loading}
           >
             {isSubmitting ? (

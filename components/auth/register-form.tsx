@@ -57,7 +57,7 @@ const RegisterForm = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleRegisterFormSubmit)}
-          className="space-y-6"
+          className="space-y-4"
         >
           {/* Username Field */}
           <FormField
@@ -175,35 +175,10 @@ const RegisterForm = () => {
             )}
           />
 
-          {/* <div className="mt-7 flex justify-between items-center">
-            <div className="flex items-start gap-2">
-              <Checkbox
-                id="createAccount"
-                className="border border-neutral-500 w-4.5 h-4.5 mt-1"
-              />
-              <label htmlFor="createAccount" className="text-sm">
-                By creating an account means you agree to the{" "}
-                <Link
-                  href="#"
-                  className="text-blue-600 font-semibold hover:underline"
-                >
-                  Terms & Conditions
-                </Link>{" "}
-                and our{" "}
-                <Link
-                  href="#"
-                  className="text-blue-600 font-semibold hover:underline"
-                >
-                  Privacy Policy
-                </Link>
-              </label>
-            </div>
-          </div> */}
-
           {/* Submit Button */}
           <Button
             type="submit"
-            className="w-full rounded-lg mt-1 h-[52px] text-sm"
+            className="w-full rounded-lg mt-1 h-[52px] text-sm mt-2"
             disabled={loading}
           >
             {isSubmitting ? (
