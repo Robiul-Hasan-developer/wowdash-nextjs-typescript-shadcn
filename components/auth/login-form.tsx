@@ -63,7 +63,7 @@ const LoginForm = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleLoginFormSubmit)}
-          className="space-y-4"
+          className="space-y-5"
         >
           {/* Email Field */}
           <FormField

@@ -57,7 +57,7 @@ const CreatePasswordComponent = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleCreatePasswordFormSubmit)}
-          className="space-y-4"
+          className="space-y-5"
         >
           {/* Password Field */}
           <FormField

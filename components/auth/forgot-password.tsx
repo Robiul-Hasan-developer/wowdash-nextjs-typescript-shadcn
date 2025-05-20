@@ -52,7 +52,7 @@ const ForgotPasswordComponent = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleForgotPasswordFormSubmit)}
-          className="space-y-4"
+          className="space-y-5"
         >
           {/* Email Field */}
           <FormField

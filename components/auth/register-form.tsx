@@ -57,7 +57,7 @@ const RegisterForm = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleRegisterFormSubmit)}
-          className="space-y-4"
+          className="space-y-5"
         >
           {/* Username Field */}
           <FormField
@@ -145,12 +145,13 @@ const RegisterForm = () => {
             name="acceptTerms"
             render={({ field }) => (
               <FormItem>
-                <div className="flex items-start gap-2 mt-7 flex justify-between items-center">
+                <div className="flex items-start gap-2 flex justify-between items-center">
                   <FormControl>
                     <Checkbox
                       checked={field.value}
                       onCheckedChange={field.onChange}
                       id="createAccount"
+                      className="border border-neutral-500 w-4.5 h-4.5 mt-1"
                     />
                   </FormControl>
                   <label htmlFor="createAccount" className="text-sm">
