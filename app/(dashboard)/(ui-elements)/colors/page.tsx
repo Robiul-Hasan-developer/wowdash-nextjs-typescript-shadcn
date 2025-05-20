@@ -9,20 +9,20 @@ const ColorsPage = () => {
 
       <div className="row gy-4">
         <div className="col-12">
-          <div className="card border-0">
-            <div className="card-body p-6">
+          <Card className="card border-0">
+            <CardContent className="card-body p-0">
               {/* Shade Start */}
               <div className="mb-8">
                 <h6 className="text-base mb-6">Shades</h6>
                 <div className="flex flex-wrap">
-                  <div className="color-box h-[190px] cursor-pointer max-w-[150px] w-full bg-white dark:bg-neutral-700 relative p-7 grow border border-neutral-200 dark:border-neutral-600">
+                  <div className="color-box h-[190px] cursor-pointer max-w-[150px] w-full bg-white dark:bg-white relative p-7 grow border border-neutral-200 dark:border-neutral-600">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
-                      <span className="font-medium text-lg text-neutral-600 dark:text-white block">
+                      <span className="font-medium text-lg text-neutral-600 block">
                         100
                       </span>
                       <span
-                        className="font-medium text-base text-neutral-600 dark:text-white block"
-                        data-clipboard-text="bg-white dark:bg-neutral-700"
+                        className="font-medium text-base text-neutral-600 block"
+                        data-clipboard-text="bg-white dark:bg-white"
                       >
                         #FFFFFF
                       </span>
@@ -183,135 +183,135 @@ const ColorsPage = () => {
               </div>
               {/* Neutral End */}
 
-              {/* Primary Start */}
+              {/* blue Start */}
               <div className="mb-8">
-                <h6 className="text-base mb-6">Primary Color</h6>
+                <h6 className="text-base mb-6">Blue Color</h6>
                 <div className="flex flex-wrap">
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-primary-50 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-50 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         50
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-primary-50 dark:bg-primary-600"
+                        data-clipboard-text="bg-blue-50 dark:bg-blue-600"
                       >
                         #FAFAFA
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-primary-100 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-100 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         100
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-primary-100"
+                        data-clipboard-text="bg-blue-100"
                       >
                         #F5F5F5
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-primary-200 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-200 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         200
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-primary-200"
+                        data-clipboard-text="bg-blue-200"
                       >
                         #E5E5E5
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-primary-300 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-300 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         300
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-primary-300"
+                        data-clipboard-text="bg-blue-300"
                       >
                         #D4D4D4
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-primary-400 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-400 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 d-bloc">
                         400
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-primary-400"
+                        data-clipboard-text="bg-blue-400"
                       >
                         #A3A3A3
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-primary-500 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-500 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         500
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-primary-400"
+                        data-clipboard-text="bg-blue-400"
                       >
                         #737373
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-primary-600 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-600 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         600
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-primary-600"
+                        data-clipboard-text="bg-blue-600"
                       >
                         #525252
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-primary-700 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-700 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         700
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-primary-700"
+                        data-clipboard-text="bg-blue-700"
                       >
                         #404040
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-primary-800 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-800 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         800
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-primary-800"
+                        data-clipboard-text="bg-blue-800"
                       >
                         #262626
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-primary-900 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-900 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         900
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-primary-900"
+                        data-clipboard-text="bg-blue-900"
                       >
                         #171717
                       </span>
@@ -319,137 +319,137 @@ const ColorsPage = () => {
                   </div>
                 </div>
               </div>
-              {/* Primary End */}
+              {/* blue End */}
 
               {/* Error Start */}
               <div className="mb-8">
                 <h6 className="text-base mb-6">Error Color</h6>
                 <div className="flex flex-wrap">
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-danger-50 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-50 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         50
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-danger-50 dark:bg-danger-600"
+                        data-clipboard-text="bg-red-50 dark:bg-red-600"
                       >
                         #FAFAFA
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-danger-100 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-100 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         100
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-danger-100"
+                        data-clipboard-text="bg-red-100"
                       >
                         #F5F5F5
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-danger-200 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-200 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         200
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-danger-200"
+                        data-clipboard-text="bg-red-200"
                       >
                         #E5E5E5
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-danger-300 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-300 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         300
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-danger-300"
+                        data-clipboard-text="bg-red-300"
                       >
                         #D4D4D4
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-danger-400 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-400 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 d-bloc">
                         400
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-danger-400"
+                        data-clipboard-text="bg-red-400"
                       >
                         #A3A3A3
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-danger-500 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-500 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         500
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-danger-400"
+                        data-clipboard-text="bg-red-400"
                       >
                         #737373
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-danger-600 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-600 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         600
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-danger-600"
+                        data-clipboard-text="bg-red-600"
                       >
                         #525252
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-danger-700 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-700 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         700
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-danger-700"
+                        data-clipboard-text="bg-red-700"
                       >
                         #404040
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-danger-800 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-800 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         800
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-danger-800"
+                        data-clipboard-text="bg-red-800"
                       >
                         #262626
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-danger-900 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-900 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         900
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-danger-900"
+                        data-clipboard-text="bg-red-900"
                       >
                         #171717
                       </span>
@@ -459,135 +459,135 @@ const ColorsPage = () => {
               </div>
               {/* Error End */}
 
-              {/* Success Start */}
+              {/* green Start */}
               <div className="mb-8">
-                <h6 className="text-base mb-6">Success Color</h6>
+                <h6 className="text-base mb-6">green Color</h6>
                 <div className="flex flex-wrap">
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-success-50 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-50 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         50
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-success-50 dark:bg-success-600"
+                        data-clipboard-text="bg-green-50 dark:bg-green-600"
                       >
                         #FAFAFA
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-success-100 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-100 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         100
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-success-100"
+                        data-clipboard-text="bg-green-100"
                       >
                         #F5F5F5
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-success-200 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-200 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         200
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-success-200"
+                        data-clipboard-text="bg-green-200"
                       >
                         #E5E5E5
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-success-300 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-300 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         300
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-success-300"
+                        data-clipboard-text="bg-green-300"
                       >
                         #D4D4D4
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-success-400 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-400 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 d-bloc">
                         400
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-success-400"
+                        data-clipboard-text="bg-green-400"
                       >
                         #A3A3A3
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-success-500 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-500 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         500
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-success-400"
+                        data-clipboard-text="bg-green-400"
                       >
                         #737373
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-success-600 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-600 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         600
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-success-600"
+                        data-clipboard-text="bg-green-600"
                       >
                         #525252
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-success-700 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-700 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         700
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-success-700"
+                        data-clipboard-text="bg-green-700"
                       >
                         #404040
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-success-800 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-800 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         800
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-success-800"
+                        data-clipboard-text="bg-green-800"
                       >
                         #262626
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-success-900 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-900 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         900
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-success-900"
+                        data-clipboard-text="bg-green-900"
                       >
                         #171717
                       </span>
@@ -595,137 +595,137 @@ const ColorsPage = () => {
                   </div>
                 </div>
               </div>
-              {/* Success End */}
+              {/* green End */}
 
-              {/* warning Start */}
+              {/* yellow Start */}
               <div className="mb-8">
-                <h6 className="text-base mb-6">Warning Color</h6>
+                <h6 className="text-base mb-6"> Yellow Color</h6>
                 <div className="flex flex-wrap">
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-warning-50 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-50 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         50
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-warning-50 dark:bg-warning-600"
+                        data-clipboard-text="bg-yellow-50 dark:bg-yellow-600"
                       >
                         #FAFAFA
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-warning-100 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-100 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         100
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-warning-100"
+                        data-clipboard-text="bg-yellow-100"
                       >
                         #F5F5F5
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-warning-200 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-200 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         200
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-warning-200"
+                        data-clipboard-text="bg-yellow-200"
                       >
                         #E5E5E5
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-warning-300 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-300 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         300
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-warning-300"
+                        data-clipboard-text="bg-yellow-300"
                       >
                         #D4D4D4
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-warning-400 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-400 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 d-bloc">
                         400
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-warning-400"
+                        data-clipboard-text="bg-yellow-400"
                       >
                         #A3A3A3
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-warning-500 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-500 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         500
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-warning-400"
+                        data-clipboard-text="bg-yellow-400"
                       >
                         #737373
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-warning-600 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-600 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         600
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-warning-600"
+                        data-clipboard-text="bg-yellow-600"
                       >
                         #525252
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-warning-700 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-700 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         700
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-warning-700"
+                        data-clipboard-text="bg-yellow-700"
                       >
                         #404040
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-warning-800 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-800 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         800
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-warning-800"
+                        data-clipboard-text="bg-yellow-800"
                       >
                         #262626
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-warning-900 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-900 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         900
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-warning-900"
+                        data-clipboard-text="bg-yellow-900"
                       >
                         #171717
                       </span>
@@ -733,137 +733,137 @@ const ColorsPage = () => {
                   </div>
                 </div>
               </div>
-              {/* warning End */}
+              {/* yellow End */}
 
-              {/* info Start */}
+              {/* cyan Start */}
               <div className="mb-8">
-                <h6 className="text-base mb-6">Info Color</h6>
+                <h6 className="text-base mb-6"> Cyan Color</h6>
                 <div className="flex flex-wrap">
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-info-50 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-50 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         50
                       </span>
                       <span
-                        className="font-medium text-base text-info-neutral dark:text-neutral-600 block"
-                        data-clipboard-text="bg-info-50 dark:bg-info-600"
+                        className="font-medium text-base text-cyan-neutral dark:text-neutral-600 block"
+                        data-clipboard-text="bg-cyan-50 dark:bg-cyan-600"
                       >
                         #FAFAFA
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-info-100 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-100 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         100
                       </span>
                       <span
-                        className="font-medium text-base text-info-neutral dark:text-neutral-600 block"
-                        data-clipboard-text="bg-info-100"
+                        className="font-medium text-base text-cyan-neutral dark:text-neutral-600 block"
+                        data-clipboard-text="bg-cyan-100"
                       >
                         #F5F5F5
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-info-200 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-200 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         200
                       </span>
                       <span
-                        className="font-medium text-base text-info-neutral dark:text-neutral-600 block"
-                        data-clipboard-text="bg-info-200"
+                        className="font-medium text-base text-cyan-neutral dark:text-neutral-600 block"
+                        data-clipboard-text="bg-cyan-200"
                       >
                         #E5E5E5
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-info-300 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-300 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         300
                       </span>
                       <span
-                        className="font-medium text-base text-info-neutral dark:text-neutral-600 block"
-                        data-clipboard-text="bg-info-300"
+                        className="font-medium text-base text-cyan-neutral dark:text-neutral-600 block"
+                        data-clipboard-text="bg-cyan-300"
                       >
                         #D4D4D4
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-info-400 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-400 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 d-bloc">
                         400
                       </span>
                       <span
-                        className="font-medium text-base text-info-neutral dark:text-neutral-600 block"
-                        data-clipboard-text="bg-info-400"
+                        className="font-medium text-base text-cyan-neutral dark:text-neutral-600 block"
+                        data-clipboard-text="bg-cyan-400"
                       >
                         #A3A3A3
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-info-500 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-500 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         500
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-info-400"
+                        data-clipboard-text="bg-cyan-400"
                       >
                         #737373
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-info-600 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-600 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         600
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-info-600"
+                        data-clipboard-text="bg-cyan-600"
                       >
                         #525252
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-info-700 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-700 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         700
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-info-700"
+                        data-clipboard-text="bg-cyan-700"
                       >
                         #404040
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-info-800 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-800 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         800
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-info-800"
+                        data-clipboard-text="bg-cyan-800"
                       >
                         #262626
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-info-900 relative p-7 grow">
+                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-900 relative p-7 grow">
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         900
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-info-900"
+                        data-clipboard-text="bg-cyan-900"
                       >
                         #171717
                       </span>
@@ -871,9 +871,9 @@ const ColorsPage = () => {
                   </div>
                 </div>
               </div>
-              {/* info End */}
-            </div>
-          </div>
+              {/* cyan End */}
+            </CardContent>
+          </Card>
         </div>
       </div>
     </>
