@@ -25,7 +25,7 @@ const ColorsPage = () => {
       const textToCopy = target.getAttribute("data-clipboard-text");
       if (textToCopy) {
         handleCopy(textToCopy);
-        toast.success(`Color ${textToCopy} copied`);
+        toast.success(`${textToCopy} class name copied`);
       }
     }
   };
