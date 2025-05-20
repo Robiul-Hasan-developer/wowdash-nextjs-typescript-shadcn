@@ -1,8 +1,35 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Card, CardContent } from "@/components/ui/card";
+import toast from "react-hot-toast";
 
 const ColorsPage = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
+
+  // Utility to extract data-clipboard-text on click
+  const handleBoxClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.currentTarget.querySelector("[data-clipboard-text]");
+    if (target instanceof HTMLElement) {
+      const textToCopy = target.getAttribute("data-clipboard-text");
+      if (textToCopy) {
+        handleCopy(textToCopy);
+      }
+    }
+    toast.success("Color class name copied");
+  };
+
   return (
     <>
       <DashboardBreadcrumb title="Colors" text="Colors" />
@@ -15,7 +42,10 @@ const ColorsPage = () => {
               <div className="mb-8">
                 <h6 className="text-base mb-6">Shades</h6>
                 <div className="flex flex-wrap">
-                  <div className="color-box h-[190px] cursor-pointer max-w-[150px] w-full bg-white dark:bg-white relative p-7 grow border border-neutral-200 dark:border-neutral-600">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer max-w-[150px] w-full bg-white dark:bg-white relative p-7 grow border border-neutral-200 dark:border-neutral-600"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 block">
                         100
@@ -28,7 +58,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer max-w-[150px] w-full bg-neutral-900 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer max-w-[150px] w-full bg-neutral-900 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         100
@@ -49,7 +82,10 @@ const ColorsPage = () => {
               <div className="mb-8">
                 <h6 className="text-base mb-6">Neutral Color</h6>
                 <div className="flex flex-wrap">
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-50 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-50 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         50
@@ -62,7 +98,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-100 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-100 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         100
@@ -75,7 +114,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-200 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-200 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         200
@@ -88,7 +130,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-300 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-300 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         300
@@ -101,7 +146,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-400 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-400 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 d-bloc">
                         400
@@ -114,7 +162,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-500 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-500 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         500
@@ -127,7 +178,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-600 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-600 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         600
@@ -140,7 +194,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-700 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-700 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         700
@@ -153,7 +210,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-800 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-800 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         800
@@ -166,7 +226,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-900 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-neutral-900 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         900
@@ -187,7 +250,10 @@ const ColorsPage = () => {
               <div className="mb-8">
                 <h6 className="text-base mb-6">Blue Color</h6>
                 <div className="flex flex-wrap">
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-50 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-50 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         50
@@ -200,7 +266,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-100 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-100 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         100
@@ -213,7 +282,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-200 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-200 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         200
@@ -226,7 +298,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-300 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-300 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         300
@@ -239,7 +314,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-400 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-400 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 d-bloc">
                         400
@@ -252,7 +330,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-500 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-500 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         500
@@ -265,7 +346,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-600 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-600 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         600
@@ -278,7 +362,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-700 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-700 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         700
@@ -291,7 +378,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-800 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-800 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         800
@@ -304,7 +394,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-900 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-900 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         900
@@ -325,7 +418,10 @@ const ColorsPage = () => {
               <div className="mb-8">
                 <h6 className="text-base mb-6">Error Color</h6>
                 <div className="flex flex-wrap">
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-50 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-50 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         50
@@ -338,7 +434,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-100 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-100 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         100
@@ -351,7 +450,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-200 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-200 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         200
@@ -364,7 +466,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-300 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-300 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         300
@@ -377,7 +482,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-400 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-400 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 d-bloc">
                         400
@@ -390,7 +498,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-500 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-500 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         500
@@ -403,7 +514,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-600 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-600 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         600
@@ -416,7 +530,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-700 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-700 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         700
@@ -429,7 +546,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-800 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-800 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         800
@@ -442,7 +562,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-900 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-red-900 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         900
@@ -463,7 +586,10 @@ const ColorsPage = () => {
               <div className="mb-8">
                 <h6 className="text-base mb-6">green Color</h6>
                 <div className="flex flex-wrap">
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-50 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-50 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         50
@@ -476,7 +602,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-100 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-100 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         100
@@ -489,7 +618,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-200 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-200 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         200
@@ -502,7 +634,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-300 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-300 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         300
@@ -515,7 +650,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-400 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-400 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 d-bloc">
                         400
@@ -528,7 +666,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-500 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-500 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         500
@@ -541,7 +682,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-600 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-600 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         600
@@ -554,7 +698,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-700 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-700 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         700
@@ -567,7 +714,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-800 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-800 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         800
@@ -580,7 +730,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-900 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-green-900 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         900
@@ -601,7 +754,10 @@ const ColorsPage = () => {
               <div className="mb-8">
                 <h6 className="text-base mb-6"> Yellow Color</h6>
                 <div className="flex flex-wrap">
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-50 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-50 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         50
@@ -614,7 +770,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-100 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-100 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         100
@@ -627,7 +786,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-200 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-200 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         200
@@ -640,7 +802,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-300 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-300 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         300
@@ -653,7 +818,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-400 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-400 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 d-bloc">
                         400
@@ -666,7 +834,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-500 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-500 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         500
@@ -679,7 +850,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-600 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-600 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         600
@@ -692,7 +866,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-700 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-700 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         700
@@ -705,7 +882,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-800 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-800 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         800
@@ -718,7 +898,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-900 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-yellow-900 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         900
@@ -739,7 +922,10 @@ const ColorsPage = () => {
               <div className="mb-8">
                 <h6 className="text-base mb-6"> Cyan Color</h6>
                 <div className="flex flex-wrap">
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-50 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-50 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         50
@@ -752,7 +938,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-100 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-100 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         100
@@ -765,7 +954,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-200 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-200 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         200
@@ -778,7 +970,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-300 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-300 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 block">
                         300
@@ -791,7 +986,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-400 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-400 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 dark:text-neutral-600 d-bloc">
                         400
@@ -804,7 +1002,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-500 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-500 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         500
@@ -817,7 +1018,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-600 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-600 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         600
@@ -830,7 +1034,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-700 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-700 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         700
@@ -843,7 +1050,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-800 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-800 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         800
@@ -856,7 +1066,10 @@ const ColorsPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-900 relative p-7 grow">
+                  <div
+                    onClick={handleBoxClick}
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-cyan-900 relative p-7 grow"
+                  >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
                         900
