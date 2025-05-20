@@ -6,9 +6,8 @@ import {
   Mail,
   MessageCircleMore,
   CalendarDays,
-  Map,
-  FileText,
   ShieldCheck,
+  Component
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
@@ -54,46 +53,6 @@ const data = {
           url: "/investment",
           circleColor: "bg-green-600",
         },
-        {
-          title: "LMS / Learning System",
-          url: "/lms",
-          circleColor: "bg-purple-600",
-        },
-        {
-          title: "NFT & Gaming",
-          url: "/nft",
-          circleColor: "bg-primary",
-        },
-        {
-          title: "Medical",
-          url: "/medical",
-          circleColor: "bg-yellow-500",
-        },
-        {
-          title: "Analytics",
-          url: "/analytics",
-          circleColor: "bg-cyan-500",
-        },
-        {
-          title: "POS & Inventory",
-          url: "/inventory",
-          circleColor: "bg-red-500",
-        },
-        {
-          title: "Finance & Banking",
-          url: "/finance",
-          circleColor: "bg-green-600",
-        },
-        {
-          title: "Booking System",
-          url: "/booking",
-          circleColor: "bg-purple-600",
-        },
-        {
-          title: "Help Desk",
-          url: "/help",
-          circleColor: "bg-primary",
-        },
       ],
     },
     {
@@ -115,35 +74,18 @@ const data = {
       icon: CalendarDays,
     },
     {
-      title: "Kanban",
-      url: "/kanban",
-      icon: Map,
+      label: "UI Elements",
     },
     {
-      title: "Invoice",
+      title: "Components",
       url: "#",
-      icon: FileText,
+      icon: Component,
       isActive: true,
       items: [
         {
-          title: "List",
-          url: "/invoice/list",
+          title: "Typography",
+          url: "/typography",
           circleColor: "bg-primary",
-        },
-        {
-          title: "Preview",
-          url: "/invoice/preview",
-          circleColor: "bg-yellow-500",
-        },
-        {
-          title: "Add New",
-          url: "/invoice/add",
-          circleColor: "bg-cyan-500",
-        },
-        {
-          title: "Edit",
-          url: "/invoice/edit",
-          circleColor: "bg-red-500",
         },
       ],
     },
