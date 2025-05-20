@@ -25,7 +25,7 @@ const ColorsPage = () => {
       const textToCopy = target.getAttribute("data-clipboard-text");
       if (textToCopy) {
         handleCopy(textToCopy);
-        toast.success(`${textToCopy} class name copied`);
+        toast.success(`${textToCopy} Class copied`);
       }
     }
   };
@@ -44,7 +44,7 @@ const ColorsPage = () => {
                 <div className="flex flex-wrap">
                   <div
                     onClick={handleBoxClick}
-                    className="color-box h-[190px] cursor-pointer max-w-[150px] w-full bg-white dark:bg-white relative p-7 grow border border-neutral-200 dark:border-neutral-600"
+                    className="color-box h-[190px] cursor-pointer max-w-[150px] w-full bg-white relative p-7 grow border border-neutral-200 dark:border-neutral-600"
                   >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-neutral-600 block">
@@ -52,7 +52,7 @@ const ColorsPage = () => {
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 block"
-                        data-clipboard-text="bg-white dark:bg-white"
+                        data-clipboard-text="bg-white"
                       >
                         #FFFFFF
                       </span>
