@@ -49,6 +49,7 @@ const RegisterForm = () => {
     router.push("/dashboard");
 
     setLoading(false);
+    setIsSubmitting(false);
   };
 
   return (

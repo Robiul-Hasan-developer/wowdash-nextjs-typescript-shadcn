@@ -47,6 +47,9 @@ const CreatePasswordComponent = () => {
     router.push("/auth/login");
 
     setLoading(false);
+    setTimeout(() => {
+      setIsSubmitting(false);
+    }, 1000);
   };
 
   return (

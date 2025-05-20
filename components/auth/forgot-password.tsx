@@ -42,6 +42,9 @@ const ForgotPasswordComponent = () => {
     router.push("/auth/create-password");
 
     setLoading(false);
+    setTimeout(() => {
+      setIsSubmitting(false);
+    }, 1000);
   };
 
   return (

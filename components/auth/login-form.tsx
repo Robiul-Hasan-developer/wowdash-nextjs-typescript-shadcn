@@ -58,6 +58,7 @@ const LoginForm = () => {
     }
 
     setLoading(false);
+    setIsSubmitting(false);
   };
 
   return (
