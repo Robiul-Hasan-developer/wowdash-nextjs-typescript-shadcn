@@ -1,14 +1,6 @@
 "use client";
 
 import * as React from "react";
-import {
-  House,
-  Mail,
-  MessageCircleMore,
-  CalendarDays,
-  ShieldCheck,
-  Component
-} from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
 import {
@@ -18,106 +10,7 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 import LogoSidebar from "./shared/logo-sidebar";
-
-// This is sample data.
-const data = {
-  navMain: [
-    {
-      title: "Dashboard",
-      url: "#",
-      icon: House,
-      isActive: true,
-      items: [
-        {
-          title: "AI",
-          url: "/dashboard",
-          circleColor: "bg-primary",
-        },
-        {
-          title: "CRM",
-          url: "/crm",
-          circleColor: "bg-yellow-500",
-        },
-        {
-          title: "eCommerce",
-          url: "/ecommerce",
-          circleColor: "bg-cyan-500",
-        },
-        {
-          title: "Cryptocurrency",
-          url: "/cryptocurrency",
-          circleColor: "bg-red-500",
-        },
-        {
-          title: "Investment",
-          url: "/investment",
-          circleColor: "bg-green-600",
-        },
-      ],
-    },
-    {
-      label: "Application",
-    },
-    {
-      title: "Email",
-      url: "/email",
-      icon: Mail,
-    },
-    {
-      title: "Chat",
-      url: "/chat",
-      icon: MessageCircleMore,
-    },
-    {
-      title: "Calendar",
-      url: "/calendar",
-      icon: CalendarDays,
-    },
-    {
-      label: "UI Elements",
-    },
-    {
-      title: "Components",
-      url: "#",
-      icon: Component,
-      isActive: true,
-      items: [
-        {
-          title: "Typography",
-          url: "/typography",
-          circleColor: "bg-primary",
-        },
-      ],
-    },
-
-    {
-      label: "Pages",
-    },
-    {
-      title: "Authentication",
-      url: "#",
-      icon: ShieldCheck,
-      isActive: true,
-      items: [
-        {
-          title: "Sign In",
-          url: "/auth/login",
-          circleColor: "bg-primary",
-        },
-        {
-          title: "Sign Up",
-          url: "/auth/register",
-          circleColor: "bg-yellow-500",
-        },
-        {
-          title: "Forgot Password",
-          url: "/auth/forgot-password",
-          circleColor: "bg-cyan-500",
-        },
-      ],
-    },
-  ],
-};
+import { data } from "./sidebar-data";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
