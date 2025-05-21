@@ -48,7 +48,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg px-5 py-[11px]"
+                "h-[46px] bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg px-5 py-[11px]"
               )}
             >
               Warning
@@ -126,7 +126,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-transparent border border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white rounded-lg px-5 py-[11px]"
+                "h-[46px] bg-transparent border border-yellow-500 text-yellow-600 hover:bg-yellow-500 hover:text-white rounded-lg px-5 py-[11px]"
               )}
             >
               Warning
@@ -204,7 +204,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-yellow-600 hover:bg-yellow-700 text-white rounded-full px-5 py-[11px]"
+                "h-[46px] bg-yellow-500 hover:bg-yellow-600 text-white rounded-full px-5 py-[11px]"
               )}
             >
               Warning
@@ -282,7 +282,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-transparent border border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white rounded-full px-5 py-[11px]"
+                "h-[46px] bg-transparent border border-yellow-500 text-yellow-600 hover:bg-yellow-500 hover:text-white rounded-full px-5 py-[11px]"
               )}
             >
               Warning
@@ -360,7 +360,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-yellow-100 dark:bg-yellow-600/25 dark:hover:bg-yellow-600 hover:bg-yellow-600 text-yellow-600 hover:text-white rounded-full px-5 py-[11px]"
+                "h-[46px] bg-yellow-100 dark:bg-yellow-500/25 dark:hover:bg-yellow-500 hover:bg-yellow-500 text-yellow-600 hover:text-white rounded-full px-5 py-[11px]"
               )}
             >
               Warning
@@ -518,7 +518,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-yellow-600 hover:bg-yellow-700 text-white w-[60px] h-[50px] flex items-center justify-center gap-2"
+                "h-[46px] bg-yellow-500 hover:bg-yellow-600 text-white w-[60px] h-[50px] flex items-center justify-center gap-2"
               )}
             >
               <ArrowUpSquare className="text-xl" />
@@ -574,7 +574,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-yellow-600 hover:bg-yellow-700 text-white rounded-full w-[60px] h-[50px] flex items-center justify-center gap-2"
+                "h-[46px] bg-yellow-500 hover:bg-yellow-600 text-white rounded-full w-[60px] h-[50px] flex items-center justify-center gap-2"
               )}
             >
               <ArrowUpSquare className="text-xl" />
@@ -590,62 +590,7 @@ const ButtonPage = () => {
           </div>
         </DefaultCardComponent>
 
-        <DefaultCardComponent title="Buttons Sizes">
-          <div className="flex flex-wrap items-center gap-3">
-            <Button
-              type="button"
-              className={cn(
-                "h-[46px] btn-blue-600 rounded-lg px-6 py-[14px]"
-              )}
-            >
-              {" "}
-              Large Button
-            </Button>
-            <Button
-              type="button"
-              className={cn(
-                "h-[46px] bg-green-600 hover:bg-green-700 text-white rounded-lg px-5 py-[10px]"
-              )}
-            >
-              Medium Button
-            </Button>
-            <Button
-              type="button"
-              className={cn(
-                "h-[46px] bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg px-3.5 py-2 text-sm"
-              )}
-            >
-              Small Button
-            </Button>
-          </div>
-          <div className="flex flex-wrap items-center gap-3 mt-4">
-            <Button
-              type="button"
-              className={cn(
-                "h-[46px] bg-blue-100 text-blue-600 hover:bg-blue-700 hover:text-white rounded-lg px-6 py-[14px]"
-              )}
-            >
-              {" "}
-              Large Button
-            </Button>
-            <Button
-              type="button"
-              className={cn(
-                "h-[46px] bg-green-100 text-green-600 hover:bg-green-700 hover:text-white rounded-lg px-5 py-[10px]"
-              )}
-            >
-              Medium Button
-            </Button>
-            <Button
-              type="button"
-              className={cn(
-                "h-[46px] bg-yellow-100 text-yellow-600 hover:bg-yellow-700 hover:text-white rounded-lg px-3.5 py-2 text-sm"
-              )}
-            >
-              Small Button
-            </Button>
-          </div>
-        </DefaultCardComponent>
+        <DefaultCardComponent title="Buttons Sizes">5        </DefaultCardComponent>
 
         <DefaultCardComponent title="Custom Button">
           <Button
