@@ -78,7 +78,12 @@ export const data = {
         {
           title: "Colors",
           url: "/colors",
-          circleColor: "bg-orange-600",
+          circleColor: "bg-yellow-600",
+        },
+        {
+          title: "Buttons",
+          url: "/buttons",
+          circleColor: "bg-green-600",
         },
       ],
     },
