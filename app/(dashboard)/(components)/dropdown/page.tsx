@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { ChevronDown, ChevronUp, ChevronRight, ChevronLeft, EllipsisVertical, Ellipsis } from 'lucide-react';
 
-const ButtonPage = () => {
+const DropdownPage = () => {
   return (
     <>
       <DashboardBreadcrumb title="Dropdown" text="Dropdown" />
@@ -430,7 +430,7 @@ const ButtonPage = () => {
             <div>
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center gap-2 text-neutral-600 text-xl d-flex items-center justify-center w-10 h-10 ring-4 ring-transparent focus:ring-primary-300 rounded-lg">
-                  <EllipsisVertical className="w-5 h-5" />
+                  <Ellipsis className="w-5 h-5" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent side="left" align="center" className="w-[176px]">
                   <DropdownMenuLabel>My Account</DropdownMenuLabel>
@@ -460,7 +460,7 @@ const ButtonPage = () => {
             <div>
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center gap-2 text-neutral-600 text-xl d-flex items-center justify-center w-10 h-10 ring-4 ring-transparent focus:ring-primary-300 rounded-lg">
-                  <EllipsisVertical className="w-5 h-5" />
+                  <Ellipsis className="w-5 h-5" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent side="right" align="center" className="w-[176px]">
                   <DropdownMenuLabel>My Account</DropdownMenuLabel>
@@ -533,4 +533,4 @@ const ButtonPage = () => {
     </>
   );
 };
-export default ButtonPage;
+export default DropdownPage;
