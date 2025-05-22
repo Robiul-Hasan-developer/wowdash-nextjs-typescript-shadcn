@@ -1,6 +1,12 @@
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import CardImg1 from "@/public/assets/images/card-component/card-img1.png";
+import CardImg2 from "@/public/assets/images/card-component/card-img2.png";
+import CardImg3 from "@/public/assets/images/card-component/card-img3.png";
+import CardImg4 from "@/public/assets/images/card-component/card-img4.png";
+
 
 const TypographyPage = () => {
   return (
@@ -9,65 +15,68 @@ const TypographyPage = () => {
 
       <div className="">
 
-
-
         <div className="mb-10">
           <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-6">
-            <div className="card h-full rounded-xl overflow-hidden border-0">
-              {/* <img src="assets/images/card-component/card-img1.png" className="card-img-top" alt=""> */}
-                <div className="card-body p-4">
-                  <h5 className="card-title text-lg text-neutral-600 dark:text-neutral-200
+            <div className="card h-full rounded-xl overflow-hidden !p-0 border-0">
+              <Image src={CardImg1} className="w-full" height={226} alt="Thumb" />
+              <div className="card-body p-4">
+                <h5 className="card-title text-lg text-neutral-600 dark:text-neutral-200
                         mb-1.5">This is Card title</h5>
-                  <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
-                  <a href="javascript:void(0)" className="btn text-primary-600 dark:text-primary-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
-                    {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
+                <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
+                <a href="javascript:void(0)" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                  Read More
+                  {/* <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon>  */}
+                </a>
+              </div>
+            </div>
+            <div className="card h-full rounded-xl overflow-hidden !p-0 border-0">
+              <Image src={CardImg2} className="w-full" height={226} alt="Thumb" />
+              <div className="card-body p-4 text-center">
+                <h5 className="card-title text-lg text-neutral-600 dark:text-neutral-200
+                        mb-1.5">This is Card title</h5>
+                <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
+                <a href="javascript:void(0)" className="btn btn-blue-600 px-3 py-2.5 inline-flex items-center gap-2">
+                  Read More
+                  {/* <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon>  */}
+                </a>
+              </div>
+            </div>
+            <div className="card h-full rounded-xl overflow-hidden !p-0 border-0">
+              <Image src={CardImg3} className="w-full" height={226} alt="Thumb" />
+              <div className="card-body p-4 text-end">
+                <h5 className="card-title text-lg text-neutral-600 dark:text-neutral-200
+                        mb-1.5">This is Card title</h5>
+                <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
+                <div className="flex flex-wrap items-center justify-end gap-3">
+                  <a href="javascript:void(0)" className="btn btn-blue-100 bg-blue-100 hover:bg-blue-600 dark:bg-blue-600/25 dark:hover:bg-blue-600 hover:text-white text-blue-600 dark:text-blue-500 px-3 py-2.5 inline-flex items-center gap-2">
+                    Read More
+                    {/* <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon>  */}
                   </a>
-                </div>
-            </div>
-            <div className="card h-full rounded-xl overflow-hidden border-0">
-              {/* <img src="assets/images/card-component/card-img2.png" className="card-img-top" alt=""> */}
-                <div className="card-body p-4 text-center">
-                  <h5 className="card-title text-lg text-neutral-600 dark:text-neutral-200
-                        mb-1.5">This is Card title</h5>
-                  <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
-                  <a href="javascript:void(0)" className="btn btn-primary-600 px-3 py-2.5 inline-flex items-center gap-2">
-                    {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
-                  </a>
-                </div>
-            </div>
-            <div className="card h-full rounded-xl overflow-hidden border-0">
-              {/* <img src="assets/images/card-component/card-img3.png" className="card-img-top" alt=""> */}
-                <div className="card-body p-4 text-end">
-                  <h5 className="card-title text-lg text-neutral-600 dark:text-neutral-200
-                        mb-1.5">This is Card title</h5>
-                  <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
-                  <div className="flex flex-wrap items-center justify-end gap-3">
-                    <a href="javascript:void(0)" className="btn btn-primary-100 bg-primary-100 hover:bg-primary-600 dark:bg-primary-600/25 dark:hover:bg-primary-600 hover:text-white text-primary-600 dark:text-primary-500 px-3 py-2.5 inline-flex items-center gap-2">
-                      {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
-                    </a>
-                    <button className="btn btn-warning-100 bg-warning-100 hover:bg-warning-600 dark:bg-warning-600/25 dark:hover:bg-warning-600 hover:text-white text-warning-600 dark:text-warning-500 px-3 py-2.5 inline-flex items-center gap-2">
-                      {/* Book Mark <iconify-icon icon="bx:bookmark-minus" className="text-xl"></iconify-icon> */}
-                    </button>
-                  </div>
-                </div>
-            </div>
-            <div className="card h-full rounded-xl overflow-hidden border-0">
-              {/* <img src="assets/images/card-component/card-img4.png" className="card-img-top" alt=""> */}
-                <div className="card-body p-4 text-center">
-                  <h5 className="card-title text-lg text-neutral-600 dark:text-neutral-200
-                        mb-1.5">This is Card title</h5>
-                  <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
-                  <button className="btn btn-primary-600 px-3 py-2.5 inline-flex items-center gap-2">
-                    {/* <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
+                  <button className="btn btn-warning-100 bg-warning-100 hover:bg-warning-600 dark:bg-warning-600/25 dark:hover:bg-warning-600 hover:text-white text-warning-600 dark:text-warning-500 px-3 py-2.5 inline-flex items-center gap-2">
+                    Book Mark
+                    {/* <iconify-icon icon="bx:bookmark-minus" className="text-xl"></iconify-icon>  */}
                   </button>
                 </div>
+              </div>
+            </div>
+            <div className="card h-full rounded-xl overflow-hidden !p-0 border-0">
+              <Image src={CardImg4} className="w-full" height={226} alt="Thumb" />
+              <div className="card-body p-4 text-center">
+                <h5 className="card-title text-lg text-neutral-600 dark:text-neutral-200
+                        mb-1.5">This is Card title</h5>
+                <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
+                <button className="btn btn-blue-600 px-3 py-2.5 inline-flex items-center gap-2">
+                  {/* <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon>  */}
+                </button>
+              </div>
             </div>
           </div>
         </div>
+
         <div className="mb-10">
           <h6 className="mb-6">Card Text &amp; icon </h6>
           <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-6">
-            <div className="card h-full rounded-xl overflow-hidden border-0">
+            <div className="card h-full rounded-xl overflow-hidden !p-0 border-0">
               <div className="card-body p-6">
                 <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-purple-200 dark:bg-purple-600/25 dark:text-purple-500 text-purple-600 mb-4 rounded-xl">
                   {/* <iconify-icon icon="solar:medal-ribbons-star-bold" className="h5 mb-0"></iconify-icon> */}
@@ -79,31 +88,31 @@ const TypographyPage = () => {
                 </a>
               </div>
             </div>
-            <div className="card h-full rounded-xl overflow-hidden border-0 text-center">
+            <div className="card h-full rounded-xl overflow-hidden !p-0 border-0 text-center">
               <div className="card-body p-6">
-                <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-primary-100 dark:bg-primary-600/25 dark:text-primary-500 text-primary-600 mb-4 rounded-xl">
+                <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-blue-100 dark:bg-blue-600/25 dark:text-blue-500 text-blue-600 mb-4 rounded-xl">
                   {/* <iconify-icon icon="ri:computer-fill" className="h5 mb-0"></iconify-icon> */}
                 </div>
                 <h6 className="mb-2">UI/UX Designer</h6>
                 <p className="card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
-                <a href="javascript:void(0)" className="btn text-primary-600 dark:text-primary-600 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                <a href="javascript:void(0)" className="btn text-blue-600 dark:text-blue-600 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
                 </a>
               </div>
             </div>
-            <div className="card h-full rounded-xl overflow-hidden border-0 text-end">
+            <div className="card h-full rounded-xl overflow-hidden !p-0 border-0 text-end">
               <div className="card-body p-6">
-                <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-success-100 dark:bg-success-600/25 dark:text-success-500 text-success-600 mb-4 rounded-xl">
+                <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-green-100 dark:bg-green-600/25 dark:text-green-500 text-green-600 mb-4 rounded-xl">
                   {/* <iconify-icon icon="fluent:toolbox-20-filled" className="h5 mb-0"></iconify-icon> */}
                 </div>
                 <h6 className="mb-2">Business Strategy</h6>
                 <p className="card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
-                <a href="javascript:void(0)" className="btn text-success-600 dark:text-success-600 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                <a href="javascript:void(0)" className="btn text-green-600 dark:text-green-600 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
                 </a>
               </div>
             </div>
-            <div className="card h-full rounded-xl overflow-hidden border-0 text-center">
+            <div className="card h-full rounded-xl overflow-hidden !p-0 border-0 text-center">
               <div className="card-body p-6">
                 <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-danger-100 dark:bg-danger-600/25 dark:text-danger-500 text-danger-600 mb-4 rounded-xl">
                   {/* <iconify-icon icon="ph:code-fill" className="h5 mb-0"></iconify-icon> */}
@@ -122,38 +131,38 @@ const TypographyPage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-6 xl:grid-cols-3 gap-6">
             <div className="card h-full rounded-xl p-0 border-0 overflow-hidden relative">
               <div className="card-body p-0 before:block before:absolute before:inset-0 before:bg-[linear-gradient(180deg,_rgba(0,_0,_0,_0)_0%,_rgba(0,_0,_0,_0.25)_22%,_rgba(0,_0,_0,_0.69)_57.92%,_rgba(0,_0,_0,_0.7)_100%)] bottom-0 start-0">
-                {/* <img src="assets/images/card-component/card-overlay-img1.png" alt="" className="w-full h-full"> */}
-                  <div className="absolute start-0 bottom-0 p-6 z-1">
-                    <h5 className="card-title text-white dark:text-neutral-200 text-lg mb-1.5">This is Card title</h5>
-                    <p className="card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
-                    <a href="javascript:void(0)" className="btn text-primary-600 hover-text-primary px-0 py-2.5 inline-flex items-center gap-2">
-                      {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
-                    </a>
-                  </div>
+                {/* <Image src="assets/images/card-component/card-overlay-img1.png" alt="Thumbnail" className="w-full h-full" /> */}
+                <div className="absolute start-0 bottom-0 p-6 z-1">
+                  <h5 className="card-title text-white dark:text-neutral-200 text-lg mb-1.5">This is Card title</h5>
+                  <p className="card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
+                  <a href="javascript:void(0)" className="btn text-blue-600 hover-text-blue px-0 py-2.5 inline-flex items-center gap-2">
+                    {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
+                  </a>
+                </div>
               </div>
             </div>
             <div className="card h-full rounded-xl p-0 border-0 overflow-hidden relative">
               <div className="card-body p-0 before:block before:absolute before:inset-0 before:bg-[linear-gradient(180deg,_rgba(0,_0,_0,_0)_0%,_rgba(0,_0,_0,_0.25)_22%,_rgba(0,_0,_0,_0.69)_57.92%,_rgba(0,_0,_0,_0.7)_100%)] top-0 start-0">
-                {/* <img src="assets/images/card-component/card-overlay-img1.png" alt="" className="w-full h-full"> */}
-                  <div className="absolute start-0 top-0 p-6 z-1 text-center">
-                    <h5 className="card-title text-white dark:text-neutral-200 text-lg mb-1.5">This is Card title</h5>
-                    <p className="card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
-                    <a href="javascript:void(0)" className="btn text-primary-600 hover-text-primary px-0 py-2.5 inline-flex items-center gap-2">
-                      {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
-                    </a>
-                  </div>
+                {/* <Image src="assets/images/card-component/card-overlay-img1.png" alt="Thumbnail" className="w-full h-full" /> */}
+                <div className="absolute start-0 top-0 p-6 z-1 text-center">
+                  <h5 className="card-title text-white dark:text-neutral-200 text-lg mb-1.5">This is Card title</h5>
+                  <p className="card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
+                  <a href="javascript:void(0)" className="btn text-blue-600 hover-text-blue px-0 py-2.5 inline-flex items-center gap-2">
+                    {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
+                  </a>
+                </div>
               </div>
             </div>
             <div className="card h-full rounded-xl p-0 border-0 overflow-hidden relative">
               <div className="card-body p-0 before:block before:absolute before:inset-0 before:bg-[linear-gradient(180deg,_rgba(0,_0,_0,_0)_0%,_rgba(0,_0,_0,_0.25)_22%,_rgba(0,_0,_0,_0.69)_57.92%,_rgba(0,_0,_0,_0.7)_100%)] bottom-0 start-0">
-                {/* <img src="assets/images/card-component/card-overlay-img1.png" alt="" className="w-full h-full"> */}
-                  <div className="absolute start-0 bottom-0 p-6 z-1 text-end">
-                    <h5 className="card-title text-white dark:text-neutral-200 text-lg mb-1.5">This is Card title</h5>
-                    <p className="card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
-                    <a href="javascript:void(0)" className="btn text-primary-600 hover-text-primary px-0 py-2.5 inline-flex items-center gap-2">
-                      {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
-                    </a>
-                  </div>
+                {/* <Image src="assets/images/card-component/card-overlay-img1.png" alt="Thumbnail" className="w-full h-full" /> */}
+                <div className="absolute start-0 bottom-0 p-6 z-1 text-end">
+                  <h5 className="card-title text-white dark:text-neutral-200 text-lg mb-1.5">This is Card title</h5>
+                  <p className="card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
+                  <a href="javascript:void(0)" className="btn text-blue-600 hover-text-blue px-0 py-2.5 inline-flex items-center gap-2">
+                    {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -174,7 +183,7 @@ const TypographyPage = () => {
                   the viewer's attention from the layout</p>
               </div>
               <div className="card-footer text-center bg-transparent border-t border-neutral-200 dark:border-neutral-600 pt-4 px-6">
-                <a href="javascript:void(0)" className="text-primary-600 dark:text-primary-600 hover:underline">View All</a>
+                <a href="javascript:void(0)" className="text-blue-600 dark:text-blue-600 hover:underline">View All</a>
               </div>
             </div>
             <div className="card rounded-xl h-full border-0 overflow-hidden">
@@ -185,7 +194,7 @@ const TypographyPage = () => {
                 </div>
                 <p className="card-text text-neutral-600 mb-4">Intrinsically incubate intuitive opportunities and real-time potentialities for change for interoperable meta-itself the viewer's attention from the layout</p>
                 <p className="card-text text-neutral-600 mb-0">Intrinsically incubate intuitive opportunities and real-time potentialities for change for interoperable </p>
-                <a href="javascript:void(0)" className="btn text-primary-600 dark:text-primary-600 hover:underline hover-text-primary px-0 py-0 inline-flex items-center gap-2 mt-4">
+                <a href="javascript:void(0)" className="btn text-blue-600 dark:text-blue-600 hover:underline hover-text-blue px-0 py-0 inline-flex items-center gap-2 mt-4">
                   {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
                 </a>
               </div>
@@ -196,7 +205,7 @@ const TypographyPage = () => {
                   <h6 className="text-lg mb-0">How can i help your</h6>
                   <span className="text-sm">Awesome Support</span>
                 </div>
-                <a href="javascript:void(0)" className="text-primary-600 dark:text-primary-600 hover:underline">View All</a>
+                <a href="javascript:void(0)" className="text-blue-600 dark:text-blue-600 hover:underline">View All</a>
               </div>
               <div className="card-body py-4 px-6">
                 <p className="card-text text-neutral-600 mb-4">Intrinsically incubate intuitive opportunities and real-time potentialities for change for interoperable meta-itself the viewer's attention from the layout</p>
@@ -210,48 +219,48 @@ const TypographyPage = () => {
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
             <div className="card rounded-xl overflow-hidden border-0 flex flex-nowrap sm:flex-row flex-col">
               <div className="flex shrink-0">
-                {/* <img src="assets/images/card-component/horizontal-card-img1.png" className="h-full w-full object-fit-cover" alt=""> */}
+                {/* <Image src="assets/images/card-component/horizontal-card-img1.png" className="h-full w-full object-fit-cover" alt="Thumbnail" /> */}
               </div>
               <div className="card-body p-4 grow">
                 <h5 className="card-title text-lg text-neutral-900 dark:text-neutral-200 mb-1.5">This is Card title</h5>
                 <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
-                <a href="javascript:void(0)" className="btn text-primary-600 hover-text-primary p-0 inline-flex items-center gap-2">
+                <a href="javascript:void(0)" className="btn text-blue-600 hover-text-blue p-0 inline-flex items-center gap-2">
                   {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
                 </a>
               </div>
             </div>
             <div className="card rounded-xl overflow-hidden border-0 flex flex-nowrap sm:flex-row-reverse flex-col">
               <div className="flex shrink-0">
-                {/* <img src="assets/images/card-component/horizontal-card-img2.png" className="h-full w-full object-fit-cover" alt=""> */}
+                {/* <Image src="assets/images/card-component/horizontal-card-img2.png" className="h-full w-full object-fit-cover" alt="Thumbnail" /> */}
               </div>
               <div className="card-body p-4 grow">
                 <h5 className="card-title text-lg text-neutral-900 dark:text-neutral-200 mb-1.5">This is Card title</h5>
                 <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
-                <a href="javascript:void(0)" className="btn text-primary-600 hover-text-primary p-0 inline-flex items-center gap-2">
+                <a href="javascript:void(0)" className="btn text-blue-600 hover-text-blue p-0 inline-flex items-center gap-2">
                   {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
                 </a>
               </div>
             </div>
             <div className="card rounded-xl overflow-hidden border-0 flex flex-nowrap sm:flex-row flex-col">
               <div className="flex shrink-0">
-                {/* <img src="assets/images/card-component/horizontal-card-img3.png" className="h-full w-full object-fit-cover" alt=""> */}
+                {/* <Image src="assets/images/card-component/horizontal-card-img3.png" className="h-full w-full object-fit-cover" alt="Thumbnail" /> */}
               </div>
               <div className="card-body p-4 grow">
                 <h5 className="card-title text-lg text-neutral-900 dark:text-neutral-200 mb-1.5">This is Card title</h5>
                 <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
-                <a href="javascript:void(0)" className="btn text-primary-600 hover-text-primary p-0 inline-flex items-center gap-2">
+                <a href="javascript:void(0)" className="btn text-blue-600 hover-text-blue p-0 inline-flex items-center gap-2">
                   {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
                 </a>
               </div>
             </div>
             <div className="card rounded-xl overflow-hidden border-0 h-full flex items-center sm:flex-row-reverse flex-col">
               <div className="flex shrink-0 w-170-px h-full">
-                {/* <img src="assets/images/card-component/horizontal-card-img4.png" className="h-full w-full object-fit-cover" alt=""> */}
+                {/* <Image src="assets/images/card-component/horizontal-card-img4.png" className="h-full w-full object-fit-cover" alt="Thumbnail" /> */}
               </div>
               <div className="card-body p-4 grow">
                 <h5 className="card-title text-lg text-neutral-900 dark:text-neutral-200 mb-1.5">This is Card title</h5>
                 <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
-                <a href="javascript:void(0)" className="btn text-primary-600 hover-text-primary p-0 inline-flex items-center gap-2">
+                <a href="javascript:void(0)" className="btn text-blue-600 hover-text-blue p-0 inline-flex items-center gap-2">
                   {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
                 </a>
               </div>
@@ -273,26 +282,26 @@ const TypographyPage = () => {
                 </a>
               </div>
             </div>
-            <div className="card h-full rounded-xl border-0 overflow-hidden bg-primary-100 dark:bg-primary-600/25 text-center">
+            <div className="card h-full rounded-xl border-0 overflow-hidden bg-blue-100 dark:bg-blue-600/25 text-center">
               <div className="card-body p-6">
-                <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-primary-600 text-white mb-4 rounded-xl">
+                <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-blue-600 text-white mb-4 rounded-xl">
                   {/* <iconify-icon icon="ri:computer-fill" className="h5 mb-0"></iconify-icon> */}
                 </div>
                 <h6 className="mb-2">UI/UX Designer</h6>
                 <p className="card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
-                <a href="javascript:void(0)" className="btn text-primary-600 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                <a href="javascript:void(0)" className="btn text-blue-600 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
                 </a>
               </div>
             </div>
-            <div className="card h-full rounded-xl border-0 overflow-hidden bg-success-100 dark:bg-success-600/25 text-end">
+            <div className="card h-full rounded-xl border-0 overflow-hidden bg-green-100 dark:bg-green-600/25 text-end">
               <div className="card-body p-6">
-                <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-success-600 text-white mb-4 rounded-xl">
+                <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-green-600 text-white mb-4 rounded-xl">
                   {/* <iconify-icon icon="fluent:toolbox-20-filled" className="h5 mb-0"></iconify-icon> */}
                 </div>
                 <h6 className="mb-2">Business Strategy</h6>
                 <p className="card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
-                <a href="javascript:void(0)" className="btn text-success-600 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                <a href="javascript:void(0)" className="btn text-green-600 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
                 </a>
               </div>
