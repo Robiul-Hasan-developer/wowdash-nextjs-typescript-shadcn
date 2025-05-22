@@ -1,13 +1,12 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import TransactionImg1 from "@/public/assets/images/payment/payment1.png";
 import TransactionImg2 from "@/public/assets/images/payment/payment2.png";
 import TransactionImg3 from "@/public/assets/images/payment/payment3.png";
 import TransactionImg4 from "@/public/assets/images/payment/payment4.png";
-import { StaticImg } from "@/types/static-image";
 
 interface Transaction {
   id: number;
@@ -15,7 +14,7 @@ interface Transaction {
   description: string;
   amount: string;
   amountType: "credit" | "debit";
-  image: StaticImg;
+  image: StaticImageData;
 }
 
 const transactions: Transaction[] = [

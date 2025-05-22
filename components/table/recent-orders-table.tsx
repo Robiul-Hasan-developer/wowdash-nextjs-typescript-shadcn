@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import {
   Table,
   TableBody,
@@ -17,10 +17,9 @@ import UserImage3 from "@/public/assets/images/users/user3.png";
 import UserImage4 from "@/public/assets/images/users/user4.png";
 import UserImage5 from "@/public/assets/images/users/user5.png";
 import { Badge } from "../ui/badge";
-import { StaticImg } from "@/types/static-image";
 
 interface Order {
-  userImage: StaticImg;
+  userImage: StaticImageData;
   userName: string;
   invoice: string;
   item: string;
@@ -28,14 +27,14 @@ interface Order {
   amount: string;
   status: "Paid" | "Pending" | "Shipped" | "Canceled";
   statusVariant:
-    | "default"
-    | "secondary"
-    | "destructive"
-    | "outline"
-    | "success"
-    | "warning"
-    | "info"
-    | "danger";
+  | "default"
+  | "secondary"
+  | "destructive"
+  | "outline"
+  | "success"
+  | "warning"
+  | "info"
+  | "danger";
 }
 
 const orders: Order[] = [
@@ -124,9 +123,8 @@ const RecentOrdersTable = () => {
           return (
             <TableRow key={index}>
               <TableCell
-                className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base first:border-s last:border-e ${
-                  isLastRow ? "rounded-bl-lg" : ""
-                }`}
+                className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base first:border-s last:border-e ${isLastRow ? "rounded-bl-lg" : ""
+                  }`}
               >
                 <div className="flex items-center">
                   <Image
@@ -143,41 +141,36 @@ const RecentOrdersTable = () => {
               </TableCell>
 
               <TableCell
-                className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base first:border-s last:border-e ${
-                  isLastRow ? "rounded-bl-lg" : ""
-                }`}
+                className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base first:border-s last:border-e ${isLastRow ? "rounded-bl-lg" : ""
+                  }`}
               >
                 {order.invoice}
               </TableCell>
 
               <TableCell
-                className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base text-center first:border-s last:border-e ${
-                  isLastRow ? "rounded-bl-lg" : ""
-                }`}
+                className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base text-center first:border-s last:border-e ${isLastRow ? "rounded-bl-lg" : ""
+                  }`}
               >
                 {order.item}
               </TableCell>
 
               <TableCell
-                className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base text-center first:border-s last:border-e ${
-                  isLastRow ? "rounded-bl-lg" : ""
-                }`}
+                className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base text-center first:border-s last:border-e ${isLastRow ? "rounded-bl-lg" : ""
+                  }`}
               >
                 {order.qty}
               </TableCell>
 
               <TableCell
-                className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base text-center first:border-s last:border-e ${
-                  isLastRow ? "rounded-bl-lg" : ""
-                }`}
+                className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base text-center first:border-s last:border-e ${isLastRow ? "rounded-bl-lg" : ""
+                  }`}
               >
                 {order.amount}
               </TableCell>
 
               <TableCell
-                className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base first:border-s last:border-e ${
-                  isLastRow ? "rounded-br-lg" : ""
-                } text-center`}
+                className={`py-3.5 px-4 border-b border-neutral-200 dark:border-slate-600 text-base first:border-s last:border-e ${isLastRow ? "rounded-br-lg" : ""
+                  } text-center`}
               >
                 <Badge
                   variant={order.statusVariant}

@@ -95,6 +95,11 @@ export const data = {
           url: "/alert",
           circleColor: "bg-yellow-600",
         },
+        {
+          title: "Card",
+          url: "/card",
+          circleColor: "bg-red-600",
+        },
       ],
     },
 

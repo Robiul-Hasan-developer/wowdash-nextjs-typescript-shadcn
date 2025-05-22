@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import PerformerImg1 from "@/public/assets/images/users/user2.png";
 import PerformerImg2 from "@/public/assets/images/users/user1.png";
@@ -7,12 +7,11 @@ import PerformerImg3 from "@/public/assets/images/users/user3.png";
 import PerformerImg4 from "@/public/assets/images/users/user4.png";
 import PerformerImg5 from "@/public/assets/images/users/user5.png";
 import PerformerImg6 from "@/public/assets/images/users/user6.png";
-import { StaticImg } from "@/types/static-image";
 
 export interface TopPerformer {
   id: number;
   name: string;
-  image: StaticImg;
+  image: StaticImageData;
   phone: string;
   order: string;
 }

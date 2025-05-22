@@ -6,11 +6,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import CardBG from "@/public/assets/images/card/card-bg.png";
 import Logo from "@/public/assets/images/card/card-logo.png";
 import { cn } from "@/lib/utils";
-import { StaticImg } from "@/types/static-image";
 
 interface CreditCardType {
   id: number;
@@ -18,8 +17,8 @@ interface CreditCardType {
   number: string;
   name: string;
   expiry: string;
-  cardBg: StaticImg;
-  cardLogo: StaticImg;
+  cardBg: StaticImageData;
+  cardLogo: StaticImageData;
 }
 
 export const creditCardData: CreditCardType[] = [
