@@ -85,6 +85,11 @@ export const data = {
           url: "/buttons",
           circleColor: "bg-green-600",
         },
+        {
+          title: "Dropdown",
+          url: "/dropdown",
+          circleColor: "bg-purple-600",
+        },
       ],
     },
 
