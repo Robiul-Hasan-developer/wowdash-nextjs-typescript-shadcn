@@ -4,7 +4,11 @@ import Image from "next/image";
 
 import Avatar1 from "@/public/assets/images/avatar/avatar1.png";
 import Avatar2 from "@/public/assets/images/avatar/avatar2.png";
+import AvatarShape1 from "@/public/assets/images/avatar/avatar-shape1.png";
+import AvatarShape2 from "@/public/assets/images/avatar/avatar-shape2.png";
+import AvatarShape3 from "@/public/assets/images/avatar/avatar-shape3.png";
 
+import StatusAvatar from "@/public/assets/images/avatar/status-avatar.png";
 
 
 const TypographyPage = () => {
@@ -74,9 +78,9 @@ const TypographyPage = () => {
             </div>
             <div className="card-body p-6">
               <div className="flex items-center flex-wrap justify-between gap-3">
-                {/* <Image src="assets/images/avatar/avatar-shape1.png" alt="" className="w-[120px] h-[120px] rounded-lg object-fit-cover" /> */}
-                {/* <Image src="assets/images/avatar/avatar-shape2.png" alt="" className="w-[120px] h-[120px] rounded-full object-fit-cover" /> */}
-                {/* <Image src="assets/images/avatar/avatar-shape3.png" alt="" className="w-auto h-[120px]  object-fit-cover" /> */}
+                <Image src={AvatarShape1} alt="Shape" className="w-[120px] h-[120px] rounded-lg object-fit-cover" />
+                <Image src={AvatarShape2} alt="Shape" className="w-[120px] h-[120px] rounded-full object-fit-cover" />
+                <Image src={AvatarShape3} alt="Shape" className="w-auto h-[120px]  object-fit-cover" />
               </div>
             </div>
           </div>
@@ -89,19 +93,19 @@ const TypographyPage = () => {
             <div className="card-body p-6">
               <div className="flex items-center flex-wrap gap-3">
                 <div className="relative">
-                  {/* <Image src="assets/images/avatar/status-avatar.png" className="w-6 h-6 rounded-full object-fit-cover" alt="Avatar" /> */}
+                  <Image src={StatusAvatar} className="w-6 h-6 rounded-full object-fit-cover" alt="Avatar" />
                   <span className="w-2 h-2 bg-blue-600 border br-white rounded-full absolute end-0 bottom-[3px]"></span>
                 </div>
                 <div className="relative">
-                  {/* <Image src="assets/images/avatar/status-avatar.png" className="w-8 h-8 rounded-full object-fit-cover" alt="Avatar" /> */}
+                  <Image src={StatusAvatar} className="w-8 h-8 rounded-full object-fit-cover" alt="Avatar" />
                   <span className="w-2 h-2 bg-blue-600 border br-white rounded-full absolute end-0 bottom-[3px]"></span>
                 </div>
                 <div className="relative">
-                  {/* <Image src="assets/images/avatar/status-avatar.png" className="w-10 h-10 rounded-full object-fit-cover" alt="Avatar" /> */}
+                  <Image src={StatusAvatar} className="w-10 h-10 rounded-full object-fit-cover" alt="Avatar" />
                   <span className="w-2 h-2 bg-blue-600 border br-white rounded-full absolute end-0 bottom-[3px]"></span>
                 </div>
                 <div className="relative">
-                  {/* <Image src="assets/images/avatar/status-avatar.png" className="w-[44px] h-[44px] rounded-full object-fit-cover" alt="Avatar" /> */}
+                  <Image src={StatusAvatar} className="w-[44px] h-[44px] rounded-full object-fit-cover" alt="Avatar" />
                   <span className="w-2 h-2 bg-blue-600 border br-white rounded-full absolute end-0 bottom-[3px]"></span>
                 </div>
               </div>
