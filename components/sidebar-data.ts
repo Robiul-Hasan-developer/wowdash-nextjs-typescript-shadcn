@@ -110,6 +110,11 @@ export const data = {
           url: "/progress-bar",
           circleColor: "bg-blue-600",
         },
+        {
+          title: "Tab & Accordion",
+          url: "/tab-accordion",
+          circleColor: "bg-yellow-600",
+        },
       ],
     },
 
