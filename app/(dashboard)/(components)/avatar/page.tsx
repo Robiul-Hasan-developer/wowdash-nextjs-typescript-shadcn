@@ -2,6 +2,11 @@ import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import Image from "next/image";
 
+import Avatar1 from "@/public/assets/images/avatar/avatar1.png";
+import Avatar2 from "@/public/assets/images/avatar/avatar2.png";
+
+
+
 const TypographyPage = () => {
   return (
     <>
@@ -15,24 +20,24 @@ const TypographyPage = () => {
             </div>
             <div className="card-body p-6">
               <div className="flex items-center flex-wrap gap-3">
-                {/* <Image src="assets/images/avatar/avatar1.png" className="w-6 h-6 rounded-full object-fit-cover" alt="Avatar" /> */}
-                {/* <Image src="assets/images/avatar/avatar1.png" className="w-8 h-8 rounded-full object-fit-cover" alt="Avatar" /> */}
-                {/* <Image src="assets/images/avatar/avatar1.png" className="w-10 h-10 rounded-full object-fit-cover" alt="Avatar" /> */}
-                {/* <Image src="assets/images/avatar/avatar1.png" className="w-[44px] h-[44px] rounded-full object-fit-cover" alt="Avatar" /> */}
-                {/* <Image src="assets/images/avatar/avatar1.png" className="w-[56px] h-[56px] rounded-full object-fit-cover" alt="Avatar" /> */}
-                {/* <Image src="assets/images/avatar/avatar1.png" className="w-[64px] h-[64px] rounded-full object-fit-cover" alt="Avatar" /> */}
-                {/* <Image src="assets/images/avatar/avatar1.png" className="w-[72px] h-[72px] rounded-full object-fit-cover" alt="Avatar" /> */}
-                {/* <Image src="assets/images/avatar/avatar1.png" className="w-[80px] h-[80px] rounded-full object-fit-cover" alt="Avatar" /> */}
+                <Image src={Avatar1} width={24} height={24} className="rounded-full object-fit-cover" alt="Avatar" />
+                <Image src={Avatar1} width={32} height={32} className="rounded-full object-fit-cover" alt="Avatar" />
+                <Image src={Avatar1} width={40} height={40} className="rounded-full object-fit-cover" alt="Avatar" />
+                <Image src={Avatar1} width={44} height={44} className="rounded-full object-fit-cover" alt="Avatar" />
+                <Image src={Avatar1} width={56} height={56} className="rounded-full object-fit-cover" alt="Avatar" />
+                <Image src={Avatar1} width={64} height={64} className="rounded-full object-fit-cover" alt="Avatar" />
+                <Image src={Avatar1} width={72} height={72} className="rounded-full object-fit-cover" alt="Avatar" />
+                <Image src={Avatar1} width={80} height={80} className="rounded-full object-fit-cover" alt="Avatar" />
               </div>
               <div className="flex items-center flex-wrap gap-3 mt-6">
-                {/* <Image src="assets/images/avatar/avatar2.png" className="w-6 h-6 rounded-lg object-fit-cover" alt="Avatar" /> */}
-                {/* <Image src="assets/images/avatar/avatar2.png" className="w-8 h-8 rounded-lg object-fit-cover" alt="Avatar" /> */}
-                {/* <Image src="assets/images/avatar/avatar2.png" className="w-10 h-10 rounded-lg object-fit-cover" alt="Avatar" /> */}
-                {/* <Image src="assets/images/avatar/avatar2.png" className="w-[44px] h-[44px] rounded-lg object-fit-cover" alt="Avatar" /> */}
-                {/* <Image src="assets/images/avatar/avatar2.png" className="w-[56px] h-[56px] rounded-lg object-fit-cover" alt="Avatar" /> */}
-                {/* <Image src="assets/images/avatar/avatar2.png" className="w-[64px] h-[64px] rounded-lg object-fit-cover" alt="Avatar" /> */}
-                {/* <Image src="assets/images/avatar/avatar2.png" className="w-[72px] h-[72px] rounded-lg object-fit-cover" alt="Avatar" /> */}
-                {/* <Image src="assets/images/avatar/avatar2.png" className="w-[80px] h-[80px] rounded-lg object-fit-cover" alt="Avatar" /> */}
+                <Image src={Avatar2} width={24} height={24} className="rounded-lg object-fit-cover" alt="Avatar" />
+                <Image src={Avatar2} width={32} height={32} className="rounded-lg object-fit-cover" alt="Avatar" />
+                <Image src={Avatar2} width={40} height={40} className="rounded-lg object-fit-cover" alt="Avatar" />
+                <Image src={Avatar2} width={44} height={44} className="rounded-lg object-fit-cover" alt="Avatar" />
+                <Image src={Avatar2} width={56} height={56} className="rounded-lg object-fit-cover" alt="Avatar" />
+                <Image src={Avatar2} width={64} height={64} className="rounded-lg object-fit-cover" alt="Avatar" />
+                <Image src={Avatar2} width={72} height={72} className="rounded-lg object-fit-cover" alt="Avatar" />
+                <Image src={Avatar2} width={80} height={80} className="rounded-lg object-fit-cover" alt="Avatar" />
               </div>
             </div>
           </div>
