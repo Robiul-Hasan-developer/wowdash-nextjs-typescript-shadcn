@@ -332,5 +332,8 @@
   .active-gradient [data-state="active"] {
     background: linear-gradient(#487fff30 0%, #487fff11 100%);
   }
+  [data-slot="dropdown-menu-trigger"] {
+    @apply cursor-pointer;
+  }
 }
 /* ======================================== Custom Classes css End ======================================== */

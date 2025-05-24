@@ -414,7 +414,7 @@ const DropdownPage = () => {
           <div className="flex flex-wrap items-center gap-3 justify-between">
             <div>
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-2 text-neutral-600 text-xl d-flex items-center justify-center w-10 h-10 ring-4 ring-transparent focus:ring-primary-300 rounded-lg">
+                <DropdownMenuTrigger className="flex items-center gap-2 text-neutral-600 dark:text-white text-xl d-flex items-center justify-center w-10 h-10 ring-4 ring-transparent focus:ring-primary-300 rounded-lg">
                   <EllipsisVertical className="w-5 h-5" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent side="top" align="center" className="w-[176px]">
@@ -429,7 +429,7 @@ const DropdownPage = () => {
             </div>
             <div>
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-2 text-neutral-600 text-xl d-flex items-center justify-center w-10 h-10 ring-4 ring-transparent focus:ring-primary-300 rounded-lg">
+                <DropdownMenuTrigger className="flex items-center gap-2 text-neutral-600 dark:text-white text-xl d-flex items-center justify-center w-10 h-10 ring-4 ring-transparent focus:ring-primary-300 rounded-lg">
                   <Ellipsis className="w-5 h-5" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent side="left" align="center" className="w-[176px]">
@@ -444,7 +444,7 @@ const DropdownPage = () => {
             </div>
             <div>
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-2 text-neutral-600 text-xl d-flex items-center justify-center w-10 h-10 ring-4 ring-transparent focus:ring-primary-300 rounded-lg">
+                <DropdownMenuTrigger className="flex items-center gap-2 text-neutral-600 dark:text-white text-xl d-flex items-center justify-center w-10 h-10 ring-4 ring-transparent focus:ring-primary-300 rounded-lg">
                   <EllipsisVertical className="w-5 h-5" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent side="bottom" align="center" className="w-[176px]">
@@ -459,7 +459,7 @@ const DropdownPage = () => {
             </div>
             <div>
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-2 text-neutral-600 text-xl d-flex items-center justify-center w-10 h-10 ring-4 ring-transparent focus:ring-primary-300 rounded-lg">
+                <DropdownMenuTrigger className="flex items-center gap-2 text-neutral-600 dark:text-white text-xl d-flex items-center justify-center w-10 h-10 ring-4 ring-transparent focus:ring-primary-300 rounded-lg">
                   <Ellipsis className="w-5 h-5" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent side="right" align="center" className="w-[176px]">

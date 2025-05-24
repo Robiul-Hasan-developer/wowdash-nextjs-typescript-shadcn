@@ -100,6 +100,11 @@ export const data = {
           url: "/card",
           circleColor: "bg-red-600",
         },
+        {
+          title: "Avatar",
+          url: "/avatar",
+          circleColor: "bg-green-600",
+        },
       ],
     },
 
