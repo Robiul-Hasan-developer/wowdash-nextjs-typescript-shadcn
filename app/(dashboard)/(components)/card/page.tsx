@@ -29,7 +29,7 @@ const TypographyPage = () => {
               <div className="card-body p-4">
                 <h5 className="card-title text-lg text-neutral-600 dark:text-neutral-200
                         mb-1.5">This is Card title</h5>
-                <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
+                <p className="dark:text-white card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
                 <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
@@ -41,7 +41,7 @@ const TypographyPage = () => {
               <div className="card-body p-4 text-center">
                 <h5 className="card-title text-lg text-neutral-600 dark:text-neutral-200
                         mb-1.5">This is Card title</h5>
-                <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
+                <p className="dark:text-white card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
                 <Button
                   type="button"
                   className={cn(
@@ -58,7 +58,7 @@ const TypographyPage = () => {
               <div className="card-body p-4 text-end">
                 <h5 className="card-title text-lg text-neutral-600 dark:text-neutral-200
                         mb-1.5">This is Card title</h5>
-                <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
+                <p className="dark:text-white card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
                 <div className="flex flex-wrap items-center justify-end gap-3">
                   <Button
                     type="button"
@@ -86,7 +86,7 @@ const TypographyPage = () => {
               <div className="card-body p-4 text-center">
                 <h5 className="card-title text-lg text-neutral-600 dark:text-neutral-200
                         mb-1.5">This is Card title</h5>
-                <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
+                <p className="dark:text-white card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
                 <Button
                   type="button"
                   className={cn(
@@ -109,7 +109,7 @@ const TypographyPage = () => {
                   <Medal className="h-8 w-8 mb-0" />
                 </div>
                 <h6 className="mb-2">Brand Identity</h6>
-                <p className="card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
+                <p className="dark:text-white card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
                 <Link href="#" className="btn text-purple-600 dark:text-purple-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
@@ -122,7 +122,7 @@ const TypographyPage = () => {
                   <Monitor className="h-8 w-8 mb-0" />
                 </div>
                 <h6 className="mb-2">UI/UX Designer</h6>
-                <p className="card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
+                <p className="dark:text-white card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
                 <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
@@ -135,7 +135,7 @@ const TypographyPage = () => {
                   <BriefcaseBusiness className="h-8 w-8 mb-0" />
                 </div>
                 <h6 className="mb-2">Business Strategy</h6>
-                <p className="card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
+                <p className="dark:text-white card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
                 <Link href="#" className="btn text-green-600 dark:text-green-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
@@ -148,7 +148,7 @@ const TypographyPage = () => {
                   <Code className="h-8 w-8 mb-0" />
                 </div>
                 <h6 className="mb-2">Business Strategy</h6>
-                <p className="card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
+                <p className="dark:text-white card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
                 <Link href="#" className="btn text-red-600 dark:text-red-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
@@ -166,7 +166,7 @@ const TypographyPage = () => {
                 <Image src={CardOverlayImg1} alt="Thumbnail" fill className="object-cover" />
                 <div className="absolute start-0 bottom-0 p-6 z-1">
                   <h5 className="card-title text-white dark:text-neutral-200 text-lg mb-1.5">This is Card title</h5>
-                  <p className="card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
+                  <p className="dark:text-white card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
                   <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                     Read More
                     <ChevronRight className="w-4 h-4" />
@@ -179,7 +179,7 @@ const TypographyPage = () => {
                 <Image src={CardOverlayImg1} alt="Thumbnail" fill className="object-cover" />
                 <div className="absolute start-0 top-0 p-6 z-1 text-center">
                   <h5 className="card-title text-white dark:text-neutral-200 text-lg mb-1.5">This is Card title</h5>
-                  <p className="card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
+                  <p className="dark:text-white card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
                   <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                     Read More
                     <ChevronRight className="w-4 h-4" />
@@ -192,7 +192,7 @@ const TypographyPage = () => {
                 <Image src={CardOverlayImg1} alt="Thumbnail" fill className="object-cover" />
                 <div className="absolute start-0 bottom-0 p-6 z-1 text-end">
                   <h5 className="card-title text-white dark:text-neutral-200 text-lg mb-1.5">This is Card title</h5>
-                  <p className="card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
+                  <p className="dark:text-white card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
                   <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                     Read More
                     <ChevronRight className="w-4 h-4" />
@@ -207,7 +207,7 @@ const TypographyPage = () => {
           <h6 className="mb-6">Card Header &amp; Footer</h6>
           <div className="grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-3 gap-6">
             <div className="card rounded-xl h-full border-0 !p-0 overflow-hidden">
-              <div className="card-header py-4 px-6 bg-white dark:bg-neutral-700 flex items-center gap-1 justify-between border-b">
+              <div className="card-header py-4 px-6 bg-transparent flex items-center gap-1 justify-between border-b">
                 <h6 className="text-lg mb-0">Hi, Will Mart</h6>
                 <Button variant="link" className="!p-0">
                   <X className="!w-6 !h-6" />
@@ -215,7 +215,7 @@ const TypographyPage = () => {
               </div>
               <div className="card-body py-4 px-6">
                 <h6 className="card-title text-neutral-600 dark:text-neutral-200 mb-2 text-lg">How to learn UI /UX Design</h6>
-                <p className="card-text text-neutral-600 mb-0">Intrinsically incubate intuitive opportunities and real-time potentialities for change for interoperable meta-itself
+                <p className="dark:text-white card-text text-neutral-600 mb-0">Intrinsically incubate intuitive opportunities and real-time potentialities for change for interoperable meta-itself
                   the viewer's attention from the layout</p>
               </div>
               <div className="card-footer text-center bg-transparent border-t border-neutral-200 dark:border-neutral-600 pt-4 px-6">
@@ -231,8 +231,8 @@ const TypographyPage = () => {
                   <UserPlus className="w-6" />
                   <h6 className="text-lg mb-0">How to learn UI /UX Design</h6>
                 </div>
-                <p className="card-text text-neutral-600 mb-4">Intrinsically incubate intuitive opportunities and real-time potentialities for change for interoperable meta-itself the viewer's attention from the layout</p>
-                <p className="card-text text-neutral-600 mb-0">Intrinsically incubate intuitive opportunities and real-time potentialities for change for interoperable </p>
+                <p className="dark:text-white card-text text-neutral-600 mb-4">Intrinsically incubate intuitive opportunities and real-time potentialities for change for interoperable meta-itself the viewer's attention from the layout</p>
+                <p className="dark:text-white card-text text-neutral-600 mb-0">Intrinsically incubate intuitive opportunities and real-time potentialities for change for interoperable </p>
                 <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   View All
                   <ChevronRight className="w-4 h-4" />
@@ -240,7 +240,7 @@ const TypographyPage = () => {
               </div>
             </div>
             <div className="card rounded-xl h-full border-0 !p-0 overflow-hidden">
-              <div className="card-header py-4 px-6 bg-white dark:bg-neutral-700 flex items-center gap-1 justify-between border-b">
+              <div className="card-header py-4 px-6 bg-transparent flex items-center gap-1 justify-between border-b">
                 <div>
                   <h6 className="text-lg mb-0">How can I help your</h6>
                   <span className="text-sm">Awesome Support</span>
@@ -248,8 +248,8 @@ const TypographyPage = () => {
                 <a href="#" className="text-blue-600 dark:text-blue-600 hover:underline">View All</a>
               </div>
               <div className="card-body py-4 px-6">
-                <p className="card-text text-neutral-600 mb-4">Intrinsically incubate intuitive opportunities and real-time potentialities for change for interoperable meta-itself the viewer's attention from the layout</p>
-                <p className="card-text text-neutral-600 mb-0">Intrinsically incubate intuitive opportunities and real-time potentialities for change for interoperable </p>
+                <p className="dark:text-white card-text text-neutral-600 mb-4">Intrinsically incubate intuitive opportunities and real-time potentialities for change for interoperable meta-itself the viewer's attention from the layout</p>
+                <p className="dark:text-white card-text text-neutral-600 mb-0">Intrinsically incubate intuitive opportunities and real-time potentialities for change for interoperable </p>
               </div>
             </div>
           </div>
@@ -264,7 +264,7 @@ const TypographyPage = () => {
               </div>
               <div className="card-body p-4 grow">
                 <h5 className="card-title text-lg text-neutral-900 dark:text-neutral-200 mb-1.5">This is Card title</h5>
-                <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
+                <p className="dark:text-white card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
                 <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
@@ -277,7 +277,7 @@ const TypographyPage = () => {
               </div>
               <div className="card-body p-4 grow">
                 <h5 className="card-title text-lg text-neutral-900 dark:text-neutral-200 mb-1.5">This is Card title</h5>
-                <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
+                <p className="dark:text-white card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
                 <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
@@ -290,7 +290,7 @@ const TypographyPage = () => {
               </div>
               <div className="card-body p-4 grow">
                 <h5 className="card-title text-lg text-neutral-900 dark:text-neutral-200 mb-1.5">This is Card title</h5>
-                <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
+                <p className="dark:text-white card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
                 <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
@@ -303,7 +303,7 @@ const TypographyPage = () => {
               </div>
               <div className="card-body p-4 grow">
                 <h5 className="card-title text-lg text-neutral-900 dark:text-neutral-200 mb-1.5">This is Card title</h5>
-                <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
+                <p className="dark:text-white card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
                 <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
@@ -316,52 +316,52 @@ const TypographyPage = () => {
         <div className="">
           <h6 className="mb-6">Card With Background Color</h6>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-            <div className="card h-full rounded-xl border-0 overflow-hidden !p-0 !bg-purple-100 dark:bg-purple-600/25">
+            <div className="card h-full rounded-xl border-0 overflow-hidden !p-0 !bg-purple-600/10">
               <div className="card-body p-6">
                 <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-purple-600 text-white mb-4 rounded-xl">
                   <Medal className="h-8 w-8 mb-0" />
                 </div>
                 <h6 className="mb-2">Brand Identity</h6>
-                <p className="card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
+                <p className="dark:text-white card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
                 <Link href="#" className="btn text-purple-600 dark:text-purple-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
-            <div className="card h-full rounded-xl border-0 overflow-hidden !p-0 !bg-blue-100 dark:bg-blue-600/25 text-center">
+            <div className="card h-full rounded-xl border-0 overflow-hidden !p-0 !bg-blue-600/10 text-center">
               <div className="card-body p-6">
                 <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-blue-600 text-white mb-4 rounded-xl">
                   <Monitor className="h-8 w-8 mb-0" />
                 </div>
                 <h6 className="mb-2">UI/UX Designer</h6>
-                <p className="card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
+                <p className="dark:text-white card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
                 <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
-            <div className="card h-full rounded-xl border-0 overflow-hidden !p-0 !bg-green-100 dark:bg-green-600/25 text-end">
+            <div className="card h-full rounded-xl border-0 overflow-hidden !p-0 !bg-green-600/10 text-end">
               <div className="card-body p-6">
                 <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-green-600 text-white mb-4 rounded-xl">
                   <BriefcaseBusiness className="h-8 w-8 mb-0" />
                 </div>
                 <h6 className="mb-2">Business Strategy</h6>
-                <p className="card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
+                <p className="dark:text-white card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
                 <Link href="#" className="btn text-green-600 dark:text-green-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
-            <div className="card h-full rounded-xl border-0 overflow-hidden !p-0 !bg-red-100 dark:bg-red-600/25 text-center">
+            <div className="card h-full rounded-xl border-0 overflow-hidden !p-0 !bg-red-600/10 text-center">
               <div className="card-body p-6">
                 <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-red-600 text-white mb-4 rounded-xl">
                   <Code className="h-8 w-8 mb-0" />
                 </div>
                 <h6 className="mb-2">Business Strategy</h6>
-                <p className="card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
+                <p className="dark:text-white card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
                 <Link href="#" className="btn text-red-600 dark:text-red-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
