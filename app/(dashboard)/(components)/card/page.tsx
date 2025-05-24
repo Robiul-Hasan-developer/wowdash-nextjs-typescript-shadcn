@@ -10,6 +10,10 @@ import CardImg2 from "@/public/assets/images/card-component/card-img2.png";
 import CardImg3 from "@/public/assets/images/card-component/card-img3.png";
 import CardImg4 from "@/public/assets/images/card-component/card-img4.png";
 import CardOverlayImg1 from "@/public/assets/images/card-component/card-overlay-img1.png";
+import HorizontalCardImg1 from "@/public/assets/images/card-component/horizontal-card-img1.png";
+import HorizontalCardImg2 from "@/public/assets/images/card-component/horizontal-card-img2.png";
+import HorizontalCardImg3 from "@/public/assets/images/card-component/horizontal-card-img3.png";
+import HorizontalCardImg4 from "@/public/assets/images/card-component/horizontal-card-img4.png";
 
 const TypographyPage = () => {
   return (
@@ -252,9 +256,9 @@ const TypographyPage = () => {
         <div className="mb-10">
           <h6 className="mb-6">Horizontal Card</h6>
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-            <div className="card rounded-xl overflow-hidden border-0 flex flex-nowrap sm:flex-row flex-col">
+            <div className="card rounded-xl overflow-hidden !p-0 border-0 flex flex-nowrap sm:flex-row flex-col">
               <div className="flex shrink-0">
-                {/* <Image src="assets/images/card-component/horizontal-card-img1.png" className="h-full w-full object-fit-cover" alt="Thumbnail" /> */}
+                <Image src={HorizontalCardImg1} className="h-full w-full object-fit-cover" alt="Thumbnail" />
               </div>
               <div className="card-body p-4 grow">
                 <h5 className="card-title text-lg text-neutral-900 dark:text-neutral-200 mb-1.5">This is Card title</h5>
@@ -265,40 +269,43 @@ const TypographyPage = () => {
                 </Link>
               </div>
             </div>
-            <div className="card rounded-xl overflow-hidden border-0 flex flex-nowrap sm:flex-row-reverse flex-col">
+            <div className="card rounded-xl overflow-hidden !p-0 border-0 flex flex-nowrap sm:flex-row-reverse flex-col">
               <div className="flex shrink-0">
-                {/* <Image src="assets/images/card-component/horizontal-card-img2.png" className="h-full w-full object-fit-cover" alt="Thumbnail" /> */}
+                <Image src={HorizontalCardImg2} className="h-full w-full object-fit-cover" alt="Thumbnail" />
               </div>
               <div className="card-body p-4 grow">
                 <h5 className="card-title text-lg text-neutral-900 dark:text-neutral-200 mb-1.5">This is Card title</h5>
                 <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
-                <a href="#" className="btn text-blue-600 hover-text-blue p-0 inline-flex items-center gap-2">
-                  {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
-                </a>
+                <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                  Read More
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
-            <div className="card rounded-xl overflow-hidden border-0 flex flex-nowrap sm:flex-row flex-col">
+            <div className="card rounded-xl overflow-hidden !p-0 border-0 flex flex-nowrap sm:flex-row flex-col">
               <div className="flex shrink-0">
-                {/* <Image src="assets/images/card-component/horizontal-card-img3.png" className="h-full w-full object-fit-cover" alt="Thumbnail" /> */}
+                <Image src={HorizontalCardImg3} className="h-full w-full object-fit-cover" alt="Thumbnail" />
               </div>
               <div className="card-body p-4 grow">
                 <h5 className="card-title text-lg text-neutral-900 dark:text-neutral-200 mb-1.5">This is Card title</h5>
                 <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
-                <a href="#" className="btn text-blue-600 hover-text-blue p-0 inline-flex items-center gap-2">
-                  {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
-                </a>
+                <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                  Read More
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
-            <div className="card rounded-xl overflow-hidden border-0 h-full flex items-center sm:flex-row-reverse flex-col">
+            <div className="card rounded-xl overflow-hidden !p-0 border-0 h-full flex items-center sm:flex-row-reverse flex-col">
               <div className="flex shrink-0 w-170-px h-full">
-                {/* <Image src="assets/images/card-component/horizontal-card-img4.png" className="h-full w-full object-fit-cover" alt="Thumbnail" /> */}
+                <Image src={HorizontalCardImg4} className="h-full w-full object-fit-cover" alt="Thumbnail" />
               </div>
               <div className="card-body p-4 grow">
                 <h5 className="card-title text-lg text-neutral-900 dark:text-neutral-200 mb-1.5">This is Card title</h5>
                 <p className="card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
-                <a href="#" className="btn text-blue-600 hover-text-blue p-0 inline-flex items-center gap-2">
-                  {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
-                </a>
+                <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                  Read More
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
           </div>
