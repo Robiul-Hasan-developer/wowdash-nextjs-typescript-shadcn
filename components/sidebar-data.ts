@@ -105,6 +105,11 @@ export const data = {
           url: "/avatar",
           circleColor: "bg-green-600",
         },
+        {
+          title: "Progress Bar",
+          url: "/progress-bar",
+          circleColor: "bg-blue-600",
+        },
       ],
     },
 
