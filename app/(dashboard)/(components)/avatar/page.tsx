@@ -9,6 +9,13 @@ import AvatarShape2 from "@/public/assets/images/avatar/avatar-shape2.png";
 import AvatarShape3 from "@/public/assets/images/avatar/avatar-shape3.png";
 
 import StatusAvatar from "@/public/assets/images/avatar/status-avatar.png";
+import AvatarGroup1 from "@/public/assets/images/avatar/avatar-group1.png";
+import AvatarGroup2 from "@/public/assets/images/avatar/avatar-group2.png";
+import AvatarGroup3 from "@/public/assets/images/avatar/avatar-group3.png";
+import AvatarGroup4 from "@/public/assets/images/avatar/avatar-group4.png";
+import AvatarGroup5 from "@/public/assets/images/avatar/avatar-group5.png";
+import AvatarGroup6 from "@/public/assets/images/avatar/avatar-group6.png";
+import { Plus } from "lucide-react";
 
 
 const TypographyPage = () => {
@@ -137,33 +144,33 @@ const TypographyPage = () => {
             </div>
             <div className="card-body p-6">
               <div className="flex -space-x-2 overflow-hidden">
-                {/* <Image src="assets/images/avatar/avatar-group1.png" alt="" className="w-6 h-6 rounded-full object-fit-cover relative" /> */}
-                {/* <Image src="assets/images/avatar/avatar-group2.png" alt="" className="w-6 h-6 rounded-full object-fit-cover relative ms--10px" /> */}
-                {/* <Image src="assets/images/avatar/avatar-group3.png" alt="" className="w-6 h-6 rounded-full object-fit-cover relative ms--10px" /> */}
-                {/* <Image src="assets/images/avatar/avatar-group4.png" alt="" className="w-6 h-6 rounded-full object-fit-cover relative ms--10px" /> */}
-                {/* <Image src="assets/images/avatar/avatar-group5.png" alt="" className="w-6 h-6 rounded-full object-fit-cover relative ms--10px" /> */}
-                {/* <Image src="assets/images/avatar/avatar-group6.png" alt="" className="w-6 h-6 rounded-full object-fit-cover relative ms--10px" /> */}
-                {/* <Image src="assets/images/avatar/avatar-group6.png" alt="" className="w-6 h-6 rounded-full object-fit-cover relative ms--10px" /> */}
+                <Image src={AvatarGroup1} alt="Thumbnail" className="w-6 h-6 rounded-full object-fit-cover relative" />
+                <Image src={AvatarGroup2} alt="Thumbnail" className="w-6 h-6 rounded-full object-fit-cover relative ms--10px" />
+                <Image src={AvatarGroup3} alt="Thumbnail" className="w-6 h-6 rounded-full object-fit-cover relative ms--10px" />
+                <Image src={AvatarGroup4} alt="Thumbnail" className="w-6 h-6 rounded-full object-fit-cover relative ms--10px" />
+                <Image src={AvatarGroup5} alt="Thumbnail" className="w-6 h-6 rounded-full object-fit-cover relative ms--10px" />
+                <Image src={AvatarGroup6} alt="Thumbnail" className="w-6 h-6 rounded-full object-fit-cover relative ms--10px" />
+                <Image src={AvatarGroup6} alt="Thumbnail" className="w-6 h-6 rounded-full object-fit-cover relative ms--10px" />
                 <span className="w-6 h-6 rounded-full object-fit-cover relative ms--10px border bg-neutral-100 text-neutral-600 dark:bg-neutral-600 dark:text-white dark:border-neutral-500 text-xs inline-flex items-center justify-center">
                   +5
                 </span>
-                <button type="button" className="w-6 h-6 rounded-full border border-blue-600 text-blue-600 ms-8 border-dashed text-secondary-light text-xs inline-flex items-center justify-center">
-                  {/* <iconify-icon icon="ic:baseline-plus" className=""></iconify-icon> */}
+                <button type="button" className="w-6 h-6 rounded-full border border-blue-600 text-blue-600 ms--8 z-[1] bg-white border-dashed text-secondary-light text-xs inline-flex items-center justify-center">
+                  <Plus />
                 </button>
               </div>
               <div className="flex -space-x-2 overflow-hidden mt-6">
-                {/* <Image src="assets/images/avatar/avatar-group1.png" alt="" className="w-8 h-8 rounded-full object-fit-cover relative" /> */}
-                {/* <Image src="assets/images/avatar/avatar-group2.png" alt="" className="w-8 h-8 rounded-full object-fit-cover relative ms--10px" /> */}
-                {/* <Image src="assets/images/avatar/avatar-group3.png" alt="" className="w-8 h-8 rounded-full object-fit-cover relative ms--10px" /> */}
-                {/* <Image src="assets/images/avatar/avatar-group4.png" alt="" className="w-8 h-8 rounded-full object-fit-cover relative ms--10px" /> */}
-                {/* <Image src="assets/images/avatar/avatar-group5.png" alt="" className="w-8 h-8 rounded-full object-fit-cover relative ms--10px" /> */}
-                {/* <Image src="assets/images/avatar/avatar-group6.png" alt="" className="w-8 h-8 rounded-full object-fit-cover relative ms--10px" /> */}
-                {/* <Image src="assets/images/avatar/avatar-group6.png" alt="" className="w-8 h-8 rounded-full object-fit-cover relative ms--10px" /> */}
+                <Image src={AvatarGroup1} alt="Thumbnail" className="w-8 h-8 rounded-full object-fit-cover relative" />
+                <Image src={AvatarGroup2} alt="Thumbnail" className="w-8 h-8 rounded-full object-fit-cover relative ms--10px" />
+                <Image src={AvatarGroup3} alt="Thumbnail" className="w-8 h-8 rounded-full object-fit-cover relative ms--10px" />
+                <Image src={AvatarGroup4} alt="Thumbnail" className="w-8 h-8 rounded-full object-fit-cover relative ms--10px" />
+                <Image src={AvatarGroup5} alt="Thumbnail" className="w-8 h-8 rounded-full object-fit-cover relative ms--10px" />
+                <Image src={AvatarGroup6} alt="Thumbnail" className="w-8 h-8 rounded-full object-fit-cover relative ms--10px" />
+                <Image src={AvatarGroup6} alt="Thumbnail" className="w-8 h-8 rounded-full object-fit-cover relative ms--10px" />
                 <span className="w-8 h-8 rounded-full object-fit-cover relative ms--10px border bg-neutral-100 text-neutral-600 dark:bg-neutral-600 dark:text-white dark:border-neutral-500 text-xs inline-flex items-center justify-center">
                   +5
                 </span>
-                <button type="button" className="w-8 h-8 rounded-full border border-blue-600 text-blue-600 ms-8 border-dashed text-secondary-light text-lg inline-flex items-center justify-center">
-                  {/* <iconify-icon icon="ic:baseline-plus" className=""></iconify-icon> */}
+                <button type="button" className="w-8 h-8 rounded-full border border-blue-600 text-blue-600 ms--8 z-[1] bg-white border-dashed text-secondary-light text-lg inline-flex items-center justify-center">
+                  <Plus />
                 </button>
               </div>
             </div>
@@ -177,28 +184,28 @@ const TypographyPage = () => {
             <div className="card-body p-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex items-center gap-2">
-                  {/* <Image src="assets/images/avatar/avatar1.png" alt="" className="w-8 h-8 rounded-full object-fit-cover shrink-0" /> */}
+                  <Image src={Avatar1} alt="Thumbnail" className="w-8 h-8 rounded-full object-fit-cover shrink-0" />
                   <div className="grow inline-flex flex-col">
                     <h6 className="text-sm mb-0">Will mart</h6>
                     <span className="text-xs text-secondary-light">random@gmail.com</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
-                  {/* <Image src="assets/images/avatar/avatar1.png" alt="" className="w-8 h-8 rounded-full object-fit-cover shrink-0" /> */}
+                  <Image src={Avatar1} alt="Thumbnail" className="w-8 h-8 rounded-full object-fit-cover shrink-0" />
                   <div className="grow inline-flex flex-col">
                     <h6 className="text-sm mb-0">Will mart</h6>
                     <span className="text-xs text-secondary-light">random@gmail.com</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
-                  {/* <Image src="assets/images/avatar/avatar2.png" alt="" className="w-8 h-8 rounded-full object-fit-cover shrink-0" /> */}
+                  <Image src={Avatar2} alt="Thumbnail" className="w-8 h-8 rounded-full object-fit-cover shrink-0" />
                   <div className="grow inline-flex flex-col">
                     <h6 className="text-sm mb-0">Sangeeta</h6>
                     <span className="text-xs text-secondary-light">random@gmail.com</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
-                  {/* <Image src="assets/images/avatar/avatar2.png" alt="" className="w-8 h-8 rounded-full object-fit-cover shrink-0" /> */}
+                  <Image src={Avatar2} alt="Thumbnail" className="w-8 h-8 rounded-full object-fit-cover shrink-0" />
                   <div className="grow inline-flex flex-col">
                     <h6 className="text-sm mb-0">Sangeeta</h6>
                     <span className="text-xs text-secondary-light">random@gmail.com</span>
