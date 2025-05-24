@@ -310,55 +310,60 @@ const TypographyPage = () => {
             </div>
           </div>
         </div>
+
         <div className="">
           <h6 className="mb-6">Card With Background Color</h6>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-            <div className="card h-full rounded-xl border-0 overflow-hidden bg-purple-100 dark:bg-purple-600/25">
+            <div className="card h-full rounded-xl border-0 overflow-hidden !p-0 !bg-purple-100 dark:bg-purple-600/25">
               <div className="card-body p-6">
                 <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-purple-600 text-white mb-4 rounded-xl">
-                  {/* <iconify-icon icon="solar:medal-ribbons-star-bold" className="h5 mb-0"></iconify-icon> */}
+                  <Medal className="h-8 w-8 mb-0" />
                 </div>
                 <h6 className="mb-2">Brand Identity</h6>
                 <p className="card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
-                <a href="#" className="btn text-purple-600 hover:underline dark:text-purple-400 px-0 py-0 mt-4 inline-flex items-center gap-2">
-                  {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
-                </a>
+                <Link href="#" className="btn text-purple-600 dark:text-purple-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                  Read More
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
-            <div className="card h-full rounded-xl border-0 overflow-hidden bg-blue-100 dark:bg-blue-600/25 text-center">
+            <div className="card h-full rounded-xl border-0 overflow-hidden !p-0 !bg-blue-100 dark:bg-blue-600/25 text-center">
               <div className="card-body p-6">
                 <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-blue-600 text-white mb-4 rounded-xl">
-                  {/* <iconify-icon icon="ri:computer-fill" className="h5 mb-0"></iconify-icon> */}
+                  <Monitor className="h-8 w-8 mb-0" />
                 </div>
                 <h6 className="mb-2">UI/UX Designer</h6>
                 <p className="card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
-                <a href="#" className="btn text-blue-600 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
-                  {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
-                </a>
+                <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                  Read More
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
-            <div className="card h-full rounded-xl border-0 overflow-hidden bg-green-100 dark:bg-green-600/25 text-end">
+            <div className="card h-full rounded-xl border-0 overflow-hidden !p-0 !bg-green-100 dark:bg-green-600/25 text-end">
               <div className="card-body p-6">
                 <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-green-600 text-white mb-4 rounded-xl">
-                  {/* <iconify-icon icon="fluent:toolbox-20-filled" className="h5 mb-0"></iconify-icon> */}
+                  <BriefcaseBusiness className="h-8 w-8 mb-0" />
                 </div>
                 <h6 className="mb-2">Business Strategy</h6>
                 <p className="card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
-                <a href="#" className="btn text-green-600 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
-                  {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
-                </a>
+                <Link href="#" className="btn text-green-600 dark:text-green-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                  Read More
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
-            <div className="card h-full rounded-xl border-0 overflow-hidden bg-red-100 dark:bg-red-600/25 text-center">
+            <div className="card h-full rounded-xl border-0 overflow-hidden !p-0 !bg-red-100 dark:bg-red-600/25 text-center">
               <div className="card-body p-6">
                 <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-red-600 text-white mb-4 rounded-xl">
-                  {/* <iconify-icon icon="ph:code-fill" className="h5 mb-0"></iconify-icon> */}
+                  <Code className="h-8 w-8 mb-0" />
                 </div>
                 <h6 className="mb-2">Business Strategy</h6>
                 <p className="card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
-                <a href="#" className="btn text-red-600 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
-                  {/* Read More <iconify-icon icon="iconamoon:arrow-right-2" className="text-xl"></iconify-icon> */}
-                </a>
+                <Link href="#" className="btn text-red-600 dark:text-red-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                  Read More
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
           </div>
