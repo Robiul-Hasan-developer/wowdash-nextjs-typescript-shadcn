@@ -62,16 +62,16 @@ const TypographyPage = () => {
             <Tabs defaultValue="FocusHome" className="gap-0">
               <div className="flex items-center justify-between">
                 <TabsList className='bg-transparent dark:bg-transparent rounded-none h-[50px]  p-0'>
-                  <TabsTrigger value="FocusHome" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                  <TabsTrigger value="FocusHome" className='h-10 px-5 data-[state=active]:text-blue-600 data-[state=active]:bg-blue-600/10 dark:data-[state=active]:bg-blue-600 dark:data-[state=active]:text-white duration-300 !shadow-none dark:text-white'>
                     Home
                   </TabsTrigger>
-                  <TabsTrigger value="FocusDetails" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                  <TabsTrigger value="FocusDetails" className='h-10 px-5 data-[state=active]:text-blue-600 data-[state=active]:bg-blue-600/10 dark:data-[state=active]:bg-blue-600 dark:data-[state=active]:text-white duration-300 !shadow-none dark:text-white'>
                     Details
                   </TabsTrigger>
-                  <TabsTrigger value="FocusProfile" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                  <TabsTrigger value="FocusProfile" className='h-10 px-5 data-[state=active]:text-blue-600 data-[state=active]:bg-blue-600/10 dark:data-[state=active]:bg-blue-600 dark:data-[state=active]:text-white duration-300 !shadow-none dark:text-white'>
                     Profile
                   </TabsTrigger>
-                  <TabsTrigger value="FocusSettings" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                  <TabsTrigger value="FocusSettings" className='h-10 px-5 data-[state=active]:text-blue-600 data-[state=active]:bg-blue-600/10 dark:data-[state=active]:bg-blue-600 dark:data-[state=active]:text-white duration-300 !shadow-none dark:text-white'>
                     Settings
                   </TabsTrigger>
                 </TabsList>
