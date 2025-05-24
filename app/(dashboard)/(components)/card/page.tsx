@@ -209,7 +209,9 @@ const TypographyPage = () => {
             <div className="card rounded-xl h-full border-0 !p-0 overflow-hidden">
               <div className="card-header py-4 px-6 bg-white dark:bg-neutral-700 flex items-center gap-1 justify-between border-b">
                 <h6 className="text-lg mb-0">Hi, Will Mart</h6>
-                <X />
+                <Button variant="link" className="!p-0">
+                  <X className="!w-6 !h-6" />
+                </Button>
               </div>
               <div className="card-body py-4 px-6">
                 <h6 className="card-title text-neutral-600 dark:text-neutral-200 mb-2 text-lg">How to learn UI /UX Design</h6>
@@ -369,10 +371,6 @@ const TypographyPage = () => {
           </div>
         </div>
       </div>
-
-
-
-
     </>
   );
 };
