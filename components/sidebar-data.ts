@@ -78,7 +78,7 @@ export const data = {
         {
           title: "Colors",
           url: "/colors",
-          circleColor: "bg-yellow-600",
+          circleColor: "bg-yellow-500",
         },
         {
           title: "Buttons",
@@ -93,7 +93,7 @@ export const data = {
         {
           title: "Alert",
           url: "/alert",
-          circleColor: "bg-yellow-600",
+          circleColor: "bg-yellow-500",
         },
         {
           title: "Card",
@@ -113,7 +113,12 @@ export const data = {
         {
           title: "Tab & Accordion",
           url: "/tab-accordion",
-          circleColor: "bg-yellow-600",
+          circleColor: "bg-yellow-500",
+        },
+        {
+          title: "Pagination",
+          url: "/pagination",
+          circleColor: "bg-red-600",
         },
       ],
     },
