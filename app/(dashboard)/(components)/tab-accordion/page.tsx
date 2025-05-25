@@ -2,6 +2,8 @@ import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Image from "next/image";
+import TabsImage1 from "@/public/assets/images/tabs/tabs-image1.png";
+import TabsImage2 from "@/public/assets/images/tabs/tabs-image2.png";
 
 import DefaultCardComponent from "../components/default-card-component";
 
@@ -62,16 +64,16 @@ const TypographyPage = () => {
             <Tabs defaultValue="FocusHome" className="gap-0">
               <div className="flex items-center justify-between">
                 <TabsList className='bg-transparent dark:bg-transparent rounded-none h-[50px]  p-0'>
-                  <TabsTrigger value="FocusHome" className='h-10 px-5 data-[state=active]:text-blue-600 data-[state=active]:bg-blue-600/10 dark:data-[state=active]:bg-blue-600 dark:data-[state=active]:text-white duration-300 !shadow-none dark:text-white'>
+                  <TabsTrigger value="FocusHome" className='h-10 px-4 data-[state=active]:text-blue-600 data-[state=active]:bg-blue-600/10 dark:data-[state=active]:bg-blue-600/20 duration-300 !shadow-none dark:text-white'>
                     Home
                   </TabsTrigger>
-                  <TabsTrigger value="FocusDetails" className='h-10 px-5 data-[state=active]:text-blue-600 data-[state=active]:bg-blue-600/10 dark:data-[state=active]:bg-blue-600 dark:data-[state=active]:text-white duration-300 !shadow-none dark:text-white'>
+                  <TabsTrigger value="FocusDetails" className='h-10 px-4 data-[state=active]:text-blue-600 data-[state=active]:bg-blue-600/10 dark:data-[state=active]:bg-blue-600/20 duration-300 !shadow-none dark:text-white'>
                     Details
                   </TabsTrigger>
-                  <TabsTrigger value="FocusProfile" className='h-10 px-5 data-[state=active]:text-blue-600 data-[state=active]:bg-blue-600/10 dark:data-[state=active]:bg-blue-600 dark:data-[state=active]:text-white duration-300 !shadow-none dark:text-white'>
+                  <TabsTrigger value="FocusProfile" className='h-10 px-4 data-[state=active]:text-blue-600 data-[state=active]:bg-blue-600/10 dark:data-[state=active]:bg-blue-600/20 duration-300 !shadow-none dark:text-white'>
                     Profile
                   </TabsTrigger>
-                  <TabsTrigger value="FocusSettings" className='h-10 px-5 data-[state=active]:text-blue-600 data-[state=active]:bg-blue-600/10 dark:data-[state=active]:bg-blue-600 dark:data-[state=active]:text-white duration-300 !shadow-none dark:text-white'>
+                  <TabsTrigger value="FocusSettings" className='h-10 px-4 data-[state=active]:text-blue-600 data-[state=active]:bg-blue-600/10 dark:data-[state=active]:bg-blue-600/20 duration-300 !shadow-none dark:text-white'>
                     Settings
                   </TabsTrigger>
                 </TabsList>
@@ -102,6 +104,81 @@ const TypographyPage = () => {
             </Tabs>
           </DefaultCardComponent>
         </div>
+
+        <div className="col-span-12 xl:col-span-6">
+          <DefaultCardComponent title="Button Tabs">
+            <Tabs defaultValue="ButtonHome" className="gap-0">
+              <div className="flex items-center justify-between">
+                <TabsList className='bg-transparent dark:bg-transparent rounded-none h-[50px]  p-0'>
+                  <TabsTrigger value="ButtonHome" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-blue-600 !shadow-none dark:text-white'>
+                    Home
+                  </TabsTrigger>
+                  <TabsTrigger value="ButtonDetails" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-blue-600 !shadow-none dark:text-white'>
+                    Details
+                  </TabsTrigger>
+                  <TabsTrigger value="ButtonProfile" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-blue-600 !shadow-none dark:text-white'>
+                    Profile
+                  </TabsTrigger>
+                  <TabsTrigger value="ButtonSettings" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-blue-600 !shadow-none dark:text-white'>
+                    Settings
+                  </TabsTrigger>
+                </TabsList>
+              </div>
+
+              <div className="pt-6">
+                <TabsContent value="ButtonHome" className="p-0">
+                  <div className="flex items-center gap-3">
+                    <div className="shrink-0">
+                      <Image src={TabsImage1} className="rounded-lg" alt="Image" />
+                    </div>
+                    <div className="grow">
+                      <h6 className="text-lg mb-2">Title Home</h6>
+                      <p className="text-secondary-light mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1400s, when an unknown printer took a galley of type and scrambled it to </p>
+                      <p className="text-secondary-light mb-0"> make a type specimen book. It has survived not industry's standard dummy</p>
+                    </div>
+                  </div>
+                </TabsContent>
+                <TabsContent value="ButtonDetails" className="p-0">
+                  <div className="flex items-center gap-3">
+                    <div className="shrink-0">
+                      <Image src={TabsImage1} className="rounded-lg" alt="Image" />
+                    </div>
+                    <div className="grow">
+                      <h6 className="text-lg mb-2">Title Details</h6>
+                      <p className="text-secondary-light mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1400s, when an unknown printer took a galley of type and scrambled it to </p>
+                      <p className="text-secondary-light mb-0"> make a type specimen book. It has survived not industry's standard dummy</p>
+                    </div>
+                  </div>
+                </TabsContent>
+                <TabsContent value="ButtonProfile" className="p-0">
+                  <div className="flex items-center gap-3">
+                    <div className="shrink-0">
+                      <Image src={TabsImage1} className="rounded-lg" alt="Image" />
+                    </div>
+                    <div className="grow">
+                      <h6 className="text-lg mb-2">Title Profile</h6>
+                      <p className="text-secondary-light mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1400s, when an unknown printer took a galley of type and scrambled it to </p>
+                      <p className="text-secondary-light mb-0"> make a type specimen book. It has survived not industry's standard dummy</p>
+                    </div>
+                  </div>
+                </TabsContent>
+                <TabsContent value="ButtonSettings" className="p-0">
+                  <div className="flex items-center gap-3">
+                    <div className="shrink-0">
+                      <Image src={TabsImage1} className="rounded-lg" alt="Image" />
+                    </div>
+                    <div className="grow">
+                      <h6 className="text-lg mb-2">Title Settings</h6>
+                      <p className="text-secondary-light mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1400s, when an unknown printer took a galley of type and scrambled it to </p>
+                      <p className="text-secondary-light mb-0"> make a type specimen book. It has survived not industry's standard dummy</p>
+                    </div>
+                  </div>
+                </TabsContent>
+              </div>
+            </Tabs>
+          </DefaultCardComponent>
+        </div>
+
 
         <div className="col-span-12 xl:col-span-6">
           <DefaultCardComponent title="Default Tabs">
@@ -239,7 +316,7 @@ const TypographyPage = () => {
               <div id="button-home" role="tabpanel" aria-labelledby="button-home-tab">
                 <div className="flex items-center gap-3">
                   <div className="shrink-0">
-                    {/* <img src="assets/images/tabs/tabs-image2.png" className="rounded-lg" alt=""> */}
+                    <Image src={TabsImage1} className="rounded-lg" alt="Image" />
                   </div>
                   <div className="grow">
                     <h6 className="text-lg mb-2">Title Home</h6>
@@ -251,7 +328,7 @@ const TypographyPage = () => {
               <div id="button-details" role="tabpanel" aria-labelledby="button-details-tab">
                 <div className="flex items-center gap-3">
                   <div className="shrink-0">
-                    {/* <img src="assets/images/tabs/tabs-image1.png" className="rounded-lg" alt=""> */}
+                    <Image src={TabsImage1} className="rounded-lg" alt="Image" />
                   </div>
                   <div className="grow">
                     <h6 className="text-lg mb-2">Title Details</h6>
@@ -263,7 +340,7 @@ const TypographyPage = () => {
               <div id="button-profile" role="tabpanel" aria-labelledby="button-profile-tab">
                 <div className="flex items-center gap-3">
                   <div className="shrink-0">
-                    {/* <img src="assets/images/tabs/tabs-image2.png" className="rounded-lg" alt=""> */}
+                    <Image src={TabsImage1} className="rounded-lg" alt="Image" />
                   </div>
                   <div className="grow">
                     <h6 className="text-lg mb-2">Title Profile</h6>
@@ -275,7 +352,7 @@ const TypographyPage = () => {
               <div id="button-settings" role="tabpanel" aria-labelledby="button-settings-tab">
                 <div className="flex items-center gap-3">
                   <div className="shrink-0">
-                    {/* <img src="assets/images/tabs/tabs-image1.png" className="rounded-lg" alt=""> */}
+                    <Image src={TabsImage1} className="rounded-lg" alt="Image" />
                   </div>
                   <div className="grow">
                     <h6 className="text-lg mb-2">Title Settings</h6>
@@ -325,7 +402,7 @@ const TypographyPage = () => {
               <div id="button-icon-home" role="tabpanel" aria-labelledby="button-icon-home-tab">
                 <div className="flex items-center gap-3">
                   <div className="shrink-0">
-                    {/* <img src="assets/images/tabs/tabs-image1.png" className="rounded-lg" alt=""> */}
+                    <Image src={TabsImage1} className="rounded-lg" alt="Image" />
                   </div>
                   <div className="grow">
                     <h6 className="text-lg mb-2">Title Home</h6>
@@ -337,7 +414,7 @@ const TypographyPage = () => {
               <div id="button-icon-details" role="tabpanel" aria-labelledby="button-icon-details-tab">
                 <div className="flex items-center gap-3">
                   <div className="shrink-0">
-                    {/* <img src="assets/images/tabs/tabs-image2.png" className="rounded-lg" alt=""> */}
+                    <Image src={TabsImage1} className="rounded-lg" alt="Image" />
                   </div>
                   <div className="grow">
                     <h6 className="text-lg mb-2">Title Details</h6>
@@ -349,7 +426,7 @@ const TypographyPage = () => {
               <div id="button-icon-profile" role="tabpanel" aria-labelledby="button-icon-profile-tab">
                 <div className="flex items-center gap-3">
                   <div className="shrink-0">
-                    {/* <img src="assets/images/tabs/tabs-image1.png" className="rounded-lg" alt=""> */}
+                    <Image src={TabsImage1} className="rounded-lg" alt="Image" />
                   </div>
                   <div className="grow">
                     <h6 className="text-lg mb-2">Title Profile</h6>
@@ -361,7 +438,7 @@ const TypographyPage = () => {
               <div id="button-icon-settings" role="tabpanel" aria-labelledby="button-icon-settings-tab">
                 <div className="flex items-center gap-3">
                   <div className="shrink-0">
-                    {/* <img src="assets/images/tabs/tabs-image2.png" className="rounded-lg" alt=""> */}
+                    <Image src={TabsImage1} className="rounded-lg" alt="Image" />
                   </div>
                   <div className="grow">
                     <h6 className="text-lg mb-2">Title Settings</h6>
