@@ -8,6 +8,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 import { Button } from "@/components/ui/button";
+import { CircleHelp } from "lucide-react";
 
 
 const TypographyPage = () => {
@@ -287,7 +288,7 @@ const TypographyPage = () => {
           <TooltipProvider>
             <div className="flex flex-wrap items-center gap-3">
               <ul className="list-decimal ps-5">
-                <li className="text-secondary-light mb-2">
+                <li className="text-secondary-light">
                   This is tooltip text
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -295,7 +296,7 @@ const TypographyPage = () => {
                         popup
                       </Button>
                     </TooltipTrigger>
-                    <TooltipContent className="tooltip-arrow-hidden max-w-[255px] bg-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-[#1e2939] shadow-lg">
+                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-[#1e2939] shadow-lg">
                       <div className="px-3 py-2 w-full">
                         <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Secondary</h6>
                         <p className="text-neutral-900 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -303,7 +304,7 @@ const TypographyPage = () => {
                     </TooltipContent>
                   </Tooltip>
                 </li>
-                <li className="text-secondary-light mb-2">
+                <li className="text-secondary-light">
                   This is tooltip text
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -311,7 +312,7 @@ const TypographyPage = () => {
                         popup
                       </Button>
                     </TooltipTrigger>
-                    <TooltipContent className="tooltip-arrow-hidden max-w-[255px] bg-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-[#1e2939] shadow-lg">
+                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-[#1e2939] shadow-lg">
                       <div className="px-3 py-2 w-full">
                         <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Secondary</h6>
                         <p className="text-neutral-900 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -319,7 +320,7 @@ const TypographyPage = () => {
                     </TooltipContent>
                   </Tooltip>
                 </li>
-                <li className="text-secondary-light mb-2">
+                <li className="text-secondary-light">
                   This is tooltip text
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -327,7 +328,7 @@ const TypographyPage = () => {
                         popup
                       </Button>
                     </TooltipTrigger>
-                    <TooltipContent className="tooltip-arrow-hidden max-w-[255px] bg-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-[#1e2939] shadow-lg">
+                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-[#1e2939] shadow-lg">
                       <div className="px-3 py-2 w-full">
                         <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Secondary</h6>
                         <p className="text-neutral-900 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -335,7 +336,7 @@ const TypographyPage = () => {
                     </TooltipContent>
                   </Tooltip>
                 </li>
-                <li className="text-secondary-light mb-2">
+                <li className="text-secondary-light">
                   This is tooltip text
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -343,7 +344,7 @@ const TypographyPage = () => {
                         popup
                       </Button>
                     </TooltipTrigger>
-                    <TooltipContent className="tooltip-arrow-hidden max-w-[255px] bg-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-[#1e2939] shadow-lg">
+                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-[#1e2939] shadow-lg">
                       <div className="px-3 py-2 w-full">
                         <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Secondary</h6>
                         <p className="text-neutral-900 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -351,7 +352,7 @@ const TypographyPage = () => {
                     </TooltipContent>
                   </Tooltip>
                 </li>
-                <li className="text-secondary-light mb-2">
+                <li className="text-secondary-light">
                   This is tooltip text
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -372,148 +373,95 @@ const TypographyPage = () => {
           </TooltipProvider>
         </DefaultCardComponent>
 
-        <DefaultCardComponent title="Tooltip Text with icon popup ">
-          CardDatasGoesHere
+        <DefaultCardComponent title="Tooltip Text with icon popup">
+          <TooltipProvider>
+            <div className="flex flex-wrap items-center gap-3">
+              <ul className="list-decimal ps-5">
+                <li className="text-secondary-light">
+                  This is tooltip text
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button type="button" variant="link" className="text-neutral-900 dark:text-white !p-0 ms-1">
+                        <CircleHelp />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-blue-600 text-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-blue-600 shadow-lg">
+                      <div className="px-3 py-2 w-full">
+                        <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Secondary</h6>
+                        <p className="text-neutral-900 text-white dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                      </div>
+                    </TooltipContent>
+                  </Tooltip>
+                </li>
+                <li className="text-secondary-light">
+                  This is tooltip text
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button type="button" variant="link" className="text-neutral-900 dark:text-white !p-0 ms-1">
+                        <CircleHelp />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-blue-600 text-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-blue-600 shadow-lg">
+                      <div className="px-3 py-2 w-full">
+                        <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Secondary</h6>
+                        <p className="text-neutral-900 text-white dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                      </div>
+                    </TooltipContent>
+                  </Tooltip>
+                </li>
+                <li className="text-secondary-light">
+                  This is tooltip text
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button type="button" variant="link" className="text-neutral-900 dark:text-white !p-0 ms-1">
+                        <CircleHelp />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-blue-600 text-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-blue-600 shadow-lg">
+                      <div className="px-3 py-2 w-full">
+                        <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Secondary</h6>
+                        <p className="text-neutral-900 text-white dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                      </div>
+                    </TooltipContent>
+                  </Tooltip>
+                </li>
+                <li className="text-secondary-light">
+                  This is tooltip text
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button type="button" variant="link" className="text-neutral-900 dark:text-white !p-0 ms-1">
+                        <CircleHelp />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-blue-600 text-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-blue-600 shadow-lg">
+                      <div className="px-3 py-2 w-full">
+                        <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Secondary</h6>
+                        <p className="text-neutral-900 text-white dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                      </div>
+                    </TooltipContent>
+                  </Tooltip>
+                </li>
+                <li className="text-secondary-light">
+                  This is tooltip text
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button type="button" variant="link" className="text-neutral-900 dark:text-white !p-0 ms-1">
+                        <CircleHelp />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-blue-600 text-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-blue-600 shadow-lg">
+                      <div className="px-3 py-2 w-full">
+                        <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Secondary</h6>
+                        <p className="text-neutral-900 text-white dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                      </div>
+                    </TooltipContent>
+                  </Tooltip>
+                </li>
+              </ul>
+            </div>
+          </TooltipProvider>
         </DefaultCardComponent>
-
       </div>
-
-
-
-
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        <div>
-          <div className="card h-full p-0 border-0 overflow-hidden">
-            <div className="card-header border-b border-neutral-200 dark:border-neutral-600 bg-white dark:bg-slate-700 py-4 px-6">
-              <h6 className="text-lg font-semibold mb-0">Tooltip Text popup</h6>
-            </div>
-            <div className="card-body p-6">
-              <div className="flex flex-wrap items-center gap-3">
-                <ul className="list-decimal ps-5">
-                  <li className="text-secondary-light mb-2">
-                    This is tooltip text
-                    <Button data-popover-target="popover-description1" data-popover-placement="right" className="text-blue-600" type="button"> popup </Button>
-                  </li>
-                  <li data-popover id="popover-description1" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-blue-600 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2 w-full">
-                      <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Dark 1 </h6>
-                      <p className="text-neutral-900 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div data-popper-arrow></div>
-                    </div>
-                  </li>
-                  <li className="text-secondary-light mb-2">
-                    This is tooltip text
-                    <Button data-popover-target="popover-description2" data-popover-placement="right" className="text-blue-600" type="button"> popup </Button>
-                  </li>
-                  <li data-popover id="popover-description2" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-blue-600 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2 w-full">
-                      <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Dark 2 </h6>
-                      <p className="text-neutral-900 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div data-popper-arrow></div>
-                    </div>
-                  </li>
-                  <li className="text-secondary-light mb-2">
-                    This is tooltip text
-                    <Button data-popover-target="popover-description3" data-popover-placement="right" className="text-blue-600" type="button"> popup </Button>
-                  </li>
-                  <li data-popover id="popover-description3" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-blue-600 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2 w-full">
-                      <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Dark 3 </h6>
-                      <p className="text-neutral-900 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div data-popper-arrow></div>
-                    </div>
-                  </li>
-                  <li className="text-secondary-light mb-2">
-                    This is tooltip text
-                    <Button data-popover-target="popover-description4" data-popover-placement="right" className="text-blue-600" type="button"> popup </Button>
-                  </li>
-                  <li data-popover id="popover-description4" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-blue-600 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2 w-full">
-                      <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Dark 4 </h6>
-                      <p className="text-neutral-900 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div data-popper-arrow></div>
-                    </div>
-                  </li>
-                  <li className="text-secondary-light">
-                    This is tooltip text
-                    <Button data-popover-target="popover-description5" data-popover-placement="right" className="text-blue-600" type="button"> popup </Button>
-                  </li>
-                  <li data-popover id="popover-description5" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-blue-600 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2 w-full">
-                      <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Dark 5 </h6>
-                      <p className="text-neutral-900 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div data-popper-arrow></div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="card h-full p-0 border-0 overflow-hidden">
-            <div className="card-header border-b border-neutral-200 dark:border-neutral-600 bg-white dark:bg-slate-700 py-4 px-6">
-              <h6 className="text-lg font-semibold mb-0">Tooltip Text with icon popup </h6>
-            </div>
-            <div className="card-body p-6">
-              <div className="flex flex-wrap items-center gap-3">
-                <ul className="list-decimal ps-5">
-                  <li className="text-secondary-light mb-2">
-                    This is tooltip text
-                    <Button data-popover-target="popover-description11" data-popover-placement="right" className="text-neutral-600 dark:text-white hover:text-blue-600 dark:hover:text-blue-600" type="button"> <i className="ri-question-line"></i> </Button>
-                  </li>
-                  <li data-popover id="popover-description11" className="absolute z-10 invisible inline-block w-64 text-sm text-white transition-opacity duration-300 bg-blue-600 border border-gray-200 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2 w-full">
-                      <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Dark 1 </h6>
-                      <p className="text-neutral-900 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div className="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                  </li>
-                  <li className="text-secondary-light mb-2">
-                    This is tooltip text
-                    <Button data-popover-target="popover-description12" data-popover-placement="right" className="text-neutral-600 dark:text-white hover:text-blue-600 dark:hover:text-blue-600" type="button"> <i className="ri-question-line"></i> </Button>
-                  </li>
-                  <li data-popover id="popover-description12" className="absolute z-10 invisible inline-block w-64 text-sm text-white transition-opacity duration-300 bg-blue-600 border border-gray-200 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2 w-full">
-                      <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Dark 2 </h6>
-                      <p className="text-neutral-900 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div className="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                  </li>
-                  <li className="text-secondary-light mb-2">
-                    This is tooltip text
-                    <Button data-popover-target="popover-description13" data-popover-placement="right" className="text-neutral-600 dark:text-white hover:text-blue-600 dark:hover:text-blue-600" type="button"> <i className="ri-question-line"></i> </Button>
-                  </li>
-                  <li data-popover id="popover-description13" className="absolute z-10 invisible inline-block w-64 text-sm text-white transition-opacity duration-300 bg-blue-600 border border-gray-200 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2 w-full">
-                      <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Dark 3 </h6>
-                      <p className="text-neutral-900 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div className="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                  </li>
-                  <li className="text-secondary-light mb-2">
-                    This is tooltip text
-                    <Button data-popover-target="popover-description14" data-popover-placement="right" className="text-neutral-600 dark:text-white hover:text-blue-600 dark:hover:text-blue-600" type="button"> <i className="ri-question-line"></i> </Button>
-                  </li>
-                  <li data-popover id="popover-description14" className="absolute z-10 invisible inline-block w-64 text-sm text-white transition-opacity duration-300 bg-blue-600 border border-gray-200 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2 w-full">
-                      <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Dark 4 </h6>
-                      <p className="text-neutral-900 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div className="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                  </li>
-                  <li className="text-secondary-light">
-                    This is tooltip text
-                    <Button data-popover-target="popover-description15" data-popover-placement="right" className="text-neutral-600 dark:text-white hover:text-blue-600 dark:hover:text-blue-600" type="button"> <i className="ri-question-line"></i> </Button>
-                  </li>
-                  <li data-popover id="popover-description15" className="absolute z-10 invisible inline-block w-64 text-sm text-white transition-opacity duration-300 bg-blue-600 border border-gray-200 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2 w-full">
-                      <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Dark 5 </h6>
-                      <p className="text-neutral-900 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div className="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
     </>
   );
 };
