@@ -338,7 +338,17 @@
 }
 
 .tooltip-arrow-white .bg-primary {
-  background: #fff !important;
-  fill: #fff;
+  @apply bg-[#fff] fill-[#fff];
+}
+.dark .tooltip-arrow-white .bg-primary {
+  @apply bg-[#1e2939] fill-[#1e2939];
+}
+
+.tooltip-arrow-hidden .span {
+  @apply hidden;
+}
+
+.tooltip-arrow-hidden span {
+  display: none;
 }
 /* ======================================== Custom Classes css End ======================================== */
