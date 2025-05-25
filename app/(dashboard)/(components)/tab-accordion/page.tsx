@@ -6,6 +6,7 @@ import TabsImage1 from "@/public/assets/images/tabs/tabs-image1.png";
 import TabsImage2 from "@/public/assets/images/tabs/tabs-image2.png";
 
 import DefaultCardComponent from "../components/default-card-component";
+import { Home, FileText, User, Settings } from 'lucide-react';
 
 const TypographyPage = () => {
   return (
@@ -13,21 +14,22 @@ const TypographyPage = () => {
       <DashboardBreadcrumb title="Avatar" text="Avatar" />
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+
         <div className="col-span-12 xl:col-span-6">
           <DefaultCardComponent title="Default Tabs">
             <Tabs defaultValue="DefaultHome" className="gap-0">
               <div className="flex items-center justify-between border-b border-neutral-200 dark:border-slate-600">
                 <TabsList className='bg-transparent dark:bg-transparent rounded-none h-[50px]  p-0'>
-                  <TabsTrigger value="DefaultHome" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                  <TabsTrigger value="DefaultHome" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 dark:data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
                     Home
                   </TabsTrigger>
-                  <TabsTrigger value="DefaultDetails" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                  <TabsTrigger value="DefaultDetails" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 dark:data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
                     Details
                   </TabsTrigger>
-                  <TabsTrigger value="DefaultProfile" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                  <TabsTrigger value="DefaultProfile" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 dark:data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
                     Profile
                   </TabsTrigger>
-                  <TabsTrigger value="DefaultSettings" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                  <TabsTrigger value="DefaultSettings" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 dark:data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
                     Settings
                   </TabsTrigger>
                 </TabsList>
@@ -141,7 +143,7 @@ const TypographyPage = () => {
                 <TabsContent value="ButtonDetails" className="p-0">
                   <div className="flex items-center gap-3">
                     <div className="shrink-0">
-                      <Image src={TabsImage1} className="rounded-lg" alt="Image" />
+                      <Image src={TabsImage2} className="rounded-lg" alt="Image" />
                     </div>
                     <div className="grow">
                       <h6 className="text-lg mb-2">Title Details</h6>
@@ -165,7 +167,85 @@ const TypographyPage = () => {
                 <TabsContent value="ButtonSettings" className="p-0">
                   <div className="flex items-center gap-3">
                     <div className="shrink-0">
+                      <Image src={TabsImage2} className="rounded-lg" alt="Image" />
+                    </div>
+                    <div className="grow">
+                      <h6 className="text-lg mb-2">Title Settings</h6>
+                      <p className="text-secondary-light mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1400s, when an unknown printer took a galley of type and scrambled it to </p>
+                      <p className="text-secondary-light mb-0"> make a type specimen book. It has survived not industry's standard dummy</p>
+                    </div>
+                  </div>
+                </TabsContent>
+              </div>
+            </Tabs>
+          </DefaultCardComponent>
+        </div>
+
+        <div className="col-span-12 xl:col-span-6">
+          <DefaultCardComponent title="Icon Button Tabs">
+            <Tabs defaultValue="IconButtonHome" className="gap-0">
+              <div className="flex items-center justify-between">
+                <TabsList className='bg-transparent dark:bg-transparent rounded-none h-[50px]  p-0'>
+                  <TabsTrigger value="IconButtonHome" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-blue-600 dark:data-[state=active]:bg-blue-600 !shadow-none dark:text-white flex items-center gap-2'>
+                    <Home className="w-4 h-4" />
+                    Home
+                  </TabsTrigger>
+                  <TabsTrigger value="IconButtonDetails" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-blue-600 dark:data-[state=active]:bg-blue-600 !shadow-none dark:text-white flex items-center gap-2'>
+                    <Home className="w-4 h-4" />
+                    Details
+                  </TabsTrigger>
+                  <TabsTrigger value="IconButtonProfile" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-blue-600 dark:data-[state=active]:bg-blue-600 !shadow-none dark:text-white flex items-center gap-2'>
+                    <Home className="w-4 h-4" />
+                    Profile
+                  </TabsTrigger>
+                  <TabsTrigger value="IconButtonSettings" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-blue-600 dark:data-[state=active]:bg-blue-600 !shadow-none dark:text-white flex items-center gap-2'>
+                    <Home className="w-4 h-4" />
+                    Settings
+                  </TabsTrigger>
+                </TabsList>
+              </div>
+
+              <div className="pt-6">
+                <TabsContent value="IconButtonHome" className="p-0">
+                  <div className="flex items-center gap-3">
+                    <div className="shrink-0">
                       <Image src={TabsImage1} className="rounded-lg" alt="Image" />
+                    </div>
+                    <div className="grow">
+                      <h6 className="text-lg mb-2">Title Home</h6>
+                      <p className="text-secondary-light mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1400s, when an unknown printer took a galley of type and scrambled it to </p>
+                      <p className="text-secondary-light mb-0"> make a type specimen book. It has survived not industry's standard dummy</p>
+                    </div>
+                  </div>
+                </TabsContent>
+                <TabsContent value="IconButtonDetails" className="p-0">
+                  <div className="flex items-center gap-3">
+                    <div className="shrink-0">
+                      <Image src={TabsImage2} className="rounded-lg" alt="Image" />
+                    </div>
+                    <div className="grow">
+                      <h6 className="text-lg mb-2">Title Details</h6>
+                      <p className="text-secondary-light mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1400s, when an unknown printer took a galley of type and scrambled it to </p>
+                      <p className="text-secondary-light mb-0"> make a type specimen book. It has survived not industry's standard dummy</p>
+                    </div>
+                  </div>
+                </TabsContent>
+                <TabsContent value="IconButtonProfile" className="p-0">
+                  <div className="flex items-center gap-3">
+                    <div className="shrink-0">
+                      <Image src={TabsImage1} className="rounded-lg" alt="Image" />
+                    </div>
+                    <div className="grow">
+                      <h6 className="text-lg mb-2">Title Profile</h6>
+                      <p className="text-secondary-light mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1400s, when an unknown printer took a galley of type and scrambled it to </p>
+                      <p className="text-secondary-light mb-0"> make a type specimen book. It has survived not industry's standard dummy</p>
+                    </div>
+                  </div>
+                </TabsContent>
+                <TabsContent value="IconButtonSettings" className="p-0">
+                  <div className="flex items-center gap-3">
+                    <div className="shrink-0">
+                      <Image src={TabsImage2} className="rounded-lg" alt="Image" />
                     </div>
                     <div className="grow">
                       <h6 className="text-lg mb-2">Title Settings</h6>
