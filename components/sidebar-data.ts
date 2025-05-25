@@ -120,6 +120,11 @@ export const data = {
           url: "/pagination",
           circleColor: "bg-red-600",
         },
+        {
+          title: "Badges",
+          url: "/badge",
+          circleColor: "bg-blue-600",
+        },
       ],
     },
 
