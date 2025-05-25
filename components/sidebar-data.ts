@@ -125,6 +125,11 @@ export const data = {
           url: "/badge",
           circleColor: "bg-blue-600",
         },
+        {
+          title: "Tooltip & Popover",
+          url: "/tooltip",
+          circleColor: "bg-slate-900",
+        },
       ],
     },
 
