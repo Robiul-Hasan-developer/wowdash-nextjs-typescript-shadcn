@@ -336,4 +336,9 @@
     @apply cursor-pointer;
   }
 }
+
+.tooltip-arrow-white .bg-primary {
+  background: #fff !important;
+  fill: #fff;
+}
 /* ======================================== Custom Classes css End ======================================== */

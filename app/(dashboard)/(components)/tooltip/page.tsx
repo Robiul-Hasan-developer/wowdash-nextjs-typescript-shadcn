@@ -93,7 +93,7 @@ const TypographyPage = () => {
                     Tooltip On Top
                   </Button>
                 </TooltipTrigger>
-                <TooltipContent>
+                <TooltipContent side="top" align="center">
                   <p>Tooltip On Top</p>
                 </TooltipContent>
               </Tooltip>
@@ -103,7 +103,7 @@ const TypographyPage = () => {
                     Tooltip On Right
                   </Button>
                 </TooltipTrigger>
-                <TooltipContent>
+                <TooltipContent side="right" align="center">
                   <p>Tooltip On Right</p>
                 </TooltipContent>
               </Tooltip>
@@ -113,7 +113,7 @@ const TypographyPage = () => {
                     Tooltip On Left
                   </Button>
                 </TooltipTrigger>
-                <TooltipContent>
+                <TooltipContent side="left" align="center">
                   <p>Tooltip On Left</p>
                 </TooltipContent>
               </Tooltip>
@@ -123,7 +123,7 @@ const TypographyPage = () => {
                     Tooltip On bottom
                   </Button>
                 </TooltipTrigger>
-                <TooltipContent>
+                <TooltipContent side="bottom" align="center">
                   <p>Tooltip On bottom</p>
                 </TooltipContent>
               </Tooltip>
@@ -207,11 +207,10 @@ const TypographyPage = () => {
                     Secondary
                   </Button>
                 </TooltipTrigger>
-                <TooltipContent className="bg-white max-w-[255px]">
-                  <div className="px-3 py-2">
+                <TooltipContent className="tooltip-arrow-white max-w-[255px] bg-white border border-gray-200 rounded-lg dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
+                  <div className="px-3 py-2 w-full">
                     <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Secondary</h6>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
+                    <p className="text-neutral-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                   </div>
                 </TooltipContent>
               </Tooltip>
@@ -221,11 +220,10 @@ const TypographyPage = () => {
                     Success
                   </Button>
                 </TooltipTrigger>
-                <TooltipContent className="bg-white max-w-[255px]">
-                  <div className="px-3 py-2">
+                <TooltipContent className="tooltip-arrow-white max-w-[255px] bg-white border border-gray-200 rounded-lg dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
+                  <div className="px-3 py-2 w-full">
                     <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Success</h6>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
+                    <p className="text-neutral-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                   </div>
                 </TooltipContent>
               </Tooltip>
@@ -235,11 +233,10 @@ const TypographyPage = () => {
                     Info
                   </Button>
                 </TooltipTrigger>
-                <TooltipContent className="bg-white max-w-[255px]">
-                  <div className="px-3 py-2">
+                <TooltipContent className="tooltip-arrow-white max-w-[255px] bg-white border border-gray-200 rounded-lg dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
+                  <div className="px-3 py-2 w-full">
                     <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Info</h6>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
+                    <p className="text-neutral-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                   </div>
                 </TooltipContent>
               </Tooltip>
@@ -249,11 +246,10 @@ const TypographyPage = () => {
                     Warning
                   </Button>
                 </TooltipTrigger>
-                <TooltipContent className="bg-white max-w-[255px]">
-                  <div className="px-3 py-2">
+                <TooltipContent className="tooltip-arrow-white max-w-[255px] bg-white border border-gray-200 rounded-lg dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
+                  <div className="px-3 py-2 w-full">
                     <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Warning</h6>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
+                    <p className="text-neutral-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                   </div>
                 </TooltipContent>
               </Tooltip>
@@ -263,11 +259,10 @@ const TypographyPage = () => {
                     Danger
                   </Button>
                 </TooltipTrigger>
-                <TooltipContent className="bg-white max-w-[255px]">
-                  <div className="px-3 py-2">
+                <TooltipContent className="tooltip-arrow-white max-w-[255px] bg-white border border-gray-200 rounded-lg dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
+                  <div className="px-3 py-2 w-full">
                     <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Danger</h6>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
+                    <p className="text-neutral-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                   </div>
                 </TooltipContent>
               </Tooltip>
@@ -277,11 +272,10 @@ const TypographyPage = () => {
                     Dark
                   </Button>
                 </TooltipTrigger>
-                <TooltipContent className="bg-white max-w-[255px]">
-                  <div className="px-3 py-2">
+                <TooltipContent className="tooltip-arrow-white max-w-[255px] bg-white border border-gray-200 rounded-lg dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
+                  <div className="px-3 py-2 w-full">
                     <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Dark</h6>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
+                    <p className="text-neutral-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                   </div>
                 </TooltipContent>
               </Tooltip>
@@ -308,84 +302,6 @@ const TypographyPage = () => {
         <div>
           <div className="card h-full p-0 border-0 overflow-hidden">
             <div className="card-header border-b border-neutral-200 dark:border-neutral-600 bg-white dark:bg-neutral-700 py-4 px-6">
-              <h6 className="text-lg font-semibold mb-0">Tooltip Popover Positions</h6>
-            </div>
-            <div className="card-body p-6">
-              <div className="flex flex-wrap items-center gap-3">
-
-                <Button data-popover-target="popover-Secondary" data-popover-placement="top" type="button" className="h-[46px] btn bg-purple-600 hover:bg-purple-700 text-white rounded-lg px-8 py-[11px]">
-                  Secondary
-                </Button>
-                <div data-popover id="popover-Secondary" role="tooltip" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                  <div className="px-3 py-2">
-                    <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Secondary</h6>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <div className="tooltip-arrow" data-popper-arrow></div>
-                  </div>
-                </div>
-
-                <Button data-popover-target="popover-green" data-tooltip-placement="top" type="button" className="h-[46px] btn bg-green-600 hover:bg-green-700 text-white rounded-lg px-8 py-[11px]">
-                  Success
-                </Button>
-                <div data-popover id="popover-green" role="tooltip" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                  <div className="px-3 py-2">
-                    <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Success</h6>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <div className="tooltip-arrow" data-popper-arrow></div>
-                  </div>
-                </div>
-
-                <Button data-popover-target="popover-cyan" data-tooltip-placement="top" type="button" className="h-[46px] btn bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg px-8 py-[11px]">
-                  Info
-                </Button>
-                <div data-popover id="popover-cyan" role="tooltip" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                  <div className="px-3 py-2">
-                    <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Info</h6>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <div className="tooltip-arrow" data-popper-arrow></div>
-                  </div>
-                </div>
-
-                <Button data-popover-target="popover-yellow" data-tooltip-placement="top" type="button" className="h-[46px] btn bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg px-8 py-[11px]">
-                  Warning
-                </Button>
-                <div data-popover id="popover-yellow" role="tooltip" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                  <div className="px-3 py-2">
-                    <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Warning</h6>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <div className="tooltip-arrow" data-popper-arrow></div>
-                  </div>
-                </div>
-
-                <Button data-popover-target="popover-red" data-tooltip-placement="top" type="button" className="h-[46px] btn bg-red-600 hover:bg-red-700 text-white rounded-lg px-8 py-[11px]">
-                  Danger
-                </Button>
-                <div data-popover id="popover-red" role="tooltip" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                  <div className="px-3 py-2">
-                    <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Danger</h6>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <div className="tooltip-arrow" data-popper-arrow></div>
-                  </div>
-                </div>
-
-                <Button data-popover-target="popover-Dark" data-tooltip-placement="top" type="button" className="h-[46px] btn bg-neutral-600 hover:bg-neutral-700 text-white rounded-lg px-8 py-[11px]">
-                  Dark
-                </Button>
-                <div data-popover id="popover-Dark" role="tooltip" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                  <div className="px-3 py-2">
-                    <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Dark</h6>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <div className="tooltip-arrow" data-popper-arrow></div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="card h-full p-0 border-0 overflow-hidden">
-            <div className="card-header border-b border-neutral-200 dark:border-neutral-600 bg-white dark:bg-neutral-700 py-4 px-6">
               <h6 className="text-lg font-semibold mb-0">Tooltip Text popup</h6>
             </div>
             <div className="card-body p-6">
@@ -396,10 +312,9 @@ const TypographyPage = () => {
                     <Button data-popover-target="popover-description1" data-popover-placement="right" className="text-blue-600" type="button"> popup </Button>
                   </li>
                   <li data-popover id="popover-description1" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-blue-600 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2">
+                    <div className="px-3 py-2 w-full">
                       <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Dark 1 </h6>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <div data-popper-arrow></div>
+                      <p className="text-neutral-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div data-popper-arrow></div>
                     </div>
                   </li>
                   <li className="text-secondary-light mb-2">
@@ -407,10 +322,9 @@ const TypographyPage = () => {
                     <Button data-popover-target="popover-description2" data-popover-placement="right" className="text-blue-600" type="button"> popup </Button>
                   </li>
                   <li data-popover id="popover-description2" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-blue-600 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2">
+                    <div className="px-3 py-2 w-full">
                       <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Dark 2 </h6>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <div data-popper-arrow></div>
+                      <p className="text-neutral-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div data-popper-arrow></div>
                     </div>
                   </li>
                   <li className="text-secondary-light mb-2">
@@ -418,10 +332,9 @@ const TypographyPage = () => {
                     <Button data-popover-target="popover-description3" data-popover-placement="right" className="text-blue-600" type="button"> popup </Button>
                   </li>
                   <li data-popover id="popover-description3" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-blue-600 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2">
+                    <div className="px-3 py-2 w-full">
                       <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Dark 3 </h6>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <div data-popper-arrow></div>
+                      <p className="text-neutral-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div data-popper-arrow></div>
                     </div>
                   </li>
                   <li className="text-secondary-light mb-2">
@@ -429,10 +342,9 @@ const TypographyPage = () => {
                     <Button data-popover-target="popover-description4" data-popover-placement="right" className="text-blue-600" type="button"> popup </Button>
                   </li>
                   <li data-popover id="popover-description4" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-blue-600 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2">
+                    <div className="px-3 py-2 w-full">
                       <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Dark 4 </h6>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <div data-popper-arrow></div>
+                      <p className="text-neutral-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div data-popper-arrow></div>
                     </div>
                   </li>
                   <li className="text-secondary-light">
@@ -440,10 +352,9 @@ const TypographyPage = () => {
                     <Button data-popover-target="popover-description5" data-popover-placement="right" className="text-blue-600" type="button"> popup </Button>
                   </li>
                   <li data-popover id="popover-description5" className="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-blue-600 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2">
+                    <div className="px-3 py-2 w-full">
                       <h6 className="font-semibold text-lg mb-1 text-gray-900 dark:text-white">Title Dark 5 </h6>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <div data-popper-arrow></div>
+                      <p className="text-neutral-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div data-popper-arrow></div>
                     </div>
                   </li>
                 </ul>
@@ -464,10 +375,9 @@ const TypographyPage = () => {
                     <Button data-popover-target="popover-description11" data-popover-placement="right" className="text-neutral-600 dark:text-white hover:text-blue-600 dark:hover:text-blue-600" type="button"> <i className="ri-question-line"></i> </Button>
                   </li>
                   <li data-popover id="popover-description11" className="absolute z-10 invisible inline-block w-64 text-sm text-white transition-opacity duration-300 bg-blue-600 border border-gray-200 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2">
+                    <div className="px-3 py-2 w-full">
                       <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Dark 1 </h6>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <div className="tooltip-arrow" data-popper-arrow></div>
+                      <p className="text-neutral-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div className="tooltip-arrow" data-popper-arrow></div>
                     </div>
                   </li>
                   <li className="text-secondary-light mb-2">
@@ -475,10 +385,9 @@ const TypographyPage = () => {
                     <Button data-popover-target="popover-description12" data-popover-placement="right" className="text-neutral-600 dark:text-white hover:text-blue-600 dark:hover:text-blue-600" type="button"> <i className="ri-question-line"></i> </Button>
                   </li>
                   <li data-popover id="popover-description12" className="absolute z-10 invisible inline-block w-64 text-sm text-white transition-opacity duration-300 bg-blue-600 border border-gray-200 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2">
+                    <div className="px-3 py-2 w-full">
                       <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Dark 2 </h6>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <div className="tooltip-arrow" data-popper-arrow></div>
+                      <p className="text-neutral-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div className="tooltip-arrow" data-popper-arrow></div>
                     </div>
                   </li>
                   <li className="text-secondary-light mb-2">
@@ -486,10 +395,9 @@ const TypographyPage = () => {
                     <Button data-popover-target="popover-description13" data-popover-placement="right" className="text-neutral-600 dark:text-white hover:text-blue-600 dark:hover:text-blue-600" type="button"> <i className="ri-question-line"></i> </Button>
                   </li>
                   <li data-popover id="popover-description13" className="absolute z-10 invisible inline-block w-64 text-sm text-white transition-opacity duration-300 bg-blue-600 border border-gray-200 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2">
+                    <div className="px-3 py-2 w-full">
                       <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Dark 3 </h6>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <div className="tooltip-arrow" data-popper-arrow></div>
+                      <p className="text-neutral-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div className="tooltip-arrow" data-popper-arrow></div>
                     </div>
                   </li>
                   <li className="text-secondary-light mb-2">
@@ -497,10 +405,9 @@ const TypographyPage = () => {
                     <Button data-popover-target="popover-description14" data-popover-placement="right" className="text-neutral-600 dark:text-white hover:text-blue-600 dark:hover:text-blue-600" type="button"> <i className="ri-question-line"></i> </Button>
                   </li>
                   <li data-popover id="popover-description14" className="absolute z-10 invisible inline-block w-64 text-sm text-white transition-opacity duration-300 bg-blue-600 border border-gray-200 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2">
+                    <div className="px-3 py-2 w-full">
                       <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Dark 4 </h6>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <div className="tooltip-arrow" data-popper-arrow></div>
+                      <p className="text-neutral-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div className="tooltip-arrow" data-popper-arrow></div>
                     </div>
                   </li>
                   <li className="text-secondary-light">
@@ -508,10 +415,9 @@ const TypographyPage = () => {
                     <Button data-popover-target="popover-description15" data-popover-placement="right" className="text-neutral-600 dark:text-white hover:text-blue-600 dark:hover:text-blue-600" type="button"> <i className="ri-question-line"></i> </Button>
                   </li>
                   <li data-popover id="popover-description15" className="absolute z-10 invisible inline-block w-64 text-sm text-white transition-opacity duration-300 bg-blue-600 border border-gray-200 rounded-lg opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 shadow-lg">
-                    <div className="px-3 py-2">
+                    <div className="px-3 py-2 w-full">
                       <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Dark 5 </h6>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                      <div className="tooltip-arrow" data-popper-arrow></div>
+                      <p className="text-neutral-900">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                      <div className="tooltip-arrow" data-popper-arrow></div>
                     </div>
                   </li>
                 </ul>
