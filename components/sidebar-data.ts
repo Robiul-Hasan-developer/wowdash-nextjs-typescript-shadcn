@@ -130,6 +130,11 @@ export const data = {
           url: "/tooltip",
           circleColor: "bg-slate-900",
         },
+        {
+          title: "Star Ratings",
+          url: "/star-rating",
+          circleColor: "bg-purple-900",
+        },
       ],
     },
 
