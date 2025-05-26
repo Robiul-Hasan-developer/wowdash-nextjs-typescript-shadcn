@@ -140,6 +140,11 @@ export const data = {
           url: "/tags",
           circleColor: "bg-blue-600",
         },
+        {
+          title: "List",
+          url: "/list",
+          circleColor: "bg-red-600",
+        },
       ],
     },
 

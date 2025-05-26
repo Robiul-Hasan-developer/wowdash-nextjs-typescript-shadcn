@@ -102,35 +102,35 @@ const TypographyPage = () => {
         <DefaultCardComponent title="Tags Indicator">
           <ul className="flex flex-wrap items-center gap-4 md:gap-8">
             <li className="text-secondary-light border rounded px-2 py-1.5 text-sm line-height-1 font-medium flex items-center gap-2">
-              <span className="w-2 h-2 bg-success-600 rounded-full"></span>
+              <span className="w-2 h-2 bg-green-600 rounded-full"></span>
               Label
             </li>
             <li className="text-secondary-light border rounded px-2 py-1.5 text-sm line-height-1 font-medium flex items-center gap-2">
-              <span className="w-2 h-2 bg-success-600 rounded-full"></span>
+              <span className="w-2 h-2 bg-green-600 rounded-full"></span>
               Label
             </li>
             <li className="text-secondary-light border rounded px-2 py-1.5 text-sm line-height-1 font-medium flex items-center gap-2">
-              <span className="w-2 h-2 bg-success-600 rounded-full"></span>
+              <span className="w-2 h-2 bg-green-600 rounded-full"></span>
               Label
             </li>
           </ul>
           <ul className="tag-list flex flex-wrap items-center gap-3 sm:gap-5 mt-5">
             <li className="text-secondary-light border rounded px-2 py-2 text-sm line-height-1 font-medium flex items-center gap-2">
-              <span className="w-2 h-2 bg-success-600 rounded-full"></span>
+              <span className="w-2 h-2 bg-green-600 rounded-full"></span>
               Label
               <button className="remove-tag text-lg flex justify-center items-center" type="button">
                 <X className="w-4 h-4" />
               </button>
             </li>
             <li className="text-secondary-light border rounded px-2 py-2 text-sm line-height-1 font-medium flex items-center gap-2">
-              <span className="w-2 h-2 bg-success-600 rounded-full"></span>
+              <span className="w-2 h-2 bg-green-600 rounded-full"></span>
               Label
               <button className="remove-tag text-lg flex justify-center items-center" type="button">
                 <X className="w-4 h-4" />
               </button>
             </li>
             <li className="text-secondary-light border rounded px-2 py-2 text-sm line-height-1 font-medium flex items-center gap-2">
-              <span className="w-2 h-2 bg-success-600 rounded-full"></span>
+              <span className="w-2 h-2 bg-green-600 rounded-full"></span>
               Label
               <button className="remove-tag text-lg flex justify-center items-center" type="button">
                 <X className="w-4 h-4" />
