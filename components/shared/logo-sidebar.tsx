@@ -16,13 +16,12 @@ function LogoSidebar() {
   const { theme } = useTheme()
   const [isMounted, setIsMounted] = useState(false)
 
-  const isCollapsed = useSidebarCollapsed(); 
+  const isCollapsed = useSidebarCollapsed();
 
   useEffect(() => {
     setIsMounted(true)
   }, [])
 
-  // Don't render until mounted to avoid hydration mismatch or wrong theme
   if (!isMounted) return null
 
   return (
@@ -38,8 +37,8 @@ function LogoSidebar() {
           isCollapsed
             ? LogoIcon
             : theme === 'dark'
-            ? LogoWhite
-            : LogoDark
+              ? LogoWhite
+              : LogoDark
         }
         alt="Logo"
         width={isCollapsed ? 44 : 168}
