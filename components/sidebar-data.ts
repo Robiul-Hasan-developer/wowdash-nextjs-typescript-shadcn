@@ -145,6 +145,11 @@ export const data = {
           url: "/list",
           circleColor: "bg-red-600",
         },
+        {
+          title: "Radio",
+          url: "/radio",
+          circleColor: "bg-orange-600",
+        },
       ],
     },
 
