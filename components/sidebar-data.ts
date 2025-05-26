@@ -133,7 +133,12 @@ export const data = {
         {
           title: "Star Ratings",
           url: "/star-rating",
-          circleColor: "bg-purple-900",
+          circleColor: "bg-purple-600",
+        },
+        {
+          title: "Tags",
+          url: "/tags",
+          circleColor: "bg-blue-600",
         },
       ],
     },
