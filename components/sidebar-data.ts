@@ -150,6 +150,11 @@ export const data = {
           url: "/radio",
           circleColor: "bg-orange-600",
         },
+        {
+          title: "Switch",
+          url: "/switch",
+          circleColor: "bg-green-600",
+        },
       ],
     },
 
