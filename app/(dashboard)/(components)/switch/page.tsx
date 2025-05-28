@@ -26,6 +26,8 @@ const TypographyPage = () => {
   const [inactiveSwitchTwo3, setinactiveSwitchTwo3] = useState(false);
   const [inactiveSwitchTwo4, setinactiveSwitchTwo4] = useState(false);
 
+  const [switchWithText1, setSwitchWithText1] = useState(false);
+  const [switchWithText2, setSwitchWithText2] = useState(false);
 
   return (
     <>
@@ -273,6 +275,39 @@ const TypographyPage = () => {
                   Switch Inactive
                 </Label>
               </div>
+            </div>
+          </div>
+        </DefaultCardComponent>
+
+        <DefaultCardComponent title="Switch With Tex">
+          <div className="flex items-center flex-wrap gap-6">
+            <div className="flex items-center space-x-2">
+              <Switch
+                id="switchWithText1"
+                checked={switchWithText1}
+                onCheckedChange={setSwitchWithText1}
+                className="data-[state=checked]:bg-blue-600"
+              />
+              <Label
+                htmlFor="switchWithText1"
+                className={switchWithText1 ? "text-blue-600 font-medium" : ""}
+              >
+                Yes
+              </Label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Switch
+                id="switchWithText2"
+                checked={switchWithText2}
+                onCheckedChange={setSwitchWithText2}
+                className="data-[state=checked]:bg-blue-600"
+              />
+              <Label
+                htmlFor="switchWithText2"
+                className={switchWithText2 ? "text-blue-600 font-medium" : ""}
+              >
+                No
+              </Label>
             </div>
           </div>
         </DefaultCardComponent>
