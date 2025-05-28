@@ -4,6 +4,9 @@ import DefaultCardComponent from "../../components/default-card-component";
 import LineChart from "@/components/charts/line-chart";
 import ZoomableChart from "@/components/charts/zoomable-chart";
 import LineChartLabel from "@/components/charts/line-chart-label";
+import LineChartAnimation from "@/components/charts/line-chart-animation";
+import SteplineChart from "@/components/charts/stepline-chart";
+import GradientChart from "@/components/charts/gradient-chart";
 
 const LineChartPage = () => {
     return (
@@ -19,6 +22,15 @@ const LineChartPage = () => {
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Line Chart with Data Labels">
                     <LineChartLabel />
+                </DefaultCardComponent>
+                <DefaultCardComponent title="Line Chart Animation">
+                    <LineChartAnimation />
+                </DefaultCardComponent>
+                <DefaultCardComponent title="Stepline Charts">
+                    <SteplineChart />
+                </DefaultCardComponent>
+                <DefaultCardComponent title="Gradient Charts">
+                    <GradientChart />
                 </DefaultCardComponent>
             </div>
         </>
