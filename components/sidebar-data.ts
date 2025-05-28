@@ -4,7 +4,8 @@ import {
   MessageCircleMore,
   CalendarDays,
   ShieldCheck,
-  Component
+  Component,
+  ChartPie
 } from "lucide-react";
 
 
@@ -154,6 +155,19 @@ export const data = {
           title: "Switch",
           url: "/switch",
           circleColor: "bg-green-600",
+        },
+      ],
+    },
+    {
+      title: "Chart",
+      url: "#",
+      icon: ChartPie,
+      isActive: true,
+      items: [
+        {
+          title: "Line Chart",
+          url: "/line-chart",
+          circleColor: "bg-orange-600",
         },
       ],
     },

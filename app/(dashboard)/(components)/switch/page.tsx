@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import DefaultCardComponent from "../components/default-card-component";
+import DefaultCardComponent from "../../components/default-card-component";
 import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
 

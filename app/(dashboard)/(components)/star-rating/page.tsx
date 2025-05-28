@@ -1,7 +1,7 @@
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Star } from "lucide-react";
-import DefaultCardComponent from "../components/default-card-component";
+import DefaultCardComponent from "../../components/default-card-component";
 
 const TypographyPage = () => {
   return (

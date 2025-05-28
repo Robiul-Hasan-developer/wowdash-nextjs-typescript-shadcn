@@ -1,6 +1,6 @@
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import DefaultCardComponent from "../components/default-card-component";
+import DefaultCardComponent from "../../components/default-card-component";
 import { X, Smile, CheckCheck, AlertCircle, Link, Trash2, BadgeCheck, Clock, ShieldCheck } from 'lucide-react';
 
 const TypographyPage = () => {
