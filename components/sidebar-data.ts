@@ -169,6 +169,16 @@ export const data = {
           url: "/line-chart",
           circleColor: "bg-orange-600",
         },
+        {
+          title: "Column Chart",
+          url: "/column-chart",
+          circleColor: "bg-yellow-600",
+        },
+        {
+          title: "Pie Chart",
+          url: "/pie-chart",
+          circleColor: "bg-green-600",
+        },
       ],
     },
 
