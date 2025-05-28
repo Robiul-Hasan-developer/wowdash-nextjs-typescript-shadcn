@@ -2,6 +2,8 @@ import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "../../components/default-card-component";
 import LineChart from "@/components/charts/line-chart";
+import ZoomableChart from "@/components/charts/zoomable-chart";
+import LineChartLabel from "@/components/charts/line-chart-label";
 
 const LineChartPage = () => {
     return (
@@ -13,7 +15,10 @@ const LineChartPage = () => {
                     <LineChart />
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Zoomable Chart">
-                    <LineChart />
+                    <ZoomableChart />
+                </DefaultCardComponent>
+                <DefaultCardComponent title="Line Chart with Data Labels">
+                    <LineChartLabel />
                 </DefaultCardComponent>
             </div>
         </>
