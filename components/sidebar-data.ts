@@ -7,9 +7,9 @@ import {
   Component,
   ChartPie,
   Boxes,
-  Server
+  Server,
+  UsersRound,
 } from "lucide-react";
-
 
 export const data = {
   navMain: [
@@ -183,12 +183,12 @@ export const data = {
         },
       ],
     },
-     {
+    {
       title: "Widgets",
       url: "/widgets",
       icon: Boxes,
     },
-      {
+    {
       title: "Table",
       url: "#",
       icon: Server,
@@ -198,6 +198,24 @@ export const data = {
           title: "Basic Table",
           url: "/basic-table",
           circleColor: "bg-orange-600",
+        },
+      ],
+    },
+    {
+      title: "Users",
+      url: "#",
+      icon: UsersRound,
+      isActive: true,
+      items: [
+        {
+          title: "Users List",
+          url: "/users-list",
+          circleColor: "bg-blue-600",
+        },
+        {
+          title: "Add User",
+          url: "/add-user",
+          circleColor: "bg-yellow-600",
         },
       ],
     },
