@@ -5,7 +5,9 @@ import {
   CalendarDays,
   ShieldCheck,
   Component,
-  ChartPie
+  ChartPie,
+  Boxes,
+  Server
 } from "lucide-react";
 
 
@@ -184,7 +186,25 @@ export const data = {
      {
       title: "Widgets",
       url: "/widgets",
-      icon: ChartPie,
+      icon: Boxes,
+    },
+      {
+      title: "Table",
+      url: "#",
+      icon: Server,
+      isActive: true,
+      items: [
+        {
+          title: "Basic Table",
+          url: "/basic-table",
+          circleColor: "bg-orange-600",
+        },
+        {
+          title: "Data Table",
+          url: "/data-table",
+          circleColor: "bg-yellow-600",
+        },
+      ],
     },
     {
       label: "Pages",
