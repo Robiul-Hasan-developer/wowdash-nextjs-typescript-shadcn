@@ -77,29 +77,29 @@ const BorderedTable = () => {
                         <TableRow key={index}>
                             {/* Item */}
                             <TableCell
-                                className={`py-2.5 px-4 border-e last:border-e-0 border-b text-center text-blue-600 first:border-s last:border-e border-neutral-200 dark:border-slate-600 ${isLast ? "rounded-bl-lg" : ""
+                                className={`py-4 px-4 border-e last:border-e-0 border-b text-center text-blue-600 first:border-s last:border-e border-neutral-200 dark:border-slate-600 ${isLast ? "rounded-bl-lg" : ""
                                     }`}
                             >
                                 {product.id}
                             </TableCell>
 
                             {/* name */}
-                            <TableCell className="py-2.5 px-4 border-e last:border-e-0 border-b text-center first:border-s last:border-e border-neutral-200 dark:border-slate-600">
+                            <TableCell className="py-4 px-4 border-e last:border-e-0 border-b text-center first:border-s last:border-e border-neutral-200 dark:border-slate-600">
                                 {product.name}
                             </TableCell>
 
                             {/* date */}
-                            <TableCell className="py-2.5 px-4 border-e last:border-e-0 border-b text-center first:border-s last:border-e border-neutral-200 dark:border-slate-600">
+                            <TableCell className="py-4 px-4 border-e last:border-e-0 border-b text-center first:border-s last:border-e border-neutral-200 dark:border-slate-600">
                                 {product.date}
                             </TableCell>
 
                             {/* amount */}
-                            <TableCell className="py-2.5 px-4 border-e last:border-e-0 border-b text-center first:border-s last:border-e border-neutral-200 dark:border-slate-600">
+                            <TableCell className="py-4 px-4 border-e last:border-e-0 border-b text-center first:border-s last:border-e border-neutral-200 dark:border-slate-600">
                                 {product.amount}
                             </TableCell>
 
                             {/* action */}
-                            <TableCell className="py-2.5 px-4 border-e last:border-e-0 border-b text-center text-blue-600 first:border-s last:border-e border-neutral-200 dark:border-slate-600">
+                            <TableCell className="py-4 px-4 border-e last:border-e-0 border-b text-center text-blue-600 first:border-s last:border-e border-neutral-200 dark:border-slate-600">
                                 {product.action}
                             </TableCell>
 
