@@ -5,6 +5,7 @@ import RecentOrdersTable from "@/components/table/recent-orders-table";
 import TopSellingProductTable from "@/components/table/top-selling-product-table";
 import BorderedTable from "@/components/table/bordered-table";
 import DefaultTable from "@/components/table/default-table";
+import BorderedColorTable from "@/components/table/bordered-color-table";
 
 const BasicTablePage = () => {
     return (
@@ -23,23 +24,13 @@ const BasicTablePage = () => {
                     </DefaultCardComponent>
                 </div>
                 <div className="col-span-12 lg:col-span-6">
-                    <DefaultCardComponent title="Default Table">
-                        TableGoesHere
-                    </DefaultCardComponent>
-                </div>
-                <div className="col-span-12 lg:col-span-6">
-                    <DefaultCardComponent title="Default Table">
-                        TableGoesHere
+                    <DefaultCardComponent title="Tables Border Colors">
+                        <BorderedColorTable />
                     </DefaultCardComponent>
                 </div>
                 <div className="col-span-12 lg:col-span-6">
                     <DefaultCardComponent title="Striped Rows">
                         <TopSellingProductTable />
-                    </DefaultCardComponent>
-                </div>
-                <div className="col-span-12 lg:col-span-6">
-                    <DefaultCardComponent title="Default Table">
-                        TableGoesHere
                     </DefaultCardComponent>
                 </div>
                 <div className="col-span-12">
