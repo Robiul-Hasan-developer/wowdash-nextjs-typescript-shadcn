@@ -199,11 +199,6 @@ export const data = {
           url: "/basic-table",
           circleColor: "bg-orange-600",
         },
-        {
-          title: "Data Table",
-          url: "/data-table",
-          circleColor: "bg-yellow-600",
-        },
       ],
     },
     {

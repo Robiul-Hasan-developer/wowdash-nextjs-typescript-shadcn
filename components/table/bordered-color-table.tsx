@@ -8,6 +8,8 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
+import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 const sellingProduct = [
     {
@@ -107,7 +109,13 @@ const BorderedColorTable = () => {
 
                             {/* action */}
                             <TableCell className="py-4 px-4 border-e last:border-e-0 border-b text-center text-blue-600 first:border-s last:border-e border-blue-600 dark:border-slate-600">
-                                {product.action}
+                                <Link
+                                    href="#"
+                                    className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-500 hover:text-blue-400 text-sm"
+                                >
+                                    {product.action}
+                                    <ChevronRight width={16} height={16} />
+                                </Link>
                             </TableCell>
 
                         </TableRow>
