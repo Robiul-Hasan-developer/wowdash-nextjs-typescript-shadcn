@@ -181,7 +181,11 @@ export const data = {
         },
       ],
     },
-
+     {
+      title: "Widgets",
+      url: "/widgets",
+      icon: ChartPie,
+    },
     {
       label: "Pages",
     },
