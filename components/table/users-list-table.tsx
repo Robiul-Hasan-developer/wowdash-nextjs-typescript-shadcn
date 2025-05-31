@@ -216,8 +216,8 @@ export default function UserTable() {
                             >
                                 <span
                                     className={`px-3 py-1.5 rounded text-sm font-medium border ${user.status === "Active"
-                                        ? "bg-green-100 text-green-600 border-green-600"
-                                        : "bg-gray-200 text-gray-600 border-gray-400"
+                                        ? "bg-green-600/15 text-green-600 border-green-600"
+                                        : "bg-gray-600/15 text-gray-600 dark:text-white border-gray-400"
                                         }`}
                                 >
                                     {user.status}
