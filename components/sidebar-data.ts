@@ -9,6 +9,7 @@ import {
   Boxes,
   Server,
   UsersRound,
+  StickyNote,
 } from "lucide-react";
 
 export const data = {
@@ -156,6 +157,29 @@ export const data = {
         {
           title: "Switch",
           url: "/switch",
+          circleColor: "bg-green-600",
+        },
+      ],
+    },
+    {
+      title: "Forms",
+      url: "#",
+      icon: StickyNote,
+      isActive: true,
+      items: [
+        {
+          title: "Input Forms",
+          url: "/input-forms",
+          circleColor: "bg-primary",
+        },
+        {
+          title: "Input Layout",
+          url: "/input-layout",
+          circleColor: "bg-yellow-500",
+        },
+        {
+          title: "Form Validation",
+          url: "/form-validation",
           circleColor: "bg-green-600",
         },
       ],
