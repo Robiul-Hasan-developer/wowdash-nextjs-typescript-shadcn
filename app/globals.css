@@ -200,6 +200,9 @@
   a {
     @apply active:scale-[.95];
   }
+  span {
+    @apply inline-block;
+  }
   /* Reset css End */
 
   /* ======================================== Apexchart css End ======================================== */

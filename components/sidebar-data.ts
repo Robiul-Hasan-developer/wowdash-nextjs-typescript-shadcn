@@ -213,8 +213,8 @@ export const data = {
           circleColor: "bg-blue-600",
         },
         {
-          title: "Add User",
-          url: "/add-user",
+          title: "Users Grid",
+          url: "/users-grid",
           circleColor: "bg-yellow-600",
         },
       ],
