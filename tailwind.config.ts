@@ -19,20 +19,23 @@
 
 // export default config;
 
-// tailwind.config.js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss";
+
+const config: Config = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}", // or './src/**/*.{js,ts,jsx,tsx}' if you're using /src
+    "./app/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@shadcn/ui/**/*.{js,ts,jsx,tsx}", // for shadcn
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@shadcn/ui/**/*.{js,ts,jsx,tsx}", // Only needed if you're using ShadCN UI
   ],
   theme: {
     extend: {
       screens: {
-        "3xl": "1650px", // 👈 add your custom screen size here
+        "3xl": "1650px",
       },
     },
   },
   plugins: [],
 };
+
+export default config;
