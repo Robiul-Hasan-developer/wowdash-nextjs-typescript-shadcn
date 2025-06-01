@@ -200,6 +200,27 @@ const InputForms = () => {
                     </div>
                 </div>
 
+                <div className="col-span-12">
+                    <div className="">
+                        <DefaultCardComponent title="Textarea input field">
+                            <div className="grid grid-cols-12 gap-5">
+                                <div className="lg:col-span-4 col-span-12">
+                                    <Label htmlFor="DescriptionOne" className="mb-2">Description </Label>
+                                    <Textarea className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[120px] rounded-lg !shadow-none !ring-0" placeholder="Enter a description..." />
+                                </div>
+                                <div className="lg:col-span-4 col-span-12">
+                                    <Label htmlFor="DescriptionTwo" className="mb-2">Description </Label>
+                                    <Textarea className="border border-neutral-400 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[120px] rounded-lg !shadow-none !ring-0 bg-neutral-200" placeholder="Enter a description..." disabled />
+                                </div>
+                                <div className="lg:col-span-4 col-span-12">
+                                    <Label htmlFor="DescriptionThree" className="mb-2">Description </Label>
+                                    <Textarea className="border border-red-600 px-5 dark:border-slate-700 focus:border-red-600 dark:focus:border-blue-600 focus-visible:border-red-600 h-[120px] rounded-lg !shadow-none !ring-0" placeholder="Enter a description..." />
+                                    <p className="text-red-600 text-sm mt-2"> Please enter a message in the textarea. </p>
+                                </div>
+                            </div>
+                        </DefaultCardComponent>
+                    </div>
+                </div>
 
             </div>
         </>
