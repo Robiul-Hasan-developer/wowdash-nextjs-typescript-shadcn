@@ -129,6 +129,78 @@ const InputForms = () => {
                     </div>
                 </div>
 
+                <div className="md:col-span-6 col-span-12 space-y-6">
+                    <div className="">
+                        <DefaultCardComponent title="Input Group">
+                            <div className="flex flex-col gap-4">
+                                <div className="">
+                                    <Label htmlFor="InputLarge" className="mb-2">Input Large </Label>
+                                    <Input type="email" id="InputLarge" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[60px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                </div>
+                                <div className="">
+                                    <Label htmlFor="InputMedium" className="mb-2">Input Medium </Label>
+                                    <Input type="email" id="InputMedium" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[48px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                </div>
+                                <div className="">
+                                    <Label htmlFor="InputSmall" className="mb-2">Input Small </Label>
+                                    <Input type="email" id="InputSmall" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[40px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                </div>
+                            </div>
+                        </DefaultCardComponent>
+                    </div>
+                    <div className="">
+                        <DefaultCardComponent title="File Input Sizing">
+                            <div className="flex flex-col gap-4">
+                                <div className="">
+                                    <Label htmlFor="FileInputLarge" className="mb-2"> Large Size File Input </Label>
+                                    <Input type="file" id="FileInputLarge" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[60px] leading-[56px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                </div>
+                                <div className="">
+                                    <Label htmlFor="FileInputMedium" className="mb-2"> Medium Size File Input </Label>
+                                    <Input type="file" id="FileInputMedium" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[48px] leading-[40px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                </div>
+                                <div className="">
+                                    <Label htmlFor="FileInputSmall" className="mb-2"> Small Size File Input </Label>
+                                    <Input type="file" id="FileInputSmall" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[40px] leading-[34px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                </div>
+                            </div>
+                        </DefaultCardComponent>
+                    </div>
+                    <div className="">
+                        <DefaultCardComponent title="Custom Forms">
+                            <div className="flex flex-col gap-4">
+                                <div className="">
+                                    <Label htmlFor="ReadonlyInput" className="mb-2"> Readonly Input </Label>
+                                    <Input type="text" id="ReadonlyInput" className="border border-neutral-400 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[48px] leading-[56px] rounded-lg !shadow-none !ring-0 bg-neutral-200" placeholder="info@gmail.com" disabled />
+                                </div>
+                                <div className="">
+                                    <Label htmlFor="InputWithPhone" className="mb-2">Input with Phone </Label>
+                                    <div className="flex">
+                                        <div className="shrink-0 flex px-2 -ms-[0px] flex items-center justify-center border border-neutral-300 border-e-0 rounded-s-lg rounded-e-none">
+                                            <Select>
+                                                <SelectTrigger className="border-0 bg-transparent px-1 text-sm dark:text-white focus:ring-0 focus:ring-offset-0 !h-full">
+                                                    <SelectValue placeholder="US" />
+                                                </SelectTrigger>
+                                                <SelectContent className="bg-white dark:bg-neutral-700">
+                                                    <SelectItem value="US">US</SelectItem>
+                                                    <SelectItem value="BD">BD</SelectItem>
+                                                    <SelectItem value="AUS">AUS</SelectItem>
+                                                </SelectContent>
+                                            </Select>
+                                        </div>
+                                        <Input type="text" id="InputWithPhone" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-e-lg rounded-s-none !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                    </div>
+                                </div>
+                                <div className="">
+                                    <Label htmlFor="FileInputMedium" className="mb-2"> Medium Size File Input </Label>
+                                    <Input type="file" id="FileInputMedium" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[48px] leading-[40px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                </div>
+                            </div>
+                        </DefaultCardComponent>
+                    </div>
+                </div>
+
+
             </div>
         </>
     );
