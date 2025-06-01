@@ -10,8 +10,11 @@ const passwordField = z
   .regex(/[^a-zA-Z0-9]/, { message: "Contain at least one special character." })
   .trim();
 
-// Email schema base 
-const emailField = z.string().min(1, "Email is required").email("Invalid email!");
+// Email schema base
+const emailField = z
+  .string()
+  .min(1, "Email is required")
+  .email("Invalid email!");
 
 // Login Schema
 export const loginSchema = z.object({
@@ -49,3 +52,13 @@ export const createPasswordSchema = z
     message: "Password does not match",
     path: ["confirmPassword"],
   });
+
+export const formSchema = z.object({
+  firstName: z.string().min(1, "First name is required"),
+  lastName: z.string().min(1, "Last name is required"),
+  email: z.string().email("Invalid email"),
+  phone: z.string().min(10, "Phone number is required"),
+  password: z.string().min(6, "Password must be at least 6 characters"),
+});
+
+export type FormSchemaType = z.infer<typeof formSchema>;

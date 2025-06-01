@@ -3,7 +3,6 @@ import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "../components/default-card-component";
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { DatePicker } from "@/components/shared/date-picker";
 import {
     Select,
     SelectContent,
@@ -11,10 +10,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select";
-import Image from "next/image";
-import PaymentIcon from "@/public/assets/images/card/payment-icon.png";
-import { Mail, Copy, UserRound, PhoneCall, Lock } from "lucide-react";
-import { Textarea } from "@/components/ui/textarea";
+import { Mail, UserRound, PhoneCall, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
