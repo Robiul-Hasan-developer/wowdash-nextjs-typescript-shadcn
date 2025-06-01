@@ -214,7 +214,7 @@ const InputForms = () => {
                                 </div>
                                 <div className="lg:col-span-4 col-span-12">
                                     <Label htmlFor="DescriptionThree" className="text-[#4b5563] dark:text-white mb-2">Description </Label>
-                                    <Textarea className="border border-red-600 dark:border-red-600 px-5 focus:border-red-600 dark:focus:border-blue-600 focus-visible:border-red-600 h-[120px] rounded-lg !shadow-none !ring-0" placeholder="Enter a description..." />
+                                    <Textarea className="border border-red-600 dark:border-red-600 px-5 focus:border-red-600 dark:focus:border-red-600 focus-visible:border-red-600 h-[120px] rounded-lg !shadow-none !ring-0" placeholder="Enter a description..." />
                                     <p className="text-red-600 text-sm mt-2"> Please enter a message in the textarea. </p>
                                 </div>
                             </div>
