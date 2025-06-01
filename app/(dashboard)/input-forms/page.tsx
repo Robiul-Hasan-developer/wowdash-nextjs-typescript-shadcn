@@ -27,23 +27,23 @@ const InputForms = () => {
                         <DefaultCardComponent title="Default Inputs">
                             <div className="flex flex-col gap-4">
                                 <div className="">
-                                    <Label htmlFor="basicInput" className="mb-2">Basic Input </Label>
+                                    <Label htmlFor="basicInput" className="text-[#4b5563] mb-2">Basic Input </Label>
                                     <Input type="text" id="basicInput" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-lg !shadow-none !ring-0" />
                                 </div>
                                 <div className="">
-                                    <Label htmlFor="InputWithPlaceholder" className="mb-2">Input With Placeholder </Label>
+                                    <Label htmlFor="InputWithPlaceholder" className="text-[#4b5563] mb-2">Input With Placeholder </Label>
                                     <Input type="email" id="InputWithPlaceholder" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
                                 </div>
                                 <div className="">
-                                    <Label htmlFor="InputWithPhone" className="mb-2">Input With Phone </Label>
+                                    <Label htmlFor="InputWithPhone" className="text-[#4b5563] mb-2">Input With Phone </Label>
                                     <Input type="tel" id="InputWithPhone" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-lg !shadow-none !ring-0" placeholder="+1 (555) 253-08515" />
                                 </div>
                                 <div className="">
-                                    <Label htmlFor="InputDate" className="mb-2">Input Date </Label>
+                                    <Label htmlFor="InputDate" className="text-[#4b5563] mb-2">Input Date </Label>
                                     <DatePicker />
                                 </div>
                                 <div className="">
-                                    <Label htmlFor="InputWithPayment" className="mb-2">Input with Payment </Label>
+                                    <Label htmlFor="InputWithPayment" className="text-[#4b5563] mb-2">Input with Payment </Label>
                                     <div className="flex">
                                         <div className="shrink-0 flex px-2 -ms-[0px] flex items-center justify-center w-[56px] border border-neutral-300 border-e-0 rounded-s-lg rounded-e-none">
                                             <Image src={PaymentIcon} alt="Image" />
@@ -58,7 +58,7 @@ const InputForms = () => {
                         <DefaultCardComponent title="Input Group">
                             <div className="flex flex-col gap-4">
                                 <div className="">
-                                    <Label htmlFor="MyInput" className="mb-2">Input </Label>
+                                    <Label htmlFor="MyInput" className="text-[#4b5563] mb-2">Input </Label>
                                     <div className="flex">
                                         <div className="shrink-0 flex px-2 -ms-[0px] flex items-center justify-center w-[42px] border border-neutral-300 border-e-0 rounded-s-lg rounded-e-none">
                                             <Mail className="w-4" />
@@ -67,7 +67,7 @@ const InputForms = () => {
                                     </div>
                                 </div>
                                 <div className="">
-                                    <Label htmlFor="MyInputOne" className="mb-2">Input </Label>
+                                    <Label htmlFor="MyInputOne" className="text-[#4b5563] mb-2">Input </Label>
                                     <div className="flex">
                                         <div className="shrink-0 flex px-2 -ms-[0px] flex items-center justify-center border border-neutral-300 border-e-0 rounded-s-lg rounded-e-none">
                                             <Select>
@@ -85,7 +85,7 @@ const InputForms = () => {
                                     </div>
                                 </div>
                                 <div className="">
-                                    <Label htmlFor="MyInputTwo" className="mb-2">Input </Label>
+                                    <Label htmlFor="MyInputTwo" className="text-[#4b5563] mb-2">Input </Label>
                                     <div className="flex">
                                         <Input type="text" id="MyInputTwo" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-s-lg rounded-e-none !shadow-none !ring-0" placeholder="info@gmail.com" />
                                         <div className="shrink-0 flex px-2 -ms-[0px] flex items-center justify-center border border-neutral-300 border-s-0 rounded-e-lg rounded-s-none">
@@ -103,7 +103,7 @@ const InputForms = () => {
                                     </div>
                                 </div>
                                 <div className="">
-                                    <Label htmlFor="MyInputHttps" className="mb-2">Input </Label>
+                                    <Label htmlFor="MyInputHttps" className="text-[#4b5563] mb-2">Input </Label>
                                     <div className="flex">
                                         <div className="shrink-0 flex px-2 -ms-[0px] flex items-center justify-center border border-neutral-300 border-e-0 rounded-s-lg rounded-e-none">
                                             http://
@@ -112,7 +112,7 @@ const InputForms = () => {
                                     </div>
                                 </div>
                                 <div className="">
-                                    <Label htmlFor="MyInputTwoCopy" className="mb-2">Input </Label>
+                                    <Label htmlFor="MyInputTwoCopy" className="text-[#4b5563] mb-2">Input </Label>
                                     <div className="flex">
                                         <Input type="text" id="MyInputTwoCopy" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-s-lg rounded-e-none !shadow-none !ring-0" placeholder="www.random.com" />
                                         <div className="shrink-0 flex px-2 -ms-[0px] flex items-center justify-center border border-neutral-300 border-s-0 rounded-e-lg rounded-s-none">
@@ -134,15 +134,15 @@ const InputForms = () => {
                         <DefaultCardComponent title="Input Group">
                             <div className="flex flex-col gap-4">
                                 <div className="">
-                                    <Label htmlFor="InputLarge" className="mb-2">Input Large </Label>
+                                    <Label htmlFor="InputLarge" className="text-[#4b5563] mb-2">Input Large </Label>
                                     <Input type="email" id="InputLarge" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[60px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
                                 </div>
                                 <div className="">
-                                    <Label htmlFor="InputMedium" className="mb-2">Input Medium </Label>
+                                    <Label htmlFor="InputMedium" className="text-[#4b5563] mb-2">Input Medium </Label>
                                     <Input type="email" id="InputMedium" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[48px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
                                 </div>
                                 <div className="">
-                                    <Label htmlFor="InputSmall" className="mb-2">Input Small </Label>
+                                    <Label htmlFor="InputSmall" className="text-[#4b5563] mb-2">Input Small </Label>
                                     <Input type="email" id="InputSmall" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[40px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
                                 </div>
                             </div>
@@ -152,15 +152,15 @@ const InputForms = () => {
                         <DefaultCardComponent title="File Input Sizing">
                             <div className="flex flex-col gap-4">
                                 <div className="">
-                                    <Label htmlFor="FileInputLarge" className="mb-2"> Large Size File Input </Label>
+                                    <Label htmlFor="FileInputLarge" className="text-[#4b5563] mb-2"> Large Size File Input </Label>
                                     <Input type="file" id="FileInputLarge" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[60px] leading-[56px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
                                 </div>
                                 <div className="">
-                                    <Label htmlFor="FileInputMedium" className="mb-2"> Medium Size File Input </Label>
+                                    <Label htmlFor="FileInputMedium" className="text-[#4b5563] mb-2"> Medium Size File Input </Label>
                                     <Input type="file" id="FileInputMedium" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[48px] leading-[40px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
                                 </div>
                                 <div className="">
-                                    <Label htmlFor="FileInputSmall" className="mb-2"> Small Size File Input </Label>
+                                    <Label htmlFor="FileInputSmall" className="text-[#4b5563] mb-2"> Small Size File Input </Label>
                                     <Input type="file" id="FileInputSmall" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[40px] leading-[34px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
                                 </div>
                             </div>
@@ -170,11 +170,11 @@ const InputForms = () => {
                         <DefaultCardComponent title="Custom Forms">
                             <div className="flex flex-col gap-4">
                                 <div className="">
-                                    <Label htmlFor="ReadonlyInput" className="mb-2"> Readonly Input </Label>
+                                    <Label htmlFor="ReadonlyInput" className="text-[#4b5563] mb-2"> Readonly Input </Label>
                                     <Input type="text" id="ReadonlyInput" className="border border-neutral-400 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[48px] leading-[56px] rounded-lg !shadow-none !ring-0 bg-neutral-200" placeholder="info@gmail.com" disabled />
                                 </div>
                                 <div className="">
-                                    <Label htmlFor="InputWithPhone" className="mb-2">Input with Phone </Label>
+                                    <Label htmlFor="InputWithPhone" className="text-[#4b5563] mb-2">Input with Phone </Label>
                                     <div className="flex">
                                         <div className="shrink-0 flex px-2 -ms-[0px] flex items-center justify-center border border-neutral-300 border-e-0 rounded-s-lg rounded-e-none">
                                             <Select>
@@ -192,7 +192,7 @@ const InputForms = () => {
                                     </div>
                                 </div>
                                 <div className="">
-                                    <Label htmlFor="FileInputMedium" className="mb-2"> Medium Size File Input </Label>
+                                    <Label htmlFor="FileInputMedium" className="text-[#4b5563] mb-2"> Medium Size File Input </Label>
                                     <Input type="file" id="FileInputMedium" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[48px] leading-[40px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
                                 </div>
                             </div>
@@ -205,15 +205,15 @@ const InputForms = () => {
                         <DefaultCardComponent title="Textarea input field">
                             <div className="grid grid-cols-12 gap-5">
                                 <div className="lg:col-span-4 col-span-12">
-                                    <Label htmlFor="DescriptionOne" className="mb-2">Description </Label>
+                                    <Label htmlFor="DescriptionOne" className="text-[#4b5563] mb-2">Description </Label>
                                     <Textarea className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[120px] rounded-lg !shadow-none !ring-0" placeholder="Enter a description..." />
                                 </div>
                                 <div className="lg:col-span-4 col-span-12">
-                                    <Label htmlFor="DescriptionTwo" className="mb-2">Description </Label>
+                                    <Label htmlFor="DescriptionTwo" className="text-[#4b5563] mb-2">Description </Label>
                                     <Textarea className="border border-neutral-400 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[120px] rounded-lg !shadow-none !ring-0 bg-neutral-200" placeholder="Enter a description..." disabled />
                                 </div>
                                 <div className="lg:col-span-4 col-span-12">
-                                    <Label htmlFor="DescriptionThree" className="mb-2">Description </Label>
+                                    <Label htmlFor="DescriptionThree" className="text-[#4b5563] mb-2">Description </Label>
                                     <Textarea className="border border-red-600 px-5 dark:border-slate-700 focus:border-red-600 dark:focus:border-blue-600 focus-visible:border-red-600 h-[120px] rounded-lg !shadow-none !ring-0" placeholder="Enter a description..." />
                                     <p className="text-red-600 text-sm mt-2"> Please enter a message in the textarea. </p>
                                 </div>
