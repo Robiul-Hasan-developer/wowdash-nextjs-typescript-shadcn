@@ -3,8 +3,11 @@ import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "../components/default-card-component";
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { DatePicker } from "@/components/shared/date-picker";
+import Image from "next/image";
+import PaymentIcon from "@/public/assets/images/card/payment-icon.png";
 
-const TypographyPage = () => {
+const InputForms = () => {
     return (
         <>
             <DashboardBreadcrumb title="Input From" text="Input From" />
@@ -26,11 +29,16 @@ const TypographyPage = () => {
                         </div>
                         <div className="">
                             <Label htmlFor="InputDate" className="mb-2">Input Date </Label>
-                            <Input type="date" id="InputDate" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-lg !shadow-none !ring-0" placeholder="Placeolder" />
+                            <DatePicker />
                         </div>
                         <div className="">
-                            <Label htmlFor="basicInput" className="mb-2">Basic Input </Label>
-                            <Input type="text" id="basicInput" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-lg !shadow-none !ring-0" placeholder="Placeolder" />
+                            <Label htmlFor="InputWithPayment" className="mb-2">Input with Payment </Label>
+                            <div className="flex">
+                                <div className="shrink-0 flex -ms-[0px] flex items-center justify-center w-[56px] border border-neutral-300 border-e-0 rounded-s-lg rounded-e-none">
+                                    <Image src={PaymentIcon} alt="Image" />
+                                </div>
+                                <Input type="text" id="InputWithPayment" className="border border-neutral-300 px-5 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-e-lg rounded-s-none !shadow-none !ring-0" placeholder="Card Number" />
+                            </div>
                         </div>
                     </div>
                 </DefaultCardComponent>
@@ -38,4 +46,4 @@ const TypographyPage = () => {
         </>
     );
 };
-export default TypographyPage;
+export default InputForms;
