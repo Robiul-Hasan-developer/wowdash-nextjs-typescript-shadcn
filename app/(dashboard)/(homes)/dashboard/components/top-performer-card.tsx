@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-
 import PerformerImg1 from "@/public/assets/images/users/user1.png";
 import PerformerImg2 from "@/public/assets/images/users/user2.png";
 import PerformerImg3 from "@/public/assets/images/users/user3.png";

@@ -6,14 +6,13 @@ import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import CoinAnalyticsChart from '@/components/charts/coin-analytics-chart';
 
-
 const CoinAnalyticsCard = () => {
     return (
         <Card className="card h-full rounded-lg border-0">
             <CardContent className="card-body p-0">
                 <div className="flex items-center flex-wrap gap-2 justify-between">
                     <h6 className="mb-0 font-bold text-lg">Coin Analytics</h6>
-                    
+
                     <RadioGroup defaultValue="BTC" className='flex items-center gap-4'>
                         <div className="flex items-center space-x-2">
                             <RadioGroupItem value="BTC" id="BTC" className='border border-primary' />
@@ -32,7 +31,7 @@ const CoinAnalyticsCard = () => {
                             <Label htmlFor="LTE">LTE</Label>
                         </div>
                     </RadioGroup>
-                    
+
                     <CustomSelect
                         placeholder="Yearly"
                         options={["Yearly", "Monthly", "Weekly", "Today"]}
@@ -46,12 +45,12 @@ const CoinAnalyticsCard = () => {
                         <span className="bg-green-100 dark:bg-green-600/25 border border-green-600/25 px-2.5 py-1 rounded-full font-semibold text-green-600 dark:text-green-500 text-sm inline-flex items-center gap-1">
                             10%
                             <ArrowUp className="w-3 h-3" />
-                        </span> 
+                        </span>
                     </p>
                 </div>
 
-                <CoinAnalyticsChart/>
-            
+                <CoinAnalyticsChart />
+
             </CardContent>
         </Card>
     );

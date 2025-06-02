@@ -35,10 +35,7 @@ var chartOptions: ApexOptions = {
     }]
 };
 
-
 const chartSeries = [20, 22, 28, 10]
-
-
 
 const MultipleSeriesChart = () => {
     return (

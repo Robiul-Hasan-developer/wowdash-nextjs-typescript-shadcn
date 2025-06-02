@@ -1,6 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
 import React from 'react';
-
 import CommonLink from '@/components/shared/common-link';
 import TopCustomerList from '@/components/shared/top-customer-list';
 
@@ -14,7 +13,7 @@ const TopCustomersCard = () => {
                 </div>
 
                 <div className="mt-4 space-y-6">
-                    <TopCustomerList/>
+                    <TopCustomerList />
                 </div>
             </CardContent>
         </Card>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import AuthImage from "@/public/assets/images/auth/auth-img.png";
 import ThemeLogo from "@/components/shared/theme-logo";

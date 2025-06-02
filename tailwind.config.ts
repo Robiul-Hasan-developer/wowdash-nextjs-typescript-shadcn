@@ -1,5 +1,3 @@
-// import type { Config } from "tailwindcss";
-
 const config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -10,7 +8,7 @@ const config = {
   theme: {
     extend: {
       screens: {
-        "3xl": "1650px", // This enables 3xl screen size
+        "3xl": "1650px",
       },
     },
   },

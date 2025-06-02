@@ -7,18 +7,18 @@ const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
 
 interface LabeledValue {
     chartColor: string;
-  }
-  
+}
 
-const DailySalesChart = ({chartColor} : LabeledValue) => {
-    var chartOptions:ApexOptions = {
-     
+
+const DailySalesChart = ({ chartColor }: LabeledValue) => {
+    var chartOptions: ApexOptions = {
+
         chart: {
             type: 'area',
             width: '100%',
             height: 360,
             sparkline: {
-              enabled: false // Remove whitespace
+                enabled: false // Remove whitespace
             },
             toolbar: {
                 show: false
@@ -42,26 +42,26 @@ const DailySalesChart = ({chartColor} : LabeledValue) => {
                 lines: {
                     show: false
                 }
-            },   
+            },
             yaxis: {
                 lines: {
                     show: true
                 }
-            },  
+            },
             row: {
                 colors: undefined,
                 opacity: 0.5
-            },  
+            },
             column: {
                 colors: undefined,
                 opacity: 0.5
-            },  
+            },
             padding: {
                 top: -30,
                 right: 0,
                 bottom: -10,
                 left: 0
-            },  
+            },
         },
         fill: {
             type: 'gradient',
@@ -77,14 +77,13 @@ const DailySalesChart = ({chartColor} : LabeledValue) => {
                 stops: [0, 100],
             },
         },
-        // Customize the circle marker color on hover
         markers: {
-          colors: [chartColor],
-          strokeWidth: 3,
-          size: 0,
-          hover: {
-            size: 10
-          }
+            colors: [chartColor],
+            strokeWidth: 3,
+            size: 0,
+            hover: {
+                size: 10
+            }
         },
         xaxis: {
             labels: {
@@ -109,16 +108,16 @@ const DailySalesChart = ({chartColor} : LabeledValue) => {
 
     const chartSeries = [
         {
-          name: 'This Day',
-          data: [18, 25, 20, 35, 25, 55, 45, 50, 40],
+            name: 'This Day',
+            data: [18, 25, 20, 35, 25, 55, 45, 50, 40],
         },
     ]
-    
+
     return (
         <Chart
             options={chartOptions}
             series={chartSeries}
-            type="area" 
+            type="area"
             height={370}
         />
     );

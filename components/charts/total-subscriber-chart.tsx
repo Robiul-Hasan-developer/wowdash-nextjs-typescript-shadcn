@@ -5,10 +5,8 @@ import React from "react";
 import { ApexOptions } from "apexcharts";
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
 
-
 const TotalSubscriberChart = () => {
-
-    const chartSeries:ApexAxisChartSeries = [{
+    const chartSeries: ApexAxisChartSeries = [{
         name: "Sales",
         data: [{
             x: 'Sun',
@@ -34,7 +32,7 @@ const TotalSubscriberChart = () => {
         }]
     }]
 
-    const chartOptions:ApexOptions = {
+    const chartOptions: ApexOptions = {
         chart: {
             type: 'bar',
             height: 235,
@@ -44,9 +42,9 @@ const TotalSubscriberChart = () => {
         },
         plotOptions: {
             bar: {
-              borderRadius: 6,
-              horizontal: false,
-              columnWidth: '52%',
+                borderRadius: 6,
+                horizontal: false,
+                columnWidth: '52%',
             }
         },
         dataLabels: {
@@ -72,10 +70,10 @@ const TotalSubscriberChart = () => {
             strokeDashArray: 4, // Use a number for dashed style
             position: 'back',
             padding: {
-              top: -10,
-              right: -10,
-              bottom: -10,
-              left: -10
+                top: -10,
+                right: -10,
+                bottom: -10,
+                left: -10
             }
         },
         xaxis: {
@@ -83,15 +81,15 @@ const TotalSubscriberChart = () => {
             categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
         },
         yaxis: {
-          show: false,
+            show: false,
         },
     };
-    
+
     return (
         <Chart
             options={chartOptions}
             series={chartSeries}
-            type="bar" 
+            type="bar"
             height={235}
         />
     );

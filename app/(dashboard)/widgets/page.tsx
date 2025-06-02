@@ -10,7 +10,6 @@ import TopCountriesCard from "../(homes)/dashboard/components/top-countries-card
 import ClientPaymentStatusCard from "../(homes)/crm/components/client-payment-status-card";
 import EarningStatisticsCard from "../(homes)/crm/components/earning-statistics-card";
 import UserOverviewCard from "../(homes)/dashboard/components/user-overview-card";
-import RecentOrdersCard from "../(homes)/ecommerce/component/recent-orders-card";
 import StaticCard from "../(homes)/investment/components/static-card";
 import DailySalesCard from "../(homes)/ecommerce/component/daily-sales-card";
 
