@@ -8,8 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import UserList1 from "@/public/assets/images/user-list/user-list1.png";
 import UserList2 from "@/public/assets/images/user-list/user-list2.png";
 import Link from "next/link";
-import { MoveLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Images, MoveLeft, Printer, Star, Trash2, LinkIcon, Send } from "lucide-react";
 
 const EmailDetailsPage = () => {
     return (
@@ -25,23 +24,23 @@ const EmailDetailsPage = () => {
                     <div className="card h-full p-0 email-card overflow-x-auto block border-0 !p-0">
                         <div className="min-w-[450px] flex flex-col justify-between h-full">
                             <div className="">
-                                <div className="card-header border-b border-neutral-200 dark:border-neutral-600 bg-white dark:bg-neutral-700 py-4 px-6 flex items-center gap-3 justify-between flex-wrap">
+                                <div className="card-header border-b border-neutral-200 dark:border-neutral-600 bg-white dark:bg-[#273142] py-4 px-6 flex items-center gap-3 justify-between flex-wrap">
                                     <div className="flex items-center gap-2">
-                                        <Button variant="link" className="p-0 text-neutral-600 flex me-2">
+                                        <Link href="/email" className="!p-0 text-neutral-600 dark:text-white flex me-2 hover:text-blue-600">
                                             <MoveLeft />
-                                        </Button>
+                                        </Link>
                                         <h6 className="mb-0 text-lg">Kathryn Murphy</h6>
                                         <span className="bg-blue-100 dark:bg-blue-600/25 text-blue-600 dark:text-blue-400 text-sm rounded px-2">Personal</span>
                                     </div>
                                     <div className="flex items-center gap-3">
-                                        <button className="text-neutral-600 flex">
-                                            {/* <iconify-icon icon="mi:print" className="icon text-2xl line-height-1"></iconify-icon> */}
+                                        <button className="text-neutral-600 dark:text-white flex">
+                                            <Printer className="w-6 h-6" />
                                         </button>
-                                        <button className="text-neutral-600 flex">
-                                            {/* <iconify-icon icon="mdi:star-outline" className="icon text-2xl line-height-1"></iconify-icon> */}
+                                        <button className="text-neutral-600 dark:text-white flex">
+                                            <Star className="w-6 h-6" />
                                         </button>
-                                        <button className="text-neutral-600 flex">
-                                            {/* <iconify-icon icon="material-symbols:delete-outline" className="icon text-2xl line-height-1"></iconify-icon> */}
+                                        <button className="text-neutral-600 dark:text-white flex">
+                                            <Trash2 className="w-6 h-6" />
                                         </button>
                                     </div>
                                 </div>
@@ -52,11 +51,11 @@ const EmailDetailsPage = () => {
                                             <div className="">
                                                 <div className="flex items-center flex-wrap gap-2">
                                                     <h6 className="mb-0 text-lg">Kathryn Murphy</h6>
-                                                    <span className="text-neutral-600 text-base">kathrynmurphy@gmail.com</span>
+                                                    <span className="text-neutral-600 dark:text-white text-base">kathrynmurphy@gmail.com</span>
                                                 </div>
                                                 <div className="mt-5">
                                                     <p className="mb-4 text-neutral-600 dark:text-neutral-200">Hi William</p>
-                                                    <p className="mb-4 text-neutral-600 dark:text-neutral-200">Just confirming that we transferred $63.86 to you via PayPal <Link href="#" className="text-primary-600 underline">(info367@gmail.com)</Link> which you earned on the themewow Market since your last payout.</p>
+                                                    <p className="mb-4 text-neutral-600 dark:text-neutral-200">Just confirming that we transferred $63.86 to you via PayPal <Link href="#" className="text-blue-600 underline">(info367@gmail.com)</Link> which you earned on the themewow Market since your last payout.</p>
                                                     <p className="mb-0 text-neutral-600 dark:text-neutral-200">Thank you for selling with us!</p>
                                                 </div>
                                             </div>
@@ -68,7 +67,7 @@ const EmailDetailsPage = () => {
                                             <div className="">
                                                 <div className="flex items-center flex-wrap gap-2">
                                                     <h6 className="mb-0 text-lg">Subrata Sen</h6>
-                                                    <span className="text-neutral-600 text-base">subratasen@gmail.com</span>
+                                                    <span className="text-neutral-600 dark:text-white text-base">subratasen@gmail.com</span>
                                                 </div>
                                                 <div className="mt-5">
                                                     <p className="mb-0 text-neutral-600 dark:text-neutral-200">Awesome, thank you so much!</p>
@@ -78,25 +77,25 @@ const EmailDetailsPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="card-footer py-4 px-6 bg-white dark:bg-neutral-700 border-t border-neutral-200 dark:border-neutral-600">
+                            <div className="card-footer py-4 px-6 bg-white dark:bg-[#273142] border-t border-neutral-200 dark:border-neutral-600">
                                 <form action="#">
                                     <div className="flex items-center justify-between">
-                                        <Textarea className="textarea-max-height bg-transparent focus:ring-0 w-full p-0 rounded-lg border-0 py-2 ps-2 resize-none scroll-sm" placeholder="Write massage" />
+                                        <Textarea className="max-h-[80px] bg-transparent focus:ring-0 w-full p-0 rounded-lg border-0 py-2 ps-2 resize-none scroll-sm focus-visible:ring-0" placeholder="Write massage" />
                                         <div className="flex items-center gap-4 ms-4">
                                             <div className="">
-                                                <Label htmlFor="attatchment" className="text-neutral-600 text-xl">
-                                                    {/* <iconify-icon icon="octicon:link-16" className="icon line-height-1"></iconify-icon> */}
+                                                <Label htmlFor="attatchment" className="text-neutral-600 text-xl dark:text-white">
+                                                    <LinkIcon className="w-5 h-5" />
                                                 </Label>
                                                 <Input type="file" id="attatchment" hidden />
                                             </div>
                                             <div className="">
-                                                <Label htmlFor="gallery" className="text-neutral-600 text-xl">
-                                                    {/* <iconify-icon icon="solar:gallery-bold" className="icon line-height-1"></iconify-icon> */}
+                                                <Label htmlFor="gallery" className="text-neutral-600 text-xl dark:text-white">
+                                                    <Images className="w-5 h-5" />
                                                 </Label>
                                                 <Input type="file" id="gallery" hidden />
                                             </div>
-                                            <button type="submit" className="btn bg-primary-600 hover:bg-primary-700 text-white text-sm px-3 py-3 w-full rounded-lg flex items-center justify-center gap-1 h-[44px]">
-                                                {/* <iconify-icon icon="ion:paper-plane-outline" className="icon text-lg line-height-1"></iconify-icon> */}
+                                            <button type="submit" className="btn bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-3 w-full rounded-lg flex items-center justify-center gap-1 h-[44px]">
+                                                <Send className="w-4 h-4" />
                                                 Send
                                             </button>
                                         </div>
