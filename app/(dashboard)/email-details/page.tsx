@@ -9,6 +9,7 @@ import UserList1 from "@/public/assets/images/user-list/user-list1.png";
 import UserList2 from "@/public/assets/images/user-list/user-list2.png";
 import Link from "next/link";
 import { Images, MoveLeft, Printer, Star, Trash2, LinkIcon, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const EmailDetailsPage = () => {
     return (
@@ -33,13 +34,13 @@ const EmailDetailsPage = () => {
                                         <span className="bg-blue-100 dark:bg-blue-600/25 text-blue-600 dark:text-blue-400 text-sm rounded px-2">Personal</span>
                                     </div>
                                     <div className="flex items-center gap-3">
-                                        <button className="text-neutral-600 dark:text-white flex">
+                                        <button className="text-neutral-600 dark:text-white flex cursor-pointer hover:text-blue-600">
                                             <Printer className="w-6 h-6" />
                                         </button>
-                                        <button className="text-neutral-600 dark:text-white flex">
+                                        <button className="text-neutral-600 dark:text-white flex cursor-pointer hover:text-blue-600">
                                             <Star className="w-6 h-6" />
                                         </button>
-                                        <button className="text-neutral-600 dark:text-white flex">
+                                        <button className="text-neutral-600 dark:text-white flex cursor-pointer hover:text-blue-600">
                                             <Trash2 className="w-6 h-6" />
                                         </button>
                                     </div>
@@ -83,21 +84,21 @@ const EmailDetailsPage = () => {
                                         <Textarea className="max-h-[80px] bg-transparent focus:ring-0 w-full p-0 rounded-lg border-0 py-2 ps-2 resize-none scroll-sm focus-visible:ring-0" placeholder="Write massage" />
                                         <div className="flex items-center gap-4 ms-4">
                                             <div className="">
-                                                <Label htmlFor="attatchment" className="text-neutral-600 text-xl dark:text-white">
+                                                <Label htmlFor="attatchment" className="text-neutral-600 text-xl dark:text-white cursor-pointer hover:text-blue-600">
                                                     <LinkIcon className="w-5 h-5" />
                                                 </Label>
                                                 <Input type="file" id="attatchment" hidden />
                                             </div>
                                             <div className="">
-                                                <Label htmlFor="gallery" className="text-neutral-600 text-xl dark:text-white">
+                                                <Label htmlFor="gallery" className="text-neutral-600 text-xl dark:text-white cursor-pointer hover:text-blue-600">
                                                     <Images className="w-5 h-5" />
                                                 </Label>
                                                 <Input type="file" id="gallery" hidden />
                                             </div>
-                                            <button type="submit" className="btn bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-3 w-full rounded-lg flex items-center justify-center gap-1 h-[44px]">
+                                            <Button variant="default">
                                                 <Send className="w-4 h-4" />
                                                 Send
-                                            </button>
+                                            </Button>
                                         </div>
                                     </div>
                                 </form>

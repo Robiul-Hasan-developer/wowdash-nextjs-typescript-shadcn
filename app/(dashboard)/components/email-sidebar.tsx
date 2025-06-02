@@ -16,10 +16,10 @@ const EmailSidebar = () => {
                 <div className="mt-4">
                     <ul>
                         <li className="item-active mb-1.5">
-                            <Link href="/email" className="hover:bg-blue-50 dark:hover:bg-blue-800/25 group hover:text-neutral-900 px-2.5 py-2.5 w-full rounded-lg text-neutral-600 flex items-center">
+                            <Link href="/email" className="hover:bg-blue-50 dark:hover:bg-slate-700 group hover:text-neutral-900 px-2.5 py-2.5 w-full rounded-lg text-neutral-600 dark:text-white flex items-center">
                                 <span className="flex items-center gap-2.5 justify-between w-full">
                                     <span className="flex items-center gap-2.5">
-                                        <span className="icon text-2xl line-height-1 flex group-hover:text-blue-600">
+                                        <span className="icon text-2xl line-height-1 flex group-hover:text-blue-600 dark:group-hover:text-white">
                                             <Mail className="w-4" />
                                         </span>
                                         <span className="font-semibold">Inbox</span>
@@ -29,10 +29,10 @@ const EmailSidebar = () => {
                             </Link>
                         </li>
                         <li className="mb-1.5">
-                            <a href="/email" className="hover:bg-blue-50 dark:hover:bg-blue-800/25 group hover:text-neutral-900 px-2.5 py-2.5 w-full rounded-lg text-neutral-600 flex items-center">
+                            <a href="/email" className="hover:bg-blue-50 dark:hover:bg-slate-700 group hover:text-neutral-900 px-2.5 py-2.5 w-full rounded-lg text-neutral-600 dark:text-white flex items-center">
                                 <span className="flex items-center gap-2.5 justify-between w-full">
                                     <span className="flex items-center gap-2.5">
-                                        <span className="icon text-2xl line-height-1 flex group-hover:text-blue-600">
+                                        <span className="icon text-2xl line-height-1 flex group-hover:text-blue-600 dark:group-hover:text-white">
                                             <Star className="w-4" />
                                         </span>
                                         <span className="font-semibold">Starred</span>
@@ -42,10 +42,10 @@ const EmailSidebar = () => {
                             </a>
                         </li>
                         <li className="mb-1.5">
-                            <Link href="/email" className="hover:bg-blue-50 dark:hover:bg-blue-800/25 group hover:text-neutral-900 px-2.5 py-2.5 w-full rounded-lg text-neutral-600 flex items-center">
+                            <Link href="/email" className="hover:bg-blue-50 dark:hover:bg-slate-700 group hover:text-neutral-900 px-2.5 py-2.5 w-full rounded-lg text-neutral-600 dark:text-white flex items-center">
                                 <span className="flex items-center gap-2.5 justify-between w-full">
                                     <span className="flex items-center gap-2.5">
-                                        <span className="icon text-2xl line-height-1 flex group-hover:text-blue-600">
+                                        <span className="icon text-2xl line-height-1 flex group-hover:text-blue-600 dark:group-hover:text-white">
                                             <Send className="w-4" />
                                         </span>
                                         <span className="font-semibold">Sent</span>
@@ -55,10 +55,10 @@ const EmailSidebar = () => {
                             </Link>
                         </li>
                         <li className="mb-1.5">
-                            <Link href="/email" className="hover:bg-blue-50 dark:hover:bg-blue-800/25 group hover:text-neutral-900 px-2.5 py-2.5 w-full rounded-lg text-neutral-600 flex items-center">
+                            <Link href="/email" className="hover:bg-blue-50 dark:hover:bg-slate-700 group hover:text-neutral-900 px-2.5 py-2.5 w-full rounded-lg text-neutral-600 dark:text-white flex items-center">
                                 <span className="flex items-center gap-2.5 justify-between w-full">
                                     <span className="flex items-center gap-2.5">
-                                        <span className="icon text-2xl line-height-1 flex group-hover:text-blue-600">
+                                        <span className="icon text-2xl line-height-1 flex group-hover:text-blue-600 dark:group-hover:text-white">
                                             <Pencil className="w-4" />
                                         </span>
                                         <span className="font-semibold">Draft</span>
@@ -68,10 +68,10 @@ const EmailSidebar = () => {
                             </Link>
                         </li>
                         <li className="mb-1.5">
-                            <Link href="/email" className="hover:bg-blue-50 dark:hover:bg-blue-800/25 group hover:text-neutral-900 px-2.5 py-2.5 w-full rounded-lg text-neutral-600 flex items-center">
+                            <Link href="/email" className="hover:bg-blue-50 dark:hover:bg-slate-700 group hover:text-neutral-900 px-2.5 py-2.5 w-full rounded-lg text-neutral-600 dark:text-white flex items-center">
                                 <span className="flex items-center gap-2.5 justify-between w-full">
                                     <span className="flex items-center gap-2.5">
-                                        <span className="icon text-2xl line-height-1 flex group-hover:text-blue-600">
+                                        <span className="icon text-2xl line-height-1 flex group-hover:text-blue-600 dark:group-hover:text-white">
                                             <TriangleAlert className="w-4" />
                                         </span>
                                         <span className="font-semibold">Spam</span>
@@ -81,10 +81,10 @@ const EmailSidebar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/email" className="hover:bg-blue-50 dark:hover:bg-blue-800/25 group hover:text-neutral-900 px-2.5 py-2.5 w-full rounded-lg text-neutral-600 flex items-center">
+                            <Link href="/email" className="hover:bg-blue-50 dark:hover:bg-slate-700 group hover:text-neutral-900 px-2.5 py-2.5 w-full rounded-lg text-neutral-600 dark:text-white flex items-center">
                                 <span className="flex items-center gap-2.5 justify-between w-full">
                                     <span className="flex items-center gap-2.5">
-                                        <span className="icon text-2xl line-height-1 flex group-hover:text-blue-600">
+                                        <span className="icon text-2xl line-height-1 flex group-hover:text-blue-600 dark:group-hover:text-white">
                                             <Trash2 className="w-4" />
                                         </span>
                                         <span className="font-semibold">Bin</span>
