@@ -7,7 +7,6 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -122,11 +121,10 @@ const MarketInfoCard = () => {
               </div>
               <h6 className="text-base font-medium mb-0">{item.price}</h6>
               <span
-                className={`text-base font-medium ${
-                  item.changeType === "positive"
+                className={`text-base font-medium ${item.changeType === "positive"
                     ? "text-green-600"
                     : "text-danger-600"
-                }`}
+                  }`}
               >
                 {item.change}
               </span>

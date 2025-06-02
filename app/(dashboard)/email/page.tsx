@@ -25,7 +25,7 @@ const EmailPage = () => {
 
                 <div className="col-span-12 xl:col-span-8 2xl:col-span-9">
                     <div className="card h-full !p-0 border-0 email-card">
-                        <div className="card-header border-b border-neutral-200 dark:border-neutral-600 bg-white dark:bg-neutral-700 py-4 px-6">
+                        <div className="card-header border-b border-neutral-200 dark:border-slate-700 bg-white dark:bg-[#273142] py-4 px-6">
                             <div className="flex flex-wrap items-center justify-between gap-4">
                                 <div className="flex items-center gap-3">
                                     <div className="flex items-center">
@@ -35,7 +35,7 @@ const EmailPage = () => {
                                         <div className="">
                                             <DropdownMenu>
                                                 <DropdownMenuTrigger>
-                                                    <ChevronDown className="w-5 h-5 fill-black stroke-none" />
+                                                    <ChevronDown className="w-5 h-5 fill-black dark:fill-white stroke-none" />
                                                 </DropdownMenuTrigger>
                                                 <DropdownMenuContent>
                                                     <DropdownMenuItem>All</DropdownMenuItem>
@@ -48,10 +48,10 @@ const EmailPage = () => {
                                             </DropdownMenu>
                                         </div>
                                     </div>
-                                    <Button variant="link" className="!p-0 bg-transparent text-neutral-800 flex">
+                                    <Button variant="link" className="!p-0 bg-transparent text-neutral-800 dark:text-white flex">
                                         <Trash2 className="w-5 h-5" />
                                     </Button>
-                                    <Button variant="link" className="!p-0 bg-transparent text-neutral-800 flex">
+                                    <Button variant="link" className="!p-0 bg-transparent text-neutral-800 dark:text-white flex">
                                         <RotateCw className="w-5 h-5" />
                                     </Button>
 
@@ -83,12 +83,12 @@ const EmailPage = () => {
                                     <nav aria-label="Page navigation example">
                                         <ul className="pagination flex">
                                             <li className="page-item">
-                                                <Button variant="link" className="page-link flex bg-white dark:bg-neutral-700 border text-secondary-light text-xl">
+                                                <Button variant="link" className="page-link flex bg-white dark:bg-slate-700 border text-secondary-light text-xl">
                                                     <ChevronLeft className="w-4" />
                                                 </Button>
                                             </li>
                                             <li className="page-item">
-                                                <Button variant="link" className="page-link flex bg-white dark:bg-neutral-700 border text-secondary-light text-xl">
+                                                <Button variant="link" className="page-link flex bg-white dark:bg-slate-700 border text-secondary-light text-xl">
                                                     <ChevronRight className="w-4" />
                                                 </Button>
                                             </li>
@@ -99,7 +99,7 @@ const EmailPage = () => {
                         </div>
                         <div className="card-body p-0">
                             <ul className="overflow-x-auto">
-                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-neutral-600 cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-600 min-w-max">
+                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-slate-700 cursor-pointer hover:bg-neutral-200 dark:hover:bg-slate-800 min-w-max">
                                     <div className="form-check style-check flex items-center">
                                         <Checkbox
                                             className="border border-neutral-500 w-4 h-4"
@@ -112,7 +112,7 @@ const EmailPage = () => {
                                     <Link href="/email-details" className="text-neutral-600 dark:text-neutral-200 font-medium mb-0 line-clamp-1 max-w-[740px]">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</Link>
                                     <span className="text-neutral-600 dark:text-neutral-200 font-medium min-w-max-content ms-auto">6:07 AM</span>
                                 </li>
-                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-neutral-600 cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-600 min-w-max">
+                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-slate-700 cursor-pointer hover:bg-neutral-200 dark:hover:bg-slate-800 min-w-max">
                                     <div className="form-check style-check flex items-center">
                                         <Checkbox
                                             className="border border-neutral-500 w-4 h-4"
@@ -125,7 +125,7 @@ const EmailPage = () => {
                                     <Link href="/email-details" className="text-neutral-600 dark:text-neutral-200 font-medium mb-0 line-clamp-1 max-w-[740px]">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</Link>
                                     <span className="text-neutral-600 dark:text-neutral-200 font-medium min-w-max-content ms-auto">6:07 AM</span>
                                 </li>
-                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-neutral-600 cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-600 min-w-max">
+                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-slate-700 cursor-pointer hover:bg-neutral-200 dark:hover:bg-slate-800 min-w-max">
                                     <div className="form-check style-check flex items-center">
                                         <Checkbox
                                             className="border border-neutral-500 w-4 h-4"
@@ -138,7 +138,7 @@ const EmailPage = () => {
                                     <Link href="/email-details" className="text-neutral-600 dark:text-neutral-200 font-medium mb-0 line-clamp-1 max-w-[740px]">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</Link>
                                     <span className="text-neutral-600 dark:text-neutral-200 font-medium min-w-max-content ms-auto">6:07 AM</span>
                                 </li>
-                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-neutral-600 cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-600 min-w-max">
+                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-slate-700 cursor-pointer hover:bg-neutral-200 dark:hover:bg-slate-800 min-w-max">
                                     <div className="form-check style-check flex items-center">
                                         <Checkbox
                                             className="border border-neutral-500 w-4 h-4"
@@ -151,7 +151,7 @@ const EmailPage = () => {
                                     <Link href="/email-details" className="text-neutral-600 dark:text-neutral-200 font-medium mb-0 line-clamp-1 max-w-[740px]">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</Link>
                                     <span className="text-neutral-600 dark:text-neutral-200 font-medium min-w-max-content ms-auto">6:07 AM</span>
                                 </li>
-                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-neutral-600 cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-600 min-w-max">
+                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-slate-700 cursor-pointer hover:bg-neutral-200 dark:hover:bg-slate-800 min-w-max">
                                     <div className="form-check style-check flex items-center">
                                         <Checkbox
                                             className="border border-neutral-500 w-4 h-4"
@@ -164,7 +164,7 @@ const EmailPage = () => {
                                     <Link href="/email-details" className="text-neutral-600 dark:text-neutral-200 font-medium mb-0 line-clamp-1 max-w-[740px]">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</Link>
                                     <span className="text-neutral-600 dark:text-neutral-200 font-medium min-w-max-content ms-auto">6:07 AM</span>
                                 </li>
-                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-neutral-600 cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-600 min-w-max">
+                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-slate-700 cursor-pointer hover:bg-neutral-200 dark:hover:bg-slate-800 min-w-max">
                                     <div className="form-check style-check flex items-center">
                                         <Checkbox
                                             className="border border-neutral-500 w-4 h-4"
@@ -177,7 +177,7 @@ const EmailPage = () => {
                                     <Link href="/email-details" className="text-neutral-600 dark:text-neutral-200 font-medium mb-0 line-clamp-1 max-w-[740px]">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</Link>
                                     <span className="text-neutral-600 dark:text-neutral-200 font-medium min-w-max-content ms-auto">6:07 AM</span>
                                 </li>
-                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-neutral-600 cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-600 min-w-max">
+                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-slate-700 cursor-pointer hover:bg-neutral-200 dark:hover:bg-slate-800 min-w-max">
                                     <div className="form-check style-check flex items-center">
                                         <Checkbox
                                             className="border border-neutral-500 w-4 h-4"
@@ -190,7 +190,7 @@ const EmailPage = () => {
                                     <Link href="/email-details" className="text-neutral-600 dark:text-neutral-200 font-medium mb-0 line-clamp-1 max-w-[740px]">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</Link>
                                     <span className="text-neutral-600 dark:text-neutral-200 font-medium min-w-max-content ms-auto">6:07 AM</span>
                                 </li>
-                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-neutral-600 cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-600 min-w-max">
+                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-slate-700 cursor-pointer hover:bg-neutral-200 dark:hover:bg-slate-800 min-w-max">
                                     <div className="form-check style-check flex items-center">
                                         <Checkbox
                                             className="border border-neutral-500 w-4 h-4"
@@ -203,7 +203,7 @@ const EmailPage = () => {
                                     <Link href="/email-details" className="text-neutral-600 dark:text-neutral-200 font-medium mb-0 line-clamp-1 max-w-[740px]">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</Link>
                                     <span className="text-neutral-600 dark:text-neutral-200 font-medium min-w-max-content ms-auto">6:07 AM</span>
                                 </li>
-                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-neutral-600 cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-600 min-w-max">
+                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-slate-700 cursor-pointer hover:bg-neutral-200 dark:hover:bg-slate-800 min-w-max">
                                     <div className="form-check style-check flex items-center">
                                         <Checkbox
                                             className="border border-neutral-500 w-4 h-4"
@@ -216,7 +216,7 @@ const EmailPage = () => {
                                     <Link href="/email-details" className="text-neutral-600 dark:text-neutral-200 font-medium mb-0 line-clamp-1 max-w-[740px]">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</Link>
                                     <span className="text-neutral-600 dark:text-neutral-200 font-medium min-w-max-content ms-auto">6:07 AM</span>
                                 </li>
-                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-neutral-600 cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-600 min-w-max">
+                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-slate-700 cursor-pointer hover:bg-neutral-200 dark:hover:bg-slate-800 min-w-max">
                                     <div className="form-check style-check flex items-center">
                                         <Checkbox
                                             className="border border-neutral-500 w-4 h-4"
@@ -229,7 +229,7 @@ const EmailPage = () => {
                                     <Link href="/email-details" className="text-neutral-600 dark:text-neutral-200 font-medium mb-0 line-clamp-1 max-w-[740px]">Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus</Link>
                                     <span className="text-neutral-600 dark:text-neutral-200 font-medium min-w-max-content ms-auto">6:07 AM</span>
                                 </li>
-                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-neutral-600 cursor-pointer hover:bg-neutral-200 dark:hover:bg-neutral-600 min-w-max">
+                                <li className="email-item px-6 py-4 flex gap-4 items-center border-b last:border-0 border-neutral-200 dark:border-slate-700 cursor-pointer hover:bg-neutral-200 dark:hover:bg-slate-800 min-w-max">
                                     <div className="form-check style-check flex items-center">
                                         <Checkbox
                                             className="border border-neutral-500 w-4 h-4"

@@ -376,8 +376,6 @@ const TypographyPage = () => {
             </div>
           </div>
         </DefaultCardComponent>
-
-
       </div>
     </>
   );
