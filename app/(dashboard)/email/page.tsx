@@ -1,6 +1,5 @@
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import { Input } from "@/components/ui/input";
 import EmailSidebar from "../components/email-sidebar";
 import { ChevronDown, ChevronLeft, ChevronRight, EllipsisVertical, MailOpen, RotateCw, Star, Trash2 } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -8,15 +7,13 @@ import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Button } from "@/components/ui/button";
 import SearchBox from "@/components/shared/search-box";
 import Link from "next/link";
 
-const UsersList = () => {
+const EmailPage = () => {
     return (
         <>
             <DashboardBreadcrumb title="Email" text="Email" />
@@ -254,4 +251,4 @@ const UsersList = () => {
         </>
     );
 };
-export default UsersList;
+export default EmailPage;
