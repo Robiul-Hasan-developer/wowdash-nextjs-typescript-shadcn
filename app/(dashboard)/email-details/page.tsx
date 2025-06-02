@@ -56,7 +56,7 @@ const EmailDetailsPage = () => {
                                                 </div>
                                                 <div className="mt-5">
                                                     <p className="mb-4 text-neutral-600 dark:text-neutral-200">Hi William</p>
-                                                    <p className="mb-4 text-neutral-600 dark:text-neutral-200">Just confirming that we transferred $63.86 to you via PayPal <Link href="#" className="text-blue-600 underline">(info367@gmail.com)</Link> which you earned on the themewow Market since your last payout.</p>
+                                                    <p className="mb-4 text-neutral-600 dark:text-neutral-200">Just confirming that we transferred $63.86 to you via PayPal <Link href="#" className="text-blue-600 dark:text-blue-600 underline">(info367@gmail.com)</Link> which you earned on the themewow Market since your last payout.</p>
                                                     <p className="mb-0 text-neutral-600 dark:text-neutral-200">Thank you for selling with us!</p>
                                                 </div>
                                             </div>

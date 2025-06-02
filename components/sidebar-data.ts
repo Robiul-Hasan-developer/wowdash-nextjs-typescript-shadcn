@@ -1,8 +1,6 @@
 import {
   House,
   Mail,
-  MessageCircleMore,
-  CalendarDays,
   ShieldCheck,
   Component,
   ChartPie,
@@ -54,16 +52,6 @@ export const data = {
       title: "Email",
       url: "/email",
       icon: Mail,
-    },
-    {
-      title: "Chat",
-      url: "/chat",
-      icon: MessageCircleMore,
-    },
-    {
-      title: "Calendar",
-      url: "/calendar",
-      icon: CalendarDays,
     },
     {
       label: "UI Elements",
