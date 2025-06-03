@@ -1,7 +1,6 @@
 "use client";
 
 import { ChevronRight, type LucideIcon } from "lucide-react";
-
 import {
   Collapsible,
   CollapsibleContent,
@@ -20,8 +19,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-
-import React from "react";
+import React, { useState } from "react";
 import { useSidebarCollapsed } from "@/hooks/useSidebarCollapsed";
 
 type SidebarItem = {
@@ -40,32 +38,40 @@ type SidebarItem = {
 export function NavMain({ items }: { items: SidebarItem[] }) {
   const pathname = usePathname();
   const isCollapsed = useSidebarCollapsed();
+  const [openGroup, setOpenGroup] = useState<string | null>(null);
+
+  const handleToggleGroup = (title?: string) => {
+    if (!title) return;
+    setOpenGroup((prev) => (prev === title ? null : title));
+  };
 
   return (
-    <SidebarGroup className={` ${isCollapsed ? "px-1.5" : ""}`}>
+    <SidebarGroup className={`${isCollapsed ? "px-1.5" : ""}`}>
       <SidebarMenu>
         {items.map((item) => {
-          // Check if this group should be expanded based on current path
           const isGroupActive = item.items?.some(
             (subItem) =>
               pathname === subItem.url || pathname.startsWith(subItem.url)
           );
 
           if (item.items && item.items.length > 0) {
+            const isOpen = openGroup === item.title || isGroupActive;
+
             return (
               <Collapsible
                 key={item.title}
                 asChild
-                defaultOpen={isGroupActive}
+                open={isOpen}
                 className="group/collapsible"
               >
-                <SidebarMenuItem className="">
+                <SidebarMenuItem>
                   <CollapsibleTrigger asChild>
                     <SidebarMenuButton
                       tooltip={item.title}
+                      onClick={() => handleToggleGroup(item.title)}
                       className={cn(
                         "cursor-pointer py-5.5 px-3 text-base data-[state=open]:bg-primary data-[state=open]:text-white hover:data-[state=open]:bg-primary dark:hover:data-[state=open]:bg-primary hover:data-[state=open]:text-white hover:bg-[#e4f1ff] active:bg-[#e4f1ff] dark:hover:bg-slate-700",
-                        isGroupActive
+                        isOpen
                           ? "bg-primary text-white hover:bg-primary hover:text-white dark:bg-primary dark:hover:bg-primary"
                           : ""
                       )}
@@ -77,7 +83,7 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
                   </CollapsibleTrigger>
                   <CollapsibleContent>
                     <SidebarMenuSub className="gap-0 mt-2">
-                      {item.items?.map((subItem) => {
+                      {item.items.map((subItem) => {
                         const isSubActive =
                           pathname === subItem.url ||
                           pathname.startsWith(subItem.url);
@@ -94,7 +100,7 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
                             >
                               <Link
                                 href={subItem.url}
-                                className={`flex items-center gap-3.5`}
+                                className="flex items-center gap-3.5"
                               >
                                 <span
                                   className={`w-2 h-2 rounded-[50%] ${subItem.circleColor}`}
@@ -111,6 +117,7 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
               </Collapsible>
             );
           }
+
           if (item.label) {
             return (
               <SidebarGroupLabel key={`label-${item.label}`}>
@@ -118,12 +125,13 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
               </SidebarGroupLabel>
             );
           }
+
           if (item.url && item.title) {
             const isMenuActive =
               pathname === item.url || pathname.startsWith(item.url);
 
             return (
-              <SidebarMenuItem key={item.title} className="">
+              <SidebarMenuItem key={item.title}>
                 <SidebarMenuButton
                   asChild
                   tooltip={item.title}
@@ -142,6 +150,8 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
               </SidebarMenuItem>
             );
           }
+
+          return null;
         })}
       </SidebarMenu>
     </SidebarGroup>
