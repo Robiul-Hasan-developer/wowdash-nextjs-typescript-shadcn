@@ -23,7 +23,6 @@ const CountriesStatusCard = () => {
                 <div className="max-h-[266px] overflow-y-auto p-6 scrollbar-thin scrollbar-invisible hover:scrollbar-visible">
                   <CountryList/>
                 </div>
-              
             </CardContent>
         </Card>
     );

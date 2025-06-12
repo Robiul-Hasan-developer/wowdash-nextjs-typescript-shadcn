@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import EmailSidebar from "../components/email-sidebar";
 import EmailList from "./components/email-list";
