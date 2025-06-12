@@ -4,9 +4,23 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const EmailSidebar = () => {
+type EmailSidebarProps = {
+    isOpen: boolean;
+    closeSidebar: () => void;
+};
+
+
+const EmailSidebar = ({ isOpen, closeSidebar }: EmailSidebarProps) => {
     return (
-        <div className="card h-full p-0 border-0">
+        <div
+            className={cn(
+                "email-sidebar card h-full p-0 border-0 z-[10] transition-all duration-300",
+                "xl:static xl:block",
+                isOpen
+                    ? "absolute top-0 left-0 w-64 bg-white dark:bg-[#273142] h-full block"
+                    : "hidden"
+            )}
+        >
             <div className="card-body p-0">
                 <Button className={cn(`w-full rounded-lg flex items-center justify-start gap-2 h-11`)}>
                     <CirclePlus className="w-4.5" />
