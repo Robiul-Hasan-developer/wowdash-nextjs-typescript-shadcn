@@ -70,7 +70,7 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
                       tooltip={item.title}
                       onClick={() => handleToggleGroup(item.title)}
                       className={cn(
-                        "cursor-pointer py-5.5 px-3 text-base data-[state=open]:bg-primary data-[state=open]:text-white hover:data-[state=open]:bg-primary dark:hover:data-[state=open]:bg-primary hover:data-[state=open]:text-white hover:bg-[#e4f1ff] active:bg-[#e4f1ff] dark:hover:bg-slate-700",
+                        "cursor-pointer py-5.5 px-3 text-base text-[#4b5563] data-[state=open]:bg-primary data-[state=open]:text-white hover:data-[state=open]:bg-primary dark:hover:data-[state=open]:bg-primary hover:data-[state=open]:text-white hover:bg-[#e4f1ff] active:bg-[#e4f1ff] dark:hover:bg-slate-700",
                         isOpen
                           ? "bg-primary text-white hover:bg-primary hover:text-white dark:bg-primary dark:hover:bg-primary"
                           : ""
@@ -92,7 +92,7 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
                             <SidebarMenuSubButton
                               asChild
                               className={cn(
-                                "py-5.5 px-3 text-base hover:bg-[#e4f1ff] active:bg-[#e4f1ff] dark:hover:bg-slate-700",
+                                "py-5.5 px-3 text-base text-[#4b5563] hover:bg-[#e4f1ff] active:bg-[#e4f1ff] dark:hover:bg-slate-700",
                                 isSubActive
                                   ? "bg-[#e4f1ff] font-bold dark:bg-slate-600"
                                   : ""
@@ -136,7 +136,7 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
                   asChild
                   tooltip={item.title}
                   className={cn(
-                    "cursor-pointer py-5.5 px-3 text-base hover:bg-[#e4f1ff] active:bg-[#e4f1ff] dark:hover:bg-slate-700",
+                    "cursor-pointer py-5.5 px-3 text-base text-[#4b5563] hover:bg-[#e4f1ff] active:bg-[#e4f1ff] dark:hover:bg-slate-700",
                     isMenuActive
                       ? "bg-primary hover:bg-primary text-white dark:hover:bg-primary hover:text-white"
                       : ""
