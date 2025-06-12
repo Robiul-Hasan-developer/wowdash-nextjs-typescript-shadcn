@@ -48,13 +48,13 @@ const EmailHeader = () => {
                         </DropdownMenuTrigger>
                         <DropdownMenuContent>
                             <DropdownMenuItem>
-                                <div className="px-4 py-2 rounded text-secondary-light hover:bg-neutral-200 dark:hover:bg-neutral-600 text-hover-neutral-900 flex items-center text-start gap-2.5">
+                                <div className="px-4 py-2 rounded text-secondary-light text-hover-neutral-900 flex items-center text-start gap-2.5">
                                     <MailOpen className="w-5 h-5" />
                                     Mark all as read
                                 </div>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
-                                <p className="ms-10 mt-2 text-neutral-500 mb-0">
+                                <p className="ms-10 mt-2 text-neutral-500 mb-0 dark:text-white">
                                     Select messages to see more actions
                                 </p>
                             </DropdownMenuItem>
