@@ -11,16 +11,12 @@ import LogoWhite from '@/public/assets/images/logo-light.png'
 import LogoIcon from '@/public/assets/images/logo-icon.png'
 import { cn } from '@/lib/utils'
 import { useSidebarCollapsed } from '@/hooks/useSidebarCollapsed'
+import { useIsMounted } from '@/hooks/useIsMounted'
 
 function LogoSidebar() {
   const { theme } = useTheme()
-  const [isMounted, setIsMounted] = useState(false)
-
+  const isMounted = useIsMounted()
   const isCollapsed = useSidebarCollapsed();
-
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
 
   if (!isMounted) return null
 
