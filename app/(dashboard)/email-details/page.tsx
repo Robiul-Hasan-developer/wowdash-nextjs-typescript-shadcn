@@ -10,18 +10,25 @@ import UserList2 from "@/public/assets/images/user-list/user-list2.png";
 import Link from "next/link";
 import { Images, MoveLeft, Printer, Star, Trash2, LinkIcon, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import EmailSidebarOverlay from "../components/email-sidebar-overlay";
+import EmailSidebarToggleButton from "../email/components/email-sidebar-toggle-button";
 
 const EmailDetailsPage = () => {
     return (
         <>
             <DashboardBreadcrumb title="Email" text="Email" />
 
-            <div className="grid grid-cols-1 xl:grid-cols-12 gap-6">
+            <div className="grid grid-cols-1 xl:grid-cols-12 xl:gap-6 relative">
+
+                <EmailSidebarOverlay />
+
                 <div className="col-span-12 xl:col-span-4 2xl:col-span-3">
                     <EmailSidebar />
                 </div>
 
                 <div className="col-span-12 xl:col-span-8 2xl:col-span-9">
+                    <EmailSidebarToggleButton />
+
                     <div className="card h-full p-0 email-card overflow-x-auto block border-0 !p-0">
                         <div className="min-w-[450px] flex flex-col justify-between h-full">
                             <div className="">
