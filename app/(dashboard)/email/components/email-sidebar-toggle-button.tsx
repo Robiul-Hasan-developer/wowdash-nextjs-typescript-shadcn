@@ -1,20 +1,17 @@
-"use client"
+"use client";
 
 import { Button } from '@/components/ui/button';
+import { useEmailSidebar } from '@/contexts/email-sidebar-context';
 import { Menu } from 'lucide-react';
 import React from 'react';
 
-type EmailSidebarToggleButtonPropsType = {
-    onToggle: () => void;
-    isOpen: boolean;
-};
+const EmailSidebarToggleButton = () => {
+    const { openSidebar } = useEmailSidebar();
 
-
-const EmailSidebarToggleButton = ({ onToggle }: EmailSidebarToggleButtonPropsType) => {
     return (
         <div className="flex justify-end mb-4">
-            <Button className="bg-neutral-200 dark:bg-slate-600 text-neutral-900 xl:hidden lg:block" onClick={onToggle}>
-                <Menu className='w-6' />
+            <Button className="bg-neutral-200 dark:bg-slate-600 xl:hidden lg:block" onClick={openSidebar}>
+                <Menu className='w-4' />
             </Button>
         </div>
     );
