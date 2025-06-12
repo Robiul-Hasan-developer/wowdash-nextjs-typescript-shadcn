@@ -82,7 +82,7 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
                     </SidebarMenuButton>
                   </CollapsibleTrigger>
                   <CollapsibleContent>
-                    <SidebarMenuSub className="gap-0 mt-2">
+                    <SidebarMenuSub className="gap-0 mt-2 space-y-1">
                       {item.items.map((subItem) => {
                         const isSubActive =
                           pathname === subItem.url ||
