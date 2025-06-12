@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "next-themes";
@@ -8,12 +8,15 @@ import { useTheme } from "next-themes";
 import LogoDark from "@/public/assets/images/logo.png";
 import LogoWhite from "@/public/assets/images/logo-light.png";
 import { useSidebarCollapsed } from "@/hooks/useSidebarCollapsed";
-import { useIsMounted } from "@/hooks/useIsMounted";
 
 function ThemeLogo() {
   const { theme } = useTheme();
-  const isMounted = useIsMounted()
   const isCollapsed = useSidebarCollapsed();
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // Don't render until mounted to avoid hydration mismatch or wrong theme
   if (!isMounted) return null;

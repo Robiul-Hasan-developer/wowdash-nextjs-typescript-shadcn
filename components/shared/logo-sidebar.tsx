@@ -1,7 +1,7 @@
 
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import Link from "next/link"
 import Image from "next/image"
 import { useTheme } from 'next-themes'
@@ -11,14 +11,19 @@ import LogoWhite from '@/public/assets/images/logo-light.png'
 import LogoIcon from '@/public/assets/images/logo-icon.png'
 import { cn } from '@/lib/utils'
 import { useSidebarCollapsed } from '@/hooks/useSidebarCollapsed'
-import { useIsMounted } from '@/hooks/useIsMounted'
 
 function LogoSidebar() {
   const { theme } = useTheme()
-  const isMounted = useIsMounted()
   const isCollapsed = useSidebarCollapsed();
 
-  if (!isMounted) return null
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // Don't render until mounted to avoid hydration mismatch or wrong theme
+  if (!isMounted) return null;
 
   return (
     <Link
