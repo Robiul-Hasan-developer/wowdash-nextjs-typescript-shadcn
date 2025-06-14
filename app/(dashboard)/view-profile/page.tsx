@@ -3,6 +3,8 @@ import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import ViewProfileSidebar from "./components/view-profile-sidebar";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Card, CardContent } from "@/components/ui/card";
 
 const ViewProfile = () => {
     return (
@@ -15,6 +17,36 @@ const ViewProfile = () => {
                 </div>
 
                 <div className="col-span-12 lg:col-span-8">
+                    <Card className="card">
+                        <CardContent className="px-0">
+                            <Tabs defaultValue="editProfile" className="gap-4">
+                                <TabsList className='active-gradient bg-transparent dark:bg-transparent rounded-none h-[50px]'>
+                                    <TabsTrigger value="editProfile" className='py-2.5 px-4 font-semibold text-sm inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 data-[state=active]:bg-gradient border-0 border-t-2 border-neutral-200 dark:border-neutral-500 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 rounded-[0] data-[state=active]:shadow-none cursor-pointer'>
+                                        Edit Profile
+                                    </TabsTrigger>
+                                    <TabsTrigger value="changePassword" className='py-2.5 px-4 font-semibold text-sm inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 data-[state=active]:bg-gradient border-0 border-t-2 border-neutral-200 dark:border-neutral-500 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 rounded-[0] data-[state=active]:shadow-none cursor-pointer'>
+                                        Change Password
+                                    </TabsTrigger>
+                                    <TabsTrigger value="NotificationPassword" className='py-2.5 px-4 font-semibold text-sm inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 data-[state=active]:bg-gradient border-0 border-t-2 border-neutral-200 dark:border-neutral-500 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 rounded-[0] data-[state=active]:shadow-none cursor-pointer'>
+                                        Notification Password
+                                    </TabsTrigger>
+                                </TabsList>
+
+                                <TabsContent value="editProfile">
+                                    Edit Profile
+                                </TabsContent>
+                                <TabsContent value="changePassword">
+                                    Change Password
+                                </TabsContent>
+                                <TabsContent value="NotificationPassword">
+                                    Notification Password
+                                </TabsContent>
+                            </Tabs>
+                        </CardContent>
+                    </Card>
+
+
+
                     <div className="card h-full border-0">
                         <div className="card-body p-6">
 
@@ -39,7 +71,6 @@ const ViewProfile = () => {
                             <div id="default-tab-content">
                                 <div className="hidden" id="edit-profile" role="tabpanel" aria-Labelledby="edit-profile-tab">
                                     <h6 className="text-base text-neutral-600 dark:text-neutral-200 mb-4">Profile Image</h6>
-                                    {/* Upload Image Start */}
                                     <div className="mb-6 mt-4">
                                         <div className="avatar-upload">
                                             <div className="avatar-edit absolute bottom-0 end-0 me-6 mt-4 z-[1] cursor-pointer">
@@ -54,7 +85,7 @@ const ViewProfile = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    {/* Upload Image End */}
+
                                     <form action="#">
                                         <div className="grid grid-cols-1 sm:grid-cols-12 gap-x-6">
                                             <div className="col-span-12 sm:col-span-6">
