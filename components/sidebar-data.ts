@@ -229,6 +229,11 @@ export const data = {
           url: "/users-grid",
           circleColor: "bg-yellow-600",
         },
+        {
+          title: "View Profile",
+          url: "/view-profile",
+          circleColor: "bg-red-600",
+        },
       ],
     },
     {
