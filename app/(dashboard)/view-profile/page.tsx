@@ -1,45 +1,186 @@
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import SearchBox from "@/components/shared/search-box";
-import UsersListTable from './../../../components/table/users-list-table';
-import CustomSelect from "@/components/shared/custom-select";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { Plus } from "lucide-react";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import ViewProfileSidebar from "./components/view-profile-sidebar";
 
 const ViewProfile = () => {
     return (
         <>
             <DashboardBreadcrumb title="View Profile" text="View Profile" />
 
-            <Card className="card h-full !p-0 !block border-0 overflow-hidden mb-6">
-                <CardHeader className="border-b border-neutral-200 dark:border-slate-600 !py-4 px-6 flex items-center flex-wrap gap-3 justify-between">
-                    <div className="flex items-center flex-wrap gap-3">
-                        <span className="text-base font-medium text-secondary-light mb-0">Show</span>
-                        <CustomSelect
-                            placeholder="1"
-                            options={["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]}
-                        />
-                        <SearchBox />
-                        <CustomSelect
-                            placeholder="Status"
-                            options={["Status", "Active", "Inactive"]}
-                        />
-                    </div>
-                    <Button className={cn(`w-auto h-11`)} asChild>
-                        <Link href="#">
-                            <Plus className="w-5 h-5" />
-                            Add New User
-                        </Link>
-                    </Button>
-                </CardHeader>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <div className="col-span-12 lg:col-span-4">
+                    <ViewProfileSidebar />
+                </div>
 
-                <CardContent className="card-body p-6">
-                    <UsersListTable />
-                </CardContent>
-            </Card>
+                <div className="col-span-12 lg:col-span-8">
+                    <div className="card h-full border-0">
+                        <div className="card-body p-6">
+
+                            <ul className="tab-style-gradient flex flex-wrap text-sm font-medium text-center mb-5" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+                                <li className="" role="presentation">
+                                    <button className="py-2.5 px-4 border-t-2 font-semibold text-base inline-flex items-center gap-3 text-neutral-600" id="edit-profile-tab" data-tabs-target="#edit-profile" type="button" role="tab" aria-controls="edit-profile" aria-selected="false">
+                                        Edit Profile
+                                    </button>
+                                </li>
+                                <li className="" role="presentation">
+                                    <button className="py-2.5 px-4 border-t-2 font-semibold text-base inline-flex items-center gap-3 text-neutral-600 hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="change-password-tab" data-tabs-target="#change-password" type="button" role="tab" aria-controls="change-password" aria-selected="false">
+                                        Change Password
+                                    </button>
+                                </li>
+                                <li className="" role="presentation">
+                                    <button className="py-2.5 px-4 border-t-2 font-semibold text-base inline-flex items-center gap-3 text-neutral-600 hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="notification-password-tab" data-tabs-target="#notification-password" type="button" role="tab" aria-controls="notification-password" aria-selected="false">
+                                        Notification Password
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <div id="default-tab-content">
+                                <div className="hidden" id="edit-profile" role="tabpanel" aria-Labelledby="edit-profile-tab">
+                                    <h6 className="text-base text-neutral-600 dark:text-neutral-200 mb-4">Profile Image</h6>
+                                    {/* Upload Image Start */}
+                                    <div className="mb-6 mt-4">
+                                        <div className="avatar-upload">
+                                            <div className="avatar-edit absolute bottom-0 end-0 me-6 mt-4 z-[1] cursor-pointer">
+                                                <Input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" hidden />
+                                                <Label htmlFor="imageUpload" className="w-8 h-8 flex justify-center items-center bg-primary-100 dark:bg-primary-600/25 text-primary-600 dark:text-primary-400 border border-primary-600 hover:bg-primary-100 text-lg rounded-full">
+                                                    {/* <iconify-icon icon="solar:camera-outline" className="icon"></iconify-icon> */}
+                                                </Label>
+                                            </div>
+                                            <div className="avatar-preview">
+                                                <div id="imagePreview">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/* Upload Image End */}
+                                    <form action="#">
+                                        <div className="grid grid-cols-1 sm:grid-cols-12 gap-x-6">
+                                            <div className="col-span-12 sm:col-span-6">
+                                                <div className="mb-5">
+                                                    <Label htmlFor="name" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">Full Name <span className="text-danger-600">*</span></Label>
+                                                    <Input type="text" className="form-control rounded-lg" id="name" placeholder="Enter Full Name" />
+                                                </div>
+                                            </div>
+                                            <div className="col-span-12 sm:col-span-6">
+                                                <div className="mb-5">
+                                                    <Label htmlFor="email" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">Email <span className="text-danger-600">*</span></Label>
+                                                    <Input type="email" className="form-control rounded-lg" id="email" placeholder="Enter email address" />
+                                                </div>
+                                            </div>
+                                            <div className="col-span-12 sm:col-span-6">
+                                                <div className="mb-5">
+                                                    <Label htmlFor="number" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">Phone</Label>
+                                                    <Input type="email" className="form-control rounded-lg" id="number" placeholder="Enter phone number" />
+                                                </div>
+                                            </div>
+                                            <div className="col-span-12 sm:col-span-6">
+                                                <div className="mb-5">
+                                                    <Label htmlFor="depart" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">Department <span className="text-danger-600">*</span> </Label>
+                                                    <select className="form-control rounded-lg form-select" id="depart">
+                                                        <option>Enter Event Title </option>
+                                                        <option>Enter Event Title One </option>
+                                                        <option>Enter Event Title Two</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div className="col-span-12 sm:col-span-6">
+                                                <div className="mb-5">
+                                                    <Label htmlFor="desig" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">Designation <span className="text-danger-600">*</span> </Label>
+                                                    <select className="form-control rounded-lg form-select" id="desig">
+                                                        <option>Enter Designation Title </option>
+                                                        <option>Enter Designation Title One </option>
+                                                        <option>Enter Designation Title Two</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div className="col-span-12 sm:col-span-6">
+                                                <div className="mb-5">
+                                                    <Label htmlFor="Language" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">Language <span className="text-danger-600">*</span> </Label>
+                                                    <select className="form-control rounded-lg form-select" id="Language">
+                                                        <option> English</option>
+                                                        <option> Bangla </option>
+                                                        <option> Hindi</option>
+                                                        <option> Arabic</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div className="col-span-12">
+                                                <div className="mb-5">
+                                                    <Label htmlFor="desc" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">Description</Label>
+                                                    <textarea name="#0" className="form-control rounded-lg" id="desc" placeholder="Write description..."></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center justify-center gap-3">
+                                            <button type="button" className="border border-danger-600 bg-hover-danger-200 text-danger-600 text-base px-14 py-[11px] rounded-lg">
+                                                Cancel
+                                            </button>
+                                            <button type="button" className="btn btn-primary border border-primary-600 text-base px-14 py-3 rounded-lg">
+                                                Save
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div className="hidden" id="change-password" role="tabpanel" aria-Labelledby="change-password-tab">
+                                    <div className="mb-5">
+                                        <Label htmlFor="your-password" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">New Password <span className="text-danger-600">*</span></Label>
+                                        <div className="relative">
+                                            <Input type="password" className="form-control rounded-lg" id="your-password" placeholder="Enter New Password*" />
+                                            <span className="toggle-password ri-eye-line cursor-pointer absolute end-0 top-1/2 -translate-y-1/2 me-4 text-secondary-light" data-toggle="#your-password"></span>
+                                        </div>
+                                    </div>
+                                    <div className="mb-5">
+                                        <Label htmlFor="confirm-password" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">Confirmed Password <span className="text-danger-600">*</span></Label>
+                                        <div className="relative">
+                                            <Input type="password" className="form-control rounded-lg" id="confirm-password" placeholder="Confirm Password*" />
+                                            <span className="toggle-password ri-eye-line cursor-pointer absolute end-0 top-1/2 -translate-y-1/2 me-4 text-secondary-light" data-toggle="#confirm-password"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="hidden" id="notification-password" role="tabpanel" aria-Labelledby="notification-password-tab">
+                                    <div className="form-switch switch-primary py-3 px-4 border rounded-lg relative mb-4">
+                                        <Label htmlFor="companzNew" className="absolute w-full h-full start-0 top-0"></Label>
+                                        <div className="flex items-center gap-3 justify-between">
+                                            <span className="form-check-Label line-height-1 font-medium text-secondary-light">Company News</span>
+                                            <Input className="form-check-Input" type="checkbox" role="switch" id="companzNew" />
+                                        </div>
+                                    </div>
+                                    <div className="form-switch switch-primary py-3 px-4 border rounded-lg relative mb-4">
+                                        <Label htmlFor="pushNotifcation" className="absolute w-full h-full start-0 top-0"></Label>
+                                        <div className="flex items-center gap-3 justify-between">
+                                            <span className="form-check-Label line-height-1 font-medium text-secondary-light">Push Notification</span>
+                                            <Input className="form-check-Input" type="checkbox" role="switch" id="pushNotifcation" checked />
+                                        </div>
+                                    </div>
+                                    <div className="form-switch switch-primary py-3 px-4 border rounded-lg relative mb-4">
+                                        <Label htmlFor="weeklyLetters" className="absolute w-full h-full start-0 top-0"></Label>
+                                        <div className="flex items-center gap-3 justify-between">
+                                            <span className="form-check-Label line-height-1 font-medium text-secondary-light">Weekly News Letters</span>
+                                            <Input className="form-check-Input" type="checkbox" role="switch" id="weeklyLetters" checked />
+                                        </div>
+                                    </div>
+                                    <div className="form-switch switch-primary py-3 px-4 border rounded-lg relative mb-4">
+                                        <Label htmlFor="meetUp" className="absolute w-full h-full start-0 top-0"></Label>
+                                        <div className="flex items-center gap-3 justify-between">
+                                            <span className="form-check-Label line-height-1 font-medium text-secondary-light">Meetups Near you</span>
+                                            <Input className="form-check-Input" type="checkbox" role="switch" id="meetUp" />
+                                        </div>
+                                    </div>
+                                    <div className="form-switch switch-primary py-3 px-4 border rounded-lg relative mb-4">
+                                        <Label htmlFor="orderNotification" className="absolute w-full h-full start-0 top-0"></Label>
+                                        <div className="flex items-center gap-3 justify-between">
+                                            <span className="form-check-Label line-height-1 font-medium text-secondary-light">Orders Notifications</span>
+                                            <Input className="form-check-Input" type="checkbox" role="switch" id="orderNotification" checked />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </>
     );
