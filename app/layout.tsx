@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Wowdash - Next Js, TypeScript, ShadCn UI & Tailwind Admin Dashboard",
+  title: "Wowdash - Tailwind & Next.js Admin Dashboard with shadcn UI (Typescript)",
   description:
     "WowDash - Admin Dashboard Multipurpose Next.js, TypeScript, ShadCn UI & Tailwind Template",
 };
