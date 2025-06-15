@@ -90,10 +90,10 @@ const ViewProfile = () => {
                                 </div>
                                 <div className="col-span-2 flex items-center justify-center gap-3 mt-6">
                                     <Button type="button" className="h-[48px] border border-red-600 bg-transparent hover:bg-red-600/20 dark:hover:bg-red-600/20 text-red-600 text-base px-14 py-[11px] rounded-lg">
-                                        Cancel
+                                        Reset
                                     </Button>
                                     <Button type="button" className="h-[48px] text-base px-14 py-3 rounded-lg">
-                                        Save
+                                        Save Changes
                                     </Button>
                                 </div>
                             </div>
@@ -104,5 +104,5 @@ const ViewProfile = () => {
 
         </>
     );
-};
+}; ``
 export default ViewProfile;

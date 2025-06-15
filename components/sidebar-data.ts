@@ -276,7 +276,7 @@ export const data = {
         },
         {
           title: "Notification",
-          url: "/notification",
+          url: "/settings-notification",
           circleColor: "bg-yellow-500",
         },
       ],
