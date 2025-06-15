@@ -69,7 +69,7 @@ const ViewProfile = () => {
                             </ul>
 
                             <div id="default-tab-content">
-                                <div className="hidden" id="edit-profile" role="tabpanel" aria-Labelledby="edit-profile-tab">
+                                <div className="hidden" id="edit-profile" role="tabpanel">
                                     <h6 className="text-base text-neutral-600 dark:text-neutral-200 mb-4">Profile Image</h6>
                                     <div className="mb-6 mt-4">
                                         <div className="avatar-upload">
@@ -154,7 +154,7 @@ const ViewProfile = () => {
                                         </div>
                                     </form>
                                 </div>
-                                <div className="hidden" id="change-password" role="tabpanel" aria-Labelledby="change-password-tab">
+                                <div className="hidden" id="change-password" role="tabpanel">
                                     <div className="mb-5">
                                         <Label htmlFor="your-password" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">New Password <span className="text-danger-600">*</span></Label>
                                         <div className="relative">
@@ -170,7 +170,7 @@ const ViewProfile = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="hidden" id="notification-password" role="tabpanel" aria-Labelledby="notification-password-tab">
+                                <div className="hidden" id="notification-password" role="tabpanel">
                                     <div className="form-switch switch-primary py-3 px-4 border rounded-lg relative mb-4">
                                         <Label htmlFor="companzNew" className="absolute w-full h-full start-0 top-0"></Label>
                                         <div className="flex items-center gap-3 justify-between">
