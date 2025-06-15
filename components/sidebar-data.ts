@@ -279,6 +279,11 @@ export const data = {
           url: "/settings-notification",
           circleColor: "bg-yellow-500",
         },
+        {
+          title: "Notification Alert",
+          url: "/notification-alert",
+          circleColor: "bg-yellow-500",
+        },
       ],
     },
   ],
