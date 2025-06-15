@@ -1,24 +1,14 @@
 import React from 'react';
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
+import AvatarUpload from './avatar-upload';
 
 const EditProfileTabContent = () => {
     return (
         <div>
             <h6 className="text-base text-neutral-600 dark:text-neutral-200 mb-4">Profile Image</h6>
             <div className="mb-6 mt-4">
-                <div className="avatar-upload">
-                    <div className="avatar-edit absolute bottom-0 end-0 me-6 mt-4 z-[1] cursor-pointer">
-                        <Input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" hidden />
-                        <Label htmlFor="imageUpload" className="w-8 h-8 flex justify-center items-center bg-primary-100 dark:bg-primary-600/25 text-primary-600 dark:text-primary-400 border border-primary-600 hover:bg-primary-100 text-lg rounded-full">
-                            {/* <iconify-icon icon="solar:camera-outline" className="icon"></iconify-icon> */}
-                        </Label>
-                    </div>
-                    <div className="avatar-preview">
-                        <div id="imagePreview">
-                        </div>
-                    </div>
-                </div>
+                <AvatarUpload />
             </div>
 
             <form action="#">
@@ -83,7 +73,7 @@ const EditProfileTabContent = () => {
                     <button type="button" className="border border-red-600 bg-hover-red-200 text-red-600 text-base px-14 py-[11px] rounded-lg">
                         Cancel
                     </button>
-                    <button type="button" className="btn btn-primary border border-primary-600 text-base px-14 py-3 rounded-lg">
+                    <button type="button" className="btn btn-primary border border-blue-600 text-base px-14 py-3 rounded-lg">
                         Save
                     </button>
                 </div>

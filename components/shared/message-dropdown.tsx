@@ -20,8 +20,8 @@ const MessageDropdown = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button 
-          size="icon" 
+        <Button
+          size="icon"
           className={cn(
             'rounded-[50%] text-neutral-900 sm:w-10 sm:h-10 w-8 h-8 bg-gray-200/75 hover:bg-slate-200 focus-visible:ring-0 dark:bg-slate-700 dark:hover:bg-slate-600 border-0 cursor-pointer data-[state=open]:bg-gray-300 dark:data-[state=open]:bg-slate-600'
           )}
@@ -31,7 +31,7 @@ const MessageDropdown = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="sm:w-[400px] max-h-[unset] me-6 p-0 rounded-2xl overflow-hidden shadow-lg block">
         <div className="">
-          <div className="py-3 px-4 rounded-lg bg-primary/10 dark:bg-primary-600/25 m-4 flex items-center justify-between gap-2">
+          <div className="py-3 px-4 rounded-lg bg-primary/10 dark:bg-blue-600/25 m-4 flex items-center justify-between gap-2">
             <h6 className="text-lg text-neutral-900 dark:text-white font-semibold mb-0">Message</h6>
             <span className="sm:w-10 sm:h-10 w-8 h-8 bg-white dark:bg-slate-800 text-primary dark:text-primary font-bold flex justify-center items-center rounded-full">05</span>
           </div>

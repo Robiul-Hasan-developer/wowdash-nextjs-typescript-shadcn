@@ -28,7 +28,7 @@ const NotificationDropdown = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="sm:w-[400px] max-h-[unset] me-6 p-0 rounded-2xl overflow-hidden shadow-lg block">
         <div className="">
-          <div className="py-3 px-4 rounded-lg bg-primary/10 dark:bg-primary-600/25 m-4 flex items-center justify-between gap-2">
+          <div className="py-3 px-4 rounded-lg bg-primary/10 dark:bg-blue-600/25 m-4 flex items-center justify-between gap-2">
             <h6 className="text-lg text-neutral-900 dark:text-white font-semibold mb-0">
               Notification
             </h6>

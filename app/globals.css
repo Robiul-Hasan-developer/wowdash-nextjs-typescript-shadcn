@@ -354,4 +354,43 @@
 .tooltip-arrow-hidden span {
   display: none;
 }
+
+/* Upload Image Css Start */
+@layer components {
+  .avatar-upload {
+    @apply relative max-w-fit;
+  }
+
+  .avatar-upload.style-two {
+    @apply h-[150px] w-[180px] max-w-none;
+  }
+
+  #imagePreview {
+    @apply bg-cover bg-center bg-no-repeat;
+    /* background-image: url("../images/user-grid/user-grid-img13.png"); */
+  }
+
+  #previewImage1,
+  #previewImage2 {
+    @apply bg-cover bg-center bg-no-repeat;
+    /* background-image: url("../images/payment/upload-image.png"); */
+  }
+
+  .avatar-upload .avatar-preview {
+    @apply relative h-[150px] w-[150px] rounded-full border border-[#487FFF] shadow-md;
+  }
+
+  .avatar-upload .avatar-preview.style-two {
+    @apply h-[120px] w-[120px] rounded border border-gray-300 shadow-none;
+  }
+
+  .avatar-upload .avatar-preview.style-two > div {
+    @apply rounded;
+  }
+
+  .avatar-upload .avatar-preview > div {
+    @apply h-full w-full rounded-full bg-cover bg-center bg-no-repeat;
+  }
+}
+/* Upload Image Css End */
 /* ======================================== Custom Classes css End ======================================== */
