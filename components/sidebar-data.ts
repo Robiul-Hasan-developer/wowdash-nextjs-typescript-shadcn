@@ -8,6 +8,7 @@ import {
   Server,
   UsersRound,
   StickyNote,
+  Settings,
 } from "lucide-react";
 
 export const data = {
@@ -259,6 +260,24 @@ export const data = {
           title: "Forgot Password",
           url: "/auth/forgot-password",
           circleColor: "bg-cyan-500",
+        },
+      ],
+    },
+    {
+      title: "Setting",
+      url: "#",
+      icon: Settings,
+      isActive: true,
+      items: [
+        {
+          title: "Company",
+          url: "/company",
+          circleColor: "bg-primary",
+        },
+        {
+          title: "Notification",
+          url: "/notification",
+          circleColor: "bg-yellow-500",
         },
       ],
     },
