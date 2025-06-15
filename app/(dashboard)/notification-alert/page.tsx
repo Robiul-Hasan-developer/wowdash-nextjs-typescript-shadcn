@@ -3,7 +3,6 @@
 
 import React from "react";
 import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
@@ -17,21 +16,18 @@ const ViewProfile = () => {
             <div className="card rounded-xl border border-border bg-background shadow-sm p-6">
                 <div className="card-body p-0">
                     <form action="#">
-                        {/** Mail Notification */}
                         <NotificationSection
                             title="Mail Notification Messages"
                             label="Admin New Order Message"
                             placeholder="You have a new order."
                         />
 
-                        {/** SMS Notification */}
                         <NotificationSection
                             title="SMS Notification Messages"
                             label="Admin New Order Message"
                             placeholder="You have a new order."
                         />
 
-                        {/** Push Notification */}
                         <NotificationSection
                             title="Push Notification Messages"
                             label="Admin New Order Message"
