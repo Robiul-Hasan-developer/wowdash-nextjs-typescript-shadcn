@@ -13,36 +13,38 @@ const ViewProfile = () => {
         <>
             <DashboardBreadcrumb title="Notification Alert" text="Notification Alert" />
 
-            <div className="card rounded-xl border border-border bg-background shadow-sm p-6">
-                <div className="card-body p-0">
-                    <form action="#">
-                        <NotificationSection
-                            title="Mail Notification Messages"
-                            label="Admin New Order Message"
-                            placeholder="You have a new order."
-                        />
+            <div>
+                <div className="card rounded-xl border border-border bg-background shadow-sm p-6">
+                    <div className="card-body p-0">
+                        <form action="#">
+                            <NotificationSection
+                                title="Mail Notification Messages"
+                                label="Admin New Order Message"
+                                placeholder="You have a new order."
+                            />
 
-                        <NotificationSection
-                            title="SMS Notification Messages"
-                            label="Admin New Order Message"
-                            placeholder="You have a new order."
-                        />
+                            <NotificationSection
+                                title="SMS Notification Messages"
+                                label="Admin New Order Message"
+                                placeholder="You have a new order."
+                            />
 
-                        <NotificationSection
-                            title="Push Notification Messages"
-                            label="Admin New Order Message"
-                            placeholder="You have a new order."
-                        />
+                            <NotificationSection
+                                title="Push Notification Messages"
+                                label="Admin New Order Message"
+                                placeholder="You have a new order."
+                            />
 
-                        <div className="flex items-center flex-wrap justify-center gap-4 mt-8">
-                            <Button type="button" className="h-[48px] border border-red-600 bg-transparent hover:bg-red-600/20 dark:hover:bg-red-600/20 text-red-600 text-base px-14 py-[11px] rounded-lg">
-                                Reset
-                            </Button>
-                            <Button type="button" className="h-[48px] text-base px-14 py-3 rounded-lg">
-                                Save Changes
-                            </Button>
-                        </div>
-                    </form>
+                            <div className="flex items-center flex-wrap justify-center gap-4 mt-8">
+                                <Button type="button" className="h-[48px] border border-red-600 bg-transparent hover:bg-red-600/20 dark:hover:bg-red-600/20 text-red-600 text-base px-14 py-[11px] rounded-lg">
+                                    Reset
+                                </Button>
+                                <Button type="button" className="h-[48px] text-base px-14 py-3 rounded-lg">
+                                    Save Changes
+                                </Button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </>

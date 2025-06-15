@@ -60,7 +60,7 @@ const ViewProfile = () => {
         <>
             <DashboardBreadcrumb title="Notification" text="Notification" />
 
-            <div className="rounded-xl border border-border bg-background p-6 shadow-sm">
+            <div className="rounded-xl border border-border bg-white dark:bg-[#273142] p-6 shadow-sm">
                 <form onSubmit={(e) => e.preventDefault()}>
                     <div className="grid md:grid-cols-2 gap-5">
                         {firebaseFields.map(({ id, label, value, colSpan }) => (
