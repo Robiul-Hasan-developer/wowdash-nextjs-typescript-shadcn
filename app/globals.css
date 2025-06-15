@@ -367,13 +367,11 @@
 
   #imagePreview {
     @apply bg-cover bg-center bg-no-repeat;
-    /* background-image: url("../images/user-grid/user-grid-img13.png"); */
   }
 
   #previewImage1,
   #previewImage2 {
     @apply bg-cover bg-center bg-no-repeat;
-    /* background-image: url("../images/payment/upload-image.png"); */
   }
 
   .avatar-upload .avatar-preview {
