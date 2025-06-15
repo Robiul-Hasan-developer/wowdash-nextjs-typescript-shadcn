@@ -49,15 +49,15 @@ const TypographyPage = () => {
         </DefaultCardComponent>
         <DefaultCardComponent title="Multi Color">
           <ul className="flex flex-wrap items-center gap-3">
-            <li className="text-[32px] line-height-1 text-primary-600">  <Star fill="#487fff" stroke="#487fff" size={26} />
+            <li className="text-[32px] line-height-1 text-blue-600">  <Star fill="#487fff" stroke="#487fff" size={26} />
             </li>
             <li className="text-[32px] line-height-1 dark:text-purple-400">  <Star fill="#9810fa" stroke="#9810fa" size={26} />
             </li>
-            <li className="text-[32px] line-height-1 text-success-600">  <Star fill="#16a34a" stroke="#16a34a" size={26} />
+            <li className="text-[32px] line-height-1 text-green-600">  <Star fill="#16a34a" stroke="#16a34a" size={26} />
             </li>
-            <li className="text-[32px] line-height-1 text-info-600">  <Star fill="#2563eb" stroke="#2563eb" size={26} />
+            <li className="text-[32px] line-height-1 text-cyan-600">  <Star fill="#2563eb" stroke="#2563eb" size={26} />
             </li>
-            <li className="text-[32px] line-height-1 text-danger-600">  <Star fill="#dc2626" stroke="#dc2626" size={26} />
+            <li className="text-[32px] line-height-1 text-red-600">  <Star fill="#dc2626" stroke="#dc2626" size={26} />
             </li>
           </ul>
         </DefaultCardComponent>

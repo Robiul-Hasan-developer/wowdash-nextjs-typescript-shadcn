@@ -122,8 +122,8 @@ const MarketInfoCard = () => {
               <h6 className="text-base font-medium mb-0">{item.price}</h6>
               <span
                 className={`text-base font-medium ${item.changeType === "positive"
-                    ? "text-green-600"
-                    : "text-danger-600"
+                  ? "text-green-600"
+                  : "text-red-600"
                   }`}
               >
                 {item.change}

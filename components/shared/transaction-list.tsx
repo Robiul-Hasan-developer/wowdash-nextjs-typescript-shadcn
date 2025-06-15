@@ -94,11 +94,10 @@ const TransactionList = () => {
             </div>
           </div>
           <span
-            className={`text-base font-medium ${
-              transactionItem.amountType === "credit"
-                ? "text-success-600"
-                : "text-danger-600"
-            }`}
+            className={`text-base font-medium ${transactionItem.amountType === "credit"
+                ? "text-green-600"
+                : "text-red-600"
+              }`}
           >
             {transactionItem.amount}
           </span>
