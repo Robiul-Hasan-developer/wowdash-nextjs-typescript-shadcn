@@ -45,22 +45,21 @@ const LoginForm = () => {
       redirect: false,
       email: values.email,
       password: values.password,
-      callbackUrl: "/dashboard",
     });
 
-    // if (result?.ok && !result.error) {
-    //   toast.success("Login successful! Please wait...");
-    //   router.push("/dashboard");
-    // } else {
-    //   toast.error("Invalid email or password!");
-    // }
-
-    if (result?.ok && result?.url && !result.error) {
+    if (result?.ok && !result.error) {
       toast.success("Login successful! Please wait...");
-      router.push(result.url);
+      router.push("/dashboard");
     } else {
-      toast.error("Invalid credentials");
+      toast.error("Invalid email or password!");
     }
+
+    // if (result?.ok && result?.url && !result.error) {
+    //   toast.success("Login successful! Please wait...");
+    //   router.push(result.url);
+    // } else {
+    //   toast.error("Invalid credentials");
+    // }
 
     setLoading(false);
     setIsSubmitting(false);
