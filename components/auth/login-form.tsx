@@ -41,25 +41,18 @@ const LoginForm = () => {
     setLoading(true);
     setIsSubmitting(true);
 
-    const result = await signIn("credentials", {
+    const res = await signIn("credentials", {
       redirect: false,
       email: values.email,
       password: values.password,
     });
 
-    if (result?.ok && !result.error) {
+    if (res?.ok && !res.error) {
       toast.success("Login successful! Please wait...");
       router.push("/dashboard");
     } else {
       toast.error("Invalid email or password!");
     }
-
-    // if (result?.ok && result?.url && !result.error) {
-    //   toast.success("Login successful! Please wait...");
-    //   router.push(result.url);
-    // } else {
-    //   toast.error("Invalid credentials");
-    // }
 
     setLoading(false);
     setIsSubmitting(false);
