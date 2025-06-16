@@ -41,18 +41,25 @@ const LoginForm = () => {
     setLoading(true);
     setIsSubmitting(true);
 
-    const res = await signIn("credentials", {
+    const result = await signIn("credentials", {
       redirect: false,
       email: values.email,
       password: values.password,
       callbackUrl: "/dashboard",
     });
 
-    if (res?.ok && !res.error) {
+    // if (result?.ok && !result.error) {
+    //   toast.success("Login successful! Please wait...");
+    //   router.push("/dashboard");
+    // } else {
+    //   toast.error("Invalid email or password!");
+    // }
+
+    if (result?.ok && result?.url && !result.error) {
       toast.success("Login successful! Please wait...");
-      router.push("/dashboard");
+      router.push(result.url);
     } else {
-      toast.error("Invalid email or password!");
+      toast.error("Invalid credentials");
     }
 
     setLoading(false);
