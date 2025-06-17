@@ -97,7 +97,7 @@ const StatCard = () => {
               <card.growthIcon fill="currentColor" stroke="none" width={14} height={14} />
               {card.growth}
             </span>
-            <span className="text-neutral-500 dark:text-neutral-400">{card.description}</span>
+            <span className="text-neutral-500 dark:text-neutral-400 text-[13px]">{card.description}</span>
           </div>
         </CardContent>
       </Card>
