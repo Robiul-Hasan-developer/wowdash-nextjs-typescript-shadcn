@@ -3,11 +3,11 @@
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema } from "@/lib/zod";
-import toast from "react-hot-toast";
 
 import {
   Form,
@@ -22,24 +22,21 @@ import { Mail, Lock, Eye, EyeOff, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { Checkbox } from "@/components/ui/checkbox";
 import SocialLogin from "./social-login";
-import { useLoading } from "@/contexts/LoadingContext";
 
 const LoginForm = () => {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { loading, setLoading } = useLoading();
 
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      email: "wowdash@gmail.com",
-      password: "Pa$$w0rd!",
+      email: "",
+      password: "",
     },
   });
 
   const handleLogin = async (values: z.infer<typeof loginSchema>) => {
-    setLoading(true);
     setIsSubmitting(true);
 
     const res = await signIn("credentials", {
@@ -52,10 +49,9 @@ const LoginForm = () => {
       toast.success("Login successful!");
       router.push("/dashboard");
     } else {
-      toast.error("Invalid email or password");
+      toast.error("Invalid email or password!");
     }
 
-    setLoading(false);
     setIsSubmitting(false);
   };
 
@@ -79,8 +75,8 @@ const LoginForm = () => {
                       {...field}
                       type="email"
                       placeholder="Email"
-                      disabled={loading}
-                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700"
+                      disabled={isSubmitting}
+                      className="ps-13 pe-12 h-14 rounded-xl"
                     />
                   </div>
                 </FormControl>
@@ -102,8 +98,8 @@ const LoginForm = () => {
                       {...field}
                       type={showPassword ? "text" : "password"}
                       placeholder="Password"
-                      disabled={loading}
-                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700"
+                      disabled={isSubmitting}
+                      className="ps-13 pe-12 h-14 rounded-xl"
                     />
                     <Button
                       type="button"
@@ -139,7 +135,7 @@ const LoginForm = () => {
           <Button
             type="submit"
             className="w-full rounded-lg h-[52px]"
-            disabled={loading}
+            disabled={isSubmitting}
           >
             {isSubmitting ? (
               <>

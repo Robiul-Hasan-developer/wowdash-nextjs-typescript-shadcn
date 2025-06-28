@@ -2,8 +2,8 @@ import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 import GitHubProvider from "next-auth/providers/github";
-import { getUserFromDb } from "./utils/db";
-import { loginSchema } from "./lib/zod";
+import { loginSchema } from "@/lib/zod";
+import { getUserFromDb } from "@/utils/db";
 import { ZodError } from "zod";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
@@ -11,7 +11,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     CredentialsProvider({
       name: "Credentials",
       credentials: {
-        email: { label: "Email", type: "email", placeholder: "email@example.com" },
+        email: { label: "Email", type: "email" },
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
@@ -20,9 +20,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
           const user = await getUserFromDb(email, password);
 
-          if (!user) {
-            return null;
-          }
+          if (!user) return null;
 
           return {
             id: user.id,
@@ -31,10 +29,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           };
         } catch (error) {
           if (error instanceof ZodError) {
-            console.error("Validation error:", error);
+            console.error("Validation Error:", error);
             return null;
           }
-          console.error("Authorize error:", error);
+          console.error("Authorize Error:", error);
           return null;
         }
       },
@@ -65,15 +63,13 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       return token;
     },
     async session({ session, token }) {
-      if (token) {
+      if (token && session.user) {
         session.user.id = token.id as string;
       }
       return session;
     },
   },
 });
-
-
 
 // import NextAuth from "next-auth";
 // import Credentials from "next-auth/providers/credentials";
