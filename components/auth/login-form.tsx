@@ -3,11 +3,12 @@
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 import { useState } from "react";
-import toast from "react-hot-toast";
-import { z } from "zod";
 import { useForm } from "react-hook-form";
+import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema } from "@/lib/zod";
+import toast from "react-hot-toast";
+
 import {
   Form,
   FormControl,
@@ -37,7 +38,7 @@ const LoginForm = () => {
     },
   });
 
-  const handleLoginFormSubmit = async (values: z.infer<typeof loginSchema>) => {
+  const handleLogin = async (values: z.infer<typeof loginSchema>) => {
     setLoading(true);
     setIsSubmitting(true);
 
@@ -47,11 +48,11 @@ const LoginForm = () => {
       password: values.password,
     });
 
-    if (res?.ok && !res.error) {
+    if (res?.ok) {
       toast.success("Login successful!");
-      router.push("/dashboard"); // ✅ Redirect after success
+      router.push("/dashboard");
     } else {
-      toast.error("Invalid email or password!");
+      toast.error("Invalid email or password");
     }
 
     setLoading(false);
@@ -62,7 +63,7 @@ const LoginForm = () => {
     <>
       <Form {...form}>
         <form
-          onSubmit={form.handleSubmit(handleLoginFormSubmit)}
+          onSubmit={form.handleSubmit(handleLogin)}
           className="space-y-5"
         >
           {/* Email */}
@@ -73,13 +74,13 @@ const LoginForm = () => {
               <FormItem>
                 <FormControl>
                   <div className="relative">
-                    <Mail className="absolute start-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-700 dark:text-neutral-200" />
+                    <Mail className="absolute start-5 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                     <Input
                       {...field}
                       type="email"
                       placeholder="Email"
-                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600"
                       disabled={loading}
+                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700"
                     />
                   </div>
                 </FormControl>
@@ -96,18 +97,18 @@ const LoginForm = () => {
               <FormItem>
                 <FormControl>
                   <div className="relative">
-                    <Lock className="absolute start-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-700 dark:text-neutral-200" />
+                    <Lock className="absolute start-5 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                     <Input
                       {...field}
                       type={showPassword ? "text" : "password"}
                       placeholder="Password"
-                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600"
                       disabled={loading}
+                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700"
                     />
                     <Button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-4 top-1/2 transform -translate-y-1/2 p-0 bg-transparent"
+                      className="absolute right-4 top-1/2 -translate-y-1/2 p-0 bg-transparent"
                     >
                       {showPassword ? <EyeOff /> : <Eye />}
                     </Button>
@@ -118,7 +119,7 @@ const LoginForm = () => {
             )}
           />
 
-          {/* Remember me */}
+          {/* Remember and Forgot */}
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">
               <Checkbox id="remember" />
@@ -134,6 +135,7 @@ const LoginForm = () => {
             </Link>
           </div>
 
+          {/* Submit */}
           <Button
             type="submit"
             className="w-full rounded-lg h-[52px]"
@@ -151,6 +153,7 @@ const LoginForm = () => {
         </form>
       </Form>
 
+      {/* Divider */}
       <div className="mt-8 relative text-center">
         <div className="absolute inset-0 border-t border-neutral-300 dark:border-slate-600"></div>
         <span className="relative px-4 bg-white dark:bg-slate-900">
@@ -160,6 +163,7 @@ const LoginForm = () => {
 
       <SocialLogin />
 
+      {/* Signup */}
       <div className="mt-8 text-center text-sm">
         <p>
           Don&apos;t have an account?{" "}
