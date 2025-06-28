@@ -1,69 +1,45 @@
-import NextAuth from "next-auth"
-import Credentials from "next-auth/providers/credentials"
-import Google from "next-auth/providers/google"
-import GitHub from "next-auth/providers/github"
-import { getUserFromDb } from "./utils/db"
-import { loginSchema } from "./lib/zod"
-import { ZodError } from "zod"
+import NextAuth from "next-auth";
+import Credentials from "next-auth/providers/credentials";
+import Google from "next-auth/providers/google";
+import GitHub from "next-auth/providers/github";
+import { getUserFromDb } from "./utils/db";
+import { loginSchema } from "./lib/zod";
+import { ZodError } from "zod";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     Credentials({
       credentials: {
-        email: {},
-        password: {},
+        email: { label: "Email", type: "email" },
+        password: { label: "Password", type: "password" },
       },
-      authorize: async (credentials) => {
+      async authorize(credentials) {
         try {
-          const { email, password } = await loginSchema.parseAsync(credentials)
+          const { email, password } = await loginSchema.parseAsync(credentials);
+          const user = await getUserFromDb(email, password);
 
-          const user = await getUserFromDb(email, password)
-
-          if (!user) {
-            return null
-          }
-          return user
-        } 
-        catch (error) {
-          if (error instanceof ZodError) {
-            return null
-          }
-          return null
+          if (!user) return null;
+          return user;
+        } catch (error) {
+          if (error instanceof ZodError) return null;
+          return null;
         }
-      }
-    }),
-    
-    Google({
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      authorization: {
-        params: {
-          prompt: "consent",
-          access_type: "offline",
-          response_type: "code",
-        },
       },
+    }),
+    Google({
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
     GitHub({
-      clientId: process.env.GITHUB_CLIENT_ID,
-      clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      authorization: {
-        params: {
-          prompt: "consent",
-          access_type: "offline",
-          response_type: "code",
-        },
-      },
+      clientId: process.env.GITHUB_CLIENT_ID!,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET!,
     }),
   ],
-  secret: process.env.NEXTAUTH_SECRET,
-  callbacks: {
-    async redirect({ url, baseUrl }) {
-      return url.startsWith("/") ? `${baseUrl}${url}` : url;
-    },
+  session: {
+    strategy: "jwt", // or "database" if using database sessions
   },
-})
-
+  secret: process.env.NEXTAUTH_SECRET,
+});
 
 
 // import NextAuth from "next-auth";
