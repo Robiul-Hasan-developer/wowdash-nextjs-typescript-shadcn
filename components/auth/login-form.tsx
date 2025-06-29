@@ -47,6 +47,7 @@ const LoginForm = () => {
       password: values.password,
       callbackUrl: `${window.location.origin}/dashboard`
     });
+    
     console.log("Login response:", res);
 
     if (res?.ok && !res.error) {
