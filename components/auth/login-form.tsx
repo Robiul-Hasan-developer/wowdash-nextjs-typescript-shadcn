@@ -47,15 +47,11 @@ const LoginForm = () => {
       password: values.password,
       callbackUrl: `${window.location.origin}/dashboard`
     });
-    
     console.log("Login response:", res);
 
     if (res?.ok && !res.error) {
       toast.success("Login successful! Please wait...");
-      // router.push("/dashboard");
-      console.log("Login successful, redirecting to dashboard...");
-      
-      router.push("/dashboard").then(() => window.location.reload());
+      router.push("/dashboard");
     } else {
       toast.error("Invalid email or password!");
     }
