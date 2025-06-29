@@ -48,38 +48,13 @@ const LoginForm = () => {
       callbackUrl: `${window.location.origin}/dashboard`
     });
 
-    // if (res?.ok && !res.error) {
-    //   toast.success("Login successful! Please wait...");
-    //   router.push("/dashboard");
-    // } else {
-    //   toast.error("Invalid email or password!");
-    // }
-
-    console.log('SignIn response:', res);
-
-    if (res?.error) {
-      toast.error(res.error || "Invalid email or password!");
-      return;
-    }
-
-    // 2. Add a small delay to ensure cookie is processed
-    await new Promise(resolve => setTimeout(resolve, 100));
-
-    // 3. Verify cookie in a way that works with HttpOnly cookies
-    const cookies = await fetch('/api/auth/cookies');
-    const cookieData = await cookies.json();
-    console.log('Cookie check:', cookieData);
-
-    if (cookieData.hasAuthCookie) {
-      toast.success("Login successful! Redirecting...");
-      // Critical: Use window.location for Vercel
-      window.location.href = res?.url || "/dashboard";
+    if (res?.ok && !res.error) {
+      toast.success("Login successful! Please wait...");
+      // router.push("/dashboard");
+      router.push("/dashboard").then(() => window.location.reload());
     } else {
-      toast.error("Login failed - cookies not set properly");
+      toast.error("Invalid email or password!");
     }
-    
-
-   
 
     setLoading(false);
     setIsSubmitting(false);
