@@ -42,19 +42,26 @@ const LoginForm = () => {
     setIsSubmitting(true);
 
     const res = await signIn("credentials", {
-      redirect: false,
+      redirect: true,
       email: values.email,
       password: values.password,
-      callbackUrl: '/dashboard'
+      callbackUrl: "/dashboard"
     });
-    console.log("Login response:", res);
 
-    if (res?.ok && !res.error) {
-      toast.success("Login successful! Please wait...");
-      router.push("/dashboard");
-    } else {
-      toast.error("Invalid email or password!");
-    }
+    // const res = await signIn("credentials", {
+    //   redirect: false,
+    //   email: values.email,
+    //   password: values.password,
+    //   callbackUrl: '/dashboard'
+    // });
+    // console.log("Login response:", res);
+
+    // if (res?.ok && !res.error) {
+    //   toast.success("Login successful! Please wait...");
+    //   router.push("/dashboard");
+    // } else {
+    //   toast.error("Invalid email or password!");
+    // }
 
     setLoading(false);
     setIsSubmitting(false);
