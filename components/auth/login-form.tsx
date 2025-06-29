@@ -45,6 +45,7 @@ const LoginForm = () => {
       redirect: false,
       email: values.email,
       password: values.password,
+      callbackUrl: `${window.location.origin}/dashboard`
     });
 
     // if (res?.ok && !res.error) {
@@ -54,11 +55,26 @@ const LoginForm = () => {
     //   toast.error("Invalid email or password!");
     // }
 
-    if (res?.ok && !res.error) {
-      toast.success("Login successful! Please wait...");
-      await new Promise(resolve => setTimeout(resolve, 500)); // 500ms delay
-      router.push("/dashboard");
-    }
+      console.log('Login response:', res);
+      if (res?.error) {
+        toast.error(res.error || "Invalid email or password!");
+        return;
+      }
+     // 2. Verify the auth cookie exists directly
+     const authCookie = document.cookie
+     .split('; ')
+     .find(row => row.startsWith('next-auth.session-token=') || 
+               row.startsWith('__Secure-next-auth.session-token='));
+
+   if (!authCookie) {
+     toast.error("Authentication cookie not set");
+     return;
+   }
+
+   // 3. Force full page reload to ensure middleware picks up the cookie
+   toast.success("Login successful! Redirecting...");
+   window.location.href = res?.url || "/dashboard";
+
 
     setLoading(false);
     setIsSubmitting(false);
