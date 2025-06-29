@@ -42,10 +42,10 @@ const LoginForm = () => {
     setIsSubmitting(true);
 
     const res = await signIn("credentials", {
-      redirect: true,
+      redirect: false,
       email: values.email,
       password: values.password,
-      callbackUrl: "/dashboard"
+      callbackUrl: '/dashboard'
     });
     console.log("Login response:", res);
 
