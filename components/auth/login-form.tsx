@@ -55,26 +55,31 @@ const LoginForm = () => {
     //   toast.error("Invalid email or password!");
     // }
 
-      console.log('Login response:', res);
-      if (res?.error) {
-        toast.error(res.error || "Invalid email or password!");
-        return;
-      }
-     // 2. Verify the auth cookie exists directly
-     const authCookie = document.cookie
-     .split('; ')
-     .find(row => row.startsWith('next-auth.session-token=') || 
-               row.startsWith('__Secure-next-auth.session-token='));
+    console.log('SignIn response:', res);
 
-   if (!authCookie) {
-     toast.error("Authentication cookie not set");
-     return;
-   }
+    if (res?.error) {
+      toast.error(res.error || "Invalid email or password!");
+      return;
+    }
 
-   // 3. Force full page reload to ensure middleware picks up the cookie
-   toast.success("Login successful! Redirecting...");
-   window.location.href = res?.url || "/dashboard";
+    // 2. Add a small delay to ensure cookie is processed
+    await new Promise(resolve => setTimeout(resolve, 100));
 
+    // 3. Verify cookie in a way that works with HttpOnly cookies
+    const cookies = await fetch('/api/auth/cookies');
+    const cookieData = await cookies.json();
+    console.log('Cookie check:', cookieData);
+
+    if (cookieData.hasAuthCookie) {
+      toast.success("Login successful! Redirecting...");
+      // Critical: Use window.location for Vercel
+      window.location.href = res?.url || "/dashboard";
+    } else {
+      toast.error("Login failed - cookies not set properly");
+    }
+    
+
+   
 
     setLoading(false);
     setIsSubmitting(false);
