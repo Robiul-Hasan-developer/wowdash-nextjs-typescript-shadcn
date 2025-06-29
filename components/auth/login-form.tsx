@@ -47,11 +47,17 @@ const LoginForm = () => {
       password: values.password,
     });
 
+    // if (res?.ok && !res.error) {
+    //   toast.success("Login successful! Please wait...");
+    //   router.push("/dashboard");
+    // } else {
+    //   toast.error("Invalid email or password!");
+    // }
+
     if (res?.ok && !res.error) {
       toast.success("Login successful! Please wait...");
+      await new Promise(resolve => setTimeout(resolve, 500)); // 500ms delay
       router.push("/dashboard");
-    } else {
-      toast.error("Invalid email or password!");
     }
 
     setLoading(false);
