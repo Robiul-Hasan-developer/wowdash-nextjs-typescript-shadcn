@@ -42,10 +42,12 @@ const LoginForm = () => {
     setIsSubmitting(true);
 
     const res = await signIn("credentials", {
-      redirect: false,
+      redirect: true,
       email: values.email,
       password: values.password,
+      callbackUrl: "/dashboard"
     });
+
 
     // if (res?.ok && !res.error) {
     //   toast.success("Login successful! Please wait...");
@@ -54,11 +56,11 @@ const LoginForm = () => {
     //   toast.error("Invalid email or password!");
     // }
 
-    if (res?.ok && !res.error) {
-      toast.success("Login successful! Please wait...");
-      await new Promise(resolve => setTimeout(resolve, 500)); // 500ms delay
-      router.push("/dashboard");
-    }
+    // if (res?.ok && !res.error) {
+    //   toast.success("Login successful! Please wait...");
+    //   await new Promise(resolve => setTimeout(resolve, 500)); // 500ms delay
+    //   router.push("/dashboard");
+    // }
 
     setLoading(false);
     setIsSubmitting(false);
