@@ -52,10 +52,21 @@ const LoginForm = () => {
 
     if (res?.ok) {
       toast.success("Login successful! Please wait...");
-      router.push(res.url || "/dashboard"); // ✅ Redirect manually
+
+      const callbackUrl = res.url ? new URL(res.url).pathname : "/dashboard";
+
+      router.push(callbackUrl);
     } else {
       toast.error("Invalid email or password!");
     }
+
+
+    // if (res?.ok) {
+    //   toast.success("Login successful! Please wait...");
+    //   router.push(res.url || "/dashboard"); // ✅ Redirect manually
+    // } else {
+    //   toast.error("Invalid email or password!");
+    // }
 
 
     // const res = await signIn("credentials", {
