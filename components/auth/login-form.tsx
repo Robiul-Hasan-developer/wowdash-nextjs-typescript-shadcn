@@ -42,23 +42,15 @@ const LoginForm = () => {
     setIsSubmitting(true);
 
 
+    // ✅ Show toast BEFORE redirection starts
+    toast.success("Login successful! Redirecting...");
 
-    const res = await signIn("credentials", {
-      redirect: false, // ✅ Prevent auto-redirect so we can handle response
+    await signIn("credentials", {
+      redirect: true, // ✅ Let next-auth handle the redirection
       email: values.email,
       password: values.password,
-      callbackUrl: "/dashboard",
+      callbackUrl: "/dashboard", // ✅ Redirect directly
     });
-
-    if (res?.ok) {
-      toast.success("Login successful! Please wait...");
-
-      const callbackUrl = res.url ? new URL(res.url).pathname : "/dashboard";
-
-      router.push(callbackUrl);
-    } else {
-      toast.error("Invalid email or password!");
-    }
 
 
     // if (res?.ok) {
