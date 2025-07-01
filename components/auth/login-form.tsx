@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import { signIn } from "next-auth/react";
+import { getSession, signIn } from "next-auth/react";
 import toast from "react-hot-toast";
 import Link from "next/link";
 import { z } from "zod";
@@ -37,43 +37,46 @@ const LoginForm = () => {
     },
   });
 
+  // const handleLoginFormSubmit = async (values: z.infer<typeof loginSchema>) => {
+  //   setLoading(true);
+  //   setIsSubmitting(true);
+
+
+  //   await signIn("credentials", {
+  //     redirect: true,
+  //     email: values.email,
+  //     password: values.password,
+  //     callbackUrl: "/dashboard",
+  //   });
+
+  //   // ✅ Show toast BEFORE redirection starts
+  //   toast.success("Login successful! Please wait...");
+
+  //   setLoading(false);
+  //   setIsSubmitting(false);
+  // };
+
   const handleLoginFormSubmit = async (values: z.infer<typeof loginSchema>) => {
     setLoading(true);
     setIsSubmitting(true);
 
-
-    // ✅ Show toast BEFORE redirection starts
-    toast.success("Login successful! Redirecting...");
-
-    await signIn("credentials", {
-      redirect: true, // ✅ Let next-auth handle the redirection
+    const res = await signIn("credentials", {
+      redirect: false,
       email: values.email,
       password: values.password,
-      callbackUrl: "/dashboard", // ✅ Redirect directly
+      callbackUrl: "/dashboard",
     });
 
+    if (res?.ok) {
+      toast.success("Login successful! Please wait...");
 
-    // if (res?.ok) {
-    //   toast.success("Login successful! Please wait...");
-    //   router.push(res.url || "/dashboard"); // ✅ Redirect manually
-    // } else {
-    //   toast.error("Invalid email or password!");
-    // }
+      // 🔥 Wait for session to update before redirect
+      await getSession();
 
-
-    // const res = await signIn("credentials", {
-    //   redirect: true,
-    //   email: values.email,
-    //   password: values.password,
-    //   callbackUrl: "/dashboard"
-    // });
-
-    // if (res?.ok && !res.error) {
-    //   toast.success("Login successful! Please wait...");
-    //   router.push("/dashboard");
-    // } else {
-    //   toast.error("Invalid email or password!");
-    // }
+      router.push("/dashboard");
+    } else {
+      toast.error("Invalid email or password!");
+    }
 
     setLoading(false);
     setIsSubmitting(false);
