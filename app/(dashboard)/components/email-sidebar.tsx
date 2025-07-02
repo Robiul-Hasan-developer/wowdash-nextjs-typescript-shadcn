@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { useEmailSidebar } from '@/contexts/email-sidebar-context';
 
 const EmailSidebar = () => {
-    const { isSidebarOpen, closeSidebar } = useEmailSidebar();
+    const { isSidebarOpen } = useEmailSidebar();
 
     return (
         <div className={cn(
