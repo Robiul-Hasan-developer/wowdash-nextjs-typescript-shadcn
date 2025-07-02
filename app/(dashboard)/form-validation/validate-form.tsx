@@ -7,20 +7,24 @@ import { Button } from "@/components/ui/button";
 import DefaultCardComponent from "../components/default-card-component";
 import { cn } from "@/lib/utils";
 import { formSchema, FormSchemaType } from "@/lib/zod";
+import toast from "react-hot-toast";
 
 const ValidateForm = () => {
 
-       const {
-            register,
-            handleSubmit,
-            formState: { errors },
-        } = useForm<FormSchemaType>({
-            resolver: zodResolver(formSchema),
-        });
-    
-        const onSubmit = (data: FormSchemaType) => {
-            console.log("Form submitted:", data);
-        };
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        reset,
+    } = useForm<FormSchemaType>({
+        resolver: zodResolver(formSchema),
+    });
+
+    const onSubmit = (data: FormSchemaType, event?: React.BaseSyntheticEvent) => {
+        event?.preventDefault();
+        toast.success("Form submitted successfully!");
+        reset();
+    };
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -33,7 +37,7 @@ const ValidateForm = () => {
                                 <Label htmlFor="firstName" className="mb-2">
                                     First Name
                                 </Label>
-                                <Input id="firstName" placeholder="First Name" {...register("firstName")} />
+                                <Input id="firstName" className='h-12 px-4' placeholder="First Name" {...register("firstName")} />
                                 {errors.firstName && (
                                     <p className="text-red-500 text-sm mt-1">{errors.firstName.message}</p>
                                 )}
@@ -44,7 +48,7 @@ const ValidateForm = () => {
                                 <Label htmlFor="lastName" className="mb-2">
                                     Last Name
                                 </Label>
-                                <Input id="lastName" placeholder="Last Name" {...register("lastName")} />
+                                <Input id="lastName" className='h-12 px-4' placeholder="Last Name" {...register("lastName")} />
                                 {errors.lastName && (
                                     <p className="text-red-500 text-sm mt-1">{errors.lastName.message}</p>
                                 )}
@@ -55,7 +59,7 @@ const ValidateForm = () => {
                                 <Label htmlFor="email" className="mb-2">
                                     Email
                                 </Label>
-                                <Input id="email" type="email" placeholder="Enter Email" {...register("email")} />
+                                <Input id="email" className='h-12 px-4' type="email" placeholder="Enter Email" {...register("email")} />
                                 {errors.email && (
                                     <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
                                 )}
@@ -66,7 +70,7 @@ const ValidateForm = () => {
                                 <Label htmlFor="phone" className="mb-2">
                                     Phone
                                 </Label>
-                                <Input id="phone" type="tel" placeholder="+1 (555) 000-0000" {...register("phone")} />
+                                <Input id="phone" className='h-12 px-4' type="tel" placeholder="+1 (555) 000-0000" {...register("phone")} />
                                 {errors.phone && (
                                     <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
                                 )}
@@ -77,7 +81,7 @@ const ValidateForm = () => {
                                 <Label htmlFor="password" className="mb-2">
                                     Password
                                 </Label>
-                                <Input id="password" type="password" placeholder="******" {...register("password")} />
+                                <Input id="password" className='h-12 px-4' type="password" placeholder="******" {...register("password")} />
                                 {errors.password && (
                                     <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>
                                 )}
