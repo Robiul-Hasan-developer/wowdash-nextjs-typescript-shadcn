@@ -17,7 +17,7 @@ import AssetImage4 from "@/public/assets/images/asset/asset-img4.png";
 import AssetImage5 from "@/public/assets/images/asset/asset-img5.png";
 import { Badge } from "../ui/badge";
 
-type AssetOrder = {
+interface AssetOrder {
   image: StaticImageData;
   name: string;
   subText: string;

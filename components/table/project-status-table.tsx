@@ -9,7 +9,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-type ProjectStatus = {
+interface ProjectStatus {
   name: string;
   duration: string;
   progressBg: string;

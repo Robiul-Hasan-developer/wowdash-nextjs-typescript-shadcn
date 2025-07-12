@@ -1,7 +1,7 @@
 "use client";
 import React, { createContext, useContext, useState } from "react";
 
-type EmailSidebarContextType = {
+interface EmailSidebarContextType {
     isSidebarOpen: boolean;
     openSidebar: () => void;
     closeSidebar: () => void;

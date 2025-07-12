@@ -11,7 +11,7 @@ import {
   LucideIcon,
 } from "lucide-react";
 
-export type StatCardData = {
+export interface StatCardData {
   id: number;
   title: string;
   value: string;

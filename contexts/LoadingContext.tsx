@@ -3,7 +3,7 @@
 import { createContext, useState, useContext, ReactNode } from "react";
 import { EmailSidebarProvider } from "./email-sidebar-context";
 
-type LoadingContextType = {
+interface LoadingContextType {
   loading: boolean;
   setLoading: (value: boolean) => void;
 };

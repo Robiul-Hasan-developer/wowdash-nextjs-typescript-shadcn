@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { UsersRound, ArrowUp, ArrowDown, Medal, Wallet, FileText } from "lucide-react";
 import React from "react";
 
-type CardData = {
+interface CardData {
   title: string;
   value: string;
   icon: React.ElementType;

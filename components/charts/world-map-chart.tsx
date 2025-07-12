@@ -12,7 +12,7 @@ const geoUrl =
   "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
 // Define a minimal type for a single geo object
-type GeoFeature = {
+interface GeoFeature {
   rsmKey: string;
   properties: Record<string, any>;
   geometry: {

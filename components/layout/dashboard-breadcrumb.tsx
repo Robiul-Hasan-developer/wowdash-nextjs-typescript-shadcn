@@ -6,16 +6,16 @@ import {
     BreadcrumbList,
     BreadcrumbPage,
     BreadcrumbSeparator,
-  } from "@/components/ui/breadcrumb"
+} from "@/components/ui/breadcrumb"
 import { House } from 'lucide-react';
 
 
-type BreadcrumbData = {
+interface BreadcrumbData {
     title: string,
     text: string,
 }
-  
-const DashboardBreadcrumb = ({title, text} : BreadcrumbData) => {
+
+const DashboardBreadcrumb = ({ title, text }: BreadcrumbData) => {
     return (
         <div className='flex flex-wrap items-center justify-between gap-2 mb-6'>
             <h6 className="text-2xl font-semibold">{title}</h6>
@@ -27,7 +27,7 @@ const DashboardBreadcrumb = ({title, text} : BreadcrumbData) => {
                             Dashboard
                         </BreadcrumbLink>
                     </BreadcrumbItem>
-                    <BreadcrumbSeparator/>
+                    <BreadcrumbSeparator />
                     <BreadcrumbItem className="text-base">
                         <BreadcrumbPage>{text}</BreadcrumbPage>
                     </BreadcrumbItem>

@@ -22,7 +22,7 @@ import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 import { useSidebarCollapsed } from "@/hooks/useSidebarCollapsed";
 
-type SidebarItem = {
+interface SidebarItem {
   title?: string;
   url?: string;
   icon?: LucideIcon;

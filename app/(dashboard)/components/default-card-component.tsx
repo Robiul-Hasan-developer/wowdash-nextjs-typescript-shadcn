@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReactNode } from "react";
 
-type ButtonCardProps = {
+interface ButtonCardProps {
   title: string;
   children: ReactNode;
 };

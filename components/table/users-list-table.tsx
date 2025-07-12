@@ -23,7 +23,7 @@ import UserList9 from "@/public/assets/images/user-list/user-list9.png";
 import UserList10 from "@/public/assets/images/user-list/user-list10.png";
 
 
-type User = {
+interface User {
     id: string;
     name: string;
     email: string;
