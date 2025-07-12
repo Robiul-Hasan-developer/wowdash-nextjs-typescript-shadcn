@@ -5,7 +5,7 @@ import React from "react";
 import { ApexOptions } from "apexcharts";
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
 
-var chartOptions:ApexOptions = {
+const chartOptions: ApexOptions = {
     chart: {
         type: 'bar',
         height: 310,
@@ -109,7 +109,7 @@ const EarningStatisticsChart = () => {
             <Chart
                 options={chartOptions}
                 series={chartSeries}
-                type="bar" 
+                type="bar"
                 height={310}
             />
         </div>

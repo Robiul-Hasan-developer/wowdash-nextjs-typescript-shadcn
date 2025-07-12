@@ -25,7 +25,6 @@ import { useLoading } from "@/contexts/LoadingContext";
 const RegisterForm = () => {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const { loading, setLoading } = useLoading();
 
   const form = useForm<z.infer<typeof registerSchema>>({
@@ -40,16 +39,14 @@ const RegisterForm = () => {
   const handleRegisterFormSubmit = async (
     values: z.infer<typeof registerSchema>
   ) => {
-    console.log(values);
-
     setLoading(true);
-    setIsSubmitting(true);
 
     toast.success("User created successfully! Please wait...");
     router.push("/dashboard");
 
-    setLoading(false);
-    setIsSubmitting(false);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
   };
 
   return (
@@ -182,7 +179,7 @@ const RegisterForm = () => {
             className="w-full rounded-lg mt-1 h-[52px] text-sm mt-2"
             disabled={loading}
           >
-            {isSubmitting ? (
+            {loading ? (
               <>
                 <Loader2 className="animate-spin h-4.5 w-4.5 mr-2" />
                 Loading...

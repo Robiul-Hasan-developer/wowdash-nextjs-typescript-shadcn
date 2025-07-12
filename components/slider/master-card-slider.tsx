@@ -63,9 +63,10 @@ function MasterCardSlider() {
               <Image
                 src={card.cardBg}
                 alt="BG"
-                className="absolute start-0 top-0 w-full h-full object-fit-cover -z-[1]"
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="absolute start-0 top-0 w-full h-full object-cover -z-[1]"
               />
               <div className="flex flex-col justify-between h-full">
                 <div className="flex items-center justify-between flex-wrap">
@@ -76,6 +77,7 @@ function MasterCardSlider() {
                     width={70}
                     height={40}
                     priority
+                    className="w-[70px] h-[40px]"
                   />
                 </div>
                 <div>

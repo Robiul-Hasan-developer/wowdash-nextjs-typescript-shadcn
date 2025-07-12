@@ -9,10 +9,10 @@ interface ChartColorType {
     chartColor: string;
 }
 
-const CardSmallChartTwo = ( {chartColor}: ChartColorType ) => {
-    
+const CardSmallChartTwo = ({ chartColor }: ChartColorType) => {
+
     let currentYear = new Date().getFullYear();
-    var chartOptions:ApexOptions = {
+    const chartOptions: ApexOptions = {
         chart: {
             type: 'area',
             width: 130,
@@ -43,26 +43,26 @@ const CardSmallChartTwo = ( {chartColor}: ChartColorType ) => {
                 lines: {
                     show: false
                 }
-            },   
+            },
             yaxis: {
                 lines: {
                     show: false
                 }
-            },  
+            },
             row: {
                 colors: undefined,
                 opacity: 0.5
-            },  
+            },
             column: {
                 colors: undefined,
                 opacity: 0.5
-            },  
+            },
             padding: {
                 top: -3,
                 right: 0,
                 bottom: 0,
                 left: 0
-            },  
+            },
         },
         fill: {
             type: 'gradient',
@@ -73,7 +73,7 @@ const CardSmallChartTwo = ( {chartColor}: ChartColorType ) => {
                 shadeIntensity: 0.5, // Intensity of the gradient shading
                 gradientToColors: [`${chartColor}00`], // Bottom gradient color (with transparency)
                 inverseColors: false, // Do not invert colors
-                opacityFrom: .7 , // Starting opacity
+                opacityFrom: .7, // Starting opacity
                 opacityTo: 0.3,  // Ending opacity
                 stops: [0, 100],
             },
@@ -107,7 +107,7 @@ const CardSmallChartTwo = ( {chartColor}: ChartColorType ) => {
             },
         },
     };
-    
+
     const chartSeries = [
         {
             name: 'series1',
@@ -115,12 +115,12 @@ const CardSmallChartTwo = ( {chartColor}: ChartColorType ) => {
         },
     ]
 
-    
+
     return (
         <Chart
             options={chartOptions}
             series={chartSeries}
-            type="area" 
+            type="area"
             height={60}
             width={130}
         />

@@ -5,7 +5,7 @@ import React from "react";
 import { ApexOptions } from "apexcharts";
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
 
-var chartOptions: ApexOptions = {
+const chartOptions: ApexOptions = {
     colors: ['#FF9F29', '#487FFF'],
     chart: {
         height: 264,

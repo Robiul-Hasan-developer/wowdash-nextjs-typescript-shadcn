@@ -9,15 +9,15 @@ interface ChartColorType {
     chartColor: string;
 }
 
-const RevenueGrowthChart = ( {chartColor}: ChartColorType ) => {
+const RevenueGrowthChart = ({ chartColor }: ChartColorType) => {
 
-    var chartOptions:ApexOptions = {
+    const chartOptions: ApexOptions = {
         chart: {
             type: 'area',
             width: '100%',
             height: 162,
             sparkline: {
-              enabled: false // Remove whitespace
+                enabled: false // Remove whitespace
             },
             toolbar: {
                 show: false
@@ -41,26 +41,26 @@ const RevenueGrowthChart = ( {chartColor}: ChartColorType ) => {
                 lines: {
                     show: false
                 }
-            },   
+            },
             yaxis: {
                 lines: {
                     show: false
                 }
-            },  
+            },
             row: {
                 colors: undefined,
                 opacity: 0.5
-            },  
+            },
             column: {
                 colors: undefined,
                 opacity: 0.5
-            },  
+            },
             padding: {
                 top: -30,
                 right: 0,
                 bottom: -10,
                 left: 0
-            },  
+            },
         },
         fill: {
             type: 'gradient',
@@ -78,12 +78,12 @@ const RevenueGrowthChart = ( {chartColor}: ChartColorType ) => {
         },
         // Customize the circle marker color on hover
         markers: {
-          colors: [chartColor],
-          strokeWidth: 3,
-          size: 0,
-          hover: {
-            size: 10
-          }
+            colors: [chartColor],
+            strokeWidth: 3,
+            size: 0,
+            hover: {
+                size: 10
+            }
         },
         xaxis: {
             labels: {
@@ -108,11 +108,11 @@ const RevenueGrowthChart = ( {chartColor}: ChartColorType ) => {
 
     const chartSeries = [
         {
-          name: 'This Day',
-          data: [4, 18, 13, 40, 30, 50, 30, 60, 40, 75, 45, 90],
+            name: 'This Day',
+            data: [4, 18, 13, 40, 30, 50, 30, 60, 40, 75, 45, 90],
         },
     ]
-  
+
     return (
         <Chart
             options={chartOptions}

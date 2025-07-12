@@ -11,7 +11,7 @@ interface LabeledValue {
 
 
 const DailySalesChart = ({ chartColor }: LabeledValue) => {
-    var chartOptions: ApexOptions = {
+    const chartOptions: ApexOptions = {
 
         chart: {
             type: 'area',

@@ -22,7 +22,6 @@ import { useLoading } from "@/contexts/LoadingContext";
 
 const ForgotPasswordComponent = () => {
   const router = useRouter();
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const { loading, setLoading } = useLoading();
 
   const form = useForm<z.infer<typeof forgotPasswordSchema>>({
@@ -36,14 +35,12 @@ const ForgotPasswordComponent = () => {
     values: z.infer<typeof forgotPasswordSchema>
   ) => {
     setLoading(true);
-    setIsSubmitting(true);
 
     toast.success("Password Reset code has been sent to your email");
     router.push("/auth/create-password");
 
-    setLoading(false);
     setTimeout(() => {
-      setIsSubmitting(false);
+      setLoading(false);
     }, 1000);
   };
 
@@ -83,7 +80,7 @@ const ForgotPasswordComponent = () => {
             className="w-full rounded-lg mt-1 h-[52px] text-sm mt-2"
             disabled={loading}
           >
-            {isSubmitting ? (
+            {loading ? (
               <>
                 <Loader2 className="animate-spin h-4.5 w-4.5 mr-2" />
                 Sending...
