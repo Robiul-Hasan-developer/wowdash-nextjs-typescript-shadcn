@@ -1,6 +1,6 @@
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import DefaultCardComponent from "../components/default-card-component";
+import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { DatePicker } from "@/components/shared/date-picker";

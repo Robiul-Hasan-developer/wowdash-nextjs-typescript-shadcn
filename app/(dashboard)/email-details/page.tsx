@@ -1,6 +1,6 @@
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import EmailSidebar from "../components/email-sidebar";
+import EmailSidebar from "@/app/(dashboard)/components/email-sidebar";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
@@ -10,8 +10,8 @@ import UserList2 from "@/public/assets/images/user-list/user-list2.png";
 import Link from "next/link";
 import { Images, MoveLeft, Printer, Star, Trash2, LinkIcon, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import EmailSidebarOverlay from "../components/email-sidebar-overlay";
-import EmailSidebarToggleButton from "../email/components/email-sidebar-toggle-button";
+import EmailSidebarOverlay from "@/app/(dashboard)/components/email-sidebar-overlay";
+import EmailSidebarToggleButton from "@/app/(dashboard)/email/components/email-sidebar-toggle-button";
 
 const EmailDetailsPage = () => {
     return (

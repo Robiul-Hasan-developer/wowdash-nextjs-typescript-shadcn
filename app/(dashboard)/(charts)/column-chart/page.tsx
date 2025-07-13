@@ -1,6 +1,6 @@
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import DefaultCardComponent from "../../components/default-card-component";
+import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import GenerateContentChart from "@/components/charts/generate-content-chart";
 import RevenueStatisticsChartUpdown from "@/components/charts/revenue-statistics-chart-updown";
 import ColumnGroupBarChart from "@/components/charts/column-group-bar-chart";

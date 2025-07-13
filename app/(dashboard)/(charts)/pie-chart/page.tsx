@@ -1,6 +1,6 @@
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import DefaultCardComponent from "../../components/default-card-component";
+import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import BasicPieChart from "@/components/charts/basic-pie-chart";
 import DonutChart from "@/components/charts/donut-chart";
 import RadarChart from "@/components/charts/radar-chart";

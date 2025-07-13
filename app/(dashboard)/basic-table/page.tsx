@@ -1,6 +1,6 @@
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import DefaultCardComponent from "../components/default-card-component";
+import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import RecentOrdersTable from "@/components/table/recent-orders-table";
 import TopSellingProductTable from "@/components/table/top-selling-product-table";
 import BorderedTable from "@/components/table/bordered-table";

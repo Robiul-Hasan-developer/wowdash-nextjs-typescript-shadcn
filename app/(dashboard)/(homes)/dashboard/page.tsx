@@ -1,12 +1,12 @@
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import StatCard from "./components/stat-card";
-import SalesStaticCard from "./components/sales-static-card";
-import TotalSubscriberCard from "./components/total-subscriber-card";
-import UserOverviewCard from "./components/user-overview-card";
-import TabsWithTableCard from "./components/tabs-with-table-card";
-import TopPerformerCard from "./components/top-performer-card";
-import GenerateContentCard from "./components/generate-content-card";
-import TopCountriesCard from "./components/top-countries-card";
+import StatCard from "@/app/(dashboard)/(homes)/dashboard/components/stat-card";
+import SalesStaticCard from "@/app/(dashboard)/(homes)/dashboard/components/sales-static-card";
+import TotalSubscriberCard from "@/app/(dashboard)/(homes)/dashboard/components/total-subscriber-card";
+import UserOverviewCard from "@/app/(dashboard)/(homes)/dashboard/components/user-overview-card";
+import TabsWithTableCard from "@/app/(dashboard)/(homes)/dashboard/components/tabs-with-table-card";
+import TopPerformerCard from "@/app/(dashboard)/(homes)/dashboard/components/top-performer-card";
+import GenerateContentCard from "@/app/(dashboard)/(homes)/dashboard/components/generate-content-card";
+import TopCountriesCard from "@/app/(dashboard)/(homes)/dashboard/components/top-countries-card";
 
 export default async function DashboardPage() {
   return (

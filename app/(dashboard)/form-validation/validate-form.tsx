@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import DefaultCardComponent from "../components/default-card-component";
+import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import { cn } from "@/lib/utils";
 import { formSchema, FormSchemaType } from "@/lib/zod";
 import toast from "react-hot-toast";

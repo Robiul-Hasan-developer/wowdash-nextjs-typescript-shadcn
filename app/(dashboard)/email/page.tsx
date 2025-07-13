@@ -2,11 +2,11 @@
 
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import EmailSidebar from "../components/email-sidebar";
-import EmailList from "./components/email-list";
-import EmailHeader from "./components/email-header";
-import EmailSidebarToggleButton from "./components/email-sidebar-toggle-button";
-import EmailSidebarOverlay from "../components/email-sidebar-overlay";
+import EmailSidebar from "@/app/(dashboard)/components/email-sidebar";
+import EmailList from "@/app/(dashboard)/email/components/email-list";
+import EmailHeader from "@/app/(dashboard)/email/components/email-header";
+import EmailSidebarToggleButton from "@/app/(dashboard)/email/components/email-sidebar-toggle-button";
+import EmailSidebarOverlay from "@/app/(dashboard)/components/email-sidebar-overlay";
 
 const EmailPage = () => {
     return (

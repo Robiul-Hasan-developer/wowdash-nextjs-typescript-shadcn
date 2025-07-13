@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import TabsImage1 from "@/public/assets/images/tabs/tabs-image1.png";
 import TabsImage2 from "@/public/assets/images/tabs/tabs-image2.png";
-import DefaultCardComponent from "../../components/default-card-component";
+import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import { Home, FileText, User, Settings } from 'lucide-react';
 
 const TypographyPage = () => {

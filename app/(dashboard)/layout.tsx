@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import { ClientRoot } from "../client-root";
+import { ClientRoot } from "@/app/client-root";
 import { auth } from "@/auth";
 import { SessionProvider } from "next-auth/react";
 

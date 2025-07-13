@@ -1,6 +1,6 @@
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import DefaultCardComponent from "../../components/default-card-component";
+import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import ListImg1 from "@/public/assets/images/lists/list-img1.png";
 import ListImg2 from "@/public/assets/images/lists/list-img2.png";
 import ListImg3 from "@/public/assets/images/lists/list-img3.png";

@@ -1,14 +1,14 @@
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import StatsCard from "./components/stats-card";
-import RevenueStatisticsCard from "./revenue-statistics-card";
-import StaticCard from "./components/static-card";
-import MostLocationCard from "./components/most-location-card";
-import MyPortfolioCard from "./components/my-portfolio-card";
-import LatestInvestmentsCard from "./components/latest-investments-card";
-import NoticeBoardCard from "./components/notice-board-card";
-import TotalTransactionsCard from "./components/total-transactions-card";
-import ProjectStatusCard from "./components/project-status-card";
+import StatsCard from "@/app/(dashboard)/(homes)/investment/components/stats-card";
+import RevenueStatisticsCard from "@/app/(dashboard)/(homes)/investment/components/revenue-statistics-card";
+import StaticCard from "@/app/(dashboard)/(homes)/investment/components/static-card";
+import MostLocationCard from "@/app/(dashboard)/(homes)/investment/components/most-location-card";
+import MyPortfolioCard from "@/app/(dashboard)/(homes)/investment/components/my-portfolio-card";
+import LatestInvestmentsCard from "@/app/(dashboard)/(homes)/investment/components/latest-investments-card";
+import NoticeBoardCard from "@/app/(dashboard)/(homes)/investment/components/notice-board-card";
+import TotalTransactionsCard from "@/app/(dashboard)/(homes)/investment/components/total-transactions-card";
+import ProjectStatusCard from "@/app/(dashboard)/(homes)/investment/components/project-status-card";
 
 const InvestmentPage = () => {
   return (

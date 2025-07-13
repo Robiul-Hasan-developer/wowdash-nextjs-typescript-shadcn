@@ -16,7 +16,7 @@ import AvatarGroup4 from "@/public/assets/images/avatar/avatar-group4.png";
 import AvatarGroup5 from "@/public/assets/images/avatar/avatar-group5.png";
 import AvatarGroup6 from "@/public/assets/images/avatar/avatar-group6.png";
 import { Plus } from "lucide-react";
-import DefaultCardComponent from "../../components/default-card-component";
+import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 
 const TypographyPage = () => {
   return (

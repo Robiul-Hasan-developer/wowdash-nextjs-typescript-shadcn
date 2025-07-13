@@ -1,11 +1,11 @@
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import ViewProfileSidebar from "./components/view-profile-sidebar";
+import ViewProfileSidebar from "@/app/(dashboard)/view-profile/components/view-profile-sidebar";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent } from "@/components/ui/card";
-import EditProfileTabContent from "./components/edit-profile-tab-content";
-import ChangePasswordTabContent from "./components/change-password-tab-content";
-import NotificationPasswordTabContent from "./components/notification-password-tab-content";
+import EditProfileTabContent from "@/app/(dashboard)/view-profile/components/edit-profile-tab-content";
+import ChangePasswordTabContent from "@/app/(dashboard)/view-profile/components/change-password-tab-content";
+import NotificationPasswordTabContent from "@/app/(dashboard)/view-profile/components/notification-password-tab-content";
 
 const ViewProfile = () => {
     return (

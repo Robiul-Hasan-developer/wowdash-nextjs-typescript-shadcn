@@ -2,7 +2,7 @@ import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import DefaultCardComponent from "../../components/default-card-component";
+import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import { ArrowLeftSquare, ArrowRightSquare, ArrowUpSquare, ArrowDownSquare } from 'lucide-react';
 
 const ButtonPage = () => {

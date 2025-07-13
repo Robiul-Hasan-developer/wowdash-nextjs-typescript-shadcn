@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import ValidateForm from "./validate-form";
+import ValidateForm from "@/app/(dashboard)/form-validation/validate-form";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 
 const FormValidation = () => {

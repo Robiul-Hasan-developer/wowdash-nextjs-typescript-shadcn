@@ -2,7 +2,7 @@ import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import SearchBox from "@/components/shared/search-box";
-import UsersListTable from './../../../components/table/users-list-table';
+import UsersListTable from '@/components/table/users-list-table';
 import CustomSelect from "@/components/shared/custom-select";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";

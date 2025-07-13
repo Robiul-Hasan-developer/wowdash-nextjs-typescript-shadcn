@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Plus } from "lucide-react";
-import UsersGridCard from "./users-grid-card";
+import UsersGridCard from "@/app/(dashboard)/users-grid/users-grid-card";
 
 const UsersGrid = () => {
     return (

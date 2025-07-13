@@ -1,17 +1,17 @@
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import DefaultCardComponent from "../components/default-card-component";
-import StatCard from "../(homes)/dashboard/components/stat-card";
-import StatsCard from "../(homes)/crm/components/stats-card";
-import StatsCardTwo from './../(homes)/ecommerce/component/stats-card';
-import StatsCardThree from './../(homes)/cryptocurrency/components/stats-card';
-import SalesStaticCard from "../(homes)/dashboard/components/sales-static-card";
-import TopCountriesCard from "../(homes)/dashboard/components/top-countries-card";
-import ClientPaymentStatusCard from "../(homes)/crm/components/client-payment-status-card";
-import EarningStatisticsCard from "../(homes)/crm/components/earning-statistics-card";
-import UserOverviewCard from "../(homes)/dashboard/components/user-overview-card";
-import StaticCard from "../(homes)/investment/components/static-card";
-import DailySalesCard from "../(homes)/ecommerce/component/daily-sales-card";
+import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
+import StatCard from "@/app/(dashboard)/(homes)/dashboard/components/stat-card";
+import StatsCard from "@/app/(dashboard)/(homes)/crm/components/stats-card";
+import StatsCardTwo from '@/app/(dashboard)/(homes)/ecommerce/component/stats-card';
+import StatsCardThree from '@/app/(dashboard)/(homes)/cryptocurrency/components/stats-card';
+import SalesStaticCard from "@/app/(dashboard)/(homes)/dashboard/components/sales-static-card";
+import TopCountriesCard from "@/app/(dashboard)/(homes)/dashboard/components/top-countries-card";
+import ClientPaymentStatusCard from "@/app/(dashboard)/(homes)/crm/components/client-payment-status-card";
+import EarningStatisticsCard from "@/app/(dashboard)/(homes)/crm/components/earning-statistics-card";
+import UserOverviewCard from "@/app/(dashboard)/(homes)/dashboard/components/user-overview-card";
+import StaticCard from "@/app/(dashboard)/(homes)/investment/components/static-card";
+import DailySalesCard from "@/app/(dashboard)/(homes)/ecommerce/component/daily-sales-card";
 
 const LineChartPage = () => {
     return (

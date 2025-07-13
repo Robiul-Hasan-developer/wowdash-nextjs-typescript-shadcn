@@ -1,6 +1,6 @@
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import DefaultCardComponent from "../../components/default-card-component";
+import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import LineChart from "@/components/charts/line-chart";
 import ZoomableChart from "@/components/charts/zoomable-chart";
 import LineChartLabel from "@/components/charts/line-chart-label";
