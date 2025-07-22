@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Table,
   TableBody,
@@ -71,9 +69,8 @@ const StockReportTable = () => {
             <TableRow key={index}>
               {/* Item */}
               <TableCell
-                className={`py-4.5 px-4 border-b first:border-s last:border-e border-neutral-200 dark:border-slate-600 ${
-                  isLast ? "rounded-bl-lg" : ""
-                }`}
+                className={`py-4.5 px-4 border-b first:border-s last:border-e border-neutral-200 dark:border-slate-600 ${isLast ? "rounded-bl-lg" : ""
+                  }`}
               >
                 {product.name}
               </TableCell>
@@ -85,9 +82,8 @@ const StockReportTable = () => {
 
               {/* Stock */}
               <TableCell
-                className={`py-4.5 px-4 border-b text-center first:border-s last:border-e border-neutral-200 dark:border-slate-600 ${
-                  isLast ? "rounded-br-lg" : ""
-                }`}
+                className={`py-4.5 px-4 border-b text-center first:border-s last:border-e border-neutral-200 dark:border-slate-600 ${isLast ? "rounded-br-lg" : ""
+                  }`}
               >
                 <div className="max-w-[100px] mx-auto space-y-1">
                   <div className="w-full h-2 bg-neutral-200 dark:bg-slate-700 rounded-full overflow-hidden">

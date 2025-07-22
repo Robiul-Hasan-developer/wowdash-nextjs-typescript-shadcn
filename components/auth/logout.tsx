@@ -25,9 +25,8 @@ const Logout = () => {
     <Button
       onClick={handleLogout}
       type="button"
-      className={`hover:text-red-600 flex items-center gap-3 py-0.5 text-neutral-900 dark:text-white text-base !px-0.5 cursor-pointer leading-[0] w-full justify-start hover:no-underline h-[25px] ${
-        loading ? "text-red-600" : ""
-      }`}
+      className={`hover:text-red-600 flex items-center gap-3 py-0.5 text-neutral-900 dark:text-white text-base !px-0.5 cursor-pointer leading-[0] w-full justify-start hover:no-underline h-[25px] ${loading ? "text-red-600" : ""
+        }`}
       variant="link"
     >
       {loading ? (

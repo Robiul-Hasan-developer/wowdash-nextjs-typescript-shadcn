@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import {
@@ -93,9 +91,8 @@ const TopSellingProductTable = () => {
               <TableRow key={index}>
                 {/* Item Column */}
                 <TableCell
-                  className={`py-3 px-4 border-b border-neutral-200 dark:border-slate-600 first:border-s last:border-e ${
-                    isLastRow ? "rounded-bl-lg" : ""
-                  }`}
+                  className={`py-3 px-4 border-b border-neutral-200 dark:border-slate-600 first:border-s last:border-e ${isLastRow ? "rounded-bl-lg" : ""
+                    }`}
                 >
                   <div className="flex items-center">
                     <Image
@@ -116,36 +113,32 @@ const TopSellingProductTable = () => {
 
                 {/* Price Column */}
                 <TableCell
-                  className={`py-3 px-4 border-b border-neutral-200 dark:border-slate-600 first:border-s last:border-e ${
-                    isLastRow ? "rounded-bl-lg" : ""
-                  }`}
+                  className={`py-3 px-4 border-b border-neutral-200 dark:border-slate-600 first:border-s last:border-e ${isLastRow ? "rounded-bl-lg" : ""
+                    }`}
                 >
                   {product.price}
                 </TableCell>
 
                 {/* Discount Column */}
                 <TableCell
-                  className={`py-3 px-4 border-b border-neutral-200 dark:border-slate-600 first:border-s last:border-e ${
-                    isLastRow ? "rounded-bl-lg" : ""
-                  }`}
+                  className={`py-3 px-4 border-b border-neutral-200 dark:border-slate-600 first:border-s last:border-e ${isLastRow ? "rounded-bl-lg" : ""
+                    }`}
                 >
                   {product.discount}
                 </TableCell>
 
                 {/* Sold Column */}
                 <TableCell
-                  className={`py-3 px-4 border-b border-neutral-200 dark:border-slate-600 first:border-s last:border-e ${
-                    isLastRow ? "rounded-bl-lg" : ""
-                  }`}
+                  className={`py-3 px-4 border-b border-neutral-200 dark:border-slate-600 first:border-s last:border-e ${isLastRow ? "rounded-bl-lg" : ""
+                    }`}
                 >
                   {product.sold}
                 </TableCell>
 
                 {/* Total Orders Column */}
                 <TableCell
-                  className={`py-3 px-4 border-b border-neutral-200 dark:border-slate-600 first:border-s last:border-e ${
-                    isLastRow ? "rounded-br-lg" : ""
-                  } text-center`}
+                  className={`py-3 px-4 border-b border-neutral-200 dark:border-slate-600 first:border-s last:border-e ${isLastRow ? "rounded-br-lg" : ""
+                    } text-center`}
                 >
                   <span className="bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400 px-8 py-1.5 rounded-full font-medium text-sm">
                     {product.totalOrders}

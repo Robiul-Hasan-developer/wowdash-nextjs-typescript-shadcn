@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Table,
   TableBody,
@@ -71,23 +69,20 @@ const ProjectStatusTable = () => {
           return (
             <TableRow key={index}>
               <TableCell
-                className={`py-3 px-4 first:border-s last:border-e border-b border-neutral-200 dark:border-slate-600 text-start ${
-                  isLast ? "rounded-bl-lg" : ""
-                }`}
+                className={`py-3 px-4 first:border-s last:border-e border-b border-neutral-200 dark:border-slate-600 text-start ${isLast ? "rounded-bl-lg" : ""
+                  }`}
               >
                 {order.name}
               </TableCell>
               <TableCell
-                className={`py-3 px-4 first:border-s last:border-e border-b border-neutral-200 dark:border-slate-600 text-center ${
-                  isLast ? "rounded-bl-lg" : ""
-                }`}
+                className={`py-3 px-4 first:border-s last:border-e border-b border-neutral-200 dark:border-slate-600 text-center ${isLast ? "rounded-bl-lg" : ""
+                  }`}
               >
                 {order.duration}
               </TableCell>
               <TableCell
-                className={`py-3 px-4 first:border-s last:border-e border-b border-neutral-200 dark:border-slate-600 text-center ${
-                  isLast ? "rounded-bl-lg" : ""
-                }`}
+                className={`py-3 px-4 first:border-s last:border-e border-b border-neutral-200 dark:border-slate-600 text-center ${isLast ? "rounded-bl-lg" : ""
+                  }`}
               >
                 <div className="mx-auto text-center space-y-1">
                   <div className="w-[66px] mx-auto">

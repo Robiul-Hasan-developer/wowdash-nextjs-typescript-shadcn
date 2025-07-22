@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { ArrowUpRight, ArrowDownLeft, LucideIcon } from "lucide-react";
 import {
@@ -24,14 +22,14 @@ export interface Transaction {
   direction: "in" | "out";
   icon: LucideIcon;
   statusVariant:
-    | "default"
-    | "secondary"
-    | "destructive"
-    | "outline"
-    | "success"
-    | "warning"
-    | "info"
-    | "danger";
+  | "default"
+  | "secondary"
+  | "destructive"
+  | "outline"
+  | "success"
+  | "warning"
+  | "info"
+  | "danger";
 }
 
 export const transactions: Transaction[] = [
@@ -139,9 +137,8 @@ const RecentTransactionTable = () => {
             <TableRow key={txn.id}>
               {/* Asset */}
               <TableCell
-                className={`py-3 px-4 text-base border-b first:border-s last:border-e border-neutral-200 dark:border-slate-600 ${
-                  isLast ? "rounded-bl-lg" : ""
-                }`}
+                className={`py-3 px-4 text-base border-b first:border-s last:border-e border-neutral-200 dark:border-slate-600 ${isLast ? "rounded-bl-lg" : ""
+                  }`}
               >
                 <div className="flex items-center gap-2">
                   <span
@@ -182,9 +179,8 @@ const RecentTransactionTable = () => {
 
               {/* Status */}
               <TableCell
-                className={`py-3 px-4 text-base border-b first:border-s last:border-e border-neutral-200 dark:border-slate-600 text-center ${
-                  isLast ? "rounded-br-lg" : ""
-                }`}
+                className={`py-3 px-4 text-base border-b first:border-s last:border-e border-neutral-200 dark:border-slate-600 text-center ${isLast ? "rounded-br-lg" : ""
+                  }`}
               >
                 <Badge variant={txn.statusVariant}>{txn.status}</Badge>
               </TableCell>
