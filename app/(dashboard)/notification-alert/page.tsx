@@ -82,4 +82,4 @@ const NotificationSection: React.FC<NotificationSectionProps> = ({ title, label,
             <Textarea placeholder={placeholder} className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 !rounded-lg !shadow-none !ring-0 !h-[80px] !w-full" />
         </div>
     );
-}; 
+};
