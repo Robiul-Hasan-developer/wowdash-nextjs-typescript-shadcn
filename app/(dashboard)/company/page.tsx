@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/select"
 import { Button } from "@/components/ui/button";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
     title: "Company Profile & Details | WowDash Admin Dashboard",
     description:
         "View and manage company profiles, business details, and related information in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

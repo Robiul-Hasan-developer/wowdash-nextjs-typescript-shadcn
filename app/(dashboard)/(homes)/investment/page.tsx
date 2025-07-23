@@ -11,7 +11,7 @@ import NoticeBoardCard from "@/app/(dashboard)/(homes)/investment/components/not
 import TotalTransactionsCard from "@/app/(dashboard)/(homes)/investment/components/total-transactions-card";
 import ProjectStatusCard from "@/app/(dashboard)/(homes)/investment/components/project-status-card";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Investment Dashboard | WowDash Admin Panel",
   description:
     "Track investment portfolios, returns, and market insights in the Investment Dashboard of WowDash Admin Template built with Next.js and Tailwind.",

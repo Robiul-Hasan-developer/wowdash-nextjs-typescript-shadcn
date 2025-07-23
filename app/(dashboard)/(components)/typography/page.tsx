@@ -3,7 +3,7 @@ import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Card, CardContent } from "@/components/ui/card";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Typography & Text Styles | WowDash Admin Dashboard",
   description:
     "Explore typography settings, font styles, and text utilities for consistent design in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

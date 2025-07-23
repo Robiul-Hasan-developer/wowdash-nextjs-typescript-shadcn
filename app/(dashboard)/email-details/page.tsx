@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import EmailSidebarOverlay from "@/app/(dashboard)/components/email-sidebar-overlay";
 import EmailSidebarToggleButton from "@/app/(dashboard)/email/components/email-sidebar-toggle-button";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
     title: "Email Details & Message View | WowDash Admin Dashboard",
     description:
         "View detailed email content, sender information, and message actions in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

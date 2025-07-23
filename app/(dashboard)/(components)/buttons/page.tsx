@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import { ArrowLeftSquare, ArrowRightSquare, ArrowUpSquare, ArrowDownSquare } from 'lucide-react';
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Buttons & Interactive Controls | WowDash Admin Dashboard",
   description:
     "Discover various button styles, sizes, and interactive controls in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

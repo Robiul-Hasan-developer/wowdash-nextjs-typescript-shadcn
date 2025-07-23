@@ -7,7 +7,7 @@ import RevenueStatisticsChartUpdown from "@/components/charts/revenue-statistics
 import ColumnGroupBarChart from "@/components/charts/column-group-bar-chart";
 import GroupColumnChart from "@/components/charts/group-column-chart";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
     title: "Column Charts & Data Visualization | WowDash Admin Dashboard",
     description:
         "Explore various interactive chart components for analytics and data visualization in the WowDash Admin Dashboard template built with Next.js and Tailwind CSS.",

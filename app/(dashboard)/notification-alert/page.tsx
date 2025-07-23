@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
     title: "Notifications & Alerts | WowDash Admin Dashboard",
     description:
         "Manage notification alerts, messages, and system prompts in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

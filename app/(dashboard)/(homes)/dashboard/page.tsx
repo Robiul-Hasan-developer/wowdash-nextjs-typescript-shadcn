@@ -9,7 +9,7 @@ import TopPerformerCard from "@/app/(dashboard)/(homes)/dashboard/components/top
 import GenerateContentCard from "@/app/(dashboard)/(homes)/dashboard/components/generate-content-card";
 import TopCountriesCard from "@/app/(dashboard)/(homes)/dashboard/components/top-countries-card";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "AI Dashboard | WowDash Admin Panel",
   description:
     "Explore AI analytics, monitor model performance, and track intelligent automation workflows in the AI Dashboard of WowDash Admin Template.",

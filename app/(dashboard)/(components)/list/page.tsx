@@ -10,7 +10,7 @@ import ListImg5 from "@/public/assets/images/lists/list-img5.png";
 import Image from "next/image";
 import { BellDot, FolderOpen, Reply, ShieldX, ShoppingCart } from "lucide-react";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "User List & Management | WowDash Admin Dashboard",
   description:
     "View, manage, and organize users with the user list and management features in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

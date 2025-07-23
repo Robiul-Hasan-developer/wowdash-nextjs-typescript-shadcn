@@ -17,7 +17,7 @@ import PaymentIcon from "@/public/assets/images/card/payment-icon.png";
 import { Mail, Copy } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
     title: "Input Forms & Field Elements | WowDash Admin Dashboard",
     description:
         "Design and manage input forms, fields, and form elements for data collection in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

@@ -8,7 +8,7 @@ import EditProfileTabContent from "@/app/(dashboard)/view-profile/components/edi
 import ChangePasswordTabContent from "@/app/(dashboard)/view-profile/components/change-password-tab-content";
 import NotificationPasswordTabContent from "@/app/(dashboard)/view-profile/components/notification-password-tab-content";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
     title: "View Profile & User Details | WowDash Admin Dashboard",
     description:
         "Access detailed user profiles and personal information in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

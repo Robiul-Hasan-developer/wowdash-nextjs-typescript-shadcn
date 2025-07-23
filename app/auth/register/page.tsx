@@ -8,7 +8,7 @@ import ThemeLogo from "@/components/shared/theme-logo";
 import { StaticImg } from "@/types/static-image";
 import RegisterForm from "@/components/auth/register-form";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Cards & Content Containers | WowDash Admin Dashboard",
   description:
     "Showcase versatile card components and content containers for organized layout in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

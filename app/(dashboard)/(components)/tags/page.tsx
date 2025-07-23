@@ -6,7 +6,7 @@ import Image from "next/image";
 import FlagImage from "@/public/assets/images/flags/flag-tag.png";
 import { X } from "lucide-react";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Tags & Label Elements | WowDash Admin Dashboard",
   description:
     "Manage and display tag components and label elements for categorization and UI organization in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

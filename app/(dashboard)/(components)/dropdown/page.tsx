@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { ChevronDown, ChevronUp, ChevronRight, ChevronLeft, EllipsisVertical, Ellipsis } from 'lucide-react';
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Dropdowns & Menu Navigation | WowDash Admin Dashboard",
   description:
     "Manage and customize dropdown menus and navigation components in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

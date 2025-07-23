@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 import { Plus } from "lucide-react";
 import UsersGridCard from "@/app/(dashboard)/users-grid/users-grid-card";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
     title: "Users Grid & Profile Overview | WowDash Admin Dashboard",
     description:
         "Display and manage user profiles with a dynamic users grid layout in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

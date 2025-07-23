@@ -10,7 +10,7 @@ import UsersActivateCard from "@/app/(dashboard)/(homes)/cryptocurrency/componen
 import TotalBalanceCard from "@/app/(dashboard)/(homes)/cryptocurrency/components/total-balance-card";
 import MasterCard from "@/app/(dashboard)/(homes)/cryptocurrency/components/master-card";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Cryptocurrency Dashboard | WowDash Admin Panel",
   description:
     "Track real-time crypto prices, wallet balances, and market trends with the Cryptocurrency Dashboard in WowDash Admin Template.",

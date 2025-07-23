@@ -9,7 +9,7 @@ import EmailHeader from "@/app/(dashboard)/email/components/email-header";
 import EmailSidebarToggleButton from "@/app/(dashboard)/email/components/email-sidebar-toggle-button";
 import EmailSidebarOverlay from "@/app/(dashboard)/components/email-sidebar-overlay";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
     title: "Email Management & Communication | WowDash Admin Dashboard",
     description:
         "Access and manage email communications, inbox features, and message organization in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

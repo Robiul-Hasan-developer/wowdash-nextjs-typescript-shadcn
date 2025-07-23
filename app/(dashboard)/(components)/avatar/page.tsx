@@ -19,7 +19,7 @@ import AvatarGroup6 from "@/public/assets/images/avatar/avatar-group6.png";
 import { Plus } from "lucide-react";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "User Avatars & Profile Images | WowDash Admin Dashboard",
   description:
     "Manage and display user avatars, profile images, and avatar customization options in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

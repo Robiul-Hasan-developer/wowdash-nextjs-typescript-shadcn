@@ -4,7 +4,7 @@ import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import { Input } from "@/components/ui/input"
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Radio Buttons & Selection Controls | WowDash Admin Dashboard",
   description:
     "Explore customizable radio buttons and selection controls in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

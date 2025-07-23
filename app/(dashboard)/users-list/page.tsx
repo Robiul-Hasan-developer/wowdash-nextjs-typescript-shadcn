@@ -10,7 +10,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Plus } from "lucide-react";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
     title: "Users List & Management | WowDash Admin Dashboard",
     description:
         "View, manage, and organize users with the users list feature in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

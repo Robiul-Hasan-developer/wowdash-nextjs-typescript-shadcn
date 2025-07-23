@@ -11,7 +11,7 @@ import TopCustomersCard from '@/app/(dashboard)/(homes)/ecommerce/component/top-
 import TopSellingProductCard from '@/app/(dashboard)/(homes)/ecommerce/component/top-selling-product-card';
 import StockReportCard from '@/app/(dashboard)/(homes)/ecommerce/component/stock-report-card';
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "E-commerce Dashboard | WowDash Admin Panel",
   description:
     "Manage orders, monitor sales, and track product performance with the E-commerce Dashboard in WowDash Admin Template.",

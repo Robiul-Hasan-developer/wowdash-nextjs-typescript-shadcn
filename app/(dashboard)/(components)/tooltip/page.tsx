@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { CircleHelp } from "lucide-react";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Tooltips & Hover Information | WowDash Admin Dashboard",
   description:
     "Enhance user experience with customizable tooltips and hover-based information displays in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

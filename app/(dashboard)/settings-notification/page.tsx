@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
     title: "Notification Settings & Preferences | WowDash Admin Dashboard",
     description:
         "Configure and customize notification settings and preferences in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

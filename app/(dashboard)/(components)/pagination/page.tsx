@@ -5,7 +5,7 @@ import DefaultCardComponent from "@/app/(dashboard)/components/default-card-comp
 import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from "lucide-react";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Cards & Content Containers | WowDash Admin Dashboard",
   description:
     "Showcase versatile card components and content containers for organized layout in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

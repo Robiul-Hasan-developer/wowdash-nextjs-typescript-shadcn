@@ -16,7 +16,7 @@ import HorizontalCardImg2 from "@/public/assets/images/card-component/horizontal
 import HorizontalCardImg3 from "@/public/assets/images/card-component/horizontal-card-img3.png";
 import HorizontalCardImg4 from "@/public/assets/images/card-component/horizontal-card-img4.png";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Cards & Content Containers | WowDash Admin Dashboard",
   description:
     "Showcase versatile card components and content containers for organized layout in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",

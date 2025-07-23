@@ -14,7 +14,7 @@ import UserOverviewCard from "@/app/(dashboard)/(homes)/dashboard/components/use
 import StaticCard from "@/app/(dashboard)/(homes)/investment/components/static-card";
 import DailySalesCard from "@/app/(dashboard)/(homes)/ecommerce/component/daily-sales-card";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
     title: "Widgets & Dashboard Components | WowDash Admin Dashboard",
     description:
         "Explore customizable widgets and dashboard components to display key information in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
