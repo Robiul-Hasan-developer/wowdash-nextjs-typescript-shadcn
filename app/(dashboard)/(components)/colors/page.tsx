@@ -1,9 +1,16 @@
 "use client";
 
+import type { Metadata } from "next";
 import React, { useState } from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Card, CardContent } from "@/components/ui/card";
 import toast from "react-hot-toast";
+
+export const metadata: Metadata = {
+  title: "Colors & Theme Palette | WowDash Admin Dashboard",
+  description:
+    "Explore the color schemes, theme palettes, and customizable color utilities in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
+};
 
 const ColorsPage = () => {
   const [copied, setCopied] = useState(false);

@@ -1,13 +1,20 @@
 "use client";
 
+import type { Metadata } from "next";
 import React from "react";
 import ValidateForm from "@/app/(dashboard)/form-validation/validate-form";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 
+export const metadata: Metadata = {
+    title: "Form Validation & Input Handling | WowDash Admin Dashboard",
+    description:
+        "Implement robust form validation and input handling techniques in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
+};
+
 const FormValidation = () => {
     return (
         <>
-            <DashboardBreadcrumb title="Input Layout" text="Input Layout" />
+            <DashboardBreadcrumb title="Form Validation" text="Form Validation" />
 
             <ValidateForm />
 

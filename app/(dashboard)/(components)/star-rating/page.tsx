@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Star } from "lucide-react";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
+
+export const metadata: Metadata = {
+  title: "Star Ratings & Review Components | WowDash Admin Dashboard",
+  description:
+    "Display and customize star rating components for user reviews and feedback in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
+};
 
 const TypographyPage = () => {
   return (

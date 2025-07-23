@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
@@ -15,6 +16,12 @@ import Image from "next/image";
 import PaymentIcon from "@/public/assets/images/card/payment-icon.png";
 import { Mail, Copy } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
+
+export const metadata: Metadata = {
+    title: "Input Forms & Field Elements | WowDash Admin Dashboard",
+    description:
+        "Design and manage input forms, fields, and form elements for data collection in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
+};
 
 const InputForms = () => {
     return (

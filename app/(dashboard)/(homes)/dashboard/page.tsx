@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import StatCard from "@/app/(dashboard)/(homes)/dashboard/components/stat-card";
 import SalesStaticCard from "@/app/(dashboard)/(homes)/dashboard/components/sales-static-card";
@@ -7,6 +8,13 @@ import TabsWithTableCard from "@/app/(dashboard)/(homes)/dashboard/components/ta
 import TopPerformerCard from "@/app/(dashboard)/(homes)/dashboard/components/top-performer-card";
 import GenerateContentCard from "@/app/(dashboard)/(homes)/dashboard/components/generate-content-card";
 import TopCountriesCard from "@/app/(dashboard)/(homes)/dashboard/components/top-countries-card";
+
+export const metadata: Metadata = {
+  title: "AI Dashboard | WowDash Admin Panel",
+  description:
+    "Explore AI analytics, monitor model performance, and track intelligent automation workflows in the AI Dashboard of WowDash Admin Template.",
+};
+
 
 export default async function DashboardPage() {
   return (

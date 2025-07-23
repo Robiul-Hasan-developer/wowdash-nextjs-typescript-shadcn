@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
+
+export const metadata: Metadata = {
+  title: "Pagination Controls & Navigation | WowDash Admin Dashboard",
+  description:
+    "Implement and customize pagination controls for seamless data navigation in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
+};
 
 const TypographyPage = () => {
   return (

@@ -1,10 +1,17 @@
 "use client"
 
+import type { Metadata } from "next";
 import React, { useState } from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
+
+export const metadata: Metadata = {
+  title: "Switches & Toggle Controls | WowDash Admin Dashboard",
+  description:
+    "Manage and customize switch and toggle controls for interactive settings in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
+};
 
 const TypographyPage = () => {
 

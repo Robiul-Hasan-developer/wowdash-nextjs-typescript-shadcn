@@ -1,11 +1,18 @@
 "use client";
 
+import type { Metadata } from "next";
 import React from "react";
 import Image from "next/image";
 import AuthImage from "@/public/assets/images/auth/forgot-pass-img.png";
 import ThemeLogo from "@/components/shared/theme-logo";
 import { StaticImg } from "@/types/static-image";
 import ForgotPasswordComponent from "@/components/auth/forgot-password";
+
+export const metadata: Metadata = {
+  title: "Forgot Password & Account Recovery | WowDash Admin Dashboard",
+  description:
+    "Recover your account by resetting your password in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
+};
 
 const forgotPassImage: StaticImg = {
   image: AuthImage,

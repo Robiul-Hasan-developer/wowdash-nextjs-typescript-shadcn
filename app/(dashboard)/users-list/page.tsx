@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -8,6 +9,12 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Plus } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "Users List & Management | WowDash Admin Dashboard",
+    description:
+        "View, manage, and organize users with the users list feature in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
+};
 
 const UsersList = () => {
     return (

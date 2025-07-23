@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from 'react';
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import RevenueReportCard from '@/app/(dashboard)/(homes)/ecommerce/component/revenue-report-card';
@@ -9,6 +10,13 @@ import DistributionMapsCard from '@/app/(dashboard)/(homes)/ecommerce/component/
 import TopCustomersCard from '@/app/(dashboard)/(homes)/ecommerce/component/top-customers-card';
 import TopSellingProductCard from '@/app/(dashboard)/(homes)/ecommerce/component/top-selling-product-card';
 import StockReportCard from '@/app/(dashboard)/(homes)/ecommerce/component/stock-report-card';
+
+export const metadata: Metadata = {
+  title: "E-commerce Dashboard | WowDash Admin Panel",
+  description:
+    "Manage orders, monitor sales, and track product performance with the E-commerce Dashboard in WowDash Admin Template.",
+};
+
 
 const EcommercePage = () => {
   return (

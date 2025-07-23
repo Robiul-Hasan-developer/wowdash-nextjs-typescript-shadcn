@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
@@ -9,6 +10,12 @@ import {
 } from "@/components/ui/tooltip"
 import { Button } from "@/components/ui/button";
 import { CircleHelp } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Tooltips & Hover Information | WowDash Admin Dashboard",
+  description:
+    "Enhance user experience with customizable tooltips and hover-based information displays in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
+};
 
 const TypographyPage = () => {
   return (

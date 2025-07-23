@@ -1,12 +1,18 @@
 "use client";
 
+import type { Metadata } from "next";
 import React from "react";
 import Image from "next/image";
 import AuthImage from "@/public/assets/images/auth/auth-img.png";
 import ThemeLogo from "@/components/shared/theme-logo";
-
 import { StaticImg } from "@/types/static-image";
 import LoginForm from "@/components/auth/login-form";
+
+export const metadata: Metadata = {
+  title: "Register & Create Account | WowDash Admin Dashboard",
+  description:
+    "Create a new user account and get started with the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
+};
 
 const forgotPassImage: StaticImg = {
   image: AuthImage,

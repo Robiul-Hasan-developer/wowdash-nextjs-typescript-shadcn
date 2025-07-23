@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
@@ -13,6 +14,12 @@ import {
 import { Mail, UserRound, PhoneCall, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+
+export const metadata: Metadata = {
+    title: "Input Layouts & Form Structure | WowDash Admin Dashboard",
+    description:
+        "Organize and customize input layouts and form structures for optimal user experience in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
+};
 
 const InputLayout = () => {
     return (

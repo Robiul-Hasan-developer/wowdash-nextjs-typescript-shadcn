@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import StatsCard from "@/app/(dashboard)/(homes)/investment/components/stats-card";
@@ -9,6 +10,13 @@ import LatestInvestmentsCard from "@/app/(dashboard)/(homes)/investment/componen
 import NoticeBoardCard from "@/app/(dashboard)/(homes)/investment/components/notice-board-card";
 import TotalTransactionsCard from "@/app/(dashboard)/(homes)/investment/components/total-transactions-card";
 import ProjectStatusCard from "@/app/(dashboard)/(homes)/investment/components/project-status-card";
+
+export const metadata: Metadata = {
+  title: "Investment Dashboard | WowDash Admin Panel",
+  description:
+    "Track investment portfolios, returns, and market insights in the Investment Dashboard of WowDash Admin Template built with Next.js and Tailwind.",
+};
+
 
 const InvestmentPage = () => {
   return (

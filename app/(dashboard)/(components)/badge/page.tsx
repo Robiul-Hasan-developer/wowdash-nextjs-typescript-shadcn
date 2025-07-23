@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import Image from "next/image";
@@ -5,6 +6,12 @@ import FlagImage from "@/public/assets/images/lang-flag.png";
 
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import { BellRing, Mail } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Badges & Status Indicators | WowDash Admin Dashboard",
+  description:
+    "Explore customizable badges, status indicators, and notification labels in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
+};
 
 const TypographyPage = () => {
   return (

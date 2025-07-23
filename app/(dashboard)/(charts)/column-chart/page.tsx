@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
@@ -5,6 +6,12 @@ import GenerateContentChart from "@/components/charts/generate-content-chart";
 import RevenueStatisticsChartUpdown from "@/components/charts/revenue-statistics-chart-updown";
 import ColumnGroupBarChart from "@/components/charts/column-group-bar-chart";
 import GroupColumnChart from "@/components/charts/group-column-chart";
+
+export const metadata: Metadata = {
+    title: "Column Charts & Data Visualization | WowDash Admin Dashboard",
+    description:
+        "Explore various interactive chart components for analytics and data visualization in the WowDash Admin Dashboard template built with Next.js and Tailwind CSS.",
+};
 
 const ColumnChartPage = () => {
     return (

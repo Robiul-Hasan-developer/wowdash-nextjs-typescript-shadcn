@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -7,6 +8,12 @@ import TabsImage1 from "@/public/assets/images/tabs/tabs-image1.png";
 import TabsImage2 from "@/public/assets/images/tabs/tabs-image2.png";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import { Home, FileText, User, Settings } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: "Tabs & Accordion Components | WowDash Admin Dashboard",
+  description:
+    "Explore interactive tabs and accordion components for organized content display in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
+};
 
 const TypographyPage = () => {
   return (

@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import { X, Smile, CheckCheck, AlertCircle, Link, Trash2, BadgeCheck, Clock, ShieldCheck } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: "Alert Notifications & Messages | WowDash Admin Dashboard",
+  description:
+    "Manage and customize alert notifications, messages, and user prompts with the WowDash Admin Dashboard template built using Next.js and Tailwind CSS.",
+};
 
 const TypographyPage = () => {
   return (

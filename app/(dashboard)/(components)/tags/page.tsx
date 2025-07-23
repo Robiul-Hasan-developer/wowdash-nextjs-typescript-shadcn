@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import Image from "next/image";
 import FlagImage from "@/public/assets/images/flags/flag-tag.png";
 import { X } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Tags & Label Elements | WowDash Admin Dashboard",
+  description:
+    "Manage and display tag components and label elements for categorization and UI organization in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
+};
 
 const TypographyPage = () => {
   return (

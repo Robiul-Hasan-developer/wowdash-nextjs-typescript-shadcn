@@ -1,12 +1,18 @@
 "use client";
 
+import type { Metadata } from "next";
 import React from "react";
 import Image from "next/image";
 import AuthImage from "@/public/assets/images/auth/auth-img.png";
 import ThemeLogo from "@/components/shared/theme-logo";
-
 import { StaticImg } from "@/types/static-image";
 import RegisterForm from "@/components/auth/register-form";
+
+export const metadata: Metadata = {
+  title: "Cards & Content Containers | WowDash Admin Dashboard",
+  description:
+    "Showcase versatile card components and content containers for organized layout in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
+};
 
 const forgotPassImage: StaticImg = {
   image: AuthImage,

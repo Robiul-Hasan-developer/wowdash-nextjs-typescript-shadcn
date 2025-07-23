@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
@@ -6,6 +7,12 @@ import TopSellingProductTable from "@/components/table/top-selling-product-table
 import BorderedTable from "@/components/table/bordered-table";
 import DefaultTable from "@/components/table/default-table";
 import BorderedColorTable from "@/components/table/bordered-color-table";
+
+export const metadata: Metadata = {
+    title: "Basic Tables & Data Display | WowDash Admin Dashboard",
+    description:
+        "Present structured data using basic table components with responsive design in the WowDash Admin Dashboard built with Next.js and Tailwind CSS.",
+};
 
 const BasicTablePage = () => {
     return (
