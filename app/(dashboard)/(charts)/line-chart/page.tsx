@@ -8,6 +8,8 @@ import LineChartLabel from "@/components/charts/line-chart-label";
 import LineChartAnimation from "@/components/charts/line-chart-animation";
 import SteplineChart from "@/components/charts/stepline-chart";
 import GradientChart from "@/components/charts/gradient-chart";
+import { Suspense } from "react";
+import LoadingSkeleton from "@/components/loading-skeleton";
 
 const metadata: Metadata = {
     title: "Line Charts & Data Visualization | WowDash Admin Dashboard",
@@ -23,22 +25,34 @@ const LineChartPage = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <DefaultCardComponent title="Default Line Chart">
-                    <LineChart />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <LineChart />
+                    </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Zoomable Chart">
-                    <ZoomableChart />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <ZoomableChart />
+                    </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Line Chart with Data Labels">
-                    <LineChartLabel />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <LineChartLabel />
+                    </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Line Chart Animation">
-                    <LineChartAnimation />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <LineChartAnimation />
+                    </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Stepline Charts">
-                    <SteplineChart />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <SteplineChart />
+                    </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Gradient Charts">
-                    <GradientChart />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <GradientChart />
+                    </Suspense>
                 </DefaultCardComponent>
             </div>
         </>

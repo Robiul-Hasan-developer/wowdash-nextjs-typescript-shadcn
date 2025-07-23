@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import StatCard from "@/app/(dashboard)/(homes)/dashboard/components/stat-card";
 import SalesStaticCard from "@/app/(dashboard)/(homes)/dashboard/components/sales-static-card";
@@ -8,6 +9,7 @@ import TabsWithTableCard from "@/app/(dashboard)/(homes)/dashboard/components/ta
 import TopPerformerCard from "@/app/(dashboard)/(homes)/dashboard/components/top-performer-card";
 import GenerateContentCard from "@/app/(dashboard)/(homes)/dashboard/components/generate-content-card";
 import TopCountriesCard from "@/app/(dashboard)/(homes)/dashboard/components/top-countries-card";
+import LoadingSkeleton from "@/components/loading-skeleton";
 
 const metadata: Metadata = {
   title: "AI Dashboard | WowDash Admin Panel",
@@ -22,36 +24,52 @@ export default async function DashboardPage() {
       <DashboardBreadcrumb title="Dashboard" text="AI" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-6">
-        <StatCard />
+        <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+          <StatCard />
+        </Suspense>
       </div>
 
       <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 mt-6">
         <div className="xl:col-span-12 2xl:col-span-6">
-          <SalesStaticCard />
+          <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <SalesStaticCard />
+          </Suspense>
         </div>
 
         <div className="xl:col-span-6 2xl:col-span-3">
-          <TotalSubscriberCard />
+          <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <TotalSubscriberCard />
+          </Suspense>
         </div>
 
         <div className="xl:col-span-6 2xl:col-span-3">
-          <UserOverviewCard />
+          <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <UserOverviewCard />
+          </Suspense>
         </div>
 
         <div className="xl:col-span-12 2xl:col-span-9">
-          <TabsWithTableCard />
+          <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <TabsWithTableCard />
+          </Suspense>
         </div>
 
         <div className="xl:col-span-12 2xl:col-span-3">
-          <TopPerformerCard />
+          <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <TopPerformerCard />
+          </Suspense>
         </div>
 
         <div className="xl:col-span-12 2xl:col-span-6">
-          <TopCountriesCard />
+          <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <TopCountriesCard />
+          </Suspense>
         </div>
 
         <div className="xl:col-span-12 2xl:col-span-6">
-          <GenerateContentCard />
+          <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <GenerateContentCard />
+          </Suspense>
         </div>
       </div>
     </>

@@ -6,6 +6,8 @@ import GenerateContentChart from "@/components/charts/generate-content-chart";
 import RevenueStatisticsChartUpdown from "@/components/charts/revenue-statistics-chart-updown";
 import ColumnGroupBarChart from "@/components/charts/column-group-bar-chart";
 import GroupColumnChart from "@/components/charts/group-column-chart";
+import { Suspense } from "react";
+import LoadingSkeleton from "@/components/loading-skeleton";
 
 const metadata: Metadata = {
     title: "Column Charts & Data Visualization | WowDash Admin Dashboard",
@@ -20,16 +22,24 @@ const ColumnChartPage = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <DefaultCardComponent title="Column Charts">
-                    <GenerateContentChart />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <GenerateContentChart />
+                    </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Column Charts">
-                    <ColumnGroupBarChart />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <ColumnGroupBarChart />
+                    </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Group Columns">
-                    <GroupColumnChart />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <GroupColumnChart />
+                    </Suspense>
                 </DefaultCardComponent>
                 <DefaultCardComponent title="Simple Column">
-                    <RevenueStatisticsChartUpdown />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <RevenueStatisticsChartUpdown />
+                    </Suspense>
                 </DefaultCardComponent>
             </div>
         </>

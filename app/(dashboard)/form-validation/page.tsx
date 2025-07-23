@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import React from "react";
 import ValidateForm from "@/app/(dashboard)/form-validation/validate-form";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
+import { Suspense } from "react";
+import LoadingSkeleton from "@/components/loading-skeleton";
 
 const metadata: Metadata = {
     title: "Form Validation & Input Handling | WowDash Admin Dashboard",
@@ -16,7 +18,9 @@ const FormValidation = () => {
         <>
             <DashboardBreadcrumb title="Form Validation" text="Form Validation" />
 
-            <ValidateForm />
+            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                <ValidateForm />
+            </Suspense>
 
         </>
     );

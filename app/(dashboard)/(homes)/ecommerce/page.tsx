@@ -10,6 +10,8 @@ import DistributionMapsCard from '@/app/(dashboard)/(homes)/ecommerce/component/
 import TopCustomersCard from '@/app/(dashboard)/(homes)/ecommerce/component/top-customers-card';
 import TopSellingProductCard from '@/app/(dashboard)/(homes)/ecommerce/component/top-selling-product-card';
 import StockReportCard from '@/app/(dashboard)/(homes)/ecommerce/component/stock-report-card';
+import { Suspense } from "react";
+import LoadingSkeleton from "@/components/loading-skeleton";
 
 const metadata: Metadata = {
   title: "E-commerce Dashboard | WowDash Admin Panel",
@@ -26,39 +28,57 @@ const EcommercePage = () => {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
 
         <div className="md:col-span-12 2xl:col-span-9">
-          <RevenueReportCard />
+          <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <RevenueReportCard />
+          </Suspense>
         </div>
 
         <div className="md:col-span-12 lg:col-span-6 2xl:col-span-3">
-          <CustomersStatisticsCard />
+          <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <CustomersStatisticsCard />
+          </Suspense>
         </div>
 
         <div className="md:col-span-12 lg:col-span-6 2xl:col-span-9">
-          <RecentOrdersCard />
+          <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <RecentOrdersCard />
+          </Suspense>
         </div>
 
         <div className="md:col-span-12 lg:col-span-6 2xl:col-span-3">
-          <TransactionsCard />
+          <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <TransactionsCard />
+          </Suspense>
         </div>
 
         <div className="md:col-span-12 lg:col-span-6 2xl:col-span-4">
-          <DailySalesCard />
+          <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <DailySalesCard />
+          </Suspense>
         </div>
 
         <div className="md:col-span-12 lg:col-span-6 2xl:col-span-4">
-          <DistributionMapsCard />
+          <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <DistributionMapsCard />
+          </Suspense>
         </div>
 
         <div className="md:col-span-12 lg:col-span-6 2xl:col-span-4">
-          <TopCustomersCard />
+          <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <TopCustomersCard />
+          </Suspense>
         </div>
 
         <div className="md:col-span-12 2xl:col-span-6">
-          <TopSellingProductCard />
+          <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <TopSellingProductCard />
+          </Suspense>
         </div>
 
         <div className="md:col-span-12 2xl:col-span-6">
-          <StockReportCard />
+          <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+            <StockReportCard />
+          </Suspense>
         </div>
 
       </div>

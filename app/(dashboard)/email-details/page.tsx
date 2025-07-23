@@ -13,6 +13,8 @@ import { Images, MoveLeft, Printer, Star, Trash2, LinkIcon, Send } from "lucide-
 import { Button } from "@/components/ui/button";
 import EmailSidebarOverlay from "@/app/(dashboard)/components/email-sidebar-overlay";
 import EmailSidebarToggleButton from "@/app/(dashboard)/email/components/email-sidebar-toggle-button";
+import { Suspense } from "react";
+import LoadingSkeleton from "@/components/loading-skeleton";
 
 const metadata: Metadata = {
     title: "Email Details & Message View | WowDash Admin Dashboard",
@@ -30,11 +32,15 @@ const EmailDetailsPage = () => {
                 <EmailSidebarOverlay />
 
                 <div className="col-span-12 xl:col-span-4 2xl:col-span-3">
-                    <EmailSidebar />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <EmailSidebar />
+                    </Suspense>
                 </div>
 
                 <div className="col-span-12 xl:col-span-8 2xl:col-span-9">
-                    <EmailSidebarToggleButton />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <EmailSidebarToggleButton />
+                    </Suspense>
 
                     <div className="card h-full p-0 email-card overflow-x-auto block border-0 !p-0">
                         <div className="min-w-[450px] flex flex-col justify-between h-full">

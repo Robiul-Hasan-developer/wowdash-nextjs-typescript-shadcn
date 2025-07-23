@@ -13,11 +13,11 @@ const TotalSubscriberCard = () => {
                     <span className="text-sm font-semibold rounded-full bg-red-100 dark:bg-red-600/25 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-600/50 px-2 py-1.5 line-height-1 flex items-center gap-1">
                         10% <ArrowDown width={14} height={14} />
                     </span>
-                    - 20 Per Day 
+                    - 20 Per Day
                 </div>
 
-                <TotalSubscriberChart/>
-            
+                <TotalSubscriberChart />
+
             </CardContent>
         </Card>
     );

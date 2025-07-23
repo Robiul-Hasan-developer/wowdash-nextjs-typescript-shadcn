@@ -7,6 +7,8 @@ import TopSellingProductTable from "@/components/table/top-selling-product-table
 import BorderedTable from "@/components/table/bordered-table";
 import DefaultTable from "@/components/table/default-table";
 import BorderedColorTable from "@/components/table/bordered-color-table";
+import { Suspense } from "react";
+import LoadingSkeleton from "@/components/loading-skeleton";
 
 const metadata: Metadata = {
     title: "Basic Tables & Data Display | WowDash Admin Dashboard",
@@ -22,27 +24,37 @@ const BasicTablePage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                 <div className="col-span-12 lg:col-span-6">
                     <DefaultCardComponent title="Default Table">
-                        <DefaultTable />
+                        <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <DefaultTable />
+                        </Suspense>
                     </DefaultCardComponent>
                 </div>
                 <div className="col-span-12 lg:col-span-6">
                     <DefaultCardComponent title="Bordered Tables">
-                        <BorderedTable />
+                        <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <BorderedTable />
+                        </Suspense>
                     </DefaultCardComponent>
                 </div>
                 <div className="col-span-12 lg:col-span-6">
                     <DefaultCardComponent title="Tables Border Colors">
-                        <BorderedColorTable />
+                        <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <BorderedColorTable />
+                        </Suspense>
                     </DefaultCardComponent>
                 </div>
                 <div className="col-span-12 lg:col-span-6">
                     <DefaultCardComponent title="Striped Rows">
-                        <TopSellingProductTable />
+                        <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <TopSellingProductTable />
+                        </Suspense>
                     </DefaultCardComponent>
                 </div>
                 <div className="col-span-12">
                     <DefaultCardComponent title="Card Tables">
-                        <RecentOrdersTable />
+                        <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                            <RecentOrdersTable />
+                        </Suspense>
                     </DefaultCardComponent>
                 </div>
             </div>

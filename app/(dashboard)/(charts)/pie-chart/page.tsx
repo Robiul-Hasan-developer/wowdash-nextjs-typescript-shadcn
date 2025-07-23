@@ -6,6 +6,8 @@ import BasicPieChart from "@/components/charts/basic-pie-chart";
 import DonutChart from "@/components/charts/donut-chart";
 import RadarChart from "@/components/charts/radar-chart";
 import MultipleSeriesChart from "@/components/charts/multiple-series-chart";
+import { Suspense } from "react";
+import LoadingSkeleton from "@/components/loading-skeleton";
 
 const metadata: Metadata = {
     title: "Pie Charts & Data Visualization | WowDash Admin Dashboard",
@@ -21,13 +23,17 @@ const PieChartPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <DefaultCardComponent title="Basic Pie Chart">
-                    <BasicPieChart />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <BasicPieChart />
+                    </Suspense>
                 </DefaultCardComponent>
 
                 <DefaultCardComponent title="Donut Chart">
                     <div className="text-center flex flex-wrap items-start gap-5 justify-center">
                         <div className="relative">
-                            <DonutChart />
+                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                                <DonutChart />
+                            </Suspense>
                             <div className="absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                                 <span className="text-lg text-secondary-light font-medium">Total Value</span>
                                 <h4 className="mb-0">72</h4>
@@ -87,11 +93,15 @@ const PieChartPage = () => {
                 </DefaultCardComponent>
 
                 <DefaultCardComponent title="Radar Chart">
-                    <RadarChart />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <RadarChart />
+                    </Suspense>
                 </DefaultCardComponent>
 
                 <DefaultCardComponent title="Multiple series">
-                    <MultipleSeriesChart />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <MultipleSeriesChart />
+                    </Suspense>
                 </DefaultCardComponent>
 
             </div>

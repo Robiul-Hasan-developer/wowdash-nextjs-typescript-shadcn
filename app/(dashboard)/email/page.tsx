@@ -8,6 +8,8 @@ import EmailList from "@/app/(dashboard)/email/components/email-list";
 import EmailHeader from "@/app/(dashboard)/email/components/email-header";
 import EmailSidebarToggleButton from "@/app/(dashboard)/email/components/email-sidebar-toggle-button";
 import EmailSidebarOverlay from "@/app/(dashboard)/components/email-sidebar-overlay";
+import { Suspense } from "react";
+import LoadingSkeleton from "@/components/loading-skeleton";
 
 const metadata: Metadata = {
     title: "Email Management & Communication | WowDash Admin Dashboard",
@@ -25,18 +27,26 @@ const EmailPage = () => {
 
                 {/* Sidebar */}
                 <div className="col-span-12 xl:col-span-4 2xl:col-span-3">
-                    <EmailSidebar />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <EmailSidebar />
+                    </Suspense>
                 </div>
 
                 <div className="col-span-12 xl:col-span-8 2xl:col-span-9">
-                    <EmailSidebarToggleButton />
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <EmailSidebarToggleButton />
+                    </Suspense>
 
                     <div className="card h-full !p-0 border-0 email-card">
                         <div className="card-header border-b border-neutral-200 dark:border-slate-700 bg-white dark:bg-[#273142] py-4 px-6">
-                            <EmailHeader />
+                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                                <EmailHeader />
+                            </Suspense>
                         </div>
                         <div className="card-body p-0">
-                            <EmailList />
+                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                                <EmailList />
+                            </Suspense>
                         </div>
                     </div>
                 </div>
