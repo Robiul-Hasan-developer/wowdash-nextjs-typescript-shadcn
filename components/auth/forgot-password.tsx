@@ -1,57 +1,67 @@
-"use client";
+'use client'
 
-import React from "react";
-import { useRouter } from "next/navigation";
-import toast from "react-hot-toast";
-import Link from "next/link";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import React, { useRef, useTransition } from 'react'
+import { useRouter } from 'next/navigation'
+import toast from 'react-hot-toast'
+import Link from 'next/link'
+import { z } from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm } from 'react-hook-form'
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Mail, Loader2 } from "lucide-react";
-import { forgotPasswordSchema } from "@/lib/zod";
-import { useLoading } from "@/contexts/LoadingContext";
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { Mail, Loader2 } from 'lucide-react'
+import { forgotPasswordSchema } from '@/lib/zod'
+import { useLoading } from '@/contexts/LoadingContext'
+import { handleForgotPasswordAction } from './actions/forgot-password'
 
 const ForgotPasswordComponent = () => {
-  const router = useRouter();
-  const { loading, setLoading } = useLoading();
+  const router = useRouter()
+  const { loading, setLoading } = useLoading()
+  const [isPending, startTransition] = useTransition()
+  const formRef = useRef<HTMLFormElement>(null)
 
   const form = useForm<z.infer<typeof forgotPasswordSchema>>({
     resolver: zodResolver(forgotPasswordSchema),
     defaultValues: {
-      email: "",
+      email: '',
     },
-  });
+  })
 
-  const handleForgotPasswordFormSubmit = async (
-    values: z.infer<typeof forgotPasswordSchema>
-  ) => {
-    setLoading(true);
+  const onSubmit = (values: z.infer<typeof forgotPasswordSchema>) => {
+    setLoading(true)
 
-    toast.success("Password Reset code has been sent to your email");
-    router.push("/auth/create-password");
+    startTransition(async () => {
+      if (!formRef.current) return
 
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  };
+      const formData = new FormData(formRef.current)
+      const result = await handleForgotPasswordAction(formData)
+
+      if (result?.success) {
+        toast.success('Password Reset code has been sent to your email')
+        router.push('/auth/create-password')
+      } else {
+        toast.error('Please enter a valid email')
+      }
+
+      setTimeout(() => setLoading(false), 1000)
+    })
+  }
 
   return (
     <>
       <Form {...form}>
         <form
-          onSubmit={form.handleSubmit(handleForgotPasswordFormSubmit)}
+          ref={formRef}
+          onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-5"
         >
-          {/* Email Field */}
           <FormField
             control={form.control}
             name="email"
@@ -64,6 +74,7 @@ const ForgotPasswordComponent = () => {
                       {...field}
                       type="email"
                       placeholder="Email"
+                      name="email"
                       className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 !shadow-none !ring-0"
                       disabled={loading}
                     />
@@ -74,19 +85,18 @@ const ForgotPasswordComponent = () => {
             )}
           />
 
-          {/* Submit Button */}
           <Button
             type="submit"
-            className="w-full rounded-lg mt-1 h-[52px] text-sm mt-2"
-            disabled={loading}
+            className="w-full rounded-lg h-[52px] text-sm mt-2"
+            disabled={loading || isPending}
           >
-            {loading ? (
+            {loading || isPending ? (
               <>
                 <Loader2 className="animate-spin h-4.5 w-4.5 mr-2" />
                 Sending...
               </>
             ) : (
-              "Send Recovery Email"
+              'Send Recovery Email'
             )}
           </Button>
         </form>
@@ -94,7 +104,7 @@ const ForgotPasswordComponent = () => {
 
       <div className="mt-8 text-center text-sm">
         <p>
-          Forget it. Send me back to{" "}
+          Forget it. Send me back to{' '}
           <Link
             href="/auth/login"
             className="text-primary font-semibold hover:underline"
@@ -104,7 +114,7 @@ const ForgotPasswordComponent = () => {
         </p>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ForgotPasswordComponent;
+export default ForgotPasswordComponent

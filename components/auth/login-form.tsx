@@ -1,62 +1,73 @@
-"use client";
+'use client'
 
-import React, { useState } from "react";
-import { signIn } from "next-auth/react";
-import toast from "react-hot-toast";
-import Link from "next/link";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import React, { useState, useTransition, useRef } from 'react'
+import { signIn } from 'next-auth/react'
+import toast from 'react-hot-toast'
+import Link from 'next/link'
+import { z } from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm } from 'react-hook-form'
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Mail, Lock, Eye, EyeOff, Loader2 } from "lucide-react";
-import SocialLogin from "./social-login";
-import { loginSchema } from "@/lib/zod";
-import { useLoading } from "@/contexts/LoadingContext";
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { Checkbox } from '@/components/ui/checkbox'
+import { Mail, Lock, Eye, EyeOff, Loader2 } from 'lucide-react'
+import SocialLogin from './social-login'
+import { loginSchema } from '@/lib/zod'
+import { useLoading } from '@/contexts/LoadingContext'
+import { handleLoginAction } from './actions/login'
 
 const LoginForm = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { loading, setLoading } = useLoading();
+  const [showPassword, setShowPassword] = useState(false)
+  const [isPending, startTransition] = useTransition()
+  const { loading, setLoading } = useLoading()
+  const formRef = useRef<HTMLFormElement>(null)
 
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      email: "wowdash@gmail.com",
-      password: "Pa$$w0rd!",
+      email: 'wowdash@gmail.com',
+      password: 'Pa$$w0rd!',
     },
-  });
+  })
 
-  const handleLoginFormSubmit = async (values: z.infer<typeof loginSchema>) => {
-    setLoading(true);
-    setIsSubmitting(true);
+  const onSubmit = (values: z.infer<typeof loginSchema>) => {
+    setLoading(true)
 
-    await signIn("credentials", {
-      redirect: true,
-      email: values.email,
-      password: values.password,
-      callbackUrl: "/dashboard",
-    });
+    startTransition(async () => {
+      if (!formRef.current) return
+      const formData = new FormData(formRef.current)
 
-    toast.success("Login successful! Please wait...");
+      const res = await handleLoginAction(formData)
 
-    setLoading(false);
-    setIsSubmitting(false);
-  };
+      if (res?.error) {
+        toast.error(res.error)
+      } else {
+        toast.success('Login successful!')
+        await signIn('credentials', {
+          redirect: true,
+          email: values.email,
+          password: values.password,
+          callbackUrl: '/dashboard',
+        })
+      }
+
+      setLoading(false)
+    })
+  }
 
   return (
     <>
       <Form {...form}>
         <form
-          onSubmit={form.handleSubmit(handleLoginFormSubmit)}
+          ref={formRef}
+          onSubmit={form.handleSubmit(onSubmit)}
           className="space-y-5"
         >
           {/* Email Field */}
@@ -72,6 +83,7 @@ const LoginForm = () => {
                       {...field}
                       type="email"
                       placeholder="Email"
+                      name="email"
                       className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 !shadow-none !ring-0"
                       disabled={loading}
                     />
@@ -93,8 +105,9 @@ const LoginForm = () => {
                     <Lock className="absolute start-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral-700 dark:text-neutral-200" />
                     <Input
                       {...field}
-                      type={showPassword ? "text" : "password"}
+                      type={showPassword ? 'text' : 'password'}
                       placeholder="Password"
+                      name="password"
                       className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 !shadow-none !ring-0"
                       disabled={loading}
                     />
@@ -116,7 +129,7 @@ const LoginForm = () => {
             )}
           />
 
-          {/* Remember Me and Forgot Password */}
+          {/* Remember Me & Forgot Password */}
           <div className="mt-2 flex justify-between items-center">
             <div className="flex items-center gap-2">
               <Checkbox
@@ -138,16 +151,16 @@ const LoginForm = () => {
           {/* Submit Button */}
           <Button
             type="submit"
-            className="w-full rounded-lg mt-1 h-[52px] text-sm mt-2"
-            disabled={loading}
+            className="w-full rounded-lg h-[52px] text-sm mt-2"
+            disabled={loading || isPending}
           >
-            {isSubmitting ? (
+            {loading || isPending ? (
               <>
                 <Loader2 className="animate-spin h-4.5 w-4.5 mr-2" />
-                Loading...
+                Signing in...
               </>
             ) : (
-              "Sign In"
+              'Sign In'
             )}
           </Button>
         </form>
@@ -166,7 +179,7 @@ const LoginForm = () => {
       {/* Signup Prompt */}
       <div className="mt-8 text-center text-sm">
         <p>
-          Don&apos;t have an account?{" "}
+          Don&apos;t have an account?{' '}
           <Link
             href="/auth/register"
             className="text-primary font-semibold hover:underline"
@@ -176,7 +189,7 @@ const LoginForm = () => {
         </p>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default LoginForm;
+export default LoginForm
