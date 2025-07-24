@@ -8,6 +8,7 @@ import DefaultCardComponent from "@/app/(dashboard)/components/default-card-comp
 import { cn } from "@/lib/utils";
 import { formSchema, FormSchemaType } from "@/lib/zod";
 import toast from "react-hot-toast";
+import { formAction } from './actions';
 
 const ValidateForm = () => {
 
@@ -27,7 +28,7 @@ const ValidateForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form action={formAction} onSubmit={handleSubmit(onSubmit)}>
             <div className="grid grid-cols-12 gap-5">
                 <div className="md:col-span-6 col-span-12">
                     <DefaultCardComponent title="Vertical Input Form">

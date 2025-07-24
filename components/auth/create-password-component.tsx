@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
+import React, { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import Link from "next/link";
@@ -20,13 +20,13 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Lock, Eye, EyeOff, Loader2 } from "lucide-react";
 import { createPasswordSchema } from "@/lib/zod";
-import { useLoading } from "@/contexts/LoadingContext";
+import { handleResetPassword } from "./actions/handleResetPassword";
 
 const CreatePasswordComponent = () => {
-  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const { loading, setLoading } = useLoading();
+  const [isPending, startTransition] = useTransition();
+  const router = useRouter();
 
   const form = useForm<z.infer<typeof createPasswordSchema>>({
     resolver: zodResolver(createPasswordSchema),
@@ -36,27 +36,19 @@ const CreatePasswordComponent = () => {
     },
   });
 
-  const handleCreatePasswordFormSubmit = async (
-    values: z.infer<typeof createPasswordSchema>
-  ) => {
-    setLoading(true);
-
-    toast.success("Password Reset successful!");
-    router.push("/auth/login");
-
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  };
-
   return (
     <>
       <Form {...form}>
         <form
-          onSubmit={form.handleSubmit(handleCreatePasswordFormSubmit)}
+          action={handleResetPassword}
+          onSubmit={form.handleSubmit((values) => {
+            startTransition(() => {
+              toast.success("Password Reset successful!");
+            });
+          })}
           className="space-y-5"
         >
-          {/* Password Field */}
+          {/* Password */}
           <FormField
             control={form.control}
             name="password"
@@ -69,8 +61,9 @@ const CreatePasswordComponent = () => {
                       {...field}
                       type={showPassword ? "text" : "password"}
                       placeholder="Password"
-                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 !shadow-none !ring-0"
-                      disabled={loading}
+                      name="password"
+                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600"
+                      disabled={isPending}
                     />
                     <Button
                       type="button"
@@ -90,7 +83,7 @@ const CreatePasswordComponent = () => {
             )}
           />
 
-          {/* Confirm Password Field */}
+          {/* Confirm Password */}
           <FormField
             control={form.control}
             name="confirmPassword"
@@ -102,9 +95,10 @@ const CreatePasswordComponent = () => {
                     <Input
                       {...field}
                       type={showConfirmPassword ? "text" : "password"}
+                      name="confirmPassword"
                       placeholder="Confirm Password"
-                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 !shadow-none !ring-0"
-                      disabled={loading}
+                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600"
+                      disabled={isPending}
                     />
                     <Button
                       type="button"
@@ -124,18 +118,20 @@ const CreatePasswordComponent = () => {
             )}
           />
 
+          {/* Accept Terms */}
           <FormField
             control={form.control}
             name="acceptTerms"
             render={({ field }) => (
               <FormItem>
-                <div className="flex items-start gap-2 mt-1 flex items-center">
+                <div className="flex items-center gap-2 mt-1">
                   <FormControl>
                     <Checkbox
                       checked={field.value}
                       onCheckedChange={field.onChange}
+                      name="acceptTerms"
                       id="acceptTerms"
-                      className="border border-neutral-500 "
+                      className="border border-neutral-500"
                     />
                   </FormControl>
                   <label htmlFor="acceptTerms" className="text-sm">
@@ -147,15 +143,16 @@ const CreatePasswordComponent = () => {
             )}
           />
 
+          {/* Submit Button */}
           <Button
             type="submit"
             className="w-full rounded-lg h-[52px] text-sm mt-2"
-            disabled={loading}
+            disabled={isPending}
           >
-            {loading ? (
+            {isPending ? (
               <>
                 <Loader2 className="animate-spin h-4 w-4 mr-2" />
-                Loading...
+                Resetting...
               </>
             ) : (
               "Reset Password"

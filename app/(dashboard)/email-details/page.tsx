@@ -15,6 +15,7 @@ import EmailSidebarOverlay from "@/app/(dashboard)/components/email-sidebar-over
 import EmailSidebarToggleButton from "@/app/(dashboard)/email/components/email-sidebar-toggle-button";
 import { Suspense } from "react";
 import LoadingSkeleton from "@/components/loading-skeleton";
+import { sendMessageAction } from "./actions";
 
 const metadata: Metadata = {
     title: "Email Details & Message View | WowDash Admin Dashboard",
@@ -99,23 +100,23 @@ const EmailDetailsPage = () => {
                                 </div>
                             </div>
                             <div className="card-footer py-4 px-6 bg-white dark:bg-[#273142] border-t border-neutral-200 dark:border-neutral-600">
-                                <form action="#">
+                                <form action={sendMessageAction}>
                                     <div className="flex items-center justify-between">
-                                        <Textarea className="max-h-[80px] bg-transparent focus:ring-0 w-full p-0 rounded-lg border-0 py-2 ps-2 resize-none scroll-sm focus-visible:ring-0" placeholder="Write massage" />
+                                        <Textarea className="max-h-[80px] bg-transparent focus:ring-0 w-full p-0 rounded-lg border-0 py-2 ps-2 resize-none scroll-sm focus-visible:ring-0" id="message" name="message" placeholder="Write massage" />
                                         <div className="flex items-center gap-4 ms-4">
                                             <div className="">
-                                                <Label htmlFor="attatchment" className="text-neutral-600 text-xl dark:text-white cursor-pointer hover:text-blue-600">
+                                                <Label htmlFor="attachment" className="text-neutral-600 text-xl dark:text-white cursor-pointer hover:text-blue-600">
                                                     <LinkIcon className="w-5 h-5" />
                                                 </Label>
-                                                <Input type="file" id="attatchment" hidden />
+                                                <Input type="file" id="attachment" name="attachment" hidden />
                                             </div>
                                             <div className="">
                                                 <Label htmlFor="gallery" className="text-neutral-600 text-xl dark:text-white cursor-pointer hover:text-blue-600">
                                                     <Images className="w-5 h-5" />
                                                 </Label>
-                                                <Input type="file" id="gallery" hidden />
+                                                <Input type="file" id="gallery" name="gallery" hidden />
                                             </div>
-                                            <Button variant="default">
+                                            <Button variant="default" type="submit">
                                                 <Send className="w-4 h-4" />
                                                 Send
                                             </Button>
