@@ -1,4 +1,6 @@
-const config = {
+import type { Config } from "tailwindcss";
+
+const config: Config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -10,9 +12,12 @@ const config = {
       screens: {
         "3xl": "1650px",
       },
+      // ...tokens (if you have any)
     },
   },
-  plugins: [],
+  plugins: [
+    require("@shadcn/ui/plugin"),
+  ],
 };
 
 export default config;
