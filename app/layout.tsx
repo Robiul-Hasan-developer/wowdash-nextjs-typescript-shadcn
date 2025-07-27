@@ -7,14 +7,6 @@ const inter = Inter({
   display: "swap",
 });
 
-// export const metadata: Metadata = {
-//   title: "Wowdash - Tailwind & Next.js Admin Dashboard with shadcn UI (Typescript)",
-//   description:
-//     "WowDash - Admin Dashboard Multipurpose Next.js, TypeScript, ShadCn UI & Tailwind Template",
-// };
-
-
-
 export const metadata: Metadata = {
   title: "Wowdash - Tailwind & Next.js Admin Dashboard with shadcn UI (Typescript)",
   description: "WowDash - Admin Dashboard Multipurpose Next.js, TypeScript, ShadCn UI & Tailwind Template",
