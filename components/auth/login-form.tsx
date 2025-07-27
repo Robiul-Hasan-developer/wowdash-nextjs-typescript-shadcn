@@ -41,24 +41,28 @@ const LoginForm = () => {
     setLoading(true)
 
     startTransition(async () => {
-      if (!formRef.current) return
-      const formData = new FormData(formRef.current)
+      try {
+        if (!formRef.current) return
 
-      const res = await handleLoginAction(formData)
+        const formData = new FormData(formRef.current)
+        const res = await handleLoginAction(formData)
 
-      if (res?.error) {
-        toast.error(res.error)
-      } else {
-        toast.success('Login successful!')
-        await signIn('credentials', {
-          redirect: true,
-          email: values.email,
-          password: values.password,
-          callbackUrl: '/dashboard',
-        })
+        if (res?.error) {
+          toast.error(res.error)
+        } else {
+          toast.success('Login successful!')
+          await signIn('credentials', {
+            redirect: true,
+            email: values.email,
+            password: values.password,
+            callbackUrl: '/dashboard',
+          })
+        }
+      } catch (error) {
+        toast.error('Something went wrong. Please try again.')
+      } finally {
+        setLoading(false)
       }
-
-      setLoading(false)
     })
   }
 

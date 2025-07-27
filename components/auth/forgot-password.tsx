@@ -38,21 +38,27 @@ const ForgotPasswordComponent = () => {
     setLoading(true)
 
     startTransition(async () => {
-      if (!formRef.current) return
+      try {
+        if (!formRef.current) return
 
-      const formData = new FormData(formRef.current)
-      const result = await handleForgotPasswordAction(formData)
+        const formData = new FormData(formRef.current)
+        const result = await handleForgotPasswordAction(formData)
 
-      if (result?.success) {
-        toast.success('Password Reset code has been sent to your email')
-        router.push('/auth/create-password')
-      } else {
-        toast.error('Please enter a valid email')
+        if (result?.success) {
+          toast.success('Password Reset code has been sent to your email')
+          router.push('/auth/create-password')
+        } else {
+          toast.error('Please enter a valid email')
+        }
+      } catch (error) {
+        console.error('Forgot password error:', error)
+        toast.error('Something went wrong. Please try again.')
+      } finally {
+        setTimeout(() => setLoading(false), 1000)
       }
-
-      setTimeout(() => setLoading(false), 1000)
     })
   }
+
 
   return (
     <>

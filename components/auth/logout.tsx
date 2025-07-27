@@ -16,18 +16,24 @@ const Logout = () => {
     setLoading(true);
 
     startTransition(async () => {
-      const result = (await doLogout()) as LogoutResponse;
+      try {
+        const result = (await doLogout()) as LogoutResponse;
 
-      if ("error" in result) {
-        toast.error(result.error);
-      } else {
-        toast.success("You logged out successfully.");
-        router.push("/auth/login");
+        if ("error" in result) {
+          toast.error(result.error);
+        } else {
+          toast.success("You logged out successfully.");
+          router.push("/auth/login");
+        }
+      } catch (error) {
+        console.error("Logout error:", error);
+        toast.error("Something went wrong. Please try again.");
+      } finally {
+        setLoading(false);
       }
-
-      setLoading(false);
     });
   };
+
 
   return (
     <Button
