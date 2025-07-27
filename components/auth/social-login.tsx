@@ -17,7 +17,7 @@ const SocialLogin = () => {
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     setLoading(true);
-    
+
     const form = e.currentTarget;
     const clickedButton = (document.activeElement as HTMLButtonElement)?.value;
     setLoadingButtonProvider(
@@ -25,6 +25,10 @@ const SocialLogin = () => {
         ? clickedButton
         : null
     );
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
   };
 
   return (
