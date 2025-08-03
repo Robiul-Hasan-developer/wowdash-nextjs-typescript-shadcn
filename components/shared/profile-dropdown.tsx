@@ -28,7 +28,7 @@ const ProfileDropdown = () => {
         >
           {session?.user?.image ? (
             <Image
-              src={session?.user?.image ?? userImg}
+              src={session?.user?.image || userImg}
               className="rounded-full"
               width={40}
               height={40}
