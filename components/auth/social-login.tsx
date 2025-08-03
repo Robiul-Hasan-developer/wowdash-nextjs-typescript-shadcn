@@ -28,7 +28,8 @@ const SocialLogin = () => {
 
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+      setLoadingButtonProvider(null);
+    }, 2000);
   };
 
   return (
