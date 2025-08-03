@@ -27,6 +27,7 @@ const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false)
   const [isPending, startTransition] = useTransition()
   const { loading, setLoading } = useLoading()
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const formRef = useRef<HTMLFormElement>(null)
 
   const form = useForm<z.infer<typeof loginSchema>>({
@@ -39,6 +40,7 @@ const LoginForm = () => {
 
   const onSubmit = (values: z.infer<typeof loginSchema>) => {
     setLoading(true)
+    setIsSubmitting(true)
 
     startTransition(async () => {
       try {
@@ -158,7 +160,7 @@ const LoginForm = () => {
             className="w-full rounded-lg h-[52px] text-sm mt-2"
             disabled={loading || isPending}
           >
-            {loading || isPending ? (
+            {isSubmitting || isPending ? (
               <>
                 <Loader2 className="animate-spin h-4.5 w-4.5 mr-2" />
                 Signing in...

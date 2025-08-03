@@ -26,6 +26,7 @@ const RegisterForm = () => {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const { loading, setLoading } = useLoading();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof registerSchema>>({
     resolver: zodResolver(registerSchema),
@@ -40,6 +41,7 @@ const RegisterForm = () => {
     values: z.infer<typeof registerSchema>
   ) => {
     setLoading(true);
+    setIsSubmitting(true)
 
     toast.success("User created successfully! Please wait...");
     router.push("/dashboard");
@@ -179,7 +181,7 @@ const RegisterForm = () => {
             className="w-full rounded-lg mt-1 h-[52px] text-sm mt-2"
             disabled={loading}
           >
-            {loading ? (
+            {isSubmitting ? (
               <>
                 <Loader2 className="animate-spin h-4.5 w-4.5 mr-2" />
                 Loading...
