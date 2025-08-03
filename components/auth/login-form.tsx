@@ -52,13 +52,13 @@ const LoginForm = () => {
         if (res?.error) {
           toast.error(res.error)
         } else {
-          toast.success('Login successful!')
           await signIn('credentials', {
             redirect: true,
             email: values.email,
             password: values.password,
             callbackUrl: '/dashboard',
           })
+          toast.success('Login successful!')
         }
       } catch (error) {
         toast.error('Something went wrong. Please try again.')
