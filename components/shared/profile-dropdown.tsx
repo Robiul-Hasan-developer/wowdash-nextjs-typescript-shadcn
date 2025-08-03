@@ -15,6 +15,7 @@ import { useSession } from "next-auth/react";
 
 const ProfileDropdown = () => {
   const { data: session } = useSession();
+  const userImage = session?.user?.image;
   console.log("session", session);
 
   return (
@@ -45,11 +46,11 @@ const ProfileDropdown = () => {
             />
           )} */}
           <Image
-            src={session?.user?.image || userImg}
-            className="rounded-full"
+            src={userImage || userImg}
+            alt={session?.user?.name || "User"}
             width={40}
             height={40}
-            alt={session?.user?.name ?? "User profile"}
+            className="rounded-full object-cover"
           />
 
         </Button>
