@@ -44,6 +44,11 @@ export const data = {
           url: "/investment",
           circleColor: "bg-green-600",
         },
+        {
+          title: "LMS / Learning System",
+          url: "/lms",
+          circleColor: "bg-violet-600",
+        },
       ],
     },
     {
