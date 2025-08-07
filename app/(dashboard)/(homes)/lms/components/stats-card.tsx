@@ -75,7 +75,7 @@ const StatsCard = () => {
           <div
             key={id}
             className={cn(
-              "card border-0 !p-4 rounded-lg shadow-none bg-gradient-to-l mb-3 !h-[unset]",
+              "card border-0 !p-4 rounded-lg shadow-none bg-gradient-to-l !h-[unset]",
               gradientFrom,
               gradientTo
             )}
