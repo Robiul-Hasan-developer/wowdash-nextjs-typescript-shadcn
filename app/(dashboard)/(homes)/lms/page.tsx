@@ -6,6 +6,7 @@ import LoadingSkeleton from "@/components/loading-skeleton";
 import TrafficSourceCard from "./components/traffic-source-card";
 import WidgetsAverageChart from "./components/widgets-average-chart";
 import TopCategoriesCard from "./components/top-categories-card";
+import TopInstructorsCard from "./components/top-instructors-card";
 
 const metadata: Metadata = {
     title: "LMS Dashboard | WowDash Admin Panel",
@@ -29,6 +30,9 @@ const InvestmentPage = () => {
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     <TopCategoriesCard />
+                </div>
+                <div className="col-span-12 md:col-span-6 2xl:col-span-4">
+                    <TopInstructorsCard />
                 </div>
             </div>
         </>
