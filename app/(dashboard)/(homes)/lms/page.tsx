@@ -9,6 +9,7 @@ import TopCategoriesCard from "./components/top-categories-card";
 import TopInstructorsCard from "./components/top-instructors-card";
 import StudentProgressCard from "./components/student-progress-card";
 import CoursesCard from "./components/courses-card";
+import CourseActivityCard from "./components/course-activity-card";
 
 const metadata: Metadata = {
     title: "LMS Dashboard | WowDash Admin Panel",
@@ -41,6 +42,9 @@ const InvestmentPage = () => {
                 </div>
                 <div className="col-span-12 2xl:col-span-8">
                     <CoursesCard />
+                </div>
+                <div className="col-span-12 2xl:col-span-4">
+                    <CourseActivityCard />
                 </div>
             </div>
         </>

@@ -93,7 +93,7 @@ const StudentProgressCard: React.FC = () => {
                                                 y="50%"
                                                 dominantBaseline="middle"
                                                 textAnchor="middle"
-                                                fontSize="18"
+                                                fontSize="22"
                                                 fill="#111827"
                                             >
                                                 {student.progress}%

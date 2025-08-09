@@ -125,23 +125,6 @@ const CoursesTable = () => {
                                     <span className="text-sm font-normal">{coursesContent.price}</span>
                                 </div>
                             </TableCell>
-
-                            {/* <TableCell
-                                className={`py-3 px-4 first:border-s last:border-e border-b border-neutral-200 dark:border-slate-600 text-center ${isLast ? "rounded-bl-lg" : ""
-                                    }`}
-                            >
-                                <div className="mx-auto text-center space-y-1">
-                                    <div className="w-[66px] mx-auto">
-                                        <div className="rounded-full h-2 bg-gray-200 dark:bg-neutral-700">
-                                            <div
-                                                className={`${order.progressBg} h-2 rounded-full`}
-                                                style={{ width: `${order.stock}` }}
-                                            ></div>
-                                        </div>
-                                    </div>
-                                    <span className="">{order.stock}</span>
-                                </div>
-                            </TableCell> */}
                         </TableRow>
                     );
                 })}
