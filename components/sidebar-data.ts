@@ -49,6 +49,11 @@ export const data = {
           url: "/lms",
           circleColor: "bg-violet-600",
         },
+        {
+          title: "NFT & Gaming",
+          url: "/nft",
+          circleColor: "bg-blue-600",
+        },
       ],
     },
     {

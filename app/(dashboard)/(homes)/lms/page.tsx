@@ -3,13 +3,13 @@ import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Suspense } from "react";
 import LoadingSkeleton from "@/components/loading-skeleton";
-import TrafficSourceCard from "./components/traffic-source-card";
-import WidgetsAverageChart from "./components/widgets-average-chart";
-import TopCategoriesCard from "./components/top-categories-card";
-import TopInstructorsCard from "./components/top-instructors-card";
-import StudentProgressCard from "./components/student-progress-card";
-import CoursesCard from "./components/courses-card";
-import CourseActivityCard from "./components/course-activity-card";
+import TrafficSourceCard from "@/app/(dashboard)/(homes)/lms/components/traffic-source-card";
+import WidgetsAverageChart from "@/app/(dashboard)/(homes)/lms/components/widgets-average-chart";
+import TopCategoriesCard from "@/app/(dashboard)/(homes)/lms/components/top-categories-card";
+import TopInstructorsCard from "@/app/(dashboard)/(homes)/lms/components/top-instructors-card";
+import StudentProgressCard from "@/app/(dashboard)/(homes)/lms/components/student-progress-card";
+import CoursesCard from "@/app/(dashboard)/(homes)/lms/components/courses-card";
+import CourseActivityCard from "@/app/(dashboard)/(homes)/lms/components/course-activity-card";
 
 const metadata: Metadata = {
     title: "LMS Dashboard | WowDash Admin Panel",
