@@ -111,7 +111,7 @@ const RecentBidTable = () => {
         <Table className="table-auto border-spacing-0 border-separate">
             <TableHeader>
                 <TableRow className="border-0">
-                    <TableHead className="bg-neutral-100 dark:bg-slate-700 text-base px-4 h-12 border-t border-neutral-200 dark:border-slate-600 text-start rounded-tl-lg">
+                    <TableHead className="bg-neutral-100 dark:bg-slate-700 text-base px-4 h-12 border-t border-s border-neutral-200 dark:border-slate-600 text-start rounded-tl-lg">
                         Items
                     </TableHead>
                     <TableHead className="bg-neutral-100 dark:bg-slate-700 text-base px-4 h-12 border-t border-neutral-200 dark:border-slate-600">
@@ -126,7 +126,7 @@ const RecentBidTable = () => {
                     <TableHead className="bg-neutral-100 dark:bg-slate-700 text-base px-4 h-12 border-t border-neutral-200 dark:border-slate-600">
                         Time Left
                     </TableHead>
-                    <TableHead className="bg-neutral-100 dark:bg-slate-700 text-base px-4 h-12 border-t border-neutral-200 dark:border-slate-600 text-center rounded-tr-lg">
+                    <TableHead className="bg-neutral-100 dark:bg-slate-700 text-base px-4 h-12 border-t border-e border-neutral-200 dark:border-slate-600 text-center rounded-tr-lg">
                         Action
                     </TableHead>
                 </TableRow>
@@ -188,7 +188,8 @@ const RecentBidTable = () => {
                                 {item.timeLeft}
                             </TableCell>
 
-                            <TableCell className="py-3 px-4 border-b border-neutral-200 dark:border-slate-600 text-center">
+                            <TableCell className={`py-3 px-4 border-b border-e border-neutral-200 dark:border-slate-600 text-center ${isLast ? "rounded-br-2xl" : ""
+                                }`} >
                                 <div className="inline-flex items-center gap-3">
                                     <Button
                                         type="button"
