@@ -6,6 +6,7 @@ import LoadingSkeleton from "@/components/loading-skeleton";
 import NftPromoBanner from "@/app/(dashboard)/(homes)/nft/components/nft-promo-banner";
 import TrendingBidWidgets from "./components/trending-bid-widgets";
 import TrendingNftCard from "./components/trending-nft-card";
+import RecentBidCard from "./components/recent-bid-card";
 
 const metadata: Metadata = {
     title: "LMS Dashboard | WowDash Admin Panel",
@@ -36,7 +37,7 @@ const InvestmentPage = () => {
                         </div>
 
                         <div className="col-span-12">
-
+                            <RecentBidCard />
                         </div>
                     </div>
                 </div>
