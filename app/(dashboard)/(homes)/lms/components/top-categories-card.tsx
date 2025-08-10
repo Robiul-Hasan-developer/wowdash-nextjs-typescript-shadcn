@@ -63,7 +63,7 @@ const TopCategoriesCard: React.FC = () => {
         <Card className="card h-full rounded-lg border-0 !p-0">
             <CardContent className="card-body p-0 flex flex-col justify-between gap-8">
                 <div className="">
-                    <div className="card-header !border-b !border-neutral-200 py-4 px-6">
+                    <div className="card-header border-b border-neutral-200 dark:border-slate-500 py-4 px-6">
                         <div className="flex items-center flex-wrap gap-2 justify-between">
                             <h6 className="font-bold text-lg mb-0">Top Categories</h6>
                             <CommonLink />
@@ -89,7 +89,7 @@ const TopCategoriesCard: React.FC = () => {
                                     </div>
                                     <div className="flex-grow-1">
                                         <h6 className="text-base mb-0 font-normal">{category.title}</h6>
-                                        <span className="text-sm text-neutral-600 font-normal">
+                                        <span className="text-sm text-neutral-600 dark:text-neutral-100 font-normal">
                                             {category.courses}
                                         </span>
                                     </div>

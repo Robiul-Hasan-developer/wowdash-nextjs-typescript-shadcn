@@ -70,7 +70,7 @@ const TopInstructorsCard: React.FC = () => {
         <Card className="card h-full rounded-lg border-0 !p-0">
             <CardContent className="card-body p-0 flex flex-col justify-between gap-8">
                 <div className="">
-                    <div className="card-header !border-b !border-neutral-200 py-4 px-6">
+                    <div className="card-header border-b border-neutral-200 dark:border-slate-500 py-4 px-6">
                         <div className="flex items-center flex-wrap gap-2 justify-between">
                             <h6 className="font-bold text-lg mb-0">Top Instructors</h6>
                             <CommonLink />
@@ -97,7 +97,7 @@ const TopInstructorsCard: React.FC = () => {
                                         <h6 className="sm:text-base text-xs mb-0 font-medium">
                                             {instructor.name}
                                         </h6>
-                                        <span className="text-sm text-neutral-600 font-medium">
+                                        <span className="text-sm text-neutral-600 dark:text-neutral-100 font-medium">
                                             Agent ID: {instructor.agentId}
                                         </span>
                                     </div>
@@ -115,7 +115,7 @@ const TopInstructorsCard: React.FC = () => {
                                             </span>
                                         ))}
                                     </div>
-                                    <span className="text-neutral-600 text-sm block text-right">
+                                    <span className="text-neutral-600 dark:text-neutral-100 text-sm block text-right">
                                         {instructor.reviews} Reviews
                                     </span>
                                 </div>

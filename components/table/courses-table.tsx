@@ -102,7 +102,7 @@ const CoursesTable = () => {
                                 className={`py-3 px-4 first:border-s last:border-e border-b border-neutral-200 dark:border-slate-600 text-center ${isLast ? "rounded-bl-lg" : ""
                                     }`}
                             >
-                                <div className="text-neutral-600">
+                                <div className="text-neutral-600 dark:text-neutral-100">
                                     <h6 className="text-base mb-0 font-normal">{coursesContent.usersTitle}</h6>
                                     <span className="text-sm font-normal">{coursesContent.usersLesson}</span>
                                 </div>
@@ -112,7 +112,7 @@ const CoursesTable = () => {
                                 className={`py-3 px-4 first:border-s last:border-e border-b border-neutral-200 dark:border-slate-600 text-center ${isLast ? "rounded-bl-lg" : ""
                                     }`}
                             >
-                                <div className="text-neutral-600">
+                                <div className="text-neutral-600 dark:text-neutral-100">
                                     <span className="text-sm font-normal">{coursesContent.enrolled}</span>
                                 </div>
                             </TableCell>
@@ -121,7 +121,7 @@ const CoursesTable = () => {
                                 className={`py-3 px-4 first:border-s last:border-e border-b border-neutral-200 dark:border-slate-600 text-center ${isLast ? "rounded-bl-lg" : ""
                                     }`}
                             >
-                                <div className="text-neutral-600">
+                                <div className="text-neutral-600 dark:text-neutral-100">
                                     <span className="text-sm font-normal">{coursesContent.price}</span>
                                 </div>
                             </TableCell>

@@ -27,7 +27,7 @@ const StudentProgressCard: React.FC = () => {
         <Card className="card h-full rounded-lg border-0 !p-0">
             <CardContent className="card-body p-0 flex flex-col justify-between gap-8">
                 <div>
-                    <div className="card-header !border-b !border-neutral-200 py-4 px-6">
+                    <div className="card-header border-b border-neutral-200 dark:border-slate-500 py-4 px-6">
                         <div className="flex items-center flex-wrap gap-2 justify-between">
                             <h6 className="font-bold text-lg mb-0">Student's Progress</h6>
                             <CommonLink />
@@ -53,7 +53,7 @@ const StudentProgressCard: React.FC = () => {
                                             <h6 className="sm:text-base text-xs mb-0 font-medium">
                                                 {student.name}
                                             </h6>
-                                            <span className="text-sm text-neutral-600 font-medium">
+                                            <span className="text-sm text-neutral-600 dark:text-neutral-100 font-medium">
                                                 {student.course}
                                             </span>
                                         </div>
@@ -94,7 +94,7 @@ const StudentProgressCard: React.FC = () => {
                                                 dominantBaseline="middle"
                                                 textAnchor="middle"
                                                 fontSize="22"
-                                                fill="#111827"
+                                                className="fill-gray-900 dark:fill-white"
                                             >
                                                 {student.progress}%
                                             </text>

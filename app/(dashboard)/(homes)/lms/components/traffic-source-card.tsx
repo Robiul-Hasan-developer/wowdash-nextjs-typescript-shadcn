@@ -23,25 +23,25 @@ const TrafficSourceCard = () => {
                         <div className="flex items-center gap-2">
                             <span className="w-3 h-3 rounded-full
                                      bg-yellow-500"></span>
-                            <span className="text-neutral-600 text-sm font-semibold">Organic Search</span>
+                            <span className="text-neutral-600 dark:text-neutral-100 text-sm font-semibold">Organic Search</span>
                         </div>
-                        <span className="text-neutral-600 font-bold">875</span>
+                        <span className="text-neutral-600 dark:text-neutral-100 font-bold">875</span>
                     </li>
                     <li className="flex flex-col gap-2">
                         <div className="flex items-center gap-2">
                             <span className="w-3 h-3 rounded-full
                                      bg-green-600"></span>
-                            <span className="text-neutral-600 text-sm font-semibold">Referrals</span>
+                            <span className="text-neutral-600 dark:text-neutral-100 text-sm font-semibold">Referrals</span>
                         </div>
-                        <span className="text-neutral-600 font-bold">450</span>
+                        <span className="text-neutral-600 dark:text-neutral-100 font-bold">450</span>
                     </li>
                     <li className="flex flex-col gap-2">
                         <div className="flex items-center gap-2">
                             <span className="w-3 h-3 rounded-full
                                      bg-blue-600"></span>
-                            <span className="text-neutral-600 text-sm font-semibold">Social Media</span>
+                            <span className="text-neutral-600 dark:text-neutral-100 text-sm font-semibold">Social Media</span>
                         </div>
-                        <span className="text-neutral-600 font-bold">4,305</span>
+                        <span className="text-neutral-600 dark:text-neutral-100 font-bold">4,305</span>
                     </li>
                 </ul>
             </CardContent>

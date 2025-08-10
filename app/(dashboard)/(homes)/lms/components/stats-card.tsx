@@ -93,7 +93,7 @@ const StatsCard = () => {
                     {Icon ? <Icon className={cn(textColor)} /> : ""}
                   </span>
                   <div>
-                    <span className="mb-0 font-medium text-neutral-600 text-lg">
+                    <span className="mb-0 font-medium text-neutral-600 dark:text-neutral-100 text-lg">
                       {title}
                     </span>
                   </div>
@@ -102,7 +102,7 @@ const StatsCard = () => {
 
               <div className="flex items-center justify-between flex-wrap gap-8">
                 <h5 className="font-semibold mb-0">{value}</h5>
-                <p className="text-sm mb-0 flex items-center gap-2 text-neutral-500">
+                <p className="text-sm mb-0 flex items-center gap-2 text-neutral-500 dark:text-neutral-200">
                   <span className="text-white px-1 rounded font-medium bg-green-600 text-sm">
                     {difference}
                   </span>

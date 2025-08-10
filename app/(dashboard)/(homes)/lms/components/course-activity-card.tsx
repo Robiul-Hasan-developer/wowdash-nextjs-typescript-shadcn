@@ -8,7 +8,7 @@ const CourseActivityCard = () => {
         <Card className="card h-full rounded-lg border-0 !p-0">
             <CardContent className="card-body p-0 flex flex-col justify-between gap-8">
                 <div>
-                    <div className="card-header !border-b !border-neutral-200 py-4 px-6">
+                    <div className="card-header border-b border-neutral-200 dark:border-slate-500 py-4 px-6">
                         <div className="flex items-center flex-wrap gap-2 justify-between">
                             <h6 className="font-bold text-lg mb-0">Course Activity</h6>
                             <CommonLink />
@@ -19,15 +19,15 @@ const CourseActivityCard = () => {
                             <li className="flex items-center gap-2">
                                 <span className="w-3 h-3 rounded-full
                              bg-yellow-500"></span>
-                                <span className="text-neutral-600 text-sm font-semibold">Paid Course:
-                                    <span className="text-neutral-500 font-bold">500</span>
+                                <span className="text-neutral-600 dark:text-neutral-100 text-sm font-semibold">Paid Course:
+                                    <span className="text-neutral-500 dark:text-neutral-200 font-bold">500</span>
                                 </span>
                             </li>
                             <li className="flex items-center gap-2">
                                 <span className="w-3 h-3 rounded-full
                              bg-green-600"></span>
-                                <span className="text-neutral-600 text-sm font-semibold">Free Course:
-                                    <span className="text-neutral-500 font-bold">300</span>
+                                <span className="text-neutral-600 dark:text-neutral-100 text-sm font-semibold">Free Course:
+                                    <span className="text-neutral-500 dark:text-neutral-200 font-bold">300</span>
                                 </span>
                             </li>
                         </ul>

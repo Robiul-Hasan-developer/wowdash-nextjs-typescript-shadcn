@@ -7,6 +7,7 @@ import NftPromoBanner from "@/app/(dashboard)/(homes)/nft/components/nft-promo-b
 import TrendingBidWidgets from "./components/trending-bid-widgets";
 import TrendingNftCard from "./components/trending-nft-card";
 import RecentBidCard from "./components/recent-bid-card";
+import EthPriceCard from "./components/eth-price-card";
 
 const metadata: Metadata = {
     title: "LMS Dashboard | WowDash Admin Panel",
@@ -44,7 +45,18 @@ const InvestmentPage = () => {
 
                 <div className="col-span-12 2xl:col-span-4">
                     <div className="gap-6 grid grid-cols-1 sm:grid-cols-12">
-                        <div className="col-span-12 md:col-span-6 2xl:col-span-12"></div>
+                        <div className="col-span-12 md:col-span-6 2xl:col-span-12">
+                            <EthPriceCard />
+                        </div>
+                        <div className="col-span-12 md:col-span-6 2xl:col-span-12">
+
+                        </div>
+                        <div className="col-span-12 md:col-span-6 2xl:col-span-12">
+
+                        </div>
+                        <div className="col-span-12 md:col-span-6 2xl:col-span-12">
+
+                        </div>
                     </div>
                 </div>
             </div>
