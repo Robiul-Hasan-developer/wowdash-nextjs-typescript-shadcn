@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import CustomSelect from '@/components/shared/custom-select';
-import CoursesActivityChart from "@/components/charts/courses-activity-chart";
+import UpDownSharpChart from "@/components/charts/up-down-sharp-chart";
 
 const EthPriceCard = () => {
     return (
@@ -18,8 +18,8 @@ const EthPriceCard = () => {
                         </div>
                     </div>
                     <div className="card-body p-6">
-                        <div className="margin-16-minus y-value-left">
-                            <CoursesActivityChart />
+                        <div className="apexcharts-tooltip-style-1 yaxies-more label--20-px">
+                            <UpDownSharpChart />
                         </div>
                     </div>
                 </div>
