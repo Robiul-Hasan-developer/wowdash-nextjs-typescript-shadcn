@@ -8,6 +8,7 @@ import TrendingBidWidgets from "./components/trending-bid-widgets";
 import TrendingNftCard from "./components/trending-nft-card";
 import RecentBidCard from "./components/recent-bid-card";
 import EthPriceCard from "./components/eth-price-card";
+import StatisticsCard from "./components/statistics-card";
 
 const metadata: Metadata = {
     title: "LMS Dashboard | WowDash Admin Panel",
@@ -49,7 +50,7 @@ const InvestmentPage = () => {
                             <EthPriceCard />
                         </div>
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
-
+                            <StatisticsCard />
                         </div>
                         <div className="col-span-12 md:col-span-6 2xl:col-span-12">
 

@@ -1,7 +1,8 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import CommonLink from "@/components/shared/common-link";
-import CoursesActivityChart from "@/components/charts/courses-activity-chart";
+import CardSmallChartTwo from "@/components/charts/card-small-chart-two";
+import TodayIncomeChart from "@/components/charts/today-income-chart";
 
 const StatisticsCard = () => {
     return (
@@ -15,8 +16,21 @@ const StatisticsCard = () => {
                         </div>
                     </div>
                     <div className="card-body p-6">
-                        <div className="margin-16-minus y-value-left">
-                            <CoursesActivityChart />
+                        <div className="flex items-center gap-1 justify-between mb-[44px]">
+                            <div>
+                                <h5 className="font-semibold mb-3">145</h5>
+                                <span className="text-secondary-light font-normal text-xl">Total Art Sold</span>
+                            </div>
+                            <TodayIncomeChart />
+                        </div>
+                        <div className="flex items-center gap-1 justify-between">
+                            <div>
+                                <h5 className="font-semibold mb-3">750 ETH</h5>
+                                <span className="text-secondary-light font-normal text-xl">Total Earnings</span>
+                            </div>
+                            <div className="remove-tooltip-title rounded-tooltip-value remove-tooltip-marker">
+                                <CardSmallChartTwo chartColor={"#ff9f29"} />
+                            </div>
                         </div>
                     </div>
                 </div>
