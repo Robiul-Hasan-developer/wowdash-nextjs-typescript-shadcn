@@ -4,6 +4,7 @@ import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Suspense } from "react";
 import LoadingSkeleton from "@/components/loading-skeleton";
 import NftPromoBanner from "@/app/(dashboard)/(homes)/nft/components/nft-promo-banner";
+import TrendingBidWidgets from "./components/trending-bid-widgets";
 
 const metadata: Metadata = {
     title: "LMS Dashboard | WowDash Admin Panel",
@@ -24,9 +25,11 @@ const InvestmentPage = () => {
                                 <NftPromoBanner />
                             </Suspense>
                         </div>
-                        <div className="col-span-12">
 
+                        <div className="col-span-12">
+                            <TrendingBidWidgets />
                         </div>
+
                         <div className="col-span-12">
 
                         </div>
