@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import NftGradientBg from "../../../../../public/assets/images/nft/nft-gradient-bg.png";
-import NftCardImage from "../../../../../public/assets/images/nft/nf-card-img.png";
+import NftGradientBg from "@/public/assets/images/nft/nft-gradient-bg.png";
+import NftCardImage from "@/public/assets/images/nft/nf-card-img.png";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
