@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import CommonLink from "@/components/shared/common-link";
 import DoubleLineChart from '@/components/charts/double-line-chart';
+import CustomSelect from '@/components/shared/custom-select';
 
 const EarningStatisticCard = () => {
     return (
@@ -11,7 +11,10 @@ const EarningStatisticCard = () => {
                     <div className="card-header border-b border-neutral-200 dark:border-slate-500 py-4 px-6">
                         <div className="flex items-center flex-wrap gap-2 justify-between">
                             <h6 className="font-bold text-lg mb-0">Earning Statistic</h6>
-                            <CommonLink />
+                            <CustomSelect
+                                placeholder="This Month"
+                                options={["This Month", "This Week", "This Year",]}
+                            />
                         </div>
                     </div>
                     <div className="card-body p-6">
