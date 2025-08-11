@@ -8,6 +8,7 @@ import EarningStatisticCard from "./components/earning-statistic-card";
 import PatientVisitedDepartment from "./components/patient-visited-department";
 import PatientVisitedGender from "./components/patient-visited-gender";
 import DoctorListCard from "./components/doctor-list-card";
+import LatestAppointmentsCard from "./components/latest-appointments-card";
 
 const metadata: Metadata = {
     title: "Medical Dashboard | WowDash Admin Panel",
@@ -47,6 +48,11 @@ const MedicalPage = () => {
                         <div className="col-span-12 2xl:col-span-4">
                             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                                 <DoctorListCard />
+                            </Suspense>
+                        </div>
+                        <div className="col-span-12 2xl:col-span-8">
+                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                                <LatestAppointmentsCard />
                             </Suspense>
                         </div>
                     </div>
