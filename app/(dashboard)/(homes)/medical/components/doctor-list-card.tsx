@@ -27,7 +27,7 @@ const DoctorListCard = () => {
                                     <Image src={DoctorImage1} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
                                     <div className="flex-grow-1">
                                         <h6 className="text-base mb-0">Dr. Davis</h6>
-                                        <span className="text-sm text-gray-600 font-medium">Cardiology</span>
+                                        <span className="text-sm text-gray-600 dark:text-neutral-100 font-medium">Cardiology</span>
                                     </div>
                                 </div>
                                 <span className="bg-green-500/15 text-green-500 dark:text-green-500 px-2.5 py-1 rounded-lg font-medium text-sm">Available</span>
@@ -37,7 +37,7 @@ const DoctorListCard = () => {
                                     <Image src={DoctorImage2} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
                                     <div className="flex-grow-1">
                                         <h6 className="text-base mb-0">Dr. Riead</h6>
-                                        <span className="text-sm text-gray-600 font-medium">Orthopedics</span>
+                                        <span className="text-sm text-gray-600 dark:text-neutral-100 font-medium">Orthopedics</span>
                                     </div>
                                 </div>
                                 <span className="bg-green-500/15 text-green-500 dark:text-green-500 px-2.5 py-1 rounded-lg font-medium text-sm">Available</span>
@@ -47,7 +47,7 @@ const DoctorListCard = () => {
                                     <Image src={DoctorImage3} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
                                     <div className="flex-grow-1">
                                         <h6 className="text-base mb-0">Albert Flores</h6>
-                                        <span className="text-sm text-gray-600 font-medium">Ophthalmology</span>
+                                        <span className="text-sm text-gray-600 dark:text-neutral-100 font-medium">Ophthalmology</span>
                                     </div>
                                 </div>
                                 <span className="bg-red-500/15 text-red-600 dark:text-red-600 px-2.5 py-1 rounded-lg font-medium text-sm">Not Available</span>
@@ -57,7 +57,7 @@ const DoctorListCard = () => {
                                     <Image src={DoctorImage4} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
                                     <div className="flex-grow-1">
                                         <h6 className="text-base mb-0">Dr. Smith</h6>
-                                        <span className="text-sm text-gray-600 font-medium">Cardiology</span>
+                                        <span className="text-sm text-gray-600 dark:text-neutral-100 font-medium">Cardiology</span>
                                     </div>
                                 </div>
                                 <span className="bg-green-500/15 text-green-500 dark:text-green-500 px-2.5 py-1 rounded-lg font-medium text-sm">Available</span>
@@ -67,7 +67,7 @@ const DoctorListCard = () => {
                                     <Image src={DoctorImage6} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
                                     <div className="flex-grow-1">
                                         <h6 className="text-base mb-0">Dr. Johnson</h6>
-                                        <span className="text-sm text-gray-600 font-medium">Cardiology</span>
+                                        <span className="text-sm text-gray-600 dark:text-neutral-100 font-medium">Cardiology</span>
                                     </div>
                                 </div>
                                 <span className="bg-red-500/15 text-red-600 dark:text-red-600 px-2.5 py-1 rounded-lg font-medium text-sm">Not Available</span>
@@ -77,7 +77,7 @@ const DoctorListCard = () => {
                                     <Image src={DoctorImage5} alt="" className="w-10 h-10 rounded-full flex-shrink-0 me-3 overflow-hidden" />
                                     <div className="flex-grow-1">
                                         <h6 className="text-base mb-0">Dr. Martinez</h6>
-                                        <span className="text-sm text-gray-600 font-medium">Cardiology</span>
+                                        <span className="text-sm text-gray-600 dark:text-neutral-100 font-medium">Cardiology</span>
                                     </div>
                                 </div>
                                 <span className="bg-green-500/15 text-green-500 dark:text-green-500 px-2.5 py-1 rounded-lg font-medium text-sm">Available</span>

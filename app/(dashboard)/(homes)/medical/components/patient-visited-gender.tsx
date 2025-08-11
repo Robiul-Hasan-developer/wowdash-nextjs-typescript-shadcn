@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import RadialMultipleBar from '@/components/charts/radial-multiple-bar';
 import CustomSelect from '@/components/shared/custom-select';
 import CoursesActivityChart from '@/components/charts/courses-activity-chart';
 
