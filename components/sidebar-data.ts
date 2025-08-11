@@ -54,6 +54,11 @@ export const data = {
           url: "/nft",
           circleColor: "bg-blue-600",
         },
+        {
+          title: "Medical",
+          url: "/medical",
+          circleColor: "bg-red-600",
+        },
       ],
     },
     {

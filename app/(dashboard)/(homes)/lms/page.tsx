@@ -17,7 +17,7 @@ const metadata: Metadata = {
         "Manage courses, track student progress, and analyze learning outcomes with the LMS Dashboard in WowDash Admin Template built using Next.js and Tailwind.",
 };
 
-const InvestmentPage = () => {
+const LmsPage = () => {
     return (
         <>
             <DashboardBreadcrumb title="Dashboard" text="LMS / Learning System" />
@@ -50,4 +50,4 @@ const InvestmentPage = () => {
         </>
     );
 };
-export default InvestmentPage;
+export default LmsPage;

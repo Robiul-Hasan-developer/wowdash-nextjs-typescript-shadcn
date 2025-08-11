@@ -44,7 +44,7 @@ const WidgetsAverageChart = () => {
                                 </ul>
                             </div>
                             <div className="mt-10 apexcharts-tooltip-style-1">
-                                <DoubleLineChart />
+                                <DoubleLineChart colors={["#45B369", "#487fff"]} />
                             </div>
                         </div>
                     </div>
