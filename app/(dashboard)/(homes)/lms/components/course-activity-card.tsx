@@ -32,7 +32,7 @@ const CourseActivityCard = () => {
                             </li>
                         </ul>
                         <div className="margin-16-minus y-value-left">
-                            <CoursesActivityChart />
+                            <CoursesActivityChart height={380} />
                         </div>
                     </div>
                 </div>

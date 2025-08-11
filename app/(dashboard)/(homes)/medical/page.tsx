@@ -6,6 +6,7 @@ import LoadingSkeleton from "@/components/loading-skeleton";
 import StatCards from "@/app/(dashboard)/(homes)/medical/components/stat-cards";
 import EarningStatisticCard from "./components/earning-statistic-card";
 import PatientVisitedDepartment from "./components/patient-visited-department";
+import PatientVisitedGender from "./components/patient-visited-gender";
 
 const metadata: Metadata = {
     title: "Medical Dashboard | WowDash Admin Panel",
@@ -35,6 +36,11 @@ const MedicalPage = () => {
                         <div className="col-span-12 lg:col-span-6">
                             <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                                 <PatientVisitedDepartment />
+                            </Suspense>
+                        </div>
+                        <div className="col-span-12 lg:col-span-6">
+                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                                <PatientVisitedGender />
                             </Suspense>
                         </div>
                     </div>

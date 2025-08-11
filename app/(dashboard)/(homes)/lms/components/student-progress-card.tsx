@@ -33,7 +33,7 @@ const StudentProgressCard: React.FC = () => {
                             <CommonLink />
                         </div>
                     </div>
-                    <div className="card-body p-6">
+                    <div className="card-body py-4 px-6">
                         {students.map((student) => {
                             const offset = CIRCUMFERENCE - (CIRCUMFERENCE * student.progress) / 100;
                             return (

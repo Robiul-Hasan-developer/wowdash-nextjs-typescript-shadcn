@@ -17,7 +17,7 @@ const EthPriceCard = () => {
                             />
                         </div>
                     </div>
-                    <div className="card-body p-6">
+                    <div className="card-body py-4 px-6">
                         <div className="apexcharts-tooltip-style-1 yaxies-more label--20-px">
                             <UpDownSharpChart />
                         </div>

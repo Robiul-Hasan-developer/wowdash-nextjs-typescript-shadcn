@@ -15,7 +15,7 @@ const StatisticsCard = () => {
                             <CommonLink />
                         </div>
                     </div>
-                    <div className="card-body p-6">
+                    <div className="card-body py-4 px-6">
                         <div className="flex items-center gap-1 justify-between mb-[44px]">
                             <div>
                                 <h5 className="font-semibold mb-3">145</h5>

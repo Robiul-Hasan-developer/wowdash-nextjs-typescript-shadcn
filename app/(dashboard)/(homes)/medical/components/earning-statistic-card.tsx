@@ -17,7 +17,7 @@ const EarningStatisticCard = () => {
                             />
                         </div>
                     </div>
-                    <div className="card-body p-6">
+                    <div className="card-body py-4 px-6">
                         <ul className="flex flex-wrap items-center justify-center my-3 gap-3">
                             <li className="flex items-center gap-2">
                                 <span className="w-3 h-2 rounded-[50rem] bg-blue-600"></span>

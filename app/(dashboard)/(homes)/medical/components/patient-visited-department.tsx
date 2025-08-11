@@ -12,7 +12,7 @@ const PatientVisitedDepartment = () => {
                             <h6 className="font-bold text-lg mb-0">Patient Visited by Department</h6>
                         </div>
                     </div>
-                    <div className="card-body p-6 flex items-center gap-4">
+                    <div className="card-body py-4 px-6 flex items-center gap-4">
                         <div className="">
                             <RadialMultipleBar />
                         </div>
