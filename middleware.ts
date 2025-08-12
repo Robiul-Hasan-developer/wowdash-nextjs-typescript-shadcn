@@ -45,6 +45,12 @@
 
 
 
+
+
+
+
+
+
 // middleware.ts
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
@@ -60,7 +66,7 @@ const publicRoutes = [
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  // Ignore static & API routes
+  // Static files and API remove
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/favicon.ico") ||
@@ -71,18 +77,15 @@ export async function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
-  // ✅ Get user token from cookies
+  // Get user token from cookie
   const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
   const isPublic = publicRoutes.some((route) => pathname.startsWith(route));
 
-  // ✅ Not logged in & private route → redirect to login
   if (!token && !isPublic) {
-    const loginUrl = new URL("/auth/login", req.url);
-    loginUrl.searchParams.set("redirect", pathname); // optional
-    return NextResponse.redirect(loginUrl);
+    return NextResponse.redirect(new URL("/auth/login", req.url));
   }
 
-  // ✅ Logged in & on a public route → go to dashboard
+  // If user login and in public root then redirect to dashboard
   if (token && isPublic) {
     return NextResponse.redirect(new URL("/dashboard", req.url));
   }
