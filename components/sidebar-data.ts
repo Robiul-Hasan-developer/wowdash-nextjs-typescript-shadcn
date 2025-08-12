@@ -9,6 +9,7 @@ import {
   UsersRound,
   StickyNote,
   Settings,
+  MessageCircleMore
 } from "lucide-react";
 
 export const data = {
@@ -68,6 +69,11 @@ export const data = {
       title: "Email",
       url: "/email",
       icon: Mail,
+    },
+    {
+      title: "Chat",
+      url: "/chat",
+      icon: MessageCircleMore,
     },
     {
       label: "UI Elements",
