@@ -210,7 +210,6 @@
 
 
 
-
 'use client'
 
 import React, { useState, useTransition, useRef } from 'react'
@@ -234,13 +233,13 @@ import { Mail, Lock, Eye, EyeOff, Loader2 } from 'lucide-react'
 import SocialLogin from './social-login'
 import { loginSchema } from '@/lib/zod'
 import { useLoading } from '@/contexts/LoadingContext'
-// import { handleLoginAction } from './actions/login'
+// import { handleLoginAction } from './actions/login' // optional — see note below
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false)
   const [isPending, startTransition] = useTransition()
   const { loading, setLoading } = useLoading()
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const formRef = useRef<HTMLFormElement>(null)
 
   const form = useForm<z.infer<typeof loginSchema>>({
@@ -251,38 +250,61 @@ const LoginForm = () => {
     },
   })
 
-  const onSubmit = async (values: z.infer<typeof loginSchema>) => {
-    setLoading(true);
-    setIsSubmitting(true);
+  const onSubmit = (values: z.infer<typeof loginSchema>) => {
+    setLoading(true)
+    setIsSubmitting(true)
 
-    try {
-      // Optional: If you must check credentials in your own API first
-      // const res = await handleLoginAction(new FormData(formRef.current!));
-      // if (res?.error) {
-      //   toast.error(res.error);
-      //   return;
-      // }
+    // keep UX snappy with startTransition if you like
+    startTransition(async () => {
+      try {
+        // Determine callback/redirect URL (support both query names just in case)
+        const params = new URLSearchParams(window.location.search)
+        const callbackUrl =
+          params.get('callbackUrl') || params.get('redirect') || '/dashboard'
 
-      // ✅ Directly sign in with NextAuth credentials provider
-      const result = await signIn("credentials", {
-        redirect: true,
-        email: values.email,
-        password: values.password,
-        // ✅ Pass callbackUrl from query OR default
-        callbackUrl:
-          new URLSearchParams(window.location.search).get("callbackUrl") || "/dashboard",
-      });
+        // OPTIONAL: If you have a custom server-side pre-check (handleLoginAction),
+        // you may keep it — but it MUST NOT replace signIn. If you keep it, run it first
+        // and abort on error, then still call signIn below.
+        //
+        // Example (uncomment if you need):
+        // if (formRef.current) {
+        //   const fd = new FormData(formRef.current)
+        //   const serverCheck = await handleLoginAction(fd)
+        //   if (serverCheck?.error) {
+        //     toast.error(serverCheck.error)
+        //     setLoading(false)
+        //     setIsSubmitting(false)
+        //     return
+        //   }
+        // }
 
-      // result will be a redirect, so usually no need for toast here
-      toast.success("Login successful!");
-    } catch (error) {
-      toast.error("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-      setIsSubmitting(false);
-    }
-  };
+        // Use next-auth signIn with redirect: false so we control navigation after cookie set
+        const result = await signIn('credentials', {
+          redirect: false,
+          email: values.email,
+          password: values.password,
+          callbackUrl,
+        })
 
+        // result may be { error, status, ok, url }
+        if (result?.error) {
+          toast.error(result.error || 'Invalid credentials')
+        } else {
+          // Successful: the auth endpoint has set cookies. Now navigate to URL.
+          // Prefer the returned url if present.
+          const url = (result as any).url || callbackUrl
+          // Use replace so user doesn't go back to login with back button (optional)
+          window.location.replace(url)
+        }
+      } catch (err) {
+        console.error(err)
+        toast.error('Something went wrong. Please try again.')
+      } finally {
+        setLoading(false)
+        setIsSubmitting(false)
+      }
+    })
+  }
 
   return (
     <>
@@ -374,7 +396,7 @@ const LoginForm = () => {
           <Button
             type="submit"
             className="w-full rounded-lg h-[52px] text-sm mt-2"
-            disabled={loading || isPending}
+            disabled={loading || isPending || isSubmitting}
           >
             {isSubmitting || isPending ? (
               <>
