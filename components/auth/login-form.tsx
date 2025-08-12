@@ -66,6 +66,10 @@ const LoginForm = () => {
         setLoading(false)
       }
     });
+
+    setTimeout(() => {
+      setIsSubmitting(false)
+    }, 2000);
   }
 
   return (
