@@ -265,10 +265,12 @@ const LoginForm = () => {
 
       // ✅ Directly sign in with NextAuth credentials provider
       const result = await signIn("credentials", {
-        redirect: true, // Let NextAuth handle the redirect
-        callbackUrl: "/dashboard", // After successful login
+        redirect: true,
         email: values.email,
         password: values.password,
+        // ✅ Pass callbackUrl from query OR default
+        callbackUrl:
+          new URLSearchParams(window.location.search).get("callbackUrl") || "/dashboard",
       });
 
       // result will be a redirect, so usually no need for toast here

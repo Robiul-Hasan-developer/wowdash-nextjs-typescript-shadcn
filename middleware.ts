@@ -50,7 +50,6 @@
 
 
 
-
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { getToken } from "next-auth/jwt";
@@ -63,9 +62,9 @@ const publicRoutes = [
 ];
 
 export async function middleware(req: NextRequest) {
-  const { pathname } = req.nextUrl;
+  const { pathname, searchParams } = req.nextUrl;
 
-  // Static files and API remove
+  // Skip static files and APIs
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/favicon.ico") ||
@@ -76,17 +75,25 @@ export async function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
-  // Get user token from cookie
-  const token = await getToken({ req, secret: process.env.AUTH_SECRET });
+  const token = await getToken({
+    req,
+    secret: process.env.AUTH_SECRET!,
+  });
+
   const isPublic = publicRoutes.some((route) => pathname.startsWith(route));
 
+  // ✅ If not logged in & accessing protected route
   if (!token && !isPublic) {
-    return NextResponse.redirect(new URL("/auth/login", req.url));
+    const loginUrl = new URL("/auth/login", req.url);
+    // Keep the intended redirect
+    loginUrl.searchParams.set("callbackUrl", pathname);
+    return NextResponse.redirect(loginUrl);
   }
 
-  // If user login and in public root then redirect to dashboard
+  // ✅ If logged in & accessing public route
   if (token && isPublic) {
-    return NextResponse.redirect(new URL("/dashboard", req.url));
+    let redirectUrl = searchParams.get("callbackUrl") || "/dashboard";
+    return NextResponse.redirect(new URL(redirectUrl, req.url));
   }
 
   return NextResponse.next();
