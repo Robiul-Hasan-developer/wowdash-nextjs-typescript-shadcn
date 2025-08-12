@@ -250,61 +250,30 @@ const LoginForm = () => {
     },
   })
 
-  const onSubmit = (values: z.infer<typeof loginSchema>) => {
+  const onSubmit = async (values: any) => {
     setLoading(true)
     setIsSubmitting(true)
 
-    // keep UX snappy with startTransition if you like
-    startTransition(async () => {
-      try {
-        // Determine callback/redirect URL (support both query names just in case)
-        const params = new URLSearchParams(window.location.search)
-        const callbackUrl =
-          params.get('callbackUrl') || params.get('redirect') || '/dashboard'
+    const callbackUrl =
+      new URLSearchParams(window.location.search).get("callbackUrl") || "/dashboard";
 
-        // OPTIONAL: If you have a custom server-side pre-check (handleLoginAction),
-        // you may keep it — but it MUST NOT replace signIn. If you keep it, run it first
-        // and abort on error, then still call signIn below.
-        //
-        // Example (uncomment if you need):
-        // if (formRef.current) {
-        //   const fd = new FormData(formRef.current)
-        //   const serverCheck = await handleLoginAction(fd)
-        //   if (serverCheck?.error) {
-        //     toast.error(serverCheck.error)
-        //     setLoading(false)
-        //     setIsSubmitting(false)
-        //     return
-        //   }
-        // }
+    const res = await signIn("credentials", {
+      redirect: false,
+      email: values.email,
+      password: values.password,
+    });
 
-        // Use next-auth signIn with redirect: false so we control navigation after cookie set
-        const result = await signIn('credentials', {
-          redirect: false,
-          email: values.email,
-          password: values.password,
-          callbackUrl,
-        })
+    if (res?.error) {
+      // Show error toast or message
+    } else {
+      window.location.href = callbackUrl;
+    }
 
-        // result may be { error, status, ok, url }
-        if (result?.error) {
-          toast.error(result.error || 'Invalid credentials')
-        } else {
-          // Successful: the auth endpoint has set cookies. Now navigate to URL.
-          // Prefer the returned url if present.
-          const url = (result as any).url || callbackUrl
-          // Use replace so user doesn't go back to login with back button (optional)
-          window.location.replace(url)
-        }
-      } catch (err) {
-        console.error(err)
-        toast.error('Something went wrong. Please try again.')
-      } finally {
-        setLoading(false)
-        setIsSubmitting(false)
-      }
-    })
-  }
+    setTimeout(() => {
+      setLoading(false)
+      setIsSubmitting(false)
+    }, 2000);
+  };
 
   return (
     <>
