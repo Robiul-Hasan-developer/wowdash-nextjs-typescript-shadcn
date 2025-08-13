@@ -1,6 +1,5 @@
-import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { CalendarDays, EllipsisVertical, Eye, SquarePen, SquarePlus, Trash } from 'lucide-react';
+import { EllipsisVertical, Eye, SquarePen, Trash } from 'lucide-react';
 import React, { useState } from 'react';
 import {
     DropdownMenu,
@@ -9,19 +8,8 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import toast from 'react-hot-toast';
-import {
-    Dialog,
-    DialogContent,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-    DialogClose,
-    DialogFooter,
-} from "@/components/ui/dialog"
-import { Label } from '@/components/ui/label';
-import { Input } from '@/components/ui/input';
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Textarea } from '@/components/ui/textarea';
+import AddEvent from './add-event';
+import { Card, CardContent } from "@/components/ui/card";
 
 interface CalendarEvent {
     id: number;
@@ -51,11 +39,11 @@ const CalendarSidebar: React.FC = () => {
 
 
     return (
-        <div className="card h-full p-0 border-0">
-            <div className="card-body">
+        <Card className="card h-full rounded-lg border-0">
+            <CardContent className="card-body p-0 flex flex-col justify-between gap-8">
+                <AddEvent />
 
-
-                <div className="mt-8 space-y-4">
+                <div className="space-y-4">
                     {
                         filteredItem.length > 0 ? (
                             <>
@@ -103,8 +91,9 @@ const CalendarSidebar: React.FC = () => {
                         )
                     }
                 </div>
-            </div>
-        </div>
+            </CardContent>
+        </Card>
+
     );
 };
 
