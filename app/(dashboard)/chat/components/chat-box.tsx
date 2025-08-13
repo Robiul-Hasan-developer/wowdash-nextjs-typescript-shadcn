@@ -213,7 +213,7 @@ const chatList: ChatItem[] = [
     },
 ];
 
-type ChatMessage = {
+type PrevChatMessage = {
     id: number;
     sender: "me" | "other";
     text: string;
@@ -221,7 +221,7 @@ type ChatMessage = {
     avatar?: StaticImageData | string;
 };
 
-const prevDataData: ChatMessage[] = [
+const prevDataData: PrevChatMessage[] = [
     {
         id: 1,
         sender: "other",
@@ -279,7 +279,7 @@ const prevDataData: ChatMessage[] = [
 
 const ChatBox = () => {
 
-    const [prevData, setPrevData] = useState<ChatMessage[]>(prevDataData);
+    const [prevData, setPrevData] = useState<PrevChatMessage[]>(prevDataData);
     const [message, setMessage] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -300,6 +300,7 @@ const ChatBox = () => {
         setIsSubmitting(true)
         if (!message.trim()) return;
 
+        // Current time 
         const now = new Date();
         let hours = now.getHours();
         const minutes = now.getMinutes();
@@ -312,9 +313,10 @@ const ChatBox = () => {
                 id: prev.length + 1,
                 sender: "me",
                 text: message,
-                time: `${hours}:${minutes.toString().padStart(2, "0")} ${ampm}`
-            }
+                time: `${hours}:${minutes.toString().padStart(2, "0")} ${ampm}`,
+            },
         ]);
+
         setMessage("")
         setTimeout(() => {
             setIsSubmitting(false)
