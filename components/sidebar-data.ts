@@ -9,7 +9,8 @@ import {
   UsersRound,
   StickyNote,
   Settings,
-  MessageCircleMore
+  MessageCircleMore,
+  CalendarDays
 } from "lucide-react";
 
 export const data = {
@@ -74,6 +75,11 @@ export const data = {
       title: "Chat",
       url: "/chat",
       icon: MessageCircleMore,
+    },
+    {
+      title: "Calendar",
+      url: "/calendar",
+      icon: CalendarDays,
     },
     {
       label: "UI Elements",

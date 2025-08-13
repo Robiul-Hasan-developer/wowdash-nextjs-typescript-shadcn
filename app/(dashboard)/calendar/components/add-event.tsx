@@ -107,9 +107,9 @@ const AddEvent = () => {
                                 <div className="col-span-12">
                                     <DialogFooter>
                                         <DialogClose asChild>
-                                            <Button variant="outline">Cancel</Button>
+                                            <Button variant="outline" className='h-[50px] px-8 border-red-600 hover:bg-red-100 hover:bg-red-600 text-red-600'>Cancel</Button>
                                         </DialogClose>
-                                        <Button type="submit">Save changes</Button>
+                                        <Button type="submit" className='h-[50px] px-8'>Save changes</Button>
                                     </DialogFooter>
                                 </div>
                             </div>
