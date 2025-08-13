@@ -1,4 +1,14 @@
-import React from 'react';
+
+"use client"
+
+import * as React from "react"
+import { CalendarIcon } from "lucide-react"
+import { Calendar } from "@/components/ui/calendar"
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from "@/components/ui/popover"
 import {
     Dialog,
     DialogContent,
@@ -14,9 +24,58 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { CalendarDays, SquarePlus } from 'lucide-react';
+import { SquarePlus } from 'lucide-react';
+
+function formatDate(date: Date | undefined) {
+    if (!date) {
+        return ""
+    }
+
+    return date.toLocaleDateString("en-US", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+    })
+}
+
+function isValidDate(date: Date | undefined) {
+    if (!date) {
+        return false
+    }
+    return !isNaN(date.getTime())
+}
 
 const AddEvent = () => {
+    const [open, setOpen] = React.useState(false)
+    const [date, setDate] = React.useState<Date | undefined>(
+        new Date("2025-06-01")
+    )
+    const [month, setMonth] = React.useState<Date | undefined>(date)
+    const [value, setValue] = React.useState(formatDate(date))
+
+    // End date states
+    const [openEnd, setOpenEnd] = React.useState(false)
+    const [endDate, setEndDate] = React.useState<Date | undefined>(new Date("2025-06-01"))
+    const [endMonth, setEndMonth] = React.useState<Date | undefined>(endDate)
+    const [endValue, setEndValue] = React.useState(formatDate(endDate))
+
+
+    // Data send to the event list 
+    const [name, setName] = React.useState("");
+    const [label, setLabel] = React.useState("");
+    const [description, setDescription] = React.useState("");
+
+    const handleModalFormSubmit = (event: any) => {
+        event.preventDefault();
+
+        console.log(name);
+        console.log(value);
+        console.log(endValue);
+        console.log(label);
+        console.log(description);
+    }
+
+
     return (
         <Dialog>
             <DialogTrigger asChild>
@@ -35,33 +94,143 @@ const AddEvent = () => {
                     </DialogHeader>
 
                     <div className="p-6">
-                        <form action="#">
+                        <form action="#" onSubmit={handleModalFormSubmit}>
                             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                                 <div className="col-span-12">
                                     <label htmlFor="title" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">Event Title : </label>
-                                    <Input type="text" id="title" className="form-control border-neutral-300 px-5 shadow-none w-full h-[46px] rounded-lg" placeholder="Enter Event Title" />
+                                    <Input type="text" id="title" onChange={(event) => setName(event.target.value)} className="form-control border-neutral-300 px-5 shadow-none w-full h-[46px] rounded-lg" placeholder="Enter Event Title" />
                                 </div>
+
+
                                 <div className="col-span-12 md:col-span-6">
-                                    <label htmlFor="startDate" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">Start Date</label>
-                                    <div className=" relative">
-                                        <Input className="form-control border-neutral-300 px-5 shadow-none w-full h-[46px] rounded-lg bg-white dark:bg-neutral-700" id="startDate" type="text" placeholder="03/12/2024, 10:30 AM" />
-                                        <span className="absolute end-0 top-1/2 -translate-y-1/2 me-3 line-height-1">
-                                            <CalendarDays width={20} className='text-neutral-500' />
-                                        </span>
+                                    <div>
+                                        <Label htmlFor="date" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">
+                                            Start Date
+                                        </Label>
+                                        <div className="relative flex gap-2">
+                                            <Input
+                                                id="date"
+                                                value={value}
+                                                placeholder="June 01, 2025"
+                                                className="form-control border-neutral-300 px-5 shadow-none w-full h-[46px] rounded-lg pe-10"
+                                                onChange={(e) => {
+                                                    const date = new Date(e.target.value)
+                                                    setValue(e.target.value)
+                                                    if (isValidDate(date)) {
+                                                        setDate(date)
+                                                        setMonth(date)
+                                                    }
+                                                }}
+                                                onKeyDown={(e) => {
+                                                    if (e.key === "ArrowDown") {
+                                                        e.preventDefault()
+                                                        setOpen(true)
+                                                    }
+                                                }}
+                                            />
+                                            <Popover open={open} onOpenChange={setOpen}>
+                                                <PopoverTrigger asChild>
+                                                    <Button
+                                                        id="date-picker"
+                                                        variant="ghost"
+                                                        className="absolute top-1/2 right-2 size-6 -translate-y-1/2"
+                                                    >
+                                                        <CalendarIcon className="size-3.5" />
+                                                        <span className="sr-only">Select date</span>
+                                                    </Button>
+                                                </PopoverTrigger>
+                                                <PopoverContent
+                                                    className="w-auto overflow-hidden p-0"
+                                                    align="end"
+                                                    alignOffset={-8}
+                                                    sideOffset={10}
+                                                >
+                                                    <Calendar
+                                                        mode="single"
+                                                        selected={date}
+                                                        captionLayout="dropdown"
+                                                        month={month}
+                                                        onMonthChange={setMonth}
+                                                        onSelect={(date) => {
+                                                            setDate(date)
+                                                            setValue(formatDate(date))
+                                                            setOpen(false)
+                                                        }}
+                                                    />
+                                                </PopoverContent>
+                                            </Popover>
+                                        </div>
                                     </div>
                                 </div>
+
                                 <div className="col-span-12 md:col-span-6">
-                                    <label htmlFor="endDate" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">End Date </label>
-                                    <div className=" relative">
-                                        <Input className="form-control border-neutral-300 px-5 shadow-none w-full h-[46px] rounded-lg bg-white dark:bg-neutral-700" id="endDate" type="text" placeholder="03/12/2024, 2:30 PM" />
-                                        <span className="absolute end-0 top-1/2 -translate-y-1/2 me-3 line-height-1">
-                                            <CalendarDays width={20} className='text-neutral-500' />
-                                        </span>
+                                    <div>
+                                        <Label htmlFor="dateEnd" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">
+                                            End Date
+                                        </Label>
+                                        <div className="relative flex gap-2">
+                                            <Input
+                                                id="dateEnd"
+                                                value={endValue}
+                                                placeholder="June 01, 2025"
+                                                className="form-control border-neutral-300 px-5 shadow-none w-full h-[46px] rounded-lg pe-10"
+                                                onChange={(e) => {
+                                                    const date = new Date(e.target.value)
+                                                    setEndValue(e.target.value)
+                                                    if (isValidDate(date)) {
+                                                        setEndDate(date)
+                                                        setEndMonth(date)
+                                                    }
+                                                }}
+                                                onKeyDown={(e) => {
+                                                    if (e.key === "ArrowDown") {
+                                                        e.preventDefault()
+                                                        setOpenEnd(true)
+                                                    }
+                                                }}
+                                            />
+                                            <Popover open={openEnd} onOpenChange={setOpenEnd}>
+                                                <PopoverTrigger asChild>
+                                                    <Button
+                                                        id="date-picker"
+                                                        variant="ghost"
+                                                        className="absolute top-1/2 right-2 size-6 -translate-y-1/2"
+                                                    >
+                                                        <CalendarIcon className="size-3.5" />
+                                                        <span className="sr-only">Select date</span>
+                                                    </Button>
+                                                </PopoverTrigger>
+                                                <PopoverContent
+                                                    className="w-auto overflow-hidden p-0"
+                                                    align="end"
+                                                    alignOffset={-8}
+                                                    sideOffset={10}
+                                                >
+                                                    <Calendar
+                                                        mode="single"
+                                                        selected={date}
+                                                        captionLayout="dropdown"
+                                                        month={endMonth}
+                                                        onMonthChange={setEndMonth}
+                                                        onSelect={(date) => {
+                                                            setEndDate(date)
+                                                            setEndValue(formatDate(date))
+                                                            setOpenEnd(false)
+                                                        }}
+                                                    />
+                                                </PopoverContent>
+                                            </Popover>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="col-span-12">
                                     <div className="">
-                                        <RadioGroup defaultValue="Personal" className='flex items-center flex-wrap gap-7'>
+                                        <RadioGroup
+                                            defaultValue="Personal"
+                                            value={label}
+                                            onValueChange={(val) => setLabel(val)}
+                                            className='flex items-center flex-wrap gap-7'
+                                        >
                                             <div className="flex items-center space-x-2">
                                                 <RadioGroupItem value="Personal" id="Personal" className='border border-neutral-400' />
                                                 <Label className="form-check-label line-height-1 font-medium text-secondary-light text-sm flex items-center gap-1" htmlFor="Personal">
@@ -102,7 +271,9 @@ const AddEvent = () => {
                                 </div>
                                 <div className="col-span-12">
                                     <label htmlFor="desc" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">Description</label>
-                                    <Textarea className="form-control border-neutral-300 px-5 shadow-none w-full h-[120px]" id='desc' placeholder='Write some text...' />
+                                    <Textarea className="form-control border-neutral-300 px-5 shadow-none w-full h-[120px]" id='desc'
+                                        onChange={(event) => setDescription(event.target.value)}
+                                        placeholder='Write some text...' />
                                 </div>
                                 <div className="col-span-12">
                                     <DialogFooter>

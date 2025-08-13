@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from '@/lib/utils';
 import { EllipsisVertical, Eye, SquarePen, Trash } from 'lucide-react';
 import React, { useState } from 'react';
@@ -41,6 +43,7 @@ const CalendarSidebar: React.FC = () => {
     return (
         <Card className="card h-full rounded-lg border-0">
             <CardContent className="card-body p-0 flex flex-col justify-between gap-8">
+
                 <AddEvent />
 
                 <div className="space-y-4">
