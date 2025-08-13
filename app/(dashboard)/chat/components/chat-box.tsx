@@ -1,6 +1,6 @@
-import React, { ChangeEvent, FormEvent, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useState } from "react";
-import { Ban, CircleX, LinkIcon, Phone, Search, Video, ImageIcon, Send, EllipsisVertical, User, Settings } from 'lucide-react';
+import { Ban, CircleX, LinkIcon, Phone, Video, ImageIcon, Send, EllipsisVertical, User, Settings } from 'lucide-react';
 import Image, { StaticImageData } from 'next/image';
 import {
     DropdownMenu,
@@ -8,6 +8,25 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
+} from "@/components/ui/tooltip"
+import { Label } from "@/components/ui/label"
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { Textarea } from '@/components/ui/textarea';
+import { cn } from '@/lib/utils';
+import { Input } from '@/components/ui/input';
+import {
+    Command,
+    CommandEmpty,
+    CommandGroup,
+    CommandInput,
+    CommandItem,
+    CommandList,
+} from "@/components/ui/command"
 
 import ChatImage1 from '@/public/assets/images/chat/1.png';
 import ChatImage2 from '@/public/assets/images/chat/2.png';
@@ -20,10 +39,6 @@ import ChatImage8 from '@/public/assets/images/chat/8.png';
 import ChatImage9 from '@/public/assets/images/chat/9.png';
 import ChatImage10 from '@/public/assets/images/chat/10.png';
 import ChatImage11 from '@/public/assets/images/chat/11.png';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { Textarea } from '@/components/ui/textarea';
-import { cn } from '@/lib/utils';
 
 type ChatItem = {
     id: number;
@@ -35,7 +50,7 @@ type ChatItem = {
     isActive?: boolean;
 };
 
-const chatList = [
+const chatList: ChatItem[] = [
     {
         id: 1,
         name: "Kathryn Murphy",
@@ -198,7 +213,6 @@ const chatList = [
     },
 ];
 
-
 type ChatMessage = {
     id: number;
     sender: "me" | "other";
@@ -336,45 +350,61 @@ const ChatBox = () => {
                             </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
-
                 </div>
 
-                <div className="chat-search w-full relative">
-                    <span className="icon absolute start-5 top-1/2 -translate-y-1/2 text-xl flex">
-                        <Search width={20} className='text-neutral-500 dark:text-neutral-100' />
-                    </span>
-                    <input type="text" className="border-0 border-t border-b border-neutral-200 dark:border-slate-600 bg-white dark:bg-slate-700 w-full focus:outline-none focus:ring-0 ps-12 pe-6 h-[42px]" autoComplete="off" placeholder="Search..." />
-                </div>
+                <Command>
+                    <div className="border-t border-neutral-200">
+                        <CommandInput placeholder="Search user..." className='' />
+                    </div>
+                    <CommandList className='max-h-[580px]'>
+                        <CommandEmpty>No user name found.</CommandEmpty>
+                        <CommandGroup className='p-0'>
+                            {chatList.map(({ id, name, message, time, unreadCount, imgSrc, isActive }) => (
+                                <CommandItem
+                                    key={id}
+                                    value={name}
+                                    className='p-0'
+                                >
+                                    <Link
+                                        key={id}
+                                        href="#"
+                                        className={`flex items-center justify-between gap-2 cursor-pointer hover:bg-neutral-50 dark:hover:bg-slate-700 px-6 py-2.5 w-full ${isActive ? "active" : ""}`}
+                                    >
+                                        <div className="flex items-center gap-2">
+                                            <div className="img">
+                                                <Image src={imgSrc} alt={`${name} image`} width={40} height={40} />
+                                            </div>
+                                            <div className="info">
+                                                <h6 className="text-sm mb-1 line-clamp-1">{name}</h6>
+                                                <p className="mb-0 text-xs line-clamp-1">{message}</p>
+                                            </div>
+                                        </div>
+                                        <div className="shrink-0 text-end">
+                                            <p className="mb-0 text-neutral-400 text-xs lh-1">{time}</p>
+                                            {unreadCount > 0 && (
+                                                <span className="w-4 h-4 text-xs rounded-full bg-yellow-500 text-white inline-flex items-center justify-center">
+                                                    {unreadCount}
+                                                </span>
+                                            )}
+                                        </div>
+                                    </Link>
+                                </CommandItem>
+                            ))}
+                        </CommandGroup>
+                    </CommandList>
+                </Command>
 
-                <div className="chat-all-list flex flex-col gap-1.5 mt-3 max-h-[580px] overflow-y-auto">
-                    {chatList.map(({ id, name, message, time, unreadCount, imgSrc, isActive }) => (
-                        <Link
-                            key={id}
-                            href="#"
-                            className={`flex items-center justify-between gap-2 cursor-pointer hover:bg-neutral-50 dark:hover:bg-slate-700 px-6 py-2.5 ${isActive ? "active" : ""
-                                }`}
-                        >
-                            <div className="flex items-center gap-2">
-                                <div className="img">
-                                    <Image src={imgSrc} alt={`${name} image`} width={40} height={40} />
-                                </div>
-                                <div className="info">
-                                    <h6 className="text-sm mb-1 line-clamp-1">{name}</h6>
-                                    <p className="mb-0 text-xs line-clamp-1">{message}</p>
-                                </div>
-                            </div>
-                            <div className="shrink-0 text-end">
-                                <p className="mb-0 text-neutral-400 text-xs lh-1">{time}</p>
-                                {unreadCount > 0 && (
-                                    <span className="w-4 h-4 text-xs rounded-full bg-yellow-500 text-white inline-flex items-center justify-center">
-                                        {unreadCount}
-                                    </span>
-                                )}
-                            </div>
-                        </Link>
-                    ))}
-                </div>
+
             </div>
+
+
+
+
+
+
+
+
+
 
 
             <div className=" col-span-12 md:col-span-8 xl:col-span-9">
@@ -390,12 +420,26 @@ const ChatBox = () => {
                             </div>
                         </div>
                         <div className="action inline-flex items-center gap-3">
-                            <button type="button" className="text-xl text-neutral-600 dark:text-neutral-200">
-                                <Phone width={20} className='text-neutral-500 dark:text-neutral-100' />
-                            </button>
-                            <button type="button" className="text-xl text-neutral-600 dark:text-neutral-200">
-                                <Video width={20} className='text-neutral-500 dark:text-neutral-100' />
-                            </button>
+                            <Tooltip>
+                                <TooltipTrigger asChild>
+                                    <Button type="button" className="text-xl text-neutral-600 dark:text-neutral-200 flex !p-0 bg-transparent hover:bg-transparent">
+                                        <Phone width={20} className='text-neutral-500 dark:text-neutral-100' />
+                                    </Button>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p>Audio Call</p>
+                                </TooltipContent>
+                            </Tooltip>
+                            <Tooltip>
+                                <TooltipTrigger asChild>
+                                    <Button type="button" className="text-xl text-neutral-600 dark:text-neutral-200 flex !p-0 bg-transparent hover:bg-transparent">
+                                        <Video width={20} className='text-neutral-500 dark:text-neutral-100' />
+                                    </Button>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p>Video Call</p>
+                                </TooltipContent>
+                            </Tooltip>
 
                             <DropdownMenu>
                                 <DropdownMenuTrigger>
@@ -477,25 +521,42 @@ const ChatBox = () => {
 
 
                         <div className="chat-message-box-action flex items-center gap-4">
-                            <Button
-                                type="button"
-                                className="text-xl flex !p-0 bg-transparent hover:bg-transparent"
-                            >
-                                <LinkIcon
-                                    width={20}
-                                    className="text-neutral-500 dark:text-neutral-100 hover:text-blue-600"
-                                />
-                            </Button>
+                            <Tooltip>
+                                <TooltipTrigger asChild>
+                                    <Label
+                                        htmlFor="addAttachment"
+                                        className="text-xl flex !p-0 bg-transparent hover:bg-transparent cursor-pointer"
+                                    >
+                                        <LinkIcon
+                                            width={20}
+                                            className="text-neutral-500 dark:text-neutral-100 hover:text-blue-600"
+                                        />
+                                        <Input type="file" id="addAttachment" hidden />
+                                    </Label>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p>Add Attachment</p>
+                                </TooltipContent>
+                            </Tooltip>
+                            <Tooltip>
+                                <TooltipTrigger asChild>
+                                    <Label
+                                        htmlFor="addImage"
+                                        className="text-xl flex !p-0 bg-transparent hover:bg-transparent cursor-pointer"
+                                    >
+                                        <ImageIcon
+                                            width={20}
+                                            className="text-neutral-500 dark:text-neutral-100 hover:text-blue-600"
+                                        />
+                                        <Input type="file" id="addImage" hidden />
+                                    </Label>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p>Add Image</p>
+                                </TooltipContent>
+                            </Tooltip>
 
-                            <Button
-                                type="button"
-                                className="text-xl flex !p-0 bg-transparent hover:bg-transparent"
-                            >
-                                <ImageIcon
-                                    width={20}
-                                    className="text-neutral-500 dark:text-neutral-100 hover:text-blue-600"
-                                />
-                            </Button>
+
 
                             <Button
                                 type="submit"
@@ -516,3 +577,18 @@ const ChatBox = () => {
 };
 
 export default ChatBox;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
