@@ -13,7 +13,7 @@ const metadata: Metadata = {
 };
 
 
-const EmailPage = () => {
+const CalendarPage = () => {
     return (
         <>
             <DashboardBreadcrumb title="Chat" text="Chat" />
@@ -35,4 +35,4 @@ const EmailPage = () => {
         </>
     );
 };
-export default EmailPage;
+export default CalendarPage;

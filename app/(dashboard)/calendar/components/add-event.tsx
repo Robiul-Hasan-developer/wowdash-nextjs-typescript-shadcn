@@ -324,11 +324,11 @@ const AddEvent: React.FC<AddEventProps> = ({ onAddEvent }) => {
                                         <DialogClose asChild>
                                             <Button variant="outline" className='h-[50px] px-8 border-red-600 hover:bg-red-100 hover:bg-red-600 text-red-600'>Cancel</Button>
                                         </DialogClose>
-                                        <Button type="submit" className='h-[50px] px-8'>
+                                        <Button type="submit" className='h-[50px] !px-8'>
                                             {
                                                 submitForm ? (
                                                     <>
-                                                        <Loader2 className="animate-spin h-4.5 w-4.5 mr-2" />
+                                                        <Loader2 className="animate-spin h-4.5 w-4.5" />
                                                         Saving...
                                                     </>
                                                 ) : (

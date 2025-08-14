@@ -32,7 +32,7 @@ const ViewEvent: React.FC<ViewEventProps> = ({ addOnViewEvent }) => {
 
                     <DialogHeader className=''>
                         <div className="py-4 px-6 border-b border-neutral-200 dark:border-neutral-600 flex items-center justify-between">
-                            <DialogTitle>View Details</DialogTitle>
+                            <DialogTitle>View Event</DialogTitle>
                         </div>
                     </DialogHeader>
 
