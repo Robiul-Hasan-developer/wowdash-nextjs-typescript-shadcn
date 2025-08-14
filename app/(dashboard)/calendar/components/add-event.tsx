@@ -2,7 +2,7 @@
 "use client"
 
 import * as React from "react"
-import { CalendarIcon } from "lucide-react"
+import { CalendarIcon, Loader2 } from "lucide-react"
 import { Calendar } from "@/components/ui/calendar"
 import {
     Popover,
@@ -25,6 +25,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { SquarePlus } from 'lucide-react';
+import toast from "react-hot-toast"
 
 function formatDate(date: Date | undefined) {
     if (!date) {
@@ -45,7 +46,11 @@ function isValidDate(date: Date | undefined) {
     return !isNaN(date.getTime())
 }
 
-const AddEvent = () => {
+interface AddEventProps {
+    onAddEvent: (event: any) => void;
+}
+
+const AddEvent: React.FC<AddEventProps> = ({ onAddEvent }) => {
     const [open, setOpen] = React.useState(false)
     const [date, setDate] = React.useState<Date | undefined>(
         new Date("2025-06-01")
@@ -60,30 +65,54 @@ const AddEvent = () => {
     const [endValue, setEndValue] = React.useState(formatDate(endDate))
 
 
+    const [dialogOpen, setDialogOpen] = React.useState(false);
+    const [submitForm, setSubmitForm] = React.useState(false);
+
     // Data send to the event list 
     const [name, setName] = React.useState("");
     const [label, setLabel] = React.useState("");
-    const [description, setDescription] = React.useState("");
+
 
     const handleModalFormSubmit = (event: any) => {
         event.preventDefault();
+        setSubmitForm(true);
 
-        console.log(name);
-        console.log(value);
-        console.log(endValue);
-        console.log(label);
-        console.log(description);
+        const newEvent = {
+            id: Date.now(),
+            title: name,
+            color: label === "Personal" ? "bg-green-500" :
+                label === "Business" ? "bg-blue-500" :
+                    label === "Family" ? "bg-yellow-500" :
+                        label === "Important" ? "bg-purple-500" :
+                            "bg-red-500",
+            time: `${value} - ${endValue}`
+        };
+
+        onAddEvent(newEvent);
+        setName("");
+        setLabel("");
+
+        setTimeout(() => {
+            setDialogOpen(false);
+            setSubmitForm(false);
+            toast.success(
+                <span>
+                    <strong>{name}</strong> <br /> Event created successfully
+                </span>
+            );
+        }, 500);
     }
 
 
     return (
-        <Dialog>
+        <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
             <DialogTrigger asChild>
                 <Button className={cn('h-11 justify-center w-full')}>
                     <SquarePlus width={22} />
                     Add Event
                 </Button>
             </DialogTrigger>
+
             <DialogContent className='!max-w-[800px] p-0'>
                 <div className="">
 
@@ -98,7 +127,7 @@ const AddEvent = () => {
                             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                                 <div className="col-span-12">
                                     <label htmlFor="title" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">Event Title : </label>
-                                    <Input type="text" id="title" onChange={(event) => setName(event.target.value)} className="form-control border-neutral-300 px-5 shadow-none w-full h-[46px] rounded-lg" placeholder="Enter Event Title" />
+                                    <Input type="text" id="title" onChange={(event) => setName(event.target.value)} className="form-control border-neutral-300 px-5 shadow-none w-full h-[46px] rounded-lg" placeholder="Enter Event Title" required />
                                 </div>
 
 
@@ -113,6 +142,7 @@ const AddEvent = () => {
                                                 value={value}
                                                 placeholder="June 01, 2025"
                                                 className="form-control border-neutral-300 px-5 shadow-none w-full h-[46px] rounded-lg pe-10"
+                                                required
                                                 onChange={(e) => {
                                                     const date = new Date(e.target.value)
                                                     setValue(e.target.value)
@@ -174,6 +204,7 @@ const AddEvent = () => {
                                                 value={endValue}
                                                 placeholder="June 01, 2025"
                                                 className="form-control border-neutral-300 px-5 shadow-none w-full h-[46px] rounded-lg pe-10"
+                                                required
                                                 onChange={(e) => {
                                                     const date = new Date(e.target.value)
                                                     setEndValue(e.target.value)
@@ -224,55 +255,57 @@ const AddEvent = () => {
                                     </div>
                                 </div>
                                 <div className="col-span-12">
-                                    <div className="">
-                                        <RadioGroup
-                                            defaultValue="Personal"
-                                            value={label}
-                                            onValueChange={(val) => setLabel(val)}
-                                            className='flex items-center flex-wrap gap-7'
-                                        >
-                                            <div className="flex items-center space-x-2">
-                                                <RadioGroupItem value="Personal" id="Personal" className='border border-neutral-400' />
-                                                <Label className="form-check-label line-height-1 font-medium text-secondary-light text-sm flex items-center gap-1" htmlFor="Personal">
-                                                    <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                                                    Personal
-                                                </Label>
-                                            </div>
-                                            <div className="flex items-center space-x-2">
-                                                <RadioGroupItem value="Business" id="Business" className='border border-neutral-400' />
-                                                <Label className="form-check-label line-height-1 font-medium text-secondary-light text-sm flex items-center gap-1" htmlFor="Business">
-                                                    <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                                                    Business
-                                                </Label>
-                                            </div>
-                                            <div className="flex items-center space-x-2">
-                                                <RadioGroupItem value="Family" id="Family" className='border border-neutral-400' />
-                                                <Label className="form-check-label line-height-1 font-medium text-secondary-light text-sm flex items-center gap-1" htmlFor="Family">
-                                                    <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
-                                                    Family
-                                                </Label>
-                                            </div>
-                                            <div className="flex items-center space-x-2">
-                                                <RadioGroupItem value="Important" id="Important" className='border border-neutral-400' />
-                                                <Label className="form-check-label line-height-1 font-medium text-secondary-light text-sm flex items-center gap-1" htmlFor="Important">
-                                                    <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
-                                                    Important
-                                                </Label>
-                                            </div>
-                                            <div className="flex items-center space-x-2">
-                                                <RadioGroupItem value="Holiday" id="Holiday" className='border border-neutral-400' />
-                                                <Label className="form-check-label line-height-1 font-medium text-secondary-light text-sm flex items-center gap-1" htmlFor="Holiday">
-                                                    <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                                                    Holiday
-                                                </Label>
-                                            </div>
-                                        </RadioGroup>
-                                    </div>
+                                    <RadioGroup
+                                        defaultValue="Personal"
+                                        value={label}
+                                        onValueChange={(val) => setLabel(val)}
+                                        className='flex items-center flex-wrap gap-7'
+                                    >
+                                        <div className="flex items-center space-x-2">
+                                            <RadioGroupItem value="Personal" id="Personal" className='border border-neutral-400'
+                                                required />
+                                            <Label className="form-check-label line-height-1 font-medium text-secondary-light text-sm flex items-center gap-1" htmlFor="Personal">
+                                                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                                                Personal
+                                            </Label>
+                                        </div>
+                                        <div className="flex items-center space-x-2">
+                                            <RadioGroupItem value="Business" id="Business" className='border border-neutral-400'
+                                                required />
+                                            <Label className="form-check-label line-height-1 font-medium text-secondary-light text-sm flex items-center gap-1" htmlFor="Business">
+                                                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                                Business
+                                            </Label>
+                                        </div>
+                                        <div className="flex items-center space-x-2">
+                                            <RadioGroupItem value="Family" id="Family" className='border border-neutral-400'
+                                                required />
+                                            <Label className="form-check-label line-height-1 font-medium text-secondary-light text-sm flex items-center gap-1" htmlFor="Family">
+                                                <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
+                                                Family
+                                            </Label>
+                                        </div>
+                                        <div className="flex items-center space-x-2">
+                                            <RadioGroupItem value="Important" id="Important" className='border border-neutral-400'
+                                                required />
+                                            <Label className="form-check-label line-height-1 font-medium text-secondary-light text-sm flex items-center gap-1" htmlFor="Important">
+                                                <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                                                Important
+                                            </Label>
+                                        </div>
+                                        <div className="flex items-center space-x-2">
+                                            <RadioGroupItem value="Holiday" id="Holiday" className='border border-neutral-400'
+                                                required />
+                                            <Label className="form-check-label line-height-1 font-medium text-secondary-light text-sm flex items-center gap-1" htmlFor="Holiday">
+                                                <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                                                Holiday
+                                            </Label>
+                                        </div>
+                                    </RadioGroup>
                                 </div>
                                 <div className="col-span-12">
                                     <label htmlFor="desc" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">Description</label>
                                     <Textarea className="form-control border-neutral-300 px-5 shadow-none w-full h-[120px]" id='desc'
-                                        onChange={(event) => setDescription(event.target.value)}
                                         placeholder='Write some text...' />
                                 </div>
                                 <div className="col-span-12">
@@ -280,7 +313,20 @@ const AddEvent = () => {
                                         <DialogClose asChild>
                                             <Button variant="outline" className='h-[50px] px-8 border-red-600 hover:bg-red-100 hover:bg-red-600 text-red-600'>Cancel</Button>
                                         </DialogClose>
-                                        <Button type="submit" className='h-[50px] px-8'>Save changes</Button>
+                                        <Button type="submit" className='h-[50px] px-8'>
+                                            {
+                                                submitForm ? (
+                                                    <>
+                                                        <Loader2 className="animate-spin h-4.5 w-4.5 mr-2" />
+                                                        Saving...
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        Save changes
+                                                    </>
+                                                )
+                                            }
+                                        </Button>
                                     </DialogFooter>
                                 </div>
                             </div>

@@ -30,27 +30,39 @@ const eventsData: CalendarEvent[] = [
 
 const CalendarSidebar: React.FC = () => {
 
-    // Delete Event Item
-    const [filteredItem, setFilteredItem] = useState<CalendarEvent[]>(eventsData);
+    const [events, setEvents] = useState<CalendarEvent[]>(eventsData);
 
-    const handleRemoveEventItem = (eventId: number) => {
-        const filteredEventData = filteredItem.filter((filterItem) => eventId !== filterItem.id);
-        setFilteredItem(filteredEventData);
-        toast.success("Event item deleted!")
+    // Bring Data From child component
+    const handleAddEvent = (newEvent: CalendarEvent) => {
+        setEvents((prevEvents) => [...prevEvents, newEvent]);
     }
 
+    const handleRemoveEventItem = (eventId: number) => {
+        const filteredEventData = events.filter((filterItem) => eventId !== filterItem.id);
+        setEvents(filteredEventData);
+
+        const deletedEvent = events.find((event) => event.id === eventId);
+        if (deletedEvent) {
+            toast.success(
+                <span>
+                    <strong>{deletedEvent.title}</strong> <br /> Event deleted successfully!
+                </span>
+            );
+        }
+    }
 
     return (
-        <Card className="card h-full rounded-lg border-0">
-            <CardContent className="card-body p-0 flex flex-col justify-between gap-8">
+        <Card className="card h-full rounded-lg border-0 !p-0">
+            <CardContent className="card-body p-0">
+                <div className="p-6">
+                    <AddEvent onAddEvent={handleAddEvent} />
+                </div>
 
-                <AddEvent />
-
-                <div className="space-y-4">
+                <div className="space-y-4 max-h-[1032px] overflow-y-auto p-6 pt-0">
                     {
-                        filteredItem.length > 0 ? (
+                        events.length > 0 ? (
                             <>
-                                {filteredItem.map((event) => (
+                                {events.map((event) => (
                                     <div
                                         key={event.id}
                                         className="event-item flex items-center justify-between gap-4 pb-4 border-b border-neutral-200 dark:border-neutral-600"
