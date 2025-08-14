@@ -50,6 +50,7 @@ interface AddEventProps {
     onAddEvent: (event: any) => void;
 }
 
+
 const AddEvent: React.FC<AddEventProps> = ({ onAddEvent }) => {
     const [open, setOpen] = React.useState(false)
     const [date, setDate] = React.useState<Date | undefined>(
@@ -71,10 +72,14 @@ const AddEvent: React.FC<AddEventProps> = ({ onAddEvent }) => {
     // Data send to the event list 
     const [name, setName] = React.useState("");
     const [label, setLabel] = React.useState("");
-
+    const [description, setDescription] = React.useState("");
 
     const handleModalFormSubmit = (event: any) => {
         event.preventDefault();
+        if (!label) {
+            toast.error("Please select an event type!");
+            return;
+        }
         setSubmitForm(true);
 
         const newEvent = {
@@ -85,12 +90,18 @@ const AddEvent: React.FC<AddEventProps> = ({ onAddEvent }) => {
                     label === "Family" ? "bg-yellow-500" :
                         label === "Important" ? "bg-purple-500" :
                             "bg-red-500",
-            time: `${value} - ${endValue}`
+            label: label,
+            startTime: value,
+            endTime: endValue,
+            description: description,
         };
 
         onAddEvent(newEvent);
         setName("");
+        setValue("");
+        setEndValue("");
         setLabel("");
+        setDescription("");
 
         setTimeout(() => {
             setDialogOpen(false);
@@ -127,7 +138,7 @@ const AddEvent: React.FC<AddEventProps> = ({ onAddEvent }) => {
                             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                                 <div className="col-span-12">
                                     <label htmlFor="title" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">Event Title : </label>
-                                    <Input type="text" id="title" onChange={(event) => setName(event.target.value)} className="form-control border-neutral-300 px-5 shadow-none w-full h-[46px] rounded-lg" placeholder="Enter Event Title" required />
+                                    <Input type="text" id="title" value={name} onChange={(event) => setName(event.target.value)} className="form-control border-neutral-300 px-5 shadow-none w-full h-[46px] rounded-lg" placeholder="Enter Event Title" required />
                                 </div>
 
 
@@ -305,7 +316,7 @@ const AddEvent: React.FC<AddEventProps> = ({ onAddEvent }) => {
                                 </div>
                                 <div className="col-span-12">
                                     <label htmlFor="desc" className="inline-block font-semibold text-neutral-600 dark:text-neutral-200 text-sm mb-2">Description</label>
-                                    <Textarea className="form-control border-neutral-300 px-5 shadow-none w-full h-[120px]" id='desc'
+                                    <Textarea className="form-control border-neutral-300 px-5 shadow-none w-full h-[120px]" value={description} onChange={(event) => setDescription(event.target.value)} id='desc'
                                         placeholder='Write some text...' />
                                 </div>
                                 <div className="col-span-12">

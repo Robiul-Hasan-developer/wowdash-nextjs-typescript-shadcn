@@ -12,21 +12,26 @@ import {
 import toast from 'react-hot-toast';
 import AddEvent from './add-event';
 import { Card, CardContent } from "@/components/ui/card";
+import ViewEvent from './view-event';
 
 interface CalendarEvent {
     id: number;
     title: string;
+    label: string;
     color: string;
-    time: string;
+    startTime: string;
+    endTime: string;
+    description: string;
 }
 
 const eventsData: CalendarEvent[] = [
-    { id: 1, title: 'Design Conference', color: 'bg-yellow-500', time: 'Today, 10:30 PM - 02:30 AM' },
-    { id: 2, title: 'Weekend Festival', color: 'bg-green-600', time: 'Today, 10:30 PM - 02:30 AM' },
-    { id: 3, title: 'Design Conference', color: 'bg-cyan-600', time: 'Today, 10:30 PM - 02:30 AM' },
-    { id: 4, title: 'Ultra Europe 2019', color: 'bg-yellow-500', time: 'Today, 10:30 PM - 02:30 AM' },
-    { id: 5, title: 'Design Conference', color: 'bg-violet-600', time: 'Today, 10:30 PM - 02:30 AM' },
+    { id: 1, title: 'Design Conference', label: 'Holiday', color: 'bg-red-500', startTime: 'Today, 09:00 AM', endTime: "11:00 AM", description: "Discussing new UI/UX trends for Q3" },
+    { id: 2, title: 'Weekend Festival', label: 'Personal', color: 'bg-green-600', startTime: 'Today, 01:30 PM', endTime: "04:00 PM", description: "Local music and art festival with friends" },
+    { id: 3, title: 'Design Conference', label: 'Business', color: 'bg-cyan-600', startTime: 'Today, 10:15 AM', endTime: "12:45 PM", description: "Team meeting to finalize product roadmap" },
+    { id: 4, title: 'Ultra Europe 2019', label: 'Family', color: 'bg-yellow-500', startTime: 'Today, 03:00 PM', endTime: "05:30 PM", description: "Family gathering and weekend planning" },
+    { id: 5, title: 'Design Conference', label: 'Important', color: 'bg-violet-600', startTime: 'Today, 06:00 PM', endTime: "08:15 PM", description: "Presentation prep for client pitch" },
 ];
+
 
 const CalendarSidebar: React.FC = () => {
 
@@ -69,8 +74,12 @@ const CalendarSidebar: React.FC = () => {
                                     >
                                         <div>
                                             <div className="flex items-center gap-2.5">
-                                                <span className={cn('w-3 h-3 rounded-full font-medium', event.color)}></span>
-                                                <span className="text-secondary-light">{event.time}</span>
+                                                <span className={cn('w-3 h-3 rounded-full font-medium', event.color)}>  </span>
+                                                <div className="flex items-center gap-2">
+                                                    <span className="text-gray-800 dark:text-gray-200">{event.startTime}</span>
+                                                    <span>-</span>
+                                                    <span className="text-gray-800 dark:text-gray-200">{event.endTime}</span>
+                                                </div>
                                             </div>
                                             <span className="text-neutral-600 dark:text-neutral-200 font-semibold text-base mt-1.5">
                                                 {event.title}
@@ -82,9 +91,8 @@ const CalendarSidebar: React.FC = () => {
                                                 <EllipsisVertical width={18} />
                                             </DropdownMenuTrigger>
                                             <DropdownMenuContent>
-                                                <DropdownMenuItem className="cursor-pointer">
-                                                    <Eye className="text-neutral-600 dark:text-white" />
-                                                    View
+                                                <DropdownMenuItem className="cursor-pointer" asChild>
+                                                    <ViewEvent addOnViewEvent={event} />
                                                 </DropdownMenuItem>
                                                 <DropdownMenuItem className="cursor-pointer">
                                                     <SquarePen className="text-neutral-600 dark:text-white" />
