@@ -108,7 +108,7 @@ const AddEvent: React.FC<AddEventProps> = ({ onAddEvent }) => {
             setSubmitForm(false);
             toast.success(
                 <span>
-                    <strong>{name}</strong> <br /> Event created successfully
+                    <strong>{name}</strong> <br /> Event added successfully!
                 </span>
             );
         }, 500);

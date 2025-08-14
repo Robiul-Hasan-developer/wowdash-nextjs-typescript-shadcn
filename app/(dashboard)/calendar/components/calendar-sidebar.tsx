@@ -177,11 +177,6 @@ const CalendarSidebar: React.FC = () => {
     // Add new event
     const handleAddEvent = (newEvent: CalendarEvent) => {
         setEvents((prev) => [...prev, newEvent]);
-        toast.success(
-            <span>
-                <strong>{newEvent.title}</strong> <br /> Event added successfully!
-            </span>
-        );
     };
 
     // Remove event
@@ -195,7 +190,6 @@ const CalendarSidebar: React.FC = () => {
         setEvents((prev) =>
             prev.map((e) => (e.id === updatedEvent.id ? updatedEvent : e))
         );
-        toast.success("Event updated successfully!");
     };
 
     return (
