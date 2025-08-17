@@ -1,16 +1,16 @@
 import {
+  Boxes,
+  CalendarDays,
+  ChartPie,
+  Component,
   House,
   Mail,
-  ShieldCheck,
-  Component,
-  ChartPie,
-  Boxes,
-  Server,
-  UsersRound,
-  StickyNote,
-  Settings,
   MessageCircleMore,
-  CalendarDays
+  Server,
+  Settings,
+  ShieldCheck,
+  StickyNote,
+  UsersRound,
 } from "lucide-react";
 
 export const data = {
@@ -60,6 +60,11 @@ export const data = {
           title: "Medical",
           url: "/medical",
           circleColor: "bg-red-600",
+        },
+        {
+          title: "Analytics",
+          url: "/analytics",
+          circleColor: "bg-violet-600",
         },
       ],
     },

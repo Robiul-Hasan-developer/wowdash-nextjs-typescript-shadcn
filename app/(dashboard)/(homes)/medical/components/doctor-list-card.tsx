@@ -1,13 +1,12 @@
-import React from 'react';
-import { Card, CardContent } from "@/components/ui/card";
 import CommonLink from "@/components/shared/common-link";
-import Image from 'next/image';
+import { Card, CardContent } from "@/components/ui/card";
 import DoctorImage1 from '@/public/assets/images/home-eight/doctor-img1.png';
 import DoctorImage2 from '@/public/assets/images/home-eight/doctor-img2.png';
 import DoctorImage3 from '@/public/assets/images/home-eight/doctor-img3.png';
 import DoctorImage4 from '@/public/assets/images/home-eight/doctor-img4.png';
-import DoctorImage6 from '@/public/assets/images/home-eight/doctor-img6.png';
 import DoctorImage5 from '@/public/assets/images/home-eight/doctor-img5.png';
+import DoctorImage6 from '@/public/assets/images/home-eight/doctor-img6.png';
+import Image from 'next/image';
 
 const DoctorListCard = () => {
     return (
