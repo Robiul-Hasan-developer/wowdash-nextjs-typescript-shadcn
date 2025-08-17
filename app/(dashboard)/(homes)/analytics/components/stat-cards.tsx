@@ -64,7 +64,7 @@ const StatCards = () => {
                             >
                                 <Icon size={20} />
                             </span>
-                            <span className="text-neutral-700 block">{card.title}</span>
+                            <span className="text-neutral-700 block dark:text-neutral-100">{card.title}</span>
                             <h6 className="mb-0 mt-1">{card.value}</h6>
                         </div>
                     </div>

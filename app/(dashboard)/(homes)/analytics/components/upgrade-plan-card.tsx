@@ -23,7 +23,7 @@ const UpgradePlanCard = () => {
                                 <p className="text-white mb-4">Your free trial expired in 7 days</p>
                                 <Link
                                     href="#"
-                                    className="w-full py-2 px-6 rounded-[50rem] bg-gradient-to-r from-[#CBFFF9] to-[#FFEEB1] text-sm justify-center dark:text-neutral-900 transform transition-transform duration-300 hover:scale-110 inline-flex items-center justify-center"
+                                    className="w-full py-2 px-6 rounded-[50rem] bg-gradient-to-r from-[#CBFFF9] to-[#FFEEB1] text-sm justify-center dark:text-neutral-900 transform transition-transform duration-300 hover:scale-105 inline-flex items-center justify-center"
                                 >
                                     Upgrade Now
                                 </Link>
