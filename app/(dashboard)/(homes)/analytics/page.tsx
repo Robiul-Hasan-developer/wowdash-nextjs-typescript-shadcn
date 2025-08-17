@@ -4,7 +4,9 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import AverageDailySalesCard from './components/average-daily-sales-card';
 import RevenueStatisticCard from './components/revenue-statistic-card';
+import SalesByCountriesCard from './components/sales-by-countries-card';
 import SupportTrackerCard from './components/support-tracker-card';
+import TransactionsCard from './components/transactions-card';
 import UpgradePlanCard from './components/upgrade-plan-card';
 
 export const metadata: Metadata = {
@@ -43,6 +45,18 @@ const Analytics = () => {
                 <div className="col-span-12 xl:col-span-6 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <AverageDailySalesCard />
+                    </Suspense>
+                </div>
+
+                <div className="col-span-12 2xl:col-span-4">
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <TransactionsCard />
+                    </Suspense>
+                </div>
+
+                <div className="col-span-12 2xl:col-span-6">
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <SalesByCountriesCard />
                     </Suspense>
                 </div>
 

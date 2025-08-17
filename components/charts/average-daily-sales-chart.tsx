@@ -89,7 +89,7 @@ const AverageDailySalesChart = () => {
             options={chartOptions}
             series={chartSeries}
             type="bar"
-            height={235}
+            height={190}
         />
     );
 };
