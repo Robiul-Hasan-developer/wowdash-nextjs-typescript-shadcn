@@ -2,6 +2,7 @@ import DashboardBreadcrumb from '@/components/layout/dashboard-breadcrumb';
 import LoadingSkeleton from '@/components/loading-skeleton';
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import AverageDailySalesCard from './components/average-daily-sales-card';
 import RevenueStatisticCard from './components/revenue-statistic-card';
 import SupportTrackerCard from './components/support-tracker-card';
 import UpgradePlanCard from './components/upgrade-plan-card';
@@ -36,6 +37,12 @@ const Analytics = () => {
                 <div className="col-span-12 xl:col-span-6 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <SupportTrackerCard />
+                    </Suspense>
+                </div>
+
+                <div className="col-span-12 xl:col-span-6 2xl:col-span-4">
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <AverageDailySalesCard />
                     </Suspense>
                 </div>
 
