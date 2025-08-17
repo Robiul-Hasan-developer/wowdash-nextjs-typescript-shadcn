@@ -80,12 +80,12 @@ const TransactionsCard = () => {
                                 </div>
                                 <div className="flex-grow">
                                     <h6 className="text-base mb-0 font-normal">{tx.title}</h6>
-                                    <span className="text-sm text-neutral-600 font-normal">
+                                    <span className="text-sm text-neutral-600  dark:text-neutral-200 font-normal">
                                         {tx.subtitle}
                                     </span>
                                 </div>
                             </div>
-                            <span className="text-neutral-600 text-base font-medium">
+                            <span className="text-neutral-600  dark:text-neutral-200 text-base font-medium">
                                 {tx.amount}
                             </span>
                         </div>

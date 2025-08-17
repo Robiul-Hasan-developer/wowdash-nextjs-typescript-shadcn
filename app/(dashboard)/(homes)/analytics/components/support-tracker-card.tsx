@@ -26,7 +26,7 @@ const SupportTrackerCard = () => {
                             </div>
                             <div className="flex-grow-1">
                                 <h6 className="text-base mb-0 font-bold">172</h6>
-                                <span className="text-sm text-neutral-600 font-normal">New Tickets </span>
+                                <span className="text-sm text-neutral-600 dark:text-neutral-200 font-normal">New Tickets </span>
                             </div>
                         </div>
                         <div className="flex items-center gap-4">
@@ -35,7 +35,7 @@ const SupportTrackerCard = () => {
                             </div>
                             <div className="flex-grow-1">
                                 <h6 className="text-base mb-0 font-bold">172</h6>
-                                <span className="text-sm text-neutral-600 font-normal">Open Tickets</span>
+                                <span className="text-sm text-neutral-600 dark:text-neutral-200 font-normal">Open Tickets</span>
                             </div>
                         </div>
                         <div className="flex items-center gap-4">
@@ -44,16 +44,16 @@ const SupportTrackerCard = () => {
                             </div>
                             <div className="flex-grow-1">
                                 <h6 className="text-base mb-0 font-bold">172</h6>
-                                <span className="text-sm text-neutral-600 font-normal">Response Time</span>
+                                <span className="text-sm text-neutral-600 dark:text-neutral-200 font-normal">Response Time</span>
                             </div>
                         </div>
                     </div>
 
                     <div className="relative">
                         <SupportTrackerChart />
-                        <div className="text-center max-w-[135px] max-h-[135px] bg-yellow-100 rounded-[50%] p-4 aspect-ratio-1 flex flex-col justify-center items-center absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 aspect-[1] rtl:translate-x-1/2">
+                        <div className="text-center max-w-[135px] max-h-[135px] bg-yellow-500/15 rounded-[50%] p-4 aspect-ratio-1 flex flex-col justify-center items-center absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 aspect-[1] rtl:translate-x-1/2">
                             <h6 className="font-bold">120</h6>
-                            <span className="text-neutral-600">Total Tickets</span>
+                            <span className="text-neutral-600 dark:text-neutral-200">Total Tickets</span>
                         </div>
                     </div>
                 </div>
