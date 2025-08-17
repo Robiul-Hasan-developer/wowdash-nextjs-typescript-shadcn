@@ -1,20 +1,20 @@
 "use client";
 
-import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import React, { useState } from "react";
 import toast from "react-hot-toast";
 
-import AddEvent from "./add-event";
-import ViewEvent from "./view-event";
-import { EllipsisVertical, Trash } from "lucide-react";
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { EllipsisVertical, Trash } from "lucide-react";
+import AddEvent from "./add-event";
 import EditEvent from "./edit-event";
+import ViewEvent from "./view-event";
 
 export interface CalendarEvent {
     id: number;
@@ -63,7 +63,7 @@ const CalendarSidebar: React.FC = () => {
                     <AddEvent onAddEvent={handleAddEvent} />
                 </div>
 
-                <div className="space-y-4 max-h-[600px] overflow-y-auto p-6 pt-0">
+                <div className="space-y-4 max-h-[700px] overflow-y-auto p-6 pt-0">
                     {events.length > 0 ? (
                         events.map((event) => (
                             <div
