@@ -3,6 +3,7 @@ import LoadingSkeleton from '@/components/loading-skeleton';
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import RevenueStatisticCard from './components/revenue-statistic-card';
+import SupportTrackerCard from './components/support-tracker-card';
 import UpgradePlanCard from './components/upgrade-plan-card';
 
 export const metadata: Metadata = {
@@ -29,6 +30,12 @@ const Analytics = () => {
                 <div className="col-span-12 2xl:col-span-6">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <RevenueStatisticCard />
+                    </Suspense>
+                </div>
+
+                <div className="col-span-12 xl:col-span-6 2xl:col-span-4">
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <SupportTrackerCard />
                     </Suspense>
                 </div>
 

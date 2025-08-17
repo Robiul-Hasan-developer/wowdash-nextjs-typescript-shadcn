@@ -27,6 +27,9 @@ const RevenueStatisticAreaChart: React.FC<RevenueChartProps> = ({
             height: height,
             toolbar: { show: false },
         },
+        dataLabels: {
+            enabled: false,
+        },
         stroke: {
             curve: "smooth",
             width: 3,
