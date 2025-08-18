@@ -1,17 +1,16 @@
-import type { Metadata } from "next";
-import React from "react";
-import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import { Suspense } from "react";
-import LoadingSkeleton from "@/components/loading-skeleton";
 import StatCards from "@/app/(dashboard)/(homes)/medical/components/stat-cards";
+import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
+import LoadingSkeleton from "@/components/loading-skeleton";
+import type { Metadata } from "next";
+import { Suspense } from "react";
+import AvailableTreatmentsCard from "./components/available-treatments-card";
+import DoctorListCard from "./components/doctor-list-card";
 import EarningStatisticCard from "./components/earning-statistic-card";
+import HealthReportsDocumentCard from "./components/health-reports-document-card";
+import LatestAppointmentsCard from "./components/latest-appointments-card";
 import PatientVisitedDepartment from "./components/patient-visited-department";
 import PatientVisitedGender from "./components/patient-visited-gender";
-import DoctorListCard from "./components/doctor-list-card";
-import LatestAppointmentsCard from "./components/latest-appointments-card";
 import TotalIncomeCard from "./components/total-income-card";
-import AvailableTreatmentsCard from "./components/available-treatments-card";
-import HealthReportsDocumentCard from "./components/health-reports-document-card";
 
 const metadata: Metadata = {
     title: "Medical Dashboard | WowDash Admin Panel",
@@ -22,7 +21,7 @@ const metadata: Metadata = {
 const MedicalPage = () => {
     return (
         <>
-            <DashboardBreadcrumb title="Dashboard" text="Medical" />
+            <DashboardBreadcrumb title="Medical" text="Medical" />
 
             <div className="grid grid-cols-1 2xl:grid-cols-12 gap-6">
 

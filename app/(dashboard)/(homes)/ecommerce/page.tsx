@@ -1,17 +1,16 @@
-import type { Metadata } from "next";
-import React from 'react';
-import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import RevenueReportCard from '@/app/(dashboard)/(homes)/ecommerce/component/revenue-report-card';
 import CustomersStatisticsCard from '@/app/(dashboard)/(homes)/ecommerce/component/customers-statistics-card';
-import RecentOrdersCard from '@/app/(dashboard)/(homes)/ecommerce/component/recent-orders-card';
-import TransactionsCard from '@/app/(dashboard)/(homes)/ecommerce/component/transactions-card';
 import DailySalesCard from '@/app/(dashboard)/(homes)/ecommerce/component/daily-sales-card';
 import DistributionMapsCard from '@/app/(dashboard)/(homes)/ecommerce/component/distribution-maps-card';
+import RecentOrdersCard from '@/app/(dashboard)/(homes)/ecommerce/component/recent-orders-card';
+import RevenueReportCard from '@/app/(dashboard)/(homes)/ecommerce/component/revenue-report-card';
+import StockReportCard from '@/app/(dashboard)/(homes)/ecommerce/component/stock-report-card';
 import TopCustomersCard from '@/app/(dashboard)/(homes)/ecommerce/component/top-customers-card';
 import TopSellingProductCard from '@/app/(dashboard)/(homes)/ecommerce/component/top-selling-product-card';
-import StockReportCard from '@/app/(dashboard)/(homes)/ecommerce/component/stock-report-card';
-import { Suspense } from "react";
+import TransactionsCard from '@/app/(dashboard)/(homes)/ecommerce/component/transactions-card';
+import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import LoadingSkeleton from "@/components/loading-skeleton";
+import type { Metadata } from "next";
+import { Suspense } from "react";
 
 const metadata: Metadata = {
   title: "E-commerce Dashboard | WowDash Admin Panel",
@@ -23,7 +22,7 @@ const metadata: Metadata = {
 const EcommercePage = () => {
   return (
     <>
-      <DashboardBreadcrumb title="Dashboard" text="eCommerce" />
+      <DashboardBreadcrumb title="eCommerce" text="eCommerce" />
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
 

@@ -1,16 +1,15 @@
-import type { Metadata } from "next";
-import React from "react";
-import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import { Suspense } from "react";
-import LoadingSkeleton from "@/components/loading-skeleton";
 import NftPromoBanner from "@/app/(dashboard)/(homes)/nft/components/nft-promo-banner";
+import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
+import LoadingSkeleton from "@/components/loading-skeleton";
+import type { Metadata } from "next";
+import { Suspense } from "react";
+import EthPriceCard from "./components/eth-price-card";
+import FeaturedCreatorsCard from "./components/featured-creators-card";
+import RecentBidCard from "./components/recent-bid-card";
+import StatisticsCard from "./components/statistics-card";
+import TopCreatorsCard from "./components/top-creators-card";
 import TrendingBidWidgets from "./components/trending-bid-widgets";
 import TrendingNftCard from "./components/trending-nft-card";
-import RecentBidCard from "./components/recent-bid-card";
-import EthPriceCard from "./components/eth-price-card";
-import StatisticsCard from "./components/statistics-card";
-import FeaturedCreatorsCard from "./components/featured-creators-card";
-import TopCreatorsCard from "./components/top-creators-card";
 
 const metadata: Metadata = {
     title: "LMS Dashboard | WowDash Admin Panel",
@@ -21,7 +20,7 @@ const metadata: Metadata = {
 const InvestmentPage = () => {
     return (
         <>
-            <DashboardBreadcrumb title="Dashboard" text="NFT & Gaming" />
+            <DashboardBreadcrumb title="NFT & Gaming" text="NFT & Gaming" />
 
             <div className="gap-6 grid grid-cols-1 2xl:grid-cols-12">
                 <div className="col-span-12 2xl:col-span-8">

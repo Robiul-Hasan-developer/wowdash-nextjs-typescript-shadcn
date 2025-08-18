@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
-import { Suspense } from "react";
-import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import StatCard from "@/app/(dashboard)/(homes)/dashboard/components/stat-card";
+import GenerateContentCard from "@/app/(dashboard)/(homes)/dashboard/components/generate-content-card";
 import SalesStaticCard from "@/app/(dashboard)/(homes)/dashboard/components/sales-static-card";
+import StatCard from "@/app/(dashboard)/(homes)/dashboard/components/stat-card";
+import TabsWithTableCard from "@/app/(dashboard)/(homes)/dashboard/components/tabs-with-table-card";
+import TopCountriesCard from "@/app/(dashboard)/(homes)/dashboard/components/top-countries-card";
+import TopPerformerCard from "@/app/(dashboard)/(homes)/dashboard/components/top-performer-card";
 import TotalSubscriberCard from "@/app/(dashboard)/(homes)/dashboard/components/total-subscriber-card";
 import UserOverviewCard from "@/app/(dashboard)/(homes)/dashboard/components/user-overview-card";
-import TabsWithTableCard from "@/app/(dashboard)/(homes)/dashboard/components/tabs-with-table-card";
-import TopPerformerCard from "@/app/(dashboard)/(homes)/dashboard/components/top-performer-card";
-import GenerateContentCard from "@/app/(dashboard)/(homes)/dashboard/components/generate-content-card";
-import TopCountriesCard from "@/app/(dashboard)/(homes)/dashboard/components/top-countries-card";
+import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import LoadingSkeleton from "@/components/loading-skeleton";
+import type { Metadata } from "next";
+import { Suspense } from "react";
 
 const metadata: Metadata = {
   title: "AI Dashboard | WowDash Admin Panel",
@@ -21,7 +21,7 @@ const metadata: Metadata = {
 export default async function DashboardPage() {
   return (
     <>
-      <DashboardBreadcrumb title="Dashboard" text="AI" />
+      <DashboardBreadcrumb title="AI" text="AI" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-6">
         <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>

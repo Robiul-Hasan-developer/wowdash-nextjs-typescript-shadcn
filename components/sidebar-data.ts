@@ -66,6 +66,11 @@ export const data = {
           url: "/analytics",
           circleColor: "bg-violet-600",
         },
+        {
+          title: "POS & Inventory",
+          url: "/inventory",
+          circleColor: "bg-yellow-500",
+        },
       ],
     },
     {
@@ -219,7 +224,7 @@ export const data = {
         {
           title: "Column Chart",
           url: "/column-chart",
-          circleColor: "bg-yellow-600",
+          circleColor: "bg-yellow-500",
         },
         {
           title: "Pie Chart",
@@ -260,7 +265,7 @@ export const data = {
         {
           title: "Users Grid",
           url: "/users-grid",
-          circleColor: "bg-yellow-600",
+          circleColor: "bg-yellow-500",
         },
         {
           title: "View Profile",

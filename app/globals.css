@@ -320,10 +320,11 @@
   .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
     @apply dark:bg-slate-600 dark:border-slate-500;
   }
-  
-   .label--20-px .apexcharts-text.apexcharts-yaxis-label,  .label--20-px .apexcharts-text.apexcharts-xaxis-label {
+
+  .label--20-px .apexcharts-text.apexcharts-yaxis-label,
+  .label--20-px .apexcharts-text.apexcharts-xaxis-label {
     transform: translateX(-20px);
-}
+  }
   /* ======================================== Apexchart css End ======================================== */
 }
 
@@ -397,4 +398,33 @@
   }
 }
 /* Upload Image Css End */
+
+.left-line::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 44px;
+  background-color: #00b8db;
+  border-radius: 100px;
+  left: -1px;
+  top: 24px;
+  box-shadow: 2px 1px 7px 0px #00b7db9c;
+}
+
+.line-bg-cyan::before {
+  background-color: #00b8db;
+  box-shadow: 2px 1px 7px 0px #00b7db94;
+}
+.line-bg-violet::before {
+  background-color: #7f22fe;
+  box-shadow: 2px 1px 7px 0px #7e22fe97;
+}
+.line-bg-green::before {
+  background-color: #00a63e;
+  box-shadow: 2px 1px 7px 0px #00a63da0;
+}
+.line-bg-red::before {
+  background-color: #e7000b;
+  box-shadow: 2px 1px 7px 0px #e7000cb0;
+}
 /* ======================================== Custom Classes css End ======================================== */

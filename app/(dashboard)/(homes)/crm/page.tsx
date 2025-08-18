@@ -1,16 +1,15 @@
-import type { Metadata } from "next";
-import DashboardBreadcrumb from '@/components/layout/dashboard-breadcrumb';
-import React from 'react';
-import StatsCard from '@/app/(dashboard)/(homes)/crm/components/stats-card';
-import RevenueGrowthCard from '@/app/(dashboard)/(homes)/crm/components/revenue-growth-card';
-import EarningStatisticsCard from '@/app/(dashboard)/(homes)/crm/components/earning-statistics-card';
 import CampaignCard from '@/app/(dashboard)/(homes)/crm/components/campaign-card';
-import CustomerOverviewCard from '@/app/(dashboard)/(homes)/crm/components/customer-overview-card';
 import ClientPaymentStatusCard from '@/app/(dashboard)/(homes)/crm/components/client-payment-status-card';
 import CountriesStatusCard from '@/app/(dashboard)/(homes)/crm/components/countries-status-card';
-import TopPerformerCard from '@/app/(dashboard)/(homes)/crm/components/top-performer-card';
+import CustomerOverviewCard from '@/app/(dashboard)/(homes)/crm/components/customer-overview-card';
+import EarningStatisticsCard from '@/app/(dashboard)/(homes)/crm/components/earning-statistics-card';
 import LastTransactionCard from '@/app/(dashboard)/(homes)/crm/components/last-transaction-card';
+import RevenueGrowthCard from '@/app/(dashboard)/(homes)/crm/components/revenue-growth-card';
+import StatsCard from '@/app/(dashboard)/(homes)/crm/components/stats-card';
 import TodoListRecentCard from '@/app/(dashboard)/(homes)/crm/components/todo-list-recent-card';
+import TopPerformerCard from '@/app/(dashboard)/(homes)/crm/components/top-performer-card';
+import DashboardBreadcrumb from '@/components/layout/dashboard-breadcrumb';
+import type { Metadata } from "next";
 
 const metadata: Metadata = {
   title: "CRM Dashboard | WowDash Admin Panel",
@@ -22,7 +21,7 @@ const metadata: Metadata = {
 const crmPage = () => {
   return (
     <>
-      <DashboardBreadcrumb title="Dashboard" text="CRM" />
+      <DashboardBreadcrumb title="CRM" text="CRM" />
 
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6">

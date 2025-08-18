@@ -1,15 +1,14 @@
-import type { Metadata } from "next";
-import React from "react";
-import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import { Suspense } from "react";
-import LoadingSkeleton from "@/components/loading-skeleton";
-import TrafficSourceCard from "@/app/(dashboard)/(homes)/lms/components/traffic-source-card";
-import WidgetsAverageChart from "@/app/(dashboard)/(homes)/lms/components/widgets-average-chart";
+import CourseActivityCard from "@/app/(dashboard)/(homes)/lms/components/course-activity-card";
+import CoursesCard from "@/app/(dashboard)/(homes)/lms/components/courses-card";
+import StudentProgressCard from "@/app/(dashboard)/(homes)/lms/components/student-progress-card";
 import TopCategoriesCard from "@/app/(dashboard)/(homes)/lms/components/top-categories-card";
 import TopInstructorsCard from "@/app/(dashboard)/(homes)/lms/components/top-instructors-card";
-import StudentProgressCard from "@/app/(dashboard)/(homes)/lms/components/student-progress-card";
-import CoursesCard from "@/app/(dashboard)/(homes)/lms/components/courses-card";
-import CourseActivityCard from "@/app/(dashboard)/(homes)/lms/components/course-activity-card";
+import TrafficSourceCard from "@/app/(dashboard)/(homes)/lms/components/traffic-source-card";
+import WidgetsAverageChart from "@/app/(dashboard)/(homes)/lms/components/widgets-average-chart";
+import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
+import LoadingSkeleton from "@/components/loading-skeleton";
+import type { Metadata } from "next";
+import { Suspense } from "react";
 
 const metadata: Metadata = {
     title: "LMS Dashboard | WowDash Admin Panel",
@@ -20,7 +19,7 @@ const metadata: Metadata = {
 const LmsPage = () => {
     return (
         <>
-            <DashboardBreadcrumb title="Dashboard" text="LMS / Learning System" />
+            <DashboardBreadcrumb title="LMS / Learning System" text="LMS / Learning System" />
 
             <div className="grid grid-cols-1 2xl:grid-cols-12 gap-6">
                 <div className="col-span-12 2xl:col-span-8">
