@@ -42,10 +42,10 @@ const colorClasses: Record<
         text: "text-green-600 dark:text-green-600",
     },
     red: {
-        bg: "bg-red-600/25",
-        gradient: "bg-gradient-to-l from-red-500/10 to-red-500/20",
-        border: "line-bg-red",
-        text: "text-red-600 dark:text-red-600",
+        bg: "bg-yellow-500/25",
+        gradient: "bg-gradient-to-l from-yellow-500/10 to-yellow-500/20",
+        border: "line-bg-yellow",
+        text: "text-yellow-500 dark:text-yellow-500",
     },
 };
 
@@ -118,7 +118,7 @@ const StateCards: React.FC = () => {
                                         <span
                                             className={`px-1 rounded-[2px] font-medium text-sm inline-flex items-center gap-1 ${isUp
                                                 ? "bg-green-600/15 text-green-600 dark:text-green-600"
-                                                : "bg-red-600/15 text-red-600 dark:text-red-600"
+                                                : "bg-red-500/15 text-red-500 dark:text-red-500"
                                                 }`}
                                         >
                                             {isUp ? (

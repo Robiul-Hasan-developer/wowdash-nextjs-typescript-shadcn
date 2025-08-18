@@ -2,7 +2,9 @@ import DashboardBreadcrumb from '@/components/layout/dashboard-breadcrumb';
 import LoadingSkeleton from '@/components/loading-skeleton';
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import IncomeExpenseCard from './components/income-expense-card';
 import StateCards from './components/state-cards';
+import UsersCard from './components/users-card';
 
 export const metadata: Metadata = {
     title: "POS & Inventory Management | WowDash Admin Panel",
@@ -21,6 +23,43 @@ const InventorPage = () => {
                 <div className="col-span-12">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <StateCards />
+                    </Suspense>
+                </div>
+
+
+                <div className="col-span-12 2xl:col-span-8">
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <IncomeExpenseCard />
+                    </Suspense>
+                </div>
+                <div className="col-span-12 md:col-span-6 2xl:col-span-4">
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <UsersCard />
+                    </Suspense>
+                </div>
+                <div className="col-span-12 md:col-span-6 2xl:col-span-4">
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        Stat Cards
+                    </Suspense>
+                </div>
+                <div className="col-span-12 md:col-span-6 2xl:col-span-4">
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        Stat Cards
+                    </Suspense>
+                </div>
+                <div className="col-span-12 md:col-span-6 2xl:col-span-4">
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        Stat Cards
+                    </Suspense>
+                </div>
+                <div className="col-span-12 md:col-span-6 2xl:col-span-4">
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        Stat Cards
+                    </Suspense>
+                </div>
+                <div className="col-span-12 md:col-span-6 2xl:col-span-8">
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        Stat Cards
                     </Suspense>
                 </div>
 

@@ -1,7 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-/* @import "@fullcalendar/daygrid/main.css";
-@import "@fullcalendar/timegrid/main.css"; */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -423,8 +421,8 @@
   background-color: #00a63e;
   box-shadow: 2px 1px 7px 0px #00a63da0;
 }
-.line-bg-red::before {
-  background-color: #e7000b;
-  box-shadow: 2px 1px 7px 0px #e7000cb0;
+.line-bg-yellow::before {
+  background-color: #f0b100;
+  box-shadow: 2px 1px 7px 0px #f0b000a8;
 }
 /* ======================================== Custom Classes css End ======================================== */

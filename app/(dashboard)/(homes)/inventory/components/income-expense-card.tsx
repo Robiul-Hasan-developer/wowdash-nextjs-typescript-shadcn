@@ -1,15 +1,15 @@
-import RevenueStatisticAreaChart from "@/components/charts/revenue-statistic-area-chart";
+import DoubleLineChart from "@/components/charts/double-line-chart";
 import CustomSelect from "@/components/shared/custom-select";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowDown, ArrowUp } from "lucide-react";
 
-const RevenueStatisticCard = () => {
+const IncomeExpenseCard = () => {
     return (
         <Card className="card h-full rounded-lg border-0 !p-0 block">
             <CardContent className="card-body p-6 h-full flex flex-col justify-between">
 
                 <div className="flex items-center flex-wrap gap-2 justify-between">
-                    <h6 className="font-bold text-lg mb-0">Earning Statistic</h6>
+                    <h6 className="font-bold text-lg mb-0">Income Vs Expense</h6>
                     <CustomSelect
                         placeholder="Monthly"
                         options={["Monthly", "Weekly", "Yearly",]}
@@ -32,7 +32,7 @@ const RevenueStatisticCard = () => {
                     </li>
                     <li className="flex flex-col gap-1">
                         <div className="flex items-center gap-2">
-                            <span className="w-[8px] h-[8px] rounded-[50rem] bg-purple-600"></span>
+                            <span className="w-[8px] h-[8px] rounded-[50rem] bg-yellow-500"></span>
                             <span className="text-neutral-600 text-sm dark:text-neutral-100 font-semibold">Loss </span>
                         </div>
                         <div className="flex items-center gap-2">
@@ -45,16 +45,8 @@ const RevenueStatisticCard = () => {
                     </li>
                 </ul>
 
-                <div className="-m-4">
-                    <RevenueStatisticAreaChart
-                        series={[
-                            { name: "Revenue", data: [6, 20, 15, 48, 28, 55, 28, 52, 25, 32, 15, 25] },
-                            { name: "Profit", data: [0, 8, 4, 36, 16, 42, 16, 40, 12, 24, 4, 12] },
-                        ]}
-                        color1="#CD20F9"
-                        color2="#6593FF"
-                        height={200}
-                    />
+                <div className="">
+                    <DoubleLineChart colors={["#487FFF", "#FF9F29"]} />
                 </div>
 
             </CardContent>
@@ -62,4 +54,4 @@ const RevenueStatisticCard = () => {
     );
 };
 
-export default RevenueStatisticCard;
+export default IncomeExpenseCard;
