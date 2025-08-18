@@ -10,7 +10,7 @@ const OverallReportCard = () => {
                     {/* Header */}
                     <div className="card-header border-b border-neutral-200 dark:border-slate-500 py-3 px-6">
                         <div className="flex items-center flex-wrap gap-2 justify-between">
-                            <h6 className="font-bold text-lg mb-0">Top Suppliers</h6>
+                            <h6 className="font-bold text-lg mb-0">Overall Report</h6>
                             <CustomSelect
                                 placeholder="Monthly"
                                 options={["Monthly", "Weekly", "Yearly",]}
@@ -25,19 +25,19 @@ const OverallReportCard = () => {
                     <div className="flex flex-wrap gap-5 justify-center mt-12">
                         <div className="flex items-center gap-2">
                             <span className="w-4 h-4 rounded-[2px] bg-blue-600"></span>
-                            <span className="text-neutral-600">Purchase</span>
+                            <span className="text-neutral-600 dark:text-neutral-200">Purchase</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <span className="w-4 h-4 rounded-[2px] bg-violet-600"></span>
-                            <span className="text-neutral-600">Sales</span>
+                            <span className="text-neutral-600 dark:text-neutral-200">Sales</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <span className="w-4 h-4 rounded-[2px] bg-yellow-500"></span>
-                            <span className="text-neutral-600">Expense</span>
+                            <span className="text-neutral-600 dark:text-neutral-200">Expense</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <span className="w-4 h-4 rounded-[2px] bg-green-500"></span>
-                            <span className="text-neutral-600">Gross Profit</span>
+                            <span className="text-neutral-600 dark:text-neutral-200">Gross Profit</span>
                         </div>
                     </div>
 

@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import IncomeExpenseCard from './components/income-expense-card';
 import OverallReportCard from './components/overall-report-card';
+import PurchaseSalesCard from './components/purchase-sales-card';
+import RecentTransactionsCard from './components/recent-transactions-card';
 import StateCards from './components/state-cards';
 import TopCustomerCard from './components/top-customer-card';
 import TopSuppliersCard from './components/top-suppliers-card';
@@ -57,12 +59,12 @@ const InventorPage = () => {
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        Stat Cards
+                        <PurchaseSalesCard />
                     </Suspense>
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-8">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        Stat Cards
+                        <RecentTransactionsCard />
                     </Suspense>
                 </div>
 
