@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import IncomeExpenseCard from './components/income-expense-card';
 import StateCards from './components/state-cards';
+import TopCustomerCard from './components/top-customer-card';
+import TopSuppliersCard from './components/top-suppliers-card';
 import UsersCard from './components/users-card';
 
 export const metadata: Metadata = {
@@ -39,12 +41,12 @@ const InventorPage = () => {
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        Stat Cards
+                        <TopSuppliersCard />
                     </Suspense>
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        Stat Cards
+                        <TopCustomerCard />
                     </Suspense>
                 </div>
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
