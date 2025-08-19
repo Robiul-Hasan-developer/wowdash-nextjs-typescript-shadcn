@@ -35,6 +35,16 @@ const ThemeCustomizer = () => {
 
 
             <div
+                className={`fixed max-w-[420px] w-full h-screen bg-white dark:bg-slate-800  top-0 z-[11] shadow-2xl duration-500 transition-transform flex flex-col
+                    ${customizationOpen
+                        ? "end-0 translate-x-0"       // RTL open → visible at left
+                        : "end-0 translate-x-full"    // LTR closed → slide out right
+                    }
+                    ${direction === "rtl" && customizationOpen ? "start translate-x-0" : "start -translate-x-full"
+                    }
+                `}
+            >
+                {/* <div
                 className={`fixed max-w-[420px] w-full h-screen bg-white dark:bg-slate-800 top-0 z-[11] shadow-2xl duration-500 transition-transform flex flex-col
                     ${direction === "rtl"
                         ? customizationOpen
@@ -45,7 +55,7 @@ const ThemeCustomizer = () => {
                             : "end-0 translate-x-full"      // LTR closed → slide out right
                     }
                 `}
-            >
+            > */}
                 <div className="flex items-center gap-6 px-6 py-4 border-b border-neutral-200 dark:border-slate-700 justify-between">
                     <div className="">
                         <h6 className="text-sm dark:text-white">Theme Settings</h6>
