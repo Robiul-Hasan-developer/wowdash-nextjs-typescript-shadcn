@@ -77,7 +77,7 @@ const ThemeDirection = () => {
                 <div
                     onClick={() => handleDirectionChange("rtl")}
                     className={`cursor-pointer border flex items-center justify-center gap-2 h-[60px] rounded-md ring-2 duration-300 ${direction === "rtl"
-                        ? "ring-blue-600 border-blue-500 bg-blue-50"
+                        ? "ring-blue-600 border-blue-500 bg-blue-500/10"
                         : "ring-transparent border-neutral-300 dark:border-slate-500"
                         } hover:bg-blue-500/10`}
                 >

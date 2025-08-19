@@ -17,7 +17,7 @@ const ThemeCustomizer = () => {
     return (
         <>
             <Button
-                className="fixed bottom-12 end-8 !p-0 shadow-xl rounded-full w-[50px] h-[50px] bg-blue-600 text-white flex items-center justify-center overflow-hidden z-10"
+                className="fixed bottom-12 end-8 !p-0 shadow-xl rounded-full w-[50px] h-[50px] bg-blue-600 text-white flex items-center justify-center overflow-hidden z-[99999]"
                 onClick={() => setCustomizationOpen(true)}
             >
                 <Settings className="!w-7 !h-7 animate-spin fill-curren" />
@@ -26,7 +26,7 @@ const ThemeCustomizer = () => {
             {
                 customizationOpen && (
                     <div
-                        className="overlay fixed w-full h-full bg-black/50 dark:bg-black/50 z-10"
+                        className="overlay fixed w-full h-full bg-black/50 dark:bg-black/50 z-10 duration-700 transition-all"
                         onClick={() => setCustomizationOpen(false)}
                     >
                     </div>
@@ -35,16 +35,17 @@ const ThemeCustomizer = () => {
 
 
             <div
-                className={`fixed max-w-[420px] w-full h-screen bg-white dark:bg-slate-800 end-0 top-0 z-[11] shadow-2xl duration-500 transition-transform flex flex-col 
+                className={`fixed max-w-[420px] w-full h-screen bg-white dark:bg-slate-800 top-0 z-[11] shadow-2xl duration-500 transition-transform flex flex-col
                     ${direction === "rtl"
                         ? customizationOpen
-                            ? "left-0 translate-x-0"     // RTL open → left side
-                            : "-translate-x-full left-0" // RTL closed → hide left
+                            ? "start-0 translate-x-0"       // RTL open → visible at left
+                            : "start-0 -translate-x-full"   // RTL closed → slide out left
                         : customizationOpen
-                            ? "right-0 translate-x-0"    // LTR open → right side
-                            : "translate-x-full right-0" // LTR closed → hide right
+                            ? "end-0 translate-x-0"         // LTR open → visible at right
+                            : "end-0 translate-x-full"      // LTR closed → slide out right
                     }
-                `}>
+                `}
+            >
                 <div className="flex items-center gap-6 px-6 py-4 border-b border-neutral-200 dark:border-slate-700 justify-between">
                     <div className="">
                         <h6 className="text-sm dark:text-white">Theme Settings</h6>
@@ -97,9 +98,20 @@ const ThemeCustomizer = () => {
                     </Button>
                 </div>
 
-            </div>
+            </div >
         </>
     );
 };
 
 export default ThemeCustomizer;
+
+
+//   ${
+//     direction === "rtl"
+//     ? customizationOpen
+//         ? "end-0 translate-x-0"     // RTL open → left side
+//         : "translate-x-full end-0" // RTL closed → hide left
+//     : customizationOpen
+//         ? "end-0 translate-x-0"    // LTR open → right side
+//         : "-translate-x-full end-0" // LTR closed → hide right
+// }
