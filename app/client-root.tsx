@@ -1,13 +1,13 @@
 "use client";
 
-import { ReactNode } from "react";
-import { ThemeProvider } from "@/components/theme-provider";
-import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
-import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/header";
+import ThemeCustomizer from "@/components/theme-customizer";
+import { ThemeProvider } from "@/components/theme-provider";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { ReactNode } from "react";
 import { Toaster } from "react-hot-toast";
-import { SidebarInset } from "@/components/ui/sidebar";
 
 export function ClientRoot({
   defaultOpen,
@@ -34,6 +34,7 @@ export function ClientRoot({
           </div>
           <Footer />
         </main>
+        <ThemeCustomizer />
         <Toaster position="top-center" reverseOrder={false} />
       </SidebarProvider>
     </ThemeProvider>
