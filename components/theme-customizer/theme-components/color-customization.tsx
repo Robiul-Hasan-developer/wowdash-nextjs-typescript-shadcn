@@ -208,7 +208,7 @@ const ColorCustomization: React.FC = () => {
                             />
                             {
                                 selectedColor === color.hex && (
-                                    <span className="absolute top-[50%] start-[50%] translate-[-50%]">
+                                    <span className="absolute top-[50%] start-[50%] translate-x-[-50%] translate-y-[-50%] rtl:-translate-x-[-50%]">
                                         <Check className="text-white" />
                                     </span>
                                 )
