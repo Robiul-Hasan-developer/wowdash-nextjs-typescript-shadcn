@@ -18,7 +18,7 @@ const ThemeCustomizer = () => {
     return (
         <>
             <Button
-                className="fixed bottom-12 end-8 !p-0 shadow-xl rounded-full w-[50px] h-[50px] bg-primary text-white flex items-center justify-center overflow-hidden z-[99999]"
+                className="fixed bottom-12 end-8 !p-0 shadow-xl rounded-full w-[50px] h-[50px] bg-primary text-white flex items-center justify-center overflow-hidden z-[2]"
                 onClick={() => setCustomizationOpen(true)}
             >
                 <Settings className="!w-7 !h-7 animate-spin fill-curren" />
