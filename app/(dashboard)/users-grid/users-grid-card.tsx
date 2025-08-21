@@ -194,7 +194,7 @@ const UsersGridCard = () => {
                                     <span className="text-secondary-light text-sm mb-0">Designation</span>
                                 </div>
                             </div>
-                            <Button className={cn(`bg-blue-50 hover:bg-primary dark:hover:bg-primary hover:text-white dark:hover:text-white dark:bg-primary/25 text-blue-600 dark:text-blue-400 text-sm px-3 py-3 rounded-lg flex items-center justify-center mt-4 font-medium gap-2 w-full h-12`)}>
+                            <Button className={cn(`bg-blue-50 hover:bg-primary dark:hover:bg-primary hover:text-white dark:hover:text-white dark:bg-primary/25 text-primary dark:text-blue-400 text-sm px-3 py-3 rounded-lg flex items-center justify-center mt-4 font-medium gap-2 w-full h-12`)}>
                                 View Profile
                                 <ChevronRight className="w-5 h-5" />
                             </Button>

@@ -1,10 +1,10 @@
 "use client"
 
-import React, { useState } from 'react';
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Eye, EyeOff } from 'lucide-react';
+import { useState } from 'react';
 
 const ChangePasswordTabContent = () => {
     const [showNewPassword, setShowNewPassword] = useState(false);
@@ -22,7 +22,7 @@ const ChangePasswordTabContent = () => {
                         id="new-password"
                         type={showNewPassword ? "text" : "password"}
                         placeholder="Enter New Password"
-                        className="ps-5 pe-12 h-[48px] rounded-lg border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 !shadow-none !ring-0"
+                        className="ps-5 pe-12 h-[48px] rounded-lg border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
                     />
                     <Button
                         type="button"
@@ -44,7 +44,7 @@ const ChangePasswordTabContent = () => {
                         id="confirm-password"
                         type={showConfirmPassword ? "text" : "password"}
                         placeholder="Enter Confirmed Password"
-                        className="ps-5 pe-12 h-[48px] rounded-lg border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 !shadow-none !ring-0"
+                        className="ps-5 pe-12 h-[48px] rounded-lg border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
                     />
                     <Button
                         type="button"

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 
 const Footer = () => {
   const currentDate = new Date();
@@ -15,7 +14,7 @@ const Footer = () => {
           Made by
           <Link
             href="https://themeforest.net/user/wowtheme7/portfolio"
-            className="font-medium text-blue-600 dark:text-blue-600 hover:underline"
+            className="font-medium text-primary dark:text-primary hover:underline"
           >
             {" "}
             wowtheme7

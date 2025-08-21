@@ -26,16 +26,16 @@ const TypographyPage = () => {
             <Tabs defaultValue="DefaultHome" className="gap-0">
               <div className="flex items-center justify-between border-b border-neutral-200 dark:border-slate-600">
                 <TabsList className='bg-transparent dark:bg-transparent rounded-none h-[50px]  p-0'>
-                  <TabsTrigger value="DefaultHome" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 dark:data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                  <TabsTrigger value="DefaultHome" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-primary dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-primary dark:data-[state=active]:text-primary data-[state=active]:border-primary dark:data-[state=active]:border-primary dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
                     Home
                   </TabsTrigger>
-                  <TabsTrigger value="DefaultDetails" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 dark:data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                  <TabsTrigger value="DefaultDetails" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-primary dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-primary dark:data-[state=active]:text-primary data-[state=active]:border-primary dark:data-[state=active]:border-primary dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
                     Details
                   </TabsTrigger>
-                  <TabsTrigger value="DefaultProfile" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 dark:data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                  <TabsTrigger value="DefaultProfile" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-primary dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-primary dark:data-[state=active]:text-primary data-[state=active]:border-primary dark:data-[state=active]:border-primary dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
                     Profile
                   </TabsTrigger>
-                  <TabsTrigger value="DefaultSettings" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 dark:data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                  <TabsTrigger value="DefaultSettings" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-primary dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-primary dark:data-[state=active]:text-primary data-[state=active]:border-primary dark:data-[state=active]:border-primary dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
                     Settings
                   </TabsTrigger>
                 </TabsList>
@@ -72,16 +72,16 @@ const TypographyPage = () => {
             <Tabs defaultValue="FocusHome" className="gap-0">
               <div className="flex items-center justify-between">
                 <TabsList className='bg-transparent dark:bg-transparent rounded-none h-[50px]  p-0'>
-                  <TabsTrigger value="FocusHome" className='h-10 px-4 data-[state=active]:text-blue-600 data-[state=active]:bg-primary/10 dark:data-[state=active]:bg-primary/20 duration-300 !shadow-none dark:text-white'>
+                  <TabsTrigger value="FocusHome" className='h-10 px-4 data-[state=active]:text-primary data-[state=active]:bg-primary/10 dark:data-[state=active]:bg-primary/20 duration-300 !shadow-none dark:text-white'>
                     Home
                   </TabsTrigger>
-                  <TabsTrigger value="FocusDetails" className='h-10 px-4 data-[state=active]:text-blue-600 data-[state=active]:bg-primary/10 dark:data-[state=active]:bg-primary/20 duration-300 !shadow-none dark:text-white'>
+                  <TabsTrigger value="FocusDetails" className='h-10 px-4 data-[state=active]:text-primary data-[state=active]:bg-primary/10 dark:data-[state=active]:bg-primary/20 duration-300 !shadow-none dark:text-white'>
                     Details
                   </TabsTrigger>
-                  <TabsTrigger value="FocusProfile" className='h-10 px-4 data-[state=active]:text-blue-600 data-[state=active]:bg-primary/10 dark:data-[state=active]:bg-primary/20 duration-300 !shadow-none dark:text-white'>
+                  <TabsTrigger value="FocusProfile" className='h-10 px-4 data-[state=active]:text-primary data-[state=active]:bg-primary/10 dark:data-[state=active]:bg-primary/20 duration-300 !shadow-none dark:text-white'>
                     Profile
                   </TabsTrigger>
-                  <TabsTrigger value="FocusSettings" className='h-10 px-4 data-[state=active]:text-blue-600 data-[state=active]:bg-primary/10 dark:data-[state=active]:bg-primary/20 duration-300 !shadow-none dark:text-white'>
+                  <TabsTrigger value="FocusSettings" className='h-10 px-4 data-[state=active]:text-primary data-[state=active]:bg-primary/10 dark:data-[state=active]:bg-primary/20 duration-300 !shadow-none dark:text-white'>
                     Settings
                   </TabsTrigger>
                 </TabsList>
@@ -317,16 +317,16 @@ const TypographyPage = () => {
               <CardHeader className="flex items-center justify-between border-b border-neutral-200 dark:border-slate-600 !pb-0">
                 <CardTitle className="text-lg font-semibold">Card Header Tabs</CardTitle>
                 <TabsList className='bg-transparent dark:bg-transparent rounded-none h-[50px]  p-0'>
-                  <TabsTrigger value="CardHeaderHome" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 dark:data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                  <TabsTrigger value="CardHeaderHome" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-primary dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-primary dark:data-[state=active]:text-primary data-[state=active]:border-primary dark:data-[state=active]:border-primary dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
                     Home
                   </TabsTrigger>
-                  <TabsTrigger value="CardHeaderDetails" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 dark:data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                  <TabsTrigger value="CardHeaderDetails" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-primary dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-primary dark:data-[state=active]:text-primary data-[state=active]:border-primary dark:data-[state=active]:border-primary dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
                     Details
                   </TabsTrigger>
-                  <TabsTrigger value="CardHeaderProfile" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 dark:data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                  <TabsTrigger value="CardHeaderProfile" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-primary dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-primary dark:data-[state=active]:text-primary data-[state=active]:border-primary dark:data-[state=active]:border-primary dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
                     Profile
                   </TabsTrigger>
-                  <TabsTrigger value="CardHeaderSettings" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-blue-600 dark:data-[state=active]:text-blue-600 data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                  <TabsTrigger value="CardHeaderSettings" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-primary dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:text-primary dark:data-[state=active]:text-primary data-[state=active]:border-primary dark:data-[state=active]:border-primary dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
                     Settings
                   </TabsTrigger>
                 </TabsList>

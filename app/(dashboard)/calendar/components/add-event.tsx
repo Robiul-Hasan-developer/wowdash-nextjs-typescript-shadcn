@@ -1,30 +1,29 @@
 
 "use client"
 
-import * as React from "react"
-import { CalendarIcon, Loader2 } from "lucide-react"
+import { Button } from '@/components/ui/button'
 import { Calendar } from "@/components/ui/calendar"
+import {
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
 import {
     Popover,
     PopoverContent,
     PopoverTrigger,
 } from "@/components/ui/popover"
-import {
-    Dialog,
-    DialogContent,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-    DialogClose,
-    DialogFooter,
-} from "@/components/ui/dialog"
-import { Label } from '@/components/ui/label';
-import { Input } from '@/components/ui/input';
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
-import { SquarePlus } from 'lucide-react';
+import { Textarea } from '@/components/ui/textarea'
+import { cn } from '@/lib/utils'
+import { CalendarIcon, Loader2, SquarePlus } from "lucide-react"
+import * as React from "react"
 import toast from "react-hot-toast"
 
 function formatDate(date: Date | undefined) {
@@ -86,7 +85,7 @@ const AddEvent: React.FC<AddEventProps> = ({ onAddEvent }) => {
             id: Date.now(),
             title: name,
             color: label === "Personal" ? "bg-green-500" :
-                label === "Business" ? "bg-blue-500" :
+                label === "Business" ? "bg-primary" :
                     label === "Family" ? "bg-yellow-500" :
                         label === "Important" ? "bg-purple-500" :
                             "bg-red-500",
@@ -284,7 +283,7 @@ const AddEvent: React.FC<AddEventProps> = ({ onAddEvent }) => {
                                             <RadioGroupItem value="Business" id="Business" className='border border-neutral-400'
                                                 required />
                                             <Label className="form-check-label line-height-1 font-medium text-secondary-light text-sm flex items-center gap-1" htmlFor="Business">
-                                                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                                <span className="w-2 h-2 bg-primary rounded-full"></span>
                                                 Business
                                             </Label>
                                         </div>

@@ -1,24 +1,4 @@
-import React, { useEffect, useRef } from 'react';
-import { useState } from "react";
-import { Ban, CircleX, LinkIcon, Phone, Video, ImageIcon, Send, EllipsisVertical, User, Settings } from 'lucide-react';
-import Image, { StaticImageData } from 'next/image';
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { Label } from "@/components/ui/label"
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { Textarea } from '@/components/ui/textarea';
-import { cn } from '@/lib/utils';
-import { Input } from '@/components/ui/input';
 import {
     Command,
     CommandEmpty,
@@ -26,9 +6,30 @@ import {
     CommandInput,
     CommandItem,
     CommandList,
-} from "@/components/ui/command"
+} from "@/components/ui/command";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Input } from '@/components/ui/input';
+import { Label } from "@/components/ui/label";
+import { Textarea } from '@/components/ui/textarea';
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { cn } from '@/lib/utils';
+import { Ban, CircleX, EllipsisVertical, ImageIcon, LinkIcon, Phone, Send, Settings, User, Video } from 'lucide-react';
+import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
+import React, { useEffect, useRef, useState } from 'react';
 
 import ChatImage1 from '@/public/assets/images/chat/1.png';
+import ChatImage10 from '@/public/assets/images/chat/10.png';
+import ChatImage11 from '@/public/assets/images/chat/11.png';
 import ChatImage2 from '@/public/assets/images/chat/2.png';
 import ChatImage3 from '@/public/assets/images/chat/3.png';
 import ChatImage4 from '@/public/assets/images/chat/4.png';
@@ -37,8 +38,6 @@ import ChatImage6 from '@/public/assets/images/chat/6.png';
 import ChatImage7 from '@/public/assets/images/chat/7.png';
 import ChatImage8 from '@/public/assets/images/chat/8.png';
 import ChatImage9 from '@/public/assets/images/chat/9.png';
-import ChatImage10 from '@/public/assets/images/chat/10.png';
-import ChatImage11 from '@/public/assets/images/chat/11.png';
 
 type ChatItem = {
     id: number;
@@ -492,7 +491,7 @@ const ChatBox = () => {
                                     key={msg.id}
                                     className="max-w-[700px] duration-500 ms-auto text-white"
                                 >
-                                    <div className="bg-blue-500 rounded-2xl rounded-ee-none p-5">
+                                    <div className="bg-primary rounded-2xl rounded-ee-none p-5">
                                         <p className="mb-3">{msg.text}</p>
                                         <p className="chat-time mb-0 text-xs">
                                             <span>{msg.time}</span>
@@ -531,7 +530,7 @@ const ChatBox = () => {
                                     >
                                         <LinkIcon
                                             width={20}
-                                            className="text-neutral-500 dark:text-neutral-100 hover:text-blue-600"
+                                            className="text-neutral-500 dark:text-neutral-100 hover:text-primary"
                                         />
                                         <Input type="file" id="addAttachment" hidden />
                                     </Label>
@@ -548,7 +547,7 @@ const ChatBox = () => {
                                     >
                                         <ImageIcon
                                             width={20}
-                                            className="text-neutral-500 dark:text-neutral-100 hover:text-blue-600"
+                                            className="text-neutral-500 dark:text-neutral-100 hover:text-primary"
                                         />
                                         <Input type="file" id="addImage" hidden />
                                     </Label>

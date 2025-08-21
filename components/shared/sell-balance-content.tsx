@@ -1,10 +1,9 @@
 "use client";
 
-import React from "react";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 
 const SellBalanceContent = () => {
   return (
@@ -19,7 +18,7 @@ const SellBalanceContent = () => {
         <Input
           id="sellAmount"
           placeholder="Enter amount to sell"
-          className="border border-neutral-200 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-11 rounded-lg !shadow-none !ring-0"
+          className="border border-neutral-200 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-11 rounded-lg !shadow-none !ring-0"
         />
       </div>
 
@@ -33,7 +32,7 @@ const SellBalanceContent = () => {
         <Textarea
           id="reason"
           placeholder="Enter your reason"
-          className="border border-neutral-200 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 rounded-lg !shadow-none !ring-0 h-[100px]"
+          className="border border-neutral-200 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary rounded-lg !shadow-none !ring-0 h-[100px]"
         />
       </div>
 

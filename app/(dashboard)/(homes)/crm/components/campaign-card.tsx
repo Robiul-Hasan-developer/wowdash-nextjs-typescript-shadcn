@@ -51,7 +51,7 @@ const CampaignCard = () => {
 
           <div className="flex items-center justify-between gap-3 not-last:mb-5.5">
             <div className="flex items-center">
-              <span className="text-2xl line-height-1 flex align-content-center shrink-0 text-blue-600 dark:text-blue-500">
+              <span className="text-2xl line-height-1 flex align-content-center shrink-0 text-primary dark:text-primary">
                 <Facebook />
               </span>
               <span className="text-neutral-600 dark:text-neutral-200 font-medium text-sm ps-4">Facebook</span>

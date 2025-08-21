@@ -1,10 +1,8 @@
-import type { Metadata } from "next";
-import React from "react";
-import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { DatePicker } from "@/components/shared/date-picker";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
     Select,
     SelectContent,
@@ -12,10 +10,11 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select";
-import Image from "next/image";
-import PaymentIcon from "@/public/assets/images/card/payment-icon.png";
-import { Mail, Copy } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
+import PaymentIcon from "@/public/assets/images/card/payment-icon.png";
+import { Copy, Mail } from "lucide-react";
+import type { Metadata } from "next";
+import Image from "next/image";
 
 const metadata: Metadata = {
     title: "Input Forms & Field Elements | WowDash Admin Dashboard",
@@ -35,15 +34,15 @@ const InputForms = () => {
                             <div className="flex flex-col gap-4">
                                 <div className="">
                                     <Label htmlFor="basicInput" className="text-[#4b5563] dark:text-white mb-2">Basic Input </Label>
-                                    <Input type="text" id="basicInput" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-lg !shadow-none !ring-0" />
+                                    <Input type="text" id="basicInput" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-12 rounded-lg !shadow-none !ring-0" />
                                 </div>
                                 <div className="">
                                     <Label htmlFor="InputWithPlaceholder" className="text-[#4b5563] dark:text-white mb-2">Input With Placeholder </Label>
-                                    <Input type="email" id="InputWithPlaceholder" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                    <Input type="email" id="InputWithPlaceholder" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-12 rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
                                 </div>
                                 <div className="">
                                     <Label htmlFor="InputWithPhone" className="text-[#4b5563] dark:text-white mb-2">Input With Phone </Label>
-                                    <Input type="tel" id="InputWithPhone" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-lg !shadow-none !ring-0" placeholder="+1 (555) 253-08515" />
+                                    <Input type="tel" id="InputWithPhone" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-12 rounded-lg !shadow-none !ring-0" placeholder="+1 (555) 253-08515" />
                                 </div>
                                 <div className="">
                                     <Label htmlFor="InputDate" className="text-[#4b5563] dark:text-white mb-2">Input Date </Label>
@@ -55,7 +54,7 @@ const InputForms = () => {
                                         <div className="shrink-0 flex px-2 -ms-[0px] flex items-center justify-center w-[56px] border border-neutral-300 dark:border-slate-500 border-e-0 rounded-s-lg rounded-e-none">
                                             <Image src={PaymentIcon} alt="Image" />
                                         </div>
-                                        <Input type="text" id="InputWithPayment" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-e-lg rounded-s-none !shadow-none !ring-0" placeholder="Card Number" />
+                                        <Input type="text" id="InputWithPayment" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-12 rounded-e-lg rounded-s-none !shadow-none !ring-0" placeholder="Card Number" />
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +69,7 @@ const InputForms = () => {
                                         <div className="shrink-0 flex px-2 -ms-[0px] flex items-center justify-center w-[42px] border border-neutral-300 dark:border-slate-500 border-e-0 rounded-s-lg rounded-e-none">
                                             <Mail className="w-4" />
                                         </div>
-                                        <Input type="text" id="MyInput" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-e-lg rounded-s-none !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                        <Input type="text" id="MyInput" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-12 rounded-e-lg rounded-s-none !shadow-none !ring-0" placeholder="info@gmail.com" />
                                     </div>
                                 </div>
                                 <div className="">
@@ -88,13 +87,13 @@ const InputForms = () => {
                                                 </SelectContent>
                                             </Select>
                                         </div>
-                                        <Input type="text" id="MyInputOne" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-e-lg rounded-s-none !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                        <Input type="text" id="MyInputOne" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-12 rounded-e-lg rounded-s-none !shadow-none !ring-0" placeholder="info@gmail.com" />
                                     </div>
                                 </div>
                                 <div className="">
                                     <Label htmlFor="MyInputTwo" className="text-[#4b5563] dark:text-white mb-2">Input </Label>
                                     <div className="flex">
-                                        <Input type="text" id="MyInputTwo" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-s-lg rounded-e-none !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                        <Input type="text" id="MyInputTwo" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-12 rounded-s-lg rounded-e-none !shadow-none !ring-0" placeholder="info@gmail.com" />
                                         <div className="shrink-0 flex px-2 -ms-[0px] flex items-center justify-center border border-neutral-300 dark:border-slate-500 border-s-0 rounded-e-lg rounded-s-none">
                                             <Select>
                                                 <SelectTrigger className="border-0 !bg-transparent px-1 text-sm dark:text-white focus:ring-0 focus:ring-offset-0 !h-full">
@@ -115,13 +114,13 @@ const InputForms = () => {
                                         <div className="shrink-0 flex px-2 -ms-[0px] flex items-center justify-center border border-neutral-300 dark:border-slate-500 border-e-0 rounded-s-lg rounded-e-none">
                                             http://
                                         </div>
-                                        <Input type="url" id="MyInputHttps" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-e-lg rounded-s-none !shadow-none !ring-0" placeholder="www.random.com" />
+                                        <Input type="url" id="MyInputHttps" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-12 rounded-e-lg rounded-s-none !shadow-none !ring-0" placeholder="www.random.com" />
                                     </div>
                                 </div>
                                 <div className="">
                                     <Label htmlFor="MyInputTwoCopy" className="text-[#4b5563] dark:text-white mb-2">Input </Label>
                                     <div className="flex">
-                                        <Input type="text" id="MyInputTwoCopy" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-s-lg rounded-e-none !shadow-none !ring-0" placeholder="www.random.com" />
+                                        <Input type="text" id="MyInputTwoCopy" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-12 rounded-s-lg rounded-e-none !shadow-none !ring-0" placeholder="www.random.com" />
                                         <div className="shrink-0 flex px-2 -ms-[0px] flex items-center justify-center border border-neutral-300 dark:border-slate-500 border-s-0 rounded-e-lg rounded-s-none">
                                             <div className="flex items-center gap-2">
                                                 <Copy className="w-4" />
@@ -142,15 +141,15 @@ const InputForms = () => {
                             <div className="flex flex-col gap-4">
                                 <div className="">
                                     <Label htmlFor="InputLarge" className="text-[#4b5563] dark:text-white mb-2">Input Large </Label>
-                                    <Input type="email" id="InputLarge" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[60px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                    <Input type="email" id="InputLarge" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-[60px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
                                 </div>
                                 <div className="">
                                     <Label htmlFor="InputMedium" className="text-[#4b5563] dark:text-white mb-2">Input Medium </Label>
-                                    <Input type="email" id="InputMedium" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[48px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                    <Input type="email" id="InputMedium" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-[48px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
                                 </div>
                                 <div className="">
                                     <Label htmlFor="InputSmall" className="text-[#4b5563] dark:text-white mb-2">Input Small </Label>
-                                    <Input type="email" id="InputSmall" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[40px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                    <Input type="email" id="InputSmall" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-[40px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
                                 </div>
                             </div>
                         </DefaultCardComponent>
@@ -160,15 +159,15 @@ const InputForms = () => {
                             <div className="flex flex-col gap-4">
                                 <div className="">
                                     <Label htmlFor="FileInputLarge" className="text-[#4b5563] dark:text-white mb-2"> Large Size File Input </Label>
-                                    <Input type="file" id="FileInputLarge" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[60px] leading-[56px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                    <Input type="file" id="FileInputLarge" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-[60px] leading-[56px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
                                 </div>
                                 <div className="">
                                     <Label htmlFor="FileInputMedium" className="text-[#4b5563] dark:text-white mb-2"> Medium Size File Input </Label>
-                                    <Input type="file" id="FileInputMedium" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[48px] leading-[40px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                    <Input type="file" id="FileInputMedium" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-[48px] leading-[40px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
                                 </div>
                                 <div className="">
                                     <Label htmlFor="FileInputSmall" className="text-[#4b5563] dark:text-white mb-2"> Small Size File Input </Label>
-                                    <Input type="file" id="FileInputSmall" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[40px] leading-[34px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                    <Input type="file" id="FileInputSmall" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-[40px] leading-[34px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
                                 </div>
                             </div>
                         </DefaultCardComponent>
@@ -178,7 +177,7 @@ const InputForms = () => {
                             <div className="flex flex-col gap-4">
                                 <div className="">
                                     <Label htmlFor="ReadonlyInput" className="text-[#4b5563] dark:text-white mb-2"> Readonly Input </Label>
-                                    <Input type="text" id="ReadonlyInput" className="border border-neutral-400 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[48px] leading-[56px] rounded-lg !shadow-none !ring-0 bg-neutral-200" placeholder="info@gmail.com" disabled />
+                                    <Input type="text" id="ReadonlyInput" className="border border-neutral-400 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-[48px] leading-[56px] rounded-lg !shadow-none !ring-0 bg-neutral-200" placeholder="info@gmail.com" disabled />
                                 </div>
                                 <div className="">
                                     <Label htmlFor="InputWithPhone" className="text-[#4b5563] dark:text-white mb-2">Input with Phone </Label>
@@ -195,12 +194,12 @@ const InputForms = () => {
                                                 </SelectContent>
                                             </Select>
                                         </div>
-                                        <Input type="text" id="InputWithPhone" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-e-lg rounded-s-none !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                        <Input type="text" id="InputWithPhone" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-12 rounded-e-lg rounded-s-none !shadow-none !ring-0" placeholder="info@gmail.com" />
                                     </div>
                                 </div>
                                 <div className="">
                                     <Label htmlFor="FileInputMedium" className="text-[#4b5563] dark:text-white mb-2"> Medium Size File Input </Label>
-                                    <Input type="file" id="FileInputMedium" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[48px] leading-[40px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
+                                    <Input type="file" id="FileInputMedium" className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-[48px] leading-[40px] rounded-lg !shadow-none !ring-0" placeholder="info@gmail.com" />
                                 </div>
                             </div>
                         </DefaultCardComponent>
@@ -213,11 +212,11 @@ const InputForms = () => {
                             <div className="grid grid-cols-12 gap-5">
                                 <div className="lg:col-span-4 col-span-12">
                                     <Label htmlFor="DescriptionOne" className="text-[#4b5563] dark:text-white mb-2">Description </Label>
-                                    <Textarea className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[120px] rounded-lg !shadow-none !ring-0" placeholder="Enter a description..." />
+                                    <Textarea className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-[120px] rounded-lg !shadow-none !ring-0" placeholder="Enter a description..." />
                                 </div>
                                 <div className="lg:col-span-4 col-span-12">
                                     <Label htmlFor="DescriptionTwo" className="text-[#4b5563] dark:text-white mb-2">Description </Label>
-                                    <Textarea className="border border-neutral-400 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-[120px] rounded-lg !shadow-none !ring-0 bg-neutral-200" placeholder="Enter a description..." disabled />
+                                    <Textarea className="border border-neutral-400 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-[120px] rounded-lg !shadow-none !ring-0 bg-neutral-200" placeholder="Enter a description..." disabled />
                                 </div>
                                 <div className="lg:col-span-4 col-span-12">
                                     <Label htmlFor="DescriptionThree" className="text-[#4b5563] dark:text-white mb-2">Description </Label>

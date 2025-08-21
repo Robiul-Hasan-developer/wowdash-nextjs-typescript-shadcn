@@ -1,6 +1,5 @@
-import React from 'react';
-import { Card, CardContent } from "@/components/ui/card";
 import RadialMultipleBar from '@/components/charts/radial-multiple-bar';
+import { Card, CardContent } from "@/components/ui/card";
 
 const PatientVisitedDepartment = () => {
     return (
@@ -18,7 +17,7 @@ const PatientVisitedDepartment = () => {
                         </div>
                         <ul className="flex flex-col gap-3">
                             <li>
-                                <span className="text-lg">Cardiology: <span className="text-blue-600 dark:text-blue-600 font-semibold">80%</span> </span>
+                                <span className="text-lg">Cardiology: <span className="text-primary dark:text-primary font-semibold">80%</span> </span>
                             </li>
                             <li>
                                 <span className="text-lg">Psychiatry: <span className="text-yellow-500 dark:text-yellow-500 font-semibold">40%</span> </span>

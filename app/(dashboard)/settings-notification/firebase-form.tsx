@@ -1,9 +1,8 @@
 'use client';
 
-import React from 'react';
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Button } from '@/components/ui/button';
 import { handleFirebaseSettings } from './actions';
 
 const firebaseFields = [
@@ -33,7 +32,7 @@ const FirebaseSettingsForm = () => {
                             type="text"
                             defaultValue={value}
                             placeholder={label}
-                            className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 rounded-lg !shadow-none !ring-0"
+                            className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-12 rounded-lg !shadow-none !ring-0"
                         />
                     </div>
                 ))}

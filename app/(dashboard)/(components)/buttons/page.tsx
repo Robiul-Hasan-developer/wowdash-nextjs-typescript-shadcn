@@ -79,7 +79,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] hover:text-blue-600 text-secondary-light text-decoration-none rounded-lg px-5 py-[11px]"
+                "h-[46px] hover:text-primary text-secondary-light text-decoration-none rounded-lg px-5 py-[11px]"
               )}
               variant="link"
             >
@@ -101,7 +101,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-transparent border border-blue-600 text-blue-600 hover:bg-primary hover:text-white rounded-lg px-5 py-[11px]"
+                "h-[46px] bg-transparent border border-primary text-primary hover:bg-primary hover:text-white rounded-lg px-5 py-[11px]"
               )}
             >
               Primary
@@ -157,7 +157,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-transparent hover:text-blue-600 text-secondary-light text-decoration-none rounded-lg px-5 py-[11px]"
+                "h-[46px] bg-transparent hover:text-primary text-secondary-light text-decoration-none rounded-lg px-5 py-[11px]"
               )}
               variant="link"
             >
@@ -235,7 +235,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] hover:text-blue-600 text-secondary-light text-decoration-none rounded-full px-5 py-[11px]"
+                "h-[46px] hover:text-primary text-secondary-light text-decoration-none rounded-full px-5 py-[11px]"
               )}
               variant="link"
             >
@@ -257,7 +257,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-transparent border border-blue-600 text-blue-600 hover:bg-primary hover:text-white rounded-full px-5 py-[11px]"
+                "h-[46px] bg-transparent border border-primary text-primary hover:bg-primary hover:text-white rounded-full px-5 py-[11px]"
               )}
             >
               Primary
@@ -313,7 +313,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-transparent hover:text-blue-600 text-secondary-light text-decoration-none rounded-full px-5 py-[11px]"
+                "h-[46px] bg-transparent hover:text-primary text-secondary-light text-decoration-none rounded-full px-5 py-[11px]"
               )}
               variant="link"
             >
@@ -335,7 +335,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-blue-100 dark:bg-primary/25 dark:hover:bg-primary hover:bg-primary text-blue-600 hover:text-white rounded-full px-5 py-[11px]"
+                "h-[46px] bg-blue-100 dark:bg-primary/25 dark:hover:bg-primary hover:bg-primary text-primary hover:text-white rounded-full px-5 py-[11px]"
               )}
             >
               Primary
@@ -391,7 +391,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] hover:text-blue-600 text-secondary-light text-decoration-none rounded-full px-5 py-[11px]"
+                "h-[46px] hover:text-primary text-secondary-light text-decoration-none rounded-full px-5 py-[11px]"
               )}
               variant="link"
             >
@@ -413,7 +413,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-transparent hover:bg-transparent text-blue-600 rounded-full px-5 py-[11px]"
+                "h-[46px] bg-transparent hover:bg-transparent text-primary rounded-full px-5 py-[11px]"
               )}
             >
               Primary
@@ -469,7 +469,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-transparent hover:bg-transparent hover:text-blue-600 text-secondary-light text-decoration-none rounded-full px-5 py-[11px]"
+                "h-[46px] bg-transparent hover:bg-transparent hover:text-primary text-secondary-light text-decoration-none rounded-full px-5 py-[11px]"
               )}
               variant="link"
             >
@@ -497,7 +497,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-transparent border border-blue-600 text-blue-600 hover:bg-primary hover:text-white rounded-lg px-5 py-[11px] flex items-center gap-2"
+                "h-[46px] bg-transparent border border-primary text-primary hover:bg-primary hover:text-white rounded-lg px-5 py-[11px] flex items-center gap-2"
               )}
             >
               <ArrowLeftSquare className="text-xl" /> Left Icon
@@ -533,7 +533,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] border bg-transparent border-blue-600 text-blue-600 hover:bg-primary hover:text-white w-[60px] h-[50px] flex items-center justify-center gap-2"
+                "h-[46px] border bg-transparent border-primary text-primary hover:bg-primary hover:text-white w-[60px] h-[50px] flex items-center justify-center gap-2"
               )}
             >
               <ArrowDownSquare className="text-xl" />
@@ -554,7 +554,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-transparent border border-blue-600 text-blue-600 hover:bg-primary hover:text-white rounded-full px-5 py-[11px] flex items-center gap-2"
+                "h-[46px] bg-transparent border border-primary text-primary hover:bg-primary hover:text-white rounded-full px-5 py-[11px] flex items-center gap-2"
               )}
             >
               <ArrowLeftSquare className="text-xl" /> Left Icon
@@ -589,7 +589,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-transparent border border-blue-600 text-blue-600 hover:bg-primary hover:text-white rounded-full w-[60px] h-[50px] flex items-center justify-center gap-2"
+                "h-[46px] bg-transparent border border-primary text-primary hover:bg-primary hover:text-white rounded-full w-[60px] h-[50px] flex items-center justify-center gap-2"
               )}
             >
               <ArrowDownSquare className="text-xl" />

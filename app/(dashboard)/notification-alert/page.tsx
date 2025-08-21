@@ -1,12 +1,12 @@
 
 "use client";
 
-import React from "react";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { Switch } from "@/components/ui/switch";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
+import { Textarea } from "@/components/ui/textarea";
+import React from "react";
 import { handleNotificationForm } from "./actions";
 
 const ViewProfile = () => {
@@ -104,7 +104,7 @@ const NotificationSection: React.FC<NotificationSectionProps> = ({
             <Textarea
                 name={name}
                 placeholder={placeholder}
-                className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-12 !rounded-lg !shadow-none !ring-0 !h-[80px] !w-full"
+                className="border border-neutral-300 px-5 dark:border-slate-500 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-12 !rounded-lg !shadow-none !ring-0 !h-[80px] !w-full"
             />
         </div>
     );

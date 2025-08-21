@@ -34,12 +34,12 @@ export const statsCards: statCardsType[] = [
     },
     {
         cardBg: 'from-blue-600/10',
-        iconBgColor: 'bg-primary/25 text-blue-600 dark:text-blue-500',
+        iconBgColor: 'bg-primary/25 text-primary dark:text-primary',
         icon: UsersRound,
         statistics: '15,750',
         text: 'Patients',
         amount: '170',
-        amountColor: '17text-blue-600 dark:text-blue-500',
+        amountColor: '17text-primary dark:text-primary',
         description: 'New patients admitted',
     },
     {

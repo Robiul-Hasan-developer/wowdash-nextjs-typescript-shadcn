@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
-import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Card, CardContent } from "@/components/ui/card";
+import type { Metadata } from "next";
 
 const metadata: Metadata = {
   title: "Typography & Text Styles | WowDash Admin Dashboard",
@@ -113,7 +112,7 @@ const TypographyPage = () => {
               <h6 className="text-lg font-semibold mb-0">Heading Colors</h6>
             </div>
             <CardContent className="card-body py-4 px-6">
-              <h1 className="text-blue-600 dark:text-blue-600 mb-4 leading-[60px]">
+              <h1 className="text-primary dark:text-primary mb-4 leading-[60px]">
                 Heading 1
               </h1>
               <h2 className="text-green-600 dark:text-green-600 mb-4 leading-[60px]">

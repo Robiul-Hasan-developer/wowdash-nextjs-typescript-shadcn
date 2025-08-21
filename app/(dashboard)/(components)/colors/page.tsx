@@ -339,7 +339,7 @@ const ColorsPage = () => {
                   </div>
                   <div
                     onClick={handleBoxClick}
-                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-500 relative p-7 grow"
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-primary relative p-7 grow"
                   >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">

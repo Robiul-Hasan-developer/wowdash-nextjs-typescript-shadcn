@@ -36,7 +36,7 @@ const AvatarUpload = () => {
                 />
                 <Label
                     htmlFor="imageUpload"
-                    className="w-8 h-8 flex justify-center items-center bg-blue-100 dark:bg-primary/25 text-blue-600 dark:text-blue-400 border border-blue-600 hover:bg-blue-100 text-lg rounded-full cursor-pointer"
+                    className="w-8 h-8 flex justify-center items-center bg-blue-100 dark:bg-primary/25 text-primary dark:text-blue-400 border border-primary hover:bg-blue-100 text-lg rounded-full cursor-pointer"
                 >
                     <Camera className="w-4 h-4" />
                 </Label>

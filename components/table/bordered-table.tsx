@@ -79,7 +79,7 @@ const BorderedTable = () => {
                         <TableRow key={index}>
                             {/* Item */}
                             <TableCell
-                                className={`py-4 px-4 border-e last:border-e-0 border-b text-center text-blue-600 first:border-s last:border-e border-neutral-200 dark:border-slate-600 ${isLast ? "rounded-bl-lg" : ""
+                                className={`py-4 px-4 border-e last:border-e-0 border-b text-center text-primary first:border-s last:border-e border-neutral-200 dark:border-slate-600 ${isLast ? "rounded-bl-lg" : ""
                                     }`}
                             >
                                 {product.id}
@@ -101,10 +101,10 @@ const BorderedTable = () => {
                             </TableCell>
 
                             {/* action */}
-                            <TableCell className="py-4 px-4 border-e last:border-e-0 border-b text-center text-blue-600 first:border-s last:border-e border-neutral-200 dark:border-slate-600">
+                            <TableCell className="py-4 px-4 border-e last:border-e-0 border-b text-center text-primary first:border-s last:border-e border-neutral-200 dark:border-slate-600">
                                 <Link
                                     href="#"
-                                    className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-500 hover:text-blue-400 text-sm"
+                                    className="inline-flex items-center gap-1 text-primary dark:text-primary hover:text-blue-400 text-sm"
                                 >
                                     {product.action}
                                     <ChevronRight width={16} height={16} />

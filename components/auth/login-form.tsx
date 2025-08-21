@@ -1,12 +1,7 @@
 'use client'
 
-import React, { useState, useTransition, useRef } from 'react'
-import { signIn } from 'next-auth/react'
-import toast from 'react-hot-toast'
-import Link from 'next/link'
-import { z } from 'zod'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
+import { Button } from '@/components/ui/button'
+import { Checkbox } from '@/components/ui/checkbox'
 import {
   Form,
   FormControl,
@@ -15,13 +10,18 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { Checkbox } from '@/components/ui/checkbox'
-import { Mail, Lock, Eye, EyeOff, Loader2 } from 'lucide-react'
-import SocialLogin from './social-login'
-import { loginSchema } from '@/lib/zod'
 import { useLoading } from '@/contexts/LoadingContext'
+import { loginSchema } from '@/lib/zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { Eye, EyeOff, Loader2, Lock, Mail } from 'lucide-react'
+import { signIn } from 'next-auth/react'
+import Link from 'next/link'
+import { useRef, useState, useTransition } from 'react'
+import { useForm } from 'react-hook-form'
+import toast from 'react-hot-toast'
+import { z } from 'zod'
 import { handleLoginAction } from './actions/login'
+import SocialLogin from './social-login'
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false)
@@ -94,7 +94,7 @@ const LoginForm = () => {
                       type="email"
                       placeholder="Email"
                       name="email"
-                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 !shadow-none !ring-0"
+                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
                       disabled={loading}
                     />
                   </div>
@@ -118,7 +118,7 @@ const LoginForm = () => {
                       type={showPassword ? 'text' : 'password'}
                       placeholder="Password"
                       name="password"
-                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 !shadow-none !ring-0"
+                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
                       disabled={loading}
                     />
                     <Button

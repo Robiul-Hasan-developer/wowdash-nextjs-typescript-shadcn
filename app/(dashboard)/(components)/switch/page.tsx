@@ -58,7 +58,7 @@ const TypographyPage = () => {
                 />
                 <Label
                   htmlFor="switch1"
-                  className={switch1 ? "text-blue-600 font-medium" : ""}
+                  className={switch1 ? "text-primary font-medium" : ""}
                 >
                   Switch Active
                 </Label>
@@ -117,7 +117,7 @@ const TypographyPage = () => {
                 />
                 <Label
                   htmlFor="inactiveSwitch1"
-                  className={inactiveSwitch1 ? "text-blue-600 font-medium" : ""}
+                  className={inactiveSwitch1 ? "text-primary font-medium" : ""}
                 >
                   Switch Inactive
                 </Label>
@@ -180,7 +180,7 @@ const TypographyPage = () => {
                 />
                 <Label
                   htmlFor="switchTwo1"
-                  className={switchTwo1 ? "text-blue-600 font-medium" : ""}
+                  className={switchTwo1 ? "text-primary font-medium" : ""}
                 >
                   Switch Active
                 </Label>
@@ -239,7 +239,7 @@ const TypographyPage = () => {
                 />
                 <Label
                   htmlFor="inactiveSwitchTwo1"
-                  className={inactiveSwitchTwo1 ? "text-blue-600 font-medium" : ""}
+                  className={inactiveSwitchTwo1 ? "text-primary font-medium" : ""}
                 >
                   Switch Inactive
                 </Label>
@@ -301,7 +301,7 @@ const TypographyPage = () => {
               />
               <Label
                 htmlFor="switchWithText1"
-                className={switchWithText1 ? "text-blue-600 font-medium" : ""}
+                className={switchWithText1 ? "text-primary font-medium" : ""}
               >
                 Yes
               </Label>
@@ -315,7 +315,7 @@ const TypographyPage = () => {
               />
               <Label
                 htmlFor="switchWithText2"
-                className={switchWithText2 ? "text-blue-600 font-medium" : ""}
+                className={switchWithText2 ? "text-primary font-medium" : ""}
               >
                 No
               </Label>
@@ -334,7 +334,7 @@ const TypographyPage = () => {
               />
               <Label
                 htmlFor="inactiveSwitchHorizonta1"
-                className={inactiveSwitchHorizonta1 ? "text-blue-600 font-medium" : ""}
+                className={inactiveSwitchHorizonta1 ? "text-primary font-medium" : ""}
               >
                 Horizontal 1
               </Label>

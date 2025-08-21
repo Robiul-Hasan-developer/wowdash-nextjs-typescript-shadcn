@@ -84,7 +84,7 @@ const DefaultTable = () => {
                             </TableCell>
                             {/* Item */}
                             <TableCell
-                                className={`py-4 px-4 text-center text-blue-600 ${isLast ? "rounded-bl-lg" : ""
+                                className={`py-4 px-4 text-center text-primary ${isLast ? "rounded-bl-lg" : ""
                                     }`}
                             >
                                 {product.id}

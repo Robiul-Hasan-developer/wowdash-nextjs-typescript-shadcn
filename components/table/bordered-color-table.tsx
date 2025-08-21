@@ -61,19 +61,19 @@ const BorderedColorTable = () => {
         <Table className="table-auto border-spacing-0 border-separate">
             <TableHeader>
                 <TableRow className="border-0">
-                    <TableHead className="px-4 h-12 border-e last:border-e-0 text-center bg-neutral-100 dark:bg-slate-700 border-t border-blue-600 first:border-s last:border-e dark:border-slate-600 rounded-tl-lg">
+                    <TableHead className="px-4 h-12 border-e last:border-e-0 text-center bg-neutral-100 dark:bg-slate-700 border-t border-primary first:border-s last:border-e dark:border-slate-600 rounded-tl-lg">
                         Invoice
                     </TableHead>
-                    <TableHead className="px-4 h-12 border-e last:border-e-0 text-center bg-neutral-100 dark:bg-slate-700 border-t border-blue-600 first:border-s last:border-e dark:border-slate-600">
+                    <TableHead className="px-4 h-12 border-e last:border-e-0 text-center bg-neutral-100 dark:bg-slate-700 border-t border-primary first:border-s last:border-e dark:border-slate-600">
                         Name
                     </TableHead>
-                    <TableHead className="px-4 h-12 border-e last:border-e-0 text-center bg-neutral-100 dark:bg-slate-700 border-t border-blue-600 first:border-s last:border-e dark:border-slate-600">
+                    <TableHead className="px-4 h-12 border-e last:border-e-0 text-center bg-neutral-100 dark:bg-slate-700 border-t border-primary first:border-s last:border-e dark:border-slate-600">
                         Issued Date
                     </TableHead>
-                    <TableHead className="px-4 h-12 border-e last:border-e-0 text-center bg-neutral-100 dark:bg-slate-700 border-t border-blue-600 first:border-s last:border-e dark:border-slate-600">
+                    <TableHead className="px-4 h-12 border-e last:border-e-0 text-center bg-neutral-100 dark:bg-slate-700 border-t border-primary first:border-s last:border-e dark:border-slate-600">
                         Amount
                     </TableHead>
-                    <TableHead className="px-4 h-12 border-e last:border-e-0 text-center bg-neutral-100 dark:bg-slate-700 border-t border-blue-600 first:border-s last:border-e dark:border-slate-600 rounded-tr-lg">
+                    <TableHead className="px-4 h-12 border-e last:border-e-0 text-center bg-neutral-100 dark:bg-slate-700 border-t border-primary first:border-s last:border-e dark:border-slate-600 rounded-tr-lg">
                         Action
                     </TableHead>
                 </TableRow>
@@ -86,32 +86,32 @@ const BorderedColorTable = () => {
                         <TableRow key={index}>
                             {/* Item */}
                             <TableCell
-                                className={`py-4 px-4 border-e last:border-e-0 border-b text-center text-blue-600 first:border-s last:border-e border-blue-600 dark:border-slate-600 ${isLast ? "rounded-bl-lg" : ""
+                                className={`py-4 px-4 border-e last:border-e-0 border-b text-center text-primary first:border-s last:border-e border-primary dark:border-slate-600 ${isLast ? "rounded-bl-lg" : ""
                                     }`}
                             >
                                 {product.id}
                             </TableCell>
 
                             {/* name */}
-                            <TableCell className="py-4 px-4 border-e last:border-e-0 border-b text-center first:border-s last:border-e border-blue-600 dark:border-slate-600">
+                            <TableCell className="py-4 px-4 border-e last:border-e-0 border-b text-center first:border-s last:border-e border-primary dark:border-slate-600">
                                 {product.name}
                             </TableCell>
 
                             {/* date */}
-                            <TableCell className="py-4 px-4 border-e last:border-e-0 border-b text-center first:border-s last:border-e border-blue-600 dark:border-slate-600">
+                            <TableCell className="py-4 px-4 border-e last:border-e-0 border-b text-center first:border-s last:border-e border-primary dark:border-slate-600">
                                 {product.date}
                             </TableCell>
 
                             {/* amount */}
-                            <TableCell className="py-4 px-4 border-e last:border-e-0 border-b text-center first:border-s last:border-e border-blue-600 dark:border-slate-600">
+                            <TableCell className="py-4 px-4 border-e last:border-e-0 border-b text-center first:border-s last:border-e border-primary dark:border-slate-600">
                                 {product.amount}
                             </TableCell>
 
                             {/* action */}
-                            <TableCell className="py-4 px-4 border-e last:border-e-0 border-b text-center text-blue-600 first:border-s last:border-e border-blue-600 dark:border-slate-600">
+                            <TableCell className="py-4 px-4 border-e last:border-e-0 border-b text-center text-primary first:border-s last:border-e border-primary dark:border-slate-600">
                                 <Link
                                     href="#"
-                                    className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-500 hover:text-blue-400 text-sm"
+                                    className="inline-flex items-center gap-1 text-primary dark:text-primary hover:text-blue-400 text-sm"
                                 >
                                     {product.action}
                                     <ChevronRight width={16} height={16} />

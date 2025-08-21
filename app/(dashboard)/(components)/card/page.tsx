@@ -37,7 +37,7 @@ const TypographyPage = () => {
                 <h5 className="card-title text-lg text-neutral-600 dark:text-neutral-200
                         mb-1.5">This is Card title</h5>
                 <p className="dark:text-white card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
-                <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                <Link href="#" className="btn text-primary dark:text-primary hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
                 </Link>
@@ -52,7 +52,7 @@ const TypographyPage = () => {
                 <Button
                   type="button"
                   className={cn(
-                    "h-[46px] bg-blue-500 hover:bg-primary text-white rounded-lg px-5 py-[11px] inline-flex items-center gap-3"
+                    "h-[46px] bg-primary hover:bg-primary text-white rounded-lg px-5 py-[11px] inline-flex items-center gap-3"
                   )}
                 >
                   Read More
@@ -70,7 +70,7 @@ const TypographyPage = () => {
                   <Button
                     type="button"
                     className={cn(
-                      "h-[46px] bg-blue-100 dark:bg-primary/25 dark:hover:bg-primary hover:bg-primary text-blue-600 hover:text-white rounded-lg px-5 py-[11px]  flex items-center gap-3"
+                      "h-[46px] bg-blue-100 dark:bg-primary/25 dark:hover:bg-primary hover:bg-primary text-primary hover:text-white rounded-lg px-5 py-[11px]  flex items-center gap-3"
                     )}
                   >
                     Read More
@@ -97,7 +97,7 @@ const TypographyPage = () => {
                 <Button
                   type="button"
                   className={cn(
-                    "h-[46px] w-[46px] bg-blue-500 hover:bg-primary text-white rounded-lg px-5 py-[11px] inline-flex items-center justify-center"
+                    "h-[46px] w-[46px] bg-primary hover:bg-primary text-white rounded-lg px-5 py-[11px] inline-flex items-center justify-center"
                   )}
                 >
                   <ChevronRight className="w-6 h-6" />
@@ -125,12 +125,12 @@ const TypographyPage = () => {
             </div>
             <div className="card h-full rounded-xl overflow-hidden !p-0 border-0 text-center">
               <div className="card-body p-6">
-                <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-blue-100 dark:bg-primary/25 dark:text-blue-500 text-blue-600 mb-4 rounded-xl">
+                <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-blue-100 dark:bg-primary/25 dark:text-primary text-primary mb-4 rounded-xl">
                   <Monitor className="h-8 w-8 mb-0" />
                 </div>
                 <h6 className="mb-2">UI/UX Designer</h6>
                 <p className="dark:text-white card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
-                <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                <Link href="#" className="btn text-primary dark:text-primary hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
                 </Link>
@@ -174,7 +174,7 @@ const TypographyPage = () => {
                 <div className="absolute start-0 bottom-0 p-6 z-1">
                   <h5 className="card-title text-white dark:text-neutral-200 text-lg mb-1.5">This is Card title</h5>
                   <p className="dark:text-white card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
-                  <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                  <Link href="#" className="btn text-primary dark:text-primary hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                     Read More
                     <ChevronRight className="w-4 h-4" />
                   </Link>
@@ -187,7 +187,7 @@ const TypographyPage = () => {
                 <div className="absolute start-0 top-0 p-6 z-1 text-center">
                   <h5 className="card-title text-white dark:text-neutral-200 text-lg mb-1.5">This is Card title</h5>
                   <p className="dark:text-white card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
-                  <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                  <Link href="#" className="btn text-primary dark:text-primary hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                     Read More
                     <ChevronRight className="w-4 h-4" />
                   </Link>
@@ -200,7 +200,7 @@ const TypographyPage = () => {
                 <div className="absolute start-0 bottom-0 p-6 z-1 text-end">
                   <h5 className="card-title text-white dark:text-neutral-200 text-lg mb-1.5">This is Card title</h5>
                   <p className="dark:text-white card-text text-white">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all</p>
-                  <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                  <Link href="#" className="btn text-primary dark:text-primary hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                     Read More
                     <ChevronRight className="w-4 h-4" />
                   </Link>
@@ -226,7 +226,7 @@ const TypographyPage = () => {
                   the viewer's attention from the layout</p>
               </div>
               <div className="card-footer text-center bg-transparent border-t border-neutral-200 dark:border-neutral-600 pt-4 px-6">
-                <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                <Link href="#" className="btn text-primary dark:text-primary hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
                 </Link>
@@ -240,7 +240,7 @@ const TypographyPage = () => {
                 </div>
                 <p className="dark:text-white card-text text-neutral-600 mb-4">Intrinsically incubate intuitive opportunities and real-time potentialities for change for interoperable meta-itself the viewer's attention from the layout</p>
                 <p className="dark:text-white card-text text-neutral-600 mb-0">Intrinsically incubate intuitive opportunities and real-time potentialities for change for interoperable </p>
-                <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                <Link href="#" className="btn text-primary dark:text-primary hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   View All
                   <ChevronRight className="w-4 h-4" />
                 </Link>
@@ -252,7 +252,7 @@ const TypographyPage = () => {
                   <h6 className="text-lg mb-0">How can I help your</h6>
                   <span className="text-sm">Awesome Support</span>
                 </div>
-                <a href="#" className="text-blue-600 dark:text-blue-600 hover:underline">View All</a>
+                <a href="#" className="text-primary dark:text-primary hover:underline">View All</a>
               </div>
               <div className="card-body py-4 px-6">
                 <p className="dark:text-white card-text text-neutral-600 mb-4">Intrinsically incubate intuitive opportunities and real-time potentialities for change for interoperable meta-itself the viewer's attention from the layout</p>
@@ -272,7 +272,7 @@ const TypographyPage = () => {
               <div className="card-body p-4 grow">
                 <h5 className="card-title text-lg text-neutral-900 dark:text-neutral-200 mb-1.5">This is Card title</h5>
                 <p className="dark:text-white card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
-                <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                <Link href="#" className="btn text-primary dark:text-primary hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
                 </Link>
@@ -285,7 +285,7 @@ const TypographyPage = () => {
               <div className="card-body p-4 grow">
                 <h5 className="card-title text-lg text-neutral-900 dark:text-neutral-200 mb-1.5">This is Card title</h5>
                 <p className="dark:text-white card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
-                <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                <Link href="#" className="btn text-primary dark:text-primary hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
                 </Link>
@@ -298,7 +298,7 @@ const TypographyPage = () => {
               <div className="card-body p-4 grow">
                 <h5 className="card-title text-lg text-neutral-900 dark:text-neutral-200 mb-1.5">This is Card title</h5>
                 <p className="dark:text-white card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
-                <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                <Link href="#" className="btn text-primary dark:text-primary hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
                 </Link>
@@ -311,7 +311,7 @@ const TypographyPage = () => {
               <div className="card-body p-4 grow">
                 <h5 className="card-title text-lg text-neutral-900 dark:text-neutral-200 mb-1.5">This is Card title</h5>
                 <p className="dark:text-white card-text text-neutral-600 mb-4">We quickly learn to fear and thus automatically avo id potentially stressful situations of all kinds, including the most common of all .</p>
-                <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                <Link href="#" className="btn text-primary dark:text-primary hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
                 </Link>
@@ -343,7 +343,7 @@ const TypographyPage = () => {
                 </div>
                 <h6 className="mb-2">UI/UX Designer</h6>
                 <p className="dark:text-white card-text mb-2 text-secondary-light">Random Text gateway to the Origin al the Works Platform, &amp; your unique block chain gateway identity.</p>
-                <Link href="#" className="btn text-blue-600 dark:text-blue-500 hover:underline px-0 py-2.5 inline-flex items-center gap-2">
+                <Link href="#" className="btn text-primary dark:text-primary hover:underline px-0 py-2.5 inline-flex items-center gap-2">
                   Read More
                   <ChevronRight className="w-4 h-4" />
                 </Link>

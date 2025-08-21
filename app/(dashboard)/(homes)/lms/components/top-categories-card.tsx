@@ -96,7 +96,7 @@ const TopCategoriesCard: React.FC = () => {
                                 </div>
                                 <Link
                                     href="#"
-                                    className="w-6 h-6 bg-primary/10 text-blue-600 dark:text-blue-600 flex justify-center items-center text-lg hover:bg-primary/20 rounded"
+                                    className="w-6 h-6 bg-primary/10 text-primary dark:text-primary flex justify-center items-center text-lg hover:bg-primary/20 rounded"
                                 >
                                     <ChevronRight className="w-4" />
                                 </Link>

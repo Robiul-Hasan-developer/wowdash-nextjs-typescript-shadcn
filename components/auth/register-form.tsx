@@ -1,12 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
-import toast from "react-hot-toast";
-import Link from "next/link";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Form,
   FormControl,
@@ -15,12 +10,17 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Mail, Lock, Eye, EyeOff, Loader2, UserRound } from "lucide-react";
-import SocialLogin from "./social-login";
-import { registerSchema } from "@/lib/zod";
 import { useLoading } from "@/contexts/LoadingContext";
+import { registerSchema } from "@/lib/zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Eye, EyeOff, Loader2, Lock, Mail, UserRound } from "lucide-react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
+import { z } from "zod";
+import SocialLogin from "./social-login";
 
 const RegisterForm = () => {
   const router = useRouter();
@@ -71,7 +71,7 @@ const RegisterForm = () => {
                       {...field}
                       type="text"
                       placeholder="Username"
-                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 !shadow-none !ring-0"
+                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
                       disabled={loading}
                     />
                   </div>
@@ -94,7 +94,7 @@ const RegisterForm = () => {
                       {...field}
                       type="email"
                       placeholder="Email"
-                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 !shadow-none !ring-0"
+                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
                       disabled={loading}
                     />
                   </div>
@@ -117,7 +117,7 @@ const RegisterForm = () => {
                       {...field}
                       type={showPassword ? "text" : "password"}
                       placeholder="Password"
-                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 !shadow-none !ring-0"
+                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
                       disabled={loading}
                     />
                     <Button
@@ -157,14 +157,14 @@ const RegisterForm = () => {
                     By creating an account means you agree to the{" "}
                     <Link
                       href="#"
-                      className="text-blue-600 font-semibold hover:underline"
+                      className="text-primary font-semibold hover:underline"
                     >
                       Terms & Conditions
                     </Link>{" "}
                     and our{" "}
                     <Link
                       href="#"
-                      className="text-blue-600 font-semibold hover:underline"
+                      className="text-primary font-semibold hover:underline"
                     >
                       Privacy Policy
                     </Link>

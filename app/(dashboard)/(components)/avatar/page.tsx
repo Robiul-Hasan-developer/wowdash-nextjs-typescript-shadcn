@@ -58,7 +58,7 @@ const TypographyPage = () => {
         <div className="col-span-12 md:col-span-6">
           <DefaultCardComponent title="Avatar With content">
             <div className="flex items-center flex-wrap gap-3">
-              <span className="w-6 h-6 rounded-full object-fit-cover flex justify-center items-center font-semibold text-[10px] bg-blue-100 dark:bg-primary/25 text-blue-600 dark:text-blue-400">24</span>
+              <span className="w-6 h-6 rounded-full object-fit-cover flex justify-center items-center font-semibold text-[10px] bg-blue-100 dark:bg-primary/25 text-primary dark:text-blue-400">24</span>
               <span className="w-8 h-8 rounded-full object-fit-cover flex justify-center items-center font-semibold text-xs bg-purple-100 dark:bg-purple-600/25 text-purple-600 dark:text-purple-400">32</span>
               <span className="w-10 h-10 rounded-full object-fit-cover flex justify-center items-center font-semibold text-sm bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400">40</span>
               <span className="w-[44px] h-[44px] rounded-full object-fit-cover flex justify-center items-center font-semibold text-base bg-cyan-100 dark:bg-cyan-600/25 text-cyan-600 dark:text-cyan-400">44</span>
@@ -66,7 +66,7 @@ const TypographyPage = () => {
               <span className="w-[64px] h-[64px] rounded-full object-fit-cover flex justify-center items-center font-semibold text-xl bg-red-100 dark:bg-red-600/25 text-red-600 dark:text-red-400">64</span>
             </div>
             <div className="flex items-center flex-wrap gap-3 mt-6">
-              <span className="w-6 h-6 rounded object-fit-cover flex justify-center items-center font-semibold text-[10px] bg-blue-100 dark:bg-primary/25 text-blue-600 dark:text-blue-400">24</span>
+              <span className="w-6 h-6 rounded object-fit-cover flex justify-center items-center font-semibold text-[10px] bg-blue-100 dark:bg-primary/25 text-primary dark:text-blue-400">24</span>
               <span className="w-8 h-8 rounded-lg object-fit-cover flex justify-center items-center font-semibold text-xs bg-purple-100 dark:bg-purple-600/25 text-purple-600 dark:text-purple-400">32</span>
               <span className="w-10 h-10 rounded-lg object-fit-cover flex justify-center items-center font-semibold text-sm bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400">40</span>
               <span className="w-[44px] h-[44px] rounded-lg object-fit-cover flex justify-center items-center font-semibold text-base bg-cyan-100 dark:bg-cyan-600/25 text-cyan-600 dark:text-cyan-400">44</span>
@@ -106,7 +106,7 @@ const TypographyPage = () => {
             </div>
             <div className="flex items-center flex-wrap gap-3 mt-6">
               <div className="relative">
-                <span className="w-6 h-6 rounded-full object-fit-cover flex justify-center items-center font-semibold text-[10px] bg-blue-100 dark:bg-primary/25 text-blue-600 dark:text-blue-400">24</span>
+                <span className="w-6 h-6 rounded-full object-fit-cover flex justify-center items-center font-semibold text-[10px] bg-blue-100 dark:bg-primary/25 text-primary dark:text-blue-400">24</span>
                 <span className="w-2 h-2 bg-primary border br-white rounded-full absolute end-0 bottom-[3px]"></span>
               </div>
               <div className="relative">
@@ -137,7 +137,7 @@ const TypographyPage = () => {
               <span className="w-6 h-6 rounded-full object-fit-cover relative ms--10px border bg-neutral-100 text-neutral-600 dark:bg-neutral-600 dark:text-white dark:border-neutral-500 text-xs inline-flex items-center justify-center">
                 +5
               </span>
-              <button type="button" className="w-6 h-6 rounded-full border border-blue-600 text-blue-600 ms--8 z-[1] bg-white border-dashed text-secondary-light text-xs inline-flex items-center justify-center">
+              <button type="button" className="w-6 h-6 rounded-full border border-primary text-primary ms--8 z-[1] bg-white border-dashed text-secondary-light text-xs inline-flex items-center justify-center">
                 <Plus className="w-4 h-4" />
               </button>
             </div>
@@ -152,7 +152,7 @@ const TypographyPage = () => {
               <span className="w-8 h-8 rounded-full object-fit-cover relative ms--10px border bg-neutral-100 text-neutral-600 dark:bg-neutral-600 dark:text-white dark:border-neutral-500 text-xs inline-flex items-center justify-center">
                 +5
               </span>
-              <button type="button" className="w-8 h-8 rounded-full border border-blue-600 text-blue-600 ms--8 z-[1] bg-white border-dashed text-secondary-light text-lg inline-flex items-center justify-center">
+              <button type="button" className="w-8 h-8 rounded-full border border-primary text-primary ms--8 z-[1] bg-white border-dashed text-secondary-light text-lg inline-flex items-center justify-center">
                 <Plus className="w-4 h-4" />
               </button>
             </div>

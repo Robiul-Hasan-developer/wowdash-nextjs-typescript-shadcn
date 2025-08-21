@@ -96,7 +96,7 @@ const TypographyPage = () => {
               <Link className="page-link bg-white dark:bg-slate-700 border border-neutral-200 dark:border-neutral-600 text-neutral-900 dark:text-white font-medium rounded-lg flex items-center justify-center h-[48px] w-[48px]" href="#">1</Link>
             </li>
             <li className="page-item">
-              <Link className="page-link bg-white dark:bg-slate-700  font-medium rounded-lg flex items-center justify-center h-[48px] w-[48px] border border-blue-600 text-blue-600 dark:border-blue-600 dark:text-blue-600" href="#">2</Link>
+              <Link className="page-link bg-white dark:bg-slate-700  font-medium rounded-lg flex items-center justify-center h-[48px] w-[48px] border border-primary text-primary dark:border-primary dark:text-primary" href="#">2</Link>
             </li>
             <li className="page-item">
               <Link className="page-link bg-white dark:bg-slate-700 border border-neutral-200 dark:border-neutral-600 text-neutral-900 dark:text-white font-medium rounded-lg flex items-center justify-center h-[48px] w-[48px]" href="#">3</Link>
@@ -126,7 +126,7 @@ const TypographyPage = () => {
               <Link className="page-link bg-white dark:bg-slate-700 border border-neutral-200 dark:border-neutral-600 text-neutral-900 dark:text-white font-medium rounded-lg flex items-center justify-center h-[48px] w-[48px]" href="#">1</Link>
             </li>
             <li className="page-item">
-              <Link className="page-link bg-white dark:bg-slate-700  font-medium rounded-lg flex items-center justify-center h-[48px] w-[48px] border border-blue-600 text-blue-600 dark:border-blue-600 dark:text-blue-600" href="#">2</Link>
+              <Link className="page-link bg-white dark:bg-slate-700  font-medium rounded-lg flex items-center justify-center h-[48px] w-[48px] border border-primary text-primary dark:border-primary dark:text-primary" href="#">2</Link>
             </li>
             <li className="page-item">
               <Link className="page-link bg-white dark:bg-slate-700 border border-neutral-200 dark:border-neutral-600 text-neutral-900 dark:text-white font-medium rounded-lg flex items-center justify-center h-[48px] w-[48px]" href="#">3</Link>

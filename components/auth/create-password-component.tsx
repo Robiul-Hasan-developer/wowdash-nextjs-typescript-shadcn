@@ -1,13 +1,15 @@
 'use client';
 
-import React, { useState, useTransition } from "react";
-import { useRouter } from "next/navigation";
-import toast from "react-hot-toast";
-import Link from "next/link";
 import { zodResolver } from "@hookform/resolvers/zod";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 import { z } from "zod";
 
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Form,
   FormControl,
@@ -16,10 +18,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Lock, Eye, EyeOff, Loader2 } from "lucide-react";
 import { createPasswordSchema } from "@/lib/zod";
+import { Eye, EyeOff, Loader2, Lock } from "lucide-react";
 import { handleResetPassword } from "./actions/handleResetPassword";
 
 const CreatePasswordComponent = () => {
@@ -62,7 +62,7 @@ const CreatePasswordComponent = () => {
                       type={showPassword ? "text" : "password"}
                       placeholder="Password"
                       name="password"
-                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600"
+                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary"
                       disabled={isPending}
                     />
                     <Button
@@ -97,7 +97,7 @@ const CreatePasswordComponent = () => {
                       type={showConfirmPassword ? "text" : "password"}
                       name="confirmPassword"
                       placeholder="Confirm Password"
-                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600"
+                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary"
                       disabled={isPending}
                     />
                     <Button

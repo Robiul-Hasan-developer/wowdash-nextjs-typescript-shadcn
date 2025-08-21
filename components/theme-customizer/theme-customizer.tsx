@@ -43,7 +43,7 @@ const ThemeCustomizer = () => {
                             : "end-0 translate-x-full hidden"     // RTL closed → hide right
                         : customizationOpen
                             ? "end-0 translate-x-0"        // LTR open → right side
-                            : "end-0 translate-x-full"     // LTR closed → hide right
+                            : "end-0 translate-x-full hidden"     // LTR closed → hide right
                     }
                 `}
             >
@@ -55,7 +55,7 @@ const ThemeCustomizer = () => {
                     </div>
                     <div className="">
                         <Button
-                            className={cn(`!py-0 !px-0 h-[unset] text-neutral-900  bg-transparent shadow-none rounded-md hover:bg-transparent hover:text-blue-600 hover:rotate-90 duration-300`)}
+                            className={cn(`!py-0 !px-0 h-[unset] text-neutral-900  bg-transparent shadow-none rounded-md hover:bg-transparent hover:text-primary hover:rotate-90 duration-300`)}
                             onClick={() => setCustomizationOpen(false)}
                         >
                             <X className="!w-5 !h-5" />

@@ -1,10 +1,8 @@
 "use client";
 
-import React from "react";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
@@ -12,6 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 
 const BuyBalanceContent = () => {
@@ -28,7 +27,7 @@ const BuyBalanceContent = () => {
           <Input
             id="estimatedValue"
             placeholder="Estimated Value"
-            className="border border-neutral-200 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-11 rounded-s-lg rounded-e-none !shadow-none !ring-0"
+            className="border border-neutral-200 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-11 rounded-s-lg rounded-e-none !shadow-none !ring-0"
           />
           <div className="shrink-0 flex -ms-[0px]">
             <Select>
@@ -55,7 +54,7 @@ const BuyBalanceContent = () => {
           <Input
             id="TradeValue"
             placeholder="Estimated Value"
-            className="border border-neutral-200 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 h-11 rounded-s-lg rounded-e-none !shadow-none !ring-0"
+            className="border border-neutral-200 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-11 rounded-s-lg rounded-e-none !shadow-none !ring-0"
           />
           <div className="shrink-0 flex -ms-[0px]">
             <Select>
@@ -83,7 +82,7 @@ const BuyBalanceContent = () => {
         <Textarea
           id="address"
           placeholder="Enter Address"
-          className="border border-neutral-200 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 rounded-lg !shadow-none !ring-0 h-[120px]"
+          className="border border-neutral-200 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary rounded-lg !shadow-none !ring-0 h-[120px]"
         />
       </div>
 

@@ -19,8 +19,8 @@ const TypographyPage = () => {
         <DefaultCardComponent title="Default Radio">
           <div className="flex items-center flex-wrap gap-7">
             <div className="flex items-center gap-2">
-              <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="radio1" id="radio1" defaultChecked />
-              <label className="peer-checked:text-blue-600 leading-[1] font-medium" htmlFor="radio1"> Radio Active </label>
+              <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 text-primary bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="radio1" id="radio1" defaultChecked />
+              <label className="peer-checked:text-primary leading-[1] font-medium" htmlFor="radio1"> Radio Active </label>
             </div>
             <div className="flex items-center gap-2">
               <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="radio2" id="radio2" defaultChecked />
@@ -37,8 +37,8 @@ const TypographyPage = () => {
           </div>
           <div className="flex items-center flex-wrap gap-7 mt-6">
             <div className="flex items-center gap-2">
-              <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="radio" id="radio11" />
-              <label className="peer-checked:text-blue-600 leading-[1] font-medium" htmlFor="radio11"> Radio Inactive </label>
+              <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 text-primary bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="radio" id="radio11" />
+              <label className="peer-checked:text-primary leading-[1] font-medium" htmlFor="radio11"> Radio Inactive </label>
             </div>
             <div className="flex items-center gap-2">
               <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="radio" id="radio22" />
@@ -58,8 +58,8 @@ const TypographyPage = () => {
         <DefaultCardComponent title="Radio Disable">
           <div className="flex items-center flex-wrap gap-7">
             <div className="flex items-center gap-2">
-              <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 opacity-75 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="radio11" id="radio111" defaultChecked disabled />
-              <label className="peer-disabled:opacity-75 peer-checked:text-blue-600 leading-[1] font-medium" htmlFor="radio111"> Radio Active </label>
+              <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 opacity-75 text-primary bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="radio11" id="radio111" defaultChecked disabled />
+              <label className="peer-disabled:opacity-75 peer-checked:text-primary leading-[1] font-medium" htmlFor="radio111"> Radio Active </label>
             </div>
             <div className="flex items-center gap-2">
               <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 opacity-75 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="radio22" id="radio222" defaultChecked disabled />
@@ -76,8 +76,8 @@ const TypographyPage = () => {
           </div>
           <div className="flex items-center flex-wrap gap-7 mt-6">
             <div className="flex items-center gap-2">
-              <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 disabled:opacity-75 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="radio0" id="radio1011" disabled />
-              <label className="peer-disabled:opacity-75 peer-checked:text-blue-600 leading-[1] font-medium" htmlFor="radio1011"> Radio Inactive </label>
+              <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 disabled:opacity-75 text-primary bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="radio0" id="radio1011" disabled />
+              <label className="peer-disabled:opacity-75 peer-checked:text-primary leading-[1] font-medium" htmlFor="radio1011"> Radio Inactive </label>
             </div>
             <div className="flex items-center gap-2">
               <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 disabled:opacity-75 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="radio0" id="radio2022" disabled />
@@ -98,8 +98,8 @@ const TypographyPage = () => {
           <div className="flex items-center flex-wrap gap-6">
             <div className="bg-blue-50 dark:bg-primary/25 px-5 py-3 rounded-lg">
               <span className="flex items-center gap-2">
-                <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="radio100" id="radio100" defaultChecked />
-                <label className="peer-checked:text-blue-600 leading-[1] font-medium" htmlFor="radio100"> Radio Active </label>
+                <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 text-primary bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="radio100" id="radio100" defaultChecked />
+                <label className="peer-checked:text-primary leading-[1] font-medium" htmlFor="radio100"> Radio Active </label>
               </span>
             </div>
             <div className="bg-neutral-100 dark:bg-neutral-600/25 px-5 py-3 rounded-lg">
@@ -132,8 +132,8 @@ const TypographyPage = () => {
         <DefaultCardComponent title="Radio Horizontal">
           <div className="flex items-center flex-wrap gap-7">
             <div className="flex items-center gap-2">
-              <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="horizontal" id="horizontal1" />
-              <label className="peer-checked:text-blue-600 leading-[1] font-medium" htmlFor="horizontal1"> Horizontal 1 </label>
+              <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 text-primary bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="horizontal" id="horizontal1" />
+              <label className="peer-checked:text-primary leading-[1] font-medium" htmlFor="horizontal1"> Horizontal 1 </label>
             </div>
             <div className="flex items-center gap-2">
               <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="horizontal" id="horizontal2" />
@@ -153,8 +153,8 @@ const TypographyPage = () => {
         <DefaultCardComponent title="Radio Vertical">
           <div className="flex items-start flex-col flex-wrap gap-6">
             <div className="flex items-center gap-2">
-              <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="vertical" id="vertical11" />
-              <label className="peer-checked:text-blue-600 leading-[1] font-medium" htmlFor="vertical11"> Vertical 1 </label>
+              <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 text-primary bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-primary dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="vertical" id="vertical11" />
+              <label className="peer-checked:text-primary leading-[1] font-medium" htmlFor="vertical11"> Vertical 1 </label>
             </div>
             <div className="flex items-center gap-2">
               <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="vertical" id="vertical22" />

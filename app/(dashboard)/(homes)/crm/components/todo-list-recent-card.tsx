@@ -1,8 +1,7 @@
-import React from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Card, CardContent } from "@/components/ui/card";
-import TodoListRecentTable from '@/components/table/todo-list-recent-table';
 import CommonLink from '@/components/shared/common-link';
+import TodoListRecentTable from '@/components/table/todo-list-recent-table';
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const TodoListRecentCard = () => {
     return (
@@ -11,10 +10,10 @@ const TodoListRecentCard = () => {
                 <Tabs defaultValue="todoList" className="gap-0">
                     <div className="flex items-center justify-between border-b border-neutral-200 dark:border-slate-600">
                         <TabsList className='bg-transparent dark:bg-transparent rounded-none h-[50px]  p-0'>
-                            <TabsTrigger value="todoList" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                            <TabsTrigger value="todoList" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-primary dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:border-primary dark:data-[state=active]:border-primary dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
                                 To Do List
                             </TabsTrigger>
-                            <TabsTrigger value="recentLeads" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-blue-600 dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:border-blue-600 dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
+                            <TabsTrigger value="recentLeads" className='py-2.5 px-4 font-medium text-base inline-flex items-center gap-3 dark:bg-transparent text-neutral-600 hover:text-primary dark:text-white dark:hover:text-blue-500 border-0 border-b-1 border-transparent dark:border-transparent data-[state=active]:border-primary dark:data-[state=active]:border-primary dark:data-[state=active]:bg-transparent rounded-[0] data-[state=active]:shadow-none cursor-pointer translate-y-px'>
                                 Recent Leads
                             </TabsTrigger>
                         </TabsList>
@@ -25,10 +24,10 @@ const TodoListRecentCard = () => {
 
                     <div className="p-6">
                         <TabsContent value="todoList">
-                            <TodoListRecentTable/>
+                            <TodoListRecentTable />
                         </TabsContent>
                         <TabsContent value="recentLeads">
-                            <TodoListRecentTable/>
+                            <TodoListRecentTable />
                         </TabsContent>
                     </div>
                 </Tabs>

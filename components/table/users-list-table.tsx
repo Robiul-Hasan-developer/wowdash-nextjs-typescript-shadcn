@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import {
     Table,
     TableBody,
@@ -6,10 +7,8 @@ import {
     TableHeader,
     TableRow
 } from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
-import { Eye, Edit, Trash2 } from "lucide-react";
-import Image, { StaticImageData } from "next/image";
 import UserList1 from "@/public/assets/images/user-list/user-list1.png";
+import UserList10 from "@/public/assets/images/user-list/user-list10.png";
 import UserList2 from "@/public/assets/images/user-list/user-list2.png";
 import UserList3 from "@/public/assets/images/user-list/user-list3.png";
 import UserList4 from "@/public/assets/images/user-list/user-list4.png";
@@ -18,7 +17,8 @@ import UserList6 from "@/public/assets/images/user-list/user-list6.png";
 import UserList7 from "@/public/assets/images/user-list/user-list7.png";
 import UserList8 from "@/public/assets/images/user-list/user-list8.png";
 import UserList9 from "@/public/assets/images/user-list/user-list9.png";
-import UserList10 from "@/public/assets/images/user-list/user-list10.png";
+import { Edit, Eye, Trash2 } from "lucide-react";
+import Image, { StaticImageData } from "next/image";
 
 
 interface User {
@@ -226,7 +226,7 @@ export default function UserTable() {
                                     }`}
                             >
                                 <div className="flex justify-center gap-2">
-                                    <Button size="icon" variant="ghost" className="rounded-[50%] text-blue-500 bg-blue-500/10">
+                                    <Button size="icon" variant="ghost" className="rounded-[50%] text-blue-500 bg-primary/10">
                                         <Eye className="w-5 h-5" />
                                     </Button>
                                     <Button size="icon" variant="ghost" className="rounded-[50%] text-green-600 bg-green-600/10">

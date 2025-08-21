@@ -1,12 +1,6 @@
 'use client'
 
-import React, { useRef, useTransition } from 'react'
-import { useRouter } from 'next/navigation'
-import toast from 'react-hot-toast'
-import Link from 'next/link'
-import { z } from 'zod'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
+import { Button } from '@/components/ui/button'
 import {
   Form,
   FormControl,
@@ -15,10 +9,16 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { Mail, Loader2 } from 'lucide-react'
-import { forgotPasswordSchema } from '@/lib/zod'
 import { useLoading } from '@/contexts/LoadingContext'
+import { forgotPasswordSchema } from '@/lib/zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { Loader2, Mail } from 'lucide-react'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { useRef, useTransition } from 'react'
+import { useForm } from 'react-hook-form'
+import toast from 'react-hot-toast'
+import { z } from 'zod'
 import { handleForgotPasswordAction } from './actions/forgot-password'
 
 const ForgotPasswordComponent = () => {
@@ -81,7 +81,7 @@ const ForgotPasswordComponent = () => {
                       type="email"
                       placeholder="Email"
                       name="email"
-                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-blue-600 dark:focus:border-blue-600 focus-visible:border-blue-600 !shadow-none !ring-0"
+                      className="ps-13 pe-12 h-14 rounded-xl bg-neutral-100 dark:bg-slate-800 border border-neutral-300 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary !shadow-none !ring-0"
                       disabled={loading}
                     />
                   </div>

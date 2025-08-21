@@ -19,9 +19,9 @@ const TypographyPage = () => {
         <div className="col-span-1 lg:col-span-6">
           <DefaultCardComponent title="Default Alerts">
             <div className="flex flex-col gap-4">
-              <div className="alert alert-blue bg-blue-50 dark:bg-primary/25 text-blue-600 dark:text-blue-400 border-blue-50 px-6 py-[11px] mb-0 font-semibold text-lg rounded-lg flex items-center justify-between" role="alert">
+              <div className="alert alert-blue bg-blue-50 dark:bg-primary/25 text-primary dark:text-blue-400 border-blue-50 px-6 py-[11px] mb-0 font-semibold text-lg rounded-lg flex items-center justify-between" role="alert">
                 This is a Primary alert
-                <button className="remove-button cursor-pointer text-blue-600 text-2xl line-height-1">
+                <button className="remove-button cursor-pointer text-primary text-2xl line-height-1">
                   <X className="w-5 h-5" />
                 </button>
               </div>
@@ -56,9 +56,9 @@ const TypographyPage = () => {
         <div className="col-span-1 lg:col-span-6">
           <DefaultCardComponent title="Outline Alerts">
             <div className="flex flex-col gap-4">
-              <div className="alert alert-blue bg-transparent text-blue-600 border border-blue-600 px-6 py-[11px] mb-0 font-semibold text-lg rounded-lg flex items-center justify-between" role="alert">
+              <div className="alert alert-blue bg-transparent text-primary border border-primary px-6 py-[11px] mb-0 font-semibold text-lg rounded-lg flex items-center justify-between" role="alert">
                 This is a Primary alert
-                <button className="remove-button cursor-pointer text-blue-600 text-2xl line-height-1">
+                <button className="remove-button cursor-pointer text-primary text-2xl line-height-1">
                   <X className="w-5 h-5" />
                 </button>
               </div>
@@ -95,7 +95,7 @@ const TypographyPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
               <div className="col-span-1 lg:col-span-6">
                 <div className="flex flex-col gap-4">
-                  <div className="alert alert-blue bg-primary text-white border-blue-600 px-6 py-[11px] mb-0 font-semibold text-lg rounded-lg flex items-center justify-between" role="alert">
+                  <div className="alert alert-blue bg-primary text-white border-primary px-6 py-[11px] mb-0 font-semibold text-lg rounded-lg flex items-center justify-between" role="alert">
                     This is a Primary alert
                     <button className="remove-button cursor-pointer text-white text-2xl line-height-1">
                       <X className="w-5 h-5" />
@@ -144,12 +144,12 @@ const TypographyPage = () => {
         <div className="col-span-1 lg:col-span-6">
           <DefaultCardComponent title="Outline Alerts">
             <div className="flex flex-col gap-4">
-              <div className="alert alert-blue bg-blue-100 dark:bg-primary/25 text-blue-600 dark:text-blue-400 border-blue-50 px-6 py-[11px] mb-0 font-semibold text-lg rounded-lg flex items-center justify-between" role="alert">
+              <div className="alert alert-blue bg-blue-100 dark:bg-primary/25 text-primary dark:text-blue-400 border-blue-50 px-6 py-[11px] mb-0 font-semibold text-lg rounded-lg flex items-center justify-between" role="alert">
                 <div className="flex items-center gap-2">
                   <Smile className="w-5 h-5" />
                   This is a Primary alert
                 </div>
-                <button className="remove-button cursor-pointer text-blue-600 text-2xl line-height-1">
+                <button className="remove-button cursor-pointer text-primary text-2xl line-height-1">
                   <X className="w-5 h-5" />
                 </button>
               </div>
@@ -205,12 +205,12 @@ const TypographyPage = () => {
         <div className="col-span-1 lg:col-span-6">
           <DefaultCardComponent title="Left Border Alerts">
             <div className="flex flex-col gap-4">
-              <div className="alert alert-blue bg-blue-100 dark:bg-primary/25 text-blue-600 dark:text-blue-400 border-start-width-4-px border-l-[3px] border-blue-600 dark:border-blue-600 px-6 py-[13px] mb-0 font-semibold text-lg rounded flex items-center justify-between" role="alert">
+              <div className="alert alert-blue bg-blue-100 dark:bg-primary/25 text-primary dark:text-blue-400 border-start-width-4-px border-l-[3px] border-primary dark:border-primary px-6 py-[13px] mb-0 font-semibold text-lg rounded flex items-center justify-between" role="alert">
                 <div className="flex items-center gap-2">
                   <Smile className="w-5 h-5" />
                   This is a Primary alert
                 </div>
-                <button className="remove-button cursor-pointer text-blue-600 text-2xl line-height-1">
+                <button className="remove-button cursor-pointer text-primary text-2xl line-height-1">
                   <X className="w-5 h-5" />
                 </button>
               </div>
@@ -266,14 +266,14 @@ const TypographyPage = () => {
         <div className="col-span-1 lg:col-span-6">
           <DefaultCardComponent title="Default Alerts">
             <div className="flex flex-col gap-4">
-              <div className="alert alert-blue bg-blue-100 dark:bg-primary/25 text-blue-600 dark:text-blue-400 border-blue-50 px-6 py-[11px] mb-0 font-semibold text-lg rounded-lg" role="alert">
+              <div className="alert alert-blue bg-blue-100 dark:bg-primary/25 text-primary dark:text-blue-400 border-blue-50 px-6 py-[11px] mb-0 font-semibold text-lg rounded-lg" role="alert">
                 <div className="flex items-center justify-between text-lg">
                   This is a Primary alert
-                  <button className="remove-button cursor-pointer text-blue-600 text-2xl line-height-1">
+                  <button className="remove-button cursor-pointer text-primary text-2xl line-height-1">
                     <X className="w-5 h-5" />
                   </button>
                 </div>
-                <p className="font-medium text-blue-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                <p className="font-medium text-primary text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
               </div>
               <div className="alert alert-green bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400 border-green-100 px-6 py-[11px] mb-0 font-semibold text-lg rounded-lg" role="alert">
                 <div className="flex items-center justify-between text-lg">
@@ -318,16 +318,16 @@ const TypographyPage = () => {
         <div className="col-span-1 lg:col-span-6">
           <DefaultCardComponent title="Default Alerts">
             <div className="flex flex-col gap-4">
-              <div className="alert alert-blue bg-blue-100 dark:bg-primary/25 text-blue-600 dark:text-blue-400 border-blue-50 px-6 py-[11px] mb-0 font-semibold text-lg rounded-lg" role="alert">
+              <div className="alert alert-blue bg-blue-100 dark:bg-primary/25 text-primary dark:text-blue-400 border-blue-50 px-6 py-[11px] mb-0 font-semibold text-lg rounded-lg" role="alert">
                 <div className="flex items-start justify-between text-lg">
                   <div className="flex items-start gap-4">
                     <Smile className="w-5 h-5 mt-1.5 shrink-0" />
                     <div>
                       This is a Primary alert
-                      <p className="font-medium text-blue-600 text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                      <p className="font-medium text-primary text-sm mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
                     </div>
                   </div>
-                  <button className="remove-button cursor-pointer text-blue-600 text-2xl line-height-1">
+                  <button className="remove-button cursor-pointer text-primary text-2xl line-height-1">
                     <X className="w-5 h-5" />
                   </button>
                 </div>

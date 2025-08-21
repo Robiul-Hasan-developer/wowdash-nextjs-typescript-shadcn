@@ -6,7 +6,7 @@
 //             <h6 className="font-medium text-base mb-3">Color Scheme</h6>
 //             <div className="grid grid-cols-2 gap-4">
 //                 <div
-//                     className={`cursor-pointer border border-neutral-300 flex items-center justify-center flex items-center text-neutral-500 dark:text-neutral-200 gap-4 hover:bg-blue-500/10 duration-300 h-[60px] rounded-md ring-2 ring-transparent dark:border-slate-500`}
+//                     className={`cursor-pointer border border-neutral-300 flex items-center justify-center flex items-center text-neutral-500 dark:text-neutral-200 gap-4 hover:bg-primary/10 duration-300 h-[60px] rounded-md ring-2 ring-transparent dark:border-slate-500`}
 //                 >
 //                     <AlignStartVertical />
 //                     <h6
@@ -15,7 +15,7 @@
 //                 </div>
 
 //                 <div
-//                     className={`cursor-pointer border border-neutral-300 flex items-center justify-center flex items-center text-neutral-500 dark:text-neutral-200 gap-4 hover:bg-blue-500/10 duration-300 h-[60px] rounded-md ring-2 ring-transparent dark:border-slate-500`}
+//                     className={`cursor-pointer border border-neutral-300 flex items-center justify-center flex items-center text-neutral-500 dark:text-neutral-200 gap-4 hover:bg-primary/10 duration-300 h-[60px] rounded-md ring-2 ring-transparent dark:border-slate-500`}
 //                 >
 //                     <h6
 //                         className={`text-center text-sm font-medium text-neutral-500 dark:text-neutral-200`}
@@ -63,9 +63,9 @@ const ThemeDirection = () => {
                 <div
                     onClick={() => handleDirectionChange("ltr")}
                     className={`cursor-pointer border flex items-center justify-center gap-2 h-[60px] rounded-md ring-2 duration-300 ${direction === "ltr"
-                        ? "ring-blue-600 border-blue-500 bg-blue-500/10"
+                        ? "ring-primary border-primary bg-primary/10"
                         : "ring-transparent border-neutral-300 dark:border-slate-500"
-                        } hover:bg-blue-500/10`}
+                        } hover:bg-primary/10`}
                 >
                     <AlignStartVertical />
                     <h6 className="text-sm font-medium text-neutral-500 dark:text-neutral-200">
@@ -77,9 +77,9 @@ const ThemeDirection = () => {
                 <div
                     onClick={() => handleDirectionChange("rtl")}
                     className={`cursor-pointer border flex items-center justify-center gap-2 h-[60px] rounded-md ring-2 duration-300 ${direction === "rtl"
-                        ? "ring-blue-600 border-blue-500 bg-blue-500/10"
+                        ? "ring-primary border-primary bg-primary/10"
                         : "ring-transparent border-neutral-300 dark:border-slate-500"
-                        } hover:bg-blue-500/10`}
+                        } hover:bg-primary/10`}
                 >
                     <h6 className="text-sm font-medium text-neutral-500 dark:text-neutral-200">
                         RTL

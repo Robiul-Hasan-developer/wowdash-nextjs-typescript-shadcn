@@ -1,6 +1,5 @@
 "use client";
 
-import { ChevronRight, type LucideIcon } from "lucide-react";
 import {
   Collapsible,
   CollapsibleContent,
@@ -16,11 +15,12 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
+import { useSidebarCollapsed } from "@/hooks/useSidebarCollapsed";
+import { cn } from "@/lib/utils";
+import { ChevronRight, type LucideIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
-import React, { useState } from "react";
-import { useSidebarCollapsed } from "@/hooks/useSidebarCollapsed";
+import { useState } from "react";
 
 interface SidebarItem {
   title?: string;
@@ -70,7 +70,7 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
                       tooltip={item.title}
                       onClick={() => handleToggleGroup(item.title)}
                       className={cn(
-                        "cursor-pointer py-5.5 px-3 text-base text-[#4b5563] dark:text-white data-[state=open]:bg-primary data-[state=open]:text-white hover:data-[state=open]:bg-primary dark:hover:data-[state=open]:bg-primary hover:data-[state=open]:text-white hover:bg-[#e4f1ff] active:bg-[#e4f1ff] dark:hover:bg-slate-700",
+                        "cursor-pointer py-5.5 px-3 text-base text-[#4b5563] dark:text-white data-[state=open]:bg-primary data-[state=open]:text-white hover:data-[state=open]:bg-primary dark:hover:data-[state=open]:bg-primary hover:data-[state=open]:text-white hover:bg-primary/10 active:bg-primary/10 dark:hover:bg-slate-700",
                         isOpen
                           ? "bg-primary text-white hover:bg-primary hover:text-white dark:bg-primary dark:hover:bg-primary"
                           : ""
@@ -92,9 +92,9 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
                             <SidebarMenuSubButton
                               asChild
                               className={cn(
-                                "py-5.5 px-3 text-base text-[#4b5563] dark:text-white hover:bg-[#e4f1ff] active:bg-[#e4f1ff] dark:hover:bg-slate-700",
+                                "py-5.5 px-3 text-base text-[#4b5563] dark:text-white hover:bg-primary/10 active:bg-primary/10 dark:hover:bg-slate-700",
                                 isSubActive
-                                  ? "bg-[#e4f1ff] font-bold dark:bg-slate-600"
+                                  ? "bg-primary/10 font-bold dark:bg-slate-600"
                                   : ""
                               )}
                             >
@@ -136,7 +136,7 @@ export function NavMain({ items }: { items: SidebarItem[] }) {
                   asChild
                   tooltip={item.title}
                   className={cn(
-                    "cursor-pointer py-5.5 px-3 text-base text-[#4b5563] dark:text-white hover:bg-[#e4f1ff] active:bg-[#e4f1ff] dark:hover:bg-slate-700",
+                    "cursor-pointer py-5.5 px-3 text-base text-[#4b5563] dark:text-white hover:bg-primary/10 active:bg-primary/10 dark:hover:bg-slate-700",
                     isMenuActive
                       ? "bg-primary hover:bg-primary text-white dark:hover:bg-primary hover:text-white"
                       : ""

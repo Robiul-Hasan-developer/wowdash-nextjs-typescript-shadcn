@@ -46,7 +46,7 @@ const TypographyPage = () => {
         </DefaultCardComponent>
         <DefaultCardComponent title="Colors tags">
           <ul className="flex flex-wrap items-center gap-4 md:gap-8">
-            <li className="text-white bg-primary border border-blue-600 rounded px-2 py-1.5 text-sm line-height-1 font-medium">Label</li>
+            <li className="text-white bg-primary border border-primary rounded px-2 py-1.5 text-sm line-height-1 font-medium">Label</li>
             <li className="text-white bg-purple-600 border border-purple-600 rounded px-2 py-1.5 text-sm line-height-1 font-medium">Label</li>
             <li className="text-white bg-yellow-600 border border-yellow-600 rounded px-2 py-1.5 text-sm line-height-1 font-medium">Label</li>
           </ul>

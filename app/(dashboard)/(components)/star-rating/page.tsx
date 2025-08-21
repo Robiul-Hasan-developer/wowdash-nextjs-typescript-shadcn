@@ -1,8 +1,7 @@
-import type { Metadata } from "next";
-import React from "react";
+import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Star } from "lucide-react";
-import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
+import type { Metadata } from "next";
 
 const metadata: Metadata = {
   title: "Star Ratings & Review Components | WowDash Admin Dashboard",
@@ -56,7 +55,7 @@ const TypographyPage = () => {
         </DefaultCardComponent>
         <DefaultCardComponent title="Multi Color">
           <ul className="flex flex-wrap items-center gap-3">
-            <li className="text-[32px] line-height-1 text-blue-600">  <Star fill="#487fff" stroke="#487fff" size={26} />
+            <li className="text-[32px] line-height-1 text-primary">  <Star fill="#487fff" stroke="#487fff" size={26} />
             </li>
             <li className="text-[32px] line-height-1 dark:text-purple-400">  <Star fill="#9810fa" stroke="#9810fa" size={26} />
             </li>
