@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useState, useContext, ReactNode } from "react";
+import { createContext, ReactNode, useContext, useState } from "react";
 import { EmailSidebarProvider } from "./email-sidebar-context";
 
 interface LoadingContextType {
