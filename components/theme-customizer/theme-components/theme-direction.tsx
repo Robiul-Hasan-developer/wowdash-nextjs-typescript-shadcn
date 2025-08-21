@@ -67,8 +67,8 @@ const ThemeDirection = () => {
                         : "ring-transparent border-neutral-300 dark:border-slate-500"
                         } hover:bg-primary/10`}
                 >
-                    <AlignStartVertical />
-                    <h6 className="text-sm font-medium text-neutral-500 dark:text-neutral-200">
+                    <AlignStartVertical className={`${direction === "ltr" ? "text-primary" : ""}`} />
+                    <h6 className={`text-sm font-medium text-neutral-500 dark:text-neutral-200 ${direction === "ltr" ? "text-primary" : ""}`}>
                         LTR
                     </h6>
                 </div>
@@ -81,10 +81,10 @@ const ThemeDirection = () => {
                         : "ring-transparent border-neutral-300 dark:border-slate-500"
                         } hover:bg-primary/10`}
                 >
-                    <h6 className="text-sm font-medium text-neutral-500 dark:text-neutral-200">
+                    <h6 className={`text-sm font-medium text-neutral-500 dark:text-neutral-200 ${direction === "rtl" ? "text-primary" : ""}`}>
                         RTL
                     </h6>
-                    <AlignEndVertical />
+                    <AlignEndVertical className={`${direction === "rtl" ? "text-primary" : ""}`} />
                 </div>
             </div>
         </div>
