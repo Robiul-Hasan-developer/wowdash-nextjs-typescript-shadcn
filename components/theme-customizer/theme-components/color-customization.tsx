@@ -198,7 +198,7 @@ const ColorCustomization: React.FC = () => {
                             <button
                                 title={color.name}
                                 onClick={() => handleColorChange(color.hex)}
-                                className={`grid w-full place-content-center gap-2 rounded-lg border-2 py-1.5 shadow-sm transition duration-300 focus-visible:outline-none h-[38px] !cursor-pointer
+                                className={`grid w-full place-content-center gap-2 rounded-md border-2 py-1.5 shadow-sm transition duration-300 focus-visible:outline-none h-[38px] !cursor-pointer
                                     ${selectedColor === color.hex ? "border-primary ring-2 ring-offset-2" : "border-transparent"}
                                 `}
                                 style={{
