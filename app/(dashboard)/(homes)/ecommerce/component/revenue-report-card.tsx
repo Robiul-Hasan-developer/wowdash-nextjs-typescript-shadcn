@@ -1,8 +1,7 @@
-import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import CustomSelect from '@/components/shared/custom-select';
-import GenerateContentChart from '@/components/charts/generate-content-chart';
 import StatsCard from '@/app/(dashboard)/(homes)/ecommerce/component/stats-card';
+import GenerateContentChart from '@/components/charts/generate-content-chart';
+import CustomSelect from '@/components/shared/custom-select';
+import { Card, CardContent } from '@/components/ui/card';
 
 const RevenueReportCard = () => {
     return (
@@ -20,7 +19,7 @@ const RevenueReportCard = () => {
                             </div>
                             <ul className="flex flex-wrap items-center mt-4 gap-3">
                                 <li className="flex items-center gap-2">
-                                    <span className="w-3 h-3 rounded-xs bg-blue-600"></span>
+                                    <span className="w-3 h-3 rounded-xs bg-primary"></span>
                                     <span className="text-secondary-light text-sm font-semibold">Earning:
                                         <span className="text-neutral-600 dark:text-neutral-200 font-bold">$400,00,000.00</span>
                                     </span>

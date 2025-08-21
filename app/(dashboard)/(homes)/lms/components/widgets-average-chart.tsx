@@ -1,8 +1,7 @@
-import React from 'react';
-import StatsCard from './stats-card';
-import { Card, CardContent } from '@/components/ui/card';
-import CustomSelect from '@/components/shared/custom-select';
 import DoubleLineChart from '@/components/charts/double-line-chart';
+import CustomSelect from '@/components/shared/custom-select';
+import { Card, CardContent } from '@/components/ui/card';
+import StatsCard from './stats-card';
 
 const WidgetsAverageChart = () => {
     return (
@@ -30,7 +29,7 @@ const WidgetsAverageChart = () => {
                                 </div>
                                 <ul className="flex flex-wrap items-center justify-center mt-8 gap-3">
                                     <li className="flex items-center gap-2">
-                                        <span className="w-3 h-3 rounded-full bg-blue-600"></span>
+                                        <span className="w-3 h-3 rounded-full bg-primary"></span>
                                         <span className="text-neutral-600 dark:text-neutral-100 text-sm font-semibold">Paid Course:
                                             <span className="text-neutral-600 dark:text-neutral-100 font-bold">350</span>
                                         </span>

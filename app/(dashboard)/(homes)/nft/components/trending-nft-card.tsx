@@ -1,6 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import React from 'react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import TrendingNftWidgets from './trending-nft-widgets';
 
 const TrendingNftCard = () => {
@@ -11,19 +10,19 @@ const TrendingNftCard = () => {
                     <div className="flex flex-wrap justify-between gap-4">
                         <h6 className="mb-0">Trending NFTs</h6>
                         <TabsList className='bg-transparent dark:bg-transparent rounded-none h-[50px] flex items-center gap-2'>
-                            <TabsTrigger value="all" className='font-semibold rounded-full px-5 py-0.5 h-[34px] border border-neutral-300 dark:border-neutral-800 text-neutral-900 dark:border-neutral-300 capitalize dark:text-white data-[state=active]:border-blue-600 data-[state=active]:bg-blue-600 data-[state=active]:text-white dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-blue-600 dark:data-[state=active]:text-white'>
+                            <TabsTrigger value="all" className='font-semibold rounded-full px-5 py-0.5 h-[34px] border border-neutral-300 dark:border-neutral-800 text-neutral-900 dark:border-neutral-300 capitalize dark:text-white data-[state=active]:border-blue-600 data-[state=active]:bg-primary data-[state=active]:text-white dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-primary dark:data-[state=active]:text-white'>
                                 All
                             </TabsTrigger>
-                            <TabsTrigger value="art" className='font-semibold rounded-full px-5 py-0.5 h-[34px] border border-neutral-300 dark:border-neutral-800 text-neutral-900 dark:border-neutral-300 capitalize dark:text-white data-[state=active]:border-blue-600 data-[state=active]:bg-blue-600 data-[state=active]:text-white dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-blue-600 dark:data-[state=active]:text-white'>
+                            <TabsTrigger value="art" className='font-semibold rounded-full px-5 py-0.5 h-[34px] border border-neutral-300 dark:border-neutral-800 text-neutral-900 dark:border-neutral-300 capitalize dark:text-white data-[state=active]:border-blue-600 data-[state=active]:bg-primary data-[state=active]:text-white dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-primary dark:data-[state=active]:text-white'>
                                 Art
                             </TabsTrigger>
-                            <TabsTrigger value="music" className='font-semibold rounded-full px-5 py-0.5 h-[34px] border border-neutral-300 dark:border-neutral-800 text-neutral-900 dark:border-neutral-300 capitalize dark:text-white data-[state=active]:border-blue-600 data-[state=active]:bg-blue-600 data-[state=active]:text-white dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-blue-600 dark:data-[state=active]:text-white'>
+                            <TabsTrigger value="music" className='font-semibold rounded-full px-5 py-0.5 h-[34px] border border-neutral-300 dark:border-neutral-800 text-neutral-900 dark:border-neutral-300 capitalize dark:text-white data-[state=active]:border-blue-600 data-[state=active]:bg-primary data-[state=active]:text-white dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-primary dark:data-[state=active]:text-white'>
                                 music
                             </TabsTrigger>
-                            <TabsTrigger value="utility" className='font-semibold rounded-full px-5 py-0.5 h-[34px] border border-neutral-300 dark:border-neutral-800 text-neutral-900 dark:border-neutral-300 capitalize dark:text-white data-[state=active]:border-blue-600 data-[state=active]:bg-blue-600 data-[state=active]:text-white dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-blue-600 dark:data-[state=active]:text-white'>
+                            <TabsTrigger value="utility" className='font-semibold rounded-full px-5 py-0.5 h-[34px] border border-neutral-300 dark:border-neutral-800 text-neutral-900 dark:border-neutral-300 capitalize dark:text-white data-[state=active]:border-blue-600 data-[state=active]:bg-primary data-[state=active]:text-white dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-primary dark:data-[state=active]:text-white'>
                                 utility
                             </TabsTrigger>
-                            <TabsTrigger value="fashion" className='font-semibold rounded-full px-5 py-0.5 h-[34px] border border-neutral-300 dark:border-neutral-800 text-neutral-900 dark:border-neutral-300 capitalize dark:text-white data-[state=active]:border-blue-600 data-[state=active]:bg-blue-600 data-[state=active]:text-white dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-blue-600 dark:data-[state=active]:text-white'>
+                            <TabsTrigger value="fashion" className='font-semibold rounded-full px-5 py-0.5 h-[34px] border border-neutral-300 dark:border-neutral-800 text-neutral-900 dark:border-neutral-300 capitalize dark:text-white data-[state=active]:border-blue-600 data-[state=active]:bg-primary data-[state=active]:text-white dark:data-[state=active]:border-blue-600 dark:data-[state=active]:bg-primary dark:data-[state=active]:text-white'>
                                 fashion
                             </TabsTrigger>
                         </TabsList>

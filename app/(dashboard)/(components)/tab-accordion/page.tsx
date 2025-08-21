@@ -1,13 +1,12 @@
-import type { Metadata } from "next";
-import React from "react";
+import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Image from "next/image";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import TabsImage1 from "@/public/assets/images/tabs/tabs-image1.png";
 import TabsImage2 from "@/public/assets/images/tabs/tabs-image2.png";
-import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
-import { Home, FileText, User, Settings } from 'lucide-react';
+import { FileText, Home, Settings, User } from 'lucide-react';
+import type { Metadata } from "next";
+import Image from "next/image";
 
 const metadata: Metadata = {
   title: "Tabs & Accordion Components | WowDash Admin Dashboard",
@@ -73,16 +72,16 @@ const TypographyPage = () => {
             <Tabs defaultValue="FocusHome" className="gap-0">
               <div className="flex items-center justify-between">
                 <TabsList className='bg-transparent dark:bg-transparent rounded-none h-[50px]  p-0'>
-                  <TabsTrigger value="FocusHome" className='h-10 px-4 data-[state=active]:text-blue-600 data-[state=active]:bg-blue-600/10 dark:data-[state=active]:bg-blue-600/20 duration-300 !shadow-none dark:text-white'>
+                  <TabsTrigger value="FocusHome" className='h-10 px-4 data-[state=active]:text-blue-600 data-[state=active]:bg-primary/10 dark:data-[state=active]:bg-primary/20 duration-300 !shadow-none dark:text-white'>
                     Home
                   </TabsTrigger>
-                  <TabsTrigger value="FocusDetails" className='h-10 px-4 data-[state=active]:text-blue-600 data-[state=active]:bg-blue-600/10 dark:data-[state=active]:bg-blue-600/20 duration-300 !shadow-none dark:text-white'>
+                  <TabsTrigger value="FocusDetails" className='h-10 px-4 data-[state=active]:text-blue-600 data-[state=active]:bg-primary/10 dark:data-[state=active]:bg-primary/20 duration-300 !shadow-none dark:text-white'>
                     Details
                   </TabsTrigger>
-                  <TabsTrigger value="FocusProfile" className='h-10 px-4 data-[state=active]:text-blue-600 data-[state=active]:bg-blue-600/10 dark:data-[state=active]:bg-blue-600/20 duration-300 !shadow-none dark:text-white'>
+                  <TabsTrigger value="FocusProfile" className='h-10 px-4 data-[state=active]:text-blue-600 data-[state=active]:bg-primary/10 dark:data-[state=active]:bg-primary/20 duration-300 !shadow-none dark:text-white'>
                     Profile
                   </TabsTrigger>
-                  <TabsTrigger value="FocusSettings" className='h-10 px-4 data-[state=active]:text-blue-600 data-[state=active]:bg-blue-600/10 dark:data-[state=active]:bg-blue-600/20 duration-300 !shadow-none dark:text-white'>
+                  <TabsTrigger value="FocusSettings" className='h-10 px-4 data-[state=active]:text-blue-600 data-[state=active]:bg-primary/10 dark:data-[state=active]:bg-primary/20 duration-300 !shadow-none dark:text-white'>
                     Settings
                   </TabsTrigger>
                 </TabsList>
@@ -119,16 +118,16 @@ const TypographyPage = () => {
             <Tabs defaultValue="ButtonHome" className="gap-0">
               <div className="flex items-center justify-between">
                 <TabsList className='bg-transparent dark:bg-transparent rounded-none h-[50px]  p-0'>
-                  <TabsTrigger value="ButtonHome" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-blue-600 dark:data-[state=active]:bg-blue-600 !shadow-none dark:text-white'>
+                  <TabsTrigger value="ButtonHome" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white'>
                     Home
                   </TabsTrigger>
-                  <TabsTrigger value="ButtonDetails" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-blue-600 dark:data-[state=active]:bg-blue-600 !shadow-none dark:text-white'>
+                  <TabsTrigger value="ButtonDetails" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white'>
                     Details
                   </TabsTrigger>
-                  <TabsTrigger value="ButtonProfile" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-blue-600 dark:data-[state=active]:bg-blue-600 !shadow-none dark:text-white'>
+                  <TabsTrigger value="ButtonProfile" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white'>
                     Profile
                   </TabsTrigger>
-                  <TabsTrigger value="ButtonSettings" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-blue-600 dark:data-[state=active]:bg-blue-600 !shadow-none dark:text-white'>
+                  <TabsTrigger value="ButtonSettings" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white'>
                     Settings
                   </TabsTrigger>
                 </TabsList>
@@ -193,19 +192,19 @@ const TypographyPage = () => {
             <Tabs defaultValue="VerticalNavHome" className="gap-0">
               <div className="flex items-center justify-between">
                 <TabsList className='bg-transparent dark:bg-transparent rounded-none h-[50px]  p-0'>
-                  <TabsTrigger value="VerticalNavHome" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-blue-600 dark:data-[state=active]:bg-blue-600 !shadow-none dark:text-white flex items-center gap-2'>
+                  <TabsTrigger value="VerticalNavHome" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white flex items-center gap-2'>
                     <Home className="w-4 h-4" />
                     Home
                   </TabsTrigger>
-                  <TabsTrigger value="VerticalNavDetails" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-blue-600 dark:data-[state=active]:bg-blue-600 !shadow-none dark:text-white flex items-center gap-2'>
+                  <TabsTrigger value="VerticalNavDetails" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white flex items-center gap-2'>
                     <FileText className="w-4 h-4" />
                     Details
                   </TabsTrigger>
-                  <TabsTrigger value="VerticalNavProfile" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-blue-600 dark:data-[state=active]:bg-blue-600 !shadow-none dark:text-white flex items-center gap-2'>
+                  <TabsTrigger value="VerticalNavProfile" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white flex items-center gap-2'>
                     <User className="w-4 h-4" />
                     Profile
                   </TabsTrigger>
-                  <TabsTrigger value="VerticalNavSettings" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-blue-600 dark:data-[state=active]:bg-blue-600 !shadow-none dark:text-white flex items-center gap-2'>
+                  <TabsTrigger value="VerticalNavSettings" className='h-10 px-4 data-[state=active]:text-white data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white flex items-center gap-2'>
                     <Settings className="w-4 h-4" />
                     Settings
                   </TabsTrigger>
@@ -271,16 +270,16 @@ const TypographyPage = () => {
             <Tabs defaultValue="IconButtonHome" className="gap-3 flex flex-row">
               <div className="shrink-0">
                 <TabsList className='bg-transparent dark:bg-transparent rounded-none flex items-center justify-start flex-col p-0'>
-                  <TabsTrigger value="IconButtonHome" className='h-10 px-4 py-4 data-[state=active]:text-white w-full data-[state=active]:bg-blue-600 dark:data-[state=active]:bg-blue-600 !shadow-none dark:text-white'>
+                  <TabsTrigger value="IconButtonHome" className='h-10 px-4 py-4 data-[state=active]:text-white w-full data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white'>
                     Home
                   </TabsTrigger>
-                  <TabsTrigger value="IconButtonDetails" className='h-10 px-4 py-4 data-[state=active]:text-white w-full data-[state=active]:bg-blue-600 dark:data-[state=active]:bg-blue-600 !shadow-none dark:text-white'>
+                  <TabsTrigger value="IconButtonDetails" className='h-10 px-4 py-4 data-[state=active]:text-white w-full data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white'>
                     Details
                   </TabsTrigger>
-                  <TabsTrigger value="IconButtonProfile" className='h-10 px-4 py-4 data-[state=active]:text-white w-full data-[state=active]:bg-blue-600 dark:data-[state=active]:bg-blue-600 !shadow-none dark:text-white'>
+                  <TabsTrigger value="IconButtonProfile" className='h-10 px-4 py-4 data-[state=active]:text-white w-full data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white'>
                     Profile
                   </TabsTrigger>
-                  <TabsTrigger value="IconButtonSettings" className='h-10 px-4 py-4 data-[state=active]:text-white w-full data-[state=active]:bg-blue-600 dark:data-[state=active]:bg-blue-600 !shadow-none dark:text-white'>
+                  <TabsTrigger value="IconButtonSettings" className='h-10 px-4 py-4 data-[state=active]:text-white w-full data-[state=active]:bg-primary dark:data-[state=active]:bg-primary !shadow-none dark:text-white'>
                     Settings
                   </TabsTrigger>
                 </TabsList>

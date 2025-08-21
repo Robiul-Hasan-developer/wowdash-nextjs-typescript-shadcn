@@ -1,11 +1,11 @@
 "use client"
 
-import type { Metadata } from "next";
-import React, { useState } from "react";
-import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
-import { Label } from "@/components/ui/label"
-import { Switch } from "@/components/ui/switch"
+import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
+import type { Metadata } from "next";
+import { useState } from "react";
 
 const metadata: Metadata = {
   title: "Switches & Toggle Controls | WowDash Admin Dashboard",
@@ -54,7 +54,7 @@ const TypographyPage = () => {
                   id="switch1"
                   checked={switch1}
                   onCheckedChange={setSwitch1}
-                  className="!bg-[#9ca3af] !data-[state=checked]:bg-blue-600"
+                  className="!bg-[#9ca3af] !data-[state=checked]:bg-primary"
                 />
                 <Label
                   htmlFor="switch1"
@@ -113,7 +113,7 @@ const TypographyPage = () => {
                   id="inactiveSwitch1"
                   checked={inactiveSwitch1}
                   onCheckedChange={setinactiveSwitch1}
-                  className="!bg-[#9ca3af] !data-[state=checked]:bg-blue-600"
+                  className="!bg-[#9ca3af] !data-[state=checked]:bg-primary"
                 />
                 <Label
                   htmlFor="inactiveSwitch1"
@@ -176,7 +176,7 @@ const TypographyPage = () => {
                   id="switchTwo1"
                   checked={switchTwo1}
                   onCheckedChange={setSwitchTwo1}
-                  className="!bg-[#9ca3af] !data-[state=checked]:bg-blue-600"
+                  className="!bg-[#9ca3af] !data-[state=checked]:bg-primary"
                 />
                 <Label
                   htmlFor="switchTwo1"
@@ -235,7 +235,7 @@ const TypographyPage = () => {
                   id="inactiveSwitchTwo1"
                   checked={inactiveSwitchTwo1}
                   onCheckedChange={setinactiveSwitchTwo1}
-                  className="!bg-[#9ca3af] !data-[state=checked]:bg-blue-600"
+                  className="!bg-[#9ca3af] !data-[state=checked]:bg-primary"
                 />
                 <Label
                   htmlFor="inactiveSwitchTwo1"
@@ -297,7 +297,7 @@ const TypographyPage = () => {
                 id="switchWithText1"
                 checked={switchWithText1}
                 onCheckedChange={setSwitchWithText1}
-                className="!bg-[#9ca3af] !data-[state=checked]:bg-blue-600"
+                className="!bg-[#9ca3af] !data-[state=checked]:bg-primary"
               />
               <Label
                 htmlFor="switchWithText1"
@@ -311,7 +311,7 @@ const TypographyPage = () => {
                 id="switchWithText2"
                 checked={switchWithText2}
                 onCheckedChange={setSwitchWithText2}
-                className="!bg-[#9ca3af] !data-[state=checked]:bg-blue-600"
+                className="!bg-[#9ca3af] !data-[state=checked]:bg-primary"
               />
               <Label
                 htmlFor="switchWithText2"
@@ -330,7 +330,7 @@ const TypographyPage = () => {
                 id="inactiveSwitchHorizonta1"
                 checked={inactiveSwitchHorizonta1}
                 onCheckedChange={setinactiveSwitchHorizonta1}
-                className="!bg-[#9ca3af] !data-[state=checked]:bg-blue-600"
+                className="!bg-[#9ca3af] !data-[state=checked]:bg-primary"
               />
               <Label
                 htmlFor="inactiveSwitchHorizonta1"

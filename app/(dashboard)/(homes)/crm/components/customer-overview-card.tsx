@@ -1,6 +1,5 @@
 import CustomerOverviewChart from '@/components/charts/customer-overview-chart';
 import CustomSelect from '@/components/shared/custom-select';
-import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const CustomerOverviewCard = () => {
@@ -15,7 +14,7 @@ const CustomerOverviewCard = () => {
                     />
                 </div>
 
-                <div className="flex sm:flex-nowrap flex-wrap items-center mt-4"> 
+                <div className="flex sm:flex-nowrap flex-wrap items-center mt-4">
                     <ul className="shrink-0">
                         <li className="flex items-center gap-2 mb-7">
                             <span className="w-3 h-3 rounded-full bg-green-600"></span>
@@ -26,12 +25,12 @@ const CustomerOverviewCard = () => {
                             <span className="text-secondary-light text-sm font-medium">New: 400</span>
                         </li>
                         <li className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded-full bg-blue-600"></span>
+                            <span className="w-3 h-3 rounded-full bg-primary"></span>
                             <span className="text-secondary-light text-sm font-medium">Active: 1400</span>
                         </li>
                     </ul>
                     <div className="grow apexcharts-tooltip-z-none title-style circle-none donutChart">
-                        <CustomerOverviewChart/>
+                        <CustomerOverviewChart />
                     </div>
                 </div>
             </CardContent>

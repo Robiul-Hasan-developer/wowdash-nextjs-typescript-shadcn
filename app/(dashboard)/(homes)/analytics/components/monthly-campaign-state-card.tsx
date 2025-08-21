@@ -46,7 +46,7 @@ const MonthlyCampaignStateCard = () => {
                     </div>
                     <div className="flex items-center justify-between gap-4">
                         <div className="flex items-center gap-4">
-                            <div className="w-[40px] h-[40px] rounded-[50%] flex justify-center items-center bg-blue-100 dark:bg-blue-600/20 shrink-0">
+                            <div className="w-[40px] h-[40px] rounded-[50%] flex justify-center items-center bg-blue-100 dark:bg-primary/20 shrink-0">
                                 <Image src={SocialIcon3} alt="Icon" className="" />
                             </div>
                             <div className="flex-grow-1">
@@ -88,7 +88,7 @@ const MonthlyCampaignStateCard = () => {
                     </div>
                     <div className="flex items-center justify-between gap-4">
                         <div className="flex items-center gap-4">
-                            <div className="w-[40px] h-[40px] rounded-[50%] flex justify-center items-center bg-blue-100 dark:bg-blue-600/20 shrink-0">
+                            <div className="w-[40px] h-[40px] rounded-[50%] flex justify-center items-center bg-blue-100 dark:bg-primary/20 shrink-0">
                                 <Image src={SocialIcon3} alt="Icon" className="" />
                             </div>
                             <div className="flex-grow-1">

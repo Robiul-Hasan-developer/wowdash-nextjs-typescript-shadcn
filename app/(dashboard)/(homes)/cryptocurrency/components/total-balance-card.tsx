@@ -1,8 +1,7 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import BuyBalanceContent from "@/components/shared/buy-balance-content";
 import SellBalanceContent from "@/components/shared/sell-balance-content";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const TotalBalanceCard = () => {
   return (
@@ -17,13 +16,13 @@ const TotalBalanceCard = () => {
           <TabsList className="grid w-full grid-cols-2 bg-neutral-100 dark:bg-slate-700 border border-neutral-200 dark:border-slate-600 p-1 rounded-md h-[unset] mt-7 mb-6">
             <TabsTrigger
               value="buy"
-              className="h-11 data-[state=active]:bg-blue-600 data-[state=active]:text-white dark:data-[state=active]:bg-blue-600 dark:data-[state=active]:text-white duration-300 !shadow-none dark:text-white"
+              className="h-11 data-[state=active]:bg-primary data-[state=active]:text-white dark:data-[state=active]:bg-primary dark:data-[state=active]:text-white duration-300 !shadow-none dark:text-white"
             >
               Buy
             </TabsTrigger>
             <TabsTrigger
               value="sell"
-              className="h-11 data-[state=active]:bg-blue-600 data-[state=active]:text-white dark:data-[state=active]:bg-blue-600 dark:data-[state=active]:text-white duration-300 !shadow-none dark:text-white"
+              className="h-11 data-[state=active]:bg-primary data-[state=active]:text-white dark:data-[state=active]:bg-primary dark:data-[state=active]:text-white duration-300 !shadow-none dark:text-white"
             >
               Sell
             </TabsTrigger>

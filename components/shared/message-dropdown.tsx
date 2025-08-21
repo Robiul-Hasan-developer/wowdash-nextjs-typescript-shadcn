@@ -1,18 +1,17 @@
-import React from 'react';
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 import { cn } from '@/lib/utils';
-import { Mail } from 'lucide-react';
 import NotificationImg1 from '@/public/assets/images/notification/profile-3.png';
 import NotificationImg2 from '@/public/assets/images/notification/profile-4.png';
 import NotificationImg3 from '@/public/assets/images/notification/profile-5.png';
 import NotificationImg4 from '@/public/assets/images/notification/profile-6.png';
 import NotificationImg5 from '@/public/assets/images/notification/profile-7.png';
+import { Mail } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -31,7 +30,7 @@ const MessageDropdown = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="sm:w-[400px] max-h-[unset] me-6 p-0 rounded-2xl overflow-hidden shadow-lg block">
         <div className="">
-          <div className="py-3 px-4 rounded-lg bg-primary/10 dark:bg-blue-600/25 m-4 flex items-center justify-between gap-2">
+          <div className="py-3 px-4 rounded-lg bg-primary/10 dark:bg-primary/25 m-4 flex items-center justify-between gap-2">
             <h6 className="text-lg text-neutral-900 dark:text-white font-semibold mb-0">Message</h6>
             <span className="sm:w-10 sm:h-10 w-8 h-8 bg-white dark:bg-slate-800 text-primary dark:text-primary font-bold flex justify-center items-center rounded-full">05</span>
           </div>

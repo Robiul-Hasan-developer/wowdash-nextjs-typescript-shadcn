@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
-import { ArrowDown, ArrowUp, UsersRound } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ArrowDown, ArrowUp, UsersRound } from "lucide-react";
+import React from "react";
 
 type TrendingBidItem = {
     id: number;
@@ -24,7 +24,7 @@ const trendingBids: TrendingBidItem[] = [
         label: "Artworks",
         percentage: "+168.001%",
         icon: <UsersRound />,
-        iconBg: "bg-blue-600",
+        iconBg: "bg-primary",
         trend: "up",
         bgGradientClass: "bg-linear-to-r from-blue-600/10 to-bg-transparent",
         percentageBgClass: "bg-green-100 dark:bg-green-600/25",

@@ -1,7 +1,6 @@
-import { Card, CardContent } from '@/components/ui/card';
-import React from 'react';
-import CustomSelect from '@/components/shared/custom-select';
 import UserOverviewChart from '@/components/charts/user-overview-chart';
+import CustomSelect from '@/components/shared/custom-select';
+import { Card, CardContent } from '@/components/ui/card';
 
 const UserOverviewCard = () => {
     return (
@@ -16,24 +15,24 @@ const UserOverviewCard = () => {
                 </div>
 
                 <div className="apexcharts-tooltip-z-none">
-                    <UserOverviewChart/>
+                    <UserOverviewChart />
                 </div>
 
                 <ul className="flex flex-wrap items-center justify-between mt-4 gap-3">
                     <li className="flex items-center gap-2">
-                        <span className="w-3 h-3 rounded-[2px] bg-blue-600"></span>
-                        <span className="text-secondary-light text-sm font-normal">New: 
+                        <span className="w-3 h-3 rounded-[2px] bg-primary"></span>
+                        <span className="text-secondary-light text-sm font-normal">New:
                             <span className="text-neutral-500 dark:text-neutral-300 font-semibold">400</span>
                         </span>
                     </li>
                     <li className="flex items-center gap-2">
                         <span className="w-3 h-3 rounded-[2px] bg-yellow-500"></span>
-                        <span className="text-secondary-light text-sm font-normal">Subscribed:  
+                        <span className="text-secondary-light text-sm font-normal">Subscribed:
                             <span className="text-neutral-500 dark:text-neutral-300 font-semibold">300</span>
                         </span>
                     </li>
                 </ul>
-            
+
             </CardContent>
         </Card>
     );

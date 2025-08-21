@@ -42,7 +42,7 @@ const projectStates: ProjectStatus[] = [
   {
     name: "S&P 400",
     duration: "4 Months",
-    progressBg: "bg-blue-600",
+    progressBg: "bg-primary",
     stock: "70%",
   },
 ];

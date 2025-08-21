@@ -41,7 +41,7 @@ const sources: SourceVisitor[] = [
         percentage: 82,
         icon: SourceImage3,
         bgColor: "from-[#19cfef40] to-[#0d6ab840]",
-        iconBg: "bg-blue-600",
+        iconBg: "bg-primary",
     },
     {
         id: 4,

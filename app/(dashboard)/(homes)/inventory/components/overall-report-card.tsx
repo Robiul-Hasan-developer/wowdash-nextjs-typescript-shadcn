@@ -24,7 +24,7 @@ const OverallReportCard = () => {
 
                     <div className="flex flex-wrap gap-5 justify-center mt-12">
                         <div className="flex items-center gap-2">
-                            <span className="w-4 h-4 rounded-[2px] bg-blue-600"></span>
+                            <span className="w-4 h-4 rounded-[2px] bg-primary"></span>
                             <span className="text-neutral-600 dark:text-neutral-200">Purchase</span>
                         </div>
                         <div className="flex items-center gap-2">

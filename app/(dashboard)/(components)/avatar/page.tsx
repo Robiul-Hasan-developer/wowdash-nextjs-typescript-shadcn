@@ -1,23 +1,22 @@
-import type { Metadata } from "next";
-import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
+import type { Metadata } from "next";
 import Image from "next/image";
 
-import Avatar1 from "@/public/assets/images/avatar/avatar1.png";
-import Avatar2 from "@/public/assets/images/avatar/avatar2.png";
 import AvatarShape1 from "@/public/assets/images/avatar/avatar-shape1.png";
 import AvatarShape2 from "@/public/assets/images/avatar/avatar-shape2.png";
 import AvatarShape3 from "@/public/assets/images/avatar/avatar-shape3.png";
+import Avatar1 from "@/public/assets/images/avatar/avatar1.png";
+import Avatar2 from "@/public/assets/images/avatar/avatar2.png";
 
-import StatusAvatar from "@/public/assets/images/avatar/status-avatar.png";
+import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import AvatarGroup1 from "@/public/assets/images/avatar/avatar-group1.png";
 import AvatarGroup2 from "@/public/assets/images/avatar/avatar-group2.png";
 import AvatarGroup3 from "@/public/assets/images/avatar/avatar-group3.png";
 import AvatarGroup4 from "@/public/assets/images/avatar/avatar-group4.png";
 import AvatarGroup5 from "@/public/assets/images/avatar/avatar-group5.png";
 import AvatarGroup6 from "@/public/assets/images/avatar/avatar-group6.png";
+import StatusAvatar from "@/public/assets/images/avatar/status-avatar.png";
 import { Plus } from "lucide-react";
-import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 
 const metadata: Metadata = {
   title: "User Avatars & Profile Images | WowDash Admin Dashboard",
@@ -59,7 +58,7 @@ const TypographyPage = () => {
         <div className="col-span-12 md:col-span-6">
           <DefaultCardComponent title="Avatar With content">
             <div className="flex items-center flex-wrap gap-3">
-              <span className="w-6 h-6 rounded-full object-fit-cover flex justify-center items-center font-semibold text-[10px] bg-blue-100 dark:bg-blue-600/25 text-blue-600 dark:text-blue-400">24</span>
+              <span className="w-6 h-6 rounded-full object-fit-cover flex justify-center items-center font-semibold text-[10px] bg-blue-100 dark:bg-primary/25 text-blue-600 dark:text-blue-400">24</span>
               <span className="w-8 h-8 rounded-full object-fit-cover flex justify-center items-center font-semibold text-xs bg-purple-100 dark:bg-purple-600/25 text-purple-600 dark:text-purple-400">32</span>
               <span className="w-10 h-10 rounded-full object-fit-cover flex justify-center items-center font-semibold text-sm bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400">40</span>
               <span className="w-[44px] h-[44px] rounded-full object-fit-cover flex justify-center items-center font-semibold text-base bg-cyan-100 dark:bg-cyan-600/25 text-cyan-600 dark:text-cyan-400">44</span>
@@ -67,7 +66,7 @@ const TypographyPage = () => {
               <span className="w-[64px] h-[64px] rounded-full object-fit-cover flex justify-center items-center font-semibold text-xl bg-red-100 dark:bg-red-600/25 text-red-600 dark:text-red-400">64</span>
             </div>
             <div className="flex items-center flex-wrap gap-3 mt-6">
-              <span className="w-6 h-6 rounded object-fit-cover flex justify-center items-center font-semibold text-[10px] bg-blue-100 dark:bg-blue-600/25 text-blue-600 dark:text-blue-400">24</span>
+              <span className="w-6 h-6 rounded object-fit-cover flex justify-center items-center font-semibold text-[10px] bg-blue-100 dark:bg-primary/25 text-blue-600 dark:text-blue-400">24</span>
               <span className="w-8 h-8 rounded-lg object-fit-cover flex justify-center items-center font-semibold text-xs bg-purple-100 dark:bg-purple-600/25 text-purple-600 dark:text-purple-400">32</span>
               <span className="w-10 h-10 rounded-lg object-fit-cover flex justify-center items-center font-semibold text-sm bg-green-100 dark:bg-green-600/25 text-green-600 dark:text-green-400">40</span>
               <span className="w-[44px] h-[44px] rounded-lg object-fit-cover flex justify-center items-center font-semibold text-base bg-cyan-100 dark:bg-cyan-600/25 text-cyan-600 dark:text-cyan-400">44</span>
@@ -90,25 +89,25 @@ const TypographyPage = () => {
             <div className="flex items-center flex-wrap gap-3">
               <div className="relative">
                 <Image src={StatusAvatar} className="w-6 h-6 rounded-full object-fit-cover" alt="Avatar" />
-                <span className="w-2 h-2 bg-blue-600 border br-white rounded-full absolute end-0 bottom-[3px]"></span>
+                <span className="w-2 h-2 bg-primary border br-white rounded-full absolute end-0 bottom-[3px]"></span>
               </div>
               <div className="relative">
                 <Image src={StatusAvatar} className="w-8 h-8 rounded-full object-fit-cover" alt="Avatar" />
-                <span className="w-2 h-2 bg-blue-600 border br-white rounded-full absolute end-0 bottom-[3px]"></span>
+                <span className="w-2 h-2 bg-primary border br-white rounded-full absolute end-0 bottom-[3px]"></span>
               </div>
               <div className="relative">
                 <Image src={StatusAvatar} className="w-10 h-10 rounded-full object-fit-cover" alt="Avatar" />
-                <span className="w-2 h-2 bg-blue-600 border br-white rounded-full absolute end-0 bottom-[3px]"></span>
+                <span className="w-2 h-2 bg-primary border br-white rounded-full absolute end-0 bottom-[3px]"></span>
               </div>
               <div className="relative">
                 <Image src={StatusAvatar} className="w-[44px] h-[44px] rounded-full object-fit-cover" alt="Avatar" />
-                <span className="w-2 h-2 bg-blue-600 border br-white rounded-full absolute end-0 bottom-[3px]"></span>
+                <span className="w-2 h-2 bg-primary border br-white rounded-full absolute end-0 bottom-[3px]"></span>
               </div>
             </div>
             <div className="flex items-center flex-wrap gap-3 mt-6">
               <div className="relative">
-                <span className="w-6 h-6 rounded-full object-fit-cover flex justify-center items-center font-semibold text-[10px] bg-blue-100 dark:bg-blue-600/25 text-blue-600 dark:text-blue-400">24</span>
-                <span className="w-2 h-2 bg-blue-600 border br-white rounded-full absolute end-0 bottom-[3px]"></span>
+                <span className="w-6 h-6 rounded-full object-fit-cover flex justify-center items-center font-semibold text-[10px] bg-blue-100 dark:bg-primary/25 text-blue-600 dark:text-blue-400">24</span>
+                <span className="w-2 h-2 bg-primary border br-white rounded-full absolute end-0 bottom-[3px]"></span>
               </div>
               <div className="relative">
                 <span className="w-8 h-8 rounded-full object-fit-cover flex justify-center items-center font-semibold text-[10px] bg-purple-100 dark:bg-purple-600/25 text-purple-600 dark:text-purple-400">24</span>

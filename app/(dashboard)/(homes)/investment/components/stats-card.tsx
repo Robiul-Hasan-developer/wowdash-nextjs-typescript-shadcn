@@ -1,14 +1,13 @@
 "use client";
 
-import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import {
+  DollarSign,
+  FileBarChart2,
+  LucideIcon,
   Users,
   Wallet,
-  FileBarChart2,
-  DollarSign,
-  LucideIcon,
 } from "lucide-react";
 
 export interface StatCardData {
@@ -29,7 +28,7 @@ export const statsData: StatCardData[] = [
     value: "4000",
     difference: "+200",
     Icon: Users,
-    iconBgColor: "bg-blue-600",
+    iconBgColor: "bg-primary",
     gradientFrom: "from-blue-600/10",
     changeType: "increase",
   },

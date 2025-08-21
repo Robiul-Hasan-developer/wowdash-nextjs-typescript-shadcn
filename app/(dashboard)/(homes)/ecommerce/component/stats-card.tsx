@@ -1,5 +1,4 @@
-import { Box, LucideIcon, UsersRound, ShoppingCart, BadgePercent } from 'lucide-react';
-import React from 'react';
+import { BadgePercent, Box, LucideIcon, ShoppingCart, UsersRound } from 'lucide-react';
 
 interface StatsCardData {
     title: string;
@@ -19,7 +18,7 @@ const statsData: StatsCardData[] = [
         value: '300',
         icon: Box,
         textColor: 'text-blue-600 dark:text-blue-500',
-        bgColor: 'bg-blue-600/20',
+        bgColor: 'bg-primary/20',
         borderColor: 'border-blue-300 dark:border-blue-600/50',
         change: '+200',
         changeType: 'increase',

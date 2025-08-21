@@ -1,15 +1,14 @@
-import type { Metadata } from "next";
-import React from "react";
-import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
+import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
+import { Button } from "@/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { Button } from "@/components/ui/button";
+} from "@/components/ui/tooltip";
 import { CircleHelp } from "lucide-react";
+import type { Metadata } from "next";
 
 const metadata: Metadata = {
   title: "Tooltips & Hover Information | WowDash Admin Dashboard",
@@ -391,7 +390,7 @@ const TypographyPage = () => {
                         <CircleHelp />
                       </Button>
                     </TooltipTrigger>
-                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-blue-600 text-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-blue-600 shadow-lg">
+                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-primary text-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-primary shadow-lg">
                       <div className="px-3 py-2 w-full">
                         <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Secondary</h6>
                         <p className="text-neutral-900 text-white dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -407,7 +406,7 @@ const TypographyPage = () => {
                         <CircleHelp />
                       </Button>
                     </TooltipTrigger>
-                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-blue-600 text-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-blue-600 shadow-lg">
+                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-primary text-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-primary shadow-lg">
                       <div className="px-3 py-2 w-full">
                         <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Secondary</h6>
                         <p className="text-neutral-900 text-white dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -423,7 +422,7 @@ const TypographyPage = () => {
                         <CircleHelp />
                       </Button>
                     </TooltipTrigger>
-                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-blue-600 text-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-blue-600 shadow-lg">
+                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-primary text-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-primary shadow-lg">
                       <div className="px-3 py-2 w-full">
                         <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Secondary</h6>
                         <p className="text-neutral-900 text-white dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -439,7 +438,7 @@ const TypographyPage = () => {
                         <CircleHelp />
                       </Button>
                     </TooltipTrigger>
-                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-blue-600 text-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-blue-600 shadow-lg">
+                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-primary text-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-primary shadow-lg">
                       <div className="px-3 py-2 w-full">
                         <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Secondary</h6>
                         <p className="text-neutral-900 text-white dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -455,7 +454,7 @@ const TypographyPage = () => {
                         <CircleHelp />
                       </Button>
                     </TooltipTrigger>
-                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-blue-600 text-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-blue-600 shadow-lg">
+                    <TooltipContent side="right" className="tooltip-arrow-hidden max-w-[255px] bg-primary text-white border border-blue-600 rounded-lg dark:text-blue-400 dark:border-blue-600 dark:bg-primary shadow-lg">
                       <div className="px-3 py-2 w-full">
                         <h6 className="font-semibold text-lg mb-1 text-white dark:text-white">Title Secondary</h6>
                         <p className="text-neutral-900 text-white dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>

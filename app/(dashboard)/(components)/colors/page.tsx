@@ -1,9 +1,9 @@
 "use client";
 
-import type { Metadata } from "next";
-import React, { useState } from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Card, CardContent } from "@/components/ui/card";
+import type { Metadata } from "next";
+import React, { useState } from "react";
 import toast from "react-hot-toast";
 
 const metadata: Metadata = {
@@ -267,7 +267,7 @@ const ColorsPage = () => {
                       </span>
                       <span
                         className="font-medium text-base text-neutral-600 dark:text-neutral-600 block"
-                        data-clipboard-text="bg-blue-50 dark:bg-blue-600"
+                        data-clipboard-text="bg-blue-50 dark:bg-primary"
                       >
                         #FAFAFA
                       </span>
@@ -355,7 +355,7 @@ const ColorsPage = () => {
                   </div>
                   <div
                     onClick={handleBoxClick}
-                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-blue-600 relative p-7 grow"
+                    className="color-box h-[190px] cursor-pointer min-w-[120px] bg-primary relative p-7 grow"
                   >
                     <div className="absolute start-1/2 -translate-x-1/2 bottom-0 text-center mb-7">
                       <span className="font-medium text-lg text-white dark:text-white block">
@@ -363,7 +363,7 @@ const ColorsPage = () => {
                       </span>
                       <span
                         className="font-medium text-base text-white dark:text-white block"
-                        data-clipboard-text="bg-blue-600"
+                        data-clipboard-text="bg-primary"
                       >
                         #525252
                       </span>

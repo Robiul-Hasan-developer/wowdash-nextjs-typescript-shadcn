@@ -1,9 +1,8 @@
-import React from "react";
-import { Smile } from "lucide-react";
 import CardSmallChartTwo from "@/components/charts/card-small-chart-two";
 import DailyConversionsChart from "@/components/charts/daily-conversions-chart";
 import TodayIncomeChart from "@/components/charts/today-income-chart";
 import { Card, CardContent } from "@/components/ui/card";
+import { Smile } from "lucide-react";
 
 const StaticCard = () => {
   return (
@@ -22,7 +21,7 @@ const StaticCard = () => {
             <div className="relative h-[100px] w-[80px] flex items-center justify-center">
               <DailyConversionsChart />
 
-              <span className="w-9 h-9 text-blue-600 mb-0 rounded-full bg-blue-600/20 flex justify-center items-center absolute start-[12%] bottom-0">
+              <span className="w-9 h-9 text-blue-600 mb-0 rounded-full bg-primary/20 flex justify-center items-center absolute start-[12%] bottom-0">
                 <Smile className="w-4 h-4" />
               </span>
             </div>

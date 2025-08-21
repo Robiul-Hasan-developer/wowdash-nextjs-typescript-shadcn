@@ -1,8 +1,7 @@
-import type { Metadata } from "next";
-import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import Image from "next/image";
 import FlagImage from "@/public/assets/images/lang-flag.png";
+import type { Metadata } from "next";
+import Image from "next/image";
 
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import { BellRing, Mail } from "lucide-react";
@@ -22,7 +21,7 @@ const TypographyPage = () => {
 
         <DefaultCardComponent title="Default Badges">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="badge text-sm font-semibold bg-blue-600 px-5 py-1.5 rounded text-white">Primary</span>
+            <span className="badge text-sm font-semibold bg-primary px-5 py-1.5 rounded text-white">Primary</span>
             <span className="badge text-sm font-semibold bg-purple-600 px-5 py-1.5 rounded text-white">Secondary</span>
             <span className="badge text-sm font-semibold bg-green-600 px-5 py-1.5 rounded text-white">Success</span>
             <span className="badge text-sm font-semibold bg-cyan-600 px-5 py-1.5 rounded text-white">Info</span>
@@ -50,7 +49,7 @@ const TypographyPage = () => {
 
         <DefaultCardComponent title="Soft Badges">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="badge text-sm font-semibold text-blue-600 bg-blue-100 dark:bg-blue-600/25 px-5 py-1.5 rounded">Primary</span>
+            <span className="badge text-sm font-semibold text-blue-600 bg-blue-100 dark:bg-primary/25 px-5 py-1.5 rounded">Primary</span>
             <span className="badge text-sm font-semibold text-purple-600 bg-purple-100 dark:bg-purple-600/25 px-5 py-1.5 rounded">Secondary</span>
             <span className="badge text-sm font-semibold text-green-600 bg-green-100 dark:bg-green-600/25 px-5 py-1.5 rounded">Success</span>
             <span className="badge text-sm font-semibold text-cyan-600 bg-cyan-100 dark:bg-cyan-600/25 px-5 py-1.5 rounded">Info</span>
@@ -64,7 +63,7 @@ const TypographyPage = () => {
 
         <DefaultCardComponent title="Rounded Badges">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="badge text-sm font-semibold rounded-full bg-blue-600 px-5 py-1.5 text-white">Primary</span>
+            <span className="badge text-sm font-semibold rounded-full bg-primary px-5 py-1.5 text-white">Primary</span>
             <span className="badge text-sm font-semibold rounded-full bg-purple-600 px-5 py-1.5 text-white">Secondary</span>
             <span className="badge text-sm font-semibold rounded-full bg-green-600 px-5 py-1.5 text-white">Success</span>
             <span className="badge text-sm font-semibold rounded-full bg-cyan-600 px-5 py-1.5 text-white">Info</span>
@@ -90,7 +89,7 @@ const TypographyPage = () => {
 
         <DefaultCardComponent title="Badges With Button">
           <div className="flex flex-wrap items-center gap-3">
-            <button type="button" className="badge text-sm font-semibold bg-blue-600 px-4 py-1.5 rounded text-white flex items-center gap-2">
+            <button type="button" className="badge text-sm font-semibold bg-primary px-4 py-1.5 rounded text-white flex items-center gap-2">
               Primary
               <span className="badge text-neutral-900 dark:text-neutral-900 bg-white w-5 h-5 flex items-center justify-center rounded text-xs">4</span>
             </button>
@@ -123,13 +122,13 @@ const TypographyPage = () => {
 
         <DefaultCardComponent title="Number Rounded Badges">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded-full bg-blue-600  text-white">1</span>
+            <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded-full bg-primary  text-white">1</span>
             <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded-full bg-purple-600  text-white">2</span>
             <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded-full bg-green-600  text-white">3</span>
             <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded-full bg-yellow-500  text-white">4</span>
             <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded-full bg-red-600  text-white">5</span>
 
-            <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded-full text-blue-600 dark:text-blue-500 bg-blue-50 dark:bg-blue-600/25">1</span>
+            <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded-full text-blue-600 dark:text-blue-500 bg-blue-50 dark:bg-primary/25">1</span>
             <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded-full text-purple-600 dark:text-purple-500 bg-purple-50 dark:bg-purple-600/25">1</span>
             <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded-full text-green-600 dark:text-green-500 bg-green-100 dark:bg-green-600/25">3</span>
             <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded-full text-yellow-500 dark:text-yellow-500 bg-yellow-100 dark:bg-yellow-500/25">4</span>
@@ -146,13 +145,13 @@ const TypographyPage = () => {
 
         <DefaultCardComponent title="Number Square Badges">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded bg-blue-600  text-white">1</span>
+            <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded bg-primary  text-white">1</span>
             <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded bg-purple-600  text-white">2</span>
             <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded bg-green-600  text-white">3</span>
             <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded bg-yellow-500  text-white">4</span>
             <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded bg-red-600  text-white">5</span>
 
-            <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded text-blue-600 dark:text-blue-500 bg-blue-50 dark:bg-blue-600/25">1</span>
+            <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded text-blue-600 dark:text-blue-500 bg-blue-50 dark:bg-primary/25">1</span>
             <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded text-purple-600 dark:text-purple-500 bg-purple-50 dark:bg-purple-600/25">2</span>
             <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded text-green-600 dark:text-green-500 bg-green-100 dark:bg-green-600/25">3</span>
             <span className="badge text-sm font-semibold w-8 h-8 flex justify-center items-center rounded text-yellow-500 dark:text-yellow-500 bg-yellow-100 dark:bg-yellow-500/25">4</span>
@@ -170,9 +169,9 @@ const TypographyPage = () => {
         <DefaultCardComponent title="Different Badges">
           <div className="flex flex-wrap items-center gap-4">
             <div className="flex flex-wrap items-center gap-3">
-              <button type="button" className="bg-blue-600 text-white rounded relative px-5 py-2 text-sm line-height-1 flex items-center">
+              <button type="button" className="bg-primary text-white rounded relative px-5 py-2 text-sm line-height-1 flex items-center">
                 Inbox
-                <span className="absolute top-0 -end-[8px] -translate-y-1/2 px-1 py-0.5 badge rounded-full bg-blue-600 border border-white">2</span>
+                <span className="absolute top-0 -end-[8px] -translate-y-1/2 px-1 py-0.5 badge rounded-full bg-primary border border-white">2</span>
               </button>
             </div>
             <div className="flex flex-wrap items-center gap-3">
@@ -208,7 +207,7 @@ const TypographyPage = () => {
         <DefaultCardComponent title="Badge Dots Style">
           <div className="flex flex-wrap items-center gap-4">
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+              <span className="w-2 h-2 bg-primary rounded-full"></span>
               <span className="text-blue-600 font-medium">Primary</span>
             </div>
             <div className="flex items-center gap-2">

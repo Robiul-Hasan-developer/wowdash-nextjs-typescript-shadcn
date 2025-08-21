@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { UsersRound, ArrowUp, ArrowDown, Medal, Wallet, FileText } from "lucide-react";
+import { ArrowDown, ArrowUp, FileText, Medal, UsersRound, Wallet } from "lucide-react";
 import React from "react";
 
 interface CardData {
@@ -43,8 +43,8 @@ const cardsDatas: CardData[] = [
     title: "Total Free Users",
     value: "5,000",
     icon: UsersRound,
-    iconBg: "bg-blue-600",
-    gradientFrom: "from-blue-600/10",
+    iconBg: "bg-primary",
+    gradientFrom: "from-primary/10",
     growth: "+200",
     growthIcon: ArrowUp,
     growthColor: "text-green-600 dark:text-green-400",

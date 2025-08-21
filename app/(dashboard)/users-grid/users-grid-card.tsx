@@ -1,16 +1,18 @@
-import React from 'react';
-import { ChevronRight, EllipsisVertical } from "lucide-react";
-import Image, { StaticImageData } from "next/image";
+import { Button } from '@/components/ui/button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Button } from '@/components/ui/button';
+} from "@/components/ui/dropdown-menu";
 import { cn } from '@/lib/utils';
+import { ChevronRight, EllipsisVertical } from "lucide-react";
+import Image, { StaticImageData } from "next/image";
 
 import UserGridBg1 from "@/public/assets/images/user-grid/user-grid-bg1.png";
+import UserGridBg10 from "@/public/assets/images/user-grid/user-grid-bg10.png";
+import UserGridBg11 from "@/public/assets/images/user-grid/user-grid-bg11.png";
+import UserGridBg12 from "@/public/assets/images/user-grid/user-grid-bg12.png";
 import UserGridBg2 from "@/public/assets/images/user-grid/user-grid-bg2.png";
 import UserGridBg3 from "@/public/assets/images/user-grid/user-grid-bg3.png";
 import UserGridBg4 from "@/public/assets/images/user-grid/user-grid-bg4.png";
@@ -19,11 +21,11 @@ import UserGridBg6 from "@/public/assets/images/user-grid/user-grid-bg6.png";
 import UserGridBg7 from "@/public/assets/images/user-grid/user-grid-bg7.png";
 import UserGridBg8 from "@/public/assets/images/user-grid/user-grid-bg8.png";
 import UserGridBg9 from "@/public/assets/images/user-grid/user-grid-bg9.png";
-import UserGridBg10 from "@/public/assets/images/user-grid/user-grid-bg10.png";
-import UserGridBg11 from "@/public/assets/images/user-grid/user-grid-bg11.png";
-import UserGridBg12 from "@/public/assets/images/user-grid/user-grid-bg12.png";
 
 import UserGridImg1 from "@/public/assets/images/user-grid/user-grid-img1.png";
+import UserGridImg10 from "@/public/assets/images/user-grid/user-grid-img10.png";
+import UserGridImg11 from "@/public/assets/images/user-grid/user-grid-img11.png";
+import UserGridImg12 from "@/public/assets/images/user-grid/user-grid-img12.png";
 import UserGridImg2 from "@/public/assets/images/user-grid/user-grid-img2.png";
 import UserGridImg3 from "@/public/assets/images/user-grid/user-grid-img3.png";
 import UserGridImg4 from "@/public/assets/images/user-grid/user-grid-img4.png";
@@ -32,9 +34,6 @@ import UserGridImg6 from "@/public/assets/images/user-grid/user-grid-img6.png";
 import UserGridImg7 from "@/public/assets/images/user-grid/user-grid-img7.png";
 import UserGridImg8 from "@/public/assets/images/user-grid/user-grid-img8.png";
 import UserGridImg9 from "@/public/assets/images/user-grid/user-grid-img9.png";
-import UserGridImg10 from "@/public/assets/images/user-grid/user-grid-img10.png";
-import UserGridImg11 from "@/public/assets/images/user-grid/user-grid-img11.png";
-import UserGridImg12 from "@/public/assets/images/user-grid/user-grid-img12.png";
 
 export interface UserData {
     id: number;
@@ -195,7 +194,7 @@ const UsersGridCard = () => {
                                     <span className="text-secondary-light text-sm mb-0">Designation</span>
                                 </div>
                             </div>
-                            <Button className={cn(`bg-blue-50 hover:bg-blue-600 dark:hover:bg-blue-600 hover:text-white dark:hover:text-white dark:bg-blue-600/25 text-blue-600 dark:text-blue-400 text-sm px-3 py-3 rounded-lg flex items-center justify-center mt-4 font-medium gap-2 w-full h-12`)}>
+                            <Button className={cn(`bg-blue-50 hover:bg-primary dark:hover:bg-primary hover:text-white dark:hover:text-white dark:bg-primary/25 text-blue-600 dark:text-blue-400 text-sm px-3 py-3 rounded-lg flex items-center justify-center mt-4 font-medium gap-2 w-full h-12`)}>
                                 View Profile
                                 <ChevronRight className="w-5 h-5" />
                             </Button>

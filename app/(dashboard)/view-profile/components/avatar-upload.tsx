@@ -1,12 +1,12 @@
 
 "use client";
 
-import React, { useRef, useState } from "react";
-import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { Camera } from "lucide-react";
+import { Label } from "@/components/ui/label";
 import DefaultUploadedImage from "@/public/assets/images/user-grid/user-grid-img13.png";
+import { Camera } from "lucide-react";
 import { StaticImageData } from "next/image";
+import React, { useRef, useState } from "react";
 
 const AvatarUpload = () => {
     const [imagePreview, setImagePreview] = useState<string | StaticImageData>(DefaultUploadedImage);
@@ -36,7 +36,7 @@ const AvatarUpload = () => {
                 />
                 <Label
                     htmlFor="imageUpload"
-                    className="w-8 h-8 flex justify-center items-center bg-blue-100 dark:bg-blue-600/25 text-blue-600 dark:text-blue-400 border border-blue-600 hover:bg-blue-100 text-lg rounded-full cursor-pointer"
+                    className="w-8 h-8 flex justify-center items-center bg-blue-100 dark:bg-primary/25 text-blue-600 dark:text-blue-400 border border-blue-600 hover:bg-blue-100 text-lg rounded-full cursor-pointer"
                 >
                     <Camera className="w-4 h-4" />
                 </Label>

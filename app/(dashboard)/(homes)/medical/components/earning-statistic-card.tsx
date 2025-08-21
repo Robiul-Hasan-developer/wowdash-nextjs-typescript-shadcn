@@ -1,7 +1,6 @@
-import React from 'react';
-import { Card, CardContent } from "@/components/ui/card";
 import DoubleLineChart from '@/components/charts/double-line-chart';
 import CustomSelect from '@/components/shared/custom-select';
+import { Card, CardContent } from "@/components/ui/card";
 
 const EarningStatisticCard = () => {
     return (
@@ -20,7 +19,7 @@ const EarningStatisticCard = () => {
                     <div className="card-body py-4 px-6">
                         <ul className="flex flex-wrap items-center justify-center my-3 gap-3">
                             <li className="flex items-center gap-2">
-                                <span className="w-3 h-2 rounded-[50rem] bg-blue-600"></span>
+                                <span className="w-3 h-2 rounded-[50rem] bg-primary"></span>
                                 <span className="text-gray-600 dark:text-neutral-200 text-sm font-semibold">
                                     New Patient:
                                     <span className="text-gray-900 dark:text-white font-bold">50</span>

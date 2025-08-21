@@ -21,7 +21,7 @@ const SupportTrackerCard = () => {
                 <div className="mt-8 flex flex-wrap gap-6 items-center justify-between">
                     <div className="flex flex-col gap-6">
                         <div className="flex items-center gap-4">
-                            <div className="w-[40px] h-[40px] rounded-[50%] flex justify-center items-center bg-blue-100 dark:bg-blue-600/20 shrink-0">
+                            <div className="w-[40px] h-[40px] rounded-[50%] flex justify-center items-center bg-blue-100 dark:bg-primary/20 shrink-0">
                                 <Image src={TicketIcon1} alt="Icon" className="" />
                             </div>
                             <div className="flex-grow-1">

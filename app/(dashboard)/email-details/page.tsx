@@ -1,20 +1,19 @@
-import type { Metadata } from "next";
-import React from "react";
-import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import EmailSidebar from "@/app/(dashboard)/components/email-sidebar";
+import EmailSidebarOverlay from "@/app/(dashboard)/components/email-sidebar-overlay";
+import EmailSidebarToggleButton from "@/app/(dashboard)/email/components/email-sidebar-toggle-button";
+import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
+import LoadingSkeleton from "@/components/loading-skeleton";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import Image from "next/image";
 import { Textarea } from "@/components/ui/textarea";
 import UserList1 from "@/public/assets/images/user-list/user-list1.png";
 import UserList2 from "@/public/assets/images/user-list/user-list2.png";
+import { Images, LinkIcon, MoveLeft, Printer, Send, Star, Trash2 } from "lucide-react";
+import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { Images, MoveLeft, Printer, Star, Trash2, LinkIcon, Send } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import EmailSidebarOverlay from "@/app/(dashboard)/components/email-sidebar-overlay";
-import EmailSidebarToggleButton from "@/app/(dashboard)/email/components/email-sidebar-toggle-button";
 import { Suspense } from "react";
-import LoadingSkeleton from "@/components/loading-skeleton";
 import { sendMessageAction } from "./actions";
 
 const metadata: Metadata = {
@@ -52,7 +51,7 @@ const EmailDetailsPage = () => {
                                             <MoveLeft />
                                         </Link>
                                         <h6 className="mb-0 text-lg">Kathryn Murphy</h6>
-                                        <span className="bg-blue-100 dark:bg-blue-600/25 text-blue-600 dark:text-blue-400 text-sm rounded px-2">Personal</span>
+                                        <span className="bg-blue-100 dark:bg-primary/25 text-blue-600 dark:text-blue-400 text-sm rounded px-2">Personal</span>
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <button className="text-neutral-600 dark:text-white flex cursor-pointer hover:text-blue-600">

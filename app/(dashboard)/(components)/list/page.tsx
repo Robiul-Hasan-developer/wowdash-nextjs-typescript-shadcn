@@ -1,14 +1,13 @@
-import type { Metadata } from "next";
-import React from "react";
-import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
+import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import ListImg1 from "@/public/assets/images/lists/list-img1.png";
 import ListImg2 from "@/public/assets/images/lists/list-img2.png";
 import ListImg3 from "@/public/assets/images/lists/list-img3.png";
 import ListImg4 from "@/public/assets/images/lists/list-img4.png";
 import ListImg5 from "@/public/assets/images/lists/list-img5.png";
-import Image from "next/image";
 import { BellDot, FolderOpen, Reply, ShieldX, ShoppingCart } from "lucide-react";
+import type { Metadata } from "next";
+import Image from "next/image";
 
 const metadata: Metadata = {
   title: "User List & Management | WowDash Admin Dashboard",
@@ -35,7 +34,7 @@ const TypographyPage = () => {
 
         <DefaultCardComponent title="Active List">
           <ul className="rounded-lg border border-slate-200 dark:border-slate-600 overflow-hidden">
-            <li className="text-secondary-light p-4 bg-blue-600 border-b border-slate-200 dark:border-slate-600 text-white">1. This is list trust fund seitan letterpress, keytar raw denim keffiye</li>
+            <li className="text-secondary-light p-4 bg-primary border-b border-slate-200 dark:border-slate-600 text-white">1. This is list trust fund seitan letterpress, keytar raw denim keffiye</li>
             <li className="text-secondary-light p-4 bg-white dark:bg-slate-700 border-b border-slate-200 dark:border-slate-600">2. This is list trust fund seitan letterpress, keytar raw denim </li>
             <li className="text-secondary-light p-4 bg-white dark:bg-slate-700 border-b border-slate-200 dark:border-slate-600">3. This is list trust fund seitan letterpress, keytar raw </li>
             <li className="text-secondary-light p-4 bg-white dark:bg-slate-700 border-b border-slate-200 dark:border-slate-600">4. This is list trust fund seitan letterpress, keytar raw denim keffiye</li>

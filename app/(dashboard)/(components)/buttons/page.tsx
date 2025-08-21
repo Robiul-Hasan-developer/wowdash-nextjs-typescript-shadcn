@@ -1,10 +1,9 @@
-import type { Metadata } from "next";
-import React from "react";
+import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
-import { ArrowLeftSquare, ArrowRightSquare, ArrowUpSquare, ArrowDownSquare } from 'lucide-react';
+import { ArrowDownSquare, ArrowLeftSquare, ArrowRightSquare, ArrowUpSquare } from 'lucide-react';
+import type { Metadata } from "next";
 
 const metadata: Metadata = {
   title: "Buttons & Interactive Controls | WowDash Admin Dashboard",
@@ -24,7 +23,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-blue-600 hover:bg-blue-700 text-white rounded-lg px-5 py-[11px]"
+                "h-[46px] bg-primary hover:bg-blue-700 text-white rounded-lg px-5 py-[11px]"
               )}
             >
               Primary
@@ -102,7 +101,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-lg px-5 py-[11px]"
+                "h-[46px] bg-transparent border border-blue-600 text-blue-600 hover:bg-primary hover:text-white rounded-lg px-5 py-[11px]"
               )}
             >
               Primary
@@ -180,7 +179,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-blue-600 hover:bg-blue-700 text-white rounded-full px-5 py-[11px]"
+                "h-[46px] bg-primary hover:bg-blue-700 text-white rounded-full px-5 py-[11px]"
               )}
             >
               Primary
@@ -258,7 +257,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-full px-5 py-[11px]"
+                "h-[46px] bg-transparent border border-blue-600 text-blue-600 hover:bg-primary hover:text-white rounded-full px-5 py-[11px]"
               )}
             >
               Primary
@@ -336,7 +335,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-blue-100 dark:bg-blue-600/25 dark:hover:bg-blue-600 hover:bg-blue-600 text-blue-600 hover:text-white rounded-full px-5 py-[11px]"
+                "h-[46px] bg-blue-100 dark:bg-primary/25 dark:hover:bg-primary hover:bg-primary text-blue-600 hover:text-white rounded-full px-5 py-[11px]"
               )}
             >
               Primary
@@ -498,7 +497,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-lg px-5 py-[11px] flex items-center gap-2"
+                "h-[46px] bg-transparent border border-blue-600 text-blue-600 hover:bg-primary hover:text-white rounded-lg px-5 py-[11px] flex items-center gap-2"
               )}
             >
               <ArrowLeftSquare className="text-xl" /> Left Icon
@@ -534,7 +533,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] border bg-transparent border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white w-[60px] h-[50px] flex items-center justify-center gap-2"
+                "h-[46px] border bg-transparent border-blue-600 text-blue-600 hover:bg-primary hover:text-white w-[60px] h-[50px] flex items-center justify-center gap-2"
               )}
             >
               <ArrowDownSquare className="text-xl" />
@@ -555,7 +554,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-full px-5 py-[11px] flex items-center gap-2"
+                "h-[46px] bg-transparent border border-blue-600 text-blue-600 hover:bg-primary hover:text-white rounded-full px-5 py-[11px] flex items-center gap-2"
               )}
             >
               <ArrowLeftSquare className="text-xl" /> Left Icon
@@ -590,7 +589,7 @@ const ButtonPage = () => {
             <Button
               type="button"
               className={cn(
-                "h-[46px] bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-full w-[60px] h-[50px] flex items-center justify-center gap-2"
+                "h-[46px] bg-transparent border border-blue-600 text-blue-600 hover:bg-primary hover:text-white rounded-full w-[60px] h-[50px] flex items-center justify-center gap-2"
               )}
             >
               <ArrowDownSquare className="text-xl" />

@@ -1,5 +1,4 @@
-import { Medal, UsersRound, Wallet, LucideIcon } from 'lucide-react';
-import React from 'react';
+import { LucideIcon, Medal, UsersRound, Wallet } from 'lucide-react';
 
 interface statCardsType {
     cardBg: string,
@@ -35,7 +34,7 @@ export const statsCards: statCardsType[] = [
     },
     {
         cardBg: 'from-blue-600/10',
-        iconBgColor: 'bg-blue-600/25 text-blue-600 dark:text-blue-500',
+        iconBgColor: 'bg-primary/25 text-blue-600 dark:text-blue-500',
         icon: UsersRound,
         statistics: '15,750',
         text: 'Patients',

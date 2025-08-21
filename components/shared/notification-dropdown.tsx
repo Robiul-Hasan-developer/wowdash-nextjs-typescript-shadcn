@@ -1,4 +1,3 @@
-import React from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -7,9 +6,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
+import { default as NotificationImg1, default as NotificationImg2 } from "@/public/assets/images/notification/profile-4.png";
 import { Bell, CircleCheck } from "lucide-react";
-import NotificationImg1 from "@/public/assets/images/notification/profile-4.png";
-import NotificationImg2 from "@/public/assets/images/notification/profile-4.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -28,7 +26,7 @@ const NotificationDropdown = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="sm:w-[400px] max-h-[unset] me-6 p-0 rounded-2xl overflow-hidden shadow-lg block">
         <div className="">
-          <div className="py-3 px-4 rounded-lg bg-primary/10 dark:bg-blue-600/25 m-4 flex items-center justify-between gap-2">
+          <div className="py-3 px-4 rounded-lg bg-primary/10 dark:bg-primary/25 m-4 flex items-center justify-between gap-2">
             <h6 className="text-lg text-neutral-900 dark:text-white font-semibold mb-0">
               Notification
             </h6>
@@ -94,7 +92,7 @@ const NotificationDropdown = () => {
                 className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 justify-between gap-1"
               >
                 <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 relative w-11 h-11 bg-blue-100 dark:bg-blue-600/25 text-blue-600 flex justify-center items-center rounded-full">
+                  <div className="flex-shrink-0 relative w-11 h-11 bg-blue-100 dark:bg-primary/25 text-primary flex justify-center items-center rounded-full">
                     AM
                   </div>
                   <div>
@@ -142,7 +140,7 @@ const NotificationDropdown = () => {
                 className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 justify-between gap-1"
               >
                 <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 relative w-11 h-11 bg-blue-100 dark:bg-blue-600/25 text-blue-600 flex justify-center items-center rounded-full">
+                  <div className="flex-shrink-0 relative w-11 h-11 bg-blue-100 dark:bg-primary/25 text-primary flex justify-center items-center rounded-full">
                     DR
                   </div>
                   <div>

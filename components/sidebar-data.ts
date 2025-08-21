@@ -54,7 +54,7 @@ export const data = {
         {
           title: "NFT & Gaming",
           url: "/nft",
-          circleColor: "bg-blue-600",
+          circleColor: "bg-primary",
         },
         {
           title: "Medical",
@@ -138,7 +138,7 @@ export const data = {
         {
           title: "Progress Bar",
           url: "/progress-bar",
-          circleColor: "bg-blue-600",
+          circleColor: "bg-primary",
         },
         {
           title: "Tab & Accordion",
@@ -153,7 +153,7 @@ export const data = {
         {
           title: "Badges",
           url: "/badge",
-          circleColor: "bg-blue-600",
+          circleColor: "bg-primary",
         },
         {
           title: "Tooltip & Popover",
@@ -168,7 +168,7 @@ export const data = {
         {
           title: "Tags",
           url: "/tags",
-          circleColor: "bg-blue-600",
+          circleColor: "bg-primary",
         },
         {
           title: "List",
@@ -260,7 +260,7 @@ export const data = {
         {
           title: "Users List",
           url: "/users-list",
-          circleColor: "bg-blue-600",
+          circleColor: "bg-primary",
         },
         {
           title: "Users Grid",

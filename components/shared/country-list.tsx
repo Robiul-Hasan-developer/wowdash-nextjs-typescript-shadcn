@@ -1,4 +1,3 @@
-import React from "react";
 import Image, { StaticImageData } from "next/image";
 
 import FlagImg1 from "@/public/assets/images/flags/flag1.png";
@@ -21,7 +20,7 @@ export const countries: Country[] = [
     users: "1,240 Users",
     percent: 80,
     flag: FlagImg1,
-    color: "bg-blue-600",
+    color: "bg-primary",
   },
   {
     name: "Bangladesh",

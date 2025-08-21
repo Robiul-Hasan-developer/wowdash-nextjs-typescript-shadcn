@@ -1,8 +1,7 @@
-import type { Metadata } from "next";
-import React from "react";
-import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
-import { Input } from "@/components/ui/input"
+import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
+import { Input } from "@/components/ui/input";
+import type { Metadata } from "next";
 
 const metadata: Metadata = {
   title: "Radio Buttons & Selection Controls | WowDash Admin Dashboard",
@@ -97,7 +96,7 @@ const TypographyPage = () => {
 
         <DefaultCardComponent title="Radio With Button">
           <div className="flex items-center flex-wrap gap-6">
-            <div className="bg-blue-50 dark:bg-blue-600/25 px-5 py-3 rounded-lg">
+            <div className="bg-blue-50 dark:bg-primary/25 px-5 py-3 rounded-lg">
               <span className="flex items-center gap-2">
                 <Input className="!shadow-none !ring-0 !focus:ring-0 rounded-[50rem] peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" type="radio" name="radio100" id="radio100" defaultChecked />
                 <label className="peer-checked:text-blue-600 leading-[1] font-medium" htmlFor="radio100"> Radio Active </label>

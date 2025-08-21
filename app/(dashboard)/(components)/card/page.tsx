@@ -1,11 +1,6 @@
-import type { Metadata } from "next";
-import React from "react";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Code, BriefcaseBusiness, Monitor, Medal, X, UserPlus } from "lucide-react";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 import CardImg1 from "@/public/assets/images/card-component/card-img1.png";
 import CardImg2 from "@/public/assets/images/card-component/card-img2.png";
 import CardImg3 from "@/public/assets/images/card-component/card-img3.png";
@@ -15,6 +10,10 @@ import HorizontalCardImg1 from "@/public/assets/images/card-component/horizontal
 import HorizontalCardImg2 from "@/public/assets/images/card-component/horizontal-card-img2.png";
 import HorizontalCardImg3 from "@/public/assets/images/card-component/horizontal-card-img3.png";
 import HorizontalCardImg4 from "@/public/assets/images/card-component/horizontal-card-img4.png";
+import { BriefcaseBusiness, ChevronRight, Code, Medal, Monitor, UserPlus, X } from "lucide-react";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 const metadata: Metadata = {
   title: "Cards & Content Containers | WowDash Admin Dashboard",
@@ -53,7 +52,7 @@ const TypographyPage = () => {
                 <Button
                   type="button"
                   className={cn(
-                    "h-[46px] bg-blue-500 hover:bg-blue-600 text-white rounded-lg px-5 py-[11px] inline-flex items-center gap-3"
+                    "h-[46px] bg-blue-500 hover:bg-primary text-white rounded-lg px-5 py-[11px] inline-flex items-center gap-3"
                   )}
                 >
                   Read More
@@ -71,7 +70,7 @@ const TypographyPage = () => {
                   <Button
                     type="button"
                     className={cn(
-                      "h-[46px] bg-blue-100 dark:bg-blue-600/25 dark:hover:bg-blue-600 hover:bg-blue-600 text-blue-600 hover:text-white rounded-lg px-5 py-[11px]  flex items-center gap-3"
+                      "h-[46px] bg-blue-100 dark:bg-primary/25 dark:hover:bg-primary hover:bg-primary text-blue-600 hover:text-white rounded-lg px-5 py-[11px]  flex items-center gap-3"
                     )}
                   >
                     Read More
@@ -98,7 +97,7 @@ const TypographyPage = () => {
                 <Button
                   type="button"
                   className={cn(
-                    "h-[46px] w-[46px] bg-blue-500 hover:bg-blue-600 text-white rounded-lg px-5 py-[11px] inline-flex items-center justify-center"
+                    "h-[46px] w-[46px] bg-blue-500 hover:bg-primary text-white rounded-lg px-5 py-[11px] inline-flex items-center justify-center"
                   )}
                 >
                   <ChevronRight className="w-6 h-6" />
@@ -126,7 +125,7 @@ const TypographyPage = () => {
             </div>
             <div className="card h-full rounded-xl overflow-hidden !p-0 border-0 text-center">
               <div className="card-body p-6">
-                <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-blue-100 dark:bg-blue-600/25 dark:text-blue-500 text-blue-600 mb-4 rounded-xl">
+                <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-blue-100 dark:bg-primary/25 dark:text-blue-500 text-blue-600 mb-4 rounded-xl">
                   <Monitor className="h-8 w-8 mb-0" />
                 </div>
                 <h6 className="mb-2">UI/UX Designer</h6>
@@ -337,9 +336,9 @@ const TypographyPage = () => {
                 </Link>
               </div>
             </div>
-            <div className="card h-full rounded-xl border-0 overflow-hidden !p-0 !bg-blue-600/10 text-center">
+            <div className="card h-full rounded-xl border-0 overflow-hidden !p-0 !bg-primary/10 text-center">
               <div className="card-body p-6">
-                <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-blue-600 text-white mb-4 rounded-xl">
+                <div className="w-[64px] h-[64px] inline-flex items-center justify-center bg-primary text-white mb-4 rounded-xl">
                   <Monitor className="h-8 w-8 mb-0" />
                 </div>
                 <h6 className="mb-2">UI/UX Designer</h6>

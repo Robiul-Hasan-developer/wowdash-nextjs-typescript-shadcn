@@ -1,7 +1,6 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import CustomSelect from "@/components/shared/custom-select";
 import TotalTransactionsChart from "@/components/charts/total-transactions-chart";
+import CustomSelect from "@/components/shared/custom-select";
+import { Card, CardContent } from "@/components/ui/card";
 
 const TotalTransactionsCard = () => {
   return (
@@ -18,7 +17,7 @@ const TotalTransactionsCard = () => {
 
         <ul className="flex flex-wrap items-center justify-between gap-3 mb-7">
           <li className="flex items-center gap-2">
-            <span className="w-4 h-4 rounded-xs bg-blue-600"></span>
+            <span className="w-4 h-4 rounded-xs bg-primary"></span>
             <span className="text-neutral-600 dark:text-neutral-300 text-lg font-normal">
               Total Gain:
               <span className="text-neutral-600 dark:text-neutral-200 font-bold text-lg">

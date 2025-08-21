@@ -6,6 +6,7 @@ import { Settings, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "../ui/button";
+import ColorCustomization from "./theme-components/color-customization";
 import LightDarkMode from "./theme-components/light-dark-mode";
 import ThemeDirection from "./theme-components/theme-direction";
 
@@ -17,7 +18,7 @@ const ThemeCustomizer = () => {
     return (
         <>
             <Button
-                className="fixed bottom-12 end-8 !p-0 shadow-xl rounded-full w-[50px] h-[50px] bg-blue-600 text-white flex items-center justify-center overflow-hidden z-[99999]"
+                className="fixed bottom-12 end-8 !p-0 shadow-xl rounded-full w-[50px] h-[50px] bg-primary text-white flex items-center justify-center overflow-hidden z-[99999]"
                 onClick={() => setCustomizationOpen(true)}
             >
                 <Settings className="!w-7 !h-7 animate-spin fill-curren" />
@@ -66,6 +67,7 @@ const ThemeCustomizer = () => {
                 <div className="flex flex-col gap-12 px-6 py-6 overflow-y-auto grow">
                     <LightDarkMode />
                     <ThemeDirection />
+                    <ColorCustomization />
                 </div>
 
                 <div className="px-6 py-3 border-t border-neutral-200 dark:border-slate-700">

@@ -1,11 +1,10 @@
 "use client"
 
-import React from 'react';
-import { Mail, Star, Send, Pencil, TriangleAlert, Trash2, CirclePlus } from 'lucide-react';
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { useEmailSidebar } from '@/contexts/email-sidebar-context';
+import { cn } from "@/lib/utils";
+import { CirclePlus, Mail, Pencil, Send, Star, Trash2, TriangleAlert } from 'lucide-react';
+import Link from "next/link";
 
 const EmailSidebar = () => {
     const { isSidebarOpen } = useEmailSidebar();
@@ -107,7 +106,7 @@ const EmailSidebar = () => {
                         <ul>
                             <li className="mb-5">
                                 <span className="line-height-1 font-medium text-secondary-light text-sm flex items-center gap-2.5">
-                                    <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                                    <span className="w-2 h-2 bg-primary rounded-full"></span>
                                     Personal
                                 </span>
                             </li>

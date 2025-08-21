@@ -1,9 +1,9 @@
+import CommonLink from "@/components/shared/common-link";
+import { Card, CardContent } from '@/components/ui/card';
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-import { Card, CardContent } from '@/components/ui/card';
-import React from "react";
-import CommonLink from "@/components/shared/common-link";
 import Link from "next/link";
+import React from "react";
 
 interface Category {
     id: number;
@@ -54,7 +54,7 @@ const categories: Category[] = [
         title: "Logo Design",
         courses: "40+ Courses",
         icon: "/assets/images/home-six/category-icon6.png",
-        bgColor: "bg-blue-600/10",
+        bgColor: "bg-primary/10",
     },
 ];
 
@@ -96,7 +96,7 @@ const TopCategoriesCard: React.FC = () => {
                                 </div>
                                 <Link
                                     href="#"
-                                    className="w-6 h-6 bg-blue-600/10 text-blue-600 dark:text-blue-600 flex justify-center items-center text-lg hover:bg-blue-600/20 rounded"
+                                    className="w-6 h-6 bg-primary/10 text-blue-600 dark:text-blue-600 flex justify-center items-center text-lg hover:bg-primary/20 rounded"
                                 >
                                     <ChevronRight className="w-4" />
                                 </Link>

@@ -1,7 +1,5 @@
-import type { Metadata } from "next";
-import React from "react";
-import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import DefaultCardComponent from "@/app/(dashboard)/components/default-card-component";
+import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,8 +7,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { ChevronDown, ChevronUp, ChevronRight, ChevronLeft, EllipsisVertical, Ellipsis } from 'lucide-react';
+} from "@/components/ui/dropdown-menu";
+import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Ellipsis, EllipsisVertical } from 'lucide-react';
+import type { Metadata } from "next";
 
 const metadata: Metadata = {
   title: "Dropdowns & Menu Navigation | WowDash Admin Dashboard",
@@ -29,7 +28,7 @@ const DropdownPage = () => {
           <div className="flex flex-wrap items-center gap-3">
             <div>
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 !shadow-none !ring-none focus:ring-none !ring-0">
+                <DropdownMenuTrigger className="flex items-center gap-2 text-white bg-primary hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:bg-primary dark:hover:bg-blue-700 dark:focus:ring-blue-800 !shadow-none !ring-none focus:ring-none !ring-0">
                   Default Action
                   <ChevronDown className="w-5 h-5" />
                 </DropdownMenuTrigger>
@@ -46,7 +45,7 @@ const DropdownPage = () => {
 
             <div>
               <DropdownMenu>
-                <DropdownMenuTrigger className="!shadow-none !ring-none focus:ring-none !ring-0 text-blue-600 focus:bg-blue-600 hover:bg-blue-700 border border-blue-600 hover:text-white focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:text-blue-400 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-800">
+                <DropdownMenuTrigger className="!shadow-none !ring-none focus:ring-none !ring-0 text-blue-600 focus:bg-primary hover:bg-blue-700 border border-blue-600 hover:text-white focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:text-blue-400 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-800">
                   Outline Action
                   <ChevronDown className="w-5 h-5" />
                 </DropdownMenuTrigger>
@@ -63,7 +62,7 @@ const DropdownPage = () => {
 
             <div>
               <DropdownMenu>
-                <DropdownMenuTrigger className="!shadow-none !ring-none focus:ring-none !ring-0 bg-blue-50 hover:bg-blue-600 focus:ring-4 focus:outline-none hover:text-white text-blue-600 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:bg-blue-600/25 dark:text-blue-400 dark:hover:text-white dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <DropdownMenuTrigger className="!shadow-none !ring-none focus:ring-none !ring-0 bg-blue-50 hover:bg-primary focus:ring-4 focus:outline-none hover:text-white text-blue-600 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:bg-primary/25 dark:text-blue-400 dark:hover:text-white dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                   Focus Action
                   <ChevronDown className="w-5 h-5" />
                 </DropdownMenuTrigger>
@@ -80,7 +79,7 @@ const DropdownPage = () => {
 
             <div>
               <DropdownMenu>
-                <DropdownMenuTrigger className="!shadow-none !ring-none focus:ring-none !ring-0 hover:bg-blue-600 focus:ring-4 focus:outline-none hover:text-white text-blue-600 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:text-blue-400 dark:hover:text-white dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <DropdownMenuTrigger className="!shadow-none !ring-none focus:ring-none !ring-0 hover:bg-primary focus:ring-4 focus:outline-none hover:text-white text-blue-600 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:text-blue-400 dark:hover:text-white dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                   Default Action
                   <ChevronDown className="w-5 h-5" />
                 </DropdownMenuTrigger>
@@ -101,7 +100,7 @@ const DropdownPage = () => {
           <div className="flex flex-wrap items-center gap-3">
             <div>
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 !shadow-none !ring-none focus:ring-none !ring-0">
+                <DropdownMenuTrigger className="flex items-center gap-2 text-white bg-primary hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:bg-primary dark:hover:bg-blue-700 dark:focus:ring-blue-800 !shadow-none !ring-none focus:ring-none !ring-0">
                   focus Action
                   <ChevronUp className="w-5 h-5" />
                 </DropdownMenuTrigger>
@@ -118,7 +117,7 @@ const DropdownPage = () => {
 
             <div>
               <DropdownMenu>
-                <DropdownMenuTrigger className="!shadow-none !ring-none focus:ring-none !ring-0 text-blue-600 focus:bg-blue-600 hover:bg-blue-700 border border-blue-600 hover:text-white focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:text-blue-400 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-800">
+                <DropdownMenuTrigger className="!shadow-none !ring-none focus:ring-none !ring-0 text-blue-600 focus:bg-primary hover:bg-blue-700 border border-blue-600 hover:text-white focus:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:text-blue-400 dark:hover:text-white dark:focus:text-white dark:focus:ring-blue-800">
                   Outline Action
                   <ChevronUp className="w-5 h-5" />
                 </DropdownMenuTrigger>
@@ -135,7 +134,7 @@ const DropdownPage = () => {
 
             <div>
               <DropdownMenu>
-                <DropdownMenuTrigger className="!shadow-none !ring-none focus:ring-none !ring-0 bg-blue-50 hover:bg-blue-600 focus:ring-4 focus:outline-none hover:text-white text-blue-600 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:bg-blue-600/25 dark:text-blue-400 dark:hover:text-white dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <DropdownMenuTrigger className="!shadow-none !ring-none focus:ring-none !ring-0 bg-blue-50 hover:bg-primary focus:ring-4 focus:outline-none hover:text-white text-blue-600 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:bg-primary/25 dark:text-blue-400 dark:hover:text-white dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                   Focus Action
                   <ChevronUp className="w-5 h-5" />
                 </DropdownMenuTrigger>
@@ -152,7 +151,7 @@ const DropdownPage = () => {
 
             <div>
               <DropdownMenu>
-                <DropdownMenuTrigger className="!shadow-none !ring-none focus:ring-none !ring-0 hover:bg-blue-600 focus:ring-4 focus:outline-none hover:text-white text-blue-600 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:text-blue-400 dark:hover:text-white dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <DropdownMenuTrigger className="!shadow-none !ring-none focus:ring-none !ring-0 hover:bg-primary focus:ring-4 focus:outline-none hover:text-white text-blue-600 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:text-blue-400 dark:hover:text-white dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                   Focus Action
                   <ChevronUp className="w-5 h-5" />
                 </DropdownMenuTrigger>
@@ -371,14 +370,14 @@ const DropdownPage = () => {
         <DefaultCardComponent title="Grouped Dropdown Buttons">
           <div className="flex flex-wrap items-center gap-3">
             <div className="flex">
-              <button className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-s-lg text-base px-5 py-4 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+              <button className="text-white bg-primary hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-s-lg text-base px-5 py-4 text-center inline-flex items-center dark:bg-primary dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
                 1
               </button>
-              <button className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-base px-5 py-4 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+              <button className="text-white bg-primary hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-base px-5 py-4 text-center inline-flex items-center dark:bg-primary dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
                 2
               </button>
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-e-lg text-base px-5 py-4 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 !shadow-none !ring-none focus:ring-none !ring-0">
+                <DropdownMenuTrigger className="flex items-center gap-2 text-white bg-primary hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-e-lg text-base px-5 py-4 text-center inline-flex items-center dark:bg-primary dark:hover:bg-blue-700 dark:focus:ring-blue-800 !shadow-none !ring-none focus:ring-none !ring-0">
                   Default Action
                   <ChevronDown className="w-5 h-5" />
                 </DropdownMenuTrigger>
@@ -486,7 +485,7 @@ const DropdownPage = () => {
           <div className="flex flex-wrap items-center gap-3">
             <div>
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 !shadow-none !ring-none focus:ring-none !ring-0">
+                <DropdownMenuTrigger className="flex items-center gap-2 text-white bg-primary hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-4 text-center inline-flex items-center dark:bg-primary dark:hover:bg-blue-700 dark:focus:ring-blue-800 !shadow-none !ring-none focus:ring-none !ring-0">
                   Default Action
                   <ChevronDown className="w-5 h-5" />
                 </DropdownMenuTrigger>
@@ -502,7 +501,7 @@ const DropdownPage = () => {
             </div>
             <div>
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-3 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 !shadow-none !ring-none focus:ring-none !ring-0">
+                <DropdownMenuTrigger className="flex items-center gap-2 text-white bg-primary hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-3 text-center inline-flex items-center dark:bg-primary dark:hover:bg-blue-700 dark:focus:ring-blue-800 !shadow-none !ring-none focus:ring-none !ring-0">
                   Default Action
                   <ChevronDown className="w-5 h-5" />
                 </DropdownMenuTrigger>
@@ -518,7 +517,7 @@ const DropdownPage = () => {
             </div>
             <div>
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-2 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 !shadow-none !ring-none focus:ring-none !ring-0">
+                <DropdownMenuTrigger className="flex items-center gap-2 text-white bg-primary hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2 text-center inline-flex items-center dark:bg-primary dark:hover:bg-blue-700 dark:focus:ring-blue-800 !shadow-none !ring-none focus:ring-none !ring-0">
                   Default Action
                   <ChevronDown className="w-5 h-5" />
                 </DropdownMenuTrigger>

@@ -1,6 +1,5 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import CommonLink from "@/components/shared/common-link";
+import { Card, CardContent } from "@/components/ui/card";
 import Image, { StaticImageData } from "next/image";
 
 // Images
@@ -57,7 +56,7 @@ const treatments: TreatmentItem[] = [
     },
     {
         icon: TreatmentIcon6,
-        bgColor: "bg-blue-600/10",
+        bgColor: "bg-primary/10",
         title: "Gastroenterology",
         doctors: "95 Doctors",
         time: "08:45 AM",

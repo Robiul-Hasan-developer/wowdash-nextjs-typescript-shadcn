@@ -3,7 +3,7 @@
 // const ThemeDirection = () => {
 //     return (
 //         <div className="theme-setting-item">
-//             <h6 className="font-medium text-sm mb-3">Color Scheme</h6>
+//             <h6 className="font-medium text-base mb-3">Color Scheme</h6>
 //             <div className="grid grid-cols-2 gap-4">
 //                 <div
 //                     className={`cursor-pointer border border-neutral-300 flex items-center justify-center flex items-center text-neutral-500 dark:text-neutral-200 gap-4 hover:bg-blue-500/10 duration-300 h-[60px] rounded-md ring-2 ring-transparent dark:border-slate-500`}
@@ -57,7 +57,7 @@ const ThemeDirection = () => {
 
     return (
         <div className="theme-setting-item">
-            <h6 className="font-medium text-sm mb-3">Page Direction</h6>
+            <h6 className="font-medium text-base mb-3">Page Direction</h6>
             <div className="grid grid-cols-2 gap-4">
                 {/* LTR */}
                 <div
