@@ -11,7 +11,7 @@ import ThemeDirection from "./theme-components/theme-direction";
 
 
 const ThemeCustomizer = () => {
-    const [customizationOpen, setCustomizationOpen] = useState(true);
+    const [customizationOpen, setCustomizationOpen] = useState(false);
     const direction = useDirection();
 
     return (
@@ -35,27 +35,18 @@ const ThemeCustomizer = () => {
 
 
             <div
-                className={`fixed max-w-[420px] w-full h-screen bg-white dark:bg-slate-800  top-0 z-[11] shadow-2xl duration-500 transition-transform flex flex-col
-                    ${customizationOpen
-                        ? "end-0 translate-x-0"       // RTL open → visible at left
-                        : "end-0 translate-x-full"    // LTR closed → slide out right
-                    }
-                    ${direction === "rtl" && customizationOpen ? "start translate-x-0" : "start -translate-x-full"
-                    }
-                `}
-            >
-                {/* <div
                 className={`fixed max-w-[420px] w-full h-screen bg-white dark:bg-slate-800 top-0 z-[11] shadow-2xl duration-500 transition-transform flex flex-col
                     ${direction === "rtl"
                         ? customizationOpen
-                            ? "start-0 translate-x-0"       // RTL open → visible at left
-                            : "start-0 -translate-x-full"   // RTL closed → slide out left
+                            ? "end-0 translate-x-0"        // RTL open → right side
+                            : "end-0 translate-x-full hidden"     // RTL closed → hide right
                         : customizationOpen
-                            ? "end-0 translate-x-0"         // LTR open → visible at right
-                            : "end-0 translate-x-full"      // LTR closed → slide out right
+                            ? "end-0 translate-x-0"        // LTR open → right side
+                            : "end-0 translate-x-full"     // LTR closed → hide right
                     }
                 `}
-            > */}
+            >
+
                 <div className="flex items-center gap-6 px-6 py-4 border-b border-neutral-200 dark:border-slate-700 justify-between">
                     <div className="">
                         <h6 className="text-sm dark:text-white">Theme Settings</h6>
@@ -114,14 +105,3 @@ const ThemeCustomizer = () => {
 };
 
 export default ThemeCustomizer;
-
-
-//   ${
-//     direction === "rtl"
-//     ? customizationOpen
-//         ? "end-0 translate-x-0"     // RTL open → left side
-//         : "translate-x-full end-0" // RTL closed → hide left
-//     : customizationOpen
-//         ? "end-0 translate-x-0"    // LTR open → right side
-//         : "-translate-x-full end-0" // LTR closed → hide right
-// }
