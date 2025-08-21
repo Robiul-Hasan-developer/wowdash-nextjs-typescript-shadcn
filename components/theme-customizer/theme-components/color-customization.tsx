@@ -141,6 +141,7 @@
 
 "use client";
 
+import { Check } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 const colors = [
@@ -193,13 +194,26 @@ const ColorCustomization: React.FC = () => {
                         key={color.name}
                         className="flex flex-col items-center justify-center gap-1 cursor-pointer"
                     >
-                        <button
-                            title={color.name}
-                            onClick={() => handleColorChange(color.hex)}
-                            className={`grid w-full place-content-center gap-2 rounded-lg border-2 py-1.5 shadow-sm transition duration-300 focus-visible:outline-none h-[38px] ${selectedColor === color.hex ? "border-primary" : "border-transparent"
-                                }`}
-                            style={{ backgroundColor: color.hex }}
-                        />
+                        <div className="relative w-full">
+                            <button
+                                title={color.name}
+                                onClick={() => handleColorChange(color.hex)}
+                                className={`grid w-full place-content-center gap-2 rounded-lg border-2 py-1.5 shadow-sm transition duration-300 focus-visible:outline-none h-[38px] !cursor-pointer
+                                    ${selectedColor === color.hex ? "border-primary ring-2 ring-offset-2" : "border-transparent"}
+                                `}
+                                style={{
+                                    backgroundColor: color.hex,
+                                    ["--tw-ring-color" as any]: selectedColor === color.hex ? color.hex : "transparent",
+                                }}
+                            />
+                            {
+                                selectedColor === color.hex && (
+                                    <span className="absolute top-[50%] start-[50%] translate-[-50%]">
+                                        <Check className="text-white" />
+                                    </span>
+                                )
+                            }
+                        </div>
                         <span className="font-medium" style={{ color: color.hex }}>
                             {color.name}
                         </span>
