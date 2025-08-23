@@ -473,8 +473,8 @@ html[layout="boron"] .dashboard-body {
   @apply mt-[72px];
 }
 
-html[layout="helium"] .dashboard-sidebar-container {
-  height: calc(100vh - 80px);
+html[layout="boron"] .dashboard-sidebar-container {
+  height: calc(100vh - 72px);
 }
 /* Boron layout css End */
 
