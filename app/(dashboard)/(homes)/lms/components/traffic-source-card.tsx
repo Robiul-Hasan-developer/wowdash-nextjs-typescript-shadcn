@@ -37,7 +37,7 @@ const TrafficSourceCard = () => {
                     <li className="flex flex-col gap-2">
                         <div className="flex items-center gap-2">
                             <span className="w-3 h-3 rounded-full
-                                     bg-primary"></span>
+                                     bg-blue-500"></span>
                             <span className="text-neutral-600 dark:text-neutral-100 text-sm font-semibold">Social Media</span>
                         </div>
                         <span className="text-neutral-600 dark:text-neutral-100 font-bold">4,305</span>

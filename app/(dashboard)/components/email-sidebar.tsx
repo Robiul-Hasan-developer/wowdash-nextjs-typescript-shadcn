@@ -106,7 +106,7 @@ const EmailSidebar = () => {
                         <ul>
                             <li className="mb-5">
                                 <span className="line-height-1 font-medium text-secondary-light text-sm flex items-center gap-2.5">
-                                    <span className="w-2 h-2 bg-primary rounded-full"></span>
+                                    <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                                     Personal
                                 </span>
                             </li>

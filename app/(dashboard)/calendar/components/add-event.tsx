@@ -283,7 +283,7 @@ const AddEvent: React.FC<AddEventProps> = ({ onAddEvent }) => {
                                             <RadioGroupItem value="Business" id="Business" className='border border-neutral-400'
                                                 required />
                                             <Label className="form-check-label line-height-1 font-medium text-secondary-light text-sm flex items-center gap-1" htmlFor="Business">
-                                                <span className="w-2 h-2 bg-primary rounded-full"></span>
+                                                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                                                 Business
                                             </Label>
                                         </div>

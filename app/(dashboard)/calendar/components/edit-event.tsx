@@ -274,7 +274,7 @@ const EditEvent: React.FC<EditEventProps> = ({ onEditEvent, event }) => {
                                         <div className="flex items-center space-x-2">
                                             <RadioGroupItem value="Business" id="Business" className="border border-neutral-400" required />
                                             <Label htmlFor="Business" className="font-medium text-sm flex items-center gap-1">
-                                                <span className="w-2 h-2 bg-primary rounded-full"></span> Business
+                                                <span className="w-2 h-2 bg-blue-500 rounded-full"></span> Business
                                             </Label>
                                         </div>
                                         <div className="flex items-center space-x-2">

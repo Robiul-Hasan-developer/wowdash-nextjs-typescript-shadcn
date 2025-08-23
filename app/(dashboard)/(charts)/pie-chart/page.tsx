@@ -54,7 +54,7 @@ const PieChartPage = () => {
                             </div>
                             <div className="flex items-center justify-between gap-3 mb-3">
                                 <span className="text-neutral-600 dark:text-neutral-200 font-medium text-sm flex items-center gap-3">
-                                    <span className="w-3 h-3 bg-primary rounded-full"></span> Label 2
+                                    <span className="w-3 h-3 bg-blue-500 rounded-full"></span> Label 2
                                 </span>
                                 <span className="text-neutral-600 dark:text-neutral-200 font-medium text-sm">22</span>
                                 <span className="text-neutral-600 dark:text-neutral-200 font-medium text-sm">  42.9%</span>

@@ -107,7 +107,7 @@ const TypographyPage = () => {
             <div className="flex items-center flex-wrap gap-3 mt-6">
               <div className="relative">
                 <span className="w-6 h-6 rounded-full object-fit-cover flex justify-center items-center font-semibold text-[10px] bg-blue-100 dark:bg-primary/25 text-primary dark:text-blue-400">24</span>
-                <span className="w-2 h-2 bg-primary border br-white rounded-full absolute end-0 bottom-[3px]"></span>
+                <span className="w-2 h-2 bg-blue-500 border br-white rounded-full absolute end-0 bottom-[3px]"></span>
               </div>
               <div className="relative">
                 <span className="w-8 h-8 rounded-full object-fit-cover flex justify-center items-center font-semibold text-[10px] bg-purple-100 dark:bg-purple-600/25 text-purple-600 dark:text-purple-400">24</span>

@@ -19,7 +19,7 @@ const IncomeExpenseCard = () => {
                 <ul className="flex flex-wrap items-center justify-center my-3 gap-6">
                     <li className="flex flex-col gap-1">
                         <div className="flex items-center gap-2">
-                            <span className="w-[8px] h-[8px] rounded-[50rem] bg-primary"></span>
+                            <span className="w-[8px] h-[8px] rounded-[50rem] bg-blue-500"></span>
                             <span className="text-neutral-600 text-sm dark:text-neutral-100 font-semibold">Income </span>
                         </div>
                         <div className="flex items-center gap-2">

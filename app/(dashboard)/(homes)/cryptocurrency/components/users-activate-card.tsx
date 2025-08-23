@@ -28,7 +28,7 @@ const UsersActivateCard = () => {
 
         <ul className="flex flex-wrap items-center justify-between mt-4 gap-3">
           <li className="flex items-center gap-2">
-            <span className="w-3 h-3 rounded-xs bg-primary"></span>
+            <span className="w-3 h-3 rounded-xs bg-blue-500"></span>
             <span className="text-secondary-light text-sm font-normal">
               Visits By Day:
               <span className="text-neutral-600 dark:text-neutral-200 font-bold">

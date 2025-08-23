@@ -25,7 +25,7 @@ const CustomerOverviewCard = () => {
                             <span className="text-secondary-light text-sm font-medium">New: 400</span>
                         </li>
                         <li className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded-full bg-primary"></span>
+                            <span className="w-3 h-3 rounded-full bg-blue-500"></span>
                             <span className="text-secondary-light text-sm font-medium">Active: 1400</span>
                         </li>
                     </ul>

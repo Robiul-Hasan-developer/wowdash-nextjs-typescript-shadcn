@@ -20,7 +20,7 @@ const UserOverviewCard = () => {
 
                 <ul className="flex flex-wrap items-center justify-between mt-4 gap-3">
                     <li className="flex items-center gap-2">
-                        <span className="w-3 h-3 rounded-[2px] bg-primary"></span>
+                        <span className="w-3 h-3 rounded-[2px] bg-blue-500"></span>
                         <span className="text-secondary-light text-sm font-normal">New:
                             <span className="text-neutral-500 dark:text-neutral-300 font-semibold">400</span>
                         </span>

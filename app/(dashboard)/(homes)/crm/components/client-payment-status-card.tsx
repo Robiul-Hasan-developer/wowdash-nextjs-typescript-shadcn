@@ -14,7 +14,7 @@ const ClientPaymentStatusCard = () => {
             <span className="text-secondary-light text-sm font-medium">Paid: 400</span>
           </li>
           <li className="flex items-center gap-2 me-7">
-            <span className="w-3 h-3 rounded-full bg-primary"></span>
+            <span className="w-3 h-3 rounded-full bg-blue-500"></span>
             <span className="text-secondary-light text-sm font-medium">Pending: 400</span>
           </li>
           <li className="flex items-center gap-2">

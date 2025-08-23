@@ -23,7 +23,7 @@ const MyPortfolioCard = () => {
 
         <ul className="flex flex-wrap flex-col mt-[84px] gap-3">
           <li className="flex items-center gap-2">
-            <span className="w-4 h-4 rounded-xs bg-primary"></span>
+            <span className="w-4 h-4 rounded-xs bg-blue-500"></span>
             <span className="text-secondary-light text-lg font-normal">
               Total Gain:
               <span className="text-neutral-600 dark:text-neutral-200 font-bold text-lg">

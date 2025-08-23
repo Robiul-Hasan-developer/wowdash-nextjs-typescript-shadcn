@@ -1,8 +1,6 @@
-import React from 'react';
-import { Card, CardContent } from "@/components/ui/card";
-import CustomSelect from '@/components/shared/custom-select';
-import CoursesActivityChart from '@/components/charts/courses-activity-chart';
 import CustomersStatisticsChart from '@/components/charts/customers-statistics-chart';
+import CustomSelect from '@/components/shared/custom-select';
+import { Card, CardContent } from "@/components/ui/card";
 
 const TotalIncomeCard = () => {
     return (
@@ -37,7 +35,7 @@ const TotalIncomeCard = () => {
                                 </li>
                                 <li className="flex flex-col items-center">
                                     <div className="flex items-center gap-2">
-                                        <span className="w-3 h-2 rounded-[50rem] bg-[#487fff]"></span>
+                                        <span className="w-3 h-2 rounded-[50rem] bg-blue-500"></span>
                                         <span className="text-gray-600 dark:text-neutral-100 text-sm font-normal">Commission </span>
                                     </div>
                                     <h6 className="text-gray-900 dark:text-white font-bold mb-0">$20,000</h6>

@@ -68,7 +68,7 @@ const ThemeDirection = () => {
                         } hover:bg-primary/10`}
                 >
                     <AlignStartVertical className={`${direction === "ltr" ? "text-primary" : ""}`} />
-                    <h6 className={`text-sm font-medium text-neutral-500 dark:text-neutral-200 ${direction === "ltr" ? "text-primary" : ""}`}>
+                    <h6 className={`text-sm font-medium text-neutral-500 dark:text-neutral-200 ${direction === "ltr" ? "text-primary dark:text-primary" : ""}`}>
                         LTR
                     </h6>
                 </div>
