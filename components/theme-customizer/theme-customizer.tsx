@@ -9,6 +9,7 @@ import { Button } from "../ui/button";
 import ColorCustomization from "./theme-components/color-customization";
 import LightDarkMode from "./theme-components/light-dark-mode";
 import ThemeDirection from "./theme-components/theme-direction";
+import ThemeLayout from "./theme-components/theme-layout";
 
 
 const ThemeCustomizer = () => {
@@ -68,6 +69,7 @@ const ThemeCustomizer = () => {
                     <LightDarkMode />
                     <ThemeDirection />
                     <ColorCustomization />
+                    <ThemeLayout />
                 </div>
 
                 <div className="px-6 py-3 border-t border-neutral-200 dark:border-slate-700">

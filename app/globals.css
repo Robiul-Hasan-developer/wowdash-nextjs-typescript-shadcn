@@ -338,8 +338,12 @@
   }
 
   .active-gradient [data-state="active"] {
-    background: linear-gradient(#487fff30 0%, #487fff11 100%);
+    background: linear-gradient(
+      oklch(from var(--primary) l c h / 0.25) 0%,
+      oklch(from var(--primary) l c h / 0.1) 100%
+    );
   }
+
   [data-slot="dropdown-menu-trigger"] {
     @apply cursor-pointer;
   }
@@ -426,3 +430,31 @@
   box-shadow: 2px 1px 7px 0px #f0b000a8;
 }
 /* ======================================== Custom Classes css End ======================================== */
+
+/* ========================= Layout Css Start ======================== */
+html[layout="helium"] body {
+  @apply bg-neutral-50 dark:bg-slate-900;
+}
+html[layout="helium"] .dashboard-sidebar-container {
+  @apply border border-neutral-200 dark:border-slate-600 overflow-hidden m-5 rounded-[8px];
+}
+
+html[layout="helium"] .dashboard-body-wrapper {
+  @apply p-5 ps-10;
+}
+
+html[layout="helium"] .dashboard-body {
+  @apply px-0 bg-transparent;
+}
+
+html[layout="helium"] .dashboard-header-wrapper {
+  @apply !shadow-none;
+}
+
+html[layout="helium"] .dashboard-header {
+  @apply border border-neutral-200 dark:border-slate-600 rounded-[8px] !shadow-none;
+}
+html[layout="helium"] .d-footer {
+  @apply rounded-[8px];
+}
+/* ========================= Layout Css End ======================== */

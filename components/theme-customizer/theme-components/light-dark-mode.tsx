@@ -17,7 +17,6 @@ const LightDarkMode = () => {
     // Don't render until mounted to avoid hydration mismatch or wrong theme
     if (!isMounted) return null;
 
-
     return (
         <div className="theme-setting-item">
             <h6 className="font-medium text-base mb-3">Theme Mode</h6>
