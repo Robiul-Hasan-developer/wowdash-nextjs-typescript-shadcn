@@ -431,7 +431,8 @@
 }
 /* ======================================== Custom Classes css End ======================================== */
 
-/* ========================= Layout Css Start ======================== */
+/* ======================================= Layout Css Start ================================== */
+/* Helium layout css start */
 html[layout="helium"] body {
   @apply bg-neutral-50 dark:bg-slate-900;
 }
@@ -457,4 +458,23 @@ html[layout="helium"] .dashboard-header {
 html[layout="helium"] .d-footer {
   @apply rounded-[8px];
 }
-/* ========================= Layout Css End ======================== */
+/* Helium layout css End */
+
+/* Boron layout css start */
+html[layout="boron"] .dashboard-header-wrapper {
+  position: fixed;
+  width: 100%;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+}
+
+html[layout="boron"] .dashboard-sidebar-wrapper {
+  margin-top: 72px;
+}
+
+html[layout="boron"] .dashboard-sidebar-container {
+  margin-top: 72px;
+}
+/* Boron layout css End */
+
+/* ======================================= Layout Css End ================================== */
