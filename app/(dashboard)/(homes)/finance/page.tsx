@@ -3,6 +3,7 @@ import LoadingSkeleton from "@/components/loading-skeleton";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import BalanceStatistic from "./components/balance-statistic";
+import EarningCategories from "./components/earning-categories";
 import StatisticsCard from "./components/statistics-card";
 
 const metadata: Metadata = {
@@ -22,7 +23,6 @@ const FinancePage = () => {
                 </Suspense>
             </div>
 
-
             <div className="mt-6">
                 <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
                     <div className="col-span-12 xl:col-span-8">
@@ -30,6 +30,11 @@ const FinancePage = () => {
                             <div className="col-span-12">
                                 <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                                     <BalanceStatistic />
+                                </Suspense>
+                            </div>
+                            <div className="col-span-12 md:col-span-6">
+                                <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                                    <EarningCategories />
                                 </Suspense>
                             </div>
                         </div>
