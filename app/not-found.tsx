@@ -1,9 +1,8 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import Link from "next/link";
 
 import ErrorThumbnail from "@/public/assets/images/error-img.png";
 
