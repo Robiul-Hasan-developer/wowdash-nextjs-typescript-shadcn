@@ -1,119 +1,3 @@
-// import CommonLink from "@/components/shared/common-link";
-// import { Card, CardContent } from "@/components/ui/card";
-
-
-// const EarningCategories: React.FC = () => {
-//     return (
-//         <Card className="card h-full rounded-lg border-0 !p-0 block">
-//             <CardContent className="card-body p-0 h-full">
-//                 <div>
-//                     {/* Header */}
-//                     <div className="card-header border-b border-neutral-200 dark:border-slate-500 py-4 px-6">
-//                         <div className="flex items-center flex-wrap gap-2 justify-between">
-//                             <h6 className="font-bold text-lg mb-0">Top Customer</h6>
-//                             <CommonLink />
-//                         </div>
-//                     </div>
-
-//                     {/* Users list */}
-//                     <div className="p-6">
-//                         <div className="flex flex-col gap-5">
-//                             <div className="flex items-center justify-between gap-4">
-//                                 <div className="flex items-center w-full gap-4 grow">
-//                                     <span className="w-10 h-10 rounded-full flex justify-center items-center shrink-0 bg-blue-100 dark:bg-blue-600/25">
-//                                         <img src="assets/images/home-eleven/icons/earn-cat-icon1.svg" alt="Image" className="" />
-//                                     </span>
-//                                     <div className="grow">
-//                                         <h6 className="text-sm mb-0">Digital Assets</h6>
-//                                         <span className="text-xs text-neutral-600 font-medium">$50 / from $1000</span>
-//                                     </div>
-//                                 </div>
-//                                 <div className="flex items-center gap-2">
-//                                     <div className="w-full max-w-[66px] ms-auto">
-//                                         <div className="progress progress-sm rounded-[50rem]">
-//                                             <div className="progress-bar bg-blue-600 rounded-[50rem]" style="width: 80%;"></div>
-//                                         </div>
-//                                     </div>
-//                                     <span className="text-neutral-600 font-xs font-semibold">80%</span>
-//                                 </div>
-//                             </div>
-
-//                             <div className="flex items-center justify-between gap-4">
-//                                 <div className="flex items-center w-full gap-4 grow">
-//                                     <span className="w-10 h-10 rounded-full flex justify-center items-center shrink-0 bg-red-100 dark:bg-red-600/25">
-//                                         <img src="assets/images/home-eleven/icons/earn-cat-icon2.svg" alt="Image" className="" />
-//                                     </span>
-//                                     <div className="grow">
-//                                         <h6 className="text-sm mb-0">Side Project</h6>
-//                                         <span className="text-xs text-neutral-600 font-medium">$50 / from $1000</span>
-//                                     </div>
-//                                 </div>
-//                                 <div className="flex items-center gap-2">
-//                                     <div className="w-full max-w-[66px] ms-auto">
-//                                         <div className="progress progress-sm rounded-[50rem]">
-//                                             <div className="progress-bar bg-orange rounded-[50rem]" style="width: 60%;"></div>
-//                                         </div>
-//                                     </div>
-//                                     <span className="text-neutral-600 font-xs font-semibold">60%</span>
-//                                 </div>
-//                             </div>
-
-//                             <div className="flex items-center justify-between gap-4">
-//                                 <div className="flex items-center w-full gap-4 grow">
-//                                     <span className="w-10 h-10 rounded-full flex justify-center items-center shrink-0 bg-yellow-200 dark:bg-yellow-600/25">
-//                                         <img src="assets/images/home-eleven/icons/earn-cat-icon3.svg" alt="Image" className="" />
-//                                     </span>
-//                                     <div className="grow">
-//                                         <h6 className="text-sm mb-0">Investment</h6>
-//                                         <span className="text-xs text-neutral-600 font-medium">$50 / from $1000</span>
-//                                     </div>
-//                                 </div>
-//                                 <div className="flex items-center gap-2">
-//                                     <div className="w-full max-w-[66px] ms-auto">
-//                                         <div className="progress progress-sm rounded-[50rem]">
-//                                             <div className="progress-bar bg-yellow-600 rounded-[50rem]" style="width: 49%;"></div>
-//                                         </div>
-//                                     </div>
-//                                     <span className="text-neutral-600 font-xs font-semibold">49%</span>
-//                                 </div>
-//                             </div>
-
-//                             <div className="flex items-center justify-between gap-4">
-//                                 <div className="flex items-center w-full gap-4 grow">
-//                                     <span className="w-10 h-10 rounded-full flex justify-center items-center shrink-0 bg-green-200 dark:bg-green-600/25">
-//                                         <img src="assets/images/home-eleven/icons/earn-cat-icon4.svg" alt="Image" className="" />
-//                                     </span>
-//                                     <div className="grow">
-//                                         <h6 className="text-sm mb-0">Working Hard</h6>
-//                                         <span className="text-xs text-neutral-600 font-medium">$50 / from $1000</span>
-//                                     </div>
-//                                 </div>
-//                                 <div className="flex items-center gap-2">
-//                                     <div className="w-full max-w-[66px] ms-auto">
-//                                         <div className="progress progress-sm rounded-[50rem]">
-//                                             <div className="progress-bar bg-green-main rounded-[50rem]" style="width: 100%;"></div>
-//                                         </div>
-//                                     </div>
-//                                     <span className="text-neutral-600 font-xs font-semibold">100%</span>
-//                                 </div>
-//                             </div>
-
-//                         </div>
-//                     </div>
-//                 </div>
-//             </CardContent>
-//         </Card>
-//     );
-// };
-
-// export default EarningCategories;
-
-
-
-
-
-
-
 import CommonLink from "@/components/shared/common-link";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
@@ -148,7 +32,7 @@ const categories: Category[] = [
         percentage: 60,
         icon: "/assets/images/home-eleven/icons/earn-cat-icon2.svg",
         iconBg: "bg-red-100 dark:bg-red-600/25",
-        progressColor: "bg-yellow-600",
+        progressColor: "bg-yellow-500",
     },
     {
         id: 3,
@@ -213,14 +97,6 @@ const EarningCategories: React.FC = () => {
                                     </div>
 
                                     <div className="flex items-center gap-2">
-                                        {/* <div className="w-full max-w-[66px] ms-auto">
-                                            <div className="progress progress-sm rounded-[50rem]">
-                                                <div
-                                                    className={`progress-bar ${cat.progressColor} rounded-[50rem]`}
-                                                    style={{ width: `${cat.percentage}%` }}
-                                                ></div>
-                                            </div>
-                                        </div> */}
                                         <div className="ms-auto">
                                             <div className="w-[66px] bg-gray-200 rounded-full h-2.5 dark:bg-gray-600">
                                                 <div className={`${cat.progressColor} h-2.5 rounded-full`} style={{ width: `${cat.percentage}%` }}></div>
