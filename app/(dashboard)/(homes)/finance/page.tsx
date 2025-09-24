@@ -2,6 +2,7 @@ import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import LoadingSkeleton from "@/components/loading-skeleton";
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import BalanceStatistic from "./components/balance-statistic";
 import StatisticsCard from "./components/statistics-card";
 
 const metadata: Metadata = {
@@ -16,17 +17,31 @@ const FinancePage = () => {
             <DashboardBreadcrumb title="Finance & Banking" text="Finance & Banking" />
 
             <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
-
+                <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                    <StatisticsCard />
+                </Suspense>
             </div>
 
 
-            <div className="gap-6 grid grid-cols-1 2xl:grid-cols-12">
-                <div className="col-span-12">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        <StatisticsCard />
-                    </Suspense>
+            <div className="mt-6">
+                <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
+                    <div className="col-span-12 xl:col-span-8">
+                        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+                            <div className="col-span-12">
+                                <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                                    <BalanceStatistic />
+                                </Suspense>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-span-12 xl:col-span-4">
+
+                    </div>
                 </div>
             </div>
+
+
         </>
     );
 };
