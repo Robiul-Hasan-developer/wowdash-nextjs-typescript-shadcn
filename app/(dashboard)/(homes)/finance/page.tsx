@@ -7,6 +7,7 @@ import EarningCategories from "./components/earning-categories";
 import ExpenseStatisticsCard from "./components/expense-statistics-card";
 import MonthlyExpenseBreakdown from "./components/monthly-expense-breakdown";
 import PaymentHistory from "./components/payment-history";
+import QuickTransfer from "./components/quick-transfer";
 import StatisticsCard from "./components/statistics-card";
 
 const metadata: Metadata = {
@@ -59,12 +60,12 @@ const FinancePage = () => {
                     </div>
 
                     <div className="col-span-12 xl:col-span-4">
-
+                        <div className="">
+                            <QuickTransfer />
+                        </div>
                     </div>
                 </div>
             </div>
-
-
         </>
     );
 };

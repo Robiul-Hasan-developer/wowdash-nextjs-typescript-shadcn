@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
 const cardData = [
@@ -87,7 +87,7 @@ const StatisticsCard = () => {
                                         {card.percentageType === "up" ? (
                                             <ArrowUpRight className="w-4" />
                                         ) : (
-                                            <i className="ri-arrow-right-down-line"></i>
+                                            <ArrowDownRight className="w-4" />
                                         )}
                                         {card.percentage}
                                     </span>
