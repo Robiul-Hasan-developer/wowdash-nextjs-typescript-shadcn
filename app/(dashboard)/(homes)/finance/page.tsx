@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import BalanceStatistic from "./components/balance-statistic";
 import EarningCategories from "./components/earning-categories";
 import ExpenseStatisticsCard from "./components/expense-statistics-card";
+import MonthlyExpenseBreakdown from "./components/monthly-expense-breakdown";
 import PaymentHistory from "./components/payment-history";
 import StatisticsCard from "./components/statistics-card";
 
@@ -47,6 +48,11 @@ const FinancePage = () => {
                             <div className="col-span-12 md:col-span-6">
                                 <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                                     <PaymentHistory />
+                                </Suspense>
+                            </div>
+                            <div className="col-span-12 md:col-span-6">
+                                <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                                    <MonthlyExpenseBreakdown />
                                 </Suspense>
                             </div>
                         </div>
