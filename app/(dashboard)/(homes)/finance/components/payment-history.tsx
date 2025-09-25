@@ -20,7 +20,7 @@ const PaymentHistory: React.FC = () => {
                             <div className="flex items-center justify-between pb-2.5 mb-2.5 border-bottom border-neutral-200">
                                 <div className="">
                                     <h6 className="text-base mb-0">Digital Assets</h6>
-                                    <span className="text-xs text-neutral-600 font-medium">18 Nov 2024</span>
+                                    <span className="text-xs text-neutral-600 dark:text-neutral-300 font-medium">18 Nov 2024</span>
                                 </div>
                                 <div className="">
                                     <h6 className="text-sm mb-1">$450.00</h6>
@@ -30,7 +30,7 @@ const PaymentHistory: React.FC = () => {
                             <div className="flex items-center justify-between pb-2.5 mb-2.5 border-bottom border-neutral-200">
                                 <div className="">
                                     <h6 className="text-base mb-0">Electricity</h6>
-                                    <span className="text-xs text-neutral-600 font-medium">18 Nov 2024</span>
+                                    <span className="text-xs text-neutral-600 dark:text-neutral-300 font-medium">18 Nov 2024</span>
                                 </div>
                                 <div className="">
                                     <h6 className="text-sm mb-1">$150.00</h6>
@@ -40,7 +40,7 @@ const PaymentHistory: React.FC = () => {
                             <div className="flex items-center justify-between pb-2.5 mb-2.5 border-bottom border-neutral-200">
                                 <div className="">
                                     <h6 className="text-base mb-0">Internet Bill</h6>
-                                    <span className="text-xs text-neutral-600 font-medium">18 Nov 2024</span>
+                                    <span className="text-xs text-neutral-600 dark:text-neutral-300 font-medium">18 Nov 2024</span>
                                 </div>
                                 <div className="">
                                     <h6 className="text-sm mb-1">$450.00</h6>
@@ -50,7 +50,7 @@ const PaymentHistory: React.FC = () => {
                             <div className="flex items-center justify-between pb-2.5 mb-2.5 border-bottom border-neutral-200">
                                 <div className="">
                                     <h6 className="text-base mb-0">House rent </h6>
-                                    <span className="text-xs text-neutral-600 font-medium">18 Nov 2024</span>
+                                    <span className="text-xs text-neutral-600 dark:text-neutral-300 font-medium">18 Nov 2024</span>
                                 </div>
                                 <div className="">
                                     <h6 className="text-sm mb-1">$450.00</h6>
@@ -60,7 +60,7 @@ const PaymentHistory: React.FC = () => {
                             <div className="flex items-center justify-between">
                                 <div className="">
                                     <h6 className="text-base mb-0">Office rent</h6>
-                                    <span className="text-xs text-neutral-600 font-medium">18 Nov 2024</span>
+                                    <span className="text-xs text-neutral-600 dark:text-neutral-300 font-medium">18 Nov 2024</span>
                                 </div>
                                 <div className="">
                                     <h6 className="text-sm mb-1">$450.00</h6>

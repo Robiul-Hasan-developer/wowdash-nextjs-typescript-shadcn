@@ -66,7 +66,7 @@ function OfficeSlider() {
                             </div>
                             <div className="officer-slider__content mt-6 min-w-max">
                                 <h6 className="mb-0 text-xl">Mr. Bin</h6>
-                                <span className="text-sm text-neutral-600">Insurance officer</span>
+                                <span className="text-sm text-neutral-600 dark:text-neutral-300">Insurance officer</span>
                             </div>
                         </div>
                     </CarouselItem>

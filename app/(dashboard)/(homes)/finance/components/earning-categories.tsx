@@ -90,7 +90,7 @@ const EarningCategories: React.FC = () => {
                                         </span>
                                         <div className="grow">
                                             <h6 className="text-sm mb-0">{cat.title}</h6>
-                                            <span className="text-xs text-neutral-600 font-medium">
+                                            <span className="text-xs text-neutral-600 dark:text-neutral-300 font-medium">
                                                 {cat.amount} / from {cat.from}
                                             </span>
                                         </div>
@@ -102,7 +102,7 @@ const EarningCategories: React.FC = () => {
                                                 <div className={`${cat.progressColor} h-2.5 rounded-full`} style={{ width: `${cat.percentage}%` }}></div>
                                             </div>
                                         </div>
-                                        <span className="text-neutral-600 text-xs font-semibold">
+                                        <span className="text-neutral-600 dark:text-neutral-300 text-xs font-semibold">
                                             {cat.percentage}%
                                         </span>
                                     </div>

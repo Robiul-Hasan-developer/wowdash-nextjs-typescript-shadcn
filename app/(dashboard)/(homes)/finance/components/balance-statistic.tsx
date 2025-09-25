@@ -17,13 +17,13 @@ const BalanceStatistic = () => {
                     <li className="flex items-center gap-2">
                         <span className="w-3 h-3 rounded-full bg-blue-500"></span>
                         <span className="text-secondary-light text-sm font-semibold">Word:
-                            <span className="text-neutral-600 dark:text-neutral-100 font-bold">400</span>
+                            <span className="text-neutral-600 dark:text-neutral-300 font-bold">400</span>
                         </span>
                     </li>
                     <li className="flex items-center gap-2">
                         <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
                         <span className="text-secondary-light text-sm font-semibold">Image:
-                            <span className="text-neutral-600 dark:text-neutral-100 font-bold">300</span>
+                            <span className="text-neutral-600 dark:text-neutral-300 font-bold">300</span>
                         </span>
                     </li>
                 </ul>

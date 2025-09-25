@@ -37,61 +37,61 @@ const MonthlyExpenseBreakdown: React.FC = () => {
                         <div className="flex items-center justify-between p-3 bg-neutral-100 dark:bg-neutral-600/25">
                             <div className="flex items-center gap-2">
                                 <span className="w-3 h-2 bg-orange-600 rounded-[50rem]"></span>
-                                <span className="text-neutral-600">Healthcare</span>
+                                <span className="text-neutral-600 dark:text-neutral-300">Healthcare</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <span className="text-neutral-600">$1500</span>
-                                <span className="text-neutral-600 font-semibold">40%</span>
+                                <span className="text-neutral-600 dark:text-neutral-300">$1500</span>
+                                <span className="text-neutral-600 dark:text-neutral-300 font-semibold">40%</span>
                             </div>
                         </div>
                         <div className="flex items-center justify-between p-3 bg-base">
                             <div className="flex items-center gap-2">
                                 <span className="w-3 h-2 bg-yellow-600 rounded-[50rem]"></span>
-                                <span className="text-neutral-600">Education</span>
+                                <span className="text-neutral-600 dark:text-neutral-300">Education</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <span className="text-neutral-600">$1500</span>
-                                <span className="text-neutral-600 font-semibold">40%</span>
+                                <span className="text-neutral-600 dark:text-neutral-300">$1500</span>
+                                <span className="text-neutral-600 dark:text-neutral-300 font-semibold">40%</span>
                             </div>
                         </div>
                         <div className="flex items-center justify-between p-3 bg-neutral-100 dark:bg-neutral-600/25">
                             <div className="flex items-center gap-2">
                                 <span className="w-3 h-2 bg-yellow-600 rounded-[50rem]"></span>
-                                <span className="text-neutral-600">Clothes</span>
+                                <span className="text-neutral-600 dark:text-neutral-300">Clothes</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <span className="text-neutral-600">$1500</span>
-                                <span className="text-neutral-600 font-semibold">40%</span>
+                                <span className="text-neutral-600 dark:text-neutral-300">$1500</span>
+                                <span className="text-neutral-600 dark:text-neutral-300 font-semibold">40%</span>
                             </div>
                         </div>
                         <div className="flex items-center justify-between p-3 bg-base">
                             <div className="flex items-center gap-2">
                                 <span className="w-3 h-2 bg-green-600 rounded-[50rem]"></span>
-                                <span className="text-neutral-600">Food</span>
+                                <span className="text-neutral-600 dark:text-neutral-300">Food</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <span className="text-neutral-600">$1500</span>
-                                <span className="text-neutral-600 font-semibold">30%</span>
+                                <span className="text-neutral-600 dark:text-neutral-300">$1500</span>
+                                <span className="text-neutral-600 dark:text-neutral-300 font-semibold">30%</span>
                             </div>
                         </div>
                         <div className="flex items-center justify-between p-3 bg-neutral-100 dark:bg-neutral-600/25">
                             <div className="flex items-center gap-2">
                                 <span className="w-3 h-2 bg-green-600 rounded-[50rem]"></span>
-                                <span className="text-neutral-600">Transport</span>
+                                <span className="text-neutral-600 dark:text-neutral-300">Transport</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <span className="text-neutral-600">$1500</span>
-                                <span className="text-neutral-600 font-semibold">20%</span>
+                                <span className="text-neutral-600 dark:text-neutral-300">$1500</span>
+                                <span className="text-neutral-600 dark:text-neutral-300 font-semibold">20%</span>
                             </div>
                         </div>
                         <div className="flex items-center justify-between p-3 bg-base">
                             <div className="flex items-center gap-2">
                                 <span className="w-3 h-2 bg-cyan-600 rounded-[50rem]"></span>
-                                <span className="text-neutral-600">Pets</span>
+                                <span className="text-neutral-600 dark:text-neutral-300">Pets</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <span className="text-neutral-600">$1500</span>
-                                <span className="text-neutral-600 font-semibold">20%</span>
+                                <span className="text-neutral-600 dark:text-neutral-300">$1500</span>
+                                <span className="text-neutral-600 dark:text-neutral-300 font-semibold">20%</span>
                             </div>
                         </div>
                     </div>

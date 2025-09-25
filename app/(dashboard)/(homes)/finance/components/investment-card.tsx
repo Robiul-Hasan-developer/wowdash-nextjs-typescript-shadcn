@@ -21,7 +21,7 @@ const InvestmentCard: React.FC = () => {
                     {/* Users list */}
                     <div className="p-6">
                         <div className="">
-                            <p className="text-center text-neutral-600 flex items-center gap-2 justify-center">Total Investment: <span className="font-semibold text-neutral-600">$500</span> </p>
+                            <p className="text-center text-neutral-600 dark:text-neutral-300 flex items-center gap-2 justify-center">Total Investment: <span className="font-semibold text-neutral-600 dark:text-neutral-300">$500</span> </p>
 
                             <div className="mt-10 mb-6 text-center pe-[110px] relative max-w-[282px] mx-auto">
                                 <div className="w-[170px] h-[170px] rounded-full z-[1] relative inline-flex justify-center items-center border border-white border-width-2-px">
@@ -42,23 +42,23 @@ const InvestmentCard: React.FC = () => {
                                 <div className="flex flex-col items-start">
                                     <div className="flex items-center gap-2">
                                         <span className="w-3 h-3 rounded-[50rem] bg-blue-600"></span>
-                                        <span className="text-neutral-600 text-sm font-normal">Net Income</span>
+                                        <span className="text-neutral-600 dark:text-neutral-300 text-sm font-normal">Net Income</span>
                                     </div>
-                                    <h6 className="text-neutral-600 font-semibold mb-0 mt-1.5 text-lg">$50,000</h6>
+                                    <h6 className="text-neutral-600 dark:text-neutral-300 font-semibold mb-0 mt-1.5 text-lg">$50,000</h6>
                                 </div>
                                 <div className="flex flex-col items-start">
                                     <div className="flex items-center gap-2">
                                         <span className="w-3 h-3 rounded-[50rem] bg-purple-600"></span>
-                                        <span className="text-neutral-600 text-sm font-normal">Real State</span>
+                                        <span className="text-neutral-600 dark:text-neutral-300 text-sm font-normal">Real State</span>
                                     </div>
-                                    <h6 className="text-neutral-600 font-semibold mb-0 mt-1.5 text-lg">$150</h6>
+                                    <h6 className="text-neutral-600 dark:text-neutral-300 font-semibold mb-0 mt-1.5 text-lg">$150</h6>
                                 </div>
                                 <div className="flex flex-col items-start">
                                     <div className="flex items-center gap-2">
                                         <span className="w-3 h-3 rounded-[50rem] bg-green-600"></span>
-                                        <span className="text-neutral-600 text-sm font-normal">Business</span>
+                                        <span className="text-neutral-600 dark:text-neutral-300 text-sm font-normal">Business</span>
                                     </div>
-                                    <h6 className="text-neutral-600 font-semibold mb-0 mt-1.5 text-lg">$100</h6>
+                                    <h6 className="text-neutral-600 dark:text-neutral-300 font-semibold mb-0 mt-1.5 text-lg">$100</h6>
                                 </div>
                             </div>
                         </div>
