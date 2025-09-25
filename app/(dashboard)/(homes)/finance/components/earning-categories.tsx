@@ -32,7 +32,7 @@ const categories: Category[] = [
         percentage: 60,
         icon: "/assets/images/home-eleven/icons/earn-cat-icon2.svg",
         iconBg: "bg-red-100 dark:bg-red-600/25",
-        progressColor: "bg-yellow-500",
+        progressColor: "bg-yellow-600",
     },
     {
         id: 3,
@@ -42,7 +42,7 @@ const categories: Category[] = [
         percentage: 49,
         icon: "/assets/images/home-eleven/icons/earn-cat-icon3.svg",
         iconBg: "bg-yellow-200 dark:bg-yellow-600/25",
-        progressColor: "bg-yellow-600",
+        progressColor: "bg-yellow-500",
     },
     {
         id: 4,
@@ -64,7 +64,7 @@ const EarningCategories: React.FC = () => {
                     {/* Header */}
                     <div className="card-header border-b border-neutral-200 dark:border-slate-500 py-4 px-6">
                         <div className="flex items-center flex-wrap gap-2 justify-between">
-                            <h6 className="font-bold text-lg mb-0">Top Customer</h6>
+                            <h6 className="font-bold text-lg mb-0">Earning Categories</h6>
                             <CommonLink />
                         </div>
                     </div>
