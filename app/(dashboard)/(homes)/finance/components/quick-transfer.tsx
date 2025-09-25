@@ -30,7 +30,7 @@ const QuickTransfer: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="px-6 bg-neutral-100 dark:bg-neutral-600/25 border-bottom-0 py-5 dark-bg-neutral-200">
+                        <div className="px-6 bg-neutral-100 dark:bg-slate-800 border-bottom-0 py-5">
                             <div className="flex items-center flex-wrap gap-2 justify-between">
                                 <h6 className="font-bold text-lg mb-0">Contacts</h6>
                                 <CommonLink />
