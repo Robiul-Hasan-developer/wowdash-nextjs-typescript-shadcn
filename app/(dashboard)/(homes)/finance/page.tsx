@@ -69,7 +69,7 @@ const FinancePage = () => {
                     </div>
                 </div>
             </div>
-            <div className="mt-6">
+            <div className="mt-6 lg:block hidden">
                 <TransactionHistoryCard />
             </div>
         </>

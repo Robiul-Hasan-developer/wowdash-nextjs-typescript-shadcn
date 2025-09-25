@@ -152,7 +152,6 @@ export const users: TransactionsDataType[] = [
 ];
 
 
-
 const TransactionHistoryTable = () => {
     const slicedUsers = users.slice(0, 5);
 
