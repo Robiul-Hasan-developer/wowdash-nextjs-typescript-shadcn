@@ -34,7 +34,7 @@ const MonthlyExpenseBreakdown: React.FC = () => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className="flex items-center justify-between p-3 bg-neutral-100 dark:bg-neutral-600/25">
+                        <div className="flex items-center justify-between p-3 bg-neutral-100 dark:bg-slate-600/25">
                             <div className="flex items-center gap-2">
                                 <span className="w-3 h-2 bg-orange-600 rounded-[50rem]"></span>
                                 <span className="text-neutral-600 dark:text-neutral-300">Healthcare</span>
@@ -54,7 +54,7 @@ const MonthlyExpenseBreakdown: React.FC = () => {
                                 <span className="text-neutral-600 dark:text-neutral-300 font-semibold">40%</span>
                             </div>
                         </div>
-                        <div className="flex items-center justify-between p-3 bg-neutral-100 dark:bg-neutral-600/25">
+                        <div className="flex items-center justify-between p-3 bg-neutral-100 dark:bg-slate-600/25">
                             <div className="flex items-center gap-2">
                                 <span className="w-3 h-2 bg-yellow-600 rounded-[50rem]"></span>
                                 <span className="text-neutral-600 dark:text-neutral-300">Clothes</span>
@@ -74,7 +74,7 @@ const MonthlyExpenseBreakdown: React.FC = () => {
                                 <span className="text-neutral-600 dark:text-neutral-300 font-semibold">30%</span>
                             </div>
                         </div>
-                        <div className="flex items-center justify-between p-3 bg-neutral-100 dark:bg-neutral-600/25">
+                        <div className="flex items-center justify-between p-3 bg-neutral-100 dark:bg-slate-600/25">
                             <div className="flex items-center gap-2">
                                 <span className="w-3 h-2 bg-green-600 rounded-[50rem]"></span>
                                 <span className="text-neutral-600 dark:text-neutral-300">Transport</span>
