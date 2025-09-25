@@ -23,7 +23,7 @@ const QuickTransfer: React.FC = () => {
                     <div className="card-body p-0">
                         <div className="p-5">
                             <div className="relative z-[1] py-8 text-center px-4">
-                                <img src="assets/images/home-eleven/bg/bg-orange-gradient.png" alt="" className="absolute top-0 start-0 w-full h-full -z-[1]" />
+                                <img src="assets/images/home-eleven/bg/bg-orange-gradient.png" alt="Image" className="absolute top-0 start-0 w-full h-full -z-[1]" />
                                 <h3 className="text-white">$500.00</h3>
                                 <span className="text-white">Your Balance</span>
                             </div>
@@ -40,7 +40,7 @@ const QuickTransfer: React.FC = () => {
                             <div className="officer-slider flex items-center gap-4 overflow-hidden">
                                 <div className="officer-slider__item flex flex-col text-center items-center justify-center">
                                     <div className="officer-slider__thumb w-14 h-14 rounded-full overflow-hidden flex-shrink-0 mx-8">
-                                        <img src="assets/images/home-eleven/officer-img1.png" alt="" className="w-full h-full object-cover" />
+                                        <img src="assets/images/home-eleven/officer-img1.png" alt="Image" className="w-full h-full object-cover" />
                                     </div>
                                     <div className="officer-slider__content mt-6 min-w-max">
                                         <h6 className="mb-0 text-xl">Mr. Bin</h6>
@@ -49,7 +49,7 @@ const QuickTransfer: React.FC = () => {
                                 </div>
                                 <div className="officer-slider__item flex flex-col text-center items-center justify-center">
                                     <div className="officer-slider__thumb w-14 h-14 rounded-full overflow-hidden flex-shrink-0 mx-8">
-                                        <img src="assets/images/home-eleven/officer-img2.png" alt="" className="w-full h-full object-cover" />
+                                        <img src="assets/images/home-eleven/officer-img2.png" alt="Image" className="w-full h-full object-cover" />
                                     </div>
                                     <div className="officer-slider__content mt-6 min-w-max">
                                         <h6 className="mb-0 text-xl">Mr. Robiul</h6>
@@ -58,7 +58,7 @@ const QuickTransfer: React.FC = () => {
                                 </div>
                                 <div className="officer-slider__item flex flex-col text-center items-center justify-center">
                                     <div className="officer-slider__thumb w-14 h-14 rounded-full overflow-hidden flex-shrink-0 mx-8">
-                                        <img src="assets/images/home-eleven/officer-img3.png" alt="" className="w-full h-full object-cover" />
+                                        <img src="assets/images/home-eleven/officer-img3.png" alt="Image" className="w-full h-full object-cover" />
                                     </div>
                                     <div className="officer-slider__content mt-6 min-w-max">
                                         <h6 className="mb-0 text-xl">Mr. Deo</h6>
@@ -67,7 +67,7 @@ const QuickTransfer: React.FC = () => {
                                 </div>
                                 <div className="officer-slider__item flex flex-col text-center items-center justify-center">
                                     <div className="officer-slider__thumb w-14 h-14 rounded-full overflow-hidden flex-shrink-0 mx-8">
-                                        <img src="assets/images/home-eleven/officer-img4.png" alt="" className="w-full h-full object-cover" />
+                                        <img src="assets/images/home-eleven/officer-img4.png" alt="Image" className="w-full h-full object-cover" />
                                     </div>
                                     <div className="officer-slider__content mt-6 min-w-max">
                                         <h6 className="mb-0 text-xl">Mr. Riad</h6>
@@ -76,7 +76,7 @@ const QuickTransfer: React.FC = () => {
                                 </div>
                                 <div className="officer-slider__item flex flex-col text-center items-center justify-center">
                                     <div className="officer-slider__thumb w-14 h-14 rounded-full overflow-hidden flex-shrink-0 mx-8">
-                                        <img src="assets/images/home-eleven/officer-img5.png" alt="" className="w-full h-full object-cover" />
+                                        <img src="assets/images/home-eleven/officer-img5.png" alt="Image" className="w-full h-full object-cover" />
                                     </div>
                                     <div className="officer-slider__content mt-6 min-w-max">
                                         <h6 className="mb-0 text-xl">Mr. Alex</h6>
@@ -85,7 +85,7 @@ const QuickTransfer: React.FC = () => {
                                 </div>
                                 <div className="officer-slider__item flex flex-col text-center items-center justify-center">
                                     <div className="officer-slider__thumb w-14 h-14 rounded-full overflow-hidden flex-shrink-0 mx-8">
-                                        <img src="assets/images/home-eleven/officer-img2.png" alt="" className="w-full h-full object-cover" />
+                                        <img src="assets/images/home-eleven/officer-img2.png" alt="Image" className="w-full h-full object-cover" />
                                     </div>
                                     <div className="officer-slider__content mt-6 min-w-max">
                                         <h6 className="mb-0 text-xl">Mr. John</h6>
@@ -105,7 +105,7 @@ const QuickTransfer: React.FC = () => {
                                     <Textarea
                                         id="Description"
                                         placeholder="Enter a Description..."
-                                        className="border border-neutral-200 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary rounded-lg !shadow-none !ring-0 h-[120px]"
+                                        className="border border-neutral-200 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary rounded-lg px-5 !shadow-none !ring-0 h-[120px]"
                                     />
                                 </div>
                                 <div className="">
@@ -119,10 +119,10 @@ const QuickTransfer: React.FC = () => {
                                         <Input
                                             id="amount"
                                             placeholder="Ex: $200"
-                                            className="border border-neutral-200 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-12 rounded-s-lg !shadow-none !ring-0"
+                                            className="border border-neutral-200 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-12 rounded-s-lg px-5 !shadow-none !ring-0"
                                         />
-                                        <Button className={cn(`h-12`)}>
-                                            Transfer Now
+                                        <Button className={cn(`h-12 px-8`)}>
+                                            Send
                                             <Send className="w-6" />
                                         </Button>
                                     </div>

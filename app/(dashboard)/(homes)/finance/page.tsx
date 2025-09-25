@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import BalanceStatistic from "./components/balance-statistic";
 import EarningCategories from "./components/earning-categories";
 import ExpenseStatisticsCard from "./components/expense-statistics-card";
+import InvestmentCard from "./components/investment-card";
 import MonthlyExpenseBreakdown from "./components/monthly-expense-breakdown";
 import PaymentHistory from "./components/payment-history";
 import QuickTransfer from "./components/quick-transfer";
@@ -60,8 +61,9 @@ const FinancePage = () => {
                     </div>
 
                     <div className="col-span-12 xl:col-span-4">
-                        <div className="">
+                        <div className="flex flex-col gap-6">
                             <QuickTransfer />
+                            <InvestmentCard />
                         </div>
                     </div>
                 </div>
