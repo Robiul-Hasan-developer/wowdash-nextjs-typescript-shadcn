@@ -121,7 +121,7 @@ const QuickTransfer: React.FC = () => {
                                             placeholder="Ex: $200"
                                             className="border border-neutral-200 dark:border-slate-700 focus:border-primary dark:focus:border-primary focus-visible:border-primary h-12 rounded-s-lg px-5 !shadow-none !ring-0"
                                         />
-                                        <Button className={cn(`h-12 px-8`)}>
+                                        <Button className={cn(`h-12 !px-8`)}>
                                             Send
                                             <Send className="w-6" />
                                         </Button>

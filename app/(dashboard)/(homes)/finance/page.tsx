@@ -10,6 +10,7 @@ import MonthlyExpenseBreakdown from "./components/monthly-expense-breakdown";
 import PaymentHistory from "./components/payment-history";
 import QuickTransfer from "./components/quick-transfer";
 import StatisticsCard from "./components/statistics-card";
+import TransactionHistoryCard from "./components/transaction-history-card";
 
 const metadata: Metadata = {
     title: "Finance & Banking Dashboard | WowDash Admin Panel",
@@ -67,6 +68,9 @@ const FinancePage = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="mt-6">
+                <TransactionHistoryCard />
             </div>
         </>
     );
