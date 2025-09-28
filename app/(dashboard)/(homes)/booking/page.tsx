@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import AvailableRoom from "./components/available-room";
 import BookingCountriesStatus from "./components/booking-countries-status";
+import CheckInOut from "./components/check-in-out";
 import StatisticsCards from "./components/statistics-cards";
 
 const metadata: Metadata = {
@@ -59,6 +60,7 @@ const FinancePage = () => {
                 <div className="col-span-12 md:col-span-6 xl:col-span-4">
                     <div className="flex flex-col gap-6">
                         <BookingCountriesStatus/>
+                        <CheckInOut/>
                     </div>
                 </div>
             </div>
