@@ -9,6 +9,7 @@ import BookingCountriesStatus from "./components/booking-countries-status";
 import CheckInOut from "./components/check-in-out";
 import SpendOverview from "./components/spend-overview";
 import StatisticsCards from "./components/statistics-cards";
+import TransactionHistory from "./components/transaction-history";
 
 const metadata: Metadata = {
     title: "Booking System Dashboard | WowDash Admin Panel",
@@ -56,7 +57,9 @@ const FinancePage = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
                 <div className="col-span-12 md:col-span-6 xl:col-span-8">
-                    
+                    <div className="flex flex-col gap-6">
+                        <TransactionHistory/>
+                    </div>
                 </div>
                 <div className="col-span-12 md:col-span-6 xl:col-span-4">
                     <div className="flex flex-col gap-6">
