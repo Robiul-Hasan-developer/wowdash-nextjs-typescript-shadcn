@@ -5,6 +5,7 @@ import CustomSelect from "@/components/shared/custom-select";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import AvailableRoom from "./components/available-room";
+import BookingCountriesStatus from "./components/booking-countries-status";
 import StatisticsCards from "./components/statistics-cards";
 
 const metadata: Metadata = {
@@ -48,6 +49,17 @@ const FinancePage = () => {
                         </div>
                     </div>
 
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
+                <div className="col-span-12 md:col-span-6 xl:col-span-8">
+                    
+                </div>
+                <div className="col-span-12 md:col-span-6 xl:col-span-4">
+                    <div className="flex flex-col gap-6">
+                        <BookingCountriesStatus/>
+                    </div>
                 </div>
             </div>
 
