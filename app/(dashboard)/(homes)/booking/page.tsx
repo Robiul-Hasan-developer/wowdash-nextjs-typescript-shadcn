@@ -1,5 +1,7 @@
+import StatisticBarChart from "@/components/charts/statistic-bar-chart";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import LoadingSkeleton from "@/components/loading-skeleton";
+import CustomSelect from "@/components/shared/custom-select";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import AvailableRoom from "./components/available-room";
@@ -35,18 +37,13 @@ const FinancePage = () => {
                         <div className="shadow-7 p-5 rounded-xl bg-white dark:bg-dark-2 h-full">
                             <div className="flex items-center flex-wrap gap-2 justify-between">
                                 <h6 className="mb-0 font-bold text-lg">Booking Statistic</h6>
-                                <div className="">
-                                    <select
-                                        className="form-select form-select-sm w-auto bg-white dark:bg-dark-2 border text-neutral-600 dark:text-white rounded-lg">
-                                        <option>Yearly</option>
-                                        <option>Monthly</option>
-                                        <option>Weekly</option>
-                                        <option>Today</option>
-                                    </select>
-                                </div>
+                                <CustomSelect
+                                    placeholder="Monthly"
+                                    options={["Monthly", "Weekly", "Yearly",]}
+                                />
                             </div>
-                            <div className="relative">
-                                <div id="statisticBarChart" className="text-style label-bold"></div>
+                            <div className="relative text-style label-bold">
+                                <StatisticBarChart/>
                             </div>
                         </div>
                     </div>
