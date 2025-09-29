@@ -40,7 +40,7 @@ const FinancePage = () => {
                     </div>
 
                     <div className="col-span-12 2xl:col-span-4">
-                        <div className="shadow-7 p-5 rounded-xl bg-white dark:bg-dark-2 h-full">
+                        <div className="shadow-7 p-5 rounded-xl bg-white dark:bg-[#273142] h-full">
                             <div className="flex items-center flex-wrap gap-2 justify-between">
                                 <h6 className="mb-0 font-bold text-lg">Booking Statistic</h6>
                                 <CustomSelect

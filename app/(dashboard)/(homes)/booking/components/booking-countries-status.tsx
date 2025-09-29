@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const BookingCountriesStatus = () => {
     return (
-      <Card className="card h-full rounded-lg border-0 !p-0">
+      <Card className="card h-full rounded-lg border-0 !p-0 dark:bg-[#273142]">
         <CardContent className="card-body p-6">
             <div className="flex items-center flex-wrap gap-2 justify-between pb-6">
                 <h6 className="mb-0 font-bold text-lg">Distribution Maps</h6>

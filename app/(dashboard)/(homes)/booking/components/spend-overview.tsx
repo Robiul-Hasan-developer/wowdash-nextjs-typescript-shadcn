@@ -19,12 +19,12 @@ const SpendOverview = () => {
                     <div className="flex items-center justify-between gap-10">
                         <div className="flex items-center gap-3">
                             <span
-                                className="w-10 h-10 rounded-[50%] flex justify-center items-center bg-[#E8EDFB]">
+                                className="w-10 h-10 rounded-[50%] flex justify-center items-center dark:bg-slate-800 bg-[#E8EDFB]">
                                 <img src="assets/images/home-twelve/icons/spen-icon1.png" alt="Icon" />
                             </span>
                             <div className="">
                                 <h6 className="text-sm mb-2">Flights</h6>
-                                <span className="text-xs text-neutral-600">$70,570</span>
+                                <span className="text-xs text-neutral-600 dark:text-neutral-300">$70,570</span>
                             </div>
                         </div>
                         <div className="">
@@ -37,12 +37,12 @@ const SpendOverview = () => {
                     <div className="flex items-center justify-between gap-10">
                         <div className="flex items-center gap-3">
                             <span
-                                className="w-10 h-10 rounded-[50%] flex justify-center items-center bg-[#FDE4EA]">
+                                className="w-10 h-10 rounded-[50%] flex justify-center items-center dark:bg-slate-800 bg-[#FDE4EA]">
                                 <img src="assets/images/home-twelve/icons/spen-icon2.png" alt="Icon" />
                             </span>
                             <div className="">
                                 <h6 className="text-sm mb-2">Hotels</h6>
-                                <span className="text-xs text-neutral-600">$85,570</span>
+                                <span className="text-xs text-neutral-600 dark:text-neutral-300">$85,570</span>
                             </div>
                         </div>
                         <div className="">
@@ -55,12 +55,12 @@ const SpendOverview = () => {
                     <div className="flex items-center justify-between gap-10">
                         <div className="flex items-center gap-3">
                             <span
-                                className="w-10 h-10 rounded-[50%] flex justify-center items-center bg-[#FDE4EA]">
+                                className="w-10 h-10 rounded-[50%] flex justify-center items-center dark:bg-slate-800 bg-[#FDE4EA]">
                                 <img src="assets/images/home-twelve/icons/spen-icon3.png" alt="Icon" />
                             </span>
                             <div className="">
                                 <h6 className="text-sm mb-2">Trains</h6>
-                                <span className="text-xs text-neutral-600">$15,000</span>
+                                <span className="text-xs text-neutral-600 dark:text-neutral-300">$15,000</span>
                             </div>
                         </div>
                         <div className="">
@@ -73,12 +73,12 @@ const SpendOverview = () => {
                     <div className="flex items-center justify-between gap-10">
                         <div className="flex items-center gap-3">
                             <span
-                                className="w-10 h-10 rounded-[50%] flex justify-center items-center bg-[#E3F4E9]">
+                                className="w-10 h-10 rounded-[50%] flex justify-center items-center dark:bg-slate-800 bg-[#E3F4E9]">
                                 <img src="assets/images/home-twelve/icons/spen-icon4.png" alt="Icon" />
                             </span>
                             <div className="">
                                 <h6 className="text-sm mb-2">Cars</h6>
-                                <span className="text-xs text-neutral-600">$90,000</span>
+                                <span className="text-xs text-neutral-600 dark:text-neutral-300">$90,000</span>
                             </div>
                         </div>
                         <div className="">

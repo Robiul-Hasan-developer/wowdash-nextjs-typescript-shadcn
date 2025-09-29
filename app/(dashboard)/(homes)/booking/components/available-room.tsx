@@ -2,7 +2,7 @@ import SemiCircleGaugeTwo from "@/components/charts/semi-circle-gauge-two";
 
 const AvailableRoom = () => {
     return (
-        <div className="shadow-7 p-6 rounded-xl bg-white dark:bg-dark-2 h-full">
+        <div className="shadow-7 p-6 rounded-xl bg-white dark:bg-[#273142] h-full">
             <div className="text-center">
                 <div className="relative">
                     <div className="big-semi-circle-gauge flex justify-center">
@@ -14,7 +14,7 @@ const AvailableRoom = () => {
                     </span>
                 </div>
                 <h3 className="mt-10 mb-0 leading-none">35</h3>
-                <span className="text-neutral-800 mt-4">Available Room Today</span>
+                <span className="text-neutral-800 dark:text-neutral-300 mt-4">Available Room Today</span>
             </div>
         </div>
     );

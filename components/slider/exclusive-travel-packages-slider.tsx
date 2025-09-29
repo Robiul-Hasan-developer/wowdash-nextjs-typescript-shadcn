@@ -75,24 +75,24 @@ function ExclusiveTravelPackagesSlider() {
             <div className="flex items-center justify-between mb-4">
                 <h6 className="text-lg mb-0">Exclusive Travel Packages</h6>
                 <div className="flex items-center gap-4">
-                    <CarouselPrevious className="flex items-center rounded-full border border-neutral-400 text-neutral-600 bg-white hover:bg-blue-600 hover:text-white justify-center active:scale-90 w-10 h-10 relative right-0 left-0 translate-y-0" />
-                    <CarouselNext className="flex items-center rounded-full border border-neutral-400 text-neutral-600 bg-white hover:bg-blue-600 hover:text-white justify-center active:scale-90 w-10 h-10 relative right-0 left-0 translate-y-0" />
+                    <CarouselPrevious className="flex items-center rounded-full border border-neutral-400 text-neutral-600 dark:text-neutral-300 bg-white hover:bg-blue-600 hover:text-white justify-center active:scale-90 w-10 h-10 relative right-0 left-0 translate-y-0" />
+                    <CarouselNext className="flex items-center rounded-full border border-neutral-400 text-neutral-600 dark:text-neutral-300 bg-white hover:bg-blue-600 hover:text-white justify-center active:scale-90 w-10 h-10 relative right-0 left-0 translate-y-0" />
                 </div>
             </div>
 
             <CarouselContent>
                 {exclusiveTravelPackagesSliderData.map((card) => (
                     <CarouselItem key={card.id} className="basis-1/2 lg:basis-1/2 xl:basis-1/3 2xl:basis-1/4">
-                        <div className="bg-white dark:bg-dark-2 p-1.5 rounded-xl">
+                        <div className="bg-white dark:bg-[#273142] p-1.5 rounded-xl">
                             <div className="rounded-lg overflow-hidden">
                                 <Image src={card.image} alt={card.title}
                                     className="w-full h-full object-fit-cover" />
                             </div>
                             <div className="p-2 pt-4">
                                 <h6 className="text-md mb-1">{card.title}</h6>
-                                <span className="text-neutral-600">{card.duration}</span>
+                                <span className="text-neutral-600 dark:text-neutral-300">{card.duration}</span>
                                 <div className="mt-2.5 flex items-center justify-between gap-10">
-                                    <span className="font-semibold text-neutral-600 text-sm">{card.price}</span>
+                                    <span className="font-semibold text-neutral-600 dark:text-neutral-300 text-sm">{card.price}</span>
                                     <div className="flex items-center gap-1">
                                         <span className="text-blue-600 line-height-1 text-md font-medium">
                                             <User className="w-4" />

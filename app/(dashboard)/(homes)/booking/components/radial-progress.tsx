@@ -81,7 +81,7 @@ const RadialProgress: React.FC<RadialProgressProps> = ({
       {label && (
         <div className="mt-2">
           <h5 className="mb-1">{percentage}%</h5>
-          <span className="text-neutral-600">{label}</span>
+          <span className="text-neutral-600 dark:text-neutral-300">{label}</span>
         </div>
       )}
     </div>
