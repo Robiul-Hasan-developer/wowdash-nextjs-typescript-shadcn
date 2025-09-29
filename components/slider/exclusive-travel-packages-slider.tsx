@@ -6,6 +6,7 @@ import {
 import travelPackageImg3 from "@/public/assets/images/home-twelve/travel-img3.png";
 import travelPackageImg4 from "@/public/assets/images/home-twelve/travel-img4.png";
 import travelPackageImg5 from "@/public/assets/images/home-twelve/travel-img5.png";
+import { User } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 
 interface ExclusiveTravelPackagesSliders {
@@ -82,8 +83,9 @@ function ExclusiveTravelPackagesSlider() {
                                 <div className="mt-2.5 flex items-center justify-between gap-10">
                                     <span className="font-semibold text-neutral-600 text-sm">{card.price}</span>
                                     <div className="flex items-center gap-1">
-                                        <span className="text-primary-600 line-height-1 text-md font-medium"><i
-                                            className="ri-user-3-line"></i></span>
+                                        <span className="text-blue-600 line-height-1 text-md font-medium">
+                                            <User className="w-4" />
+                                        </span>
                                         <span className="text-sm font-medium">({card.user})</span>
                                     </div>
                                 </div>
