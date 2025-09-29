@@ -29,7 +29,7 @@ const DoubleLineChartTwo: React.FC<DoubleLineChartTwoProps> = ({ colors }) => {
         chart: {
             type: "line",
             width: "100%",
-            height: 270,
+            height: 200,
             toolbar: { show: false },
         },
         dataLabels: { enabled: false },
@@ -93,7 +93,7 @@ const DoubleLineChartTwo: React.FC<DoubleLineChartTwoProps> = ({ colors }) => {
                 options={chartOptions}
                 series={chartSeries}
                 type="area"
-                height={270}
+                height={200}
             />
         </div>
     );
