@@ -3,6 +3,7 @@ import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import LoadingSkeleton from "@/components/loading-skeleton";
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import PendingSolvedTicketsCard from "./components/pending-solved-tickets-card";
 
 const metadata: Metadata = {
     title: "Booking System Dashboard | WowDash Admin Panel",
@@ -43,7 +44,7 @@ const HelpPage = () => {
 
                 <div className="col-span-12 lg:col-span-8">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        Hello
+                        <PendingSolvedTicketsCard/>
                     </Suspense>
                 </div>
 
