@@ -1,17 +1,8 @@
-import StatisticBarChart from "@/components/charts/statistic-bar-chart";
+import TicketPriorityChart from "@/components/charts/ticket-priority-chart";
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import LoadingSkeleton from "@/components/loading-skeleton";
-import CustomSelect from "@/components/shared/custom-select";
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import AvailableRoom from "./components/available-room";
-import BookingCountriesStatus from "./components/booking-countries-status";
-import CheckInOut from "./components/check-in-out";
-import EarningStatisticCard from "./components/earning-statistic-card";
-import ExclusiveTravelPackages from "./components/exclusive-travel-packages";
-import SpendOverview from "./components/spend-overview";
-import StatisticsCards from "./components/statistics-cards";
-import TransactionHistory from "./components/transaction-history";
 
 const metadata: Metadata = {
     title: "Booking System Dashboard | WowDash Admin Panel",
@@ -35,14 +26,10 @@ const HelpPage = () => {
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <div className="shadow-7 p-5 rounded-xl bg-white dark:bg-[#273142] h-full">
                             <div className="flex items-center flex-wrap gap-2 justify-between">
-                                <h6 className="mb-0 font-bold text-lg">Booking Statistic</h6>
-                                <CustomSelect
-                                    placeholder="Monthly"
-                                    options={["Monthly", "Weekly", "Yearly",]}
-                                />
+                                <h6 className="mb-0 font-bold text-lg">Ticket Priority</h6>
                             </div>
                             <div className="relative text-style label-bold">
-                                <StatisticBarChart />
+                                <TicketPriorityChart />
                             </div>
                         </div>
                     </Suspense>
@@ -86,7 +73,7 @@ const HelpPage = () => {
 
             </div>
 
-            <div className="mb-6">
+            {/* <div className="mb-6">
                 <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
 
                     <div className="col-span-12 md:col-span-6 2xl:col-span-4">
@@ -134,7 +121,7 @@ const HelpPage = () => {
                         <SpendOverview />
                     </div>
                 </div>
-            </div>
+            </div> */}
 
         </>
     );
