@@ -71,7 +71,7 @@ const TopPodcasterCard: React.FC = () => {
               <div
                 key={podcaster.id}
                 className={`flex items-center justify-between gap-3 ${
-                  index === podcasters.length - 1 ? "" : "mb-6"
+                  index === podcasters.length - 1 ? "" : "mb-4"
                 }`}
               >
                 {/* Info */}

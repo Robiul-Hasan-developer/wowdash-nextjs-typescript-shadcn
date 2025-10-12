@@ -58,7 +58,7 @@ const todoListTableContents: todoListTypeItem[] = [
     {
         id: "#63254",
         duration: "PHP Project",
-        amount: "/assets/images/homeThirteen/todo-list-img5.png",
+        amount: "/assets/images/homeThirteen/todo-list-img1.png",
         date: "Feb 10, 2025",
         priority: "Low",
         status: { label: "Completed", type: "success" },
