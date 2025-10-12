@@ -1,8 +1,8 @@
 import CommonLink from "@/components/shared/common-link";
-import Image from "next/image";
 import { Card, CardContent } from '@/components/ui/card';
-import React from "react";
 import { Star } from "lucide-react";
+import Image from "next/image";
+import React from "react";
 
 interface Instructor {
     id: number;

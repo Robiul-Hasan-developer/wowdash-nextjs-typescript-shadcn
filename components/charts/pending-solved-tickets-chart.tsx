@@ -57,7 +57,7 @@ const PendingSolvedTicketsChart: React.FC<DoubleLineChartTwoProps> = ({ colors }
                 shadeIntensity: 0.5,
                 gradientToColors: [colors[0], `${colors[1]}00`],
                 inverseColors: false,
-                opacityFrom: [0.4, 0.4],
+                opacityFrom: [0.5, 0.5],
                 opacityTo: [0.3, 0.3],
                 stops: [0, 100],
             },
