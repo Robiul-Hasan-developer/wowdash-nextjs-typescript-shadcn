@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import PendingSolvedTicketsCard from "./components/pending-solved-tickets-card";
 import PerformanceAgentsCard from "./components/performance-agents-card";
 import ResponseTimeCard from "./components/response-time-card";
+import TaskSummaryCard from "./components/task-summary-card";
 import TicketStatusCard from "./components/ticket-status-card";
 import TodoListCard from "./components/todo-list-card";
 import TopPodcasterCard from "./components/top-podcaster-card";
@@ -24,7 +25,7 @@ const HelpPage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
                 <div className="col-span-12 lg:col-span-8">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        Hello
+                        <TaskSummaryCard />
                     </Suspense>
                 </div>
 

@@ -155,7 +155,7 @@ const PerformanceAgentsTable = () => {
                             className={`py-3.5 px-6 text-start}`}
                         >
                             <div className="mx-auto space-y-1">
-                                <div className="w-[66px]">
+                                <div className="w-full">
                                     <div className="rounded-full h-2 bg-gray-200 dark:bg-neutral-700">
                                         <div
                                             className={`${item.progressBg} h-2 rounded-full`}
