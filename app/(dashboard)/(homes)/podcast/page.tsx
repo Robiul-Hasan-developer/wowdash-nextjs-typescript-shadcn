@@ -33,10 +33,14 @@ const podcastPage = () => {
                 <div className="col-span-12 lg:col-span-5 2xl:col-span-4">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                         <div className="col-span-12 md:col-span-6 lg:col-span-12">
-                            <TotalUsers />
+                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                                <TotalUsers />
+                            </Suspense>
                         </div>
                         <div className="col-span-12 md:col-span-6 lg:col-span-12">
-                            <TotalPodcasts />
+                            <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                                <TotalPodcasts />
+                            </Suspense>
                         </div>
                     </div>
                 </div>
@@ -109,11 +113,11 @@ const podcastPage = () => {
                                     <div className="">
                                         <div className="radius-8 overflow-hidden relative">
                                             <img src="assets/images/home-fourteen/podcast-img1.png" alt="Thumb"
-                                                className="w-full h-full object-fit-cover"/>
-                                                <a href="javascript:void(0)"
-                                                    className="w-[28px] h-[24px] text-white bg-white bg-opacity-50 flex justify-center items-center absolute start-0 bottom-0 ms-2.5 mb-2.5 rounded-md hover:bg-white hover:text-[#000] text-lg">
-                                                    <i className="ri-play-fill leading-none flex"></i>
-                                                </a>
+                                                className="w-full h-full object-fit-cover" />
+                                            <a href="javascript:void(0)"
+                                                className="w-[28px] h-[24px] text-white bg-white bg-opacity-50 flex justify-center items-center absolute start-0 bottom-0 ms-2.5 mb-2.5 rounded-md hover:bg-white hover:text-[#000] text-lg">
+                                                <i className="ri-play-fill leading-none flex"></i>
+                                            </a>
                                         </div>
                                         <div className="mt-3">
                                             <h6 className="text-base mb-0">Talk show </h6>
@@ -125,11 +129,11 @@ const podcastPage = () => {
                                     <div className="">
                                         <div className="radius-8 overflow-hidden relative">
                                             <img src="assets/images/home-fourteen/podcast-img2.png" alt="Thumb"
-                                                className="w-full h-full object-fit-cover"/>
-                                                <a href="javascript:void(0)"
-                                                    className="w-[28px] h-[24px] text-white bg-white bg-opacity-50 flex justify-center items-center absolute start-0 bottom-0 ms-2.5 mb-2.5 rounded-md hover:bg-white hover:text-[#000] text-lg">
-                                                    <i className="ri-play-fill leading-none flex"></i>
-                                                </a>
+                                                className="w-full h-full object-fit-cover" />
+                                            <a href="javascript:void(0)"
+                                                className="w-[28px] h-[24px] text-white bg-white bg-opacity-50 flex justify-center items-center absolute start-0 bottom-0 ms-2.5 mb-2.5 rounded-md hover:bg-white hover:text-[#000] text-lg">
+                                                <i className="ri-play-fill leading-none flex"></i>
+                                            </a>
                                         </div>
                                         <div className="mt-3">
                                             <h6 className="text-base mb-0">Change Life Style </h6>
@@ -141,11 +145,11 @@ const podcastPage = () => {
                                     <div className="">
                                         <div className="radius-8 overflow-hidden relative">
                                             <img src="assets/images/home-fourteen/podcast-img3.png" alt="Thumb"
-                                                className="w-full h-full object-fit-cover"/>
-                                                <a href="javascript:void(0)"
-                                                    className="w-[28px] h-[24px] text-white bg-white bg-opacity-50 flex justify-center items-center absolute start-0 bottom-0 ms-2.5 mb-2.5 rounded-md hover:bg-white hover:text-[#000] text-lg">
-                                                    <i className="ri-play-fill leading-none flex"></i>
-                                                </a>
+                                                className="w-full h-full object-fit-cover" />
+                                            <a href="javascript:void(0)"
+                                                className="w-[28px] h-[24px] text-white bg-white bg-opacity-50 flex justify-center items-center absolute start-0 bottom-0 ms-2.5 mb-2.5 rounded-md hover:bg-white hover:text-[#000] text-lg">
+                                                <i className="ri-play-fill leading-none flex"></i>
+                                            </a>
                                         </div>
                                         <div className="mt-3">
                                             <h6 className="text-base mb-0">Neon Lights</h6>
@@ -157,11 +161,11 @@ const podcastPage = () => {
                                     <div className="">
                                         <div className="radius-8 overflow-hidden relative">
                                             <img src="assets/images/home-fourteen/podcast-img4.png" alt="Thumb"
-                                                className="w-full h-full object-fit-cover"/>
-                                                <a href="javascript:void(0)"
-                                                    className="w-[28px] h-[24px] text-white bg-white bg-opacity-50 flex justify-center items-center absolute start-0 bottom-0 ms-2.5 mb-2.5 rounded-md hover:bg-white hover:text-[#000] text-lg">
-                                                    <i className="ri-play-fill leading-none flex"></i>
-                                                </a>
+                                                className="w-full h-full object-fit-cover" />
+                                            <a href="javascript:void(0)"
+                                                className="w-[28px] h-[24px] text-white bg-white bg-opacity-50 flex justify-center items-center absolute start-0 bottom-0 ms-2.5 mb-2.5 rounded-md hover:bg-white hover:text-[#000] text-lg">
+                                                <i className="ri-play-fill leading-none flex"></i>
+                                            </a>
                                         </div>
                                         <div className="mt-3">
                                             <h6 className="text-base mb-0">Product Design</h6>
@@ -199,7 +203,7 @@ const podcastPage = () => {
                                                 <div className="flex items-center gap-3">
                                                     <span className="w-[40px] h-[40px] rounded overflow-hidden rounded-[50%]">
                                                         <img src="assets/images/user-grid/user-grid-img5.png" alt="Avatar"
-                                                            className="w-full h-full object-fit-cover"/>
+                                                            className="w-full h-full object-fit-cover" />
                                                     </span>
                                                     <span className="text-neutral-600 dark:text-neutral-200">Dianne Russell</span>
                                                 </div>
@@ -218,7 +222,7 @@ const podcastPage = () => {
                                                 <div className="flex items-center gap-3">
                                                     <span className="w-[40px] h-[40px] rounded overflow-hidden rounded-[50%]">
                                                         <img src="assets/images/user-grid/user-grid-img4.png" alt="Avatar"
-                                                            className="w-full h-full object-fit-cover"/>
+                                                            className="w-full h-full object-fit-cover" />
                                                     </span>
                                                     <span className="text-neutral-600 dark:text-neutral-200">Cody Fisher</span>
                                                 </div>
@@ -237,7 +241,7 @@ const podcastPage = () => {
                                                 <div className="flex items-center gap-3">
                                                     <span className="w-[40px] h-[40px] rounded overflow-hidden rounded-[50%]">
                                                         <img src="assets/images/user-grid/user-grid-img3.png" alt="Avatar"
-                                                            className="w-full h-full object-fit-cover"/>
+                                                            className="w-full h-full object-fit-cover" />
                                                     </span>
                                                     <span className="text-neutral-600 dark:text-neutral-200">Ronald Richards</span>
                                                 </div>
@@ -257,7 +261,7 @@ const podcastPage = () => {
                                                 <div className="flex items-center gap-3">
                                                     <span className="w-[40px] h-[40px] rounded overflow-hidden rounded-[50%]">
                                                         <img src="assets/images/user-grid/user-grid-img2.png" alt="Avatar"
-                                                            className="w-full h-full object-fit-cover"/>
+                                                            className="w-full h-full object-fit-cover" />
                                                     </span>
                                                     <span className="text-neutral-600 dark:text-neutral-200">Albert Flores</span>
                                                 </div>
@@ -276,7 +280,7 @@ const podcastPage = () => {
                                                 <div className="flex items-center gap-3">
                                                     <span className="w-[40px] h-[40px] rounded overflow-hidden rounded-[50%]">
                                                         <img src="assets/images/user-grid/user-grid-img1.png" alt="Avatar"
-                                                            className="w-full h-full object-fit-cover"/>
+                                                            className="w-full h-full object-fit-cover" />
                                                     </span>
                                                     <span className="text-neutral-600 dark:text-neutral-200">Cameron Williamson</span>
                                                 </div>
@@ -295,7 +299,7 @@ const podcastPage = () => {
                                                 <div className="flex items-center gap-3">
                                                     <span className="w-[40px] h-[40px] rounded overflow-hidden rounded-[50%]">
                                                         <img src="assets/images/user-grid/user-grid-img7.png" alt="Avatar"
-                                                            className="w-full h-full object-fit-cover"/>
+                                                            className="w-full h-full object-fit-cover" />
                                                     </span>
                                                     <span className="text-neutral-600 dark:text-neutral-200">John Doe</span>
                                                 </div>
@@ -314,7 +318,7 @@ const podcastPage = () => {
                                                 <div className="flex items-center gap-3">
                                                     <span className="w-[40px] h-[40px] rounded overflow-hidden rounded-[50%]">
                                                         <img src="assets/images/user-grid/user-grid-img8.png" alt="Avatar"
-                                                            className="w-full h-full object-fit-cover"/>
+                                                            className="w-full h-full object-fit-cover" />
                                                     </span>
                                                     <span className="text-neutral-600 dark:text-neutral-200">John Robiul </span>
                                                 </div>
@@ -360,10 +364,10 @@ const podcastPage = () => {
                                 <div className="flex items-center">
                                     <img src="assets/images/home-fourteen/trending-img1.png" alt=""
                                         className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-                                        <div className="flex-grow-1">
-                                            <h6 className="text-base mb-0 font-medium">Product Design</h6>
-                                            <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
-                                        </div>
+                                    <div className="flex-grow-1">
+                                        <h6 className="text-base mb-0 font-medium">Product Design</h6>
+                                        <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
+                                    </div>
                                 </div>
                                 <div className="text-end flex gap-1 justify-end flex-col">
                                     <span className="">Durations: <span className="font-semibold text-neutral-900">30:05
@@ -375,10 +379,10 @@ const podcastPage = () => {
                                 <div className="flex items-center">
                                     <img src="assets/images/home-fourteen/trending-img2.png" alt=""
                                         className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-                                        <div className="flex-grow-1">
-                                            <h6 className="text-base mb-0 font-medium">How to Change Your Life</h6>
-                                            <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
-                                        </div>
+                                    <div className="flex-grow-1">
+                                        <h6 className="text-base mb-0 font-medium">How to Change Your Life</h6>
+                                        <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
+                                    </div>
                                 </div>
                                 <div className="text-end flex gap-1 justify-end flex-col">
                                     <span className="">Durations: <span className="font-semibold text-neutral-900">30:05
@@ -390,10 +394,10 @@ const podcastPage = () => {
                                 <div className="flex items-center">
                                     <img src="assets/images/home-fourteen/trending-img3.png" alt=""
                                         className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-                                        <div className="flex-grow-1">
-                                            <h6 className="text-base mb-0 font-medium">Logo Design</h6>
-                                            <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
-                                        </div>
+                                    <div className="flex-grow-1">
+                                        <h6 className="text-base mb-0 font-medium">Logo Design</h6>
+                                        <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
+                                    </div>
                                 </div>
                                 <div className="text-end flex gap-1 justify-end flex-col">
                                     <span className="">Durations: <span className="font-semibold text-neutral-900">30:05
@@ -405,10 +409,10 @@ const podcastPage = () => {
                                 <div className="flex items-center">
                                     <img src="assets/images/home-fourteen/trending-img3.png" alt=""
                                         className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-                                        <div className="flex-grow-1">
-                                            <h6 className="text-base mb-0 font-medium">Good Health</h6>
-                                            <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
-                                        </div>
+                                    <div className="flex-grow-1">
+                                        <h6 className="text-base mb-0 font-medium">Good Health</h6>
+                                        <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
+                                    </div>
                                 </div>
                                 <div className="text-end flex gap-1 justify-end flex-col">
                                     <span className="">Durations: <span className="font-semibold text-neutral-900">30:05
@@ -420,10 +424,10 @@ const podcastPage = () => {
                                 <div className="flex items-center">
                                     <img src="assets/images/home-fourteen/trending-img4.png" alt=""
                                         className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-                                        <div className="flex-grow-1">
-                                            <h6 className="text-base mb-0 font-medium">Episodes Name</h6>
-                                            <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
-                                        </div>
+                                    <div className="flex-grow-1">
+                                        <h6 className="text-base mb-0 font-medium">Episodes Name</h6>
+                                        <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
+                                    </div>
                                 </div>
                                 <div className="text-end flex gap-1 justify-end flex-col">
                                     <span className="">Durations: <span className="font-semibold text-neutral-900">30:05
@@ -483,10 +487,10 @@ const podcastPage = () => {
                                 <div className="flex items-center">
                                     <img src="assets/images/homeThirteen/podcaster-img1.png" alt=""
                                         className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-                                        <div className="flex-grow-1">
-                                            <h6 className="text-base mb-0 font-medium">Digital Assets</h6>
-                                            <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">UI Design</span>
-                                        </div>
+                                    <div className="flex-grow-1">
+                                        <h6 className="text-base mb-0 font-medium">Digital Assets</h6>
+                                        <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">UI Design</span>
+                                    </div>
                                 </div>
                                 <button type="button"
                                     className="follow-btn bg-green-100 hover:bg-green-300 rounded px-5 py-1.5 text-green-600">Follow</button>
@@ -496,10 +500,10 @@ const podcastPage = () => {
                                 <div className="flex items-center">
                                     <img src="assets/images/homeThirteen/podcaster-img2.png" alt=""
                                         className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-                                        <div className="flex-grow-1">
-                                            <h6 className="text-base mb-0 font-medium">Side Project</h6>
-                                            <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Business</span>
-                                        </div>
+                                    <div className="flex-grow-1">
+                                        <h6 className="text-base mb-0 font-medium">Side Project</h6>
+                                        <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Business</span>
+                                    </div>
                                 </div>
                                 <button type="button"
                                     className="follow-btn bg-green-100 hover:bg-green-300 rounded px-5 py-1.5 text-green-600">Follow</button>
@@ -509,10 +513,10 @@ const podcastPage = () => {
                                 <div className="flex items-center">
                                     <img src="assets/images/homeThirteen/podcaster-img3.png" alt=""
                                         className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-                                        <div className="flex-grow-1">
-                                            <h6 className="text-base mb-0 font-medium">Investment</h6>
-                                            <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Lifestyle</span>
-                                        </div>
+                                    <div className="flex-grow-1">
+                                        <h6 className="text-base mb-0 font-medium">Investment</h6>
+                                        <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Lifestyle</span>
+                                    </div>
                                 </div>
                                 <button type="button"
                                     className="follow-btn bg-green-100 hover:bg-green-300 rounded px-5 py-1.5 text-green-600">Follow</button>
@@ -522,10 +526,10 @@ const podcastPage = () => {
                                 <div className="flex items-center">
                                     <img src="assets/images/homeThirteen/podcaster-img4.png" alt=""
                                         className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-                                        <div className="flex-grow-1">
-                                            <h6 className="text-base mb-0 font-medium">Investment</h6>
-                                            <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Lifestyle</span>
-                                        </div>
+                                    <div className="flex-grow-1">
+                                        <h6 className="text-base mb-0 font-medium">Investment</h6>
+                                        <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Lifestyle</span>
+                                    </div>
                                 </div>
                                 <button type="button"
                                     className="follow-btn bg-green-100 hover:bg-green-300 rounded px-5 py-1.5 text-green-600">Follow</button>
@@ -535,10 +539,10 @@ const podcastPage = () => {
                                 <div className="flex items-center">
                                     <img src="assets/images/homeThirteen/podcaster-img5.png" alt=""
                                         className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-                                        <div className="flex-grow-1">
-                                            <h6 className="text-base mb-0 font-medium">Investment</h6>
-                                            <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Lifestyle</span>
-                                        </div>
+                                    <div className="flex-grow-1">
+                                        <h6 className="text-base mb-0 font-medium">Investment</h6>
+                                        <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Lifestyle</span>
+                                    </div>
                                 </div>
                                 <button type="button"
                                     className="follow-btn bg-green-100 hover:bg-green-300 rounded px-5 py-1.5 text-green-600">Follow</button>
