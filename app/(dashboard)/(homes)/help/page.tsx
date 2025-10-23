@@ -20,7 +20,7 @@ const metadata: Metadata = {
 const HelpPage = () => {
     return (
         <>
-            <DashboardBreadcrumb title="Booking System" text="Booking System" />
+            <DashboardBreadcrumb title="Help Desk" text="Help Desk" />
 
             <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
                 <div className="col-span-12 lg:col-span-8">
