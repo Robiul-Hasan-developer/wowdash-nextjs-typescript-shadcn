@@ -2,8 +2,10 @@ import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import LoadingSkeleton from "@/components/loading-skeleton";
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import CountriesStatusCard from "../crm/components/countries-status-card";
 import AudienceStatsCard from "./components/audience-stats-card";
 import PodcastEarningsOverviewCard from "./components/podcast-earnings-overview-card";
+import RecentPurposePlanCard from "./components/recent-purpose-plan-card";
 import RecentlyPlayedCard from "./components/recently-played-card";
 import TotalPodcasts from "./components/total-podcasts";
 import TotalUsers from "./components/total-users";
@@ -53,173 +55,18 @@ const podcastPage = () => {
                     </Suspense>
                 </div>
 
-                {/* <div className="col-span-12 2xl:col-span-8">
-                    <div className="shadow-7 rounded-xl bg-white dark:bg-dark-2 h-full overflow-hidden">
-                        <div
-                            className="card-header border-b bg-white dark:bg-dark-2 py-4 px-6 flex items-center justify-between">
-                            <h6 className="text-lg font-semibold mb-0">Recent Purchase Plan</h6>
-                            <CommonLink />
-                        </div>
-                        <div className="card-body p-0">
-                            <div className="table-responsive scroll-sm">
-                                <table className="table bordered-table table-py-2 mb-0 rounded-0 border-0">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col" className="rounded-0">User</th>
-                                            <th scope="col" className="rounded-0">Amount</th>
-                                            <th scope="col" className="rounded-0">StartDate</th>
-                                            <th scope="col" className="rounded-0">End Date</th>
-                                            <th scope="col" className="rounded-0">Duration</th>
-                                            <th scope="col" className="rounded-0 text-center">Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td className="text-neutral-600 dark:text-neutral-200">
-                                                <div className="flex items-center gap-3">
-                                                    <span className="w-[40px] h-[40px] rounded overflow-hidden rounded-[50%]">
-                                                        <img src="assets/images/user-grid/user-grid-img5.png" alt="Avatar"
-                                                            className="w-full h-full object-fit-cover" />
-                                                    </span>
-                                                    <span className="text-neutral-600 dark:text-neutral-200">Dianne Russell</span>
-                                                </div>
-                                            </td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">$29.00</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">Jan 10, 2025</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">Feb 10, 2025</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">1 Month</td>
-                                            <td className="text-center">
-                                                <span
-                                                    className="bg-green-100 text-green-600 dark:text-green-600 px-4 py-1 rounded font-medium text-sm">Basic</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td className="text-neutral-600 dark:text-neutral-200">
-                                                <div className="flex items-center gap-3">
-                                                    <span className="w-[40px] h-[40px] rounded overflow-hidden rounded-[50%]">
-                                                        <img src="assets/images/user-grid/user-grid-img4.png" alt="Avatar"
-                                                            className="w-full h-full object-fit-cover" />
-                                                    </span>
-                                                    <span className="text-neutral-600 dark:text-neutral-200">Cody Fisher</span>
-                                                </div>
-                                            </td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">$$99.00</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">Feb 10, 2025</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">April 10, 2025</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">3 Month</td>
-                                            <td className="text-center">
-                                                <span
-                                                    className="bg-yellow-100 text-yellow-600 dark:text-yellow-600 px-4 py-1 rounded font-medium text-sm">Standard</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td className="text-neutral-600 dark:text-neutral-200">
-                                                <div className="flex items-center gap-3">
-                                                    <span className="w-[40px] h-[40px] rounded overflow-hidden rounded-[50%]">
-                                                        <img src="assets/images/user-grid/user-grid-img3.png" alt="Avatar"
-                                                            className="w-full h-full object-fit-cover" />
-                                                    </span>
-                                                    <span className="text-neutral-600 dark:text-neutral-200">Ronald Richards</span>
-                                                </div>
-                                            </td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">$499.00</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">Jan 10, 2025</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">Jan 10, 2026</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">1 Year</td>
-                                            <td className="text-center">
-                                                <span
-                                                    className="bg-cyan-100 text-cyan-600 dark:text-cyan-600 px-4 py-1 rounded font-medium text-sm">Premium
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td className="text-neutral-600 dark:text-neutral-200">
-                                                <div className="flex items-center gap-3">
-                                                    <span className="w-[40px] h-[40px] rounded overflow-hidden rounded-[50%]">
-                                                        <img src="assets/images/user-grid/user-grid-img2.png" alt="Avatar"
-                                                            className="w-full h-full object-fit-cover" />
-                                                    </span>
-                                                    <span className="text-neutral-600 dark:text-neutral-200">Albert Flores</span>
-                                                </div>
-                                            </td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">$29.00</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">Jan 10, 2025</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">Feb 10, 2025</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">1 Month</td>
-                                            <td className="text-center">
-                                                <span
-                                                    className="bg-green-100 text-green-600 dark:text-green-600 px-4 py-1 rounded font-medium text-sm">Basic</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td className="text-neutral-600 dark:text-neutral-200">
-                                                <div className="flex items-center gap-3">
-                                                    <span className="w-[40px] h-[40px] rounded overflow-hidden rounded-[50%]">
-                                                        <img src="assets/images/user-grid/user-grid-img1.png" alt="Avatar"
-                                                            className="w-full h-full object-fit-cover" />
-                                                    </span>
-                                                    <span className="text-neutral-600 dark:text-neutral-200">Cameron Williamson</span>
-                                                </div>
-                                            </td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">$99.00</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">Feb 10, 2025</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">April 10, 2025</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">3 Month</td>
-                                            <td className="text-center">
-                                                <span
-                                                    className="bg-yellow-100 text-yellow-600 dark:text-yellow-600 px-4 py-1 rounded font-medium text-sm">Standard</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td className="text-neutral-600 dark:text-neutral-200">
-                                                <div className="flex items-center gap-3">
-                                                    <span className="w-[40px] h-[40px] rounded overflow-hidden rounded-[50%]">
-                                                        <img src="assets/images/user-grid/user-grid-img7.png" alt="Avatar"
-                                                            className="w-full h-full object-fit-cover" />
-                                                    </span>
-                                                    <span className="text-neutral-600 dark:text-neutral-200">John Doe</span>
-                                                </div>
-                                            </td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">$99.00</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">Feb 10, 2025</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">April 10, 2025</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">3 Month</td>
-                                            <td className="text-center">
-                                                <span
-                                                    className="bg-green-100 text-green-600 dark:text-green-600 px-4 py-1 rounded font-medium text-sm">Basic</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td className="text-neutral-600 dark:text-neutral-200">
-                                                <div className="flex items-center gap-3">
-                                                    <span className="w-[40px] h-[40px] rounded overflow-hidden rounded-[50%]">
-                                                        <img src="assets/images/user-grid/user-grid-img8.png" alt="Avatar"
-                                                            className="w-full h-full object-fit-cover" />
-                                                    </span>
-                                                    <span className="text-neutral-600 dark:text-neutral-200">John Robiul </span>
-                                                </div>
-                                            </td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">$99.00</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">Feb 10, 2025</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">April 10, 2025</td>
-                                            <td className="text-neutral-600 dark:text-neutral-200">3 Month</td>
-                                            <td className="text-center">
-                                                <span
-                                                    className="bg-green-100 text-green-600 dark:text-green-600 px-4 py-1 rounded font-medium text-sm">Basic</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
+                <div className="col-span-12 2xl:col-span-8">
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <RecentPurposePlanCard />
+                    </Suspense>
+                </div>
 
-                {/* <div className="col-span-12 md:col-span-6 2xl:col-span-4">
+                
+                <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <CountriesStatusCard />
                     </Suspense>
-                </div> */}
+                </div>
 
 
 
