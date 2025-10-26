@@ -136,7 +136,7 @@ const TopPodcasterCard = () => {
     };
 
     return (
-        <Card className="border-0 rounded-xl shadow-none">
+        <Card className="card border-0 rounded-xl shadow-none p-0">
             <CardContent className="p-0">
                 {/* Header */}
                 <div className="border-b border-neutral-200 dark:border-slate-500 py-4 px-6 flex items-center justify-between flex-wrap gap-2">
