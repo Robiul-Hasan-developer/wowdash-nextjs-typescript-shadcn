@@ -4,6 +4,7 @@ import CommonLink from "@/components/shared/common-link";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import CountriesStatusCard from "../crm/components/countries-status-card";
+import AudienceStatsCard from "./components/audience-stats-card";
 import TotalPodcasts from "./components/total-podcasts";
 import TotalUsers from "./components/total-users";
 
@@ -33,31 +34,11 @@ const podcastPage = () => {
                         </div>
                     </div>
                 </div>
+
                 <div className="col-span-12 lg:col-span-7 2xl:col-span-8">
-                    <div className="bg-white dark:bg-dark-2 rounded-xl py-5 px-6 shadow h-full">
-                        <div className="flex items-center flex-wrap gap-2 justify-between">
-                            <h6 className="mb-0 font-bold text-lg">Audience Stats</h6>
-                            <select
-                                className="form-select form-select-sm w-auto bg-white dark:bg-dark-2 border text-neutral-600 dark:text-neutral-200 radius-8">
-                                <option>Yearly</option>
-                                <option>Monthly</option>
-                                <option>Weekly</option>
-                                <option>Today</option>
-                            </select>
-                        </div>
-                        <ul className="flex flex-wrap items-center justify-center mt-18 gap-4">
-                            <li className="flex items-center gap-2">
-                                <span className="w-[10px] h-[6px] rounded-[50rem] bg-blue-600"></span>
-                                <span className="text-neutral-600 dark:text-neutral-200 text-sm font-medium d-inline-flex items-center gap-1">
-                                    Total Audience:
-                                    <span className="text-blue-light text-xl font-bold">26,201</span>
-                                </span>
-                            </li>
-                        </ul>
-                        <div className="mt-6">
-                            <div id="paymentStatusChart" className=""></div>
-                        </div>
-                    </div>
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <AudienceStatsCard />
+                    </Suspense>
                 </div>
                 <div className="col-span-12 lg:col-span-4">
                     <div className="bg-white dark:bg-dark-2 rounded-xl py-5 px-6 shadow h-full mb-5">
