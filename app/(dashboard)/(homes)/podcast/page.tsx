@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import CountriesStatusCard from "../crm/components/countries-status-card";
 import AudienceStatsCard from "./components/audience-stats-card";
 import PodcastEarningsOverviewCard from "./components/podcast-earnings-overview-card";
+import PodcastTopCategoriesCard from "./components/podcast-top-categories-card";
 import RecentPurposePlanCard from "./components/recent-purpose-plan-card";
 import RecentlyPlayedCard from "./components/recently-played-card";
 import TotalPodcasts from "./components/total-podcasts";
@@ -62,7 +63,6 @@ const podcastPage = () => {
                     </Suspense>
                 </div>
 
-                
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <CountriesStatusCard />
@@ -74,62 +74,13 @@ const podcastPage = () => {
                         <TrendingEpisodesCard />
                     </Suspense>
                 </div>
-
-
-
+                
                 <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    <div className="shadow-7 rounded-xl bg-white dark:bg-dark-2 h-full overflow-hidden">
-                        <div
-                            className="card-header border-b bg-white dark:bg-dark-2 py-4 px-6 flex items-center justify-between">
-                            <h6 className="text-lg font-semibold mb-0">Trending Episodes</h6>
-                            <select
-                                className="form-select form-select-sm w-auto bg-white dark:bg-dark-2 border text-neutral-600 dark:text-neutral-200 radius-8">
-                                <option>Yearly</option>
-                                <option>Monthly</option>
-                                <option>Weekly</option>
-                                <option>Today</option>
-                            </select>
-                        </div>
-                    </div>
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <PodcastTopCategoriesCard />
+                    </Suspense>
                 </div>
 
-                {/* <div className="col-span-12 md:col-span-6 2xl:col-span-4">
-                    <div className="shadow-7 rounded-xl bg-white dark:bg-dark-2 h-full overflow-hidden">
-                        <div
-                            className="card-header border-b bg-white dark:bg-dark-2 py-4 px-6 flex items-center justify-between">
-                            <h6 className="text-lg font-semibold mb-0">Top 5 Categories </h6>
-                            <CommonLink />
-                        </div>
-                        <div className="card-body py-[32px] px-6 mt-5 flex items-center justify-between">
-                            <div className="">
-                                <div id="userOverviewDonutChart"
-                                    className="margin-4-minus y-value-left apexcharts-tooltip-z-none"></div>
-                            </div>
-                            <ul className="flex flex-col gap-3">
-                                <li>
-                                    <span className="text-lg">UI/UX Design: <span
-                                        className="text-green-600 dark:text-green-600 font-semibold">50%</span> </span>
-                                </li>
-                                <li>
-                                    <span className="text-lg">Entertainment: <span className="text-purple-600 dark:text-purple-600 font-semibold">30%</span>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span className="text-lg">Lifestyle: <span className="text-red-600 dark:text-red-600 font-semibold">87%</span>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span className="text-lg">Business: <span className="text-blue-600 dark:text-blue-600 font-semibold">87%</span>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span className="text-lg">Health: <span className="text-yellow-600 dark:text-yellow-600 font-semibold">40%</span>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> */}
 
                 {/* <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     <div className="shadow-7 rounded-xl bg-white dark:bg-dark-2 h-full overflow-hidden">

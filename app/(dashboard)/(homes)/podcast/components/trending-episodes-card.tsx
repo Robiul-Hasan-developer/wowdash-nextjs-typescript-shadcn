@@ -1,115 +1,4 @@
-`
-// import CommonLink from "@/components/shared/common-link";
-// import { Card, CardContent } from "@/components/ui/card";
-
-// const TrendingEpisodesCard = () => {
-//     return (
-//         <Card className="card h-full rounded-lg border-0 !p-0">
-//             <CardContent className="p-0 flex flex-col justify-between gap-0">
-//                 {/* Header */}
-                // <div className="border-b border-neutral-200 dark:border-slate-500 py-4 px-6 flex items-center justify-between flex-wrap gap-2">
-                //     <h6 className="font-semibold text-lg mb-0 text-foreground">Recently Played</h6>
-                //     <CommonLink />
-                // </div>
-
-//                 {/* Podcast List */}
-//                 <div className="p-6">
-//                     <div className="flex flex-col gap-4">
-//                         <div className="flex items-center justify-between gap-4">
-//                             <div className="flex items-center">
-//                                 <img src="assets/images/home-fourteen/trending-img1.png" alt=""
-//                                     className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-//                                 <div className="flex-grow-1">
-//                                     <h6 className="text-base mb-0 font-medium">Product Design</h6>
-//                                     <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
-//                                 </div>
-//                             </div>
-//                             <div className="text-end flex gap-1 justify-end flex-col">
-//                                 <span className="">Durations: <span className="font-semibold text-neutral-900">30:05
-//                                     mins</span> </span>
-//                                 <span className="">Views: <span className="font-semibold text-neutral-900">512k</span> </span>
-//                             </div>
-//                         </div>
-//                         <div className="flex items-center justify-between gap-4">
-//                             <div className="flex items-center">
-//                                 <img src="assets/images/home-fourteen/trending-img2.png" alt=""
-//                                     className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-//                                 <div className="flex-grow-1">
-//                                     <h6 className="text-base mb-0 font-medium">How to Change Your Life</h6>
-//                                     <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
-//                                 </div>
-//                             </div>
-//                             <div className="text-end flex gap-1 justify-end flex-col">
-//                                 <span className="">Durations: <span className="font-semibold text-neutral-900">30:05
-//                                     mins</span> </span>
-//                                 <span className="">Views: <span className="font-semibold text-neutral-900">512k</span> </span>
-//                             </div>
-//                         </div>
-//                         <div className="flex items-center justify-between gap-4">
-//                             <div className="flex items-center">
-//                                 <img src="assets/images/home-fourteen/trending-img3.png" alt=""
-//                                     className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-//                                 <div className="flex-grow-1">
-//                                     <h6 className="text-base mb-0 font-medium">Logo Design</h6>
-//                                     <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
-//                                 </div>
-//                             </div>
-//                             <div className="text-end flex gap-1 justify-end flex-col">
-//                                 <span className="">Durations: <span className="font-semibold text-neutral-900">30:05
-//                                     mins</span> </span>
-//                                 <span className="">Views: <span className="font-semibold text-neutral-900">512k</span> </span>
-//                             </div>
-//                         </div>
-//                         <div className="flex items-center justify-between gap-4">
-//                             <div className="flex items-center">
-//                                 <img src="assets/images/home-fourteen/trending-img3.png" alt=""
-//                                     className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-//                                 <div className="flex-grow-1">
-//                                     <h6 className="text-base mb-0 font-medium">Good Health</h6>
-//                                     <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
-//                                 </div>
-//                             </div>
-//                             <div className="text-end flex gap-1 justify-end flex-col">
-//                                 <span className="">Durations: <span className="font-semibold text-neutral-900">30:05
-//                                     mins</span> </span>
-//                                 <span className="">Views: <span className="font-semibold text-neutral-900">512k</span> </span>
-//                             </div>
-//                         </div>
-//                         <div className="flex items-center justify-between gap-4">
-//                             <div className="flex items-center">
-//                                 <img src="assets/images/home-fourteen/trending-img4.png" alt=""
-//                                     className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-//                                 <div className="flex-grow-1">
-//                                     <h6 className="text-base mb-0 font-medium">Episodes Name</h6>
-//                                     <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
-//                                 </div>
-//                             </div>
-//                             <div className="text-end flex gap-1 justify-end flex-col">
-//                                 <span className="">Durations: <span className="font-semibold text-neutral-900">30:05
-//                                     mins</span> </span>
-//                                 <span className="">Views: <span className="font-semibold text-neutral-900">512k</span> </span>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </CardContent>
-//         </Card>
-//     );
-// };
-
-// export default TrendingEpisodesCard;
-
-
-
-
-
-
-
-
-
-
-"use client";
-import CommonLink from "@/components/shared/common-link";
+import CustomSelect from "@/components/shared/custom-select";
 import { Card, CardContent } from "@/components/ui/card";
 import trendingImg1 from "@/public/assets/images/home-fourteen/trending-img1.png";
 import trendingImg2 from "@/public/assets/images/home-fourteen/trending-img2.png";
@@ -174,8 +63,11 @@ const TrendingPodcastCard = () => {
         <Card className="card !p-0 border-0 rounded-xl shadow-none">
             <CardContent className="p-0">
                  <div className="border-b border-neutral-200 dark:border-slate-500 py-4 px-6 flex items-center justify-between flex-wrap gap-2">
-                    <h6 className="font-semibold text-lg mb-0 text-foreground">Recently Played</h6>
-                    <CommonLink />
+                    <h6 className="font-semibold text-lg mb-0 text-foreground">Trending Episodes</h6>
+                      <CustomSelect
+                            placeholder="Yearly"
+                            options={["Yearly", "Monthly", "Weekly", "Today"]}
+                        />
                 </div>
                 
                 <div className="flex flex-col gap-5 p-6">
@@ -227,4 +119,3 @@ const TrendingPodcastCard = () => {
 };
 
 export default TrendingPodcastCard;
-`
