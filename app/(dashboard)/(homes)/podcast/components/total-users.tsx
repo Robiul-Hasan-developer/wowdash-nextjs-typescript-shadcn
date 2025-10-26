@@ -1,7 +1,8 @@
+import { ArrowUp, Users } from "lucide-react";
 
 const TotalUsers = () => {
     return (
-        <div className="bg-white dark:bg-dark-2 rounded-xl py-5 px-6 shadow">
+        <div className="bg-white dark:bg-[#273142] rounded-xl py-5 px-6 shadow">
             <div className="flex items-center justify-between">
                 <div className="">
                     <span className="text-neutral-600 dark:text-neutral-200 mb-2">Total Users</span>
@@ -10,13 +11,13 @@ const TotalUsers = () => {
                         <div
                             className="flex items-center gap-1 font-semibold text-green-600 dark:text-green-500">
                             <span className="text-green-600 dark:text-green-500">+2.5%</span>
-                            <i className="ri-arrow-up-line"></i>
+                            <ArrowUp className="w-8 h-8" />
                         </div>
                     </div>
                 </div>
                 <span
                     className="w-[60px] h-[60px] bg-blue-600 text-white rounded-[50%] flex justify-center items-center text-2xl shadow-[0px_17px_30px_-4px_rgba(72,127,255,0.4)]">
-                    <i className="ri-group-fill"></i>
+                    <Users />
                 </span>
             </div>
 

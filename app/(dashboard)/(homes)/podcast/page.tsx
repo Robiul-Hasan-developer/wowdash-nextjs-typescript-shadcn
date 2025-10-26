@@ -40,6 +40,7 @@ const podcastPage = () => {
                         <AudienceStatsCard />
                     </Suspense>
                 </div>
+                
                 <div className="col-span-12 lg:col-span-4">
                     <div className="bg-white dark:bg-dark-2 rounded-xl py-5 px-6 shadow h-full mb-5">
                         <div className="flex items-center flex-wrap gap-2 justify-between">
