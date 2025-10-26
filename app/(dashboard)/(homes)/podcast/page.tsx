@@ -9,6 +9,7 @@ import RecentPurposePlanCard from "./components/recent-purpose-plan-card";
 import RecentlyPlayedCard from "./components/recently-played-card";
 import TotalPodcasts from "./components/total-podcasts";
 import TotalUsers from "./components/total-users";
+import TrendingEpisodesCard from "./components/trending-episodes-card";
 
 const metadata: Metadata = {
     title: "Podcast Dashboard | Manage Shows, Episodes & Analytics - WowDash Admin Panel",
@@ -67,10 +68,16 @@ const podcastPage = () => {
                         <CountriesStatusCard />
                     </Suspense>
                 </div>
+                
+                <div className="col-span-12 md:col-span-6 2xl:col-span-4">
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <TrendingEpisodesCard />
+                    </Suspense>
+                </div>
 
 
 
-                {/* <div className="col-span-12 md:col-span-6 2xl:col-span-4">
+                <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     <div className="shadow-7 rounded-xl bg-white dark:bg-dark-2 h-full overflow-hidden">
                         <div
                             className="card-header border-b bg-white dark:bg-dark-2 py-4 px-6 flex items-center justify-between">
@@ -83,85 +90,8 @@ const podcastPage = () => {
                                 <option>Today</option>
                             </select>
                         </div>
-                        <div className="card-body p-5 flex flex-col gap-4">
-                            <div className="flex items-center justify-between gap-4">
-                                <div className="flex items-center">
-                                    <img src="assets/images/home-fourteen/trending-img1.png" alt=""
-                                        className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-                                    <div className="flex-grow-1">
-                                        <h6 className="text-base mb-0 font-medium">Product Design</h6>
-                                        <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
-                                    </div>
-                                </div>
-                                <div className="text-end flex gap-1 justify-end flex-col">
-                                    <span className="">Durations: <span className="font-semibold text-neutral-900">30:05
-                                        mins</span> </span>
-                                    <span className="">Views: <span className="font-semibold text-neutral-900">512k</span> </span>
-                                </div>
-                            </div>
-                            <div className="flex items-center justify-between gap-4">
-                                <div className="flex items-center">
-                                    <img src="assets/images/home-fourteen/trending-img2.png" alt=""
-                                        className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-                                    <div className="flex-grow-1">
-                                        <h6 className="text-base mb-0 font-medium">How to Change Your Life</h6>
-                                        <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
-                                    </div>
-                                </div>
-                                <div className="text-end flex gap-1 justify-end flex-col">
-                                    <span className="">Durations: <span className="font-semibold text-neutral-900">30:05
-                                        mins</span> </span>
-                                    <span className="">Views: <span className="font-semibold text-neutral-900">512k</span> </span>
-                                </div>
-                            </div>
-                            <div className="flex items-center justify-between gap-4">
-                                <div className="flex items-center">
-                                    <img src="assets/images/home-fourteen/trending-img3.png" alt=""
-                                        className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-                                    <div className="flex-grow-1">
-                                        <h6 className="text-base mb-0 font-medium">Logo Design</h6>
-                                        <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
-                                    </div>
-                                </div>
-                                <div className="text-end flex gap-1 justify-end flex-col">
-                                    <span className="">Durations: <span className="font-semibold text-neutral-900">30:05
-                                        mins</span> </span>
-                                    <span className="">Views: <span className="font-semibold text-neutral-900">512k</span> </span>
-                                </div>
-                            </div>
-                            <div className="flex items-center justify-between gap-4">
-                                <div className="flex items-center">
-                                    <img src="assets/images/home-fourteen/trending-img3.png" alt=""
-                                        className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-                                    <div className="flex-grow-1">
-                                        <h6 className="text-base mb-0 font-medium">Good Health</h6>
-                                        <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
-                                    </div>
-                                </div>
-                                <div className="text-end flex gap-1 justify-end flex-col">
-                                    <span className="">Durations: <span className="font-semibold text-neutral-900">30:05
-                                        mins</span> </span>
-                                    <span className="">Views: <span className="font-semibold text-neutral-900">512k</span> </span>
-                                </div>
-                            </div>
-                            <div className="flex items-center justify-between gap-4">
-                                <div className="flex items-center">
-                                    <img src="assets/images/home-fourteen/trending-img4.png" alt=""
-                                        className="w-[40px] h-[40px] rounded-[50%] flex-shrink-0 me-3 overflow-hidden" />
-                                    <div className="flex-grow-1">
-                                        <h6 className="text-base mb-0 font-medium">Episodes Name</h6>
-                                        <span className="text-sm text-neutral-600 dark:text-neutral-200 font-medium">Esther Howand</span>
-                                    </div>
-                                </div>
-                                <div className="text-end flex gap-1 justify-end flex-col">
-                                    <span className="">Durations: <span className="font-semibold text-neutral-900">30:05
-                                        mins</span> </span>
-                                    <span className="">Views: <span className="font-semibold text-neutral-900">512k</span> </span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </div> */}
+                </div>
 
                 {/* <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     <div className="shadow-7 rounded-xl bg-white dark:bg-dark-2 h-full overflow-hidden">

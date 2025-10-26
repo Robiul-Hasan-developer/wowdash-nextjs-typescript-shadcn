@@ -1,6 +1,4 @@
 
-"use client";
-
 import CommonLink from "@/components/shared/common-link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Play } from "lucide-react";
