@@ -15,7 +15,7 @@ const PodcastEarningsOverviewCard = () => {
                     />
                 </div>
 
-                <ul className="flex flex-wrap items-center justify-center mb-3 gap-3">
+                <ul className="flex flex-wrap items-center justify-center mb-6 gap-3">
                     <li className="flex items-center gap-2">
                         <span className="w-[12px] h-[8px] rounded-[50rem] bg-blue-500"></span>
                         <span className="text-neutral-600 dark:text-neutral-300 text-sm font-medium">Income:

@@ -4,13 +4,14 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import AudienceStatsCard from "./components/audience-stats-card";
 import PodcastEarningsOverviewCard from "./components/podcast-earnings-overview-card";
+import RecentlyPlayedCard from "./components/recently-played-card";
 import TotalPodcasts from "./components/total-podcasts";
 import TotalUsers from "./components/total-users";
 
 const metadata: Metadata = {
-  title: "Podcast Dashboard | Manage Shows, Episodes & Analytics - WowDash Admin Panel",
-  description:
-    "Easily manage podcast shows, episodes, guests, and performance analytics with the Podcast Dashboard in WowDash Admin Template. Built using Next.js, Tailwind CSS, and ShadCN UI for seamless performance and modern design.",
+    title: "Podcast Dashboard | Manage Shows, Episodes & Analytics - WowDash Admin Panel",
+    description:
+        "Easily manage podcast shows, episodes, guests, and performance analytics with the Podcast Dashboard in WowDash Admin Template. Built using Next.js, Tailwind CSS, and ShadCN UI for seamless performance and modern design.",
 };
 
 const podcastPage = () => {
@@ -46,83 +47,11 @@ const podcastPage = () => {
                     </Suspense>
                 </div>
 
-                {/* <div className="col-span-12 lg:col-span-8">
-                    <div className="bg-white dark:bg-dark-2 rounded-xl py-5 px-6 shadow h-full">
-                        <div
-                            className="flex items-center flex-wrap gap-2 justify-between border-b border-neutral-200 dark:border-neutral-600 mb-6 pb-4">
-                            <h6 className="mb-0 font-bold text-lg">Recently Played</h6>
-                            <CommonLink />
-                        </div>
-                        <div className="mt-5">
-                            <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-                                <div className="col-span-12 sm:col-span-6 lg:col-span-3">
-                                    <div className="">
-                                        <div className="radius-8 overflow-hidden relative">
-                                            <img src="assets/images/home-fourteen/podcast-img1.png" alt="Thumb"
-                                                className="w-full h-full object-fit-cover" />
-                                            <a href="javascript:void(0)"
-                                                className="w-[28px] h-[24px] text-white bg-white bg-opacity-50 flex justify-center items-center absolute start-0 bottom-0 ms-2.5 mb-2.5 rounded-md hover:bg-white hover:text-[#000] text-lg">
-                                                <i className="ri-play-fill leading-none flex"></i>
-                                            </a>
-                                        </div>
-                                        <div className="mt-3">
-                                            <h6 className="text-base mb-0">Talk show </h6>
-                                            <span className="text-sm text-neutral-600 dark:text-neutral-200">Esther Howard</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-span-12 sm:col-span-6 lg:col-span-3">
-                                    <div className="">
-                                        <div className="radius-8 overflow-hidden relative">
-                                            <img src="assets/images/home-fourteen/podcast-img2.png" alt="Thumb"
-                                                className="w-full h-full object-fit-cover" />
-                                            <a href="javascript:void(0)"
-                                                className="w-[28px] h-[24px] text-white bg-white bg-opacity-50 flex justify-center items-center absolute start-0 bottom-0 ms-2.5 mb-2.5 rounded-md hover:bg-white hover:text-[#000] text-lg">
-                                                <i className="ri-play-fill leading-none flex"></i>
-                                            </a>
-                                        </div>
-                                        <div className="mt-3">
-                                            <h6 className="text-base mb-0">Change Life Style </h6>
-                                            <span className="text-sm text-neutral-600 dark:text-neutral-200">Cameron Williamson</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-span-12 sm:col-span-6 lg:col-span-3">
-                                    <div className="">
-                                        <div className="radius-8 overflow-hidden relative">
-                                            <img src="assets/images/home-fourteen/podcast-img3.png" alt="Thumb"
-                                                className="w-full h-full object-fit-cover" />
-                                            <a href="javascript:void(0)"
-                                                className="w-[28px] h-[24px] text-white bg-white bg-opacity-50 flex justify-center items-center absolute start-0 bottom-0 ms-2.5 mb-2.5 rounded-md hover:bg-white hover:text-[#000] text-lg">
-                                                <i className="ri-play-fill leading-none flex"></i>
-                                            </a>
-                                        </div>
-                                        <div className="mt-3">
-                                            <h6 className="text-base mb-0">Neon Lights</h6>
-                                            <span className="text-sm text-neutral-600 dark:text-neutral-200">Leslie Alexander</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-span-12 sm:col-span-6 lg:col-span-3">
-                                    <div className="">
-                                        <div className="radius-8 overflow-hidden relative">
-                                            <img src="assets/images/home-fourteen/podcast-img4.png" alt="Thumb"
-                                                className="w-full h-full object-fit-cover" />
-                                            <a href="javascript:void(0)"
-                                                className="w-[28px] h-[24px] text-white bg-white bg-opacity-50 flex justify-center items-center absolute start-0 bottom-0 ms-2.5 mb-2.5 rounded-md hover:bg-white hover:text-[#000] text-lg">
-                                                <i className="ri-play-fill leading-none flex"></i>
-                                            </a>
-                                        </div>
-                                        <div className="mt-3">
-                                            <h6 className="text-base mb-0">Product Design</h6>
-                                            <span className="text-sm text-neutral-600 dark:text-neutral-200">Bessie Cooper</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
+                <div className="col-span-12 lg:col-span-8">
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <RecentlyPlayedCard />
+                    </Suspense>
+                </div>
 
                 {/* <div className="col-span-12 2xl:col-span-8">
                     <div className="shadow-7 rounded-xl bg-white dark:bg-dark-2 h-full overflow-hidden">

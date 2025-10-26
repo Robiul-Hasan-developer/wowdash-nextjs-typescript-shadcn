@@ -116,7 +116,7 @@ const PodcastEarningsOverviewChart = () => {
             options={chartOptions}
             series={chartSeries}
             type="area"
-            height={200}
+            height={240}
         />
     );
 };
