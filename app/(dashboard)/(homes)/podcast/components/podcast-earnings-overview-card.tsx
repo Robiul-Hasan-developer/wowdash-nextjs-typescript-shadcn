@@ -1,4 +1,4 @@
-import AudienceStatsChart from '@/components/charts/audience-stats-chart';
+import PodcastEarningsOverviewChart from '@/components/charts/podcast-earnings-overview-chart';
 import CustomSelect from '@/components/shared/custom-select';
 import { Card, CardContent } from '@/components/ui/card';
 import { ChevronUp } from 'lucide-react';
@@ -21,15 +21,15 @@ const PodcastEarningsOverviewCard = () => {
                         <span className="text-neutral-600 dark:text-neutral-300 text-sm font-medium">Income:
                             <span className="text-blue-light font-bold text-xl ms-1"> $26,201</span>
                         </span>
-                        <div className="flex items-center gap-1 font-semibold text-success-600 dark:text-success-500">
-                            <span className="text-success-600 dark:text-success-500">10%</span>
-                            <ChevronUp />
+                        <div className="flex items-center gap-1 font-semibold text-green-600 dark:text-green-500">
+                            <span className="text-green-600 dark:text-green-500">10%</span>
+                            <ChevronUp className="w-4 h-4" />
                         </div>
                     </li>
                 </ul>
 
-                <div className="-mx-6">
-                    <AudienceStatsChart />
+                <div className="-ms-6">
+                    <PodcastEarningsOverviewChart />
                 </div>
 
             </CardContent>

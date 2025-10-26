@@ -11,7 +11,7 @@ const TotalPodcasts = () => {
                         <div
                             className="flex items-center gap-1 font-semibold text-green-600 dark:text-green-500">
                             <span className="text-green-600 dark:text-green-500">+2.5%</span>
-                            <ArrowUp />
+                            <ArrowUp className="w-4 h-4" />
                         </div>
                     </div>
                 </div>

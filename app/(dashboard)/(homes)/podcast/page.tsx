@@ -1,10 +1,9 @@
 import DashboardBreadcrumb from "@/components/layout/dashboard-breadcrumb";
 import LoadingSkeleton from "@/components/loading-skeleton";
-import CommonLink from "@/components/shared/common-link";
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import CountriesStatusCard from "../crm/components/countries-status-card";
 import AudienceStatsCard from "./components/audience-stats-card";
+import PodcastEarningsOverviewCard from "./components/podcast-earnings-overview-card";
 import TotalPodcasts from "./components/total-podcasts";
 import TotalUsers from "./components/total-users";
 
@@ -40,38 +39,14 @@ const podcastPage = () => {
                         <AudienceStatsCard />
                     </Suspense>
                 </div>
-                
+
                 <div className="col-span-12 lg:col-span-4">
-                    <div className="bg-white dark:bg-dark-2 rounded-xl py-5 px-6 shadow h-full mb-5">
-                        <div className="flex items-center flex-wrap gap-2 justify-between">
-                            <h6 className="mb-0 font-bold text-lg">Earnings Overview</h6>
-                            <select
-                                className="form-select form-select-sm w-auto bg-white dark:bg-dark-2 border text-neutral-600 dark:text-neutral-200 radius-8">
-                                <option>Yearly</option>
-                                <option>Monthly</option>
-                                <option>Weekly</option>
-                                <option>Today</option>
-                            </select>
-                        </div>
-                        <ul className="flex flex-wrap items-center justify-center mt-6 gap-4">
-                            <li className="flex items-center gap-2">
-                                <span className="w-[8px] h-[8px] rounded-[50%] bg-blue-600"></span>
-                                <span className="text-neutral-600 dark:text-neutral-200 text-sm font-medium d-inline-flex items-center gap-1">
-                                    Income:
-                                    <span className="text-blue-light text-xl font-bold">$26,201</span>
-                                </span>
-                                <div className="flex items-center gap-1 font-semibold text-green-600 dark:text-green-500">
-                                    <span className="text-green-600 dark:text-green-500">10%</span>
-                                    <i className="ri-arrow-up-s-fill"></i>
-                                </div>
-                            </li>
-                        </ul>
-                        <div className="mt-6">
-                            <div id="revenueChart" className="apexcharts-tooltip-style-1"></div>
-                        </div>
-                    </div>
+                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
+                        <PodcastEarningsOverviewCard />
+                    </Suspense>
                 </div>
-                <div className="col-span-12 lg:col-span-8">
+
+                {/* <div className="col-span-12 lg:col-span-8">
                     <div className="bg-white dark:bg-dark-2 rounded-xl py-5 px-6 shadow h-full">
                         <div
                             className="flex items-center flex-wrap gap-2 justify-between border-b border-neutral-200 dark:border-neutral-600 mb-6 pb-4">
@@ -147,8 +122,9 @@ const podcastPage = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="col-span-12 2xl:col-span-8">
+                </div> */}
+
+                {/* <div className="col-span-12 2xl:col-span-8">
                     <div className="shadow-7 rounded-xl bg-white dark:bg-dark-2 h-full overflow-hidden">
                         <div
                             className="card-header border-b bg-white dark:bg-dark-2 py-4 px-6 flex items-center justify-between">
@@ -308,16 +284,17 @@ const podcastPage = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="col-span-12 md:col-span-6 2xl:col-span-4">
+                </div> */}
+
+                {/* <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
                         <CountriesStatusCard />
                     </Suspense>
-                </div>
+                </div> */}
 
 
 
-                <div className="col-span-12 md:col-span-6 2xl:col-span-4">
+                {/* <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     <div className="shadow-7 rounded-xl bg-white dark:bg-dark-2 h-full overflow-hidden">
                         <div
                             className="card-header border-b bg-white dark:bg-dark-2 py-4 px-6 flex items-center justify-between">
@@ -408,8 +385,9 @@ const podcastPage = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="col-span-12 md:col-span-6 2xl:col-span-4">
+                </div> */}
+
+                {/* <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     <div className="shadow-7 rounded-xl bg-white dark:bg-dark-2 h-full overflow-hidden">
                         <div
                             className="card-header border-b bg-white dark:bg-dark-2 py-4 px-6 flex items-center justify-between">
@@ -445,8 +423,9 @@ const podcastPage = () => {
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div className="col-span-12 md:col-span-6 2xl:col-span-4">
+                </div> */}
+
+                {/* <div className="col-span-12 md:col-span-6 2xl:col-span-4">
                     <div className="shadow-7 rounded-xl bg-white dark:bg-dark-2 h-full overflow-hidden">
                         <div
                             className="card-header border-b bg-white dark:bg-dark-2 py-4 px-6 flex items-center justify-between">
@@ -520,12 +499,9 @@ const podcastPage = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
+
             </div>
-
-
-
-
         </>
     );
 };

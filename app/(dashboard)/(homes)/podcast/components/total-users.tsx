@@ -11,13 +11,13 @@ const TotalUsers = () => {
                         <div
                             className="flex items-center gap-1 font-semibold text-green-600 dark:text-green-500">
                             <span className="text-green-600 dark:text-green-500">+2.5%</span>
-                            <ArrowUp className="w-8 h-8" />
+                            <ArrowUp className="w-4 h-4" />
                         </div>
                     </div>
                 </div>
                 <span
                     className="w-[60px] h-[60px] bg-blue-600 text-white rounded-[50%] flex justify-center items-center text-2xl shadow-[0px_17px_30px_-4px_rgba(72,127,255,0.4)]">
-                    <Users />
+                    <Users className="w-8 h-8" />
                 </span>
             </div>
 
