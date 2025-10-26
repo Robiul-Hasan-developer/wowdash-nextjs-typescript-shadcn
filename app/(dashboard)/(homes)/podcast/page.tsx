@@ -8,26 +8,15 @@ import TotalPodcasts from "./components/total-podcasts";
 import TotalUsers from "./components/total-users";
 
 const metadata: Metadata = {
-    title: "Podcast Dashboard | WowDash Admin Panel",
-    description:
-        "Manage reservations, track bookings, and streamline scheduling with the Podcast Dashboard in WowDash Admin Template built using Next.js and Tailwind.",
+  title: "Podcast Dashboard | Manage Shows, Episodes & Analytics - WowDash Admin Panel",
+  description:
+    "Easily manage podcast shows, episodes, guests, and performance analytics with the Podcast Dashboard in WowDash Admin Template. Built using Next.js, Tailwind CSS, and ShadCN UI for seamless performance and modern design.",
 };
 
 const podcastPage = () => {
     return (
         <>
             <DashboardBreadcrumb title="Podcast" text="Podcast" />
-
-            <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
-                <div className="col-span-12 lg:col-span-8">
-                    <Suspense fallback={<LoadingSkeleton height="h-64" text="Loading..." />}>
-                        Hello Component
-                    </Suspense>
-                </div>
-            </div>
-
-
-
 
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                 <div className="col-span-12 lg:col-span-5 2xl:col-span-4">
